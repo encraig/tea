@@ -1,0 +1,63 @@
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53114811-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<div class="girls-clothing-cat">
+	<div>
+		<a href="/product/7M12106"></a>
+		<a href="/product/7M12109"></a>
+		<a href="/product/7M12201"></a>
+	</div>
+	<div>
+		<h2>BETTER TOGETHER</h2>
+		<h3 class="mobile-cat title">girl</h3>
+		<img src="/mas_assets/theme/tea_collection/images/categories/girls-clothing/170330/170330-g-m.jpg" alt="cute girl" class="mobile-cat"/>
+		<p>Mix it up! From playdates to parties, our<br> made-to-match separates make it easy to pick<br> the perfect outfit for every adventure.</p>
+		<!-- <a href="/girls-tees-tops" class="cta" onclick="ga('send','event','button click','click','/girls-tees-tops');">shop tops</a> -->
+		<a href="/girls-tees-tops" class="cta" onclick="ga('send', 'event','button click', 'click', 'shop tops cta');">shop tops</a>
+		<a href="/girls-skirts" class="cta">shop bottoms</a>
+	</div>
+</div>
+
+
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+	
+	// $('area').on('click', function() {
+	// 	console.log($(this).attr('href') + ' clicked');
+	// });
+
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		changeHeight();
+		changePos();
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			changeHeight();
+			changePos();
+		}
+	});
+});
+</script>

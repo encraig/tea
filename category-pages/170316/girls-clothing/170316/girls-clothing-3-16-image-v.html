@@ -1,0 +1,60 @@
+<style>
+.desktop-cat img, .mobile-cat img{
+	max-width:100%;
+}
+.mobile-cat {
+	display:none;
+}
+.mobile-cat .title {
+	color: #333333;
+    font-family: tisa sans;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+@media screen and (max-width:768px){
+	.dept-girls-clothing, .desktop-cat {
+		display:none;
+	}
+	.mobile-cat  {
+		display:block;
+	}
+	.common-wrap {
+		margin:0;
+	}
+}
+</style>
+
+<div class="desktop-cat">
+
+<img src="/mas_assets/theme/tea_collection/images/categories/girls-clothing/landing/170316/20170316_SITE_DP_G_D.jpg" usemap="#image-maps-2017-03-14-145855" alt="" />
+<map name="image-maps-2017-03-14-145855">
+	<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="0,0,377,486" style="outline:none;" target="_self"     />
+	<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="384,0,584,253" style="outline:none;" target="_self"     />
+	<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="593,0,798,253" style="outline:none;" target="_self"     />
+	<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="486,422,690,466" style="outline:none;" target="_self"     />
+</map>
+</div>
+
+<div class="mobile-cat">
+	<h2 class="title">Girl</h2>
+	<img src="/mas_assets/theme/tea_collection/images/categories/girls-clothing/landing/170316/20170316_SITE_DP_G_M.jpg" usemap="#image-maps-2017-03-14-152215" alt="" />
+	<map name="image-maps-2017-03-14-152215" id="ImageMapsCom-image-maps-2017-03-14-152215">
+		<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="0,0,750,670" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="girls-special-occasion" shape="rect" coords="216,846,533,908" style="outline:none;" target="_self"     />
+	</map>
+
+</div>
+
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	// $('area').on('click', function() {
+	// 	console.log($(this).attr('href') + ' clicked');
+	// });
+});
+</script>

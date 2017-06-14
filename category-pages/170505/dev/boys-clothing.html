@@ -1,0 +1,69 @@
+
+<div class="girls-clothing-cat">
+	<!-- desktop ref -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b-d-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<!-- mobile ref -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b-m-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<h3 class="mobile title">boy</h3>
+
+	<div>
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b1-d.jpg" alt="handsome boy" class="desktop" usemap="map1"/>
+		<map name="map1">
+			<area  alt="" title="" href="/product/7M22132" shape="rect" coords="0,0,319,231" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/product/7M22201" shape="rect" coords="0,237,319,486" style="outline:none;" target="_self"     />
+		</map>
+	</div> 
+	<div>
+
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b2-d.jpg" alt="boys tees" class="desktop" usemap="map2" />
+		<map name="map2">
+			<area  alt="" title="" href="/product/7M22126" shape="rect" coords="0,0,244,340" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/product/7M22202" shape="rect" coords="254,0,479,340" style="outline:none;" target="_self"     />
+		</map>
+
+		
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b-m.jpg" alt="handsome boy" usemap="map3" class="mobile"/>
+		<map name="map3">
+			<area  alt="" title="" href="/product/7M22132" shape="rect" coords="0,0,750,285" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/product/7M22201" shape="rect" coords="0,290,750,511" style="outline:none;" target="_self"     />
+		</map>
+
+
+		<p class="body-copy">Wherever he's headed this summer, our new styles are<br> made to keep up... we gave them a test run in Australia!</p> 
+		<a href="/boys-tees-tops" class="cta">shop tees</a>
+		<a href="/boys-shorts" class="cta">shop shorts</a>
+	</div>
+</div>
+
+
+
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		// changeHeight();
+		// changePos();
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			// changeHeight();
+			// changePos();
+		}
+	});
+});
+</script>

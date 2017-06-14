@@ -1,0 +1,50 @@
+
+<div class="girls-clothing-cat">
+<div>
+		<a href="/product/7M42501"></a>
+		<a href="/product/7M42503"></a>
+		<a href="/product/7M42500"></a>
+	</div>
+<div>
+<h2>Summertime &amp;<br /> 
+the Outfitting is Easy</h2>
+<span>starting<br> at $24.50</span>
+
+<h3 class="mobile-cat title">baby boy</h3>
+<img alt="cute baby boy" class="mobile-cat" src="/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170330/170330-bb-m.jpg" />
+<p>Give his wardrobe an Aussie inspired update with our<br />
+bold, bright summer rompers. They're a snap to get on<br />
+and off, and comfy enough to keep him smiling all season!</p>
+<a class="cta" href="/baby-boy-onesies">shop rompers</a></div>
+</div>
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> --><script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+	
+	// $('area').on('click', function() {
+	// 	console.log($(this).attr('href') + ' clicked');
+	// });
+
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		changeHeight();
+		changePos();
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			changeHeight();
+			changePos();
+		}
+	});
+});
+</script>

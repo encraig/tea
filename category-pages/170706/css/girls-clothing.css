@@ -1,0 +1,201 @@
+<style>
+/*body, header[role='banner'] #top-nav #main-categories>ul li a, header[role='banner'] #top-bar div.top ul li#welcome-member a, header[role='banner'] #top-bar div.top ul li#welcome-signin a, header[role='banner'] #shopping-bag #shopping-cart #shopping-cart-summary hgroup>a, header[role='banner'] #shopping-bag #shopping-bag-popup h1, header[role='banner'] #shopping-bag #shopping-bag-popup-status-only h1, header[role='banner'] #free-shipping-text, a.extole-cta-text, header[role='banner'] #header-banner h2.slogan, header[role='banner'] #shopping-bag #shopping-cart #shopping-cart-summary hgroup h3, header[role='banner'] #top-nav div.search-block input, section#breadcrumbs, article.sidebar>section>h2, article.sidebar a, article.sidebar>section>h2.sale a, .cat-header, body.browse .items-list-wrapper .item section .item-details h2 a, body.browse .items-list-wrapper .item section .item-details .size, body.browse .items-list-wrapper .item section .item-prices p, .shop-all, .category-footer, footer[role='contentinfo'] #footertop .signup-email h2, footer[role='contentinfo'] #footertop .signup-email p, footer[role='contentinfo'] #footertop .signup-block input, footer[role='contentinfo'] #footermiddle #cell-con div a.header, footer[role='contentinfo'] #footermiddle #cell-con p, footer[role='contentinfo'] #footernav h2, footer[role='contentinfo'] #footerbottom ul li a, footer[role='contentinfo'] #footernav li ul li, .fixed-sticky div ul li a, .quick-view #pdp-right #pdp-item-details hgroup h1 a, #product-detail-page #pdp-right #pdp-item-details hgroup p.regular-price, .qty-label, input, #product-detail-page #pdp-right .pdp-item-details-attributes dl dt, #product-detail-page #pdp-right .pdp-item-details-attributes ol li label, #product-detail-page #pdp-right #pdp-item-details dl dd button,  #product-detail-page #pdp-right #pdp-item-details>footer a.view-full-details, .details-container {
+	font-family: brown-pro-regular !important;
+}*/
+body {
+  font-family: 'tisa sans';
+}
+.ref {
+  position: absolute;
+  opacity: .5;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dept-girls-clothing {
+    display: none;
+  }
+  .common-wrap {
+    margin: 0;
+  }
+}
+.title {
+  color: #333333;
+  font-family: tisa sans;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 0 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+img {
+  max-width: 100%;
+}
+.body-copy {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: .6px;
+  position: relative;
+}
+@media screen and (max-width: 737px) {
+  .body-copy {
+    font-size: 1em;
+    line-height: 1.59em;
+    letter-spacing: .05em;
+  }
+}
+@media screen and (max-width: 376px) {
+  .body-copy {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .body-copy {
+    font-size: .8em;
+    letter-spacing: .5px;
+  }
+}
+.cta {
+  display: inline-block;
+  border: 1px solid;
+  width: 200px;
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 0px 9px;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 737px) {
+  .cta {
+    width: 42%;
+    left: 0px;
+    padding: 1em 0 .7em;
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 415px) {
+  .cta {
+    font-size: .8em;
+    letter-spacing: 1.1px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .cta {
+    font-size: .7em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .cta {
+    font-size: .6em;
+  }
+}
+.girls-clothing-cat {
+  overflow: hidden;
+  font-family: brown-pro-regular;
+}
+.girls-clothing-cat div:first-of-type {
+  float: left;
+}
+.girls-clothing-cat div:last-of-type {
+  width: 479px;
+  min-height: 486px;
+  float: left;
+  text-align: center;
+  background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170706/d-dotted.png') no-repeat bottom center;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type {
+    width: 100%;
+    min-height: 480px;
+    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 376px) {
+  .girls-clothing-cat div:last-of-type {
+    min-height: 435px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .girls-clothing-cat div:last-of-type {
+    min-height: 370px;
+  }
+}
+.girls-clothing-cat div:last-of-type h2 {
+  font-size: 32px;
+  letter-spacing: .3px;
+  margin: 6px 0 15px;
+  color: #691247;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type h2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type p {
+    margin-top: 1.5em;
+  }
+}
+.girls-clothing-cat div:last-of-type p:last-of-type {
+  margin: 8px 0 14px;
+  letter-spacing: 1px;
+  color: #691247;
+  font-family: brown-pro-bold;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type p:last-of-type {
+    margin: .4em 0 0;
+  }
+}
+.girls-clothing-cat div:last-of-type .cta {
+  font-size: 14px;
+  margin-top: 10px;
+  border-color: #691247;
+  color: #691247;
+  font-family: brown-pro-bold;
+  /*&:last-of-type {
+				@media screen and (max-width:737px){
+					left:.7em;
+				}
+
+				left:10px;
+			}*/
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type .cta {
+    margin-top: 1.7em;
+    color: #691247;
+    border-color: #691247;
+    width: 88%;
+    font-size: 10px;
+  }
+}
+.girls-clothing-cat div:last-of-type .cta:hover,
+.girls-clothing-cat div:last-of-type .cta:active {
+  background: #691247;
+  color: #fff;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type .cta:hover,
+  .girls-clothing-cat div:last-of-type .cta:active {
+    background: #691247;
+  }
+}
+
+</style>

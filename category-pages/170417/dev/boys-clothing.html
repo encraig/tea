@@ -1,0 +1,59 @@
+
+<div class="girls-clothing-cat">
+	<!-- desktop ref -->
+	<!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170417/b-d-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<!-- mobile ref -->
+	<!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170417/b-m-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<div>
+		<a href="/product/7M22104/soul-surfer-graphic-tee.html"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170417/b1-d.jpg" alt="handsome boy" /></a>
+	</div> 
+	<div>
+
+		<img id="Image-Maps-Com-image-maps-2017-04-19-133459" src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170417/b3-d.jpg" usemap="#image-maps-2017-04-19-133459" alt="boys tees" data="clothes"/>
+		<map name="image-maps-2017-04-19-133459" id="ImageMapsCom-image-maps-2017-04-19-133459">
+			<area  alt="" title="" href="/product/7m22113/namadgi-happy-hoodie.html" shape="rect" coords="0,0,176,232" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/product/7m22200/boardies-surf-shorts.html" shape="rect" coords="189,0,328,232" style="outline:none;" target="_self"     />
+		</map>
+
+		<h2>TOTALLY BONZER</h2>
+		<h3 class="mobile-cat title">boy</h3>
+		<a href="/product/7M22104/soul-surfer-graphic-tee.html"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170417/b1-m.jpg" alt="handsome boy" class="mobile-cat"/></a>
+		<p>Our graphics are legendary and our shorts<br> are ready for any adventure. Pair them up<br> for the ultimate summer outfit!</p>
+		<p>"bonzer" is Aussie for great!</p> 
+		<a href="/boys-tees-tops" class="cta">shop tees</a>
+		<a href="/boys-shorts" class="cta">shop shorts</a>
+	</div>
+</div>
+
+
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+	
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		// changeHeight();
+		// changePos();
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			// changeHeight();
+			// changePos();
+		}
+	});
+});
+</script>

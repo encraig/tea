@@ -1,0 +1,191 @@
+
+body {
+	font-family:'tisa sans';	
+} 
+.ref {
+	position:absolute;
+	opacity:.5;
+	max-width:100%; 
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.mobile {
+	display:none !important;
+
+	@media screen and(max-width:768px){
+		display:block !important;
+	}
+}
+
+@media screen and (max-width:768px){
+	.dept-girls-clothing {
+		display:none; 
+	}
+	.common-wrap {
+		margin:0;
+	}
+}
+
+.title {
+	color: #333333;
+    font-family: tisa sans;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    //display:none !important;
+}
+
+img {
+	max-width:100%;
+}
+
+.body-copy {
+	@media screen and (max-width:737px){
+		font-size:1em;
+		line-height:1.59em;
+		//letter-spacing:.6px;
+		letter-spacing:.05em;
+	}
+
+	@media screen and (max-width:376px){
+		font-size:.9em;
+	}
+
+	@media screen and (max-width:321px){
+		font-size:.8em;
+		letter-spacing:.5px;
+	}
+
+	font-size:14px;
+	line-height:21px;
+	letter-spacing:.6px;
+	position:relative;
+}
+
+.cta {
+		@media screen and (max-width:737px){
+			width: 42%;
+    		left: 0px;
+    		padding: 1em 0 .7em;
+    		font-size: .8em;
+    		//line-height:3em;
+		}
+
+		@media screen and (max-width:415px){
+		    font-size: .8em;
+    		letter-spacing: 1.1px;
+		}
+
+		@media screen and (max-width:376px){
+    		//padding: 8px 0;
+    		font-size:.7em;
+		}
+
+		@media screen and (max-width:321px){
+			//padding: 7px 0;
+    		font-size: .6em;
+		}
+
+	display: inline-block;
+    border: 1px solid;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0px 9px;
+    //font-weight:bold;
+    text-align:center;
+    box-sizing:border-box;
+    //line-height:2.8em;
+}
+
+.girls-clothing-cat {
+	overflow:hidden;
+
+	div {
+
+	&:first-of-type {
+
+		float:left;
+
+
+	} // end of div:first-of-type
+
+
+	&:last-of-type {
+		@media screen and (max-width:737px){
+			width:100%;
+			min-height:480px;
+			background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+			background-size:100% auto;
+		}
+
+		@media screen and (max-width:376px){
+			min-height:435px;
+		}
+
+		@media screen and (max-width:321px){
+			min-height:370px;
+		}
+
+		width:479px;
+		min-height:486px;
+		float:left;
+		text-align:center;
+		background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/boys-clothing/170505/b-dotted-d.png') no-repeat bottom center;
+
+		p {
+			@media screen and (max-width:737px){
+				margin-top:2.1em;
+			}
+
+			top:-8px;
+		}
+ 
+
+		.cta {
+			@media screen and (max-width:737px) {
+				left:-.7em;
+				margin-top:1.1em;
+				//color:#f48483;
+				//border-color:#f48483;
+			}
+
+			margin-top:6px;
+			left:-8px;
+			border-color:#22887d;
+			color:#22887d;
+
+			&:last-of-type {
+				@media screen and (max-width:737px){
+					left:.7em;
+				}
+
+				left:10px;
+			}
+
+			&:hover, &:active {
+				@media screen and (max-width:737px){
+					//background:#f15e56;
+				}
+
+				background:#22887d;
+				color:#fff;
+			}
+		}
+
+	} //end of div:last-of-type
+
+	} //end of div
+
+}

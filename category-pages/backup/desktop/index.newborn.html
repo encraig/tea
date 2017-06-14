@@ -1,0 +1,157 @@
+{* $Id: subcats.html 98297 2015-04-28 23:19:45Z keith $ *}
+{* KT: if show=all then you got to render *}
+
+{if $smarty.request.show == 'all'}
+	{include file="store:name=browse/category/index&theme=tea_collection"}
+{else}
+
+	{*{introduce_script src="`$theme_assets_url`js/bxslider/jquery.bxslider.min.js"}
+	{introduce_css href="`$theme_assets_url`js/bxslider/jquery.bxslider.css"}*}
+{literal}
+<style>
+div.landing-container img {
+	display: block;
+	margin-bottom: 0px;
+}
+</style>
+{/literal}
+	<div class="content-wrapper clearfix">
+	    {* Hint: Load the sidebar template. Refine filters, sub categories, etc. go in there. *}
+	    {include file="store:name=browse/sidebar&theme=tea_collection"}
+
+	    <article class="main-content department categorylanding-{$name}">		
+
+			<div class="landing-container"> {* Landing Container for non-carousel use (1 image) only *}
+				{*<ul class="bxslider">
+					<li>
+						<div>
+							<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell1.jpg" width="798" height="486" usemap="#slide1" alt="Shop Newborn Clothing" />  
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell2.jpg" width="798" height="486" usemap="#slide2" alt="Shop Newborn Clothing" />
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell3.jpg" width="798" height="486" usemap="#slide3" alt="Shop Newborn Clothing Gifts" />
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell4.jpg" width="798" height="486" usemap="#slide4" alt="Shop Tea x Aden &amp; Anais Clothing" />
+						</div>
+					</li>
+				</ul>*}
+
+					<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell1.jpg" width="798" height="486" usemap="#slide1" alt="Shop Newborn Clothing"/>  
+					<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell2.jpg" width="798" height="486" usemap="#slide2" alt="Shop Newborn Clothing"/>
+					<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell3.jpg" width="798" height="486" usemap="#slide3" alt="Shop Newborn Clothing Gifts"/>
+					<img src="{$theme_assets_url}images/categories/newborn-clothes/landing/20170119_SITE_NewbornDeptPage_Desktop_Cell4.jpg" width="798" height="486" usemap="#slide4" alt="Shop Tea x Aden &amp; Anais Clothing"/>
+			</div>
+
+			<map name="slide1">
+			     <area shape="rect" coords="90,279,310,337" href="{category_url category="newborn-clothes/favorites/girl"}" alt="" title="Shop Newborn Girl" />
+			     <area shape="rect" coords="90,336,310,394" href="{category_url category="newborn-clothes/favorites/boy"}" alt="" title="Shop Newborn Boy" />
+			     <area shape="rect" coords="90,393,310,451" href="{category_url category="newborn-clothes/favorites/unisex"}" alt="" title="Shop Unisex" />
+		    </map>
+
+		    <map name="slide2">
+			     <area shape="rect" coords="502,297,722,355" href="http://www.teacollection.com/newborn-clothes/view-all" alt="" title="Shop Newborn" />
+			</map>
+
+		    <map name="slide3">
+			     <area shape="rect" coords="69,223,289,281" href="{category_url category="newborn/gifts-under-30"}" alt="" title="Shop Gifts Under $30" />
+			     <area shape="rect" coords="69,280,289,338" href="{category_url category="newborn/gifts-under-50"}" alt="" title="Shop Gifts Under $50" />
+			     <area shape="rect" coords="69,337,289,395" href="{category_url category="newborn/gift-ideas"}" alt="" title="Shop All Gift Sets" />
+			     <area shape="rect" coords="436,51,653,233" href="{$html_url}product/7s52901/puff-baby-outfit" alt="" title="Puff Baby Outfit" />
+			     <area shape="rect" coords="542,233,640,454" href="{$html_url}product/7s52901/puff-baby-outfit" alt="" title="Puff Baby Outfit" />
+			     <area shape="rect" coords="673,21,791,119" href="{$html_url}product/7s52901/puff-baby-outfit" alt="" title="Puff Baby Outfitt" />
+			</map>
+			<map name="slide4">
+			     <area shape="rect" coords="499,283,719,341" href="{category_url category="newborn-clothes/favorites/aden-anais"}" alt="" title="Shop Tea x Aden &amp; Anais" />
+			</map>
+
+
+
+			{*{if $category_header}{$category_header|smarty:nodefaults}{/if}
+
+			{if $featured_category}
+				<div class="items-list-wrapper clearfix">
+				{load_thumbs mode="category_tea" category=$featured_category}
+				{thumb_loop count=$featured_category_thumbs}
+					{thumb}
+						{include file="store:name=item/thumb.list"}
+					{/thumb}
+				{/thumb_loop}
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+				<p style="text-align: center; margin-top: 10px;"><a class="shop-all" href="{category_url category="`$featured_category`"}">Shop all {$featured_category_title}</a></p>
+			{/if}*}
+
+			{if $category_seo}
+				{$category_seo|smarty:nodefaults}
+			{/if}
+	
+	    </article>
+	</div>
+	{literal}
+	<style>
+	.shop-all {
+		background: #ffffff none repeat scroll 0 0;
+		border: 1px solid #fa9c89;
+		color: #fa9c89;
+		font-family: Tisa Sans;
+		font-size: 12px;
+		padding: 12px 10px 8px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	
+    .bx-wrapper .bx-viewport .bxslider li {
+        width: 100% !important;
+    }
+	.bx-wrapper .bx-controls-direction a {
+        top: 50%;
+		height: 75px;
+		width: 75px;
+	}
+	.bx-wrapper .bx-prev {
+		background-position: 3px center;
+	}
+	.bx-wrapper .bx-next {
+		background-position: 47px center;
+	}
+	.bx-wrapper .bx-prev:hover {
+		background-position: 3px center;
+	}
+	.bx-wrapper .bx-next:hover {
+		background-position: 47px center;
+	}
+	.bx-wrapper .bx-pager {
+		display: inline;
+	}
+	.bx-wrapper .bx-pager.bx-default-pager a {
+		border-radius: 5px;
+	}
+	</style>
+
+	<script>
+		jQuery(document).ready(function () {
+			// bx slider
+			jQuery('.bxslider').bxSlider({
+				auto: true,
+				mode: 'fade'
+			});
+			// end bx slider
+		jQuery( document ).ajaxComplete(function() {
+		{/literal}
+			{if $banner_ad_hide}{literal}
+		jQuery('div.banner-ad-zone [data-zone="sitewide_banner"]').css("display", "none"); 
+			{/literal}{/if}{literal}
+		});	   
+	</script>
+	{/literal}
+
+{/if}

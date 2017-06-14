@@ -1,0 +1,135 @@
+{introduce_script src="`$theme_assets_url`js/jquery.rwdImageMaps.min.js" zone="footer"}
+
+{literal}
+<style>
+    .common-wrap {
+        margin: 0px 0% 0px 0% !important;
+    }
+
+    .common-wrap-seo {
+    	margin: 15px 6% 15px 6%;
+    }
+
+    .heading-category {
+    color: #333333;
+    font-family: tisa sans;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+	display: block;
+	}
+
+	.breadcrumb-c {
+		padding-top: 20px;
+	}
+
+</style>
+{/literal}
+
+{* CATEGORY TREE *}
+{assign var="show_category" value="baby-girl-clothes/shop-by-category"}
+
+<div class="cat-level-two">
+	<div class="navigation-set"> 
+        <a class="show-cat-level-three" id="ShopByCategory">
+            <div class="subcategory-box" style="margin: 0;">
+				<span class="nav-box-name lf">Shop By Category</span> 
+                <img class="cat-level-two-plus rf" src="{$theme_assets_url}images/mobile/plus.png"/>
+                <img class="cat-level-two-minus rf" src="{$theme_assets_url}images/mobile/minus.png"/>
+            </div>
+        </a>
+		<div class="cat-level-three">
+            {sub_cats name="cat3" category=$show_category}
+                <a href="{$cat3.url}">
+                    <div class="navigation-box {if $cat3.last}nav-last-box{/if}" style="margin: 0;">
+                        <span class="nav-row">
+                            <span class="nav-box-name lf">{$cat3.title}</span>
+                            <img class="rf" src="{$theme_assets_url}images/mobile/b.png"/>
+                        </span>
+                    </div>
+                </a>
+			{/sub_cats}                                
+        </div>    
+    </div>
+</div>
+
+<script>
+{literal}
+jQuery(document).ready(function(){
+    jQuery('.cat-level-two').show();
+	jQuery('img[usemap]').rwdImageMaps();
+})
+{/literal}
+</script>
+
+<div class="heading-category">Baby Girl</div>
+<div class="common-wrap">
+	<div class="landing-container">
+       <img src="{$theme_assets_url}images/categories/baby-girl-clothes/landing/mobile/20170223_SITE_DP_BG_M.jpg" usemap="#slide1" />		
+	</div>
+</div>
+
+<map name="slide1">
+			<area shape="rect" coords="1,1,749,671" href="{category_url category="baby-girl-dresses"}" alt="Baby girl in dress and leggings" title="Shop Dresses" />
+			<area shape="rect" coords="1,809,377,981" href="{category_url category="baby-girl-dresses"}" alt="" title="Shop Dresses" />
+			<area shape="rect" coords="376,809,749,981" href="{category_url category="baby-girl-leggings"}" alt="" title="Shop Leggings" />
+		</map>
+
+<div class="common-wrap03">
+	<img src="{$theme_assets_url}images/categories/baby-girl-clothes/landing/mobile/20160401_SITE_DeptHeader_M_NewArrivals.jpg" width="100%">
+	<div class="thumb-wrapper">
+		{load_thumbs mode="category" category=$featured_category}
+		{thumb_loop count=$featured_category_thumbs}
+			{thumb}
+				{include file="store:name=item/thumb.grid"}
+			{/thumb}
+		{/thumb_loop}
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="common-wrap-seo">
+	{if $category_seo}
+		{$category_seo|smarty:nodefaults}
+	{/if}
+</div>
+
+<div class="div40"></div>
+
+{introduce_style}
+{literal}
+
+.landing-container a {
+	display: block;
+	position: relative;
+}
+
+.landing-container a img, .landing-container img  {
+	width: 100%;
+	display: block;
+}
+
+img[usemap] {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+{/literal}
+{/introduce_style}
+
+{literal}
+<script>
+
+	jQuery( document ).ajaxComplete(function() {
+	{/literal}
+		{if $banner_ad_hide}{literal}
+			jQuery('div.banner-ad-zone [data-zone="sitewide_banner_mobile"]').css("display", "none"); 
+        {/literal}{/if}{literal}
+	});
+       
+</script>
+{/literal}

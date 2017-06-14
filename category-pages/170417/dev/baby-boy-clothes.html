@@ -1,0 +1,57 @@
+
+<div class="girls-clothing-cat">
+	<!-- desktop ref -->
+	<!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170417/bb-d-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<!-- mobile ref -->
+	<!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170417/bb-m-ref.jpg" alt="handsome boy" class="ref"/> -->
+
+	<div>
+		<a href="/product/7m42102/fin-graphic-tee.html#orchard"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170417/bb1-d.jpg" alt="cute baby boy" /></a>
+	</div>
+
+	<div>
+
+		<img id="Image-Maps-Com-image-maps-2017-04-19-132707" src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170417/bb3-d.jpg" usemap="#image-maps-2017-04-19-132707" alt="baby boy tees" data="clothes"/>
+		<map name="image-maps-2017-04-19-132707" id="ImageMapsCom-image-maps-2017-04-19-132707">
+			<area  alt="" title="" href="/product/7m42104/great-barrier-reef-graphic-tee.html" shape="rect" coords="0,0,240,231" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/product/7m42103/sydney-harbor-graphic-tee.html" shape="rect" coords="244,0,456,231" style="outline:none;" target="_self"     />
+		</map>
+		<h2>BEAUT TEES</h2>
+		<h3 class="mobile-cat title">baby boy</h3>
+		<a href="/product/7m42102/fin-graphic-tee.html#orchard"><img alt="cute baby boy" class="mobile-cat" src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/baby-boy-clothes/170417/bb1-m.jpg" /></a>
+		<p>Our tees are legendary, and the latest summer styles<br> feature adorably Aussie graphics and super soft<br> fabrics for a happy little kiddiwink!</p>
+		<p>"beaut" is Aussie for fantastic</p>
+		<a class="cta" href="/baby-boy-shirts-tops">shop tees</a>
+	</div>
+</div>
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		// changeHeight();
+		// changePos();
+		var str = 'Our tees are legendary, and the latest summer<br> styles feature adorably Aussie graphics and<br> super soft fabrics for a happy little kiddiwink!';
+		$('.girls-clothing-cat div:last-of-type p:first-of-type').html(str);
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			// changeHeight();
+			// changePos();
+		}
+	});
+});
+</script>
