@@ -1,0 +1,127 @@
+<style>
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+</style>
+
+
+<div class="desktop-promo">
+	<a href="/sweeps" id="see-details"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/babysweeps/170426/170426-babysweeps-d.png" alt="" /></a>
+</div>
+
+<div class="mobile-promo">
+	<a href="/sweeps" id="see-details2"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/babysweeps/170426/170426-babysweeps-m.png" alt="" /></a>
+</div>
+
+<!--
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Use code <span id="the-promo-code">ICYPOLE</span> to receive 20% off all Tea styles, excluding Global Shop Styles. Offer available online at teacollection.com only and valid through 5/4/2017 at 11:59 PM PT. Excludes all 3rd party (non-Tea Collection) items. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned. Cannot be used towards the purchase of gift cards.
+		</p>
+	</div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+
+		jQuery('img[usemap]').rwdImageMaps();
+		if(jQuery(window).width()>768){
+			jQuery('#see-details').fancybox();
+
+			var url = window.location.pathname;
+			if(url == '/'){
+				jQuery('.desktop-promo-hp').show();
+				jQuery('.desktop-promo').hide();
+			} else {
+				jQuery('.desktop-promo-hp').hide();
+				jQuery('.desktop-promo').show();
+			}
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#see-details2').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+
+-->

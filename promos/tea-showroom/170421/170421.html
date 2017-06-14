@@ -1,0 +1,108 @@
+<style>
+	.desktop-promo img {
+		max-width:100%;
+	}
+
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+	/*@media screen and (max-width:768px) {
+		.desktop-promo {
+			display:none;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}*/
+</style>
+
+<div class="desktop-promo">
+	<a href="#details-promo" id="see-details"><img src="/mas_assets/theme/wholesale_tea_collection/images/banners/170421/170421.png" alt="" /></a>
+</div>
+
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter Code AUSSIESUMMER20 During Check Out To Receive 20% Off your order at TeaShowroom.com. Offer Expires At 11:59 Pm Pt On 4/24/17. Only good on Spring 1, Spring 2 and Summer 1 deliveries . No Adjustments On Previous Purchases. Cannot Be Combined With Other Promotional Codes. Not Redeemable For Cash. Discount Taken Will Be Pre-Tax.
+		</p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/wholesale_tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/wholesale_tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		// if(jQuery(window).width()<768) {
+		// 	var url = window.location.pathname;
+
+		// 	var path = window.location.href;
+		// 	var path = path.split('?');
+		// 	path = path[1];
+		// 	if(path == 'page=login') {
+		// 		jQuery('.desktop-promo, .mobile-promo').hide();
+		// 	}
+
+		// 	if(url == '/clothing-sale') {
+		// 		jQuery('.desktop-promo, .mobile-promo').hide();
+		// 	}
+		// }
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+		jQuery('#see-details').fancybox();
+
+		// jQuery('img[usemap]').rwdImageMaps();
+		// if(jQuery(window).width()>768){
+		// 	jQuery('#see-details').fancybox();
+		// } else if(jQuery(window).width()<768){
+		// 	jQuery('#see-details2').click(function(e){
+		// 		e.preventDefault();
+		// 		jQuery('#details-promo').slideToggle();
+		// 	});
+		// }
+		
+		// jQuery('#see-details').click(function(){
+			// var content = jQuery('#details').html();
+			// window.open('','','width=500,height=275,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=0,left=0,top=0').document.body.innerHTML = content;
+		// });
+	});
+</script>
+

@@ -1,0 +1,156 @@
+<style>
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.close-fancy {
+		display:none;
+		text-align:center;
+	}
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+		.close-fancy {
+			display:block;
+		}
+	}
+</style>
+
+<div class="desktop-promo-hp">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170615/170615-eos-hp-d.png" alt="promo banner see details hp desktop" usemap="#map0" />
+	<map name="map0">
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="565,0,634,150" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="637,0,696,150" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="705,0,800,150" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="808,0,908,150" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="912,0,1000,150" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+
+<div class="desktop-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170615/170615-eos-d.png" alt="promo banner see details desktop" usemap="#map1"/>
+	<map name="map1">
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="474,0,545,60" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="548,0,608,60" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="612,0,712,60" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="716,0,816,60" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="821,0,1000,60" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+<div class="mobile-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170615/170615-eos-m.png" alt="promo banner see details mobile" usemap="#map2"/>
+	<map name="map2">
+		<area id="see-details2" alt="promo banner fineprint mobile" title="" href="#" shape="rect" coords="0,0,750,144" style="outline:none;" target="_self"     />
+		<area  alt="girls promo banner cta mobile" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="0,148,160,206" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta mobile" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="165,148,310,206" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta mobile" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="316,148,532,206" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta mobile" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="536,149,750,206" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code JELLIES during checkout to receive an extra 25% off Sale Styles at TeaCollection.com. Offer valid through from 6/15/2017 to 6/19/2017 at 11:59 PM PT. Offer valid on the purchase of Tea Collection items only and does not apply to third party merchandise. Discount taken will be pre-tax. Offer cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. </p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+
+		jQuery('img[usemap]').rwdImageMaps();
+		if(jQuery(window).width()>768){
+			jQuery('#see-details').fancybox();
+
+			//if there is a different banner for the homepage
+			var url = window.location.pathname;
+			if(url == '/'){
+				jQuery('.desktop-promo-hp').show();
+				jQuery('.desktop-promo').hide();
+			} else {
+				jQuery('.desktop-promo-hp').hide();
+				jQuery('.desktop-promo').show();
+			}
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#see-details2, .close-fancy').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+

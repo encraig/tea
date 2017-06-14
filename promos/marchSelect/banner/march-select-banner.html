@@ -1,0 +1,84 @@
+<style>
+	.desktop-promo img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details {
+		display:none;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+	}
+</style>
+
+<div class="desktop-promo">
+	<img src="/mas_assets/theme/tea_collection/fineprint/march-select/desktop/20170314-march-select-d.png" alt="25% off our favorite styles use code HOPTOIT" usemap="#map"/>
+	<map name="map">
+		<area  alt="" title="" href="/girls-limited-time-sale" shape="rect" coords="521,0,595,92" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/boys-limited-time-sale" shape="rect" coords="596,0,660,92" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-girl-limited-time-sale" shape="rect" coords="664,0,764,92" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-boy-limited-time-sale" shape="rect" coords="768,0,864,92" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/newborn-limited-time-sale" shape="rect" coords="869,0,1000,57" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="#" shape="rect" coords="868,58,1000,92" style="outline:none;" target="_self"  id="see-details"   />
+	</map>
+
+</div>
+
+<div class="mobile-promo">
+	<img src="/mas_assets/theme/tea_collection/fineprint/march-select/mobile/20170314-march-select-m.png?nocache=1" usemap="#image-maps-2017-03-15-154201" alt="" />
+	<map name="image-maps-2017-03-15-154201">
+		<area  alt="" title="girl" href="/girls-limited-time-sale" shape="rect" coords="4,226,152,288" style="outline:none;" target="_self"     />
+		<area  alt="" title="boy" href="/boys-limited-time-sale" shape="rect" coords="156,226,252,288" style="outline:none;" target="_self"     />
+		<area  alt="" title="baby girl" href="/baby-girl-limited-time-sale" shape="rect" coords="257,228,420,288" style="outline:none;" target="_self"     />
+		<area  alt="" title="baby boy" href="/baby-boy-limited-time-sale" shape="rect" coords="428,228,580,288" style="outline:none;" target="_self"     />
+		<area  alt="" title="newborn" href="/newborn-limited-time-sale" shape="rect" coords="590,228,800,288" style="outline:none;" target="_self"     />
+	</map>
+
+</div>
+
+<div id="details">
+	<style type="text/css">
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	</style>
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code HOPTOIT during checkout to receive 25% on your order on TeaCollection.com. Offer valid through 3/17/2017 at 11:59 PM PT. Offer valid on the purchase of select styles as advertised as a "Select Style” at Teacollection.com. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand.</p>
+	</div>
+</div>
+
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('img[usemap]').rwdImageMaps();
+		$('#see-details').click(function(){
+			var content = $('#details').html();
+			
+			window.open('','','width=500,height=275,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=0,left=0,top=0').document.body.innerHTML = content;
+			
+		});
+	});
+</script>
+

@@ -1,0 +1,137 @@
+<style>
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+</style>
+
+
+<div class="desktop-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/spring-styles/170516/170516-springStyles2-d.png" alt="Spring Styles are on SALE" usemap="#desktopPromo"/>
+	<map name="desktopPromo">
+		<area  alt="promo banner fineprint desktop" id="see-details" title="" href="#details-promo" shape="rect" coords="0,0,444,70" style="outline:none;" target="_self"     />
+		<area  alt="promo banner fineprint desktop" id="see-details" title="" href="#details-promo" shape="rect" coords="792,0,1000,70" style="outline:none;" target="_self"     />
+		<area  alt="girls promo banner cta desktop" title="" href="/girls-limited-time-sale" shape="rect" coords="448,0,514,70" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/boys-limited-time-sale" shape="rect" coords="518,0,576,70" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/baby-girl-limited-time-sale" shape="rect" coords="580,0,684,70" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/baby-boy-limited-time-sale" shape="rect" coords="688,0,786,70" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+<div class="mobile-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/spring-styles/170516/170516-springStyles2-m.png" alt="Spring Styles are on SALE" usemap="#mobilePromo"/>
+	<map name="mobilePromo">
+		 <area  alt="girls promo banner cta mobile" title="" href="/girls-limited-time-sale" shape="rect" coords="0,102,160,160" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta mobile" title="" href="/boys-limited-time-sale" shape="rect" coords="164,102,313,160" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta mobile" title="" href="/baby-girl-limited-time-sale" shape="rect" coords="318,101,532,160" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta mobile" title="" href="/baby-boy-limited-time-sale" shape="rect" coords="540,102,750,160" style="outline:none;" target="_self"     />
+		<area  alt="promo banner fineprint mobile" title="" id="see-details2" href="#" shape="rect" coords="0,0,750,97" style="outline:none;" target="_self"     /> 
+
+	</map>
+</div>
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Sale available from 5/16/2017 through 5/18/2017 at 11:59 PM PT. No adjustments on previous purchases. Limited to stock on hand.</p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+
+		jQuery('img[usemap]').rwdImageMaps();
+		if(jQuery(window).width()>768){
+			jQuery('#see-details').fancybox();
+
+			// var url = window.location.pathname;
+			// if(url == '/'){
+			// 	jQuery('.desktop-promo').hide();
+			// } else {
+			// 	jQuery('.desktop-promo').show();
+			// }
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#see-details2').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+

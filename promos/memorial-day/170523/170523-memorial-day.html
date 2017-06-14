@@ -1,0 +1,147 @@
+<style>
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+</style>
+
+<div class="desktop-promo-hp">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/memorial-day/170523/170523-memorialDay-hp-d.png" alt="The Memorial Day SALE" usemap="#map0" />
+	<map name="map0">
+		<area  alt="promo banner girl cta" title="" href="/girls-clothing" shape="rect" coords="476,0,545,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner boy cta" title="" href="/boys-clothing" shape="rect" coords="548,0,608,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner baby girl cta" title="" href="/baby-girl-clothes" shape="rect" coords="613,0,712,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner baby boy cta" title="" href="/baby-boy-clothes" shape="rect" coords="717,0,813,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner sale cta" title="" href="/clothing-sale" shape="rect" coords="820,0,888,100" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="889,0,999,100" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+
+<div class="desktop-promo">
+	<a href="#details-promo" id="see-details" data="promo banner desktop fine print"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/memorial-day/170523/170523-memorialDay-d.png" alt="promo banner see details desktop"/></a>
+	<!-- <map name="map1">
+		<area  alt="promo banner desktop" title="" href="/clothing-sale" shape="rect" coords="0,0,880,60" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="see details" title="" href="#details-promo" shape="rect" coords="888,0,1000,60" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+<div class="mobile-promo">
+	<a href="#" id="see-details2" data="promo banner mobile fine print"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/memorial-day/170523/170523-memorialDay-m.png" alt="promo banner see details mobile"/></a>
+	<!-- <map name="map2">
+		<area  alt="girls promo banner cta" title="" href="/girls" shape="rect" coords="0,102,160,160" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta" title="" href="/boys" shape="rect" coords="164,102,313,160" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta" title="" href="/baby-girl" shape="rect" coords="318,101,532,160" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta" title="" href="/baby-boy" shape="rect" coords="540,102,750,160" style="outline:none;" target="_self"     />
+		<area  alt="promo banner fineprint" title="" id="see-details2" href="#" shape="rect" coords="0,0,750,97" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code LORIKEET during checkout to receive 25% your order at TeaCollection.com. Offer expires at 11:59 pm PT on 5/29/2017. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Not applicable to the purchase of Global Shop items labeled "Global Archive", Everyday Playsets, and third party items. Limited to stock on hand.</p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+
+		jQuery('img[usemap]').rwdImageMaps();
+		if(jQuery(window).width()>768){
+			jQuery('#see-details').fancybox();
+
+			//if there is a different banner for the homepage
+			var url = window.location.pathname;
+			if(url == '/'){
+				jQuery('.desktop-promo-hp').show();
+				jQuery('.desktop-promo').hide();
+			} else {
+				jQuery('.desktop-promo-hp').hide();
+				jQuery('.desktop-promo').show();
+			}
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#see-details2').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+

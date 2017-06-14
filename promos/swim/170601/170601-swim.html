@@ -1,0 +1,150 @@
+<style>
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+</style>
+<!--
+<div class="desktop-promo-hp">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/swim/170601/170601-swim-hp-d.png" alt="The Memorial Day SALE" usemap="#map0" />
+	<map name="map0">
+		<area  alt="promo banner girl cta" title="" href="/girls-swimwear" shape="rect" coords="476,0,545,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner boy cta" title="" href="/boys-swimwear" shape="rect" coords="548,0,608,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner baby girl cta" title="" href="/baby-girl-swimwear" shape="rect" coords="613,0,712,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner baby boy cta" title="" href="/baby-boy-swimwear" shape="rect" coords="717,0,813,100" style="outline:none;" target="_self"     />
+		<area  alt="promo banner sale cta" title="" href="/clothing-sale" shape="rect" coords="820,0,888,100" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="889,0,999,100" style="outline:none;" target="_self"     />
+	</map>
+</div>
+-->
+
+<div class="desktop-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/swim/170601/170601-swim-d.png" alt="promo banner see details desktop" usemap="#map1"/>
+	<map name="map1">
+		<area  alt="girls promo banner cta desktop" title="" href="/girls-swimwear" shape="rect" coords="504,0,574,60" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/boys-swimwear" shape="rect" coords="576,0,637,60" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="baby-girl-swimwear" shape="rect" coords="642,0,742,60" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/baby-boy-swimwear" shape="rect" coords="745,0,847,60" style="outline:none;" target="_self"     />
+		<area  alt="promo banner fine print desktop" id="see-details" title="" href="#details-promo" shape="rect" coords="848,0,1000,60" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+<div class="mobile-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/swim/170601/170601-swim-m.png" alt="promo banner see details mobile" usemap="#map2"/>
+	<map name="map2">
+		<area id="see-details2" alt="promo banner fineprint mobile" title="" href="#" shape="rect" coords="0,0,750,98" style="outline:none;" target="_self"     />
+		<area  alt="girls promo banner cta mobile" title="" href="/girls-swimwear" shape="rect" coords="0,101,164,160" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta mobile" title="" href="/boys-swimwear" shape="rect" coords="169,102,309,160" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta mobile" title="" href="/baby-girl-swimwear" shape="rect" coords="312,101,516,160" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta mobile" title="" href="/baby-boy-swimwear" shape="rect" coords="522,102,750,160" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code SPLASH during checkout to receive 50% off swimwear in your order on TeaCollection.com. Offer valid from 6/1/2017 through 6/4/2017 at 11:59 PM PT. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Not applicable on Everyday Playsets or Third Party items.</p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+
+		jQuery('img[usemap]').rwdImageMaps();
+		if(jQuery(window).width()>768){
+			jQuery('#see-details').fancybox();
+
+			//if there is a different banner for the homepage
+			// var url = window.location.pathname;
+			// if(url == '/'){
+			// 	jQuery('.desktop-promo-hp').show();
+			// 	jQuery('.desktop-promo').hide();
+			// } else {
+			// 	jQuery('.desktop-promo-hp').hide();
+			// 	jQuery('.desktop-promo').show();
+			// }
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#see-details2').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+
