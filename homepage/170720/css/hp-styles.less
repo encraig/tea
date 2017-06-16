@@ -1,0 +1,396 @@
+@mobile-grey: #59595c;
+
+body {
+	font-family:'Tisa Sans', Arial, Helvetica, sans-serif;
+	color:#606063;
+}
+ 
+.bx-controls {
+	position:relative;
+
+	@media screen and (max-width:737px) {
+		//top:-525px;
+		top:-30em;
+	}
+
+	@media screen and (max-width:376px) {
+		top:-27em;
+	}
+
+	@media screen and (max-width: 321px) {
+		top:-23em;
+	}
+
+	/*@media screen and (max-width:569px) {
+		top:-424px;
+	}
+
+	@media screen and (max-width:415px) {
+		top:-300px;
+	}
+
+	@media screen and (max-width:481px) {
+		top:-350px;
+	}
+	*/
+}
+
+#scroll-prompt {
+	display:none;
+}
+
+
+@media screen and (max-width:768px) {
+	.bx-wrapper {
+		margin-bottom:0 !important;
+	}
+}
+
+img, video {
+	max-width:100%;
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.mobile {
+	display:none !important;
+
+	@media screen and(max-width:768px){
+		display:block !important;
+	}
+}
+
+
+.ref {
+	position:absolute;
+	max-width:100%;
+	//width:1000px;
+	opacity:.5;
+	//display:none;
+}
+
+.body-copy {
+	@media screen and (max-width:737px){
+		font-size:1em;
+		line-height:1.59em;
+		//letter-spacing:.6px;
+		letter-spacing:.05em;
+	}
+
+	@media screen and (max-width:376px){
+		font-size:.9em;
+	}
+
+	@media screen and (max-width:321px){
+		font-size:.8em;
+		letter-spacing:.5px;
+	}
+
+	font-size:14px;
+	line-height:21px;
+	letter-spacing:.6px;
+	position:relative;
+	font-family:brown-pro-regular;
+}
+
+.cta {
+		@media screen and (max-width:737px){
+			width: 42%;
+    		left: 0px;
+    		padding: 1em 0 .7em;
+    		font-size: .8em;
+    		//line-height:3em;
+		}
+
+		@media screen and (max-width:415px){
+		    font-size: .8em;
+    		letter-spacing: 1.1px;
+		}
+
+		@media screen and (max-width:376px){
+    		//padding: 8px 0;
+    		font-size:.7em;
+		}
+
+		@media screen and (max-width:321px){
+			//padding: 7px 0;
+    		font-size: .6em;
+		}
+
+	display: inline-block;
+	font-family: brown-pro-regular;
+    border: 1px solid;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0 9px;
+    //font-weight:bold;
+    text-align:center;
+    box-sizing:border-box;
+    //line-height:2.8em;
+}
+
+
+.hp {
+	overflow:hidden;
+}
+
+.c2, .c3, .c4, .c5 {
+	@media screen and (max-width:737px){
+		margin:0;
+	}
+
+	//overflow:hidden;
+	position:relative;
+	//opacity:.5; 
+	float:left;
+	width:326px;
+	margin-right:10px;
+	text-align:center;
+
+	div {
+		img {
+			margin-bottom:22px;
+		}
+
+		.cta {
+			@media screen and (max-width:736px){
+				margin-top:14px !important;
+				width:88% !important;
+			}
+
+			margin-top:28px;
+			color:#275c6c;
+
+			&:hover, &:active {
+				@media screen and (max-width:737px){
+					background:#d75196;
+					border-color:#d75196;
+				}
+
+				background:#275c6c;;
+				border-color:#275c6c;;
+				color:#fff;
+			}
+		}
+	}
+	
+
+} //end of .c2, .c3, .c4, .c5
+
+.c1 {
+	@media screen and (max-width:737px){
+		background:none;
+		min-height:auto;
+	}
+
+	background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170706/c1-bg-d.jpg') no-repeat top center;
+	min-height:500px;
+	margin-bottom:10px;
+	//opacity:.5;
+
+	div {
+		@media screen and (max-width:737px){
+			width:100%;
+			float:none;
+			margin-top:0;
+		}
+
+		.text {
+			margin-top:146px;
+			position:relative;
+			left:4px;
+		}
+
+		width:296px;
+		margin-top:0;
+		float:right;
+		text-align:center;
+
+		p {
+			margin-top:20px;
+		}
+
+		.cta {
+			@media screen and (max-width:737px){
+				border: 1px solid #275c6c;
+    			color: #275c6c;
+    			width: 42%;
+    			margin-right: 3%;
+    			left: 0px;
+    			margin-top: 16px;
+			}
+
+			&:last-of-type {
+				@media screen and (max-width:737px){
+					margin-right:0;
+				}
+			}
+
+			&:hover, &:active {
+				@media screen and (max-width:737px){
+					background:#275c6c;
+					border-color:#275c6c;
+				}
+
+				background:#275c6c;
+				//border-color:#1077bc;
+				color:#fff;
+			}
+
+			margin-top:10px;
+			margin-bottom:10px;
+			background:#fff;
+			color:#275c6c;
+			left:-14px;
+			//top:316px;
+			border:none;
+			width:250px;
+		}
+	}
+
+} // end of .c1
+
+.c2 {
+	@media screen and (max-width:737px){
+		height:auto;
+	}
+
+	@media screen and (max-width:415px){
+		height:522px;
+	}
+
+	@media screen and (max-width:376px){
+		height:473px;
+	}
+
+	@media screen and (max-width:321px){
+		height:404px;
+	}
+
+	margin-bottom:53px;
+	overflow:hidden;
+	//opacity:.5;
+
+	div {
+		@media screen and (max-width:737px){
+			float:none;
+			height:auto;	
+		}
+
+
+		.cta {
+			@media screen and (max-width:737px){
+				color:#681446;
+			}
+
+			margin-top:28px;
+			color:#275c6c;
+			width:250px;
+
+			&:hover, &:active {
+				@media screen and (max-width:737px){
+					background:#681446;
+					border-color:#681446;
+				}
+
+				background:#275c6c;;
+				border-color:#275c6c;;
+				color:#fff;
+			}
+		}
+	}
+} //end of .c2
+
+.c3 {
+	@media screen and (max-width:737px){
+		height:auto;
+	}
+
+	div {
+		.cta {
+			@media screen and (max-width:737px){
+				width: 42% !important;
+    			margin-right: 3%;
+			}
+
+			width:140px;
+			margin-right:20px;
+
+			&:active, &:hover {
+				@media screen and (max-width:737px){
+					background: #275c6c;
+					border-color:#color: #275c6c;
+				}
+			}
+
+			&:last-of-type {
+				margin-right:0;
+			}
+
+		}
+	}
+
+} //end of .c3
+
+
+.c4 {
+	margin-right:0 !important; 
+
+	div {
+
+		.cta {
+			@media screen and (max-width:737px){
+				color: #671347;
+			}
+
+			width:250px;
+			left:3px;
+
+			&:active, &:hover {
+				@media screen and (max-width: 737px){
+					background:#671347;
+					border-color:#671347;
+				}
+			}
+		}
+	}	
+} //end of .c4
+
+.c5 {
+	@media screen and (max-width:737px){
+		height:auto;
+	}
+
+	//clear:both;
+	width:100%;
+
+	div {
+		img {
+			@media screen and (max-width:737px){
+				margin-bottom: 31px;
+			}
+		}
+
+		.cta {
+			margin:0 auto;
+		}
+	}
+
+} //end of .c5
+
+
+
+@media screen and (max-width:768px) {
+	#olapic_specific_widget, #scroll-prompt, .homepage-text-under-olapic {
+		display:none;
+	}
+}

@@ -1,0 +1,347 @@
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.unveil.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css" />
+
+<!-- bx slider -->
+<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+<script>
+
+jQuery(document).ready(function () {
+   	
+   	if($(window).width()<768) {
+
+   		console.log('its mobile and do stuff');
+
+		jQuery('img[usemap]').rwdImageMaps();
+
+        // bx slider
+        jQuery('.bxslider').bxSlider({
+           auto: true,
+           mode: 'fade',
+		   onSlideAfter: function(){
+			// reload rwdImageMaps js
+			 jQuery('img[usemap]').rwdImageMaps();
+		   }
+		});
+        // end bx slider
+
+        $("img").unveil();
+
+          // see more week 2
+        $("#more2").on('click', function (e) {
+            e.preventDefault();
+            var page = $('#wk2').html();
+            newItems = $(page).appendTo('#container');
+            $(this).css("display", "none");
+            $("#more1").css("display", "block");
+        });
+
+         // see more week 1
+        $("#more1").on('click', function (e) {
+            e.preventDefault();
+            var page = $('#wk1').html();
+            newItems = $(page).appendTo('#container');
+            $(this).css("display", "none");
+        });
+
+        /*jQuery('#scroll-prompt').click(function () {
+            jQuery('html, body').animate({
+                scrollTop: $('#cell-8').offset().top
+            }, 500);
+            return false;
+        });
+
+        $(function () {
+
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 600) {
+                    jQuery('#scroll-prompt').fadeOut();
+                } else {
+                    jQuery('#scroll-prompt').fadeIn();
+                }
+            });
+
+        });*/
+    }
+
+});
+</script>
+
+
+<div class="stacked">
+	<a href="http://www.teacollection.com/girls-clothing/new-arrivals">
+		<img alt="New Arrivals" src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/homepage/20170223_TeaCollection_Spring2_childrens_clothing_HP_D_cell01.jpg" usemap="#slide1" />
+	</a>
+
+	<map name="slide1">
+
+		<area alt="Shop New Arrivals" coords="1,1,619,499" data-slide-name="New Arrivals" data-slide-number="1" data-slide-target="" href="http://www.teacollection.com/girls-clothing/new-arrivals" id="homepage_slide" shape="rect" title="Shop New Arrivals" /> 
+
+		<area alt="Girls New Arrivals" coords="714,255,939,315" data-slide-name="New Arrivals" data-slide-number="1" data-slide-target="Girls New Arrivals" href="http://www.teacollection.com/girls-clothing/new-arrivals" id="homepage_slide" shape="rect" title="Girls New Arrivals" /> 
+
+		<area alt="Boys New Arrivals" coords="714,314,939,373" data-slide-name="New Arrivals" data-slide-number="1" data-slide-target="Boys New Arrivals" href="http://www.teacollection.com/boys-clothing/new-arrivals" id="homepage_slide" shape="rect" title="Boys New Arrivals" /> 
+
+		<area alt="Baby Girl New Arrivals" coords="714,372,939,431" data-slide-name="New Arrivals" data-slide-number="1" data-slide-target="Baby Girl New Arrivals" href="http://www.teacollection.com/baby-girl-clothes/new-arrivals" id="homepage_slide" shape="rect" title="Baby Girl New Arrivals" /> 
+
+		<area alt="Baby Boy New Arrivals" coords="714,430,939,490" data-slide-name="New Arrivals" data-slide-number="1" data-slide-target="Baby Boy New Arrivals" href="http://www.teacollection.com/baby-boy-clothes/new-arrivals" id="homepage_slide" shape="rect" title="Baby Boy New Arrivals" />
+
+	</map>
+
+<table id="vimeo" style="margin:20px 0 20px 0px">
+	<tbody>
+		<tr>
+			<td><img alt="Explore With Us" src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/homepage/20170223_TeaCollection_Spring2_childrens_clothing_HP_D_cell02.jpg" style="height:396px; width:296px" usemap="#slide2" /><map name="slide2"><area alt="Explore With Us" coords="1,1,295,395" data-slide-name="Explore With Us" data-slide-number="2" data-slide-target="Explore With Us" id="homepage_slide" shape="rect" title="Explore With Us" /></map></td>
+			<td><iframe allowfullscreen="" frameborder="0" height="396" mozallowfullscreen="" src="https://player.vimeo.com/video/203519775?title=0&amp;byline=0&amp;portrait=0" webkitallowfullscreen="" width="704"></iframe></td>
+		</tr>
+	</tbody>
+</table>
+
+<a href="http://www.teacollection.com/baby-girl-onesies">
+	<img alt="Shop Rompers &amp; Outfits" src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/homepage/20170223_TeaCollection_Spring2_childrens_clothing_HP_D_cell03.jpg" usemap="#slide3" />
+</a>
+
+<map name="slide3">
+	<area coords="1,1,511,499" href="http://www.teacollection.com/baby-girl-onesies" shape="rect" /> 
+
+	<area alt="Baby Girl Rompers &amp; Outfits" coords="531,266,756,326" data-slide-name="Shop Rompers &amp; Outfits" data-slide-number="3" data-slide-target="Baby Girl Rompers &amp; Outfits" href="http://www.teacollection.com/baby-girl-onesies" id="homepage_slide" shape="rect" title="Baby Girl Rompers &amp; Outfits" /> 
+
+	<area alt="Baby Boy Rompers &amp; Outfits" coords="755,266,980,326" data-slide-name="Shop Rompers &amp; Outfits" data-slide-number="3" data-slide-target="Baby Boy Rompers &amp; Outfits" href="http://www.teacollection.com/baby-boy-onesies" id="homepage_slide" shape="rect" title="Baby Boy Rompers &amp; Outfits" />
+
+</map> 
+
+<a href="http://www.teacollection.com/girls-clothing-sets">
+	<img alt="Everyday Play Sets" src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/homepage/20170223_TeaCollection_Spring2_childrens_clothing_HP_D_cell04.jpg" usemap="#slide4" />
+</a>
+
+<map name="slide4">
+	<area alt="Shop Everyday Play Sets" coords="301,1,999,499" data-slide-name="Everyday Play Sets" data-slide-number="4" data-slide-target="Shop Everyday Play Sets" href="http://www.teacollection.com/girls-clothing-sets" id="homepage_slide" shape="rect" title="Shop Everyday Play Sets" /> 
+
+	<area alt="Girls Everyday Play Sets" coords="38,210,263,270" data-slide-name="Everyday Play Sets" data-slide-number="4" data-slide-target="Girls Everyday Play Sets" href="http://www.teacollection.com/girls-clothing-sets" id="homepage_slide" shape="rect" title="Girls Everyday Play Sets" /> 
+
+	<area alt="Boys Everyday Play Sets" coords="38,269,263,329" data-slide-name="Everyday Play Sets" data-slide-number="4" data-slide-target="Boys Everyday Play Sets" href="http://www.teacollection.com/boys-clothing-sets" id="homepage_slide" shape="rect" title="Boys Everyday Play Sets" /> 
+
+	<area coords="38,328,263,387" href="http://www.teacollection.com/baby-girl-clothing-sets" shape="rect" />
+
+	<area alt="Baby Boy Everyday Play Sets" coords="38,386,263,446" data-slide-name="Everyday Play Sets" data-slide-number="4" data-slide-target="Baby Boy Everyday Play Sets" href="http://www.teacollection.com/baby-boy-clothing-sets" id="homepage_slide" shape="rect" title="Baby Boy Everyday Play Sets" />
+</map> 
+
+<a href="http://www.teacollection.com/girls-clothing-indigenous-styles">
+	<img alt="Indigenous Styles" src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/homepage/20170223_TeaCollection_Spring2_childrens_clothing_HP_D_cell05.jpg" usemap="#slide5" />
+</a>
+
+<map name="slide5">
+	<area alt="Shop Indigenous Styles" coords="1,1,455,498" data-slide-name="Indigenous Styles" data-slide-number="5" data-slide-target="Shop Indigenous Styles" href="http://www.teacollection.com/girls-clothing-indigenous-styles" id="homepage_slide" shape="rect" title="Shop Indigenous Styles" /> 
+
+	<area alt="Shop Indigenous Styles" coords="503,294,728,354" data-slide-name="Indigenous Styles" data-slide-number="5" data-slide-target="Shop Indigenous Styles" href="http://www.teacollection.com/girls-clothing-indigenous-styles" id="homepage_slide" shape="rect" title="Shop Indigenous Styles" /> 
+
+	<area alt="See Our Blog" coords="727,294,952,354" data-slide-name="Indigenous Styles" data-slide-number="5" data-slide-target="See Our Blog" href="http://blog.teacollection.com/indigenousart" id="homepage_slide" shape="rect" target="_blank" title="See Our Blog" />
+</map>
+
+</div>
+
+
+
+<style>
+	.content-wrapper-inner {
+		display:none;
+	}
+	
+	@media screen and (max-width:768px){
+		.content-wrapper-inner {
+			display:block;
+		}
+		.stacked, #olapic_specific_widget, .homepage-text-under-olapic, #scroll-prompt {
+			display:none !important;
+		}
+
+	}
+
+    .content-wrapper-inner,
+    #container {
+        margin: 0% 0 0 0 !important;
+    }
+    
+    .bx-wrapper .bx-controls-direction a {
+        top: 33%;
+        margin: 0;
+    }
+    
+    .bx-wrapper .bx-pager {
+        display: inline;
+    }
+
+    .bx-wrapper .bx-pager .bx-pager-item a {
+    	margin: 0 10px;
+    }
+
+    .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    	position:relative;
+    	top:0;
+    	width:100%;
+    }
+    
+    .bottom-menu a {
+        height: 30px;
+        width: 135px;
+        background-color: #e6e7e8;
+        color: #555555;
+        text-transform: uppercase;
+        font-family: 'Tisa Sans Medium';
+        font-size: 10px;
+        letter-spacing: .08rem;
+        margin-bottom: 5px;
+        line-height: 33px;
+        display: block;
+    }
+    
+    .bottom-menu {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .left,
+    .right {
+        display: inline-block;
+        width: 135px;
+        text-align: center;
+    }
+    
+    .left {
+        margin-right: 5px;
+    }
+    
+    .hr-dotted {
+        background: url('/mas_assets/theme/tea_collection/images/mobile/index/dottedline3.png') 0 0 repeat-x;
+        height: 3px;
+        margin: 20px 0 40px 0;
+    }
+    
+    .bx-wrapper .bx-viewport .bxslider li {
+        width: 100% !important;
+    }
+    
+    .bx-wrapper .bx-controls-direction a {
+        top: 25%;
+        height: 75px;
+        width: 75px;
+    }
+    
+    .bx-wrapper .bx-prev {
+        background-position: 3px center;
+    }
+    
+    .bx-wrapper .bx-next {
+        background-position: 47px center;
+    }
+    
+    .bx-wrapper .bx-prev:hover {
+        background-position: 3px center;
+    }
+    
+    .bx-wrapper .bx-next:hover {
+        background-position: 47px center;
+    }
+	
+	img[usemap] {
+		border: 0;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+        outline: none;
+	}
+    img {
+        border: 0;
+        outline: none;
+    }
+
+    .video-container {
+   		position: relative;
+    	padding-bottom: 56.25%;
+    	padding-top: 30px; 
+    	height: 0; 
+    	overflow: hidden;
+    	max-width: 100%; 
+    	height: auto; 
+    }
+ 
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+</style>
+
+<div class="content-wrapper-inner">
+    <!-- category box -->
+    <div id="container" class="category-tree-box">
+        <div style="margin-bottom: 30px">
+            <!-- bx slider -->
+            <ul class="bxslider">
+                <li>
+                    <div>
+                        <img src="/mas_assets/theme/tea_collection/images/mobile/index/20170223_TeaCollection_Spring2_childrens_clothing_HP_M_cell01.jpg" usemap="#slide1a" />          
+                    </div>
+                </li>
+                <li>
+                    <div>
+						<img src="/mas_assets/theme/tea_collection/images/mobile/index/20170223_TeaCollection_Spring2_childrens_clothing_HP_M_cell03.jpg" usemap="#slide2a" />                
+                    </div>
+                </li>
+                <li>
+                    <div>
+						<img src="/mas_assets/theme/tea_collection/images/mobile/index/20170223_TeaCollection_Spring2_childrens_clothing_HP_M_cell04.jpg" usemap="#slide3a" />                
+                    </div>
+                </li>
+                <li>
+                    <div>
+						<img src="/mas_assets/theme/tea_collection/images/mobile/index/20170223_TeaCollection_Spring2_childrens_clothing_HP_M_cell05.jpg" usemap="#slide4a" />                
+                    </div>
+                </li>
+            </ul>
+		</div>
+        <div class="video-container" id="vimeo">
+            <iframe src="https://player.vimeo.com/video/203519775?title=0&byline=0&portrait=0" width="704" height="396" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div>
+            <img src="/mas_assets/theme/tea_collection/images/mobile/index/20170223_TeaCollection_Spring2_childrens_clothing_HP_M_cell02.jpg" width="100%" />
+        </div>
+
+        <map name="slide1a">
+            <area shape="rect" coords="0,1,749,672" href="/girls-clothing/new-arrivals" alt="Children dressed in spring styles" title="Shop New Arrivals" />
+            <area shape="rect" coords="1,806,375,927" href="/girls-clothing/new-arrivals" alt="" title="Girls New Arrivals" />
+            <area shape="rect" coords="374,806,750,927" href="/boys-clothing/new-arrivals" alt="" title="Boys New Arrivals" />
+            <area shape="rect" coords="1,926,375,1060" href="/baby-girl-clothes/new-arrivals" alt="" title="Baby Girl New Arrivals" />
+            <area shape="rect" coords="374,926,749,1060" href="/baby-boy-clothes/new-arrivals" alt="" title="Baby Boy New Arrivals" />
+        </map>
+
+        <map name="slide2a">
+			<area shape="rect" coords="0,1,749,672" href="/baby-girl-onesies" alt="Baby Girl dressed in blue floral outfit" title="Shop Rompers &amp; Outfits" />
+            <area shape="rect" coords="1,774,375,927" href="/baby-girl-onesies" alt="" title="Baby Girl Rompers &amp; Outfits" />
+            <area shape="rect" coords="374,774,750,927" href="/baby-boy-onesies" alt="" title="Baby Boy Rompers &amp; Outfits" />
+		</map>
+
+        <map name="slide3a">
+			<area shape="rect" coords="0,1,749,672" href="/girls-clothing-sets" alt="Flat product image of girls bundled set" title="Shop Everyday Play Sets" />
+            <area shape="rect" coords="1,806,375,927" href="/girls-clothing-sets" alt="" title="Girls Sets" />
+            <area shape="rect" coords="374,806,750,927" href="/boys-clothing-sets" alt="" title="Boys Sets" />
+            <area shape="rect" coords="1,926,375,1060" href="/baby-girl-clothing-sets" alt="" title="Baby Girl Sets" />
+            <area shape="rect" coords="374,926,749,1060" href="/baby-boy-clothing-sets" alt="" title="Baby Boy Sets" />
+		</map>
+
+		<map name="slide4a">
+			<area shape="rect" coords="0,1,749,672" href="/girls-clothing-indigenous-styles" alt="Flat product image of various dresses" title="Shop Indigenous Styles" />
+            <area shape="rect" coords="1,811,375,964" href="/girls-clothing-indigenous-styles" alt="" title="Girls Indigenous Styles" />
+            <area shape="rect" coords="374,811,750,964" href="http://blog.teacollection.com/tea-gives-back/" alt="" title="See Our Blog" />
+		</map>
+
+</div>

@@ -1,0 +1,528 @@
+<style>
+body {
+  font-family: 'Tisa Sans', Arial, Helvetica, sans-serif;
+  color: #606063;
+}
+.bx-controls {
+  position: relative;
+  /*@media screen and (max-width:569px) {
+		top:-424px;
+	}
+
+	@media screen and (max-width:415px) {
+		top:-300px;
+	}
+
+	@media screen and (max-width:481px) {
+		top:-350px;
+	}
+	*/
+}
+@media screen and (max-width: 737px) {
+  .bx-controls {
+    top: -30em;
+  }
+}
+@media screen and (max-width: 376px) {
+  .bx-controls {
+    top: -27em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .bx-controls {
+    top: -23em;
+  }
+}
+#scroll-prompt {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bx-wrapper {
+    margin-bottom: 0 !important;
+  }
+}
+img,
+video {
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block !important;
+  }
+}
+.ref {
+  position: absolute;
+  max-width: 100%;
+  opacity: .5;
+}
+.body-copy {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: .6px;
+  position: relative;
+}
+@media screen and (max-width: 737px) {
+  .body-copy {
+    font-size: 1em;
+    line-height: 1.59em;
+    letter-spacing: .05em;
+  }
+}
+@media screen and (max-width: 376px) {
+  .body-copy {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .body-copy {
+    font-size: .8em;
+    letter-spacing: .5px;
+  }
+}
+.cta {
+  display: inline-block;
+  border: 1px solid;
+  width: 200px;
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 0 9px;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 737px) {
+  .cta {
+    width: 42%;
+    left: 0px;
+    padding: 1em 0 .7em;
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 415px) {
+  .cta {
+    font-size: .8em;
+    letter-spacing: 1.1px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .cta {
+    font-size: .7em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .cta {
+    font-size: .6em;
+  }
+}
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.c6 {
+  overflow: hidden;
+  position: relative;
+}
+.c1 {
+  background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c1-bg-d.jpg') no-repeat top center;
+  min-height: 500px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 737px) {
+  .c1 {
+    background: none;
+    min-height: auto;
+  }
+}
+.c1 div {
+  width: 296px;
+  margin-top: 0;
+  float: right;
+  text-align: center;
+}
+@media screen and (max-width: 737px) {
+  .c1 div {
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
+}
+.c1 div p {
+  margin-top: 20px;
+}
+.c1 div .cta {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #1077bc;
+  left: -5px;
+}
+@media screen and (max-width: 737px) {
+  .c1 div .cta {
+    color: #27b8b5;
+    margin-top: 1.8em;
+    left: -0.7em;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c1 div .cta:last-of-type {
+    left: .7em;
+  }
+}
+.c1 div .cta:hover,
+.c1 div .cta:active {
+  background: #1077bc;
+  border-color: #1077bc;
+  color: #fff;
+}
+@media screen and (max-width: 737px) {
+  .c1 div .cta:hover,
+  .c1 div .cta:active {
+    background: #27b8b5;
+    border-color: #27b8b5;
+  }
+}
+.c2 {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 737px) {
+  .c2 {
+    height: auto;
+  }
+}
+@media screen and (max-width: 415px) {
+  .c2 {
+    height: 522px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .c2 {
+    height: 473px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .c2 {
+    height: 404px;
+  }
+}
+.c2 div {
+  float: left;
+  height: 500px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div {
+    float: none;
+    height: auto;
+  }
+}
+.c2 div:first-of-type {
+  background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2-bg-d.png') no-repeat top center;
+  width: 280px;
+  text-align: center;
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type {
+    background: none;
+    width: 100%;
+  }
+}
+.c2 div:first-of-type img {
+  margin-top: 96px;
+  position: relative;
+  left: 11px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type img {
+    margin-top: 0;
+    left: 0;
+  }
+}
+.c2 div:first-of-type p {
+  position: relative;
+  top: -1px;
+  left: 5px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type p {
+    top: 0;
+    left: 0;
+    margin-top: 1.6em;
+  }
+}
+.c2 div:first-of-type .cta {
+  color: #a3dad5;
+  margin-top: 20px;
+  left: 4px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type .cta {
+    left: -0.7em;
+    margin-top: 1.8em;
+    color: #d75196;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type .cta:last-of-type {
+    left: .7em;
+  }
+}
+.c2 div:first-of-type .cta:hover,
+.c2 div:first-of-type .cta:active {
+  background: #a3dad5;
+  border-color: #a3dad5;
+  color: #fff;
+}
+@media screen and (max-width: 737px) {
+  .c2 div:first-of-type .cta:hover,
+  .c2 div:first-of-type .cta:active {
+    background: #d75196;
+    border-color: #d75196;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c2 div:last-of-type {
+    display: none;
+  }
+}
+.c3 {
+  height: 100px;
+}
+@media screen and (max-width: 737px) {
+  .c3 {
+    height: auto;
+  }
+}
+.c4 {
+  margin-bottom: 10px;
+}
+.c4 div {
+  float: left;
+  height: 500px;
+}
+@media screen and (max-width: 737px) {
+  .c4 div {
+    float: none;
+    height: auto;
+  }
+}
+.c4 div:last-of-type {
+  width: 570px;
+  text-align: center;
+}
+@media screen and (max-width: 737px) {
+  .c4 div:last-of-type {
+    width: 100%;
+  }
+}
+.c4 div:last-of-type p {
+  margin-bottom: 20px;
+  margin-top: 2px;
+  left: 2px;
+}
+@media screen and (max-width: 737px) {
+  .c4 div:last-of-type p {
+    margin-top: 1.5em;
+    margin-bottom: 1.4em;
+    left: 0;
+  }
+}
+.c4 div:last-of-type .cta {
+  color: #f48483;
+  left: -10px;
+}
+@media screen and (max-width: 737px) {
+  .c4 div:last-of-type .cta {
+    left: 0;
+    width: 64%;
+    margin-bottom: 1.6em;
+  }
+}
+.c4 div:last-of-type .cta:nth-of-type(3) {
+  left: 9px;
+}
+@media screen and (max-width: 737px) {
+  .c4 div:last-of-type .cta:nth-of-type(3) {
+    left: 0;
+  }
+}
+.c4 div:last-of-type .cta:hover,
+.c4 div:last-of-type .cta:active {
+  background: #f48483;
+  border-color: #f48483;
+  color: #fff;
+}
+.c5 {
+  height: 200px;
+}
+@media screen and (max-width: 737px) {
+  .c5 {
+    height: auto;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c5 .cta {
+    margin: 3.2em auto;
+    color: #bbb7d2;
+  }
+}
+@media screen and (max-width: 768px) {
+  #olapic_specific_widget,
+  #scroll-prompt,
+  .homepage-text-under-olapic {
+    display: none;
+  }
+}
+
+</style>
+
+<div class="hp">
+	<!-- desktop ref --> 
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/hp-d-ref.jpg" class="ref"/> -->
+
+	<!-- cell 1 -->
+	<div class="c1">
+		<!-- mobile ref --> 
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c1-m-ref.jpg" class="ref mobile"/> -->
+		<div>
+			<img class="desktop" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c1-d.png" alt="We Travel. We Explore. We Make the foreign Familiar. Our latest styles draw inpiration from the land down under." />
+
+			<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c1-m.jpg" alt="girls holding hands" />
+
+			<p class="body-copy mobile">We Travel. We explore. And this season, we visit the varied ecosystems of Australia, drawing inspiration from the diverse plant and animal life we studied in the land down under.</p>
+			<a href="/girls-clothing/new-arrivals" class="cta hp-url" id="c1">girls new arrivals</a>
+			<a href="/boys-clothing/new-arrivals" class="cta hp-url" id="c1">boys new arrivals</a>
+		</div>
+	</div>
+
+	<!-- cell 2 -->
+	<div class="c2">
+		<!-- mobile ref --> 
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2-m-ref.jpg" class="ref mobile"/> -->
+
+		<div>
+			<img class="desktop" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2a-d.png" alt="Summer packing list" />
+
+			<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2-m.jpg" alt="Summer packing list" />
+
+			<!-- <img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2b-m.png" alt="Save Our Sharks with Jess Cramp" /> -->
+
+			<p class="body-copy">Vacation, beach days, playdates<br> &amp; more &ndash; adventure is always<br> around the corner, and our latest<br> styles are ready for all your little<br> citizen's summer expeditions.</p>
+			
+			<a href="/girls-packing-list" class="cta hp-url" id="c2">shop girl</a>
+			<a href="/boys-packing-list" class="cta hp-url" id="c2">shop boy</a>
+		</div>
+
+		<div>
+			<a href="/girls-packing-list" class="hp-url" id="c2"><img class="" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c2b-d.jpg" alt="Summer packing list" /></a>
+		</div>
+	</div>
+
+
+
+	<!-- cell 3 
+	<div class="c3">
+		 mobile ref 
+		 <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-m-ref.jpg" class="ref mobile"/> 
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-m.jpg" class="mobile"/> 
+		<a href="/natgeokids.html" class="hp-url desktop"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-d.png" alt="We've partnered with Nat Geo Kids to inspire little citizens to care about (and for) our planet and its creatures."/></a>
+
+		<a href="/natgeokids.html" class="hp-url mobile"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-m.png" alt="We've partnered with Nat Geo Kids to inspire little citizens to care about (and for) our planet and its creatures."/></a>
+		
+	</div>
+	-->
+
+	<!-- cell 4 -->
+	<div class="c4">
+		<!-- mobile ref --> 
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-m-ref.jpg" class="ref mobile"/> -->
+
+		<div>
+			<a href="/baby-boy-clothes" class="hp-url desktop" id="c3"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3a-d.jpg" alt="baby boy" /></a>
+		</div>
+		<div>
+			<a href="/baby-girl-clothes" class="hp-url desktop" id="c3"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3b-d.jpg" alt="For the Love of Littlies" /></a>
+
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/c3-m.jpg" class="mobile"/>
+
+			<p class="body-copy">We adore everything about the littlest citizens of the world.<br> That's why we thoughtfully design our smallest styles to be<br> super soft, extra sweet and completely unique!</p>
+			<a href="/baby-girl-clothes/new-arrivals" class="cta hp-url" id="c3">baby girl new arrivals</a>
+			<a href="/baby-boy-clothes/new-arrivals" class="cta hp-url" id="c3">baby boy new arrivals</a>
+		</div>
+	</div>
+
+		<!-- cell 5 -->
+	<div class="c5">
+		<!-- mobile ref --> 
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170505/c5-m-ref.png" class="ref mobile"/> -->
+
+		<a href="/about-tea/our-values" class="hp-url desktop" id="c4"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170505/c5-d.png"/></a>
+
+		<a href="/about-tea/our-values" class="hp-url mobile" id="c4"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170505/c5-m.png"/></a>
+
+		<a href="/about-tea/our-values" class="hp-url mobile cta" id="c4">learn more</a>
+
+	</div>
+
+
+</div>
+
+
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- bx slider development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+
+<!-- bx slider production-->
+<!-- <script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script> -->
+<!-- <link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+<script src="/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick.css" />
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css" />
+<script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+	
+
+	var chLnBr = function(elem,str){
+		$(elem).html(str); 
+	};
+
+
+	//if mobile
+	if($(window).width()<768){
+
+		//cell2 
+		chLnBr('.c2 p',"Vacation, beach days, playdates &amp; more &ndash; adventure<br> is always around the corner, and our latest styles are<br> ready for all your little citizen's summer expeditions.");
+
+		//cell4 change line breaks
+		chLnBr('.c4 p',"We adore everything about the littlest citizens of the world.<br> That's why we thoughtfully design our smallest styles<br> to be super soft, extra sweet and completely unique!");
+
+		// start slick slideshow
+		$('.hp').slick({
+			adaptiveHeight:true,
+			arrows:false,
+			autoplay:true,
+			dots:true,
+			swipeToSlide:true
+		});
+
+		//start bx slideshow
+		// $('.hp').bxSlider({
+		// 	infiniteLoop:true,
+		// 	auto:true
+		// });
+
+	}// end of if mobile
+
+});
+</script> 

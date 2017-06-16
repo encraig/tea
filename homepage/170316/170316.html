@@ -1,0 +1,517 @@
+<style>
+body {
+	font-family:'Tisa Sans', Arial, Helvetica, sans-serif;
+}
+.hp-first p, .hp-second p, .hp-third p, .hp-fourth p {
+	color: #595a5c;
+	font-weight:bold;
+}
+.hp-first img, .hp-second img, .hp-third img, .hp-fourth img {
+	max-width:100%;
+}
+.hp-first a, .hp-second a, .hp-third a, .hp-fourth a {
+	text-decoration:none;
+	display:block;
+	font-size: 1.1em;
+	text-transform:uppercase;
+	font-weight:bold;
+	letter-spacing:0;
+}
+.hp-first h2, .hp-second h2, .hp-third h2, .hp-fourth h2 {
+	text-transform:capitalize;
+	line-height:1;
+	letter-spacing:0;
+}
+.hp-first ul, .hp-second ul, .hp-third ul, .hp-fourth ul {
+	list-style-type:none;
+}
+.hp-first, .hp-second, .hp-third, .hp-fourth {
+	overflow:hidden;
+	text-align:center;
+	margin-bottom:10px;
+}
+.mobile-img img, .mobile-img {
+	display:none !important;
+}
+
+/*----------1st cell------------------*/
+
+.hp-first div {
+	float:left;
+}
+.hp-first div:first-of-type {
+	width:31.5%;
+}
+.hp-first div:first-of-type img {
+	display:block;
+}
+.hp-first p {
+	letter-spacing: 1px;
+	font-size: 1.3em;
+	line-height:1.7;
+}
+.hp-first p a {
+	padding: 7px 0 6px;
+	border:2px solid #acd0c9;
+	width: 63%;
+	margin:15px auto;
+	color:#acd0c9;
+}
+.hp-first p a:hover {
+	background:#acd0c9;
+	color:#fff;
+}
+
+/*----------2nd cell------------------*/
+
+.hp-second div:first-of-type {
+	width: 71.5%;
+	float:left;
+}
+.hp-second div:last-of-type {
+	width:28.5%;
+	float:left;
+}
+.hp-second h2 {
+	font-size:3em;
+	margin-top:44px;
+	line-height:1.1;
+	letter-spacing:1px;
+	color:#f26c51;
+	font-family:'mrdodo light';
+}
+.hp-second p {
+	font-size: 1.4em;
+	line-height: 1.5;
+	padding: 11px 0;
+	letter-spacing:.3px;
+}
+.hp-second ul {
+	list-style-type:none;
+}
+.hp-second li {
+	margin-bottom: 20px;
+}
+.hp-second a {
+	padding: 11px 0 8px;
+	border:2px solid #4e6786;
+	width: 69%;
+	margin:10px auto;
+	font-size:1.4em;
+	color:#4e6786;  
+}
+.hp-second a:hover {
+	background:#4e6786;
+	color:#fff;
+}
+.hp-second div:first-of-type a {
+	border:none;
+	width:auto;
+}
+.hp-second div:first-of-type a:hover {
+	background: none;
+}
+
+/*----------3rd cell------------------*/
+.hp-third div:first-of-type {
+	width:38%;
+	float:left;
+}
+.hp-third h2 {
+	font-size: 3em;
+	margin-top: 80px;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	color:#f6869c;
+	font-family:'mrdodo light';
+	text-transform:none;
+	padding-left:2px;
+}
+.hp-third p {
+	font-size: 1.5em;
+	line-height: 1.4;
+	padding: 8px 0;
+	letter-spacing: 0px;
+}
+.hp-third li {
+	margin-bottom:20px;
+}
+.hp-third a {
+	padding: 10px 0 9px;
+	border: 2px solid #4d6684;
+	width: 52%;
+	margin: 6px auto;
+	letter-spacing: 1.5px;
+	color:#4d6684
+}
+.hp-third a:hover {
+	background:#4d6684;
+	color:#fff;
+}
+.hp-third div:last-of-type {
+	float:left;
+}
+.hp-third div:last-of-type a {
+	border:none;
+	width:auto;
+}
+.hp-third div:last-of-type a:hover {
+	background: none;
+}
+
+/*----------4th cell------------------*/
+.hp-fourth div:first-of-type {
+	width:71.5%;
+	float:left;
+}
+.hp-fourth div:last-of-type {
+	width:28%;
+	float:left;
+}
+.hp-fourth h2 {
+	font-size: 3em;
+	margin-top: 78px;
+	letter-spacing: 0.5px;
+	color:#d85196;
+	font-family:'mrdodo light';
+	padding-left:6px;
+}
+.hp-fourth p {
+	font-size: 1.4em;
+	line-height: 1.5;
+	padding: 13px 0;
+	letter-spacing:0.3px;
+}
+.hp-fourth li {
+	margin-bottom:20px;
+}
+.hp-fourth a {
+	border: 2px solid #9fc8c0;
+	padding: 12px 0 8px;
+	width: 68%;
+	margin: 11px auto;
+	letter-spacing: 0px;
+	font-size: 1.4em;
+	color:#9fc8c0;
+}
+.hp-fourth a:hover {
+	background: #9fc8c0;
+	color:#fff;
+}
+
+@media screen and (max-width:768px) {
+	#scroll-prompt, #olapic_specific_widget, .homepage-text-under-olapic {
+		display:none !important;
+	}
+	.mobile-img img, .mobile-img {
+		display:block !important;
+	}
+	/*----------1st cell------------------*/
+	.hp-first div:first-of-type {
+		width:100%;
+	}
+	.hp-first div:first-of-type img {
+		display:none;
+	}
+	.hp-first div:first-of-type p {
+		margin-top:20px;
+		font-size:1.1em;
+		line-height:1.4;
+		letter-spacing:0px;
+	}
+	.hp-first div:first-of-type p a {
+		width:41%;
+		font-size:.7em;
+		letter-spacing:1.2px;
+		padding:10px 0 7px;
+		margin:11px auto;
+	}
+	.hp-first div:first-of-type p:last-of-type {
+		margin:0;
+	}
+	.hp-first div:last-of-type {
+		display:none;
+	}
+
+	/*----------2nd cell------------------*/
+	.hp-second div {
+		width:100% !important;
+		float:none !important;
+	}
+	.hp-second div:first-of-type a:first-of-type {
+		display:none;
+	}
+	.hp-second div:first-of-type a:last-of-type {
+		margin:0;
+		padding:0;
+	}
+	.hp-second div:last-of-type h2 {
+		display:none;
+	}
+	.hp-second div:last-of-type p {
+		font-size:1.1em;
+		padding-top:20px;
+		letter-spacing:0.1px;
+	}
+	.hp-second div:last-of-type ul {
+		overflow:hidden;
+		width:88%;
+		margin:0 auto;
+	}
+	.hp-second div:last-of-type ul li {
+		margin:9px 4% 7px 0;
+		float:left;
+		width:48%;
+	}
+	.hp-second div:last-of-type ul li:nth-of-type(even) {
+		margin-right:0;
+	}
+	.hp-second div:last-of-type ul li a {
+		padding:11px 0 4px;
+		width:auto;
+		font-size:1em;
+		margin:0;
+		border-color:#f16b4e;
+		color:#f16b4e;
+	}
+	.hp-second div:last-of-type ul li a:hover {
+		background:#f16b4e;
+		color:#fff;
+	}
+	/*----------3rd cell------------------*/
+	.hp-third div {
+		width:100% !important;
+		float:none;
+	}
+	.hp-third div:first-of-type a.mobile-img {
+		margin:0;
+		padding:0;
+		border:none;
+		width:100%;
+	}
+	.hp-third div:first-of-type h2, .hp-third div:last-of-type {
+		display:none;
+	}
+	.hp-third div:first-of-type p {
+		font-size:1.1em;
+		letter-spacing:0.2px;
+		padding:20px 0 0;
+	}
+	.hp-third div:first-of-type ul {
+		overflow:hidden;
+		width:88%;
+		margin:0 auto;
+		padding-bottom:10px;
+	}
+	.hp-third div:first-of-type ul li {
+		margin:18px 4% -2px 0;
+		float:left;
+		width:48%;
+	}
+	.hp-third div:first-of-type ul li:nth-of-type(even){
+		margin-right:0;
+	}
+	.hp-third div:first-of-type ul li:last-of-type {
+		width:100%;
+	}
+	.hp-third div:first-of-type ul li a {
+		padding:8px 0 6px;
+		width:auto;
+		margin:0;
+		font-size:1em;
+		letter-spacing:-0.3px;
+		border-color:#f48898;
+		color:#f48898;
+	}
+	.hp-third div:first-of-type ul li a:hover {
+		background:#f48898;
+		color:#fff;
+	}
+	/*----------4th cell------------------*/
+	.hp-fourth div {
+		width:100% !important;
+		float:none !important;
+	}
+	.hp-fourth div:first-of-type a.mobile-img {
+		margin:0;
+		padding:0;
+		border:none;
+		width:100%;
+	}
+	.hp-fourth div:first-of-type img:first-of-type {
+		display:none;
+	}
+	.hp-fourth div:last-of-type h2 {
+		display:none;
+	}
+	.hp-fourth div:last-of-type p {
+		font-size:1.1em;
+		padding:19px 0 0;
+		letter-spacing:0.2px;
+	}
+	.hp-fourth div:last-of-type ul {
+		overflow:hidden;
+		width:88%;
+		margin:0 auto;
+	}
+	.hp-fourth div:last-of-type ul li {
+		float:left;
+		margin:18px 4% 0 0;
+		width:48%;
+	}
+	.hp-fourth div:last-of-type ul li:nth-of-type(even){
+		margin-right:0;
+	}
+	.hp-fourth div:last-of-type ul li a {
+		padding:9px 0 6px;
+		width:auto;
+		margin:0;
+		letter-spacing:0px;
+		font-size:1em;
+		border-color:#f48898;
+		color:#f48898;
+	}
+	.hp-fourth div:last-of-type ul li a:hover {
+		background:#f48898;
+		color:#fff;
+	}
+
+
+
+}
+</style>
+
+<div class="hp-first">
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-1-ref.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-1-ref-m.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<div>
+		<img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-1b.png" />
+		<a href="/girls-sibling-shop-lookbook" class="mobile-img"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-1-m.jpg" alt=""/></a>
+		<p>Spring's special occasions are in<br> full swing and we're here to help<br> you coordinate cute new outfits<br> for all your little citizens!</p>
+		<p><a href="/girls-sibling-shop-lookbook">sibling shop</a></p>
+	</div>
+	<div>
+		<a href="/girls-sibling-shop-lookbook"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-1a.jpg" alt=""/></a>
+	</div>
+</div>
+
+<div class="hp-second">
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-2-ref.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-2-ref-m.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<div>
+		<a href="boys-clothing"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-2.jpg" /></a>
+		<a href="boys-clothing" class="mobile-img"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-2-m.jpg" /></a>
+	</div>
+	<div>
+		<h2>spring break <br> packing list</h2>
+		<p>Whether your're traveling the <br> world, or enjoying a staycation, <br> we've got everything you'll <br> need to outfit them for all their <br> Spring Break adventures!</p>
+		<ul>
+			<li><a href="girls-clothing">shop girl</a></li>
+			<li><a href="boys-clothing">shop boy</a></li>
+			<li><a href="baby-girl-clothes">shop baby girl</a></li>
+			<li><a href="baby-girl-clothes">shop baby boy</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="hp-third">
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-3-ref.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-3-ref-m.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<div>
+		<a href="/newborn/gifts-all-gifts" class="mobile-img"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-3-m.jpg" /></a>
+		<h2>Welcome Baby <br> to the World</h2>
+		<p>Incredibly soft, sweet and completely <br> unique - we've made it easy to pick <br> out the perfect gift for new babies <br> (and moms and dads, too)!</p>
+		<ul>
+			<li><a href="/newborn/gifts-under-30">gifts under $30</a></li>
+			<li><a href="/newborn/gifts-under-50">gifts under $50</a></li>
+			<li><a href="/newborn/gifts-all-gifts">all newborn gifts</a></li>
+		</ul>
+	</div>
+	<div>
+		<a href="/newborn/gifts-all-gifts"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-3.jpg" /></a>
+	</div>
+</div>
+
+<div class="hp-fourth">
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-4-ref.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/homepage/170316/ref/170316-4-ref-m.jpg" style="position:absolute;left:0;opacity:.5;" /> -->
+	<div>
+		<img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-4.jpg" usemap="#map"/>
+		<a href="/girls-special-occasion" class="mobile-img"><img src="/mas_assets/theme/tea_collection/images/homepage/170316/170316-4-m.jpg"/></a>
+		<map name="map">
+			<area  alt="" title="" href="/girls-special-occasion" shape="rect" coords="0,0,320,500" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="/boys-special-occasion" shape="rect" coords="332,0,715,500" style="outline:none;" target="_self"     />
+		</map>
+	</div>
+	<div>
+		<h2>all dressed up</h2>
+		<p>Dressy but comfy, all our special <br> occasion outfits are designed <br> to feel as great as they look. Deck <br> out your little citizen in style!</p>
+		<ul>
+			<li><a href="/girls-special-occasion">shop girl</a></li>
+			<li><a href="/boys-special-occasion">shop boy</a></li>
+			<li><a href="/baby-girl-special-occasion">shop baby girl</a></li>
+			<li><a href="/baby-boy-special-occasion">shop baby boy</a></li>
+		</ul>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	//function to make the alt for images
+	var makeAlt = function(elem){
+		var alt = $(elem).find('p').first().text();
+		$(elem).find('img').attr('alt', alt);
+	};
+
+	//loop through the divs and add the alt to the images
+	var elemArr = ['.hp-first','.hp-second','.hp-third','.hp-fourth'];
+	$(elemArr).each(function(i,val){
+		makeAlt(val);
+	});
+
+	if($(window).width()<768){
+		
+	var addBr = function(elem, str1, str2){
+		//get the html
+		var strArr = $(elem).html();
+		
+		//remove the <br>
+		strArr = strArr.replace(/<br>/g, '');
+		
+		//make the array
+		strArr = strArr.split(' ');
+		
+		//add the <br>
+		$(strArr).each(function(i,val){
+			switch(val){
+				case str1:
+					// console.log(i,val);
+					strArr.splice(i+1,0,'<br>');
+					break;
+				case str2:
+					// console.log(i,val);
+					strArr.splice(i+2,0,'<br>');
+					break;
+			}
+		});
+		
+		//make array to string
+		var newStr = strArr.join(' ');
+		
+		//replace the html
+		$(elem).html(newStr);
+	}
+
+	
+		addBr('.hp-first p:first-of-type','full','coordinate');
+		addBr('.hp-second p', 'a', 'outfit')
+		addBr('.hp-third p', 'completely', 'perfect')
+		addBr('.hp-fourth p', 'occasion', 'they')
+
+	}
+
+	
+	
+
+});
+</script>
