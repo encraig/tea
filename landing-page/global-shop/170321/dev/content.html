@@ -1,0 +1,181 @@
+<link rel="stylesheet" type="text/css" href="global-shop-styles.css">
+
+<div class="global-container">
+
+	<div class="desktop">
+		<!-- <img src="images/globalShop-ref.jpg" style="position:absolute;opacity:.5; width:798px"/> -->
+	</div>
+
+	<div class="mobile">
+		<!-- <img src="images/globalShop-ref-m_02.jpg" style="position:absolute;opacity:.5; width:96%"/> -->
+	</div>
+
+	<div class="desktop">
+		<img src="images/globalShop_03.png" />
+	</div>
+	<div class="mobile">
+		<img src="images/mobile/globalShopM_02.png" />
+	</div>
+
+	
+	<div class="morocco">
+		<div class="desktop">
+			<img src="images/new-v/globalShop_06.jpg" data-img="asian girl"/>
+			<img src="images/globalShop_08.png" data-img="banner" /> 
+
+			<div>
+				<img src="images/new-v/globalShop_09.jpg" />
+			</div>
+			<div>
+				<img src="images/dress-1.gif" />
+				<img src="images/new-v/globalShop_11.jpg" />
+			</div>
+		</div>
+
+		<div class="mobile">
+			<img src="images/mobile/globalShopM_04.jpg"/>
+			<img src="images/mobile/globalShopM_05.png"/>
+
+			<div>
+				<img src="images/mobile/globalShopM_07.png" />
+			</div>
+			<div>
+				<img src="images/dress-1.gif" />
+				<img src="images/mobile/globalShopM_09.jpg" />
+			</div>
+		</div>
+	</div>
+
+	<div class="italy">
+		<div class="desktop">
+			<img src="images/globalShop_12.png" />
+
+			<div>
+				<img src="images/dress-2.gif" />
+				<img src="images/new-v/globalShop_15.png" />
+				<img src="images/new-v/globalShop_16.jpg" />
+			</div>
+
+			<div>
+				<img src="images/new-v/globalShop_14.jpg" />
+			</div>
+		</div>
+
+		<div class="mobile">
+			<img src="images/mobile/globalShopM_11.png" />
+
+			<div>
+				<img src="images/dress-2.gif" />
+				<img src="images/mobile/globalShopM_14.png" />
+			</div>
+
+			<div>
+				<img src="images/mobile/globalShopM_14.jpg" />
+				<img src="images/mobile/globalShopM_18.png" />
+			</div>
+		</div>
+	</div>
+
+	<div class="slideshow">
+		<div class="desktop">
+			<img src="images/globalShop_16.png" />
+		</div>
+
+		<div class="mobile">
+			<img src="images/mobile/globalShopM_15.png" />
+		</div>
+		
+		<ul>
+		</ul>
+	</div>
+
+	<div class="south-africa">
+		<div class="desktop">
+			<img src="images/globalShop_55.png" />
+			<div>
+				<img src="images/new-v/globalShop_59.jpg"/>
+				<img src="images/dress-3.gif" />
+				<img src="images/globalShop_59_2.png"/>
+			</div>
+
+			<div>
+				<img src="images/new-v/globalShop_57.jpg" />
+			</div>
+		</div>
+
+		<div class="mobile">
+			<img src="images/mobile/globalShopM_17.png" />
+			<div>
+				<img src="images/mobile/globalShopM_19.jpg"/>
+				<img src="images/dress-3.gif" />
+				<img src="images/mobile/globalShopM_22.png"/>
+			</div>
+
+			<div>
+				<img src="images/mobile/globalShopM_20.jpg" />
+			</div>
+		</div>	
+	</div>
+
+	<div class="india">
+		<div class="desktop">
+			<img src="images/globalShop_59.png"/>
+			<img src="images/new-v/globalShop_60.jpg"/>
+		</div>
+
+		<div class="mobile">
+			<img src="images/mobile/globalShopM_23.png"/>
+			<img src="images/mobile/globalShopM_24.jpg"/>
+		</div>
+		
+	</div>
+	
+</div>
+<!-- end of .global-container -->
+
+<!-- bx slider -->
+<script src="http://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="http://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+<script>
+var tea = 'http://www.teacollection.com';
+var products = [
+	{img:'images/product-1.jpg',url:'/product/7S12333/'},
+	{img:'images/product-2.jpg',url:'/product/7S22136/'},
+	{img:'images/product-3.jpg',url:'/product/7S12335/'},
+	{img:'images/product-4.jpg',url:'/product/7S12129/'},
+	{img:'images/product-5.jpg',url:'/product/7S12337/'},
+	{img:'images/product-6.jpg',url:'/product/7S12128/'},
+	{img:'images/product-7.jpg',url:'/product/7S12334/'},
+	{img:'images/product-8.jpg',url:'/product/7S22137/'},
+	{img:'images/product-9.jpg',url:'/product/6M12302/'},
+	{img:'images/product-10.jpg',url:'/product/7S22138/'},
+	{img:'images/product-11.jpg',url:'/product/7S12336/'},
+	{img:'images/product-12.jpg',url:'/product/7S12130/'},
+	];
+
+	$(document).ready(function(){
+		$(products).each(function(i,val){
+			$('.slideshow ul').append('<li><a href="'+tea+val.url+'"><img src="'+val.img+'" /></a></li>');
+		});
+
+		var slideshow = $('.slideshow').clone();
+		slideshow.attr('data-slideshow',2);
+		$('.india').after(slideshow);
+
+		if($(window).width()>768) {
+			$('.slideshow ul').bxSlider({
+				minSlides:3,
+				infiniteLoop:false,
+				hideControlOnEnd:true
+			});
+		} else if($(window).width()<768) {
+			$('.slideshow ul').bxSlider({
+				minSlides:2,
+				infiniteLoop:false,
+				hideControlOnEnd:true
+			});
+		}
+		
+	});
+</script>
+

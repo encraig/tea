@@ -1,0 +1,273 @@
+<style>
+.desktop-promo,
+.mobile-promo {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dept-girls-clothing {
+    display: none;
+  }
+}
+.global-container {
+  /*height: 9044px;*/
+}
+.global-container img {
+  max-width: 100%;
+}
+.morocco {
+  overflow: hidden;
+}
+.morocco img[data-img="asian girl"] {
+  padding-top: 3px;
+}
+.morocco img[data-img="banner"] {
+  padding-top: 6px;
+}
+.morocco .desktop div:first-of-type {
+  width: 404px;
+  float: left;
+}
+.morocco .desktop div:first-of-type img {
+  position: relative;
+  top: -6px;
+}
+.morocco .desktop div:last-of-type {
+  width: 394px;
+  float: left;
+}
+.morocco .desktop div:last-of-type a {
+  position: relative;
+  left: -16px;
+  top: -19px;
+}
+.morocco .desktop div:last-of-type img {
+  position: relative;
+  top: 13px;
+}
+.morocco .mobile img:first-of-type {
+  position: relative;
+  top: 0;
+}
+.morocco .mobile img:last-of-type {
+  position: relative;
+  top: 0;
+}
+.morocco .mobile div:first-of-type {
+  width: 51%;
+  float: left;
+}
+.morocco .mobile div:first-of-type img {
+  position: relative;
+  top: 0;
+}
+.morocco .mobile div:last-of-type {
+  width: 49%;
+  float: left;
+}
+.morocco .mobile div:last-of-type a {
+  position: relative;
+  left: -10px;
+  top: -25px;
+}
+.morocco .mobile div:last-of-type img {
+  position: relative;
+  top: 29px;
+}
+.italy {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+}
+.italy .desktop div:first-of-type {
+  width: 405px;
+  float: left;
+}
+.italy .desktop div:first-of-type a:first-of-type {
+  position: relative;
+  top: 25px;
+}
+.italy .desktop div:first-of-type a:nth-of-type(2) {
+  position: relative;
+  top: 16px;
+}
+.italy .desktop div:first-of-type a:last-of-type {
+  position: relative;
+  top: 10px;
+}
+.italy .desktop div:last-of-type {
+  width: 393px;
+  float: left;
+}
+.italy .desktop div:last-of-type img {
+  position: relative;
+  top: -3px;
+}
+.italy .mobile div:first-of-type {
+  width: 51%;
+  float: left;
+}
+.italy .mobile div:first-of-type a:first-of-type {
+  position: relative;
+  top: 13px;
+}
+.italy .mobile div:first-of-type a:last-of-type {
+  position: relative;
+  top: 6px;
+}
+.italy .mobile div:last-of-type {
+  width: 49%;
+  float: left;
+}
+.italy .mobile div:last-of-type a:first-of-type {
+  position: relative;
+  top: 10px;
+}
+.italy .mobile div:last-of-type a:last-of-type {
+  position: relative;
+  top: 15px;
+}
+.slideshow .desktop img {
+  position: relative;
+  top: -18px;
+}
+.slideshow .mobile img {
+  position: relative;
+  top: 0px;
+  z-index: 9999;
+}
+.slideshow[data-slideshow="2"] {
+  top: -47px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .slideshow[data-slideshow="2"] {
+    top: 1px;
+  }
+}
+.slideshow .bx-wrapper {
+  top: -18px;
+  left: 21px;
+}
+@media screen and (max-width: 768px) {
+  .slideshow .bx-wrapper {
+    top: -7px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slideshow .bx-viewport {
+    left: 17px;
+  }
+}
+.slideshow .bx-controls {
+  position: relative;
+  top: -168px;
+  left: -21px;
+}
+@media screen and (max-width: 768px) {
+  .slideshow .bx-controls {
+    top: -116px;
+    left: 0;
+  }
+}
+.slideshow ul li {
+  width: 244px !important;
+  /*margin:0 !important;*/
+  top: -9px;
+  left: 33px;
+}
+@media screen and (max-width: 786px) {
+  .slideshow ul li {
+    width: 169px !important;
+    top: 5px;
+    left: 94px;
+    margin-right: 34px;
+  }
+}
+.south-africa {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+}
+.south-africa .desktop div:first-of-type {
+  width: 402px;
+  float: left;
+}
+.south-africa .desktop div:first-of-type a:first-of-type {
+  position: relative;
+  top: 6px;
+}
+.south-africa .desktop div:first-of-type a:nth-of-type(2) {
+  position: relative;
+  top: 28px;
+}
+.south-africa .desktop div:first-of-type a:last-of-type {
+  position: relative;
+  top: 25px;
+}
+.south-africa .desktop div:last-of-type {
+  width: 396px;
+  float: left;
+}
+.south-africa .desktop div:last-of-type img {
+  position: relative;
+  top: -5px;
+}
+.south-africa .mobile div:first-of-type {
+  width: 49.4%;
+  float: left;
+}
+.south-africa .mobile div:first-of-type a:first-of-type {
+  position: relative;
+  top: 0;
+}
+.south-africa .mobile div:first-of-type a:nth-of-type(2) {
+  position: relative;
+  top: 10px;
+}
+.south-africa .mobile div:first-of-type a:last-of-type {
+  position: relative;
+  top: 20px;
+}
+.south-africa .mobile div:last-of-type {
+  width: 50%;
+  float: left;
+}
+.south-africa .mobile div:last-of-type img {
+  position: relative;
+  top: 2px;
+}
+.india {
+  position: relative;
+  top: -37px;
+}
+@media screen and (max-width: 768px) {
+  .india {
+    top: 1px;
+  }
+}
+.india .desktop img[usemap="#image-maps-2017-03-20-164334"] {
+  position: relative;
+  top: -5px;
+}
+.india .mobile img:last-of-type {
+  position: relative;
+  top: 0;
+}
+
+</style>

@@ -1,0 +1,46 @@
+<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/global-shop/opt/c1.png" alt="We Make the Foreign Familiar"/>
+
+<div class="global-products"></div>
+
+<script>
+$(document).ready(function(){
+	//get the page path
+	var pagePath = window.location.pathname;
+	console.log(pagePath);
+	//the array for boys global shop tees
+	var boysTees = ['7S22138','7S22137','7S22136'];
+	boysTees = boysTees.reverse();
+
+	//make the request to get the products
+	$.get('https://www.teacollection.com/boys-clothing/global-shop-girl', function(data){
+		//the products container
+		var pdps = $(data).find('.items-list-wrapper');
+		//append the products to the page
+		$('.global-products').append(pdps);
+
+		//if boys page make boys tees on top
+		var pdp = pdps.find('.item');
+		console.log(pdp);
+
+		if(pagePath == '/boys-clothing/global-shop') {
+			$.each(boysTees, function(i,val){
+				$.each(pdp, function(j, arr){
+					var teaStyle = $(arr).attr('data-tea-style');
+					console.log(val, teaStyle);
+					if(val == teaStyle){
+						$('.items-list-wrapper').prepend(arr);
+					}
+				});
+			});
+		}
+
+		//on hover of pdps show the quickview
+		$('.item').hover(function(){
+			$(this).find('.quickview-overlay').addClass('active');
+		}, function(){
+			$(this).find('.quickview-overlay').removeClass('active');
+		});	
+
+	});
+});
+</script>

@@ -1,0 +1,35 @@
+{* KT: those categories are empty - redirect to the top one *}
+{if $title == 'Shop By Category' || $title == 'Features' || $title == 'Collections'}
+	<script>document.location.href = '{category_url category=$department_category->name}';</script>
+{/if}
+
+{* KT: if show=all then you got to render *}
+{if $smarty.request.show == 'all'}
+	{include file="store:name=browse/category/index&theme=tea_collection"}
+{else}
+
+{literal}
+<style>
+
+@media screen and (max-width:768px){
+
+	.dept-girls-clothing, .dept-boys-clothing
+	{
+		display:none;
+	}
+
+}	
+</style>
+{/literal}
+
+
+
+	<div class="content-wrapper clearfix">
+	    {* Hint: Load the sidebar template. Refine filters, sub categories, etc. go in there. *}
+	    {include file="store:name=browse/sidebar&theme=tea_collection"}
+
+	    <article class="main-content department categorylanding-{$name}">	
+			<div class="da-rennab-zone" data-zone="global_shop"></div>
+	    </article>
+	</div>
+{/if}

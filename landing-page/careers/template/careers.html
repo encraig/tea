@@ -1,0 +1,23 @@
+{insert name="header_tag_set" type="static" tag_id="HTML_TITLE" tag_value="Take A Career Journey | Tea Collection"}
+{insert name="header_tag_set" type="static" tag_id="META_DESCRIPTION" tag_value="We are always searching for creative, resourceful, talented people who thrive in an entrepreneurial environment. Discover our Tea Collection careers today."}
+{insert name="header_tag_set" type="static" tag_id="META_KEYWORDS" tag_value="career journey, tea collection careers, tea collection jobs"}
+
+<article class="about-us clearfix">
+
+	{* Note: Sidebar About Us Navigation *}
+	{*{include file="store:name=content/static/navigation-about"}*}
+	{include file="store:name=content/static/navigation-customer"}
+
+	<section>
+	<!-- content zone careers -->
+		{cms name="careers"}		
+	</section>
+
+</article>
+
+{breadcrumb}
+	About Us
+	{breadcrumb}
+		Careers
+	{/breadcrumb}
+{/breadcrumb}

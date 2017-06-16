@@ -1,0 +1,347 @@
+.ref {
+	position:absolute;
+	opacity:.5;
+	//display:none;
+} 
+
+.my-account, .midbox {
+	h1 {
+		display:none;
+	}
+}
+
+#simplemodal-container, #simplemodal-overlay {
+	display:none !important;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+.mobile {
+	@media screen and (max-width:768px){
+		display:block !important;
+	}
+
+	display:none !important;
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.body-copy {
+	@media screen and (max-width:737px){
+		font-size:1em;
+		line-height:1.59em;
+		letter-spacing:.9px;
+	}
+
+	@media screen and (max-width:376px){
+		font-size:.9em;
+	}
+
+	@media screen and (max-width:321px){
+		font-size:.8em;
+		letter-spacing:.5px;
+	}
+
+	font-size:14px;
+	line-height:21px;
+	letter-spacing:.7px;
+}
+
+.cta {
+	display: inline-block;
+    border: 1px solid;
+    padding: 10px 0;
+    width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 14px;
+    font-weight:bold;
+    text-align:center
+}
+
+.wrap-content {
+	overflow:hidden;
+	font-family:'tisa sans';
+
+	img {
+		max-width:100%;
+	}
+
+	
+}//end of .wrap-content
+
+.c1, .c2 {
+	overflow:hidden;
+
+	div {
+		float:left;
+	}
+}
+
+.c1 {
+
+	div {
+
+		&:last-of-type {
+			@media screen and (max-width: 737px){
+				width:100%;
+				background:none;
+				padding:0;
+				min-height:auto;
+			}
+
+			text-align:center;
+			width:595px;
+			background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/jessCramp/c1b-bg-d.png') no-repeat top center;
+			padding:67px 0 0;
+			min-height:303px;
+
+			p {	
+				@media screen and (max-width:737px){
+					margin-top:18px;
+					margin-bottom:-2px;
+				}
+
+				margin-bottom:6px;
+			}
+		}
+	}
+}
+
+.c2 {
+	div {
+		&:first-of-type {
+			@media screen and (max-width:737px){
+				width:100%;
+				padding-top:0;
+			}
+
+			padding-top:5px;
+			width:357px;
+		}
+
+		&:last-of-type {
+			img {
+				position:relative;
+				top:5px;
+			}
+		}
+	}
+}
+
+#jessCramp {
+	@media screen and (max-width:737px){
+		padding:14px 0 0;
+	}
+
+	@media screen and (max-width:376px){
+		padding:10px 0 0;
+	}
+
+	@media screen and (max-width:321px){
+		padding:5px 0 0;
+	}
+
+	padding:7px 0 0 7px;
+
+	.error-mess {
+		@media screen and (max-width:737px){
+			padding-left:2em;
+		}
+
+		display:none;
+		color:red;
+	}
+
+	label {
+		&[name="official-rules"]{
+			a {
+				@media screen and (max-width:737px){
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+
+	input {
+		@media screen and (max-width:737px){
+			width:87%;
+			margin-bottom:17px;
+			margin-right:auto;
+			margin-left:auto;
+			padding:8px 0 8px 13px;
+
+		}
+
+		@media screen and (max-width:376px){
+			margin-bottom: 14px;
+			padding:7px 0 7px 13px;
+		}
+
+		@media screen and (max-width:321px){
+			padding:4px 0 4px 13px;
+			margin-bottom: 14px;
+		}
+
+		display: block;
+    	width: 301px;
+    	margin-bottom: 19px;
+    	padding: 9px 0px 9px 13px;
+    	box-sizing: border-box;
+    	border: 1px solid;
+    	outline:none;
+    	color:lightslategrey;
+    	border-radius:0;
+    	font-family:'tisa sans';
+    	-webkit-border-radius: 0;
+    	-webkit-appearance: none;
+
+    	&[type="checkbox"]{
+			display:none;
+		}
+
+		&[name="EMAIL_ADDRESS_"] {
+			@media screen and (max-width:376px){
+				margin-bottom:14px;
+			}
+
+			@media screen and (max-width:321px){
+				margin-bottom:12px;
+			}
+
+			margin-bottom:17px; 
+		}
+
+    	&::placeholder {
+    		@media screen and (max-width:737px){
+    			text-align:center;
+    			letter-spacing:.8px;
+    		}
+
+    		color:lightslategrey;
+    		font-weight:bold;
+    		letter-spacing:.7px;
+    		font-family:'tisa sans';
+    	}
+	}
+
+	div {
+		float:left;
+
+		&:first-of-type {
+			@media screen and (max-width:737px){
+				margin:0 1.3em 0 4.7em;
+			}
+
+			@media screen and (max-width:376px){
+				margin: 0 1em 0 4.3em;
+			}
+
+			@media screen and (max-width:321px){
+				margin: 0 .8em 0 3.6em;
+			}
+
+			width:1.3em;
+			padding-top:0;
+			margin-right:14px;
+		}
+	}
+
+	p {
+		clear:both;
+
+		&[data="required"]{
+			@media screen and (max-width:737px){
+				text-align:center;
+				font-size:.86em;
+			}
+
+			@media screen and (max-width:376px){
+				font-size:.78em;
+				padding-top:10px;
+			}
+
+			@media screen and (max-width:321px){
+				font-size:.66em;
+				padding-top:6px;
+			}
+
+			font-size: 12px;
+    		letter-spacing: .2px;
+    		padding-top:15px;
+		}
+	}
+
+	a {
+		color:#444;
+	}
+
+	.cta {
+		@media screen and (max-width:737px){
+			margin:15px auto 18px;
+			display:block;
+		}
+
+		@media screen and (max-width:376px){
+			margin:15px auto 16px;
+		}
+
+		@media screen and (max-width:321px){
+			margin:15px auto 5px;
+		}
+
+		left:1px;
+		margin-top:15px;
+		background:#d4d45a;
+		color:#fff;
+
+		&:hover {
+			background:#fff;
+			color:#d4d45a;
+		}
+	}
+
+}
+
+.error-input {
+	border-color:red !important;
+
+	&::placeholder {
+		color:red !important;
+	}
+}
+
+.the-checkbox {	
+	@media screen and (max-width:737px){
+		width:1em;
+		height:1em;
+	}
+
+	border: 1px solid #5a595e;
+    width: 1.3em;
+    height: 1.3em;
+    display:inline-block;
+    text-align:center;
+    background:#5a595e;
+    color:#fff;
+}
+
+.c4 {
+	a {
+		@media screen and (max-width:737px){
+			top:0;
+		}
+
+		position:relative;
+		top:-7px;
+	}
+}
+		
+
