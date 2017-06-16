@@ -1,0 +1,198 @@
+<style>
+body {
+  font-family: 'tisa sans';
+}
+.ref {
+  position: absolute;
+  opacity: .5;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dept-girls-clothing {
+    display: none;
+  }
+  .common-wrap {
+    margin: 0;
+  }
+}
+.title {
+  color: #333333;
+  font-family: tisa sans;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 0 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+img {
+  max-width: 100%;
+}
+.body-copy {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: .6px;
+  position: relative;
+}
+@media screen and (max-width: 737px) {
+  .body-copy {
+    font-size: 1em;
+    line-height: 1.59em;
+    letter-spacing: .05em;
+  }
+}
+@media screen and (max-width: 376px) {
+  .body-copy {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .body-copy {
+    font-size: .8em;
+    letter-spacing: .5px;
+  }
+}
+.cta {
+  display: inline-block;
+  border: 1px solid;
+  width: 200px;
+  position: relative;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 0px 9px;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 737px) {
+  .cta {
+    width: 42%;
+    left: 0px;
+    padding: 1em 0 .7em;
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 415px) {
+  .cta {
+    font-size: .8em;
+    letter-spacing: 1.1px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .cta {
+    font-size: .7em;
+  }
+}
+@media screen and (max-width: 321px) {
+  .cta {
+    font-size: .6em;
+  }
+}
+.girls-clothing-cat {
+  overflow: hidden;
+  font-family: brown-pro-regular;
+}
+.girls-clothing-cat div:first-of-type {
+  float: left;
+}
+.girls-clothing-cat div:last-of-type {
+  width: 479px;
+  min-height: 486px;
+  float: left;
+  text-align: center;
+  background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170706/d-dotted.png') no-repeat bottom center;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type {
+    width: 100%;
+    min-height: 480px;
+    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+    background-size: 100% auto;
+  }
+}
+@media screen and (max-width: 376px) {
+  .girls-clothing-cat div:last-of-type {
+    min-height: 435px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .girls-clothing-cat div:last-of-type {
+    min-height: 370px;
+  }
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type p {
+    margin-top: 1.6em;
+    letter-spacing: .4px;
+  }
+}
+.girls-clothing-cat div:last-of-type p:last-of-type {
+  font-family: brown-pro-bold;
+  font-size: 13px;
+  margin: 6px 0 14px;
+  letter-spacing: 1px;
+  color: #ed5f51;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type p:last-of-type {
+    margin: .4em 0 0;
+    font-size: 10px;
+  }
+}
+.girls-clothing-cat div:last-of-type img[alt="dots"] {
+  position: relative;
+  top: -4px;
+}
+.girls-clothing-cat div:last-of-type h2 {
+  font-size: 29px;
+  letter-spacing: 2px;
+  margin: 5px 0 16px;
+  color: #ed5f51;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type h2 {
+    display: none;
+  }
+}
+.girls-clothing-cat div:last-of-type .cta {
+  margin-top: 12px;
+  left: -7px;
+  border-color: #ed5f51;
+  color: #ed5f51;
+  font-family: brown-pro-bold;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type .cta {
+    margin-top: 2.2em;
+  }
+}
+.girls-clothing-cat div:last-of-type .cta:last-of-type {
+  left: 10px;
+}
+@media screen and (max-width: 737px) {
+  .girls-clothing-cat div:last-of-type .cta:last-of-type {
+    left: .7em;
+  }
+}
+.girls-clothing-cat div:last-of-type .cta:hover,
+.girls-clothing-cat div:last-of-type .cta:active {
+  background: #ed5f51;
+  color: #fff;
+}
+@media screen and (max-width: 737px) {
+}
+
+</style>

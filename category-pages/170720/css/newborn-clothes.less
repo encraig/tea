@@ -1,0 +1,483 @@
+
+body {
+	//font-family:'tisa sans';	
+} 
+.ref {
+	position:absolute;
+	opacity:.5;
+	max-width:100%; 
+}
+
+.bx-wrapper { 
+	
+	.bx-pager {
+		display:block !important;
+		position:absolute !important;
+
+		.bx-pager-item {
+			a {
+				width:8px !important;
+				height:8px !important;
+				margin:0 7px !important;
+			}
+		}
+
+		@media screen and (max-width:737px){
+			top:495px;
+			height:18px;
+		}
+
+		@media screen and (max-width:668px){
+			top:449px;
+		}
+
+		@media screen and (max-width:569px){
+			top:380px;
+		}
+
+		@media screen and (max-width:481px){
+			top:320px;
+		}
+
+		@media screen and (max-width:416px){
+			top:270px;
+		}
+
+		@media screen and (max-width:376px){
+			top:250px;
+		}
+
+		@media screen and (max-width:321px){
+			top:210px;
+		}
+	}
+
+	.bx-controls-direction {display:none;}
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.mobile {
+	display:none !important;
+
+	@media screen and(max-width:768px){
+		display:block !important;
+	}
+}
+
+@media screen and (max-width:768px){
+	.dept-girls-clothing {
+		display:none; 
+	}
+	.common-wrap {
+		margin:0;
+	}
+}
+
+.title {
+	color: #333333;
+    font-family: tisa sans;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    //display:none !important;
+}
+
+img {
+	max-width:100%;
+}
+
+.body-copy {
+	@media screen and (max-width:737px){
+		font-size:1em;
+		line-height:1.59em;
+		//letter-spacing:.6px;
+		letter-spacing:.05em;
+	}
+
+	@media screen and (max-width:376px){
+		font-size:.8em;
+	}
+
+	@media screen and (max-width:321px){
+		font-size:.8em;
+		letter-spacing:.5px;
+	}
+
+	font-size:14px;
+	line-height:21px;
+	letter-spacing:.6px;
+	position:relative;
+}
+
+.cta {
+		@media screen and (max-width:737px){
+			width: 42%;
+    		left: 0px;
+    		padding: 1em 0 .7em;
+    		font-size: .8em;
+    		//line-height:3em;
+		}
+
+		@media screen and (max-width:415px){
+		    font-size: .8em;
+    		letter-spacing: 1.1px;
+		}
+
+		@media screen and (max-width:376px){
+    		//padding: 8px 0;
+    		font-size:.7em;
+		}
+
+		@media screen and (max-width:321px){
+			//padding: 7px 0;
+    		font-size: .6em;
+		}
+
+	display: inline-block;
+    border: 1px solid;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0px 9px;
+    //font-weight:bold;
+    text-align:center;
+    box-sizing:border-box;
+    //line-height:2.8em;
+}
+
+.girls-clothing-cat {
+	overflow:hidden;
+	font-family:brown-pro-regular;
+
+	.c1, .c2, .c3, .c4 {
+		@media screen and (max-width:737px){
+			background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+			min-height:730px;
+		}
+
+		@media screen and (max-width:416px){
+			min-height:534px;
+		}
+
+		@media screen and (max-width: 376px){
+			min-height:485px;
+		}
+
+		overflow:hidden;
+		margin: 0 0 5px;
+		div {
+			float:left;
+
+			.cta {
+				@media screen and (max-width:737px){
+					margin:18px 0 16px;
+				}
+
+				margin:20px 0;
+				font-family:brown-pro-bold;
+				
+				&:nth-of-type(2), &:last-of-type {
+					margin-top:0;
+				}
+			}
+		}
+	}
+
+	.c1 {
+		//display:none;
+
+		div {
+
+			&:last-of-type {
+				@media screen and (max-width:737px){
+					width: 100%;
+    				padding: 0 6%;
+				}
+
+				width: 342px;
+    			padding: 0 0 0 44px;
+    			box-sizing: border-box;
+
+    			h2 {
+					font-size: 29px;
+    				letter-spacing: 2px;
+    				margin: 29px 0 7px;
+    				color: #537c8e;
+    				line-height: 37px;
+				}
+
+				p {
+					@media screen and (max-width:737px){
+						line-height: 19px;
+						letter-spacing:.9px;
+    					//font-size: 11px;
+    					margin: 31px 0 0;
+    					text-align: center;
+					}
+
+					line-height:24px;
+				}
+
+				.cta {
+					color:#ea8289;
+					border-color:#ea8289;
+
+					@media screen and (max-width:737px){
+						width:48%;
+
+						&:first-of-type {
+							margin-right:2.9%;
+						}
+
+						&:last-of-type {
+							width:100%;
+						}
+					}
+
+					@media screen and (max-width:321px){
+						width:47%;
+					}
+
+					&:hover, &:active {
+						background: #ea8289;
+						color:#fff;
+					}
+				}
+			}
+		}
+	} // end of .c1
+
+	.c2 {
+		//display:none;
+
+		div {
+
+			&:first-of-type {
+				@media screen and (max-width:737px){
+					width:100%;
+					padding:0;
+				}
+
+				width: 319px;
+    			padding: 0 0 0 44px;
+    			box-sizing: border-box;
+
+    			h2 {
+					font-size: 29px;
+    				letter-spacing: 2px;
+    				margin: 96px 0 5px;
+    				color: #ea8289;
+    				line-height: 37px;
+    				padding: 0 0 0 13px;
+				}
+
+				p {
+					@media screen and (max-width:737px){
+						line-height: 19px;
+    					text-align: center;
+    					margin: 31px 0 0;
+    					padding: 0;
+    					letter-spacing: .9px;
+					}
+
+					line-height: 24px;
+    				text-align: right;
+    				padding: 0 22px 0;
+    				letter-spacing: .8px;
+				}
+
+				.cta {
+					color:#537c8e;
+					border-color:#537c8e;
+					left:54px;
+
+					&:hover, &:active {
+						background: #537c8e;
+						color:#fff;
+					}
+
+					@media screen and (max-width:737px){
+						width:42%;
+						left:0;
+						color: #ea8289;
+						border-color:#ea8289;
+
+						&:first-of-type {
+							margin-right:2.9%;
+							margin-left:6%;
+						}
+
+						&:last-of-type {
+							width:88%;
+							margin-left: 6%;
+						}
+
+						&:hover, &:active {
+							background:#ea8289;
+						}
+					}
+				}
+			}
+		}
+	} // end of .c2
+
+
+	.c3 {
+		//display:none;
+
+		div {
+
+			&:last-of-type {
+				@media screen and (max-width:737px){
+					width:100%;
+					padding:0;
+				}
+
+				width: 342px;
+    			padding: 0 0 0 44px;
+    			box-sizing: border-box;
+
+    			h2 {
+					font-size: 29px;
+    				letter-spacing: 2px;
+    				margin: 104px 0 7px;
+    				color: #537c8e;
+    				line-height: 37px;
+				}
+
+				p {
+					@media screen and (max-width:737px){
+						line-height: 19px;
+    					text-align: center;
+    					margin: 31px 0 0;
+    					padding: 0;
+    					letter-spacing: .9px;
+					}
+
+					line-height:24px;
+				}
+
+				.cta {
+					@media screen and (max-width:737px){
+						width:42%;
+						left:0;
+						margin-top:2em;
+						color: #557a8d;
+						border-color:#557a8d;
+
+						&:first-of-type {
+							margin-right:2.9%;
+							margin-left:6%;
+						}
+
+						&:last-of-type {
+							width:88%;
+							margin-left: 6%;
+						}
+
+						&:hover, &:active {
+							background:#557a8d !important;
+						}
+					}
+
+					margin-top:20px;
+					color:#ea8289;
+					border-color:#ea8289;
+
+					&:hover, &:active {
+						background: #ea8289;
+						color:#fff;
+					}
+				}
+			}
+		}
+	} // end of .c3
+
+	.c4 {
+		//display:none;
+
+		div {
+
+			&:first-of-type {
+				@media screen and (max-width:737px){
+					width:100%;
+					padding:0;
+				}
+
+				width: 319px;
+    			padding: 0 0 0 24px;
+    			box-sizing: border-box;
+
+    			h2 {
+					font-size: 29px;
+    				letter-spacing: 2px;
+    				margin: 141px 0 5px;
+    				color: #ea8289;
+    				line-height: 37px;
+    				padding: 0 0 0 13px;
+				}
+
+				p {
+					@media screen and (max-width:737px){
+						line-height: 19px;
+    					text-align: center;
+    					margin: 31px 0 0;
+    					padding: 0;
+    					letter-spacing: .9px;
+					}
+
+					line-height: 24px;
+    				text-align: right;
+    				padding: 0 22px 0;
+    				letter-spacing: .8px;
+				}
+
+				.cta {
+					@media screen and (max-width:737px){
+						width:42%;
+						left:0;
+						margin-top:2em;
+						color: #557a8d;
+						border-color:#557a8d;
+
+						&:first-of-type {
+							margin-right:2.9%;
+							margin-left:6%;
+						}
+
+						&:last-of-type {
+							width:88%;
+							margin-left: 6%;
+						}
+
+						&:hover, &:active {
+							background:#557a8d !important;
+						}
+					}
+
+					color:#537c8e;
+					border-color:#537c8e;
+					left:74px;
+					margin-top:24px;
+
+					&:hover, &:active {
+						background: #537c8e;
+						color:#fff;
+					}
+				}
+			}
+		}
+	} // end of .c4
+
+}
