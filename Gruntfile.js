@@ -28,39 +28,39 @@ module.exports = function(grunt) {
   		options:{livereload: true},	
       // HOMEPAGE CSS ---------------------------------------------------------------------------
   		cssHP: {
-  			files: ['homepage/170706/css/*.less'],
-  			tasks: ['less:hpCSS','makeCss:homepage/170706/css/hp-styles.css:homepage/170706/css/hp-styles.css', 'concat:hpD', 'concat:hpM', 'concat:hpToolkit'],
+  			files: ['homepage/170720/css/*.less'],
+  			tasks: ['less:hpCSS','makeCss:homepage/170720/css/hp-styles.css:homepage/170720/css/hp-styles.css', 'concat:hpD', 'concat:hpM', 'concat:hpToolkit'],
   		},
 
       // cssHP1: {
-      //   files: ['homepage/170706/css/*.less'],
-      //   tasks: ['less:hpCSS1','makeCss:homepage/170706/css/hp-styles-original.css:homepage/170706/css/hp-styles-original.css', 'concat:hpD1', 'concat:hpM1', 'concat:hpToolkit1'],
+      //   files: ['homepage/170720/css/*.less'],
+      //   tasks: ['less:hpCSS1','makeCss:homepage/170720/css/hp-styles-original.css:homepage/170720/css/hp-styles-original.css', 'concat:hpD1', 'concat:hpM1', 'concat:hpToolkit1'],
       // },
       
       // GIRLS CLOTHING CSS ---------------------------------------------------------------------------
       cssGirlsClothing: {
-        files: ['category-pages/170706/css/girls-clothing.less'],
-        tasks: ['less:girlsClothingCSS','makeCss:category-pages/170706/css/girls-clothing.css:category-pages/170706/css/girls-clothing.css', 'concat:girlsClothingD','concat:girlsClothingM','concat:girlsClothingToolkit'],
+        files: ['category-pages/170720/css/girls-clothing.less'],
+        tasks: ['less:girlsClothingCSS','makeCss:category-pages/170720/css/girls-clothing.css:category-pages/170720/css/girls-clothing.css', 'concat:girlsClothingD','concat:girlsClothingM','concat:girlsClothingToolkit'],
       },
       // BOYS CLOTHING CSS ---------------------------------------------------------------------------
       cssBoysClothing: {
-        files: ['category-pages/170706/css/boys-clothing.less'],
-        tasks: ['less:boysClothingCSS','makeCss:category-pages/170706/css/boys-clothing.css:category-pages/170706/css/boys-clothing.css', 'concat:boysClothingD','concat:boysClothingM','concat:boysClothingToolkit'],
+        files: ['category-pages/170720/css/boys-clothing.less'],
+        tasks: ['less:boysClothingCSS','makeCss:category-pages/170720/css/boys-clothing.css:category-pages/170720/css/boys-clothing.css', 'concat:boysClothingD','concat:boysClothingM','concat:boysClothingToolkit'],
       },
       // BABY GIRL CLOTHES CSS ---------------------------------------------------------------------------
       cssBabyGirlClothes: {
-        files: ['category-pages/170706/css/baby-girl-clothes.less'],
-        tasks: ['less:babyGirlClothesCSS','makeCss:category-pages/170706/css/baby-girl-clothes.css:category-pages/170706/css/baby-girl-clothes.css', 'concat:babyGirlClothesD','concat:babyGirlClothesM','concat:babyGirlClothesToolkit'],
+        files: ['category-pages/170720/css/baby-girl-clothes.less'],
+        tasks: ['less:babyGirlClothesCSS','makeCss:category-pages/170720/css/baby-girl-clothes.css:category-pages/170720/css/baby-girl-clothes.css', 'concat:babyGirlClothesD','concat:babyGirlClothesM','concat:babyGirlClothesToolkit'],
       },
       // BABY BOY CLOTHES CSS ---------------------------------------------------------------------------
       cssBabyBoyClothes: {
-        files: ['category-pages/170706/css/baby-boy-clothes.less'],
-        tasks: ['less:babyBoyClothesCSS','makeCss:category-pages/170706/css/baby-boy-clothes.css:category-pages/170706/css/baby-boy-clothes.css', 'concat:babyBoyClothesD','concat:babyBoyClothesM','concat:babyBoyClothesToolkit'],
+        files: ['category-pages/170720/css/baby-boy-clothes.less'],
+        tasks: ['less:babyBoyClothesCSS','makeCss:category-pages/170720/css/baby-boy-clothes.css:category-pages/170720/css/baby-boy-clothes.css', 'concat:babyBoyClothesD','concat:babyBoyClothesM','concat:babyBoyClothesToolkit'],
       },
        // NEWBORN CLOTHES CSS ---------------------------------------------------------------------------
       cssNewbornClothes: {
-        files: ['category-pages/170706/css/newborn-clothes.less'],
-        tasks: ['less:newbornClothesCSS','makeCss:category-pages/170706/css/newborn-clothes.css:category-pages/170706/css/newborn-clothes.css', 'concat:newbornClothesD','concat:newbornClothesM','concat:newbornClothesToolkit'],
+        files: ['category-pages/170720/css/newborn-clothes.less'],
+        tasks: ['less:newbornClothesCSS','makeCss:category-pages/170720/css/newborn-clothes.css:category-pages/170720/css/newborn-clothes.css', 'concat:newbornClothesD','concat:newbornClothesM','concat:newbornClothesToolkit'],
       },
       // CATALOG CSS ---------------------------------------------------------------------------
       cssCatalog: {
@@ -112,32 +112,32 @@ module.exports = function(grunt) {
 
       // HOMEPAGE HTML ---------------------------------------------------------------------------
   		htmlHP:{
-  			files:['homepage/170706/dev/*.html'],
+  			files:['homepage/170720/dev/*.html'],
   			tasks:['concat:hpD', 'concat:hpM', 'concat:hpToolkit']
   		},
       // GIRLS CLOTHING HTML ---------------------------------------------------------------------------
       htmlGirlsClothing:{
-        files:['category-pages/170706/dev/girls-clothing.html'],
+        files:['category-pages/170720/dev/girls-clothing.html'],
         tasks:['concat:girlsClothingD','concat:girlsClothingM','concat:girlsClothingToolkit']
       },
       // BOYS CLOTHING HTML ---------------------------------------------------------------------------
       htmlBoysClothing:{
-        files:['category-pages/170706/dev/boys-clothing.html'],
+        files:['category-pages/170720/dev/boys-clothing.html'],
         tasks:['concat:boysClothingD','concat:boysClothingM','concat:boysClothingToolkit']
       },
       // BABY GIRL CLOTHES HTML ---------------------------------------------------------------------------
       htmlBabyGirlClothes:{
-        files:['category-pages/170706/dev/baby-girl-clothes.html'],
+        files:['category-pages/170720/dev/baby-girl-clothes.html'],
         tasks:['concat:babyGirlClothesD','concat:babyGirlClothesM','concat:babyGirlClothesToolkit']
       },
       // BABY BOY CLOTHES HTML ---------------------------------------------------------------------------
       htmlBabyBoyClothes:{
-        files:['category-pages/170706/dev/baby-boy-clothes.html'],
+        files:['category-pages/170720/dev/baby-boy-clothes.html'],
         tasks:['concat:babyBoyClothesD','concat:babyBoyClothesM','concat:babyBoyClothesToolkit']
       },
         // NEWBORN CLOTHES HTML ---------------------------------------------------------------------------
       htmlNewbornClothes:{
-        files:['category-pages/170706/dev/newborn-clothes.html'],
+        files:['category-pages/170720/dev/newborn-clothes.html'],
         tasks:['concat:newbornClothesD','concat:newbornClothesM','concat:newbornClothesToolkit']
       },
       // CATALOG HTML ---------------------------------------------------------------------------
@@ -212,43 +212,43 @@ module.exports = function(grunt) {
   	less:{
       hpCSS:{
         files:{
-          'homepage/170706/css/hp-styles.css': 'homepage/170706/css/hp-styles.less'
+          'homepage/170720/css/hp-styles.css': 'homepage/170720/css/hp-styles.less'
         }
       },
 
       // hpCSS1:{
       //   files:{
-      //     'homepage/170706/css/hp-styles-original.css': 'homepage/170706/css/hp-styles-original.less'
+      //     'homepage/170720/css/hp-styles-original.css': 'homepage/170720/css/hp-styles-original.less'
       //   }
       // },
 
       girlsClothingCSS:{
         files:{
-          'category-pages/170706/css/girls-clothing.css': 'category-pages/170706/css/girls-clothing.less'
+          'category-pages/170720/css/girls-clothing.css': 'category-pages/170720/css/girls-clothing.less'
         }
       },
 
       boysClothingCSS:{
         files:{
-          'category-pages/170706/css/boys-clothing.css': 'category-pages/170706/css/boys-clothing.less'
+          'category-pages/170720/css/boys-clothing.css': 'category-pages/170720/css/boys-clothing.less'
         }
       },
 
       babyGirlClothesCSS:{
         files:{
-          'category-pages/170706/css/baby-girl-clothes.css': 'category-pages/170706/css/baby-girl-clothes.less'
+          'category-pages/170720/css/baby-girl-clothes.css': 'category-pages/170720/css/baby-girl-clothes.less'
         }
       },
 
       babyBoyClothesCSS:{
         files:{
-          'category-pages/170706/css/baby-boy-clothes.css': 'category-pages/170706/css/baby-boy-clothes.less'
+          'category-pages/170720/css/baby-boy-clothes.css': 'category-pages/170720/css/baby-boy-clothes.less'
         }
       },
 
       newbornClothesCSS:{
         files:{
-          'category-pages/170706/css/newborn-clothes.css': 'category-pages/170706/css/newborn-clothes.less'
+          'category-pages/170720/css/newborn-clothes.css': 'category-pages/170720/css/newborn-clothes.less'
         }
       },
 
@@ -305,114 +305,114 @@ module.exports = function(grunt) {
     concat: {
       // HOMEPAGE ---------------------------------------------------------------------------
       hpD: {
-        src: ['local-templates/desktop/d-header-hp.html','homepage/170706/css/hp-styles.css','homepage/170706/dev/content.html','local-templates/desktop/d-footer-hp.html'],
-        dest: 'homepage/170706/build/local-hp-d.html'
+        src: ['local-templates/desktop/d-header-hp.html','homepage/170720/css/hp-styles.css','homepage/170720/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        dest: 'homepage/170720/build/local-hp-d.html'
       },
 
       hpM: {
-        src: ['local-templates/mobile/m-header.html','homepage/170706/css/hp-styles.css','homepage/170706/dev/content.html','local-templates/mobile/m-footer.html'],
-        dest: 'homepage/170706/build/local-hp-m.html'
+        src: ['local-templates/mobile/m-header.html','homepage/170720/css/hp-styles.css','homepage/170720/dev/content.html','local-templates/mobile/m-footer.html'],
+        dest: 'homepage/170720/build/local-hp-m.html'
       },
 
       hpToolkit: {
-        src: ['homepage/170706/css/hp-styles.css','homepage/170706/dev/content.html'],
-        dest: 'homepage/170706/toolkit/toolkit-hp.html'
+        src: ['homepage/170720/css/hp-styles.css','homepage/170720/dev/content.html'],
+        dest: 'homepage/170720/toolkit/toolkit-hp.html'
       },
 
       //  hpD1: {
-      //   src: ['local-templates/desktop/d-header-hp.html','homepage/170706/css/hp-styles-original.css','homepage/170706/dev/content-original.html','local-templates/desktop/d-footer-hp.html'],
-      //   dest: 'homepage/170706/build/local-hp-d-original.html'
+      //   src: ['local-templates/desktop/d-header-hp.html','homepage/170720/css/hp-styles-original.css','homepage/170720/dev/content-original.html','local-templates/desktop/d-footer-hp.html'],
+      //   dest: 'homepage/170720/build/local-hp-d-original.html'
       // },
 
       // hpM1: {
-      //   src: ['local-templates/mobile/m-header.html','homepage/170706/css/hp-styles-original.css','homepage/170706/dev/content-original.html','local-templates/mobile/m-footer.html'],
-      //   dest: 'homepage/170706/build/local-hp-m-original.html'
+      //   src: ['local-templates/mobile/m-header.html','homepage/170720/css/hp-styles-original.css','homepage/170720/dev/content-original.html','local-templates/mobile/m-footer.html'],
+      //   dest: 'homepage/170720/build/local-hp-m-original.html'
       // },
 
       // hpToolkit1: {
-      //   src: ['homepage/170706/css/hp-styles-original.css','homepage/170706/dev/content-original.html'],
-      //   dest: 'homepage/170706/toolkit/170706-toolkit-hp-d-original.html'
+      //   src: ['homepage/170720/css/hp-styles-original.css','homepage/170720/dev/content-original.html'],
+      //   dest: 'homepage/170720/toolkit/170720-toolkit-hp-d-original.html'
       // },
 
       // CATEGORY PAGES
       //girl -----------------------------------------------------------------------------
       girlsClothingD: {
-        src: ['local-templates/desktop/d-header-2column.html','category-pages/170706/css/girls-clothing.css','category-pages/170706/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
-        dest: 'category-pages/170706/build/local-girls-clothing-d.html'
+        src: ['local-templates/desktop/d-header-2column.html','category-pages/170720/css/girls-clothing.css','category-pages/170720/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
+        dest: 'category-pages/170720/build/local-girls-clothing-d.html'
       },
 
       girlsClothingM: {
-        src: ['local-templates/mobile/m-header.html','category-pages/170706/css/girls-clothing.css','category-pages/170706/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
-        dest: 'category-pages/170706/build/local-girls-clothing-m.html'
+        src: ['local-templates/mobile/m-header.html','category-pages/170720/css/girls-clothing.css','category-pages/170720/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
+        dest: 'category-pages/170720/build/local-girls-clothing-m.html'
       },
 
       girlsClothingToolkit: {
-        src: ['category-pages/170706/css/girls-clothing.css','category-pages/170706/dev/girls-clothing.html'],
-        dest: 'category-pages/170706/toolkit/girls-clothing-toolkit.html'
+        src: ['category-pages/170720/css/girls-clothing.css','category-pages/170720/dev/girls-clothing.html'],
+        dest: 'category-pages/170720/toolkit/girls-clothing-toolkit.html'
       },
 
       //boy -----------------------------------------------------------------------------
       boysClothingD: {
-        src: ['local-templates/desktop/d-header-2column.html','category-pages/170706/css/boys-clothing.css','category-pages/170706/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
-        dest: 'category-pages/170706/build/local-boys-clothing-d.html'
+        src: ['local-templates/desktop/d-header-2column.html','category-pages/170720/css/boys-clothing.css','category-pages/170720/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
+        dest: 'category-pages/170720/build/local-boys-clothing-d.html'
       },
 
       boysClothingM: {
-        src: ['local-templates/mobile/m-header.html','category-pages/170706/css/boys-clothing.css','category-pages/170706/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
-        dest: 'category-pages/170706/build/local-boys-clothing-m.html'
+        src: ['local-templates/mobile/m-header.html','category-pages/170720/css/boys-clothing.css','category-pages/170720/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
+        dest: 'category-pages/170720/build/local-boys-clothing-m.html'
       },
 
       boysClothingToolkit: {
-        src: ['category-pages/170706/css/boys-clothing.css','category-pages/170706/dev/boys-clothing.html'],
-        dest: 'category-pages/170706/toolkit/boys-clothing-toolkit.html'
+        src: ['category-pages/170720/css/boys-clothing.css','category-pages/170720/dev/boys-clothing.html'],
+        dest: 'category-pages/170720/toolkit/boys-clothing-toolkit.html'
       },
 
       //baby girl -----------------------------------------------------------------------------
       babyGirlClothesD: {
-        src: ['local-templates/desktop/d-header-2column.html','category-pages/170706/css/baby-girl-clothes.css','category-pages/170706/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
-        dest: 'category-pages/170706/build/local-baby-girl-clothes-d.html'
+        src: ['local-templates/desktop/d-header-2column.html','category-pages/170720/css/baby-girl-clothes.css','category-pages/170720/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        dest: 'category-pages/170720/build/local-baby-girl-clothes-d.html'
       },
 
       babyGirlClothesM: {
-        src: ['local-templates/mobile/m-header.html','category-pages/170706/css/baby-girl-clothes.css','category-pages/170706/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
-        dest: 'category-pages/170706/build/local-baby-girl-clothes-m.html'
+        src: ['local-templates/mobile/m-header.html','category-pages/170720/css/baby-girl-clothes.css','category-pages/170720/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
+        dest: 'category-pages/170720/build/local-baby-girl-clothes-m.html'
       },
 
       babyGirlClothesToolkit: {
-        src: ['category-pages/170706/css/baby-girl-clothes.css','category-pages/170706/dev/baby-girl-clothes.html'],
-        dest: 'category-pages/170706/toolkit/baby-girl-clothes-toolkit.html'
+        src: ['category-pages/170720/css/baby-girl-clothes.css','category-pages/170720/dev/baby-girl-clothes.html'],
+        dest: 'category-pages/170720/toolkit/baby-girl-clothes-toolkit.html'
       },
 
       //baby boy -----------------------------------------------------------------------------
       babyBoyClothesD: {
-        src: ['local-templates/desktop/d-header-2column.html','category-pages/170706/css/baby-boy-clothes.css','category-pages/170706/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
-        dest: 'category-pages/170706/build/local-baby-boy-clothes-d.html'
+        src: ['local-templates/desktop/d-header-2column.html','category-pages/170720/css/baby-boy-clothes.css','category-pages/170720/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        dest: 'category-pages/170720/build/local-baby-boy-clothes-d.html'
       },
 
       babyBoyClothesM: {
-        src: ['local-templates/mobile/m-header.html','category-pages/170706/css/baby-boy-clothes.css','category-pages/170706/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
-        dest: 'category-pages/170706/build/local-baby-boy-clothes-m.html'
+        src: ['local-templates/mobile/m-header.html','category-pages/170720/css/baby-boy-clothes.css','category-pages/170720/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
+        dest: 'category-pages/170720/build/local-baby-boy-clothes-m.html'
       },
 
       babyBoyClothesToolkit: {
-        src: ['category-pages/170706/css/baby-boy-clothes.css','category-pages/170706/dev/baby-boy-clothes.html'],
-        dest: 'category-pages/170706/toolkit/baby-boy-clothes-toolkit.html'
+        src: ['category-pages/170720/css/baby-boy-clothes.css','category-pages/170720/dev/baby-boy-clothes.html'],
+        dest: 'category-pages/170720/toolkit/baby-boy-clothes-toolkit.html'
       },
 
       //newborn -----------------------------------------------------------------------------
       newbornClothesD: {
-        src: ['local-templates/desktop/d-header-2column.html','category-pages/170706/css/newborn-clothes.css','category-pages/170706/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
-        dest: 'category-pages/170706/build/local-newborn-clothes-d.html'
+        src: ['local-templates/desktop/d-header-2column.html','category-pages/170720/css/newborn-clothes.css','category-pages/170720/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        dest: 'category-pages/170720/build/local-newborn-clothes-d.html'
       },
 
       newbornClothesM: {
-        src: ['local-templates/mobile/m-header.html','category-pages/170706/css/newborn-clothes.css','category-pages/170706/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
-        dest: 'category-pages/170706/build/local-newborn-clothes-m.html'
+        src: ['local-templates/mobile/m-header.html','category-pages/170720/css/newborn-clothes.css','category-pages/170720/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
+        dest: 'category-pages/170720/build/local-newborn-clothes-m.html'
       },
 
       newbornClothesToolkit: {
-        src: ['category-pages/170706/css/newborn-clothes.css','category-pages/170706/dev/newborn-clothes.html'],
-        dest: 'category-pages/170706/toolkit/newborn-clothes-toolkit.html'
+        src: ['category-pages/170720/css/newborn-clothes.css','category-pages/170720/dev/newborn-clothes.html'],
+        dest: 'category-pages/170720/toolkit/newborn-clothes-toolkit.html'
       },
 
       //catalog -----------------------------------------------------------------------------
