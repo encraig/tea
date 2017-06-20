@@ -393,6 +393,7 @@ video {
 	<!-- desktop ref --> 
 	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170601/hp-d-ref.jpg" class="ref"/> -->
 
+	<!-- CELL TAKE OVER -->
 	<div class="cell-takeover">
 		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170629/cell-take-over.png" alt="THE END OF SEASON SALE take an extra 40% OFF sale styles" usemap="#hp-cell-take-over"/>
 		<map name="hp-cell-take-over">
@@ -492,53 +493,46 @@ video {
 </div>
 
 
-
+<!-- RESPONSIVE IMAGE MAPS PLUGIN -->
 <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
 <!-- bx slider development-->
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
 <link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
 
 <!-- bx slider production-->
-<!-- <script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script> -->
-<!-- <link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
-<script src="/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+<!-- SLICK SLIDESHOW PLUGIN -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
 <link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick.css" />
-<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css" />
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css" /> -->
 <script>
 $(document).ready(function(e) {
+	//responsive image maps
 	$('img[usemap]').rwdImageMaps();
 	
-
-	var chLnBr = function(elem,str){
-		$(elem).html(str); 
-	};
-
-
 	//if mobile
 	if($(window).width()<768){
 
-		//cell2 
-		// chLnBr('.c2 p',"Vacation, beach days, playdates &amp; more &ndash; adventure<br> is always around the corner, and our latest styles are<br> ready for all your little citizen's summer expeditions.");
-
-		//cell4 change line breaks
-		// chLnBr('.c4 p',"We adore everything about the littlest citizens of the world.<br> That's why we thoughtfully design our smallest styles<br> to be super soft, extra sweet and completely unique!");
-
+		//remove the cell take over for mobile
 		$('.cell-takeover').remove();
 
 		// start slick slideshow
-		$('.hp').slick({
-			adaptiveHeight:true,
-			arrows:false,
-			autoplay:true,
-			dots:true,
-			swipeToSlide:true
-		});
+		// $('.hp').slick({
+		// 	adaptiveHeight:true,
+		// 	arrows:false,
+		// 	autoplay:true,
+		// 	dots:true,
+		// 	swipeToSlide:true
+		// });
 
 		//start bx slideshow
-		// $('.hp').bxSlider({
-		// 	infiniteLoop:true,
-		// 	auto:true
-		// });
+		$('.hp').bxSlider({
+			infiniteLoop:true,
+			auto:true
+		});
 
 	}// end of if mobile
 
