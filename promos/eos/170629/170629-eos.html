@@ -50,18 +50,21 @@
 	}
 </style>
 
+
+<!-- HOME PAGE ONLY BANNER -->
 <div class="desktop-promo-hp">
-	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-hp-d.png" alt="promo banner see details hp desktop" usemap="#map0" />
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-hp-d-v2.png" alt="promo banner see details hp desktop" usemap="#map0" />
 	<map name="map0">
-		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="565,0,634,150" style="outline:none;" target="_self"     />
-		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="637,0,696,150" style="outline:none;" target="_self"     />
-		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="705,0,800,150" style="outline:none;" target="_self"     />
-		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="808,0,908,150" style="outline:none;" target="_self"     />
-		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="912,0,1000,150" style="outline:none;" target="_self"     />
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="525,0,598,150" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="604,0,660,150" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="664,0,764,150" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="770,0,873,150" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="880,0,1000,150" style="outline:none;" target="_self"     />
 	</map>
 </div>
 
 
+<!-- ALL OTHER PAGES BANNER -->
 <!-- <div class="desktop-promo">
 	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-d.png" alt="promo banner see details desktop" usemap="#map1"/>
 	<map name="map1">
@@ -73,6 +76,8 @@
 	</map>
 </div> -->
 
+
+<!-- MOBILE BANNER -->
 <div class="mobile-promo">
 	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-m.png" alt="promo banner see details mobile" usemap="#map2"/>
 	<map name="map2">
@@ -84,6 +89,8 @@
 	</map>
 </div>
 
+
+<!-- FINE PRINT LIGHT BOX -->
 <div id="details-promo">
 	<div class="details-container">
 		<h2>Details</h2>
@@ -129,29 +136,40 @@
 		// }
 		
 
-
+		//responsive image maps
 		jQuery('img[usemap]').rwdImageMaps();
+
+		//if desktop show fine print in lightbox
 		if(jQuery(window).width()>768){
+			//init the lightbox
 			jQuery('#see-details').fancybox();
 
-			//if there is a different banner for the homepage
+			//url variables
 			var url = window.location.pathname;
 			var hpPath = window.location.href;
-			console.log(hpPath);
+			
+			//if there is a different banner for the homepage
 			// if(url == '/'){
+				//show the hp banner
 			// 	jQuery('.desktop-promo-hp').show();
+				//hide the regular banner
 			// 	jQuery('.desktop-promo').hide();
 			// } else {
+				//if not home page
+				// hide the hp banner
 			// 	jQuery('.desktop-promo-hp').hide();
+				//show the regular banner
 			// 	jQuery('.desktop-promo').show();
 			// }
 
 			// if hide banner on homepage because of cell take over
-			if(hpPath == 'https://www.teacollection.com/' || hpPath == 'https://www.teacollection.com/?kw=eos-170629'){
+			if(hpPath == 'https://www.teacollection.com/'){
 				jQuery('.desktop-promo, .desktop-promo-hp').hide();
 			}
 
+		//if mobile show the fine print using the slide function
 		} else if(jQuery(window).width()<768){
+			//on click slideToggle
 			jQuery('#see-details2, .close-fancy').click(function(e){
 				e.preventDefault();
 				jQuery('#details-promo').slideToggle();
