@@ -88,22 +88,6 @@ section#breadcrumbs {
 }
 
 </style>
-<!--
-{insert name="header_tag_set" type="static" tag_id="HTML_TITLE" tag_value="Destination: Japan, Inspirational Photos & Stories | Tea Collection"}
-{insert name="header_tag_set" type="static" tag_id="META_DESCRIPTION" tag_value="Follow Tea through Japan with inspirational pictures and stories created by Tea Collection. Let us guide you as you travel the world with just one click!"}
-{insert name="header_tag_set" type="static" tag_id="META_KEYWORDS" tag_value="Destinations, Japan, Inspirational Pictures, Childrens Clothing Line, Travel the World"}
-
-
-{introduce_script src="`$theme_assets_url`js/fancybox_2.0/jquery.mousewheel-3.0.6.pack.js"}
-{introduce_script src="`$theme_assets_url`js/fancybox_2.0/jquery.fancybox.js"}
-{introduce_script src="`$theme_assets_url`js/isotope.pkgd.min.js"}
-{introduce_script src="`$theme_assets_url`js/jquery.infinitescroll.min.js"}
-
-{introduce_css href="`$theme_assets_url`js/fancybox_2.0/jquery.fancybox.css"}
--->
-
-<!-- <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'> -->
-	
 
 	<div class="top-area">
 			
@@ -139,8 +123,8 @@ section#breadcrumbs {
 	<div class="content-container">
 		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/bg-ref-d.jpg" class="ref"> -->
 
-		<img class="desktop" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c1-d.png">
-		<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c1-m.png">
+		<img class="desktop" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c1-d-v2.png">
+		<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c1-m-v2.png">
 
 		<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c2-m.jpg">
 
@@ -158,13 +142,13 @@ section#breadcrumbs {
 		<img class="desktop" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c5-d.jpg" usemap="#map1">
 		<map name="map1">
 			<area  alt="" title="" href="http://blog.teacollection.com/" shape="rect" coords="0,90,1000,444" style="outline:none;" target="_blank"     />
-			<area  alt="" title="" href="#" shape="rect" coords="8,452,1000,614" style="outline:none;" target="_blank"     />
+			<!-- <area  alt="" title="" href="#" shape="rect" coords="8,452,1000,614" style="outline:none;" target="_blank"     /> -->
 		</map>
 
 		<img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/scotland/170706/c5-m.jpg" usemap="#map2">
 		<map name="map2">
 			<area  alt="" title="" href="http://blog.teacollection.com/" shape="rect" coords="0,60,750,486" style="outline:none;" target="_blank"     />
-			<area  alt="" title="" href="#" shape="rect" coords="0,517,750,756" style="outline:none;" target="_blank"     />
+			<!-- <area  alt="" title="" href="#" shape="rect" coords="0,517,750,756" style="outline:none;" target="_blank"     /> -->
 		</map>
 	</div>
 
@@ -301,196 +285,3 @@ section#breadcrumbs {
 {/breadcrumb}
 -->
 
-<!--
-{literal}
-<script>
- 
-	$(function() {
-		
-		// add new content 
-		var counter=2;
-		$("#next").on( 'click', function(e) {
-			e.preventDefault();
-			var page = $('#page'+(counter++)).html();
-			newItems = $(page).appendTo('#container');
-			$("#container").isotope('appended', newItems );
-			$('.arrow-wrap').css('display', 'none'); // hide bottom scroll button
-		});
-		
-		$('#container').isotope({
-			itemSelector: '.item',
-			masonry: {
-				columnWidth: 320,
-				gutter: 20
-			}
-		});
-		
-		$(window).scroll(function(){
-			// trigger click to add next div of content
-			if($(window).scrollTop() + 700 > $(document).height() - $(window).height() ){
-				$('#next').click();
-			}
-			
-			// scroll arrow
-			//get scroll position
-			var topWindow = $(window).scrollTop();
-			//multipl by 1.5 so the arrow will become transparent half-way up the page
-			var topWindow = topWindow * 1.5;
-			  
-			//get height of window
-			var windowHeight = $(window).height();
-				  
-			//set position as percentage of how far the user has scrolled 
-			var position = topWindow / windowHeight;
-			//invert the percentage
-			position = 1 - position;
-
-			//define arrow opacity as based on how far up the page the user has scrolled
-			//no scrolling = 1, half-way up the page = 0
-			$('.arrow-wrap').css('opacity', position);
-		
-		});
-	});
-
-    jQuery(document).ready(function() {
-	
-		jQuery(".item").live("mouseenter", function() {
-			jQuery(this).addClass('hover');
-		}).live("mouseleave", function() {
-			jQuery(this).removeClass('hover');
-		});
-		
-		jQuery('a.arrow-wrap').click(function(){
-			jQuery('html, body').animate({
-			scrollTop: $( '#scrollto' ).offset().top
-			}, 500);
-			return false;
-		});
-		
-		$(this).on("click", "a", function (e) {
-			if ($(this).hasClass("fancybox")) {
-				var linkhash = this.id;
-				$(this).load(linkhash);
-				window.location.hash = linkhash;
-				e.preventDefault();
-			}
-
-			if ($(this).hasClass("fancybox-iframe")) {
-				var linkhash = this.id;
-				$(this).load(linkhash);
-				window.location.hash = linkhash;
-				e.preventDefault();
-			}
-
-		});
-		
-		jQuery(".fancybox").fancybox({
-			padding: 10,
-			openEffect: 'elastic',
-			closeEffect: 'elastic',
-			helpers : {
-				title : {
-					type : 'inside'
-				}
-			}
-		});
-
-		jQuery(".fancybox-iframe").fancybox({
-			type: 'iframe',
-			padding: 10,
-			width: 850,
-			height: 650,
-			autoSize: false,
-			openEffect: 'elastic',
-			closeEffect: 'elastic'
-		});
-		
-		var product_url ='{/literal}{$html_url}{$theme_assets_url}{literal}images/destination/italy/';
-		
-		// product
-		
-		jQuery(".shiptee").click(function() {
-
-			jQuery.fancybox.open([
-				{
-					href : product_url + 'ShipTee_LB.jpg',
-					link: 'http://www.teacollection.com/product/4f22002/boys-tees-nordsee-schiff-graphic-tee.html'
-				} 
-				], {
-				afterShow: function() {
-					jQuery(".fancybox-image").wrap('<a href="' + this.link + '" />');
-					var linkhash = 'ship';
-					window.location.hash = linkhash;
-				},
-				padding : 10,
-				openEffect: 'elastic',
-				closeEffect: 'elastic'
-			});
-    
-			return false;
-		});
-		
-		// end product
-		
-		var thisHash = window.location.hash;
-		
-		$(thisHash).click();		
-    });
-
-	var strWindowFeatures = "menubar=0,location=0,resizable=0,scrollbars=0,status=0,width=626,height=436";
-	var urlPath = "{/literal}http://www.teacollection.com/static/destinations-japan.html%23{literal}";
-	var imagePath ="{/literal}{$html_url}{$theme_assets_url}images/destination/japan/{literal}";
-
-	function fbs_click(UrlToShare,TitleToShare) {
-		window.open("http://www.facebook.com/sharer.php?u=" + urlPath + UrlToShare + "&t=" + TitleToShare,'sharer', strWindowFeatures);
-		return false;
-	}
-	function tws_click(UrlToShare,TitleToShare) {
-		window.open("http://twitter.com/share?url=" + urlPath + UrlToShare + "&text=" + TitleToShare + '&via=teacollection','sharer', strWindowFeatures);
-		return false;
-	}
-	function pin_click(UrlToShare,ImageToShare,DescToShare) {
-		window.open("http://pinterest.com/pin/create/button/?url=" + urlPath + UrlToShare + "&media=" + imagePath + ImageToShare + "&description=" + DescToShare,'sharer', strWindowFeatures);
-		return false;
-	}
-
-</script>
-{/literal}
-
-{literal}
-<style>
-area {
-  outline: none;
-}
-
-#scroll-prompt {
-	position: fixed;
-	right: 0;
-	bottom: 20px;
-	z-index: 20;
-	cursor: pointer;
-}
-
-div.stacked a img {
-	display: block;
-	margin-bottom: 5px;
-}
-</style>
-{/literal}
--->
-<!--
-<div class="stacked">
- 
-    		 <img src="{$theme_assets_url}images/destination/japan/20160707_SITE_Japan_InspirationPage_cell01.jpg" />&nbsp;
-
-             <a id="video" href="https://player.vimeo.com/video/145419648?autoplay=1" class="fancybox-iframe data-tile" data-tile-number="2" data-tile-name="Let's go to Japan!" data-tile-target="Watch Video"><img src="{$theme_assets_url}images/destination/japan/20160707_SITE_Japan_InspirationPage_cell02.jpg" /></a>&nbsp;
-
-             <img src="{$theme_assets_url}images/destination/japan/20160722_SITE_Japan_InspirationPage_cell03.jpg" />&nbsp;
-
-             <img src="{$theme_assets_url}images/destination/japan/20160707_SITE_Japan_InspirationPage_cell04.jpg" usemap="#slide1" />&nbsp;
-         <map name="slide1">
-            <area shape="rect" coords="85,86,915,413" href="http://blog.teacollection.com" />
-         </map>
-
-</div>
--->
