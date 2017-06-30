@@ -1,7 +1,4 @@
 <style>
-body {
-  font-family: 'tisa sans';
-}
 .ref {
   position: absolute;
   opacity: .5;
@@ -30,7 +27,6 @@ body {
 }
 .title {
   color: #333333;
-  font-family: tisa sans;
   font-size: 22px;
   font-weight: normal;
   padding: 0 0 10px;
@@ -41,16 +37,17 @@ img {
   max-width: 100%;
 }
 .body-copy {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 21px;
   letter-spacing: .6px;
   position: relative;
+  font-family: brown-pro-regular;
 }
 @media screen and (max-width: 737px) {
   .body-copy {
     font-size: 1em;
-    line-height: 1.59em;
-    letter-spacing: .05em;
+    line-height: 1.59em !important;
+    letter-spacing: .05em !important;
   }
 }
 @media screen and (max-width: 376px) {
@@ -66,6 +63,7 @@ img {
 }
 .cta {
   display: inline-block;
+  font-family: brown-pro-bold !important;
   border: 1px solid;
   width: 200px;
   position: relative;
@@ -117,7 +115,7 @@ img {
   .girls-clothing-cat div:last-of-type {
     width: 100%;
     min-height: 480px;
-    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170706/m-dotted-v2.png') no-repeat bottom center;
     background-size: 100% auto;
   }
 }
@@ -131,18 +129,14 @@ img {
     min-height: 370px;
   }
 }
-.girls-clothing-cat div:last-of-type p {
-  letter-spacing: 1.2px;
-}
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type p {
     margin-top: 1.6em;
-    letter-spacing: .7px;
   }
 }
 .girls-clothing-cat div:last-of-type p:last-of-type {
   font-family: brown-pro-bold;
-  font-size: 13px;
+  font-size: 15px;
   margin: 6px 0 14px;
   letter-spacing: 1px;
   color: #e22029;
@@ -150,7 +144,7 @@ img {
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type p:last-of-type {
     margin: .4em 0 0;
-    font-size: 10px;
+    font-size: .9em;
   }
 }
 .girls-clothing-cat div:last-of-type img[alt="dots"] {
@@ -158,10 +152,11 @@ img {
   top: -4px;
 }
 .girls-clothing-cat div:last-of-type h2 {
-  font-size: 29px;
-  letter-spacing: 2.3px;
+  font-size: 30px;
+  letter-spacing: 1.3px;
   margin: 9px 0 13px;
   color: #e22029;
+  font-family: brown-pro-bold !important;
 }
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type h2 {
@@ -172,13 +167,13 @@ img {
   margin-top: 10px;
   border-color: #e22029;
   color: #e22029;
-  font-family: brown-pro-bold;
+  font-family: brown-pro-bold !important;
 }
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type .cta {
     margin-top: 2em;
     width: 88%;
-    font-size: 10px;
+    font-size: .7em;
   }
 }
 .girls-clothing-cat div:last-of-type .cta:hover,
