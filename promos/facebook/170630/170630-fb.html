@@ -1,0 +1,265 @@
+<style>
+	.ref {
+		position: absolute;
+    	opacity: .5;
+	}
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.desktop-promo a {
+		display: block;
+    	padding-top: 22px;
+    	padding-bottom: 18px;
+    	text-align: center;
+    	text-decoration: none;
+    	font-family: brown-pro-bold !important;
+    	background:#0097b7;
+    	color:#fff;
+	}
+	.desktop-promo a h2 {
+		display: inline-block;
+    	font-size: 20px;
+    	position: relative;
+    	left: -23px;
+	}
+	.desktop-promo a h3 {
+		display: inline;
+    	font-size: 20px;
+    	position: relative;
+    	left: 2px;
+	}
+	.desktop-promo a h3 span {
+		left: 0;
+    	text-decoration: none;
+    	font-size: 20px;
+    	letter-spacing: 1px;
+    	font-family:brown-pro-bold !important;
+	}
+	.desktop-promo a span {
+		text-decoration: underline;
+    	font-size: 16px;
+    	position: relative;
+    	left: 149px;
+    	letter-spacing: -.2px;
+    	font-family:brown-pro-regular;
+	}
+	.mobile-promo a {
+		display: block;
+    	text-align: center;
+    	padding-top: 12px;
+    	padding-bottom: 10px;
+    	font-family: brown-pro-bold !important;
+    	text-transform: uppercase;
+    	background:#0097b7;
+    	color:#fff;
+	}
+	.mobile-promo a h2 {
+    	font-size: 1em;
+    	letter-spacing: 0.3px;
+    	line-height: 15px;
+    	margin-bottom: 5px;
+	}
+	.mobile-promo a h3 {
+		display: inline;
+    	font-size: .8em;
+    	position: relative;
+    	left: -7px;
+	}
+	.mobile-promo a h3 span {
+		letter-spacing: .6px;
+    	font-size: 1em;
+    	font-family: brown-pro-bold !important;
+	}
+	.mobile-promo a span {
+		font-family: brown-pro-regular !important;
+    	position: relative;
+    	left: 4px;
+    	font-size: .6em;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.close-fancy {
+		display:none;
+		text-align:center;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+		.close-fancy {
+			display:block;
+		}
+	}
+</style>
+
+
+<!-- HOME PAGE ONLY BANNER -->
+<!-- <div class="desktop-promo-hp">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-hp-d-v2.png" alt="promo banner see details hp desktop" usemap="#map0" />
+	<map name="map0">
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="525,0,598,150" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="604,0,660,150" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="664,0,764,150" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="770,0,873,150" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="880,0,1000,150" style="outline:none;" target="_self"     />
+	</map>
+</div> -->
+
+
+<!-- ALL OTHER PAGES BANNER -->
+<div class="desktop-promo">
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/facebook/170630/170630-d.png" alt="promo banner see details desktop" usemap="#map1" class="ref"/> -->
+	<a href="#details-promo" id="see-details" alt="promo banner see details cta">
+		<h2>20% off your first order<br class="mobile-promo"> + free shipping</h2>
+		<h3>use code: <span>GIVEME20</span></h3>
+		<span>see details</span>
+	</a>
+	<!-- <map name="map1">
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="474,0,545,60" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="548,0,608,60" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="612,0,712,60" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="716,0,816,60" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="821,0,1000,60" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+
+<!-- MOBILE BANNER -->
+<div class="mobile-promo">
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/facebook/170630/170630-m.jpg" alt="promo banner see details mobile" usemap="#map2" class="ref"/> -->
+
+	<!-- <map name="map2">
+		<area id="see-details2" alt="promo banner fineprint mobile" title="" href="#" shape="rect" coords="0,0,750,144" style="outline:none;" target="_self"     />
+		<area  alt="girls promo banner cta mobile" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="0,148,160,206" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta mobile" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="165,148,310,206" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta mobile" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="316,148,532,206" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta mobile" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="536,149,750,206" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+
+<!-- FINE PRINT LIGHT BOX -->
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code GIVEME20 to receive free shipping and 20% off your first Teacollection.com order. Offer is valid until 11.59pm EST 07/31/2017. Discount applies to Tea branded products only and excludes 3rd party merchandise. Discount taken will be pre-tax. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Cannot be combined with other promotions. Limited to stock on hand.  Free shipping on standard 6-10 day delivery only. Does not apply for shipping to Canada.</p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+		//responsive image maps
+		jQuery('img[usemap]').rwdImageMaps();
+
+		//if desktop show fine print in lightbox
+		if(jQuery(window).width()>768){
+			//init the lightbox
+			jQuery('#see-details').fancybox();
+
+			//url variables
+			var url = window.location.pathname;
+			var hpPath = window.location.href;
+			
+			//if there is a different banner for the homepage
+			// if(url == '/'){
+				//show the hp banner
+			// 	jQuery('.desktop-promo-hp').show();
+				//hide the regular banner
+			// 	jQuery('.desktop-promo').hide();
+			// } else {
+				//if not home page
+				// hide the hp banner
+			// 	jQuery('.desktop-promo-hp').hide();
+				//show the regular banner
+			// 	jQuery('.desktop-promo').show();
+			// }
+
+			// if hide banner on homepage because of cell take over
+			if(hpPath == 'https://www.teacollection.com/'){
+				jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			}
+
+		//if mobile show the fine print using the slide function
+		} else if(jQuery(window).width()<768){
+			var copy = jQuery('.desktop-promo a').clone();
+			jQuery('.mobile-promo').append(copy);
+
+			//on click slideToggle
+			jQuery('.mobile-promo #see-details, .close-fancy').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+
