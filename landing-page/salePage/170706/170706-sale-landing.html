@@ -102,7 +102,8 @@
 .mobile-btns li a {
     display: block;
     padding: 10px 0 8px 0;
-    background: #1d6272;
+    /*background: #1d6272;*/
+    background:#dcb347;
     color: #fff;
     text-transform: uppercase;
     font-size: 10px;
@@ -152,6 +153,9 @@
 .see-details-promo {
     padding:1em;
 }
+.desktop {
+    display:none;
+}
 }
 @media screen and (max-width:320px){
 .mobile-btns {
@@ -173,11 +177,16 @@
     <!-- ref -->
     <!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-m2.png" /> -->
     
-    <a href="/sale/girls-clothing" id="content-block"><div class="content-block">
+    <!-- <a href="/sale/girls-clothing" id="content-block">
+    <div class="content-block">
         <div></div>
         <h2>See what's on <span>Sale</span></h2>
-    </div></a>
-    <!-- <a href="/sale/girls-clothing"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170523/170523-memorialDay-2.png" /></a> -->
+    </div>
+    </a> -->
+
+    <a href="/sale/girls-clothing" class="desktop"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-d.jpg" /></a>
+
+    <a href="/sale/girls-clothing" class="mobile"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-m.jpg" /></a>
 
     <ul class="mobile-btns">
         <li><a href="/sale/girls-clothing/view-all" data="mobile">girl</a></li>
