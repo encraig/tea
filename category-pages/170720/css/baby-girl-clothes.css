@@ -1,7 +1,4 @@
 <style>
-body {
-  font-family: 'tisa sans';
-}
 .ref {
   position: absolute;
   opacity: .5;
@@ -30,7 +27,6 @@ body {
 }
 .title {
   color: #333333;
-  font-family: tisa sans;
   font-size: 22px;
   font-weight: normal;
   padding: 0 0 10px;
@@ -41,7 +37,7 @@ img {
   max-width: 100%;
 }
 .body-copy {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 21px;
   letter-spacing: .6px;
   position: relative;
@@ -66,6 +62,7 @@ img {
 }
 .cta {
   display: inline-block;
+  font-family: brown-pro-bold !important;
   border: 1px solid;
   width: 200px;
   position: relative;
@@ -117,7 +114,7 @@ img {
   .girls-clothing-cat div:last-of-type {
     width: 100%;
     min-height: 480px;
-    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170505/m-dotted.png') no-repeat bottom center;
+    background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/girls-clothing/170706/m-dotted-v2.png') no-repeat bottom center;
     background-size: 100% auto;
   }
 }
@@ -141,8 +138,7 @@ img {
   }
 }
 .girls-clothing-cat div:last-of-type p:last-of-type {
-  font-family: brown-pro-bold;
-  font-size: 13px;
+  font-family: brown-pro-bold !important;
   margin: 6px 0 14px;
   letter-spacing: 1px;
   color: #5ec1a2;
@@ -150,7 +146,6 @@ img {
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type p:last-of-type {
     margin: .4em 0 0;
-    font-size: 10px;
   }
 }
 .girls-clothing-cat div:last-of-type img[alt="dots"] {
@@ -172,7 +167,7 @@ img {
   margin-top: 10px;
   border-color: #5ec1a2;
   color: #5ec1a2;
-  font-family: brown-pro-bold;
+  font-family: brown-pro-bold !important;
 }
 @media screen and (max-width: 737px) {
   .girls-clothing-cat div:last-of-type .cta {
