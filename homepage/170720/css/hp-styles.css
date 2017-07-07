@@ -1,6 +1,5 @@
 <style>
 body {
-  font-family: 'Tisa Sans', Arial, Helvetica, sans-serif;
   color: #606063;
 }
 .bx-controls {
@@ -64,8 +63,8 @@ video {
   opacity: .5;
 }
 .body-copy {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 18px;
   letter-spacing: .6px;
   position: relative;
   font-family: brown-pro-regular;
@@ -95,7 +94,7 @@ video {
   width: 200px;
   position: relative;
   font-size: 13px;
-  letter-spacing: 0.7px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 0 9px;
