@@ -1,0 +1,626 @@
+{literal}
+<style type="text/css">
+#size-chart-mobile {
+	position: relative;
+}
+
+#size-chart-mobile h3.title{
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	color: #32465c;
+	font-family: tisa;
+	font-size: 18px;
+	text-transform: none;
+    letter-spacing: .07rem;
+    font-weight: normal;
+}
+
+#size-chart-mobile div.close {
+	height: 25px;
+	width: 25px;
+	background: url('{/literal}{$theme_assets_url}{literal}images/mobile/size-chart-sprite.png') no-repeat 0 0;
+	position: absolute;
+	top: 9px;
+	right: 9px;
+	cursor: pointer;
+}
+#size-chart-select ul, #size-chart-dept ul {
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#size-chart-select ul li, #size-chart-dept ul li {
+	cursor: pointer;
+	padding: 10px;
+	font-family: tisa sans medium;
+	font-size: 14px;
+	text-align: center;
+	border-top: 0;
+	color: #32465c;
+	text-transform: uppercase;
+	letter-spacing: 0.07rem;
+}
+
+#size-chart-select ul li.line {
+	padding: 0;
+	line-height: 2px;
+	margin-bottom: 50px;
+}
+
+#size-chart-dept ul li:last-child {
+	border-bottom: 0;
+}
+
+#size-chart-select h3, #size-chart-dept h3 {
+	text-transform: uppercase;
+	background: #32465c;
+	color: #ffffff;
+	font-family: 'Tisa Sans';
+	padding: 12px 5px 8px;
+	font-weight: normal;
+	cursor: pointer;
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+	position: relative;
+    letter-spacing: .07rem;
+}
+
+#size-chart-select h3 {
+	background: #adb6bf;
+}
+
+#size-chart-dept h3 {
+	background: #32465c;
+}
+
+#size-chart-dept div.open-close, #size-chart-select div.open-close {
+	height: 20px;
+	width: 20px;
+	background: url('{/literal}{$theme_assets_url}{literal}images/mobile/size-chart-sprite.png') no-repeat 0 -20px;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#size-chart-dept h3.open div.open-close, #size-chart-select h3.open div.open-close {
+	background: url('{/literal}{$theme_assets_url}{literal}images/mobile/size-chart-sprite.png') no-repeat 0 -40px;
+}
+
+.chart-contents {
+	display: none;
+}
+
+img[usemap] {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+/*.mobile-measuring-tips {
+	cursor: pointer;
+}*/
+
+.mobile-tips-header {
+	background: #32465c;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'tisa sans' !important;
+	color: #ffffff !important;
+	letter-spacing: .07rem;
+	margin: 0 !important;
+	padding: 12px 0px 8px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.mobile-tips-header span {
+	height: 13px;
+    position: absolute;
+    right: 24px;
+    top: 11px;
+    width: 13px;
+	cursor: pointer;
+}
+.mobile-main {
+	position: relative;
+}
+
+#chart-contents .caption {
+    position: absolute;
+    right: 5%;
+    text-align: center;
+    width: 30%;
+    bottom: 52%;
+}
+
+#chart-contents .caption p {
+	margin: 0 0 10px;
+	font-size: 11px;
+	font-family: tisa sans !important;
+	color: #58595b;
+    letter-spacing: .03rem;
+    line-height: 17px;
+}
+.m-chart-header {
+	background: #adb5be;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'tisa sans' !important;
+	color: #ffffff;
+	letter-spacing: .09rem;
+	margin: 0 !important;
+	padding: 12px 5px 8px;
+	text-align: center;
+}
+
+.m-swim-header {
+	background: #ffffff;
+	font-size: 12px;
+	font-family: 'tisa sans' !important;
+	color: #990000;
+	letter-spacing: .09rem;
+	margin: 0 !important;
+	padding: 12px 5px 8px;
+	text-align: center;
+}
+
+#chart-contents .mobile-tips .container {
+	background: #e0e3e7;
+	padding: 5% 15%;
+}
+
+#chart-contents .mobile-tips .container p {
+    font-family: tisa sans;
+    font-size: 11px;
+    letter-spacing: 0.03rem;
+    padding: 0 0 10px;
+    text-align: center;
+    line-height: 17px;
+    padding-top: 15px;
+}
+
+#chart-contents .mobile-tips .container p.donot {
+    font-style: italic;
+}
+
+
+#chart-contents .mobile-tips .container p span {
+	font-size: 18px;
+	letter-spacing: .09rem;
+	color: #32465c;
+	font-family: tisa;
+    font-weight: normal;
+}
+
+.table-other-brands {
+	background: transparent !important;
+    border: 0 !important;
+    width: 100% !important;
+}
+
+.table-other-brands tr {
+    border: 0 !important;
+}
+
+.table-other-brands tr td {
+    border: 0 !important;
+	padding: 0 !important;
+}
+
+@media (max-width: 350px) {
+	#chart-contents .caption { top: 10%; }
+	#girls-swim .caption, #boys-swim .caption, #babygirl-swim .caption, #babyboy-swim .caption { top: 5%; }
+	#boys-bottoms .caption, #babygirl-bottoms .caption, #babyboy-bottoms .caption  { top: 5%; }
+	#newborn-all .caption { top: 20%; }
+}
+
+#girls-tops .caption, #boys-tops .caption {
+    bottom: 42%;
+}
+
+#babygirl-rompers .caption, #babyboy-rompers .caption {
+    bottom: 48%;
+}
+
+#babygirl-outerwear .caption, #babyboy-outerwear .caption {
+    bottom: 60%;
+}
+
+#girls-swim .caption {
+    bottom: 69%;
+}
+
+</style>
+
+{/literal}
+
+<div class="common-wrap" style="margin: 15px 3%;">
+
+	<div id="size-chart-mobile">
+		<h3 class="title">Size Chart</h3>
+		{if $divinity.page ne "static"}<div class="close"></div>{/if}
+		
+		<div id="size-chart-dept">
+			<h3><span>girl</span><div class="open-close"></div></h3>
+			<ul>
+				<li data-dept="girl" data-chart="#size-chart-girl">Girl</li>
+				<li data-dept="boy" data-chart="#size-chart-boy">Boy</li>
+				<li data-dept="baby girl" data-chart="#size-chart-babygirl">Baby Girl</li>
+				<li data-dept="baby boy" data-chart="#size-chart-babyboy">Baby Boy</li>
+				<li data-dept="newborn" data-chart="#size-chart-newborn">Newborn</li>
+			</ul>
+		</div>
+		<div id="size-chart-select">
+			<h3><span>dresses</span><div class="open-close"></div></h3>
+				<div id="size-chart-container">
+					<ul id="size-chart-girl">
+						<li data-chart="dresses" data-src="#girls-dresses">Dresses</li>
+						<li data-chart="tops" data-src="#girls-tops">Tops</li>
+						<li data-chart="bottoms" data-src="#girls-bottoms">Bottoms</li>
+						<li data-chart="swim" data-src="#girls-swim">Swim</li>
+						<li data-chart="sweaters + outerwear" data-src="#girls-outerwear">Sweaters + Outerwear</li>
+						<li data-chart="shoes + hats" data-src="#girls-shoes">Shoes + Hats</li>
+						<li class="line"><img src="http://sandbox.teacollection.com/mas_assets/theme/tea_collection/images/mobile/charts/20160406_SITE_SizeChart_M_dotted-line.png" width="100%"></li>
+					</ul>
+					<ul id="size-chart-boy">
+						<li data-chart="tops" data-src="#boys-tops">Tops</li>
+						<li data-chart="bottoms" data-src="#boys-bottoms">Bottoms</li>
+						<li data-chart="swim" data-src="#boys-swim">Swim</li>
+						<li data-chart="sweaters + outerwear" data-src="#boys-outerwear">Sweaters + Outerwear</li>
+						<li data-chart="shoes + hats" data-src="#boys-shoes">Shoes + Hats</li>
+						<li class="line"><img src="http://sandbox.teacollection.com/mas_assets/theme/tea_collection/images/mobile/charts/20160406_SITE_SizeChart_M_dotted-line.png" width="100%"></li>
+					</ul>
+					<ul id="size-chart-babygirl">
+						<li data-chart="rompers" data-src="#babygirl-rompers">Rompers</li>
+						<li data-chart="dresses" data-src="#babygirl-dresses">Dresses</li>
+						<li data-chart="tops" data-src="#babygirl-tops">Tops</li>
+						<li data-chart="bottoms" data-src="#babygirl-bottoms">Bottoms</li>
+						<li data-chart="swim" data-src="#babygirl-swim">Swim</li>
+						<li data-chart="sweaters + outerwear" data-src="#babygirl-outerwear">Sweaters + Outerwear</li>
+						<li data-chart="shoes + hats" data-src="#babygirl-shoes">Shoes + Hats</li>
+						<li class="line"><img src="http://sandbox.teacollection.com/mas_assets/theme/tea_collection/images/mobile/charts/20160406_SITE_SizeChart_M_dotted-line.png" width="100%"></li>
+					</ul>
+					<ul id="size-chart-babyboy">
+						<li data-chart="rompers" data-src="#babyboy-rompers">Rompers</li>
+						<li data-chart="tops" data-src="#babyboy-tops">Tops</li>
+						<li data-chart="bottoms" data-src="#babyboy-bottoms">Bottoms</li>
+						<li data-chart="swim" data-src="#babyboy-swim">Swim</li>
+						<li data-chart="sweaters + outerwear" data-src="#babyboy-outerwear">Sweaters + Outerwear</li>
+						<li data-chart="shoes + hats" data-src="#babyboy-shoes">Shoes + Hats</li>
+						<li class="line"><img src="http://sandbox.teacollection.com/mas_assets/theme/tea_collection/images/mobile/charts/20160406_SITE_SizeChart_M_dotted-line.png" width="100%"></li>
+					</ul>
+					<ul id="size-chart-newborn">
+						<li data-chart="all categories" data-src="#newborn-all">All categories</li>
+						{*<li class="line"><img src="http://sandbox.teacollection.com/mas_assets/theme/tea_collection/images/mobile/charts/20160406_SITE_SizeChart_M_dotted-line.png" width="100%"></li>*}
+					</ul>
+				</div>
+				<div id="chart-contents"></div>
+		</div>
+		<div class="chart-contents">
+			<div id="girls-dresses">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Girl_Dresses.jpg" width="100%"></a>
+					<p class="m-chart-header">Girl Dresses Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Numeric.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-girls-tips"}
+			</div>
+			<div id="girls-tops">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Girl_Tops.jpg" width="100%"></a>
+					<p class="m-chart-header">Girls Tops + Hoodies Numeric Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Numeric.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girls Tops + Hoodies Alpha Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Alpha.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-girls-tips"}
+			</div>
+			<div id="girls-bottoms">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Girl_Bottoms.jpg" width="100%"></a>
+					<p class="m-chart-header">Girl Bottoms Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Numeric.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-girls-tips"}
+			</div>
+			<div id="girls-swim">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Girl_Swim.jpg" width="100%"></a>
+					{*<p class="m-chart-header">Girl's Swim Fit Notice</p>
+					<p class="m-swim-header">Certain styles run a bit small&#8212;we recommend ordering a larger size than usual according to the tables below</p>
+					<p class="m-chart-header">Tankini Top</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Swim_Tankini.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Rash Guard</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Swim_RashGuard.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>*}
+					<p class="m-chart-header">Girl Swim Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Numeric.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-girls-tips"}
+			</div>
+			<div id="girls-outerwear">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Girl_Outerwear.jpg" width="100%"></a>
+					<p class="m-chart-header">Girls Sweaters + Outerwear Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Alpha.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girl Outerwear Size Chart<br />(Other Brands)</p>
+					{include file="store:name=content/static/size-chart-other-brands"}
+				</div>
+				{include file="store:name=content/static/size-chart-girls-tips"}
+			</div>
+			<div id="girls-shoes">
+				<div class="mobile-main">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girl Hats Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Hats.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girl Headbands Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Girl_Headbands.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girl Socks Size Chart</p>
+					<img src="{$theme_assets_url}images/static/charts/170706/Teacollection_size_chart_socks_kid_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Girl Shoes Size Charts</p>
+					{include file="store:name=content/static/size-chart-shoes-girls"}
+				</div>
+			</div>
+			<div id="boys-tops">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Boy_Tops.jpg" width="100%"></a>
+					<p class="m-chart-header">Boys Tops + Hoodies Numeric Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Boy_Numeric.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Boys Tops + Hoodies Alpha Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Boy_Alpha.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-boys-tips"}
+			</div>
+			<div id="boys-bottoms">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Boy_Bottoms.jpg" width="100%"></a>
+					<p class="m-chart-header">Boy Bottoms Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Boy_Numeric.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-boys-tips"}
+			</div>
+			<div id="boys-swim">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Boy_Swim.jpg" width="100%"></a>
+					<p class="m-chart-header">Boy Swim Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Boy_Numeric.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-boys-tips"}
+			</div>
+			<div id="boys-outerwear">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160707_SITE_SizeChart_M_Boy_Outerwear.jpg" width="100%"></a>
+					<p class="m-chart-header">Boys Sweaters + Outerwear Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Boy_Alpha.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Boy Outerwear Size Chart<br />(Other Brands)</p>
+					{include file="store:name=content/static/size-chart-other-brands"}
+				</div>
+				{include file="store:name=content/static/size-chart-boys-tips"}
+			</div>
+			<div id="boys-shoes">
+				<div class="mobile-main">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Boy Hats Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_hats_boys_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Boy Socks Size Chart</p>
+					<img src="{$theme_assets_url}images/static/charts/170706/Teacollection_size_chart_socks_kid_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Boy Shoes Size Charts</p>
+					{include file="store:name=content/static/size-chart-shoes-boys"}
+				</div>
+			</div>
+			<div id="babygirl-rompers">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Rompers.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Rompers Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_rompers_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-dresses">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Dresses.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Dresses Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-tops">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Tops.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Tops and Hoodies + Bodysuits Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-bottoms">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Bottoms.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Bottoms Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-swim">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Swim.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Swim Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-outerwear">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyGirl_Outerwear.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Girl Outerwear + Sweaters Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Girl Outerwear Size Chart<br />(Other Brands)</p>
+					{include file="store:name=content/static/size-chart-other-brands"}
+				</div>
+				{include file="store:name=content/static/size-chart-babygirl-tips"}
+			</div>
+			<div id="babygirl-shoes">
+				<div class="mobile-main">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Girl Hats Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_hats_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Girl Socks Size Chart</p>
+					<img src="{$theme_assets_url}images/static/charts/170706/Teacollection_size_chart_socks_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Girl Shoes Size Charts</p>
+					{include file="store:name=content/static/size-chart-shoes-girls"}
+				</div>
+			</div>
+			<div id="babyboy-rompers">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyBoy_Rompers.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Boy Rompers Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_rompers_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babyboy-tips"}
+			</div>
+			<div id="babyboy-tops">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyBoy_Tops.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Boy Tops and Hoodies + Bodysuits Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babyboy-tips"}
+			</div>
+			<div id="babyboy-bottoms">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyBoy_Bottoms.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Boy Bottoms Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babyboy-tips"}
+			</div>
+			<div id="babyboy-swim">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_BabyBoy_Swim.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Boy Swim Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+				</div>
+				{include file="store:name=content/static/size-chart-babyboy-tips"}
+			</div>
+			<div id="babyboy-outerwear">
+				<div class="mobile-main">
+					<a class="mobile-measuring-tips" href="javascript:void(0);"><img src="{$theme_assets_url}images/mobile/charts/20160707_SITE_SizeChart_M_BabyBoy_Outerwear.jpg" width="100%"></a>
+					<p class="m-chart-header">Baby Boy Outerwear + Sweaters Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_other_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Boy Outerwear Size Chart<br />(Other Brands)</p>
+					{include file="store:name=content/static/size-chart-other-brands"}
+				</div>
+				{include file="store:name=content/static/size-chart-babyboy-tips"}
+			</div>
+			<div id="babyboy-shoes">
+				<div class="mobile-main">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Boy Hats Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_hats_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Boy Socks Size Chart</p>
+					<img src="{$theme_assets_url}images/static/charts/170706/Teacollection_size_chart_socks_baby_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Baby Boy Shoes Size Charts</p>
+					{include file="store:name=content/static/size-chart-shoes-boys"}
+				</div>
+			</div>
+			<div id="newborn-all">
+				<div class="mobilemain">
+					<img src="{$theme_assets_url}images/mobile/charts/20160613_SITE_SizeChart_M_Newborn.jpg" width="100%">
+					<p class="m-chart-header">Newborn Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/Teacollection_size_chart_all_newborn_m.jpg" width="100%">
+					<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+					<p class="m-chart-header">Newborn Accessories Size Chart</p>
+					<img src="{$theme_assets_url}images/mobile/charts/20160512_SITE_SizeChart_M_Newborn_Accessories.jpg" width="100%">
+				</div>
+			</div>
+		</div>
+	</div>
+{literal}
+<script>
+    jQuery(document).ready(function() {
+	
+		jQuery("#size-chart-dept h3").on( "click", function() {
+			current = jQuery('#size-chart-dept h3 span').html();
+			jQuery("[data-dept='" + current + "']").hide();
+			jQuery("#size-chart-dept ul li:not([data-dept='" + current + "'])").show();
+			jQuery(this).toggleClass('open').next().toggle();
+		});
+		jQuery("#size-chart-dept ul li").on( "click", function() {
+			dept = jQuery(this).data("dept");
+			chart = jQuery(this).data("chart");
+			jQuery("#size-chart-dept h3 span").html(dept).click();
+			if (jQuery("#size-chart-dept h3 span").text() == 'newborn') {
+				jQuery("#size-chart-select h3 div").css('display', 'none');
+			} else {
+				jQuery("#size-chart-select h3 div").css('display', 'block');
+			}
+			jQuery(chart).prependTo( "#size-chart-container" ).children(":first").click();
+			jQuery("#size-chart-container ul").css("display","none");
+		});
+		jQuery("#size-chart-select h3").on( "click", function() {
+			current = jQuery('#size-chart-select h3 span').html();
+			jQuery("[data-chart='" + current + "']").hide();
+			jQuery("#size-chart-select ul li:not([data-chart='" + current + "'])").show();
+			jQuery(this).toggleClass('open').next().children(":first").toggle();
+		});
+		jQuery("#size-chart-select ul li").on( "click", function() {
+			chart = jQuery(this).data("chart");
+			source = jQuery(this).data("src");
+			jQuery("#size-chart-select h3 span").html(chart).click();
+			if (jQuery('#size-chart-container ul').not(':visible')) {
+				jQuery("#size-chart-select h3").removeClass('open');
+			}
+			jQuery("#chart-contents").html(jQuery(source).clone(true, true));
+		});
+		
+		jQuery(".mobile-measuring-tips").on( "click", function() {
+			jQuery(".mobile-main,#size-chart-dept,#size-chart-select h3,#size-chart-container").css("display","none");
+			jQuery(".mobile-tips").css("display","block");
+		});
+		
+		jQuery(".mobile-measuring-tips-close").on( "click", function() {
+			jQuery(".mobile-main,#size-chart-dept,#size-chart-select h3,#size-chart-container").css("display","block");
+			jQuery(".mobile-tips").css("display","none");
+		});
+		
+		jQuery("#size-chart-mobile div.close").on( "click", function() {
+			jQuery('#size-chart').slideUp();
+			jQuery("#open-size-chart").css("display","block");
+		});
+		
+		{/literal}
+		{if $divinity.page ne "static"}
+			{include file="store:name=content/static/size-chart-select"}
+		{else}
+			jQuery("#size-chart-select h3").click();
+			jQuery("#size-chart-girl li:first-child").click();		
+		{/if}
+		{literal}	
+    });
+
+</script>
+{/literal}
+    
+</div>  

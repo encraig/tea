@@ -1,0 +1,121 @@
+{introduce_script src="`$theme_assets_url`js/jquery.rwdImageMaps.min.js" zone="footer"}
+
+{literal}
+<style>
+    .common-wrap-inner {
+        margin: 1.3% 0 0 0 !important;
+    }
+
+    .common-wrap {
+        margin: 0px 0% 0px 0% !important;
+    }
+
+    .common-wrap-seo {
+    	margin: 15px 6% 15px 6%;
+    }
+
+    .heading-category {
+    color: #333333;
+    font-family: tisa sans;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+	display: block;
+	}
+
+</style>
+{/literal}
+
+<div class="cat-level-two">
+    {sub_cats name="cat2" category=clothing-sale}
+        <div class="navigation-set">
+			<a class="show-cat-level-three" id="{$cat2.title|replace:' ':''}">
+                <div class="subcategory-box">
+                    <span class="nav-box-name lf">{$cat2.title}</span> 
+					<img class="cat-level-two-plus rf" src="{$theme_assets_url}images/mobile/plus.png"/>
+                    <img class="cat-level-two-minus rf" src="{$theme_assets_url}images/mobile/minus.png"/>
+                </div>
+            </a>
+			<div class="cat-level-three">
+				{sub_cats name="cat3" category="`$cat2.name`"}
+					<a href="{$cat3.url}">
+						<div class="navigation-box {if $cat3.last}nav-last-box{/if}">
+							<span class="nav-row">
+								<span class="nav-box-name lf">{$cat3.title}</span>
+								<img class="rf" src="{$theme_assets_url}images/mobile/b.png"/>
+							</span>
+						</div>
+					</a>
+				{/sub_cats}
+			</div>    
+        </div>
+	{/sub_cats}
+</div>
+
+{literal}
+<script>
+    
+    jQuery(document).ready(function(){
+		jQuery('.cat-level-two').css('display','block');
+		jQuery('img[usemap]').rwdImageMaps();
+    })
+      
+</script>
+{/literal}
+
+<div class="heading-category">Sale</div>
+<div class="common-wrap-inner">
+	<div class="landing-container">
+			<img src="{$theme_assets_url}images/categories/clothing-sale/landing/mobile/20160108_PROMO_SaleOnSale_Extra25_M_SALELANDINGPAGE.jpg" usemap="#slide1" />
+	</div>
+</div>
+
+<map name="slide1">
+			<area shape="rect" coords="1,1,747,671" onclick="javascript:void window.open('http://sandbox.teacollection.com/mas_assets/theme/tea_collection/fineprint/25foryou_mobile.html','1448306378451','width=1000,height=205,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=0,left=0,top=0');return false;" style="display:block; width:100%" title="See Fine Print" />
+			<area shape="rect" coords="1,670,375,784" href="/sale/girls-clothing/view-all" title="Girls Sale Styles" />
+			<area shape="rect" coords="374,670,747,784" href="/sale/boys-clothing/view-all" title="Boys Sale Styles" />
+			<area shape="rect" coords="1,783,375,895" href="/sale/baby-girl-clothes/view-all" title="Baby Girl Sale Styles" />
+			<area shape="rect" coords="374,783,747,895" href="/sale/baby-boy-clothes/view-all" title="Baby Boy Sale Styles" />
+			<area shape="rect" coords="1,894,747,999" href="/sale/baby-boy-clothes/view-all" title="Newborn Sale Styles" />
+		</map>
+
+<div class="common-wrap-seo">
+    {if $category_seo}
+        {$category_seo|smarty:nodefaults}
+    {/if}
+</div>
+
+<div class="div40"></div>
+
+{introduce_style}
+{literal}
+
+.landing-container a {
+	display: block;
+	position: relative;
+}
+
+.landing-container a img, .landing-container img {
+	width: 100%;
+	display: block;
+}
+
+img[usemap] {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+{/literal}
+{/introduce_style}
+
+{literal}
+	<script>
+    jQuery( document ).ajaxComplete(function() {
+        jQuery('div.banner-ad-zone [data-zone="sitewide_banner_mobile"]').css("display", "none"); 
+    });
+      </script>
+{/literal}
