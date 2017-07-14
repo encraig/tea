@@ -1,0 +1,212 @@
+<!-- fonts for local dev -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/css/fonts.css"/> -->
+
+<style type="text/css">
+	/* for local dev */
+	/*body {
+		margin:0;
+	}*/
+
+	/* UNCOMMENT THIS STYLE TO HIDE THE 10% OFF POPUP */
+
+	/*#simplemodal-overlay, #simplemodal-container, #tea-promo-subscribe {
+		display:none !important;
+	}*/
+
+	.desktop-promo img, .mobile-promo img {
+		max-width:100%;
+	}
+
+	.the-promo a {
+		display: block;
+    	background: #2ec6db;
+    	text-decoration: none;
+    	font-family: brown-pro-bold !important;
+    	overflow: hidden;
+    	padding: 28px 33px 14px;
+    	box-sizing: border-box;
+    	color: #fff;
+	}
+	@media screen and (max-width:737px){
+		.the-promo a {
+    		padding: 26px 6% 15px 6%;
+		}
+	}
+	@media screen and (max-width:321px){
+		.the-promo a {
+    		padding: 23px 6% 6px 6%;
+		}
+	}
+
+	.the-promo a div:first-of-type {
+		font-size: 21px;
+    	float: left;
+    	letter-spacing: 0px;
+	}
+	@media screen and (max-width:737px){
+		.the-promo a div:first-of-type {
+			font-size: 1em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.the-promo a div:first-of-type {
+			font-size: .8em;
+		}
+	}
+
+	.the-promo a div:last-of-type {
+		float: right;
+    	background: #f15d56;
+    	padding: 10px 0 10px;
+    	text-transform: uppercase;
+    	font-family: brown-pro-bold !important;
+    	font-size: 12px;
+    	position: relative;
+    	top: -9px;
+    	left: 10px;
+    	width: 145px;
+    	text-align: center;
+    	box-sizing: border-box;
+    	letter-spacing: 1.3px;
+	}
+	@media screen and (max-width:737px){
+		.the-promo a div:last-of-type {
+    		padding: 7px 0 8px;
+    		font-size: 0.7em;
+    		position: relative;
+    		top: -4px;
+    		left: 0;
+    		width: 17%;
+    		line-height: 13px;
+		}
+	}
+
+	.mobile-promo {
+		display:none;
+	}
+
+	/* fine print styles */
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+		margin-bottom:20px;
+	}
+
+	/* ref style */
+	.ref {
+		position:absolute;
+		opacity:.5;
+		top:0;
+		left:0;
+	}
+	@media screen and (max-width:737px){
+		.ref {
+			top:auto;
+		}
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+</style>
+
+<!-- ref image desktop -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/little-citizens/170716/170716-little-citizen-d.png" class="ref desktop-promo"/> -->
+
+<!-- ref image mobile -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/little-citizens/170716/170716-little-citizen-m.png" class="ref mobile-promo"/> -->
+
+<!-- DESKTOP PROMO -->
+<div class="the-promo">
+	<a href="/inspiring-little-citizens" id="desktop-link">
+		
+		<div>Nominate an inspiring little citizen<br class="mobile-promo"> who makes their community a better place</div>
+		<div>learn<br class="mobile-promo"> more</div>
+	</a>
+</div>
+
+<!-- MOBILE PROMO -->
+<!-- <div class="mobile-promo">
+	<a href="/inspiring-little-citizens" id="mobile-link"><img alt="" src="assets/170716-little-citizen-m.png" /></a>
+</div> -->
+
+<!-- FINE PRINT LIGHT BOX -->
+<div id="details-promo">
+	<!-- <div class="details-container">
+		<h2>Take 20% off your first order</h2>
+
+		<p>Enter code <span class="the-promo-code">MAGPIE</span> at checkout, or save it for later</p>
+
+		<h2>Details</h2>
+
+		<p>Enter code <span class="the-promo-code">MAGPIE</span> to receive 20% off your first order on Teacollection.com. Valid for new customers only. Offer valid through 08/31/2017 at 11:59 PM PT. Does not apply to third party merchandise. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Cannot be used towards the purchase of Everyday Play Sets. Limited to stock on hand.</p>
+	</div> -->
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile
+		if(jQuery(window).width()<768) {
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		//hide the banners on the inspiring little citizens page
+		var url = window.location.pathname;
+		if(url == '/cms/inspiring-little-citizens/inspiring-little-citizens/1.html'){
+			$('.the-promo').hide();
+		}
+		
+		//responsive image maps
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		//if desktop lightbox fine print else mobile slidetoggle fine print
+		if(jQuery(window).width()>768){
+			jQuery('#desktop-link').fancybox();
+
+		} else if(jQuery(window).width()<768){
+			jQuery('#mobile-link').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+	});
+</script>
