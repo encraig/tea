@@ -1,0 +1,181 @@
+<style>
+	/*-- UNCOMMENT THIS STYLE IF YOU WANT TO HIDE THE 10% OFF POP UP FOR NEW USERS  --*/
+	/*#simplemodal-overlay, #simplemodal-container, #tea-promo-subscribe {
+		display:none !important;
+	}*/
+
+	.desktop-promo img, .desktop-promo-hp img, .mobile-promo img {
+		max-width:100%;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-promo {
+		display:none;
+		width:600px;
+		background:#fff;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.close-fancy {
+		display:none;
+		text-align:center;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo, .desktop-promo-hp {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+		.close-fancy {
+			display:block;
+		}
+	}
+</style>
+
+
+<!-- HOME PAGE ONLY BANNER -->
+<!-- <div class="desktop-promo-hp">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/eos/170629/170629-eos-hp-d-v2.png" alt="promo banner see details hp desktop" usemap="#map0" />
+	<map name="map0">
+		<area  alt="girls promo banner cta desktop" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="525,0,598,150" style="outline:none;" target="_self"     />
+		<area  alt="boys promo banner cta desktop" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="604,0,660,150" style="outline:none;" target="_self"     />
+		<area  alt="baby girl promo banner cta desktop" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="664,0,764,150" style="outline:none;" target="_self"     />
+		<area  alt="baby boy promo banner cta desktop" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="770,0,873,150" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta" title="" href="#details-promo" shape="rect" coords="880,0,1000,150" style="outline:none;" target="_self"     />
+	</map>
+</div> -->
+
+
+<!-- ALL OTHER PAGES BANNER -->
+<div class="desktop-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/little-citizens/170727/170727-little-citizen-d-v2.jpg" alt="promo banner see details desktop" usemap="#map1"/>
+	<map name="map1">
+		<area  alt="learn more promo banner cta desktop" title="" href="/inspiring-little-citizens" shape="rect" coords="828,8,984,58" style="outline:none;" target="_self"     />
+		<area id="see-details" alt="promo banner see details cta desktop" title="" href="#details-promo" shape="rect" coords="740,60,1000,106" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+
+<!-- MOBILE BANNER -->
+<div class="mobile-promo">
+	<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/little-citizens/170727/170727-little-citizen-m-v2.jpg" alt="promo banner see details mobile" usemap="#map2"/>
+	<map name="map2">
+		<area  alt="learn more promo banner cta mobile" title="" href="/inspiring-little-citizens" shape="rect" coords="609,0,750,100" style="outline:none;" target="_self"     />
+		<area id="see-details2" alt="promo banner see details cta mobile" title="" href="#" shape="rect" coords="477,102,750,148" style="outline:none;" target="_self"     />
+	</map>
+</div>
+
+
+<!-- FINE PRINT LIGHT BOX -->
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code INSPIRINGKIDS to receive 20% off your order on Teacollection.com. Limited time offer. Discount taken will be pre-tax. Cannot be combined with other promotions. Offer expires on 8/3/2017 at 11:59PM PST. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Cannot be used towards the purchase of Everyday Play Sets, Global Shop items, or third party product. Limited to stock on hand.</p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		// var code = jQuery('#details-promo').find('#the-promo-code').text();
+		// sessionStorage.setItem('promoCode',code);
+
+		// if(sessionStorage.getItem('promoCode')) {
+		// 	var path = window.location.href.split('?');
+		
+		// 	if(path[1]){
+		// 		var checkout = path[1].split('&');
+		// 		checkout = checkout[0];
+		// 		if(checkout == 'page=checkout') {
+		// 			jQuery('#promo-code').val(sessionStorage.getItem('promoCode'));
+		// 		}
+		// 	}
+		// }
+		
+
+		//responsive image maps
+		jQuery('img[usemap]').rwdImageMaps();
+
+		//if desktop show fine print in lightbox
+		if(jQuery(window).width()>768){
+			//init the lightbox
+			jQuery('#see-details').fancybox();
+
+			//url variables
+			var url = window.location.pathname;
+			var hpPath = window.location.href;
+			
+			//if there is a different banner for the homepage
+			// if(url == '/'){
+				//show the hp banner
+			// 	jQuery('.desktop-promo-hp').show();
+				//hide the regular banner
+			// 	jQuery('.desktop-promo').hide();
+			// } else {
+				//if not home page
+				// hide the hp banner
+			// 	jQuery('.desktop-promo-hp').hide();
+				//show the regular banner
+			// 	jQuery('.desktop-promo').show();
+			// }
+
+			// if hide banner on homepage because of cell take over
+			// if(hpPath == 'https://www.teacollection.com/'){
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			// }
+
+		//if mobile show the fine print using the slide function
+		} else if(jQuery(window).width()<768){
+			//on click slideToggle
+			jQuery('#see-details2, .close-fancy').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+
+	});
+</script>
+
