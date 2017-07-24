@@ -144,7 +144,15 @@ video {
 .c3 div img,
 .c4 div img,
 .c5 div img {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div img,
+  .c3 div img,
+  .c4 div img,
+  .c5 div img {
+    margin-bottom: 35px;
+  }
 }
 .c2 div .cta,
 .c3 div .cta,
@@ -502,8 +510,8 @@ $(document).ready(function() {
 	//if mobile
 	if($(window).width() < 768) {
 		
-		$('.hp .video').remove();
-		// $('.video').remove();
+		//move the video below the slideshow
+		$('.hp').after($('.hp .video'));
 
 		// start slick slideshow
 		// $('.hp').slick({

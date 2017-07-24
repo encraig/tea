@@ -144,7 +144,15 @@ video {
 .c3 div img,
 .c4 div img,
 .c5 div img {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 737px) {
+  .c2 div img,
+  .c3 div img,
+  .c4 div img,
+  .c5 div img {
+    margin-bottom: 35px;
+  }
 }
 .c2 div .cta,
 .c3 div .cta,
