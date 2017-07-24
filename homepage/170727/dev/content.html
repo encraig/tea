@@ -165,8 +165,8 @@ $(document).ready(function() {
 	//if mobile
 	if($(window).width() < 768) {
 		
-		$('.hp .video').remove();
-		// $('.video').remove();
+		//move the video below the slideshow
+		$('.hp').after($('.hp .video'));
 
 		// start slick slideshow
 		// $('.hp').slick({
