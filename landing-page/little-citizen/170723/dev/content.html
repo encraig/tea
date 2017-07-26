@@ -1,0 +1,244 @@
+
+<div class="wrap-content">
+	<!--desktop ref-->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/bg.jpg" class="ref" /> -->
+	
+	<!--mobile ref -->
+	<!-- <img src="../images/bg-m.jpg" class="ref" /> -->
+
+
+	<div class="c2">
+
+		<h1>Inspiring Little Citizens</h1>
+
+		<div class="line"></div>
+
+		<!-- <h2>Five finalists will receive<br class="mobile"> at least $1000 from Tea!</h2> -->
+
+		<p class="body-copy">Giving is at the core of our mission to be good global citizens. To us, that<br class="desktop"> means supporting children who<br class="mobile"> make a difference - whether it's helping<br class="desktop"> a neighbor,<br class="mobile"> volunteering, or making sure no one sits alone at lunch.</p>
+
+		<h2>Meet our Finalists!</h2>
+		<p class="body-copy">These five kind, compassionate kids are making the world a better place,<br class="desktop"> and we want to help them give back. Join us, as we donate 5%* of every<br class="desktop"> sale from July 27 - August 3, to help these Inspired Little Citizens have<br class="desktop"> a greater impact in their communities.</p>
+
+	</div>
+
+	<div class="citizen-slideshow mobile"></div>
+
+	<div class="citizen-map desktop">
+		<!-- finalists -->
+		<ul></ul>
+
+		<!-- background map -->
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/map.jpg" alt="map"/>
+	</div>
+
+	<div class="rules">
+		<a href="http://blog.teacollection.com/2017-inspiring-little-citizen-finalists/" target="_blank" class="cta">Learn More</a>
+		<!-- <a href="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170716/2017-inspiring-little-citizens-official-rules.pdf" target="_blank" class="cta">official rules</a> -->
+	</div>
+
+
+	<div id="olapic_specific_widget"></div><script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js"  data-olapic="olapic_specific_widget" data-instance="0dedd86e1d1b8f4f5c5d55e3e81ad6f3" data-apikey="ca3781377fc6af100e2bc3c53f3dae637737bbc1547a19b69bb1ba78e2e0007b" async="async"></script>
+
+</div>
+
+<!-- fancy box container -->
+<div id="fancy">
+	<div>
+		<span class="crop">
+			<img src="" alt="">
+		</span>
+		<h2></h2>
+		<h3 class="body-copy"></h3>
+		<p class="body-copy"></p> 
+	</div>
+</div>
+
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!-- bx slider development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+ -->
+<!-- bx slider production-->
+<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+{literal}
+<script>
+$(document).ready(function(){
+	// jQuery('img[usemap]').rwdImageMaps();
+
+	// var baseUrl = 'https://api.typeform.com/v1/form/';
+	// var uid = 'd7LIRA';
+	// var k = '?key=ed88d49ba364e0da229b86082ce4e9f4f9033b6e';
+
+	var finalists = [];
+
+	var savvy = {
+		name: 'Savannah',
+		bio: 'Savannah and her siblings joined the Bailey family through foster care adoption, so the plight of foster children without forever families has always been near and dear to her heart. She\'s held bake sales, participated in charity runs and even donated some of her own savings to help local foster child advocacy organizations.\n\nSavannah is going to donate Tea\'s contribution to her local Court Appointed Special Advocates (CASA) organization. She believes "all foster kids should get a say in where they end up and where they feel safe." And CASA provides volunteer advocates to children in the foster care system to ensure they have their voices heard in court.',
+		location:'Elk Grove, CA',
+		image: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/savvy-lg.jpg',
+		thumb: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/savvy-thumb.jpg'
+	}
+
+	var lilyanne = {
+		name:'Lilyanne',
+		bio: 'When asked "what is something you would do to make someone who is unhappy at Christmas time feel better", Lilyanne responded, "I would paint them a pretty picture."And that\'s exactly what she did. This artistic, charitable 3-year-old spent a couple of months painting 150 8" x 10" paintings. With the help of her mom, she wrapped and hand delivered each painting to local nursing/assisted living homes and communities on Christmas Eve.\n\nLilyanne is currently helping her mom raise money for Make-A-Wish Central Carolina, with a team goal of $100,000 and a personal goal of $1,000. All the money from Tea\'s contribution would be donated to Make-A-Wish.',
+		location: 'Asheville, NC',
+		image: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/lilyanne-lg.jpg',
+		thumb: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/lilyanne-thumb.jpg'
+	}
+
+	var cash = {
+		name:'Cash',
+		bio:'Cash is only 7 years old, but he\'s made a huge impact through this service project, Cash\'s Cans. His mission is to help critically ill kids and their families while they stay at the Ronald McDonald House. The Ronald McDonald House uses soda can tabs to generate revenue for their program, and cash has collected and donated 4,790 pounds (that\'s well over six million tabs) to help the cause.\n\nCash will donate his Tea contribution to the Ronald McDonald House Upper Midwest.',
+		location:'Marshall, MN',
+		image: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/cash-lg.jpg',
+		thumb: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/cash-thumb.jpg'
+	}
+
+	var bridger = {
+		name: 'Bridger',
+		bio: 'Even though he doesn\'t speak, Bridger teaches everyone he meets the value of life. He is deaf and his vision is impaired, yet he always carries on with a smile. He can\'t walk, sit or crawl, but has moved mountains with the light he radiates. He has changed the world around him for the better, showing you don’t need words to make a big impact.\n\nThe small community Bridger lives in does not have adaptive park equipment for disabled children. He will use his contribution from Tea to install an adaptive swing at the park. It would be life changing for children with disabilities to not just watch other kids play, but have the chance to join them when at the park.',
+		location: 'Richmond, UT',
+		image: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/bridger-lg.jpg',
+		thumb: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/bridger-thumb.jpg' 
+	}
+
+	var lillian = {
+		name: 'Lillian',
+		bio:'Lillian wants to make sure that all kids have enough to eat. She\'s opened lemonade stands and held bake sales to support No Kid Hungry. She volunteers for the food pantry at her church. And she\'s raised money for the food program at an elementary school in Ravine a l\'Anse, Haiti.\n\nLillian is participating as a youth baker in the No Kid Hungry Kansas City bake sale this fall, and all proceeds will go to feed hungry children. She will use Tea\'s contribution to further support No Kid Hungry.',
+		location: 'Kansas City, MO',
+		image: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/lillian-lg.jpg',
+		thumb: 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/little-citizen/170723/lillian-thumb.jpg'
+	}
+
+	finalists.push(savvy, bridger, lillian, cash, lilyanne);
+
+	// console.log(finalists);
+
+	//output for desktop and mobile
+	
+	$(finalists).each(function(j,obj){
+		//desktop
+		$('.citizen-map ul').append('<li><a href="#"><img src="'+obj.thumb+'" alt="'+obj.name+'"/><span>'+obj.location+'</span></a></li>')
+				
+		//mobile
+		$('.citizen-slideshow').append('<div><div><div data-num="'+j+'"><div><img src="'+obj.image+'" alt="'+obj.name+'"/><h2>'+obj.name+'</h2><h3>'+obj.location+'</h3></div><p class="body-copy">'+obj.bio+'</p></div></div></div>');	
+	});
+
+	//if mobile start slideshow
+	if($(window).width()<768){
+		$('.citizen-slideshow').bxSlider({
+			infiniteLoop:true,
+			auto:true,
+		});	
+	}
+
+	//function to remove style 'background : none'
+	var removeThis = function(elem, theStyle){
+		var styles = $(elem).attr('style');
+		styles = styles.split(';');
+		$(styles).each(function(i,val){
+			if(val == theStyle) {
+				styles.splice(i,1);
+			}
+		});
+		styles = styles.toString().replace(/,/g, ';');
+		$(elem).attr('style', styles);
+	};
+
+	
+	//show the popup on click
+	$('.citizen-map a').click(function(e){
+		//prevent the default
+		e.preventDefault();
+
+		//get the click index
+		var i = $('.citizen-map a').index(this);
+
+		//get the click position
+		var pos = $(this).offset();
+		// console.log(pos);
+
+		//get the selected finalist
+		var selected = finalists[i];
+
+		//add info to the popup
+		$('#fancy img').attr('src', selected.image);
+		$('#fancy img').attr('alt', selected.name);
+		$('#fancy h2').html(selected.name);
+		$('#fancy h3').html(selected.location);
+		$('#fancy p').html(selected.bio);
+
+
+		//if content is greater then 100px show the condensed version 
+		var pHeight;
+		setTimeout(function(){
+			pHeight = $('#fancy p').height();
+			// console.log(pHeight);
+
+			if(pHeight > 100){
+				$('#fancy p').before('<span class="overlay-gradient"></span>')
+				$('#fancy p').addClass('shorten');
+				$('#fancy div').append('<span class="show-more">show more</span>');
+				$('#fancy div').append('<span class="show-less" style="display:none;">show less</span>');
+			}
+
+		},0);
+		
+		//position the popup above the  icon
+		$('#fancy').css({'top': Math.floor(pos.top) - 570, 'left':Math.floor(pos.left) - 105});
+
+		//create and add the grey overlday
+		var black = '<div style="position:fixed; width:100%; height:100%; z-index:9999; opacity:.5; background:#000;" id="black-background"></div>';
+		$('body').prepend(black);
+
+		//show the popup
+		$('body').prepend($('#fancy'));
+		$('#fancy').show();
+
+		// close the popup
+		$('#black-background').click(function(){
+			$('#fancy').hide();
+			$('#fancy p').removeClass('shorten');
+			removeThis('#fancy', ' background: none');
+			$('#black-background, #fancy .show-more, #fancy .show-less, #fancy .overlay-gradient').remove();
+		});
+	
+	});
+
+	// expand the popup
+	$('#fancy').click(function(){
+		//console.log('click');
+		var classExists = $('#fancy p').hasClass('reading');
+		//console.log(classExists);
+		if (classExists == false){
+			$('#fancy p').addClass('reading');
+			$('#fancy').css('background','none');
+			$('#fancy .overlay-gradient').hide();
+			$('#fancy p').removeClass('shorten');
+			$('.show-more').hide();
+			$('.show-less').show();
+		} else {
+			$('#fancy p').removeClass('reading');
+			removeThis('#fancy', ' background: none');
+			$('#fancy p').addClass('shorten');
+			$('#fancy .overlay-gradient').show();
+			$('.show-more').show();
+			$('.show-less').hide();
+		}
+			
+	});
+
+
+
+}); 
+</script>
+{/literal}
