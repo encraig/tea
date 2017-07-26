@@ -1,0 +1,411 @@
+<style>
+.ref {
+  position: absolute;
+  opacity: .5;
+  max-width: 100%;
+}
+/*--------------------------------------------------------------------*/
+.my-account h1,
+.midbox h1 {
+  display: none;
+}
+#breadcrumbs,
+.common-wrap {
+  display: none;
+}
+/*--------------------------------------------------------------------*/
+.mobile {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+/*--------------------------------------------------------------------*/
+/*-- UNCOMMENT THIS STYLE IF HIDE 10% POPUP --*/
+/*#simplemodal-container, #simplemodal-overlay {
+	display:none !important;
+}*/
+/*--------------------------------------------------------------------*/
+.padded {
+  padding: 0 !important;
+}
+/*--------------------------------------------------------------------*/
+/*-- SLIDE SHOW STYLES --*/
+.bx-controls-direction {
+  display: none !important;
+}
+.bx-viewport {
+  overflow: visible !important;
+}
+.bx-pager {
+  display: block !important;
+  /*.bx-pager-item {
+        a {
+            width:8px !important;
+            height:8px !important;
+            margin:0 7px !important;
+        }  
+    }*/
+}
+/*--------------------------------------------------------------------*/
+.body-copy {
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: .7px;
+}
+@media screen and (max-width: 737px) {
+  .body-copy {
+    font-size: 1em;
+    line-height: 1.59em;
+    letter-spacing: .9px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .body-copy {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 569px) {
+  .body-copy {
+    font-size: .8em;
+    letter-spacing: .5px;
+  }
+}
+/*--------------------------------------------------------------------*/
+.cta {
+  display: inline-block;
+  border: 1px solid;
+  padding: 10px 0;
+  width: 200px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+/*--------------------------------------------------------------------*/
+.clear-this {
+  clear: both;
+  padding-left: 7%;
+  letter-spacing: .2px;
+}
+@media screen and (max-width: 737px) {
+  .clear-this {
+    padding-left: 5%;
+    letter-spacing: .4px;
+  }
+}
+.clear-this a {
+  color: #444;
+}
+/*--------------------------------------------------------------------*/
+.wrap-content {
+  overflow: hidden;
+  margin-bottom: 13px;
+}
+.wrap-content img {
+  max-width: 100%;
+}
+/*--------------------------------------------------------------------*/
+.c1,
+.c2,
+.c3,
+.c4,
+.c5 {
+  float: left;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 737px) {
+  .c1,
+  .c2,
+  .c3,
+  .c4,
+  .c5 {
+    float: none;
+  }
+}
+.c1 {
+  background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c1-d.jpg') no-repeat;
+  width: 100%;
+  height: 299px;
+  margin-bottom: 10px;
+  color: #fff;
+  padding-left: 30px;
+}
+@media screen and (max-width: 737px) {
+  .c1 {
+    background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c1-m.jpg') no-repeat;
+    background-size: cover;
+    padding-left: 6%;
+    height: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+}
+.c1 h1 {
+  display: block;
+  font-size: 32px;
+  font-family: brown-pro-bold !important;
+  margin-top: 15px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 737px) {
+  .c1 h1 {
+    margin-top: 108px;
+    font-size: 1.7em;
+    line-height: 29px;
+    margin-bottom: 0;
+  }
+}
+.c1 h1 span {
+  display: block;
+  font-size: 57px;
+  letter-spacing: 5px;
+}
+@media screen and (max-width: 737px) {
+  .c1 h1 span {
+    font-size: 1.4em;
+    letter-spacing: 1.4px;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c1 p {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c1 .cta {
+    color: #fff;
+    border-color: #fff;
+    width: 44%;
+    padding: 6px 0;
+    font-size: .9em;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 25px;
+  }
+  .c1 .cta:active,
+  .c1 .cta:hover {
+    background: #fff;
+    color: #e1651f;
+  }
+}
+.c2 a,
+.c3 a {
+  background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c2-d.jpg') no-repeat;
+  width: 495px;
+  height: 494px;
+  text-align: center;
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 737px) {
+  .c2 a,
+  .c3 a {
+    background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c2-m.jpg') no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+}
+.c2 a:hover .cta,
+.c3 a:hover .cta {
+  background: #fff;
+  color: #ccddb4;
+}
+.c2 .cta,
+.c3 .cta {
+  color: #fff;
+  border-color: #fff;
+  margin-top: 230px;
+}
+@media screen and (max-width: 737px) {
+  .c2 .cta,
+  .c3 .cta {
+    width: 42%;
+    font-size: .9em;
+    margin-top: 174px;
+    padding: 7px 0;
+    margin-bottom: 172px;
+  }
+}
+.c3 a {
+  background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c3-d.jpg') no-repeat;
+  margin-right: 0;
+}
+@media screen and (max-width: 737px) {
+  .c3 a {
+    background: url('/mas_assets/theme/tea_collection/images/static/active/170727/c3-m.jpg') no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+}
+.c4 {
+  margin-right: 10px;
+}
+@media screen and (max-width: 737px) {
+  .c4 {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c5 .cta {
+    color: #2d71b2;
+    border-color: #2d71b2;
+    width: 41%;
+    padding: 6px 0;
+    font-size: .9em;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 25px;
+    margin-top: 11px;
+  }
+  .c5 .cta:active,
+  .c5 .cta:hover {
+    background: #2d71b2;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 737px) {
+  .c5 .cta:first-of-type {
+    margin-left: 6%;
+  }
+}
+@media screen and (max-width: 737px) {
+  .seo-copy {
+    padding-left: 7%;
+  }
+}
+.seo-copy h2 {
+  font-family: brown-pro-bold !important;
+  font-size: 15px;
+  letter-spacing: .4px;
+  color: #999;
+}
+@media screen and (max-width: 737px) {
+  .seo-copy h2 {
+    font-size: 1em;
+    color: #999;
+  }
+}
+.seo-copy p {
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  color: #999;
+}
+@media screen and (max-width: 737px) {
+  .seo-copy p {
+    font-size: .6em;
+    line-height: 15px;
+    margin-bottom: 0;
+  }
+}
+/*--------------------------------------------------------------------*/
+
+</style>
+
+<div class="wrap-content">
+	<!--desktop ref prod-->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/bg-ref-d.jpg" class="ref" /> -->
+
+	<!--desktop ref dev-->
+	<!-- <img src="../images/bg-ref-d.jpg" class="ref" /> -->
+	
+	<!--mobile ref prod -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/bg-m.jpg" class="ref" /> -->  
+
+	<!--mobile ref dev -->
+	<!-- <img src="../images/bg-m-ref.jpg" class="ref" />  -->
+
+	<div class="c1">
+		<h1>Tea <span>Active</span></h1>
+		<p class="body-copy">The ultimate go-anywhere<br class="desktop"> style! From math class to<br class="desktop"> gym<br class="mobile"> class, from weekend<br class="desktop"> lounging to after school<br class="desktop"> exercise,<br class="mobile"> Tea Active is made<br class="desktop"> to move with your little citizen.</p>
+
+		<!-- mobile cta -->
+		<a href="/girls-girl-active" class="cta mobile">shop girl</a>
+		<a href="/boys/tea-active" class="cta mobile">shop boy</a>
+	</div>
+
+	<div class="c2">
+		<!-- dev -->
+		<a href="/girls-girl-active"><span class="cta">shop girl</span></a>
+	</div>
+
+	<div class="c3">
+		<!-- dev -->
+		<a href="/boys/tea-active"><span class="cta">shop boy</span></a>
+	</div>
+
+	<div class="c4">
+		<!-- prod -->
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/c4-d.jpg" alt="boy" class="desktop" />
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/c4-m.jpg" alt="boy" class="mobile" />
+
+		<!-- dev -->
+		<!-- img src="../images/c4-d.jpg" alt="boy" class="desktop" />
+		<img src="../images/c4-m.jpg" alt="boy" class="mobile" /> -->
+
+
+	</div>
+
+	<div class="c5">
+		<!-- prod -->
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/c5-d.jpg" alt="girl & boy" class="desktop"/>
+		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/active/170727/c5-m.jpg" alt="girl & boy" class="mobile"/>
+
+		<!-- dev -->
+		<!-- <img src="../images/c5-d.jpg" alt="girl & boy" class="desktop"/>
+		<img src="../images/c5-m.jpg" alt="girl & boy" class="mobile"/> -->
+
+		<!-- mobile cta -->
+		<a href="/girls-girl-active" class="cta mobile">shop girl</a>
+		<a href="/boys/tea-active" class="cta mobile">shop boy</a>
+	</div>
+
+</div>
+
+<!--
+<div class="seo-copy">
+	<h2 style="color:#999;">Tea Collection Girls Tea Active</h2>
+	<p class="body-copy">Whether they're stretching, climbing, running, or playing, our Tea Active Collection<br class="mobile"> was made for girls on the move! Breathable, flexible, and fun, our new<br class="desktop"> Tea Active<br class="mobile"> Collection includes Active Leggings that are perfect for running around in the<br class="mobile"> backyard, going to the playground and even yoga. From soft,<br class="desktop"> stretchy fabrics that<br class="mobile"> bend with every movement, to vibrant prints, don't be surprised if our girls athletic<br class="mobile"> clothing leads to cartwheels.</p>
+
+	<h2 style="color:#999;">Tea Collection Boys Tea Active</h2>
+	<p class="body-copy">Our Tea Active Collection was designed with little athletes in mind! From playing<br class="mobile"> sports to playing pretend, our boys activewear will stay cool and<br class="desktop"> comfortable. Our<br class="mobile"> Active Tanks are made of super-soft, breathable fabric and our colorful sport shorts<br class="mobile"> are perfect to wear anywhere! We guarantee our<br class="desktop"> durable boys athletic clothing will<br class="mobile"> be worn time and time again. Shop our boys athletic clothing collection today for<br class="mobile"> the active little guy in your life.</p>
+</div>
+-->
+
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- bx slider development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+
+<!-- bx slider production-->
+<!-- <script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+
+{literal}
+<script>
+$(document).ready(function(){
+	// jQuery('img[usemap]').rwdImageMaps();
+
+}); 
+</script>
+{/literal}
