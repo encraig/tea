@@ -86,8 +86,8 @@ module.exports = function(grunt){
       },
       // BACK TO SCHOOL SWEEPS  ---------------------------------------------------------------------------
       BackToSchool: {
-        files: ['landing-page/back-to-school-sweeps/css/styles.less', 'landing-page/back-to-school-sweeps/dev/content.html'],
-        tasks: ['less:backToSchoolCSS','cssmin','makeCss:landing-page/back-to-school-sweeps/css/styles.css:landing-page/back-to-school-sweeps/css/styles.css', 'concat:backToSchool'],
+        files: ['landing-page/back-to-school-sweeps/css/styles.less', 'landing-page/back-to-school-sweeps/dev/*.html'],
+        tasks: ['less:backToSchoolCSS', 'concat:backToSchool'],
       },
 
       // NAV REDESIGN  ---------------------------------------------------------------------------
