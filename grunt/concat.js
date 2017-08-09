@@ -271,6 +271,18 @@ module.exports = function(grunt){
         }
       },
 
+      // back to school sweeps -----------------------------------------------------------------------------
+      backToSchool: {
+        files: {
+        //desktop
+        'landing-page/back-to-school-sweeps/build/local-back-to-school-sweeps-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/back-to-school-sweeps/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        //mobile
+        'landing-page/back-to-school-sweeps/build/local-back-to-school-sweeps-m.html': ['local-templates/mobile/m-header.html','landing-page/back-to-school-sweeps/dev/content.html','local-templates/mobile/m-footer.html'],
+        //toolkit
+        'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-sweeps.html': ['landing-page/back-to-school-sweeps/css/styles.css','landing-page/back-to-school-sweeps/dev/content.html'],
+        }
+      },
+
       // nav-redesign -----------------------------------------------------------------------------
       navRedesignHTML: {
         files: {

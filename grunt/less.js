@@ -1,4 +1,6 @@
+
 module.exports = function(grunt){
+
 	return {
 	
       options: {
@@ -125,6 +127,13 @@ module.exports = function(grunt){
       activeCSS:{
         files:{
           'landing-page/active/170727/css/styles.css': 'landing-page/active/170727/css/styles.less'
+        }
+      },
+
+      // BACK TO SCHOOL SWEEPS CSS ---------------------------------------------------------------------------
+      backToSchoolCSS:{
+        files:{
+          'landing-page/back-to-school-sweeps/css/styles.css': 'landing-page/back-to-school-sweeps/css/styles.less'
         }
       },
 
