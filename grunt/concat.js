@@ -1,7 +1,7 @@
 module.exports = function(grunt){
 	return {
 		options: {
-        sourceMap:true,
+        //sourceMap:true,
       },
 
       // HOMEPAGE ---------------------------------------------------------------------------
@@ -274,12 +274,19 @@ module.exports = function(grunt){
       // back to school sweeps -----------------------------------------------------------------------------
       backToSchool: {
         files: {
-        //desktop
+        //desktop landing page
         'landing-page/back-to-school-sweeps/build/local-back-to-school-sweeps-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/back-to-school-sweeps/dev/content.html','local-templates/desktop/d-footer-hp.html'],
-        //mobile
+        //mobile landing page
         'landing-page/back-to-school-sweeps/build/local-back-to-school-sweeps-m.html': ['local-templates/mobile/m-header.html','landing-page/back-to-school-sweeps/dev/content.html','local-templates/mobile/m-footer.html'],
-        //toolkit
+        //toolkit landing page
         'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-sweeps.html': ['landing-page/back-to-school-sweeps/css/styles.css','landing-page/back-to-school-sweeps/dev/content.html'],
+
+        //desktop thank you page
+        'landing-page/back-to-school-sweeps/build/local-back-to-school-thanks-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/back-to-school-sweeps/dev/thanks.html','local-templates/desktop/d-footer-hp.html'],
+        //mobile thank you page
+        'landing-page/back-to-school-sweeps/build/local-back-to-school-thanks-m.html': ['local-templates/mobile/m-header.html','landing-page/back-to-school-sweeps/dev/thanks.html','local-templates/mobile/m-footer.html'],
+        //toolkit thank you page
+        'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-thanks.html': ['landing-page/back-to-school-sweeps/css/styles.css','landing-page/back-to-school-sweeps/dev/thanks.html'],
         }
       },
 
