@@ -92,8 +92,8 @@ module.exports = function(grunt){
 
       // NAV REDESIGN  ---------------------------------------------------------------------------
       NavRedesign: {
-        files: ['nav-redesign/css/*.less', 'nav-redesign/html/*.html'],
-        tasks: ['less:navRedesignCSS', 'concat:navRedesignHTML'],
+        files: ['nav-redesign/css/*.less', 'nav-redesign/html/*.html', 'nav-redesign/js/*.js'],
+        tasks: ['less:navRedesignCSS', 'concat:navRedesignHTML', 'uglify:navRedesignScripts'],
       },
 
       // HEADER REDESIGN  ---------------------------------------------------------------------------
