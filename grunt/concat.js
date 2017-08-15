@@ -289,9 +289,11 @@ module.exports = function(grunt){
         'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-thanks.html': ['landing-page/back-to-school-sweeps/css/styles.css','landing-page/back-to-school-sweeps/dev/thanks.html'],
         }
       },
+      
 
       // nav-redesign -----------------------------------------------------------------------------
       navRedesignHTML: {
+
         files: {
           //version 1
           'nav-redesign/build/local-nav-redesign-1.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav1.html','nav-redesign/html/footer.html'],
@@ -317,6 +319,14 @@ module.exports = function(grunt){
       headerRedesignHTML: {
         src: ['header-redesign/header.html','local-templates/desktop/d-footer-hp.html'],
         dest: 'header-redesign/build/local-header-redesign.html'
+      },
+
+       // promos -----------------------------------------------------------------------------
+      promosHTML: {
+        files: {
+          //bmsm
+          'promos/bmsm/170821/toolkit/toolkit-bmsm.html': ['promos/bmsm/170821/css/styles.css','promos/bmsm/170821/dev/content.html'],
+        }
       },
   }
 };
