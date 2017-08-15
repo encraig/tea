@@ -136,10 +136,18 @@ module.exports = function(grunt){
           'landing-page/back-to-school-sweeps/css/styles.css': 'landing-page/back-to-school-sweeps/css/styles.less'
         }
       },
+      
 
       // NAV REDESIGN CSS ---------------------------------------------------------------------------
       navRedesignCSS: {
-        files: {
+        //dynamic files
+        expand:true,
+        cwd:'nav-redesign/css',
+        src:['*.less'],
+        dest:'nav-redesign/css/',
+        ext:'.css',
+
+        /*files: {
           'nav-redesign/css/styles1.css': 'nav-redesign/css/styles1.less',
           'nav-redesign/css/styles2.css': 'nav-redesign/css/styles2.less',
           'nav-redesign/css/styles3.css': 'nav-redesign/css/styles3.less',
@@ -148,13 +156,20 @@ module.exports = function(grunt){
           'nav-redesign/css/styles6.css': 'nav-redesign/css/styles6.less',
           'nav-redesign/css/styles7.css': 'nav-redesign/css/styles7.less',
           'nav-redesign/css/styles8.css': 'nav-redesign/css/styles8.less'
-        }
+        }*/
       },
 
       // HEADER REDESIGN CSS ---------------------------------------------------------------------------
       headerRedesignCSS:{
         files:{
           'header-redesign/styles.css': 'header-redesign/styles.less'
+        }
+      },
+
+      // PROMOS CSS ---------------------------------------------------------------------------
+      promosCSS:{
+        files:{
+          'promos/bmsm/170821/css/styles.css': 'promos/bmsm/170821/css/styles.less',
         }
       },
     
