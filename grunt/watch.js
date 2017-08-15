@@ -44,6 +44,7 @@ module.exports = function(grunt){
         files: ['catalog/170330/css/catalog.less', 'catalog/170330/dev/*.html'],
         tasks: ['less:catalogCSS','makeCss:catalog/170330/css/catalog.css:catalog/170330/css/catalog.css', 'concat:catalog'],
       },
+      
       // INFLUENCER  ---------------------------------------------------------------------------
       Influencer: {
         files: ['landing-page/influencer/css/influencer-styles.less', 'landing-page/influencer/dev/content.html'],
@@ -89,6 +90,7 @@ module.exports = function(grunt){
         files: ['landing-page/back-to-school-sweeps/css/styles.less', 'landing-page/back-to-school-sweeps/dev/*.html'],
         tasks: ['less:backToSchoolCSS', 'concat:backToSchool'],
       },
+      
 
       // NAV REDESIGN  ---------------------------------------------------------------------------
       NavRedesign: {
@@ -100,6 +102,12 @@ module.exports = function(grunt){
       HeaderRedesign: {
         files: ['header-redesign/*.less', 'header-redesign/*.html'],
         tasks: ['less:headerRedesignCSS','concat:headerRedesignHTML'],
+      },
+
+       // PROMOS  ---------------------------------------------------------------------------
+      Promos: {
+        files: ['promos/**/*.less', 'promos/**/*.html'],
+        tasks: ['less:promosCSS', 'concat:promosHTML'],
       },
 
      
