@@ -1,0 +1,109 @@
+<style>
+	.desktop-promo img, .mobile-promo img {
+		max-width:100%;
+	}
+	.desktop-promo:hover {
+		cursor:pointer;
+	}
+	.mobile-promo {
+		display:none;
+	}
+	#details-fine-print {
+		display:none;
+	}
+
+	@media screen and (max-width:768px) {
+		.desktop-promo {
+			display:none;
+		}
+		.mobile-promo {
+			display:block;
+		}
+		#details-fine-print {
+			display:block;
+			position: fixed;
+    		top: -800px;
+    		z-index: 9999;
+    		background: #fff;
+    		height: 100%;
+    		transition: top 1s;
+		}
+		.activeIt {
+			top:0 !important;
+		}
+	}
+</style>
+
+<div class="desktop-promo">
+	<img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170321/170321-bmsm-banner-d.png" alt="" />
+</div>
+
+<div class="mobile-promo">
+	<img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170321/170321-bmsm-banner-m.png" alt="" />
+</div>
+
+<div id="details-fine-print">
+	<style type="text/css">
+	.close-promo {
+		text-align:right;
+		padding:2em;
+	}
+	.close-promo:hover {
+			cursor:pointer;
+	}
+	.details-container {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 10px 0;
+	}
+	.details-container h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+	.details-container p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	</style>
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Use code KOALALOVE receive 15% off any 3 items, 20% off any 4 items, or 25% off any 5 or more items when purchased together. Offer available online at Teacollection.com only and valid through 3/27/17 at 11:59 PM PT. Excludes all 3rd party (non-Tea Collection) items, Everyday Playsets, and Global Shop items. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned. Cannot be used towards the purchase of gift cards.</p>
+	</div>
+
+</div>
+
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<script>
+	$(document).ready(function(){
+		if(window.location.pathname == '/') {
+			$('.desktop-promo, .mobile-promo').hide();
+		}
+		
+		$('img[usemap]').rwdImageMaps();
+
+		if($(window).width()>768) {
+			$('.desktop-promo').click(function(){
+				var content = $('#details-fine-print').html();
+			
+				window.open('','','width=500,height=275,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=0,left=0,top=0').document.body.innerHTML = content;
+
+			});
+		} else if($(window).width()<768) {
+			var closeElem = '<p class="close-promo">X CLOSE</p>';
+			$('#details-fine-print').prepend(closeElem);
+
+			$('.mobile-promo').click(function(){
+				$('#details-fine-print').addClass('activeIt');
+			});
+
+			$('#details-fine-print .close-promo').click(function(){
+				$('#details-fine-print').removeClass('activeIt');
+			});
+		}
+		
+	});
+</script>
+
