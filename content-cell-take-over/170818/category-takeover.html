@@ -1,0 +1,150 @@
+
+{literal}
+<style>
+.single-item-box img {
+	max-width:100%;
+}
+</style>
+
+<script>
+    jQuery(document).ready(function() {
+
+    	var baseUrl = 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/headers/170818/';
+    	var productUrl = 'https://www.teacollection.com/product/';
+    	var urlPath = window.location.pathname;
+
+        //if mobile window width change
+        if($(window).width()< 737){
+            $(window).resize(function(){
+                //get the new height
+                var height = Math.round($('.single-item-box')[1].getBoundingClientRect().height * 10)/10;
+
+                //change the height on the items
+                var items = $('.single-item-box');
+                $(items).each(function(i,val){
+                    //if has class cell
+                    var yes = $(val).hasClass('cell');
+                    if(yes){
+                        $(val).css({'height': height, 'overflow':'hidden'});
+                    }
+                });
+                // $('.single-item-box').hasClass('cell').css({'height': height, 'overflow':'hidden'});
+            });
+        }
+
+        //function to output to page
+    	var outPut = function(num, productUrl, code, baseUrl, val, prev){
+
+    		var elem;
+
+    		//if desktop
+    		if($(window).width() > 768){
+    			//make the element if has url or not
+    			if(code !== ''){
+    				elem = '<section class="item cell'+num+'"><a href="'+productUrl+code+'"><img src="'+baseUrl+val.img+'-d.jpg" alt="content cell '+ num +'"></a></section>';
+    			} else {
+    				elem = '<section class="item cell'+num+'"><img src="'+baseUrl+val.img+'-d.jpg" alt="content cell '+ num +'"></section>';
+    			}
+
+                //check if the item to output is last or not
+                if($('.items-list-wrapper .item').eq(prev).length > 0){
+                    //output item to page
+                    jQuery('.items-list-wrapper .item').eq(prev).before(elem);
+                } else {
+                    //output item as last to page
+                    jQuery('.items-list-wrapper .item').last().after(elem);
+                }
+
+    			
+    		}
+
+    		// if mobile
+    		else {
+                //get the height
+                var height = Math.round($('.single-item-box')[1].getBoundingClientRect().height * 10)/10;
+
+    			//make the element if has url or not
+    			if(code !== ''){
+    				elem = '<div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"><a href="'+productUrl+code+'"><img src="'+baseUrl+val.img+'-m.jpg" alt="content cell '+ num +'"></a></div>';
+    			} else {
+    				elem = '<div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"><img src="'+baseUrl+val.img+'-m.jpg" alt="content cell '+ num +'"></div>';
+    			}
+
+    			//output item to mobile page
+    			jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+    		}
+    	};
+
+    	//the content cell take over
+    	var images = [
+    		{img:'170818-g28-b1-cell', url:'7F22126'},
+    		{img:'170818-g36-b9-cell', url:'7F22122'},
+    		{img:'170818-g41-b14-cell', url:'7f22203/zip-pocket-joggers.html#scotch pine'},
+    		{img:'170818-g51-b24-cell', url:'7f22203/zip-pocket-joggers.html#oasis'},
+            {img:'170818-g1-b25-cell', url:'7F12129'},
+            {img:'170818-g6-b30-cell', url:'7F12210'},
+            {img:'170818-g10-b34-cell', url:'7f12210/colorblock-sport-leggings.html#parasol pink'},
+            {img:'170818-g20-b44-cell', url:'7f12113/dealan-de-3d-popover.html#shocking fuschia'},
+    	];
+
+        //make new empty array for sorted content cell take over
+        var orderedImages = [];
+
+        //sort the content cell take over based on if girl or boy page
+        //if girl
+        if(urlPath == '/girls-girl-active'){
+            orderedImages = images.sort(function(obj1, obj2){
+                var first = Number(obj1.img.split('-')[1].replace('g',''));
+                var second = Number(obj2.img.split('-')[1].replace('g',''));
+                return first - second;
+            });
+        }
+
+        // if boy
+        else if (urlPath == '/boys/tea-active'){
+            orderedImages = images.sort(function(obj1, obj2){
+                var first = Number(obj1.img.split('-')[2].replace('b',''));
+                var second = Number(obj2.img.split('-')[2].replace('b',''));
+                return first - second;
+            });
+        } 
+
+        
+        //loop through the content cell take overs
+    	$(orderedImages).each(function(i,val){
+    		var cell = val.img.split('-');
+    		// console.log(cell);
+
+    		//if girl
+    		if(urlPath == '/girls-girl-active'){
+    			var num = cell[1];
+    			num = num.replace('g','');
+                //the prev item
+    			var prev = Number(num) -1;
+
+                //the product url
+    			var code = val.url;
+
+                //output to screen
+    			outPut(num, productUrl, code, baseUrl, val, prev);
+
+    		}
+
+    		// if boy
+    		else if (urlPath == '/boys/tea-active'){
+    			var num = cell[2];
+    			num = num.replace('b','');
+                //the prev item
+    			var prev = Number(num) -1;
+
+                //the product url
+    			var code = val.url;
+
+                //output to screen
+    			outPut(num, productUrl, code, baseUrl, val, prev);
+    		}
+    	});
+
+    });
+</script>
+{/literal}
