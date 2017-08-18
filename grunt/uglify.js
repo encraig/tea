@@ -7,6 +7,7 @@ module.exports = function(grunt){
 
       	navRedesignScripts:{
         	files:{
+              'nav-redesign/js/output/nav-base.min.js':'nav-redesign/js/nav-base.js',
           		'nav-redesign/js/output/nav1.min.js':'nav-redesign/js/nav1.js',
               'nav-redesign/js/output/nav2.min.js':'nav-redesign/js/nav2.js',
               'nav-redesign/js/output/nav3.min.js':'nav-redesign/js/nav3.js',
