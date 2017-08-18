@@ -39,6 +39,7 @@
 
     		//if desktop
     		if($(window).width() > 768){
+              
     			//make the element if has url or not
     			if(code !== ''){
     				elem = '<section class="item cell'+num+'"><a href="'+productUrl+code+'"><img src="'+baseUrl+val.img+'-d.jpg" alt="content cell '+ num +'"></a></section>';
@@ -46,13 +47,9 @@
     				elem = '<section class="item cell'+num+'"><img src="'+baseUrl+val.img+'-d.jpg" alt="content cell '+ num +'"></section>';
     			}
 
-                //check if the item to output is last or not
-                if($('.items-list-wrapper .item').eq(prev).length > 0){
-                    //output item to page
+                //output item to page
+                if(num !== null){
                     jQuery('.items-list-wrapper .item').eq(prev).before(elem);
-                } else {
-                    //output item as last to page
-                    jQuery('.items-list-wrapper .item').last().after(elem);
                 }
 
     			
@@ -63,28 +60,36 @@
                 //get the height
                 var height = Math.round($('.single-item-box')[1].getBoundingClientRect().height * 10)/10;
 
+                // add a space between products 
+                // for girls tea active only
+                // comment this code out for boys tea active
+                if(num == 22){
+                    elem = '<div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"></div><div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"><a href="'+productUrl+code+'"><img src="'+baseUrl+val.img+'-m.jpg" alt="content cell '+ num +'"></a></div>';
+                }
     			//make the element if has url or not
-    			if(code !== ''){
+    			else if(code !== ''){
     				elem = '<div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"><a href="'+productUrl+code+'"><img src="'+baseUrl+val.img+'-m.jpg" alt="content cell '+ num +'"></a></div>';
     			} else {
     				elem = '<div class="single-item-box cell" style="height:'+height+'px; overflow:hidden;"><img src="'+baseUrl+val.img+'-m.jpg" alt="content cell '+ num +'"></div>';
     			}
 
     			//output item to mobile page
-    			jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+                if(num !== null){
+                    jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+                }
     		}
     	};
 
     	//the content cell take over
     	var images = [
-    		{img:'170818-g28-b1-cell', url:'7F22126'},
-    		{img:'170818-g36-b9-cell', url:'7F22122'},
-    		{img:'170818-g41-b14-cell', url:'7f22203/zip-pocket-joggers.html#scotch pine'},
-    		{img:'170818-g51-b24-cell', url:'7f22203/zip-pocket-joggers.html#oasis'},
-            {img:'170818-g1-b25-cell', url:'7F12129'},
-            {img:'170818-g6-b30-cell', url:'7F12210'},
-            {img:'170818-g10-b34-cell', url:'7f12210/colorblock-sport-leggings.html#parasol pink'},
-            {img:'170818-g20-b44-cell', url:'7f12113/dealan-de-3d-popover.html#shocking fuschia'},
+    		{img:'170818-colorblock-zip-hoodie-cell', url:'7F22126', g:22,b:1},
+    		{img:'170818-celtic-park-sport-tee-cell', url:'7F22122', g:30,b:9},
+    		{img:'170818-zip-pocket-joggers-pine-cell', url:'7f22203/zip-pocket-joggers.html#scotch pine', g:35,b:14},
+    		{img:'170818-zip-pocket-joggers-oasis-cell', url:'7f22203/zip-pocket-joggers.html#oasis', g:null, b:null},
+            {img:'170818-meow-sport-hoodie-cell', url:'7F12129', g:1,b:19},
+            {img:'170818-colorblock-sport-leggings-berry-cell', url:'7F12210', g:6,b:24},
+            {img:'170818-colorblock-sport-leggings-pink-cell', url:'7f12210/colorblock-sport-leggings.html#parasol pink', g:10,b:28},
+            {img:'170818-dealan-de-3d-popover-cell', url:'7f12113/dealan-de-3d-popover.html#shocking fuschia',g:17,b:35},
     	];
 
         //make new empty array for sorted content cell take over
@@ -94,8 +99,8 @@
         //if girl
         if(urlPath == '/girls-girl-active'){
             orderedImages = images.sort(function(obj1, obj2){
-                var first = Number(obj1.img.split('-')[1].replace('g',''));
-                var second = Number(obj2.img.split('-')[1].replace('g',''));
+                var first = obj1.g;
+                var second = obj2.g;
                 return first - second;
             });
         }
@@ -103,8 +108,8 @@
         // if boy
         else if (urlPath == '/boys/tea-active'){
             orderedImages = images.sort(function(obj1, obj2){
-                var first = Number(obj1.img.split('-')[2].replace('b',''));
-                var second = Number(obj2.img.split('-')[2].replace('b',''));
+                var first = obj1.b;
+                var second = obj2.b;
                 return first - second;
             });
         } 
@@ -112,15 +117,13 @@
         
         //loop through the content cell take overs
     	$(orderedImages).each(function(i,val){
-    		var cell = val.img.split('-');
-    		// console.log(cell);
 
     		//if girl
     		if(urlPath == '/girls-girl-active'){
-    			var num = cell[1];
-    			num = num.replace('g','');
+    			var num = val.g;
+    			
                 //the prev item
-    			var prev = Number(num) -1;
+    			var prev = num -1;
 
                 //the product url
     			var code = val.url;
@@ -132,10 +135,10 @@
 
     		// if boy
     		else if (urlPath == '/boys/tea-active'){
-    			var num = cell[2];
-    			num = num.replace('b','');
+    			var num = val.b;
+    			
                 //the prev item
-    			var prev = Number(num) -1;
+    			var prev = num -1;
 
                 //the product url
     			var code = val.url;
