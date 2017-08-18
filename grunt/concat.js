@@ -295,22 +295,41 @@ module.exports = function(grunt){
       navRedesignHTML: {
 
         files: {
-          //version 1
-          'nav-redesign/build/local-nav-redesign-1.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav1.html','nav-redesign/html/footer.html'],
-          //version 2
-          'nav-redesign/build/local-nav-redesign-2.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav2.html','nav-redesign/html/footer.html'],
-          //version 3
-          'nav-redesign/build/local-nav-redesign-3.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav3.html','nav-redesign/html/footer.html'],
-          //version 4
-          'nav-redesign/build/local-nav-redesign-4.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav4.html','nav-redesign/html/footer.html'],
-          //version 5
-          'nav-redesign/build/local-nav-redesign-5.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav5.html','nav-redesign/html/footer.html'],
-          //version 6
-          'nav-redesign/build/local-nav-redesign-6.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav6.html','nav-redesign/html/footer.html'],
-          //version 7
-          'nav-redesign/build/local-nav-redesign-7.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav7.html','nav-redesign/html/footer.html'],
-          //version 8
-          'nav-redesign/build/local-nav-redesign-8.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav8.html','nav-redesign/html/footer.html'],
+          //version 1 build
+          'nav-redesign/build/local-nav-redesign-1.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav1.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 2 build
+          'nav-redesign/build/local-nav-redesign-2.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav2.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 3 build
+          'nav-redesign/build/local-nav-redesign-3.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav3.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 4 build
+          'nav-redesign/build/local-nav-redesign-4.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav4.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 5 build
+          'nav-redesign/build/local-nav-redesign-5.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav5.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 6 build
+          'nav-redesign/build/local-nav-redesign-6.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav6.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 7 build
+          'nav-redesign/build/local-nav-redesign-7.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav7.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+          //version 8 build
+          'nav-redesign/build/local-nav-redesign-8.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav8.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
+
+
+          //version 1 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-1.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav1.html','nav-redesign/html/nav-container-footer.html'],
+          //version 2 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-2.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav2.html','nav-redesign/html/nav-container-footer.html'],
+          //version 3 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-3.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav3.html','nav-redesign/html/nav-container-footer.html'],
+          //version 4 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-4.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav4.html','nav-redesign/html/nav-container-footer.html'],
+          //version 5 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-5.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav5.html','nav-redesign/html/nav-container-footer.html'],
+          //version 6 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-6.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav6.html','nav-redesign/html/nav-container-footer.html'],
+          //version 7 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-7.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav7.html','nav-redesign/html/nav-container-footer.html'],
+          //version 8 monetate
+          'nav-redesign/monetate/monetate-nav-redesign-8.html': ['nav-redesign/html/nav-container-header.html','nav-redesign/html/nav8.html','nav-redesign/html/nav-container-footer.html'],
+       
         }
       },
 
