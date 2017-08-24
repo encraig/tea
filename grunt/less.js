@@ -84,7 +84,7 @@ module.exports = function(grunt){
       // INFLUENCER CSS ---------------------------------------------------------------------------
       influencerCSS:{
         files:{
-          'landing-page/influencer/css/influencer-styles.css': 'landing-page/influencer/css/influencer-styles.less'
+          'landing-page/influencer/170828/css/influencer-styles.css': 'landing-page/influencer/170828/css/influencer-styles.less'
         }
       },
 
@@ -162,14 +162,18 @@ module.exports = function(grunt){
       // HEADER REDESIGN CSS ---------------------------------------------------------------------------
       headerRedesignCSS:{
         files:{
-          'header-redesign/styles.css': 'header-redesign/styles.less'
+          'header-redesign/styles.css': 'header-redesign/styles.less',
+          // '../nav-redesign/styles.css': 'header-redesign/styles.less'
         }
       },
 
       // PROMOS CSS ---------------------------------------------------------------------------
       promosCSS:{
         files:{
+          //bmsm
           'promos/bmsm/170821/css/styles.css': 'promos/bmsm/170821/css/styles.less',
+          //influencer
+          'promos/influencer/170828/css/styles.css': 'promos/influencer/170828/css/styles.less'
         }
       },
     
