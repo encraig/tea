@@ -176,11 +176,11 @@ module.exports = function(grunt){
       influencer: {
         files: {
         //desktop
-        'landing-page/influencer/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/influencer/css/influencer-styles.css','landing-page/influencer/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        'landing-page/influencer/170828/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/influencer/170828/dev/content.html','local-templates/desktop/d-footer-hp.html'],
         //mobile
-        'landing-page/influencer/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','landing-page/influencer/css/influencer-styles.css','landing-page/influencer/dev/content.html','local-templates/mobile/m-footer.html'],
+        'landing-page/influencer/170828/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','landing-page/influencer/170828/dev/content.html','local-templates/mobile/m-footer.html'],
         //toolkit
-        'landing-page/influencer/toolkit/toolkit-influencer.html': ['landing-page/influencer/css/influencer-styles.css','landing-page/influencer/dev/content.html'],
+        'landing-page/influencer/170828/toolkit/toolkit-influencer.html': ['landing-page/influencer/170828/css/influencer-styles.css','landing-page/influencer/170828/dev/content.html'],
         } 
       },
 
@@ -330,6 +330,15 @@ module.exports = function(grunt){
         files: {
           //bmsm
           'promos/bmsm/170821/toolkit/toolkit-bmsm.html': ['promos/bmsm/170821/css/styles.css','promos/bmsm/170821/dev/content.html'],
+
+          //influencer 
+          //build
+          //desktop
+          'promos/influencer/170828/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','promos/influencer/170828/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          //mobile
+          'promos/influencer/170828/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','promos/influencer/170828/dev/content.html','local-templates/mobile/m-footer.html'],
+          //toolkit
+          'promos/influencer/170828/toolkit/toolkit-influencer.html': ['promos/influencer/170828/css/styles.css','promos/influencer/170828/dev/content.html'],
         }
       },
   }
