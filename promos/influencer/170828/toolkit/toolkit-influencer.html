@@ -1,0 +1,136 @@
+<style>
+.ref{position:absolute;opacity:.5;max-width:100%}#simplemodal-container,#simplemodal-overlay,#tea-promo-subscribe{display:none !important}.mobile-promo{display:none}@media screen and (max-width:737px){.mobile-promo{display:block}}.mobile-promo img{max-width:100%}#url-code{text-transform:uppercase}.close-fancy{display:none;text-align:center}@media screen and (max-width:736px){.close-fancy{display:block}}#details-promo{display:none;width:600px;background:#fff}@media screen and (max-width:737px){#details-promo{width:100%;position:absolute;z-index:99999;height:100%;background:#fff}}.details-container{margin:27px;border-top:1px solid #333333;border-bottom:1px solid #333333;padding:10px 0}.details-container h2{text-transform:uppercase;font-size:15px;letter-spacing:1px}.details-container p{font-size:13px;line-height:20px}.desktop-promo{box-sizing:border-box;padding:23px 0;background:#1f6273;color:#fff;text-align:center;margin-bottom:10px}@media screen and (max-width:737px){.desktop-promo{padding:0 0 10px}}.desktop-promo img{max-width:100%}.desktop-promo .first{position:relative;font-size:25px;letter-spacing:.6px}@media screen and (max-width:737px){.desktop-promo .first{font-size:1em;padding-top:11px;letter-spacing:1.6px;display:block}}.desktop-promo .middle-wrap{width:582px;display:inline-block;text-align:center}@media screen and (max-width:737px){.desktop-promo .middle-wrap{width:100%}}.desktop-promo .second{position:relative;font-size:18px;display:inline-block;letter-spacing:.6px;margin-left:12px}@media screen and (max-width:737px){.desktop-promo .second{display:block;font-size:1em;margin-top:3px}}.desktop-promo .dot{position:relative;font-size:35px;margin-left:7px}@media screen and (max-width:737px){.desktop-promo .dot{display:none}}.desktop-promo .third{position:relative;font-size:19px;margin-left:7px}@media screen and (max-width:737px){.desktop-promo .third{position:relative;left:-31px;top:7px;font-size:13px}}.desktop-promo .fourth{font-size:14px;position:relative;letter-spacing:.4px;margin-left:16px}@media screen and (max-width:737px){.desktop-promo .fourth{font-size:1em}}@media screen and (max-width:737px){.desktop-promo .span-wrap{display:block;text-align:center}}.desktop-promo:hover{cursor:pointer}#the-promo-code{text-transform:uppercase}/*# sourceMappingURL=styles.css.map */
+</style>
+ 
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- desktop ref -->
+<!-- <img src="../images/banner-bg-d.jpg" alt="" class="ref"/> -->
+
+<!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/influencer/banner-bg-d2.jpg" alt="" style="position:absolute; opacity:.5; top:0; left:0;"/> -->
+
+<!-- mobile ref -->
+<!-- <img src="../images/banner-bg-m.jpg" alt="" class="ref"/> -->
+
+<div class="desktop-promo" id="see-details" href="#details-promo">
+	<h2>
+		<span class="first">$10 off your order</span> 
+		<span class="second">use code: <span id="url-code"></span> <!--through <span id="url-date"></span>--></span> 
+		<!-- <span class="dot">.</span> -->
+		<!-- <span class="third show-desktop">orders $50+</span>  -->
+		<span class="fourth">see details</span>
+	</h2>
+</div> 
+
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>
+		Enter code <span id="the-promo-code"></span> to receive $10 off your order on Teacollection.com. Offer valid from 8/28/2017 through 8/30/2017 at 11:59 PM PT. Does not apply to Patagonia, Livie &amp; Luca or Saltwater. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Cannot be used towards the purchase of Everyday Play Sets. Limited to stock on hand.
+		</p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p>
+	</div>
+</div>
+
+<!--dev resources -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!--prod resources -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+
+<!-- responsive image maps -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<script>
+	jQuery(document).ready(function(){
+		//variables
+		var url = window.location.pathname;
+		var path = window.location.href;
+		var thePromo;
+		var theDate; 
+
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<737) {
+			
+			var Newpath = path.split('?');
+			Newpath = Newpath[1];
+			//login page
+			if(Newpath == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+			//clothing-sale page
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/cms/influencer/influencer/1.html') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+			
+		//hide banner on desktop if on influencer landing page	
+		} else if(jQuery(window).width()>737) {
+			if(url == '/cms/influencer/influencer/1.html') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+
+		var promoCodeCookie;
+		var promoDateCookie;
+		//get the cookie
+		var cookies = document.cookie.split(';');
+		cookies.forEach(function(val,i){
+			if(val.search(/yourPromoCode/) !== -1){
+				promoCodeCookie = val.split('=');
+				promoCodeCookie = promoCodeCookie[1];
+			}
+
+			// if(val.search(/yourPromoDate/) !== -1){
+			// 	promoDateCookie = val.split('=');
+			// 	promoDateCookie = promoDateCookie[1]; 
+			// }
+		}); 
+
+		//if sessionStorage yourPromoCode add it the banner
+		// if(localStorage.getItem('yourPromoCode')){
+		// 	$('#url-code, #the-promo-code').text(localStorage.getItem('yourPromoCode'));
+		// }
+
+		if(promoCodeCookie){
+			$('#url-code, #the-promo-code').text(promoCodeCookie);
+		}
+
+		//if sessionStorage yourPromoDate add it the banner
+		// if(localStorage.getItem('yourPromoDate')){
+		// 	$('#url-date, #the-promo-date').text(localStorage.getItem('yourPromoDate'));
+		// }
+
+		// if(promoDateCookie){
+		// 	$('#url-date, #the-promo-date').text(promoDateCookie);
+		// }
+
+		//add content to banner on first load with url params
+		$('#url-code, #the-promo-code').text(promoCodeCookie);
+		// $('#url-date, #the-promo-date').text(promoDateCookie);
+
+
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		if(jQuery(window).width()>768){
+			//show fine print lightbox
+			jQuery('#see-details').fancybox();
+
+		} else if(jQuery(window).width()<768){
+			//slidetoggle fine print
+			jQuery('#see-details, .close-fancy').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		}
+		
+	});
+</script>
+
