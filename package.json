@@ -17,6 +17,8 @@
     "request": "^2.72.0"
   },
   "devDependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-includes": "^1.0.0",
     "grunt-uncss": "^0.7.0"
   },
   "scripts": {
