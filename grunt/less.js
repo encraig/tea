@@ -11,13 +11,13 @@ module.exports = function(grunt){
       // HOMEPAGE CSS ---------------------------------------------------------------------------
       hpCSS:{
         files:{
-          'homepage/170727/css/hp-styles.css': 'homepage/170727/css/hp-styles.less'
+          'homepage/170907/css/styles.css': 'homepage/170907/css/styles.less'
         }
       },
 
       // hpCSS1:{
       //   files:{
-      //     'homepage/170727/css/hp-styles-original.css': 'homepage/170727/css/hp-styles-original.less'
+      //     'homepage/170907/css/hp-styles-original.css': 'homepage/170907/css/hp-styles-original.less'
       //   }
       // },
 
@@ -25,47 +25,18 @@ module.exports = function(grunt){
       categoriesCSS: {
         files: {
           //girls
-          'category-pages/170727/css/girls-clothing.css': 'category-pages/170727/css/girls-clothing.less',
+          'category-pages/170907/css/girls-clothing.css': 'category-pages/170907/css/girls-clothing.less',
           //boys
-          'category-pages/170727/css/boys-clothing.css': 'category-pages/170727/css/boys-clothing.less',
+          'category-pages/170907/css/boys-clothing.css': 'category-pages/170907/css/boys-clothing.less',
           //baby girl
-          'category-pages/170727/css/baby-girl-clothes.css': 'category-pages/170727/css/baby-girl-clothes.less',
+          'category-pages/170907/css/baby-girl-clothes.css': 'category-pages/170907/css/baby-girl-clothes.less',
           //baby boy
-          'category-pages/170727/css/baby-boy-clothes.css': 'category-pages/170727/css/baby-boy-clothes.less',
+          'category-pages/170907/css/baby-boy-clothes.css': 'category-pages/170907/css/baby-boy-clothes.less',
           //newborn
-          'category-pages/170727/css/newborn-clothes.css': 'category-pages/170727/css/newborn-clothes.less'
+          'category-pages/170907/css/newborn-clothes.css': 'category-pages/170907/css/newborn-clothes.less'
         }
       },
 
-      girlsClothingCSS:{
-        files:{
-          'category-pages/170727/css/girls-clothing.css': 'category-pages/170727/css/girls-clothing.less'
-        }
-      },
-
-      boysClothingCSS:{
-        files:{
-          'category-pages/170727/css/boys-clothing.css': 'category-pages/170727/css/boys-clothing.less'
-        }
-      },
-
-      babyGirlClothesCSS:{
-        files:{
-          'category-pages/170727/css/baby-girl-clothes.css': 'category-pages/170727/css/baby-girl-clothes.less'
-        }
-      },
-
-      babyBoyClothesCSS:{
-        files:{
-          'category-pages/170727/css/baby-boy-clothes.css': 'category-pages/170727/css/baby-boy-clothes.less'
-        }
-      },
-
-      newbornClothesCSS:{
-        files:{
-          'category-pages/170727/css/newborn-clothes.css': 'category-pages/170727/css/newborn-clothes.less'
-        }
-      },
 
       // CATALOG CSS ---------------------------------------------------------------------------
       catalogCSS:{
@@ -126,7 +97,7 @@ module.exports = function(grunt){
       // ACTIVE CSS ---------------------------------------------------------------------------
       activeCSS:{
         files:{
-          'landing-page/active/170727/css/styles.css': 'landing-page/active/170727/css/styles.less'
+          'landing-page/active/170907/css/styles.css': 'landing-page/active/170907/css/styles.less'
         }
       },
 
@@ -173,7 +144,9 @@ module.exports = function(grunt){
           //bmsm
           'promos/bmsm/170821/css/styles.css': 'promos/bmsm/170821/css/styles.less',
           //influencer
-          'promos/influencer/170828/css/styles.css': 'promos/influencer/170828/css/styles.less'
+          'promos/influencer/170828/css/styles.css': 'promos/influencer/170828/css/styles.less',
+          //labor day
+          'promos/labor-day/170831/css/styles.css': 'promos/labor-day/170831/css/styles.less',
         }
       },
     
