@@ -6,7 +6,7 @@ module.exports = function(grunt){
       // HOMEPAGE ---------------------------------------------------------------------------
   		HP: {
   			files: ['homepage/170907/css/styles.less', 'homepage/170907/dev/content.html'],
-  			tasks: ['less:hpCSS','copy:hpCopy', 'includes:hpIncludes', 'concat:hp'],
+  			tasks: ['less:hpCSS', 'includes:hpIncludes', 'concat:hp'],
   		},
 
       // cssHP1: {
@@ -17,7 +17,7 @@ module.exports = function(grunt){
       // CATEGORIES ---------------------------------------------------------------------------
       Categories: {
         files: ['category-pages/170907/css/*.less','category-pages/170907/dev/*.html'],
-        tasks: ['less:categoriesCSS', 'copy:categoriesCopy', 'includes:categoriesIncludes', 'concat:categories'],
+        tasks: ['less:categoriesCSS', 'includes:categoriesIncludes', 'concat:categories'],
       },
 
       // CATALOG  ---------------------------------------------------------------------------
@@ -29,47 +29,47 @@ module.exports = function(grunt){
       // INFLUENCER  ---------------------------------------------------------------------------
       Influencer: {
         files: ['landing-page/influencer/170828/css/*.less', 'landing-page/influencer/170828/dev/*.html'],
-        tasks: ['less:influencerCSS', 'concat:influencer'],
+        tasks: ['less:influencerCSS', 'includes:landingPagesIncludes', 'concat:influencer'],
       },
       // BABYSWEEPS  ---------------------------------------------------------------------------
       Babysweeps: {
         files: ['landing-page/baby-sweeps/css/styles.less', 'landing-page/baby-sweeps/dev/content.html'],
-        tasks: ['less:babysweepsCSS','cssmin','makeCss:landing-page/baby-sweeps/css/styles.css:landing-page/baby-sweeps/css/styles.css', 'concat:babysweeps'],
+        tasks: ['less:babysweepsCSS', 'includes:landingPagesIncludes', 'concat:babysweeps'],
       },
       // LITTLE CITIZEN  ---------------------------------------------------------------------------
       LittleCitizen: {
         files: ['landing-page/little-citizen/170723/css/styles.less','landing-page/little-citizen/170723/dev/content.html'],
-        tasks: ['less:littleCitizenCSS','cssmin','makeCss:landing-page/little-citizen/170723/css/styles.css:landing-page/little-citizen/170723/css/styles.css', 'concat:littleCitizen'],
+        tasks: ['less:littleCitizenCSS', 'includes:landingPagesIncludes', 'concat:littleCitizen'],
       },
       // GLOBAL SHOP  ---------------------------------------------------------------------------
       GlobalShop: {
         files: ['landing-page/global-shop/css/global-shop-styles.less','landing-page/global-shop/dev/*.html'],
-        tasks: ['less:globalShopCSS','makeCss:landing-page/global-shop/css/global-shop-styles.css:landing-page/global-shop/css/global-shop-styles.css', 'concat:globalShop'],
+        tasks: ['less:globalShopCSS', 'includes:landingPagesIncludes', 'concat:globalShop'],
       },
       // ABOUT  ---------------------------------------------------------------------------
       About: {
         files: ['landing-page/about/css/styles.less','landing-page/about/dev/content.html'],
-        tasks: ['less:aboutCSS','makeCss:landing-page/about/css/styles.css:landing-page/about/css/styles.css', 'concat:about'],
+        tasks: ['less:aboutCSS', 'includes:landingPagesIncludes', 'concat:about'],
       },
       // CAREERS  ---------------------------------------------------------------------------
       Careers: {
         files: ['landing-page/careers/css/styles.less','landing-page/careers/dev/content.html'],
-        tasks: ['less:careersCSS','makeCss:landing-page/careers/css/styles.css:landing-page/careers/css/styles.css', 'concat:careers'],
+        tasks: ['less:careersCSS', 'includes:landingPagesIncludes', 'concat:careers'],
       },
       // INSPIRATION  ---------------------------------------------------------------------------
       Inspiration: {
         files: ['landing-page/inspiration/scotland/css/styles.less','landing-page/inspiration/scotland/dev/content.html'],
-        tasks: ['less:inspirationCSS','makeCss:landing-page/inspiration/scotland/css/styles.css:landing-page/inspiration/scotland/css/styles.css', 'concat:inspiration'],
+        tasks: ['less:inspirationCSS', 'includes:landingPagesIncludes', 'concat:inspiration'],
       },
       // ACTIVE  ---------------------------------------------------------------------------
       Active: {
         files: ['landing-page/active/170907/css/styles.less', 'landing-page/active/170907/dev/*.html'],
-        tasks: ['less:activeCSS','makeCss:landing-page/active/170907/css/styles.css:landing-page/active/170907/css/styles.css', 'concat:active'],
+        tasks: ['less:activeCSS', 'includes:landingPagesIncludes', 'concat:active'],
       },
       // BACK TO SCHOOL SWEEPS  ---------------------------------------------------------------------------
       BackToSchool: {
         files: ['landing-page/back-to-school-sweeps/css/styles.less', 'landing-page/back-to-school-sweeps/dev/*.html'],
-        tasks: ['less:backToSchoolCSS', 'concat:backToSchool'],
+        tasks: ['less:backToSchoolCSS', 'includes:landingPagesIncludes', 'concat:backToSchool'],
       },
       
 
@@ -88,7 +88,7 @@ module.exports = function(grunt){
        // PROMOS  ---------------------------------------------------------------------------
       Promos: {
         files: ['promos/labor-day/170831/css/styles.less', 'promos/labor-day/170831/dev/content.html'],
-        tasks: ['less:promosCSS', 'copy:promosCopy','concat:promosHTML', 'includes:promosIncludes'],
+        tasks: ['less:promosCSS','includes:promosIncludes','concat:promosHTML', ],
       },
 
 
