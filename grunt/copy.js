@@ -22,47 +22,52 @@ module.exports = function(grunt){
             ],
         },
 
+        // LANDING PAGES  ---------------------------------------------------------------------------
+        landingPagesCopy: {
+        
+            files: [
+                // COPY ABOUT CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/about/css', src: ['*.css'], dest: 'landing-page/about/include/'},
+                // COPY BABY SWEEPS CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/baby-sweeps/css', src: ['*.css'], dest: 'landing-page/baby-sweeps/include/'},
+                // COPY BACK TO SCHOOL SWEEPS CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/back-to-school-sweeps/css', src: ['*.css'], dest: 'landing-page/back-to-school-sweeps/include/'},
+                // COPY CAREERS CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/careers/css', src: ['*.css'], dest: 'landing-page/careers/include/'},
+                // COPY INFLUENCER CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/influencer/170828/css', src: ['*.css'], dest: 'landing-page/influencer/170828/include/'},
+                // COPY INSPIRATION CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/inspiration/scotland/css', src: ['*.css'], dest: 'landing-page/inspiration/scotland/include/'},
+                // COPY LITTLE CITIZEN CSS ---------------------------------------------------------------------------
+                {expand: true, cwd: 'landing-page/little-citizen/170723/css', src: ['*.css'], dest: 'landing-page/little-citizen/170723/include/'},
+            ],
+        },
+
 
         // PROMOS  ---------------------------------------------------------------------------
         promosCopy: {
-            options: {
-                process:function(content, srcpath){
-                    grunt.log.write(srcpath);
-                    if(srcpath == 'promos/labor-day/170831/dev/content.html'){
-                        return 'include "d-header-hp.html" \n' + content + '\n include "d-footer-hp.html"';
-                    } else {
-                        return content;
-                    }   
-                }
-            },
+
+            //CODE EXAMPLE OF COPY WITH MODIFICAITONS ADDED
+            // options: {
+            //     process:function(content, srcpath){
+            //         //log the content or srcPath
+            //         grunt.log.write(srcpath);
+            //         
+            //         //if srcpath
+            //         if(srcpath == 'promos/labor-day/170831/dev/content.html'){
+            //             return 'include "d-header-hp.html" \n' + content + '\n include "d-footer-hp.html"';
+            //         } else {
+            //             return content;
+            //         }   
+            //     }
+            // },
         
             files: [
-                //copy the local-template desktop for local build
-                {
-                    expand: true, 
-                    cwd:'local-templates/desktop',
-                    src: ['**'], 
-                    dest: 'promos/labor-day/170831/include/',
-                },
 
-                //copy the local-template mobile for local build
-                {
-                    expand: true, 
-                    cwd:'local-templates/mobile',
-                    src: ['**'], 
-                    dest: 'promos/labor-day/170831/include/',
-                },
-
-                //copy the dev file and add includes for build
-                {
-                    expand: true, 
-                    cwd: 'promos/labor-day/170831/dev', 
-                    src: ['content.html'], 
-                    dest: 'promos/labor-day/170831/dev/content-build-d', 
-                },
-
-                //copy the styles.css
-                {expand: true, cwd: 'promos/labor-day/170831/css', src: ['styles.css'], dest: 'promos/labor-day/170831/include/'},
+                //COPY LABOR DAY CSS
+                {expand: true, cwd: 'promos/labor-day/170831/css', src: ['*.css'], dest: 'promos/labor-day/170831/include/'},
+                //COPY INFLUENCER CSS
+                {expand: true, cwd: 'promos/influencer/170828/css', src: ['*.css'], dest: 'promos/influencer/170828/include/'},
             ],
         },
 
