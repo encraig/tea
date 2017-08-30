@@ -45,69 +45,30 @@ module.exports = function(grunt){
         }
       },
 
-      // GLOBAL SHOP CSS ---------------------------------------------------------------------------
-  		globalShopCSS:{
-  			files:{
-  				'landing-page/global-shop/css/global-shop-styles.css': 'landing-page/global-shop/css/global-shop-styles.less'
-  			}
-  		},
-
-      // INFLUENCER CSS ---------------------------------------------------------------------------
-      influencerCSS:{
-        files:{
-          'landing-page/influencer/170828/css/influencer-styles.css': 'landing-page/influencer/170828/css/influencer-styles.less'
-        }
-      },
-
-      // BABYSWEEPS CSS ---------------------------------------------------------------------------
-      babysweepsCSS:{
-        files:{
-          'landing-page/baby-sweeps/css/styles.css': 'landing-page/baby-sweeps/css/styles.less'
-        }
-      },
-
-      // LITTLE CITIZENS CSS ---------------------------------------------------------------------------
-      littleCitizenCSS:{
-        files:{
-          'landing-page/little-citizen/170723/css/styles.css': 'landing-page/little-citizen/170723/css/styles.less'
-        }
-      },
-
-      // ABOUT CSS ---------------------------------------------------------------------------
-      aboutCSS:{
-        files:{
-          'landing-page/about/css/styles.css': 'landing-page/about/css/styles.less'
-        }
-      },
-
-      // CAREERS CSS ---------------------------------------------------------------------------
-      careersCSS:{
-        files:{
-          'landing-page/careers/css/styles.css': 'landing-page/careers/css/styles.less'
-        }
-      },
-
-      // INSPIRATION CSS ---------------------------------------------------------------------------
-      inspirationCSS:{
-        files:{
-          'landing-page/inspiration/scotland/css/styles.css': 'landing-page/inspiration/scotland/css/styles.less'
-        }
-      },
-
-      // ACTIVE CSS ---------------------------------------------------------------------------
-      activeCSS:{
-        files:{
-          'landing-page/active/170907/css/styles.css': 'landing-page/active/170907/css/styles.less'
-        }
-      },
-
-      // BACK TO SCHOOL SWEEPS CSS ---------------------------------------------------------------------------
-      backToSchoolCSS:{
-        files:{
+      // LANDING PAGES CSS ---------------------------------------------------------------------------
+      landingPagesCSS: {
+        files: {
+          // GLOBAL SHOP CSS ---------------------------------------------------------------------------
+          'landing-page/global-shop/css/global-shop-styles.css': 'landing-page/global-shop/css/global-shop-styles.less',
+          // INFLUENCER CSS ---------------------------------------------------------------------------
+          'landing-page/influencer/170828/css/influencer-styles.css': 'landing-page/influencer/170828/css/influencer-styles.less',
+          // BABYSWEEPS CSS ---------------------------------------------------------------------------
+          'landing-page/baby-sweeps/css/styles.css': 'landing-page/baby-sweeps/css/styles.less',
+          // LITTLE CITIZENS CSS ---------------------------------------------------------------------------
+          'landing-page/little-citizen/170723/css/styles.css': 'landing-page/little-citizen/170723/css/styles.less',
+          // ABOUT CSS ---------------------------------------------------------------------------
+          'landing-page/about/css/styles.css': 'landing-page/about/css/styles.less',
+          // CAREERS CSS ---------------------------------------------------------------------------
+          'landing-page/careers/css/styles.css': 'landing-page/careers/css/styles.less',
+          // INSPIRATION CSS ---------------------------------------------------------------------------
+          'landing-page/inspiration/scotland/css/styles.css': 'landing-page/inspiration/scotland/css/styles.less',
+          // ACTIVE CSS ---------------------------------------------------------------------------
+          'landing-page/active/170907/css/styles.css': 'landing-page/active/170907/css/styles.less',
+          // BACK TO SCHOOL SWEEPS CSS ---------------------------------------------------------------------------
           'landing-page/back-to-school-sweeps/css/styles.css': 'landing-page/back-to-school-sweeps/css/styles.less'
         }
       },
-      
+
 
       // NAV REDESIGN CSS ---------------------------------------------------------------------------
       navRedesignCSS: {
