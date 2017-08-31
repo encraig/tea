@@ -23,7 +23,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-includes');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-  	var gruntConfig = {};
+  	var gruntConfig = {date:'170907',};
 
 
 	// load all external grunt plugins
