@@ -8,9 +8,9 @@ module.exports = function(grunt){
       hp: {
         files: {
           //desktop
-          'homepage/170907/build/local-hp-d.html': ['local-templates/desktop/d-header-hp.html','homepage/170907/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'homepage/<%= date %>/build/local-hp-d.html': ['local-templates/desktop/d-header-hp.html','homepage/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'homepage/170907/build/local-hp-m.html': ['local-templates/mobile/m-header.html','homepage/170907/dev/content.html','local-templates/mobile/m-footer.html'],
+          'homepage/<%= date %>/build/local-hp-m.html': ['local-templates/mobile/m-header.html','homepage/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
         }
       },
 
@@ -19,33 +19,33 @@ module.exports = function(grunt){
         files: {
           //girl -----------------------------------------------------------------------------
           //girl desktop
-          'category-pages/170907/build/local-girls-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/170907/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
+          'category-pages/<%= date %>/build/local-girls-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= date %>/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
           //girl mobile
-          'category-pages/170907/build/local-girls-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/170907/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
+          'category-pages/<%= date %>/build/local-girls-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= date %>/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
 
           //boy -----------------------------------------------------------------------------
           //boy desktop
-          'category-pages/170907/build/local-boys-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/170907/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
+          'category-pages/<%= date %>/build/local-boys-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= date %>/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
           //boy mobile
-          'category-pages/170907/build/local-boys-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/170907/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
+          'category-pages/<%= date %>/build/local-boys-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= date %>/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
 
           //baby girl -----------------------------------------------------------------------------
           //baby girl desktop
-          'category-pages/170907/build/local-baby-girl-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/170907/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
+          'category-pages/<%= date %>/build/local-baby-girl-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= date %>/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
           //baby girl mobile
-          'category-pages/170907/build/local-baby-girl-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/170907/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
+          'category-pages/<%= date %>/build/local-baby-girl-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= date %>/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
 
           //baby boy -----------------------------------------------------------------------------
           //baby boy desktop
-          'category-pages/170907/build/local-baby-boy-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/170907/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
+          'category-pages/<%= date %>/build/local-baby-boy-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= date %>/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
           //baby boy mobile
-          'category-pages/170907/build/local-baby-boy-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/170907/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
+          'category-pages/<%= date %>/build/local-baby-boy-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= date %>/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
 
           //newborn -----------------------------------------------------------------------------
           //newborn desktop
-          'category-pages/170907/build/local-newborn-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/170907/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
+          'category-pages/<%= date %>/build/local-newborn-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= date %>/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
           //newborn mobile
-          'category-pages/170907/build/local-newborn-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/170907/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
+          'category-pages/<%= date %>/build/local-newborn-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= date %>/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
         }
       },
 
@@ -53,11 +53,11 @@ module.exports = function(grunt){
       catalog: {
         files: {
           //desktop
-          'catalog/170330/build/local-catalog-d.html': ['local-templates/desktop/d-header-hp.html','catalog/170330/css/catalog.css','catalog/170330/dev/catalog.html','local-templates/desktop/d-footer-hp.html'],
+          'catalog/<%= date %>/build/local-catalog-d.html': ['local-templates/desktop/d-header-hp.html','catalog/<%= date %>/css/catalog.css','catalog/<%= date %>/dev/catalog.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'catalog/170330/build/local-catalog-m.html': ['local-templates/mobile/m-header.html','catalog/170330/css/catalog.css','catalog/170330/dev/catalog.html','local-templates/mobile/m-footer.html'],
+          'catalog/<%= date %>/build/local-catalog-m.html': ['local-templates/mobile/m-header.html','catalog/<%= date %>/css/catalog.css','catalog/<%= date %>/dev/catalog.html','local-templates/mobile/m-footer.html'],
           //toolkit
-          'catalog/170330/toolkit/catalog-toolkit.html': ['catalog/170330/css/catalog.css','catalog/170330/dev/catalog.html'],
+          'catalog/<%= date %>/toolkit/catalog-toolkit.html': ['catalog/<%= date %>/css/catalog.css','catalog/<%= date %>/dev/catalog.html'],
         }
       },
 
@@ -76,9 +76,9 @@ module.exports = function(grunt){
       influencer: {
         files: {
         //desktop
-        'landing-page/influencer/170828/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/influencer/170828/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        'landing-page/influencer/<%= date %>/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/influencer/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
         //mobile
-        'landing-page/influencer/170828/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','landing-page/influencer/170828/dev/content.html','local-templates/mobile/m-footer.html'],
+        'landing-page/influencer/<%= date %>/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','landing-page/influencer/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
         } 
       },
 
@@ -96,9 +96,9 @@ module.exports = function(grunt){
       littleCitizen: {
         files: {
         //desktop
-        'landing-page/little-citizen/170723/build/local-little-citizen-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/little-citizen/170723/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        'landing-page/little-citizen/<%= date %>/build/local-little-citizen-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/little-citizen/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
         //mobile
-        'landing-page/little-citizen/170723/build/local-little-citizen-m.html': ['local-templates/mobile/m-header.html','landing-page/little-citizen/170723/dev/content.html','local-templates/mobile/m-footer.html'],
+        'landing-page/little-citizen/<%= date %>/build/local-little-citizen-m.html': ['local-templates/mobile/m-header.html','landing-page/little-citizen/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
         }
       },
 
@@ -136,9 +136,9 @@ module.exports = function(grunt){
       active: {
         files: {
           //desktop
-          'landing-page/active/170907/build/local-active-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/active/170907/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'landing-page/active/<%= date %>/build/local-active-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/active/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'landing-page/active/170907/build/local-active-m.html': ['local-templates/mobile/m-header.html','landing-page/active/170907/dev/content.html','local-templates/mobile/m-footer.html'],
+          'landing-page/active/<%= date %>/build/local-active-m.html': ['local-templates/mobile/m-header.html','landing-page/active/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
         }
       },
 
@@ -211,26 +211,26 @@ module.exports = function(grunt){
       promosHTML: {
         files: {
           //bmsm
-          'promos/bmsm/170821/toolkit/toolkit-bmsm.html': ['promos/bmsm/170821/css/styles.css','promos/bmsm/170821/dev/content.html'],
+          'promos/bmsm/<%= date %>/toolkit/toolkit-bmsm.html': ['promos/bmsm/<%= date %>/css/styles.css','promos/bmsm/<%= date %>/dev/content.html'],
 
           //influencer 
           //desktop
-          'promos/influencer/170828/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','promos/influencer/170828/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'promos/influencer/<%= date %>/build/local-influencer-d.html': ['local-templates/desktop/d-header-hp.html','promos/influencer/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'promos/influencer/170828/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','promos/influencer/170828/dev/content.html','local-templates/mobile/m-footer.html'],
+          'promos/influencer/<%= date %>/build/local-influencer-m.html': ['local-templates/mobile/m-header.html','promos/influencer/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
     
 
           //labor day 
           //desktop
-          'promos/labor-day/170831/build/local-labor-day-d.html': ['local-templates/desktop/d-header-hp.html','promos/labor-day/170831/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'promos/labor-day/<%= date %>/build/local-labor-day-d.html': ['local-templates/desktop/d-header-hp.html','promos/labor-day/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'promos/labor-day/170831/build/local-labor-day-m.html': ['local-templates/mobile/m-header.html','promos/labor-day/170831/dev/content.html','local-templates/mobile/m-footer.html'],
+          'promos/labor-day/<%= date %>/build/local-labor-day-m.html': ['local-templates/mobile/m-header.html','promos/labor-day/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
 
           //school days recruitment 
           //desktop
-          'promos/school-days-recruitment/171009/build/local-school-days-d.html': ['local-templates/desktop/d-header-hp.html','promos/school-days-recruitment/171009/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'promos/school-days-recruitment/<%= date %>/build/local-school-days-d.html': ['local-templates/desktop/d-header-hp.html','promos/school-days-recruitment/<%= date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
-          'promos/school-days-recruitment/171009/build/local-school-days-m.html': ['local-templates/mobile/m-header.html','promos/school-days-recruitment/171009/dev/content.html','local-templates/mobile/m-footer.html'],
+          'promos/school-days-recruitment/<%= date %>/build/local-school-days-m.html': ['local-templates/mobile/m-header.html','promos/school-days-recruitment/<%= date %>/dev/content.html','local-templates/mobile/m-footer.html'],
 
         }
       },

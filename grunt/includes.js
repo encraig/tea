@@ -11,7 +11,7 @@ module.exports = function(grunt){
 
 			files: [
 				//toolkit
-				{ cwd: 'homepage/170907', src: [ 'dev/content.html' ], dest:  'homepage/170907/toolkit/toolkit-homepage.html',},
+				{ cwd: 'homepage/<%= date %>', src: [ 'dev/content.html' ], dest:  'homepage/<%= date %>/toolkit/toolkit-homepage.html',},
 			],
 
 		},
@@ -21,7 +21,7 @@ module.exports = function(grunt){
 
 			files: [
 				//toolkit
-				{ cwd: 'category-pages/170907/dev', src: [ '*.html' ], dest:  'category-pages/170907/toolkit/'},
+				{ cwd: 'category-pages/<%= date %>/dev', src: [ '*.html' ], dest:  'category-pages/<%= date %>/toolkit/'},
 			],
 
 		},
@@ -40,11 +40,11 @@ module.exports = function(grunt){
 				// careers toolkit
 				{ cwd: 'landing-page/careers/dev', src: [ '*.html' ], dest:  'landing-page/careers/toolkit/toolkit-careers.html'},
 				// influencer toolkit
-				{ cwd: 'landing-page/influencer/170828/dev', src: [ '*.html' ], dest:  'landing-page/influencer/170828/toolkit/toolkit-influencer.html'},
+				{ cwd: 'landing-page/influencer/<%= date %>/dev', src: [ '*.html' ], dest:  'landing-page/influencer/<%= date %>/toolkit/toolkit-influencer.html'},
 				// inspiration toolkit
 				{ cwd: 'landing-page/inspiration/scotland/dev', src: [ '*.html' ], dest:  'landing-page/inspiration/scotland/toolkit/toolkit-inspiration.html'},
 				// little citizen toolkit
-				{ cwd: 'landing-page/little-citizen/170723/dev', src: [ '*.html' ], dest:  'landing-page/little-citizen/170723/toolkit/toolkit-little-citizen.html'},
+				{ cwd: 'landing-page/little-citizen/<%= date %>/dev', src: [ '*.html' ], dest:  'landing-page/little-citizen/<%= date %>/toolkit/toolkit-little-citizen.html'},
 			],
 
 		},
@@ -54,11 +54,11 @@ module.exports = function(grunt){
 
 			files: [
 				// labor day toolkit
-				{ cwd: 'promos/labor-day/170831/dev', src: [ '*.html' ], dest: 'promos/labor-day/170831/toolkit/toolkit-labor-day.html',},
+				{ cwd: 'promos/labor-day/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/labor-day/<%= date %>/toolkit/toolkit-labor-day.html',},
 				// influencer toolkit
-				{ cwd: 'promos/influencer/170828/dev', src: [ '*.html' ], dest: 'promos/influencer/170828/toolkit/toolkit-influencer.html',},
+				{ cwd: 'promos/influencer/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/influencer/<%= date %>/toolkit/toolkit-influencer.html',},
 				// school days recruitment toolkit
-				{ cwd: 'promos/school-days-recruitment/171009/dev', src: [ '*.html' ], dest: 'promos/school-days-recruitment/171009/toolkit/toolkit-school-days.html',},
+				{ cwd: 'promos/school-days-recruitment/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/school-days-recruitment/<%= date %>/toolkit/toolkit-school-days.html',},
 			]
 		},
 	}

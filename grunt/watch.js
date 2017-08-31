@@ -5,30 +5,30 @@ module.exports = function(grunt){
 
       // HOMEPAGE ---------------------------------------------------------------------------
   		HP: {
-  			files: ['homepage/170907/css/styles.less', 'homepage/170907/dev/content.html'],
+  			files: ['homepage/<%= date %>/css/styles.less', 'homepage/<%= date %>/dev/content.html'],
   			tasks: ['less:hpCSS', 'includes:hpIncludes', 'concat:hp'],
   		},
 
       // cssHP1: {
-      //   files: ['homepage/170907/css/*.less'],
-      //   tasks: ['less:hpCSS1','makeCss:homepage/170907/css/hp-styles-original.css:homepage/170907/css/hp-styles-original.css', 'concat:hpD1', 'concat:hpM1', 'concat:hpToolkit1'],
+      //   files: ['homepage/<%= date %>/css/*.less'],
+      //   tasks: ['less:hpCSS1','makeCss:homepage/<%= date %>/css/hp-styles-original.css:homepage/<%= date %>/css/hp-styles-original.css', 'concat:hpD1', 'concat:hpM1', 'concat:hpToolkit1'],
       // },
 
       // CATEGORIES ---------------------------------------------------------------------------
       Categories: {
-        files: ['category-pages/170907/css/*.less','category-pages/170907/dev/*.html'],
+        files: ['category-pages/<%= date %>/css/*.less','category-pages/<%= date %>/dev/*.html'],
         tasks: ['less:categoriesCSS', 'includes:categoriesIncludes', 'concat:categories'],
       },
 
       // CATALOG  ---------------------------------------------------------------------------
       Catalog: {
-        files: ['catalog/170330/css/catalog.less', 'catalog/170330/dev/*.html'],
-        tasks: ['less:catalogCSS','makeCss:catalog/170330/css/catalog.css:catalog/170330/css/catalog.css', 'concat:catalog'],
+        files: ['catalog/<%= date %>/css/catalog.less', 'catalog/<%= date %>/dev/*.html'],
+        tasks: ['less:catalogCSS','makeCss:catalog/<%= date %>/css/catalog.css:catalog/<%= date %>/css/catalog.css', 'concat:catalog'],
       },
       
       // INFLUENCER  ---------------------------------------------------------------------------
       Influencer: {
-        files: ['landing-page/influencer/170828/css/*.less', 'landing-page/influencer/170828/dev/*.html'],
+        files: ['landing-page/influencer/<%= date %>/css/*.less', 'landing-page/influencer/<%= date %>/dev/*.html'],
         tasks: ['less:influencerCSS', 'includes:landingPagesIncludes', 'concat:influencer'],
       },
       // BABYSWEEPS  ---------------------------------------------------------------------------
@@ -38,7 +38,7 @@ module.exports = function(grunt){
       },
       // LITTLE CITIZEN  ---------------------------------------------------------------------------
       LittleCitizen: {
-        files: ['landing-page/little-citizen/170723/css/styles.less','landing-page/little-citizen/170723/dev/content.html'],
+        files: ['landing-page/little-citizen/<%= date %>/css/styles.less','landing-page/little-citizen/<%= date %>/dev/content.html'],
         tasks: ['less:littleCitizenCSS', 'includes:landingPagesIncludes', 'concat:littleCitizen'],
       },
       // GLOBAL SHOP  ---------------------------------------------------------------------------
@@ -63,7 +63,7 @@ module.exports = function(grunt){
       },
       // ACTIVE  ---------------------------------------------------------------------------
       Active: {
-        files: ['landing-page/active/170907/css/styles.less', 'landing-page/active/170907/dev/*.html'],
+        files: ['landing-page/active/<%= date %>/css/styles.less', 'landing-page/active/<%= date %>/dev/*.html'],
         tasks: ['less:activeCSS', 'includes:landingPagesIncludes', 'concat:active'],
       },
       // BACK TO SCHOOL SWEEPS  ---------------------------------------------------------------------------
@@ -87,7 +87,7 @@ module.exports = function(grunt){
 
        // PROMOS  ---------------------------------------------------------------------------
       Promos: {
-        files: ['promos/school-days-recruitment/171009/css/styles.less', 'promos/school-days-recruitment/171009/dev/content.html'],
+        files: ['promos/influencer/<%= date %>/css/styles.less', 'promos/influencer/<%= date %>/dev/content.html'],
         tasks: ['less:promosCSS','includes:promosIncludes','concat:promosHTML', ],
       },
 

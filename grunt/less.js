@@ -11,13 +11,13 @@ module.exports = function(grunt){
       // HOMEPAGE CSS ---------------------------------------------------------------------------
       hpCSS:{
         files:{
-          'homepage/170907/css/styles.css': 'homepage/170907/css/styles.less'
+          'homepage/<%= date %>/css/styles.css': 'homepage/<%= date %>/css/styles.less'
         }
       },
 
       // hpCSS1:{
       //   files:{
-      //     'homepage/170907/css/hp-styles-original.css': 'homepage/170907/css/hp-styles-original.less'
+      //     'homepage/<%= date %>/css/hp-styles-original.css': 'homepage/<%= date %>/css/hp-styles-original.less'
       //   }
       // },
 
@@ -25,15 +25,15 @@ module.exports = function(grunt){
       categoriesCSS: {
         files: {
           //girls
-          'category-pages/170907/css/girls-clothing.css': 'category-pages/170907/css/girls-clothing.less',
+          'category-pages/<%= date %>/css/girls-clothing.css': 'category-pages/<%= date %>/css/girls-clothing.less',
           //boys
-          'category-pages/170907/css/boys-clothing.css': 'category-pages/170907/css/boys-clothing.less',
+          'category-pages/<%= date %>/css/boys-clothing.css': 'category-pages/<%= date %>/css/boys-clothing.less',
           //baby girl
-          'category-pages/170907/css/baby-girl-clothes.css': 'category-pages/170907/css/baby-girl-clothes.less',
+          'category-pages/<%= date %>/css/baby-girl-clothes.css': 'category-pages/<%= date %>/css/baby-girl-clothes.less',
           //baby boy
-          'category-pages/170907/css/baby-boy-clothes.css': 'category-pages/170907/css/baby-boy-clothes.less',
+          'category-pages/<%= date %>/css/baby-boy-clothes.css': 'category-pages/<%= date %>/css/baby-boy-clothes.less',
           //newborn
-          'category-pages/170907/css/newborn-clothes.css': 'category-pages/170907/css/newborn-clothes.less'
+          'category-pages/<%= date %>/css/newborn-clothes.css': 'category-pages/<%= date %>/css/newborn-clothes.less'
         }
       },
 
@@ -41,7 +41,7 @@ module.exports = function(grunt){
       // CATALOG CSS ---------------------------------------------------------------------------
       catalogCSS:{
         files:{
-          'catalog/170330/css/catalog.css': 'catalog/170330/css/catalog.less'
+          'catalog/<%= date %>/css/catalog.css': 'catalog/<%= date %>/css/catalog.less'
         }
       },
 
@@ -51,11 +51,11 @@ module.exports = function(grunt){
           // GLOBAL SHOP CSS ---------------------------------------------------------------------------
           'landing-page/global-shop/css/global-shop-styles.css': 'landing-page/global-shop/css/global-shop-styles.less',
           // INFLUENCER CSS ---------------------------------------------------------------------------
-          'landing-page/influencer/170828/css/influencer-styles.css': 'landing-page/influencer/170828/css/influencer-styles.less',
+          'landing-page/influencer/<%= date %>/css/influencer-styles.css': 'landing-page/influencer/<%= date %>/css/influencer-styles.less',
           // BABYSWEEPS CSS ---------------------------------------------------------------------------
           'landing-page/baby-sweeps/css/styles.css': 'landing-page/baby-sweeps/css/styles.less',
           // LITTLE CITIZENS CSS ---------------------------------------------------------------------------
-          'landing-page/little-citizen/170723/css/styles.css': 'landing-page/little-citizen/170723/css/styles.less',
+          'landing-page/little-citizen/<%= date %>/css/styles.css': 'landing-page/little-citizen/<%= date %>/css/styles.less',
           // ABOUT CSS ---------------------------------------------------------------------------
           'landing-page/about/css/styles.css': 'landing-page/about/css/styles.less',
           // CAREERS CSS ---------------------------------------------------------------------------
@@ -63,7 +63,7 @@ module.exports = function(grunt){
           // INSPIRATION CSS ---------------------------------------------------------------------------
           'landing-page/inspiration/scotland/css/styles.css': 'landing-page/inspiration/scotland/css/styles.less',
           // ACTIVE CSS ---------------------------------------------------------------------------
-          'landing-page/active/170907/css/styles.css': 'landing-page/active/170907/css/styles.less',
+          'landing-page/active/<%= date %>/css/styles.css': 'landing-page/active/<%= date %>/css/styles.less',
           // BACK TO SCHOOL SWEEPS CSS ---------------------------------------------------------------------------
           'landing-page/back-to-school-sweeps/css/styles.css': 'landing-page/back-to-school-sweeps/css/styles.less'
         }
@@ -103,13 +103,13 @@ module.exports = function(grunt){
       promosCSS:{
         files:{
           //bmsm
-          'promos/bmsm/170821/css/styles.css': 'promos/bmsm/170821/css/styles.less',
+          'promos/bmsm/<%= date %>/css/styles.css': 'promos/bmsm/<%= date %>/css/styles.less',
           //influencer
-          'promos/influencer/170828/css/styles.css': 'promos/influencer/170828/css/styles.less',
+          'promos/influencer/<%= date %>/css/styles.css': 'promos/influencer/<%= date %>/css/styles.less',
           //labor day
-          'promos/labor-day/170831/css/styles.css': 'promos/labor-day/170831/css/styles.less',
+          'promos/labor-day/<%= date %>/css/styles.css': 'promos/labor-day/<%= date %>/css/styles.less',
           //school days recruitment
-          'promos/school-days-recruitment/171009/css/styles.css': 'promos/school-days-recruitment/171009/css/styles.less',
+          'promos/school-days-recruitment/<%= date %>/css/styles.css': 'promos/school-days-recruitment/<%= date %>/css/styles.less',
         }
       },
     
