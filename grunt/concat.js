@@ -225,7 +225,13 @@ module.exports = function(grunt){
           'promos/labor-day/170831/build/local-labor-day-d.html': ['local-templates/desktop/d-header-hp.html','promos/labor-day/170831/dev/content.html','local-templates/desktop/d-footer-hp.html'],
           //mobile
           'promos/labor-day/170831/build/local-labor-day-m.html': ['local-templates/mobile/m-header.html','promos/labor-day/170831/dev/content.html','local-templates/mobile/m-footer.html'],
-     
+
+          //school days recruitment 
+          //desktop
+          'promos/school-days-recruitment/171009/build/local-school-days-d.html': ['local-templates/desktop/d-header-hp.html','promos/school-days-recruitment/171009/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          //mobile
+          'promos/school-days-recruitment/171009/build/local-school-days-m.html': ['local-templates/mobile/m-header.html','promos/school-days-recruitment/171009/dev/content.html','local-templates/mobile/m-footer.html'],
+
         }
       },
 

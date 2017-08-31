@@ -57,6 +57,8 @@ module.exports = function(grunt){
 				{ cwd: 'promos/labor-day/170831/dev', src: [ '*.html' ], dest: 'promos/labor-day/170831/toolkit/toolkit-labor-day.html',},
 				// influencer toolkit
 				{ cwd: 'promos/influencer/170828/dev', src: [ '*.html' ], dest: 'promos/influencer/170828/toolkit/toolkit-influencer.html',},
+				// school days recruitment toolkit
+				{ cwd: 'promos/school-days-recruitment/171009/dev', src: [ '*.html' ], dest: 'promos/school-days-recruitment/171009/toolkit/toolkit-school-days.html',},
 			]
 		},
 	}

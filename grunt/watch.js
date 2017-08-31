@@ -87,7 +87,7 @@ module.exports = function(grunt){
 
        // PROMOS  ---------------------------------------------------------------------------
       Promos: {
-        files: ['promos/labor-day/170831/css/styles.less', 'promos/labor-day/170831/dev/content.html'],
+        files: ['promos/school-days-recruitment/171009/css/styles.less', 'promos/school-days-recruitment/171009/dev/content.html'],
         tasks: ['less:promosCSS','includes:promosIncludes','concat:promosHTML', ],
       },
 

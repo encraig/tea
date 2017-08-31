@@ -108,6 +108,8 @@ module.exports = function(grunt){
           'promos/influencer/170828/css/styles.css': 'promos/influencer/170828/css/styles.less',
           //labor day
           'promos/labor-day/170831/css/styles.css': 'promos/labor-day/170831/css/styles.less',
+          //school days recruitment
+          'promos/school-days-recruitment/171009/css/styles.css': 'promos/school-days-recruitment/171009/css/styles.less',
         }
       },
     
