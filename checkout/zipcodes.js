@@ -29,13 +29,13 @@ $(document).ready(function(){
 
 			//open new window for zip codes on click
 			$('.show-codes').click(function(){
-				var message = $('<h1>Texas and Louisiana zip codes</h1><ul class="zips"></ul>');
+				var message = $('<style>.zips{list-style-type:none;}.zips li{padding: 10px;}.zips li:nth-of-type(odd){background:#e0645a;}</style><h1>Texas and Louisiana zip codes</h1><ul class="zips"></ul>');
 				$(zipCodes).each(function(i,val){
-					$(message[1]).append('<li>'+val+'</li>');
+					$(message[2]).append('<li>'+val+'</li>');
 				});
 				console.log(message);
 				var newWindow = window.open("","", "top=0, width=500, height=500");
-				newWindow.document.write(message[0].outerHTML + message[1].outerHTML);
+				newWindow.document.write(message[0].outerHTML + message[1].outerHTML + message[2].outerHTML);
 			});
 
 			//on hover show pointer
