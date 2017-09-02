@@ -105,7 +105,7 @@
 		$('.promo-img-alt').attr('alt', alt);
 
 		// hide on login page on mobile and sale page
-		if(jQuery(window).width()<768) {
+		if(jQuery(window).width()<737) {
 			var url = window.location.pathname;
 
 			var path = window.location.href;
@@ -118,7 +118,7 @@
 			if(url == '/clothing-sale') {
 				jQuery('.desktop-promo, .mobile-promo').hide();
 			}
-		}
+		} 
 
 		// var code = jQuery('#details-promo').find('#the-promo-code').text();
 		// sessionStorage.setItem('promoCode',code);
@@ -139,13 +139,17 @@
 		//responsive image map
 		jQuery('img[usemap]').rwdImageMaps();
 
+
+	var hideBanners = function() {
+		
+		var url = window.location.pathname;
+		console.log(url); 
+
 		//desktop
-		if(jQuery(window).width()>768){
+		if(jQuery(window).width()>737){
 
 			//show the fineprint in a lightbox
 			jQuery('.see-details').fancybox();
-
-			var url = window.location.pathname;
 
 			//if homepage show homepage banner
 			// if(url == '/'){
@@ -163,7 +167,7 @@
 			// }
 
 		// mobile 
-		} else if(jQuery(window).width()<768){
+		} else if(jQuery(window).width()<737){
 			//if homepage show homepage banner
 			if(url == '/'){
 				jQuery('.mobile-promo-hp').show();
@@ -184,8 +188,16 @@
 				e.preventDefault();
 				jQuery('#details-promo').slideToggle();
 			});
-		}
+		} 
+	};
+
+		//on page load call hideBanners
+		hideBanners();
 		
+		//on window resize call hideBanners
+		$(window).resize(function(){
+			hideBanners();
+		});
 
 	});
 </script>
