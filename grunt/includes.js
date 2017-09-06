@@ -11,7 +11,11 @@ module.exports = function(grunt){
 
 			files: [
 				//toolkit
-				{ cwd: 'homepage/<%= date %>', src: [ 'dev/content.html' ], dest:  'homepage/<%= date %>/toolkit/toolkit-homepage.html',},
+				{ 
+					cwd: 'homepage/<%= hp.date %>', 
+					src: [ 'dev/content.html' ], 
+					dest:  'homepage/<%= hp.date %>/toolkit/toolkit-homepage.html',
+				},
 			],
 
 		},
@@ -21,7 +25,7 @@ module.exports = function(grunt){
 
 			files: [
 				//toolkit
-				{ cwd: 'category-pages/<%= date %>/dev', src: [ '*.html' ], dest:  'category-pages/<%= date %>/toolkit/'},
+				{ cwd: 'category-pages/<%= cat.date %>/dev', src: [ '*.html' ], dest:  'category-pages/<%= cat.date %>/toolkit/'},
 			],
 
 		},
@@ -30,21 +34,11 @@ module.exports = function(grunt){
 		landingPagesIncludes: {
 
 			files: [
-				// about toolkit
-				{ cwd: 'landing-page/about/dev', src: [ '*.html' ], dest:  'landing-page/about/toolkit/toolkit-about.html'},
-				// baby sweeps toolkit
-				{ cwd: 'landing-page/baby-sweeps/dev', src: [ '*.html' ], dest:  'landing-page/baby-sweeps/toolkit/toolkit-babysweeps.html'},
-				// back to school sweeps toolkit
-				{ cwd: 'landing-page/back-to-school-sweeps/dev', src: [ 'content.html' ], dest:  'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-sweeps.html'},
-				{ cwd: 'landing-page/back-to-school-sweeps/dev', src: [ 'thanks.html' ], dest:  'landing-page/back-to-school-sweeps/toolkit/toolkit-back-to-school-thanks.html'},
-				// careers toolkit
-				{ cwd: 'landing-page/careers/dev', src: [ '*.html' ], dest:  'landing-page/careers/toolkit/toolkit-careers.html'},
-				// influencer toolkit
-				{ cwd: 'landing-page/influencer/<%= date %>/dev', src: [ '*.html' ], dest:  'landing-page/influencer/<%= date %>/toolkit/toolkit-influencer.html'},
-				// inspiration toolkit
-				{ cwd: 'landing-page/inspiration/scotland/dev', src: [ '*.html' ], dest:  'landing-page/inspiration/scotland/toolkit/toolkit-inspiration.html'},
-				// little citizen toolkit
-				{ cwd: 'landing-page/little-citizen/<%= date %>/dev', src: [ '*.html' ], dest:  'landing-page/little-citizen/<%= date %>/toolkit/toolkit-little-citizen.html'},
+				{ 
+					cwd: 'landing-page/<%= landing.name %>/<%= landing.date %>/dev', 
+					src: [ '*.html' ], 
+					dest:  'landing-page/<%= landing.name %>/<%= landing.date %>/toolkit/toolkit-<%= landing.name %>.html'
+				},
 			],
 
 		},
@@ -53,13 +47,23 @@ module.exports = function(grunt){
 		promosIncludes: {
 
 			files: [
-				// labor day toolkit
-				{ cwd: 'promos/labor-day/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/labor-day/<%= date %>/toolkit/toolkit-labor-day.html',},
-				// influencer toolkit
-				{ cwd: 'promos/influencer/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/influencer/<%= date %>/toolkit/toolkit-influencer.html',},
-				// school days recruitment toolkit
-				{ cwd: 'promos/school-days-recruitment/<%= date %>/dev', src: [ '*.html' ], dest: 'promos/school-days-recruitment/<%= date %>/toolkit/toolkit-school-days.html',},
+				// promo template toolkit
+				{ 
+					cwd: 'promos/<%= promo.name %>/<%= promo.date %>/dev', 
+					src: [ '*.html' ], 
+					dest: 'promos/<%= promo.name %>/<%= promo.date %>/toolkit/toolkit-<%= promo.name %>.html',
+				},
 			]
+		},
+
+		// NAV REDESIGIN  ---------------------------------------------------------------------------
+		navRedesignIncludes: {
+
+			files: [
+				//toolkit
+				{ cwd: 'nav-redesign/html', src: [ '{nav1,nav2,nav3,nav4,nav5,nav6,nav7,nav8}.html' ], dest:  'nav-redesign/monetate/'},
+			],
+
 		},
 	}
 };
