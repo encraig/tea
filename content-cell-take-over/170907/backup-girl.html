@@ -1,0 +1,14 @@
+{if $smarty.request.p == 1}
+<section class="item cell6" style="display: none;">
+<img src="/mas_assets/theme/tea_collection/images/categories/headers/20170119_Spring1_ContentSquare_G_active_cell01.jpg" alt="" title="Styles featuring UPF 40 protection">
+</section>
+
+{/if}
+
+{literal}
+<script>
+    jQuery(document).ready(function() {
+        jQuery( ".item.cell6" ).insertBefore( jQuery(".items-list-wrapper .item:eq( 5 )") ).css("display","block");
+    });
+</script>
+{/literal}
