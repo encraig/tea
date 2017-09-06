@@ -166,8 +166,14 @@
 			// 	jQuery('.desktop-promo').show();
 			// }
 
+			//for when resize going up hide the mobile banners
+			jQuery('.mobile-promo-hp, .mobile-promo').hide();
+
 		// mobile 
 		} else if(jQuery(window).width()<737){
+			//hide the desktop banners
+			//jQuery('.desktop-promo-hp, .desktop-promo').hide();
+
 			//if homepage show homepage banner
 			if(url == '/'){
 				jQuery('.mobile-promo-hp').show();
