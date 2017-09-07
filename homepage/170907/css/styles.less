@@ -43,7 +43,7 @@ img, video {
 
 .bx-controls-direction {
 	@media screen and (min-width:374px) and (max-width:376px) {
-		display: block !important;
+		//display: block !important;
 	}
 
 	display:none;
@@ -114,7 +114,8 @@ img, video {
 	}
 
 	@media screen and (max-width:376px){
-		font-size:.9em;
+		//font-size:.9em;
+		font-size: .8em;
 	}
 
 	@media screen and (max-width:321px){
@@ -314,7 +315,8 @@ img, video {
 
 			&:hover, &:active {
 				@media screen and (max-width:737px){
-					
+					background:#23877d;
+					color:#fff;
 				}
 
 				background:#fff;
@@ -538,9 +540,14 @@ img, video {
     			}
 			}
 
-			&:hover {
+			&:hover, &:active {
 				h3 {
 					span {
+						@media screen and (max-width: 737px){
+							background:#23877d;
+							color:#fff;
+						}
+
 						background:#fff;
 						color:#23877d;
 					}
