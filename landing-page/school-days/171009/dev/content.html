@@ -1,0 +1,96 @@
+<!--toolkit -->
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+{/literal}
+
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<div class="school-days-container">
+	
+	<!-- check back -->
+	<img src="school-days-checkback-d.jpg" alt="" class="desktop theImg" />
+	<img src="school-days-checkback-m.jpg" alt="" class="mobile theImg" />
+
+	<!-- ***************************************************** -->
+
+	<!-- 10/09 -->
+<!-- 	<img src="school-days-landing-d.jpg" alt="" class="desktop theImg" />
+	<img src="school-days-landing-m.jpg" alt="" class="mobile theImg" usemap="#map-school-days-m"/>
+	<map name="map-school-days-m">
+		<area  alt="" title="" href="/girls-clothing" shape="rect" coords="42,1057,368,1122" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/boys-clothing" shape="rect" coords="388,1053,714,1123" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-girl-clothes" shape="rect" coords="43,1141,369,1211" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-boy-clothes" shape="rect" coords="391,1144,711,1211" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/newborn-clothes" shape="rect" coords="46,1235,366,1302" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/clothing-sale" shape="rect" coords="390,1234,713,1302" style="outline:none;" target="_self"     />
+	</map>
+ -->
+	<!-- ***************************************************** -->
+
+	<!-- 10/17 -->
+	<!-- <img src="school-days-ended-d.jpg" alt="" class="desktop theImg" />
+	<img src="school-days-ended-m.jpg" alt="" class="mobile theImg" /> -->
+</div>
+
+
+<!-- dev -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!-- prod -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+{literal}
+	<script>
+		$(document).ready(function(){
+			jQuery('img[usemap]').rwdImageMaps();
+
+			//hide the banner
+			$('.banner-ad-zone').hide();
+
+			// prod base path
+			var prodUrl = '/mas_assets/theme/tea_collection/images/static/school-days/171009/';
+
+			//dev base path
+			var devUrl = '../images/';
+
+			//alt
+			var alt1 = 'school days is just around the corner Check back soon!';
+			var alt2 ='school days is in session!';
+			var alt3 = 'Oh Bummer! school days has ended';
+
+			//alt area
+			var altArea = 'school days cta mobile';
+
+			//add img src
+			var img = $('.theImg');
+			$(img).each(function(i,val){
+				var src = $(val).attr('src');
+				$(val).attr('src', prodUrl + src);
+				$(val).attr('alt', alt1);
+			});
+
+			//add the alt to area
+			var area = $('map[name="map-school-days-m"] area'); 
+			$(area).each(function(i,val){
+				var href = $(val).attr('href')
+				href = href.replace('/','');
+				href =  href.split('-');
+				
+				if (href[0] == 'baby' || href[0] ==  'clothing'){
+					$(val).attr('alt', href[0] + " " + href[1] + " " + altArea);
+				} else {
+					$(val).attr('alt', href[0] + " " + altArea);
+				}
+
+			});
+		});	
+	</script>
+{/literal}
+
