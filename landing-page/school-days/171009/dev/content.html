@@ -11,14 +11,14 @@
 <div class="school-days-container">
 	
 	<!-- check back -->
-	<img src="school-days-checkback-d.jpg" alt="" class="desktop theImg" />
-	<img src="school-days-checkback-m.jpg" alt="" class="mobile theImg" />
+	<img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-checkback-d.jpg" alt="" class="desktop theImg" />
+	<img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-checkback-m.jpg" alt="" class="mobile theImg" />
 
 	<!-- ***************************************************** -->
 
 	<!-- 10/09 -->
-<!-- 	<img src="school-days-landing-d.jpg" alt="" class="desktop theImg" />
-	<img src="school-days-landing-m.jpg" alt="" class="mobile theImg" usemap="#map-school-days-m"/>
+<!-- 	<img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-landing-d.jpg" alt="" class="desktop theImg" />
+	<img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-landing-m.jpg" alt="" class="mobile theImg" usemap="#map-school-days-m"/>
 	<map name="map-school-days-m">
 		<area  alt="" title="" href="/girls-clothing" shape="rect" coords="42,1057,368,1122" style="outline:none;" target="_self"     />
 		<area  alt="" title="" href="/boys-clothing" shape="rect" coords="388,1053,714,1123" style="outline:none;" target="_self"     />
@@ -31,8 +31,8 @@
 	<!-- ***************************************************** -->
 
 	<!-- 10/17 -->
-	<!-- <img src="school-days-ended-d.jpg" alt="" class="desktop theImg" />
-	<img src="school-days-ended-m.jpg" alt="" class="mobile theImg" /> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-ended-d.jpg" alt="" class="desktop theImg" />
+	<img src="/mas_assets/theme/tea_collection/images/static/school-days/171009/school-days-ended-m.jpg" alt="" class="mobile theImg" /> -->
 </div>
 
 
@@ -72,7 +72,8 @@
 			var img = $('.theImg');
 			$(img).each(function(i,val){
 				var src = $(val).attr('src');
-				$(val).attr('src', prodUrl + src);
+				// console.log(src);
+				// $(val).attr('src', prodUrl + src);
 				$(val).attr('alt', alt1);
 			});
 
