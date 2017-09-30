@@ -76,7 +76,7 @@ module.exports = function(grunt){
 
       // NAV REDESIGN  ---------------------------------------------------------------------------
       NavRedesign: {
-        files: ['nav-redesign/css/*.less', 'nav-redesign/html/*.html', 'nav-redesign/js/*.js'],
+        files: ['nav-redesign/<%= nav.folder %>/css/*.less', 'nav-redesign/<%= nav.folder %>/html/*.html', 'nav-redesign/<%= nav.folder %>/js/*.js'],
         tasks: ['less:navRedesignCSS','includes:navRedesignIncludes', 'concat:navRedesignHTML', 'uglify:navRedesignScripts'],
       },
 
@@ -97,6 +97,12 @@ module.exports = function(grunt){
       htmlPromoTest: {
         files:['promos/test/dev/*.html'],
         tasks:['concat:promoTestM']
+      },
+
+      // FILTER ---------------------------------------------------------------------------
+      Filter: {
+        files:['filter/dev/*.html', 'filter/css/*less'],
+        tasks:['less:filterCSS', 'concat:filterHTML']
       },
 
       // js: {

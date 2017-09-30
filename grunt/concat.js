@@ -65,7 +65,7 @@ module.exports = function(grunt){
       landingPages: {
         files: {
         //desktop
-        'landing-page/<%= landing.name %>/<%= landing.date %>/build/local-<%= landing.name %>-d.html': ['local-templates/desktop/d-header-hp.html','landing-page/<%= landing.name %>/<%= landing.date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+        'landing-page/<%= landing.name %>/<%= landing.date %>/build/local-<%= landing.name %>-d.html': ['local-templates/desktop/d-header-2column.html','landing-page/<%= landing.name %>/<%= landing.date %>/dev/content.html','local-templates/desktop/d-footer-2column.html'],
         //mobile
         'landing-page/<%= landing.name %>/<%= landing.date %>/build/local-<%= landing.name %>-m.html': ['local-templates/mobile/m-header.html','landing-page/<%= landing.name %>/<%= landing.date %>/dev/content.html','local-templates/mobile/m-footer.html'],
         } 
@@ -172,23 +172,9 @@ module.exports = function(grunt){
       navRedesignHTML: {
 
         files: {
-          //version 1 build
-          'nav-redesign/build/local-nav-redesign-1.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav1.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 2 build
-          'nav-redesign/build/local-nav-redesign-2.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav2.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 3 build
-          'nav-redesign/build/local-nav-redesign-3.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav3.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 4 build
-          'nav-redesign/build/local-nav-redesign-4.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav4.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 5 build
-          'nav-redesign/build/local-nav-redesign-5.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav5.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 6 build
-          'nav-redesign/build/local-nav-redesign-6.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav6.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 7 build
-          'nav-redesign/build/local-nav-redesign-7.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav7.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-          //version 8 build
-          'nav-redesign/build/local-nav-redesign-8.html': ['nav-redesign/html/header2.html','nav-redesign/html/nav-container-header.html','nav-redesign/html/nav8.html','nav-redesign/html/nav-container-footer.html','nav-redesign/html/footer.html'],
-       
+
+          'nav-redesign/<%= nav.folder %>/build/local-<%= nav.name %>.html': ['nav-redesign/<%= nav.folder %>/html/header.html','nav-redesign/<%= nav.folder %>/html/nav-container-header.html','nav-redesign/<%= nav.folder %>/html/<%= nav.name %>.html','nav-redesign/<%= nav.folder %>/html/nav-container-footer.html','nav-redesign/<%= nav.folder %>/html/footer.html']
+        
         }
       },
 
@@ -215,5 +201,15 @@ module.exports = function(grunt){
         src: ['local-templates/mobile/m-header.html','promos/test/dev/test.html','local-templates/mobile/m-footer.html'],
         dest: 'promos/test/build/local-promo-test-m.html'
       },
+
+       //filter -----------------------------------------------------------------------------
+      filterHTML: {
+        files: {
+          'filter/build/local-filter-d.html': ['local-templates/desktop/d-header-2column.html','filter/dev/content.html','local-templates/desktop/d-footer-2column.html'],
+        }
+      },
+
+
+      
   }
 };

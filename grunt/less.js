@@ -51,21 +51,10 @@ module.exports = function(grunt){
       navRedesignCSS: {
         //dynamic files
         expand:true,
-        cwd:'nav-redesign/css',
+        cwd:'nav-redesign/<%= nav.folder %>/css',
         src:['*.less'],
-        dest:'nav-redesign/css/',
+        dest:'nav-redesign/<%= nav.folder %>/css/output/',
         ext:'.css',
-
-        /*files: {
-          'nav-redesign/css/styles1.css': 'nav-redesign/css/styles1.less',
-          'nav-redesign/css/styles2.css': 'nav-redesign/css/styles2.less',
-          'nav-redesign/css/styles3.css': 'nav-redesign/css/styles3.less',
-          'nav-redesign/css/styles4.css': 'nav-redesign/css/styles4.less',
-          'nav-redesign/css/styles5.css': 'nav-redesign/css/styles5.less',
-          'nav-redesign/css/styles6.css': 'nav-redesign/css/styles6.less',
-          'nav-redesign/css/styles7.css': 'nav-redesign/css/styles7.less',
-          'nav-redesign/css/styles8.css': 'nav-redesign/css/styles8.less'
-        }*/
       },
 
       // HEADER REDESIGN CSS ---------------------------------------------------------------------------
@@ -81,6 +70,14 @@ module.exports = function(grunt){
         files:{
           //promo template
           'promos/<%= promo.name %>/<%= promo.date %>/css/styles.css': 'promos/<%= promo.name %>/<%= promo.date %>/css/styles.less',
+        }
+      },
+
+      // FILTER CSS ---------------------------------------------------------------------------
+      filterCSS:{
+        files:{
+          //promo template
+          'filter/css/styles.css': 'filter/css/styles.less',
         }
       },
     
