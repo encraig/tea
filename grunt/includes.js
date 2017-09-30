@@ -61,7 +61,8 @@ module.exports = function(grunt){
 
 			files: [
 				//toolkit
-				{ cwd: 'nav-redesign/html', src: [ '{nav1,nav2,nav3,nav4,nav5,nav6,nav7,nav8}.html' ], dest:  'nav-redesign/monetate/'},
+				// { cwd: 'nav-redesign/html', src: [ '{nav1,nav2,nav3,nav4,nav5,nav6,nav7,nav8}.html' ], dest:  'nav-redesign/monetate/'},
+				{ cwd: 'nav-redesign/<%= nav.folder %>/html', src: [ '<%= nav.name %>.html' ], dest:  'nav-redesign/<%= nav.folder %>/monetate/'},
 			],
 
 		},
