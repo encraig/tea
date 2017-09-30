@@ -1,0 +1,114 @@
+<style>
+	include "../css/newborn-clothes.css"
+</style>
+
+<!-- <h3 class="mobile title">newborn</h3> -->
+
+<div class="girls-clothing-cat">
+	<!-- desktop ref -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-bg-d.jpg" alt="handsome boy" class="ref"/> -->
+
+	<div class="c1">
+		<!-- mobile ref -->
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c1-bg-m.jpg" alt="handsome boy" class="ref"/> -->
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c1-d.jpg" alt="newborn boy" class="desktop"/>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c1-m.jpg" alt="newborn boy" class="mobile"/>
+		</div>
+		<div>
+			<h2 class="desktop">You want to give<br> your child the<br> world. So do we.</h2>
+			<p class="body-copy desktop" >That's why we strive to make<br> thoughtfully designed, globally<br> inspired clothing for children. And our smallest styles are made especially<br> for the littlest citizens of the world.</p>
+			<p class="body-copy mobile">All of our newborn styles are made from the<br> softest fabrics with comfy silhouettes designed<br> specifically for your littlest one's first adventures.</p>
+			<a href="/newborn-clothes/favorites/girl" class="cta" alt="c1">shop girl</a>
+			<a href="/newborn-clothes/favorites/boy" class="cta" alt="c1">shop boy</a>
+			<a href="/newborn-clothes/favorites/unisex" class="cta" alt="c1">shop unisex</a>
+		</div>
+	</div>
+
+	<div class="c2">
+		<!-- mobile ref -->
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c2-bg-m.jpg" alt="handsome boy" class="ref"/> -->
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c2-m.jpg" alt="newborn boy" class="mobile"/>
+			<h2 class="desktop">The perfect gift</h2>
+			<p class="body-copy">These sweet separates are a<br class="desktop"> wonderful<br class="mobile"> way to welcome<br class="desktop"> baby to the world!</p>
+			<a href="/newborn/gifts-under-30" class="cta" alt="c2">gifts under $30</a>
+			<a href="/newborn/gifts-under-50" class="cta" alt="c2">gifts under $50</a>
+			<a href="/newborn/gifts-all-gifts" class="cta" alt="c2">all gift sets</a>
+		</div>
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c2-d.jpg" alt="newborn boy" class="desktop"/>
+		</div>
+	</div>
+
+	<div class="c3">
+		<!-- mobile ref -->
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c3-bg-m.jpg" alt="handsome boy" class="ref"/> -->
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c3-d.jpg" alt="newborn shirt" class="desktop"/>
+		</div>
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c3-m.jpg" alt="newborn shirt" class="mobile"/>
+			<h2 class="desktop">The very best<br> for your<br> bundle of joy</h2>
+			<p class="body-copy">Crafted from the softest,<br class="desktop"> most durable<br class="mobile"> interlock cotton, all<br class="desktop"> our newborn styles are<br class="mobile"> extra cozy<br class="desktop"> and easy on babies' sensitive skin.</p>
+			<a href="/newborn-clothes/view-all" class="cta" alt="c3">shop now</a>
+		</div>
+	</div>
+
+	<div class="c4">
+		<!-- mobile ref -->
+		<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c4-bg-m.jpg" alt="handsome boy" class="ref"/> -->
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c4-m.jpg" alt="newborn swaddles" class="mobile"/>
+			<h2 class="desktop">Tea x aden+anais</h2>
+			<p class="body-copy">Our original prints and patterns<br class="desktop"> are now<br class="mobile"> featured on aden + anais<br class="desktop"> 100% cotton muslin<br class="mobile"> swaddles,<br class="desktop"> dream blankets and bibs.</p>
+			<a href="/newborn-clothes/favorites/aden-anais" class="cta" alt="c4">shop now</a>
+		</div>
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/newborn-clothes/170706/nb-c5-d.jpg" alt="newborn swaddles" class="desktop"/>
+		</div>
+	</div>
+
+</div>
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- bx slider development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+
+<!-- bx slider production-->
+<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+<script>
+$(document).ready(function(e) {
+	// $('img[usemap]').rwdImageMaps();
+
+	var changeHeight = function(){
+		var imgHeight = $('.girls-clothing-cat').find('img').css('height');
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').height(imgHeight);
+	};
+
+	var changePos =function(){
+		var imgPos = $('.girls-clothing-cat').find('img').position();
+		$('.girls-clothing-cat div:first-of-type a:first-of-type').css('top',imgPos.top);
+	};
+
+	if($(window).width()<768){
+		$('.girls-clothing-cat').bxSlider({
+			infiniteLoop:true,
+			auto:true,
+		});
+		// changeHeight();
+		// changePos();
+		// var str = 'Our tees are legendary, and the latest summer<br> styles feature adorably Aussie graphics and<br> super soft fabrics for a happy little kiddiwink!';
+		// $('.girls-clothing-cat div:last-of-type p:first-of-type').html(str);
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<768){
+			// changeHeight();
+			// changePos();
+		}
+	});
+});
+</script>
