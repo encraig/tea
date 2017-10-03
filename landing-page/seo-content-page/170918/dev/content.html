@@ -5,14 +5,26 @@
 
 <!-- CTA STYLING -->
 <style>
-	.cell-block .cta {
+	.cell-block .cta, .cell-block h2 {
 		border-color:blue;
-		color: blue;
+		color: blue !important;
 	}
 	.cell-block .cta:hover {
 		background:blue;
-		color:#fff;
+		color:#fff !important;
 	}
+	.more-like-this {
+		/*change this to adjust spacing */
+		/*dont forget to remove the slashes*/
+		top:-24em;
+	}
+	@media screen and (max-width:737px){
+		.more-like-this {
+			margin-top: 54px;
+			top:0;
+		}
+	}
+
 </style>
 
 
@@ -215,7 +227,7 @@
 			TO SELECT THE FIRST IMAGE OF A CATEGORY JUST CHANGE THE URL BELOW*/
 			var moreLikeThis_1 = {url:'https://www.teacollection.com/girls-dresses',num:0};
 			var moreLikeThis_2 = {url:'https://www.teacollection.com/girls-leggings',num:1};
-			var moreLikeThis_3 = {url:'https://www.teacollection.com/girls-tees-tops',num:2};
+			var moreLikeThis_3 = {url:'https://www.teacollection.com/girls-dresses-dress-sets',num:2};
 			var moreLikeThis_4 = {url:'https://www.teacollection.com/girls-skirts',num:3};
 
 			/*************************************************************************************/
@@ -251,25 +263,26 @@
 							if(i == imgNum){
 								var title = $(val).find('.item-details').find('a').text();
 								var img = $(val).find('header').find('img').attr('data-wink');
+								var alt = $(val).find('header').find('img').attr('alt');
 								if(img == undefined){
 									img = $(val).find('header').find('img').attr('data-src');
 								}
 								var url = $(val).find('header').find('a').attr('href');
 								var path = changePath(img);
-								$('.cell-block[data-num="'+theNum+'"]').find('img').attr('src',path);
+								$('.cell-block[data-num="'+theNum+'"]').find('img').attr({src:path, alt: alt});
 							}
 						});
 					} else if($(window).width()<737){
 						items = $(data).find('.single-item-box');
 						$(items).each(function(i,val){
 							if(i == imgNum){
-								console.log(val);
+								/*console.log(val);*/
 								/*var title = $(val).find('.item-details').find('a').text();*/
-								var img = $(val).find('.image-box').find('img').attr('data-src');
-								console.log(img);
+								var img = $(val).find('.image-box').find('img').attr('data-cfsrc');
+								var alt = $(val).find('.image-box').find('img').attr('alt');
 								/*var url = $(val).find('header').find('a').attr('href');*/
 								var path = changePath(img);
-								$('.cell-block[data-num="'+theNum+'"]').find('img').attr('src',path);
+								$('.cell-block[data-num="'+theNum+'"]').find('img').attr({src:path, alt: alt});
 							}
 						});
 					}
@@ -284,20 +297,27 @@
 						var items = $(data).find('section.item');
 						$(items).each(function(i,val){
 							if(i == 0){
+								console.log(val);
 								var title = $(val).find('.item-details').find('a').text();
 								var img = $(val).find('header').find('img').attr('data-wink');
+								var alt = $(val).find('header').find('img').attr('alt');
+
+								if(img == undefined){
+									img = $(val).find('header').find('img').attr('data-src');
+								}
 								var url = $(val).find('header').find('a').attr('href');
 
-								$('.more-like-this ul li').eq(theNum).find('img').attr('src',img);
+								$('.more-like-this ul li').eq(theNum).find('img').attr({src: img, alt: alt});
 							}
 						});
 					} else if($(window).width()<737){
 						var items = $(data).find('.single-item-box');
 						$(items).each(function(i,val){
 							if(i == 0){
-								var img = $(val).find('.image-box').find('img').attr('data-src');
+								var img = $(val).find('.image-box').find('img').attr('data-cfsrc');
+								var alt = $(val).find('.image-box').find('img').attr('alt');
 
-								$('.more-like-this ul li').eq(theNum).find('img').attr('src',img);
+								$('.more-like-this ul li').eq(theNum).find('img').attr({src: img, alt: alt});
 							}
 						});
 					}
