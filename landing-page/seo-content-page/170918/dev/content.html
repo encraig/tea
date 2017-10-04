@@ -214,7 +214,7 @@
 			var img_2 = {url:'https://www.teacollection.com/girls-dresses', img: 2, num:2};
 			var img_3 = {url:'https://www.teacollection.com/girls-dresses', img: 3, num:3};
 			var img_4 = {url:'https://www.teacollection.com/girls-dresses', img: 4, num:4};
-			var img_5 = {url:'https://www.teacollection.com/girls-dresses', img: 5, num:5};
+			var img_5 = {url:'https://www.teacollection.com/girls-clothing-sets', img: 5, num:5};
 			var img_6 = {url:'https://www.teacollection.com/girls-dresses', img: 6, num:6};
 			var img_7 = {url:'https://www.teacollection.com/girls-dresses', img: 7, num:7};
 			var img_8 = {url:'https://www.teacollection.com/girls-dresses', img: 8, num:8};
@@ -227,7 +227,7 @@
 			TO SELECT THE FIRST IMAGE OF A CATEGORY JUST CHANGE THE URL BELOW*/
 			var moreLikeThis_1 = {url:'https://www.teacollection.com/girls-dresses',num:0};
 			var moreLikeThis_2 = {url:'https://www.teacollection.com/girls-leggings',num:1};
-			var moreLikeThis_3 = {url:'https://www.teacollection.com/girls-dresses-dress-sets',num:2};
+			var moreLikeThis_3 = {url:'https://www.teacollection.com/girls-clothing-sets',num:2};
 			var moreLikeThis_4 = {url:'https://www.teacollection.com/girls-skirts',num:3};
 
 			/*************************************************************************************/
@@ -261,11 +261,16 @@
 						items = $(data).find('section.item');
 						$(items).each(function(i,val){
 							if(i == imgNum){
+								console.log('main image ' + imgNum + ' desktop');
+								console.log(val);
 								var title = $(val).find('.item-details').find('a').text();
 								var img = $(val).find('header').find('img').attr('data-wink');
 								var alt = $(val).find('header').find('img').attr('alt');
 								if(img == undefined){
-									img = $(val).find('header').find('img').attr('data-src');
+									img = $(val).find('header').find('img').attr('src');
+									if(img == '/mas_assets/empty.png'){
+										img = $(val).find('header').find('img').attr('data-src');
+									}
 								}
 								var url = $(val).find('header').find('a').attr('href');
 								var path = changePath(img);
@@ -276,9 +281,10 @@
 						items = $(data).find('.single-item-box');
 						$(items).each(function(i,val){
 							if(i == imgNum){
-								/*console.log(val);*/
+								console.log('main image ' + imgNum + ' mobile');
+								console.log(val);
 								/*var title = $(val).find('.item-details').find('a').text();*/
-								var img = $(val).find('.image-box').find('img').attr('data-cfsrc');
+								var img = $(val).find('.image-box').find('img').attr('data-src');
 								var alt = $(val).find('.image-box').find('img').attr('alt');
 								/*var url = $(val).find('header').find('a').attr('href');*/
 								var path = changePath(img);
@@ -297,13 +303,17 @@
 						var items = $(data).find('section.item');
 						$(items).each(function(i,val){
 							if(i == 0){
+								console.log('more like this desktop');
 								console.log(val);
 								var title = $(val).find('.item-details').find('a').text();
 								var img = $(val).find('header').find('img').attr('data-wink');
 								var alt = $(val).find('header').find('img').attr('alt');
 
 								if(img == undefined){
-									img = $(val).find('header').find('img').attr('data-src');
+									img = $(val).find('header').find('img').attr('src');
+									if(img == '/mas_assets/empty.png'){
+										img = $(val).find('header').find('img').attr('data-src');
+									}
 								}
 								var url = $(val).find('header').find('a').attr('href');
 
@@ -314,7 +324,9 @@
 						var items = $(data).find('.single-item-box');
 						$(items).each(function(i,val){
 							if(i == 0){
-								var img = $(val).find('.image-box').find('img').attr('data-cfsrc');
+								console.log('more like this mobile');
+								console.log(val);
+								var img = $(val).find('.image-box').find('img').attr('data-src');
 								var alt = $(val).find('.image-box').find('img').attr('alt');
 
 								$('.more-like-this ul li').eq(theNum).find('img').attr({src: img, alt: alt});
