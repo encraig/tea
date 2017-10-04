@@ -29,10 +29,10 @@
 			<!-- <a href="" class="hp-url" id="c1" alt=""><img class="mobile" src="../images/c1-m.jpg" alt="" /></a> -->
 
 			<!-- mobile copy -->
-			<p class="mobile body-copy">It's the season to celebrate! There's magic in the air. And Special <br>occasions around every corner. From school performances to<br> holiday parties, they'll be dressed to impress all season!</p>
+			<p class="mobile body-copy">It's the season to celebrate! There's magic in the air. And special <br>occasions around every corner. From school performances to<br> holiday parties, they'll be dressed to impress all season!</p>
 
 			<h2 class="desktop">A Season to Celebrate</h2>
-			<p class="body-copy desktop">There's magic in the air. And Special occasions around<br> every corner. From school performances to holiday<br> parties, they'll be dressed to impress all season!</p>
+			<p class="body-copy desktop">There's magic in the air. And special occasions around<br> every corner. From school performances to holiday<br> parties, they'll be dressed to impress all season!</p>
 			<a href="" class="cta hp-url cta1" id="c1"></a>
 			<a href="" class="cta hp-url cta2" id="c1"></a> 
 		</div>
@@ -256,10 +256,9 @@
 	
 </div>
 
-	<!-- <div class="video">
-		<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/170727/video.jpg"/>
-		<iframe src="https://player.vimeo.com/video/232722942" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-	</div> -->
+	<div class="video">
+		<iframe src="https://player.vimeo.com/video/235952689" id="vimeo" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+	</div>
 
 
 <!-- responsive image maps plugin -->
@@ -311,9 +310,9 @@ $(document).ready(function() {
 		//cell 4
 		{
 			cell: '.c4', 
-			url:'/baby-boy-clothes', 
-			cta1: {url:'/baby-girl-clothes', text:'baby girl'}, 
-			cta2: {url:'/baby-boy-clothes', text:'baby boy'}
+			url:'/baby-boy-clothes/new-arrivals', 
+			cta1: {url:'/baby-girl-clothes/new-arrivals', text:'baby girl'}, 
+			cta2: {url:'/baby-boy-clothes/new-arrivals', text:'baby boy'}
 		},
 
 		//cell 5
@@ -328,7 +327,7 @@ $(document).ready(function() {
 		{
 			cell: '.c6', 
 			url:'/boys-tees-tops', 
-			cta1: {url:'/boys-tees-tops', text:'boy tees & tops'}, 
+			cta1: {url:'/boys-tees-tops', text:'boy tees & shirts'}, 
 			cta2: {url:'', text:''}
 		},
 
@@ -418,6 +417,9 @@ $(document).ready(function() {
 		//move the video below the slideshow
 		// $('.hp').after($('.hp .video'));
 		// $('.video').remove();
+
+		//change the height of vimeo video
+		$('.video #vimeo').height(220);
 
 		// start slick slideshow
 		// $('.hp').slick({
