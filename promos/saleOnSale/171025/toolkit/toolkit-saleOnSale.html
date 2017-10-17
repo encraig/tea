@@ -1,0 +1,275 @@
+<!-- toolkit -->
+<style>
+	html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.desktop-promo img,.desktop-promo-hp img,.mobile-promo img,.mobile-promo-hp img{max-width:100%}@media screen and (max-width:736px){.desktop-promo,.desktop-promo-hp{display:none}}.mobile-promo,.mobile-promo-hp{display:none}@media screen and (max-width:736px){.mobile-promo,.mobile-promo-hp{display:block}}.mobile-promo img,.mobile-promo-hp img{image-rendering:-webkit-optimize-contrast}.desktop-promo{margin-bottom:10px;box-sizing:border-box}.desktop-promo h2{font-family:brown-pro-bold !important;padding-left:18px}.desktop-promo h2 span.first-text{color:#dbbe3c;text-transform:uppercase;font-size:21px;letter-spacing:3.2px}.desktop-promo h2 span.middle-text{color:#fff;font-size:16px;letter-spacing:1.1px}.desktop-promo h2 span.middle-text.one{padding-left:9px}.desktop-promo h2 span.middle-text.two{padding-left:3px}.desktop-promo h2 span.middle-text.three{padding-left:2px}.desktop-promo h2 span.dots-text{color:#dbbe3c;font-size:30px;padding-left:1px;position:relative;top:-3px}.desktop-promo h2 span.use-code-text{color:#dbbe3c;text-transform:uppercase;font-size:13px;padding-left:19px;letter-spacing:1.1px;position:relative;top:-1px}.desktop-promo h2 span.see-details-text{text-transform:uppercase;text-decoration:underline;padding-left:22px;font-size:10px;letter-spacing:1.1px;position:relative;top:-3px}.desktop-promo h2 span.see-details-text a{color:#fff}#details-promo{display:none;width:600px;background:#fff}@media screen and (max-width:736px){#details-promo{width:100%;position:absolute;z-index:9999;height:100%;background:#fff}}.details-container{margin:27px;border-top:1px solid #333333;border-bottom:1px solid #333333;padding:10px 0}.details-container h2{text-transform:uppercase;font-size:15px;letter-spacing:1px}.details-container p{font-size:13px;line-height:20px}.close-fancy{display:none;text-align:center}@media screen and (max-width:736px){.close-fancy{display:block}}/*# sourceMappingURL=styles.css.map */
+</style>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+  
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!--	
+		STEPS TO UPDATE:
+		- uncomment the promo you need:
+			for example if you have a desktop promo for all pages with image map then uncomment
+			the section:
+			<div class="desktop-promo">
+			 where it says:  "banner with image map"
+			 - DON'T CHANGE THE <map>
+			 - JUST CHANGE THE <area>
+			 - THE LIGHTBOX CTA NEEDS A CLASS OF see-details AND HREF OF #details-promo
+			 	for example: <area class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="0,0,750,92" style="outline:none;" target="_self"     />
+
+		- change the image path
+		- change the fine print
+		- change the alt string for all promo images
+			in the JS section just change var alt = "the content you would type";
+	-->
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- HOMEPAGE ONLY DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo-hp">
+
+	<!--banner with no image map-->
+
+	<!--<a href="#details-promo" class="see-details">
+			<img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" class="promo-img-alt"/>
+		</a> -->
+
+	<!-- **********************************-->
+
+	<!--banner with image map -->
+
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" usemap="#hp-map-d" class="promo-img-alt"/>
+	<map name="hp-map-d">
+		<area  alt="" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="357,55,432,105" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="436,56,496,104" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="500,56,600,108" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="600,48,708,109" style="outline:none;" target="_self"     />
+		<area class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="712,0,1000,121" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- OVERALL DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo">
+
+	<!-- banner with no image map -->
+
+	<a href="#details-promo" class="see-details" target="_blank"><img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" class="promo-img-alt"/></a>
+
+	<!-- **********************************-->
+
+	<!-- banner with image map -->
+
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" usemap="#map-d" class="promo-img-alt"/>
+	<map name="map-d">
+		<area  alt="" title="" href="/clothing-sale" shape="rect" coords="804,0,1000,50" style="outline:none;" target="_self"     />
+		<area class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="728,53,1000,97" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- HOMEPAGE ONLY MOBILE PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="mobile-promo-hp">
+
+	<!-- banner with no image map -->
+
+	<!-- <a href="#details-promo" class="see-details"><img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" class="promo-img-alt"/></a> -->
+
+	<!-- **********************************-->
+
+	<!-- banner with image map -->
+
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" usemap="#hp-map-m" class="promo-img-alt"/>
+	<map name="hp-map-m">
+		<area class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="0,0,750,92" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/girls-clothing" shape="rect" coords="0,93,103,154" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/boys-clothing" shape="rect" coords="109,93,219,154" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-girl-clothes" shape="rect" coords="222,93,403,154" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-boy-clothes" shape="rect" coords="406,93,577,154" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/newborn-clothes" shape="rect" coords="583,94,750,154" style="outline:none;" target="_self"     />
+	</map> -->
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- OVERALL MOBILE PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="mobile-promo">
+
+	<!-- banner with no image map -->
+	
+	<a href="#details-promo" class="see-details" target="_blank"><img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" class="promo-img-alt"/></a>
+
+	<!-- **********************************-->
+
+	<!-- banner with image map -->
+
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg" alt="" usemap="#map-m" class="promo-img-alt" />
+	<map name="map-m">
+		<area  alt="" title="" href="/girls-clothing/new-arrivals" shape="rect" coords="0,111,138,170" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/boys-clothing/new-arrivals" shape="rect" coords="141,111,254,170" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-girl-clothes/new-arrivals" shape="rect" coords="259,110,435,170" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-boy-clothes/new-arrivals" shape="rect" coords="439,111,611,170" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/clothing-sale" shape="rect" coords="613,110,750,170" style="outline:none;" target="_self"     />
+		<area  class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="0,0,750,111" style="outline:none;" target="_self"     /> -->
+	</map>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- FINE PRINT -->
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter code LOCHNESS during checkout to receive 25% your order at TeaCollection.com. Offer expires at 11:59 pm PT on 10/2/2017. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Not applicable to the purchase of Global Shop items labeled "Global Archive", Everyday Playsets, Patagonia, Livie & Luca, and Saltwater. Limited to stock on hand.</p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p>
+	</div>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- dev resources -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!--prod resources -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<script>
+	jQuery(document).ready(function(){
+
+		//CHANGE THE STRING FOR THE ALT FOR ALL PROMO DESKTOP AND MOBILE IMAGES
+		var alt = "THE FRIENDS & FAMILY EVENT 25% OFF USE CODE: LOCHNESS";
+
+		$('.promo-img-alt').attr('alt', alt);
+
+
+		//function to add alt to area
+		var addAltArea = function(map, str){
+			var area = $(map).find('area');
+			$(area).each(function(i,val){
+				var href = $(val).attr('href');
+				href = href.replace("/","");
+				var cat = href.split("-");
+				if(cat[0] == 'baby'){
+					cat = cat[0] + " " + cat[1];
+				} else if(cat[0].indexOf('#') !== -1) {
+					cat = 'see details';
+				} else {
+					cat = cat[0]
+				}
+
+				//add the alt
+				$(val).attr('alt', cat + areaAlt + ' ' + str);
+
+			});
+		};
+
+		
+		var areaAlt = ' promo banner cta';
+		//add the alt to areas
+		addAltArea('map[name="map-d"]', 'desktop')
+		addAltArea('map[name="map-m"]', 'mobile')
+
+
+		// hide on login page on mobile and sale page
+		if(jQuery(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				jQuery('.desktop-promo, .mobile-promo').hide();
+			}
+
+			// if(url == '/clothing-sale') {
+			// 	jQuery('.desktop-promo, .mobile-promo').hide();
+			// }
+		}
+
+		//responsive image map
+		jQuery('img[usemap]').rwdImageMaps();
+
+	//function to hide or show the banner
+	var hideBanners = function() {
+		
+		var url = window.location.pathname;
+		// console.log(url); 
+
+		//desktop
+		if(jQuery(window).width()>737){
+
+			//show the fineprint in a lightbox
+			jQuery('.see-details').fancybox();
+
+			//if homepage show homepage banner
+			// if(url == '/'){
+			// 	jQuery('.desktop-promo-hp').show();
+			// 	jQuery('.desktop-promo').hide();
+
+			// hide banner on sale page
+			// } else if(url == '/clothing-sale') {
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+
+			//if all other pages show regular banner
+			// } else {
+			// 	jQuery('.desktop-promo-hp').hide();
+			// 	jQuery('.desktop-promo').show();
+			// }
+
+			//for when resize going up hide the mobile banners
+			jQuery('.mobile-promo-hp, .mobile-promo').hide();
+
+		// mobile 
+		} else if(jQuery(window).width()<737){
+			//hide the desktop banners
+			//jQuery('.desktop-promo-hp, .desktop-promo').hide();
+
+			//if homepage show homepage banner
+			// if(url == '/'){
+			// 	jQuery('.mobile-promo-hp').show();
+			// 	jQuery('.mobile-promo').hide();
+
+			// //hide banner on sale page
+			// } else if(url == '/clothing-sale') {
+			// 	jQuery('.mobile-promo, .mobile-promo-hp').hide();
+
+			// //if all other pages show regular banner
+			// } else {
+			// 	jQuery('.mobile-promo-hp').hide();
+			// 	jQuery('.mobile-promo').show();
+			// }
+
+			// slide toggle the fineprint
+			jQuery('.see-details, .close-fancy').click(function(e){
+				e.preventDefault();
+				jQuery('#details-promo').slideToggle();
+			});
+		} 
+	};
+
+		//on page load call hideBanners
+		hideBanners();
+		
+		//on window resize call hideBanners
+		$(window).resize(function(){
+			hideBanners();
+		});
+		
+	});
+</script>
+
