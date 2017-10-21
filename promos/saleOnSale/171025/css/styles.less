@@ -3,6 +3,9 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 .desktop-promo img, .desktop-promo-hp img, .mobile-promo img, .mobile-promo-hp img {
+	
+	image-rendering: -webkit-optimize-contrast; 
+
 	max-width:100%;
 }
 //-----------------------------------------------------------------------------------------
@@ -117,7 +120,7 @@ html {
 	margin: 27px;
 	border-top: 1px solid #333333;
 	border-bottom: 1px solid #333333;
-	padding: 10px 0;
+	padding: 20px 0;
 
 	h2 {
 		text-transform: uppercase;
@@ -138,4 +141,37 @@ html {
 
 	display:none;
 	text-align:center;
+}
+//-----------------------------------------------------------------------------------------
+.cta-drop-down {
+	overflow:hidden;
+
+	a {
+		font-size: 10px;
+    	position: relative;
+    	padding: 9px 0 7px;
+    	box-sizing: border-box;
+    	text-transform: uppercase;
+    	display: inline-block;
+    	width: 45%;
+    	margin-right: 2em;
+    	margin-bottom: 2em;
+    	text-align: center;
+
+    	//green background
+    	//background: #c0cb41;
+    	//blue text color
+    	//color: #06506b;
+
+    	background: #06506b;
+    	color: #fff;
+    	
+    	text-decoration: none;
+    	letter-spacing: 1px;
+    	font-family:brown-pro-bold !important;
+
+    	&:nth-of-type(even){
+    		margin-right:0;
+    	}
+	}
 }
