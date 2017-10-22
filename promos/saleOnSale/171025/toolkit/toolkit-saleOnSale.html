@@ -232,12 +232,6 @@
 				jQuery('.desktop-promo, .desktop-promo-hp').hide();
 			}	
 
-			//if all other pages show regular banner
-			// } else {
-			// 	jQuery('.desktop-promo-hp').hide();
-			// 	jQuery('.desktop-promo').show();
-			// }
-
 			//for when resize going up hide the mobile banners
 			jQuery('.mobile-promo-hp, .mobile-promo').hide();
 
@@ -256,18 +250,6 @@
 				if(url == '/clothing-sale') {
 					jQuery('.mobile-promo, .mobile-promo-hp').hide();
 				}
-
-			// //if all other pages show regular banner
-			// } else {
-			// 	jQuery('.mobile-promo-hp').hide();
-			// 	jQuery('.mobile-promo').show();
-			// }
-
-			// slide toggle the fineprint
-			jQuery('.see-details, .close-fancy').click(function(e){
-				e.preventDefault();
-				jQuery('#details-promo').slideToggle();
-			});
 		} 
 	};
 
@@ -277,6 +259,12 @@
 		//on window resize call hideBanners
 		$(window).resize(function(){
 			hideBanners();
+		});
+
+		// slide toggle the fineprint
+		jQuery('.see-details, .close-fancy').click(function(e){
+			e.preventDefault();
+			jQuery('#details-promo').slideToggle();
 		});
 		
 	});
