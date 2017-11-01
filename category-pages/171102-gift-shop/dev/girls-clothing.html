@@ -16,14 +16,24 @@
 		color:#fff !important;
 	}
 
+/*---------------------------------------------------------------------*/
+
 	/*c2*/
-	.gift-shop-container .c2 .cta, .gift-shop-container .c2 .tip {
+	.gift-shop-container .c2 .cta, .gift-shop-container .c2 .tip, .gift-shop-container .c2 #pj-fineprint {
 		color:#A9599E !important;
+	}
+	.gift-shop-container .c2 #pj-fineprint {
+		text-decoration:underline;
 	}
 	.gift-shop-container .c2 .cta:hover {
 		background:#A9599E;
 		color:#fff !important;
 	}
+	.gift-shop-container .c2 div:first-of-type p {
+		margin:11px 0 11px 0 !important;
+	}
+
+/*---------------------------------------------------------------------*/	
 
 	/*c3*/
 	.gift-shop-container .c3 .cta, .gift-shop-container .c3 .tip {
@@ -33,6 +43,11 @@
 		background:#008BB8;
 		color:#fff !important;
 	}
+	.gift-shop-container .c3  p {
+		margin:23px 0 23px 0 !important;
+	}
+
+/*---------------------------------------------------------------------*/
 
 	/*c4
 	*/.gift-shop-container .c4 .cta, .gift-shop-container .c4 .tip {
@@ -42,6 +57,11 @@
 		background:#8A7AA0;
 		color:#fff !important;
 	}
+	.gift-shop-container .c4 div:first-of-type p {
+		margin:23px 0 23px 0 !important;
+	}
+
+/*---------------------------------------------------------------------*/
 
 	/*c5*/
 	.gift-shop-container .c5 .cta, .gift-shop-container .c5 .tip {
@@ -52,6 +72,8 @@
 		color:#fff !important;
 	}
 
+/*---------------------------------------------------------------------*/
+
 	/*c6*/
 	.gift-shop-container .c6 .cta, .gift-shop-container .c6 .tip {
 		color:#690046 !important;
@@ -60,7 +82,18 @@
 		background:#690046;
 		color:#fff !important;
 	}
+	.gift-shop-container .c6 div:first-of-type p {
+		margin:11px 0 11px 0 !important;
+	}
+
 </style>
+
+<div id="pj-details">
+	<div class="pj-container">
+		<p>Enter code GETCOZY during checkout to receive 2 PJ sets for $65. Offer available online at teacollection.com until 12/26/2017 at 11:59PM. No adjustments on previous purchases. Not redeemable for cash. Discount taken will be pre-tax. Limited to stock on hand.</p>
+		<p class="close-pj">close</p>
+	</div>
+</div>
 
 <div class="top">
 	<!-- <img src="/mas_assets/theme/tea_collection/images/categories/gift-shop/171102/girl/top-d.jpg" alt="give them tea" /> -->
@@ -102,11 +135,9 @@
 			<img src="/mas_assets/theme/tea_collection/images/categories/gift-shop/171102/girl/c2-m.gif" alt=""  class="mobile"/>
 
 			<p>
-				A modern take on the tale of ‘The Mermaid Wife’ with<br class="mobile"> dancing mythical mermaids and somersaulting sea lions.
+				A modern take on the tale of ‘The Mermaid Wife’ with<br class="mobile"> dancing mythical mermaids and somersaulting sea lions.<br> 
 
-				<br> 
-
-				<span class="tip"><span>Gifting Tip:</span> We’ve got PJs for all the kids on your list! Get<br class="mobile"> any 2 sets for $60</span>
+				<span class="tip"><span>Gifting Tip:</span> We’ve got PJs for all the kids on your list! Get<br class="mobile"> any 2 sets for $65. <a href="#pj-details" id="pj-fineprint">see details</a></span>
 			</p>
 			
 			<a href="#" class="cta gift-it">gift it</a>
@@ -128,7 +159,7 @@
 			<img src="/mas_assets/theme/tea_collection/images/categories/gift-shop/171102/girl/c3b-d.jpg" alt=""  class="desktop"/>
 
 			<p>
-				Featuring one-of-a-kind graphics<br class="desktop"> and whimsical Scottish<br class="mobile"> tales, our<br class="desktop"> Storytelling Tees make the perfect present<br class="desktop"> for<br class="mobile"> curious minds!
+				Featuring one-of-a-kind graphics<br class="desktop"> and whimsical Scottish<br class="mobile"> tales, our<br class="desktop"> Storytelling Tees make the perfect<br class="desktop"> present for<br class="mobile"> curious minds!
 
 				<br>
 
@@ -149,10 +180,8 @@
 			<img src="/mas_assets/theme/tea_collection/images/categories/gift-shop/171102/girl/c4-m.gif" alt=""  class="mobile"/>
 
 			<p>
-				A made-to-match combo with lots of festive flair!
+				A made-to-match combo with lots of festive flair!<br>
 
-				<br>
-				
 				<span class="tip"><span>Gifting Tip:</span> A picture perfect pair – little<br> sister has tulle dresses, too.</span>
 			</p>
 			
@@ -194,10 +223,8 @@
 			<img src="/mas_assets/theme/tea_collection/images/categories/gift-shop/171102/girl/c6-m.gif" alt=""  class="mobile"/>
 
 			<p>
-				Heirloom quality. Timeless style.<br class="desktop"> Give the gift of traditional Fair Isle with this<br class="desktop"> snuggly sweater!
+				Heirloom quality. Timeless style.<br class="desktop"> Give the gift of traditional Fair Isle<br class="desktop"> with this snuggly sweater!<br>
 
-				<br>
-				
 				<span class="tip"><span>Gifting Tip:</span> Deck the family in Scots-inspired style!<br class="desktop"> We have special sweaters for all her siblings.</span>
 			</p>
 			
@@ -217,7 +244,7 @@
 		</a>
 	</div>
 
-	<a href="/childrens-clothing-gift-shop" class="return cta">return to all gifts</a>
+	<a href="/childrens-clothing-gift-shop" class="return cta">Go Back to the Gift Shop &#62;</a>
 </div>
 
 
@@ -227,8 +254,8 @@
 <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <!-- prod -->
-<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
 <!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <script>
@@ -244,6 +271,33 @@
 		// 	var newSrc = 'https://www.teacollection.com' + src;
 		// 	$(val).attr('src', newSrc)
 		// });
+
+		//desktop fineprint
+		if($(window).width()>737){
+			//lightbox for fineprint
+			$('#pj-fineprint').fancybox({
+				afterClose: function(){
+					$('.fancybox-overlay').remove();
+				}
+			});
+		}
+
+		//mobile fineprint
+		if($(window).width()<737){
+			// slide toggle the fineprint
+			$('#pj-fineprint').click(function(e){
+				e.preventDefault();
+				$('#pj-details').slideToggle();
+				var pos = $(this).offset();
+				$('.pj-container').css({position:'relative', top: pos.top - 500});
+			});
+
+			$('.close-pj').click(function(e){
+				e.preventDefault();
+				$('#pj-details').slideToggle();
+			});
+		}
+		
 
 		var bundle = [];
 
@@ -345,8 +399,16 @@
 							var title = $(details).find('h1[itemprop="name"]').html();
 							var price = $(details).find('span[itemprop="price"]').html();
 							var sizes = $(details).find('.size-swatches ol li input');
-							var img = $(data).find('#pdp-left').find('img[itemprop="image"]').attr('src');
-							var imgSrc = img.split('800x');
+
+							if(sku == '7f12220'){
+								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/c/8/e/1000x-116967.Jpg';
+								var imgSrc = img.split('1000x');
+							} else {
+								var img = $(data).find('#pdp-left').find('img[itemprop="image"]').attr('src');
+								var imgSrc = img.split('800x');
+							}
+							
+
 							var imgSize = '416x416' + imgSrc[1];
 							imgSrc = imgSrc[0] + imgSize;
 						}
@@ -368,8 +430,16 @@
 							}
 							
 							var sizes = $(data).find('.size-section').find('input');
-							var img = $(data).find('.product-images').attr('data-product-img');
-							var imgSrc = img.split('800x');
+
+							if(sku == '7f12220'){
+								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/c/8/e/1000x-116967.Jpg';
+								var imgSrc = img.split('1000x');
+							} else {
+								var img = $(data).find('.product-images').attr('data-product-img');
+								var imgSrc = img.split('800x');
+							}
+							
+
 							var imgSize = '416x416' + imgSrc[1];
 							imgSrc = imgSrc[0] + imgSize;
 							
