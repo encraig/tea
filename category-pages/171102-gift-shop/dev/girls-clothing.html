@@ -391,7 +391,7 @@
 			$.each(skus, function(i,val){
 				if(val !== undefined){
 					var sku = val.split('-')[0];
-					$.get('https://www.teacollection.com/product/' + sku, function(data){
+					$.get('/product/' + sku, function(data){
 						// console.log(data);
 						//desktop
 						if($(window).width()>737){
@@ -403,7 +403,14 @@
 							if(sku == '7f12220'){
 								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/c/8/e/1000x-116967.Jpg';
 								var imgSrc = img.split('1000x');
-							} else {
+							}
+
+							else if(sku == '6f12200'){
+								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/e/a/c/1000x-125644.Jpg';
+								var imgSrc = img.split('1000x');
+							}
+
+							else {
 								var img = $(data).find('#pdp-left').find('img[itemprop="image"]').attr('src');
 								var imgSrc = img.split('800x');
 							}
@@ -434,7 +441,14 @@
 							if(sku == '7f12220'){
 								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/c/8/e/1000x-116967.Jpg';
 								var imgSrc = img.split('1000x');
-							} else {
+							}
+
+							else if(sku == '6f12200'){
+								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/e/a/c/1000x-125644.Jpg';
+								var imgSrc = img.split('1000x');
+							} 
+
+							else {
 								var img = $(data).find('.product-images').attr('data-product-img');
 								var imgSrc = img.split('800x');
 							}
