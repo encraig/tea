@@ -1,0 +1,76 @@
+<!-- toolkit -->
+<style>
+	include "../css/styles.css"
+</style>
+
+<!-- dev css --> 
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<div class="email-sign-up">
+	<div class="left">
+		<h2>It's almost<br> <span>Black Friday</span></h2>
+		<p>Sign up for our emails<br class="desktop"> and be the first to know<br class="desktop"> when the big day comes.</p>
+		<p>All your favorite Tea Collection staples, from girls dresses and legging to baby sweaters and rompers, will be on sale at unbeatable prices.</p>
+	</div>
+
+	<div class="right">
+
+		<!-- <h3 class="mobile">Sign up for our emails &amp; get</h3>
+		<h2>20% off<br> <span>+ free shipping<br> on your first order</span></h2>
+		<p class="mobile">at TeaCollection.com.</p>
+		<p class="desktop">Shop the latest globally-inspired styles, read<br> exclusive travel stories &amp; get first alerts about sales.</p> -->
+		
+		<form action="https://newsletter.teacollection.com/pub/rf" id="myform2" name="myform2"> 
+			<input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGpzgIHWGAMlzeltXb5zaLzb1zfogFsnVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGoKza4Jzgm5zbdNfzdADwKLezaAjC7O"> 
+			<input type="hidden" name="ACQUISITION_SOURCE" value="quickform10"> 
+			<input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I"> 
+			<input type="hidden" name="activity" value="submit"> 
+			<input type="hidden" name="COLD_STORAGE" value="N"> 
+			<span id="errors"></span> 
+			<input class="nl-email" id="emailField" name="email_address_" onfocus="prefillClear(this);" onblur="prefillClear(this);" type="text" placeholder="Email Address"> 
+			<input type="submit" class="nl-signup" value="Sign Me Up" id="submitEmail">
+		</form>
+	</div>
+</div>
+
+
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+jQuery(document).ready(function(){
+
+
+//on press enter
+		jQuery('#myform2').on('keyup keypress', function(e) {
+		  var keyCode = e.keyCode || e.which;
+		  if (keyCode === 13) { 
+			e.preventDefault();
+			ValidateEmail(document.myform2.email_address_);
+			//return false;
+		  }
+		});
+
+
+//on submit form
+	jQuery('#submitEmail').click(function(e){
+		//console.log(e);
+		e.preventDefault();
+		ValidateEmail(document.myform2.email_address_);
+	});
+
+//validate
+    function ValidateEmail(inputText)  {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+		if(inputText.value.match(mailformat))  {  
+			document.myform2.email_address_.focus();  
+			myform2.submit();			
+			}  
+		else  {  
+			//alert("You have entered an invalid email address!");
+			document.getElementById('errors').innerHTML='Please Enter A Valid Email Address';
+			document.myform2.email_address_.focus();  
+			return false;  
+		}  
+    }  
+
+});
+</script>
