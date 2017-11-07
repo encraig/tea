@@ -592,6 +592,9 @@
 									$('.processing').html('SUCCESS!!!');
 
 									$(li).append('<div class="success"><h3>'+title+' added to cart.</h3><i>'+closeSvg+'</i></div>');
+									
+									$('#view-cart').trigger('mouseenter');
+									
 									// close the popup on click
 									$('.success i').click(function(){
 										$('.success').remove();
