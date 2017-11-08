@@ -1,0 +1,176 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.hp-takeover {
+	display:none;	
+}
+.desktop-promo img, .desktop-promo-hp img, .mobile-promo img, .mobile-promo-hp img {
+	
+	image-rendering: -webkit-optimize-contrast; 
+
+	max-width:100%;
+} 
+//-----------------------------------------------------------------------------------------
+.desktop-promo, .desktop-promo-hp {
+	@media screen and (max-width: 736px){
+		display:none;
+	}
+}
+.mobile-promo, .mobile-promo-hp {
+	@media screen and (max-width: 736px){
+		display:block;
+	}
+
+	display:none;
+
+	img {
+		//width:100%;
+		image-rendering:-webkit-optimize-contrast;
+	}
+} 
+//-----------------------------------------------------------------------------------------
+.desktop-promo {
+	//styles for live type
+	//background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/fineprint/bmsm/170821/170821-bmsm-d.jpg') no-repeat center top;
+	//background: #40606f; 
+	//min-height: 60px;
+	//padding:18px 0 0;
+
+	margin-bottom: 10px;
+	box-sizing:border-box; 
+  
+	h2 {
+		font-family: brown-pro-bold !important;
+		padding-left: 18px;
+
+		span {
+			&.first-text {
+				color: #dbbe3c;
+    			text-transform: uppercase;
+    			font-size: 21px;
+    			letter-spacing: 3.2px;
+			}
+
+			&.middle-text {
+				color: #fff;
+    			font-size: 16px;
+    			letter-spacing: 1.1px;
+
+    			&.one{
+    				padding-left: 9px;
+    			}
+
+    			&.two{
+    				padding-left:3px;
+    			}
+
+    			&.three{
+    				padding-left:2px;
+    			}
+			}
+
+			&.dots-text {
+				color: #dbbe3c;
+    			font-size: 30px;
+    			padding-left: 1px;
+    			position: relative;
+    			top: -3px;
+			}
+
+			&.use-code-text {
+				color:#dbbe3c;
+				text-transform:uppercase;
+				font-size: 13px;
+    			padding-left: 19px;
+    			letter-spacing: 1.1px;
+    			position: relative;
+    			top: -1px;
+			}
+
+			&.see-details-text {
+				a {
+    				color:#fff;
+    			}
+
+				text-transform:uppercase;
+				text-decoration: underline;
+    			padding-left: 22px;
+    			font-size: 10px;
+    			letter-spacing: 1.1px;
+    			position: relative;
+    			top: -3px;
+			}
+		}
+	}
+}
+//-----------------------------------------------------------------------------------------
+#details-promo {
+	@media screen and (max-width: 736px){
+		width:100%;
+		position:absolute;
+		z-index:9999;
+		height:100%;
+		background:#fff;
+	}
+
+	display:none;
+	width:600px;
+	min-height: 158px;
+	background:#fff;
+}
+//-----------------------------------------------------------------------------------------
+.details-container {
+	margin: 27px;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	padding: 20px 0;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+
+	p {
+		font-size: 13px;
+		line-height: 20px;
+	}
+}
+//-----------------------------------------------------------------------------------------
+.close-fancy {
+	@media screen and (max-width: 736px){
+		display:block;
+	}
+
+	display:none;
+	text-align:center;
+}
+//-----------------------------------------------------------------------------------------
+.cta-drop-down {
+	overflow:hidden;
+
+	a {
+		font-size: 10px;
+    	position: relative;
+    	padding: 9px 0 7px;
+    	box-sizing: border-box;
+    	text-transform: uppercase;
+    	display: inline-block;
+    	width: 45%;
+    	margin-right: 2em;
+    	margin-bottom: 2em;
+    	text-align: center;
+
+    	background: #e6542e;
+    	color: #fff;
+    	
+    	text-decoration: none;
+    	letter-spacing: 1px;
+    	font-family:brown-pro-bold !important;
+
+    	&:nth-of-type(even){
+    		margin-right:0;
+    	}
+	}
+}
