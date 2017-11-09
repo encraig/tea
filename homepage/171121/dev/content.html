@@ -52,14 +52,24 @@
 
 	<!-- ///////////////////////////////////////////////////////////-->
 
-	<div class="">
-		<img src="/mas_assets/theme/tea_collection/fineprint/black-friday/171121/171121-black-friday-hp-d.jpg" class="desktop" usemap="#hp-map-d"/>
-		<map name="hp-map-d">
+	<div class="bf">
+		<!-- <img src="/mas_assets/theme/tea_collection/fineprint/black-friday/171121/171121-black-friday-hp-d.jpg"  class="desktop ref" usemap="#hp-map-d"/> -->
+
+		<img src="/mas_assets/theme/tea_collection/fineprint/black-friday/171121/171121-black-friday-hp-d-v2.svg" class="desktop" alt="the black friday event more styles than ever $15 and under! Don't wait to save! Shop now, these styles won't last!"/>
+		
+		<ul class="desktop">
+			<li><a href="/girls/black-friday" class="cta">girl</a></li>
+			<li><a href="/boys/black-friday" class="cta">boy</a></li>
+			<li><a href="/baby-girl/black-friday" class="cta">baby girl</a></li>
+			<li><a href="/baby-boy/black-friday" class="cta">baby boy</a></li>
+		</ul>
+
+		<!-- <map name="hp-map-d">
 			<area  class="hp-url" alt="girls black friday" title="" href="/girls/black-friday" shape="rect" coords="759,163,961,201" style="outline:none;" target="_self"     />
 			<area  class="hp-url" alt="boys black friday" title="" href="/boys/black-friday" shape="rect" coords="760,220,960,259" style="outline:none;" target="_self"     />
 			<area  class="hp-url" alt="baby girl black friday" title="" href="/baby-girl/black-friday" shape="rect" coords="760,279,961,317" style="outline:none;" target="_self"     />
 			<area  class="hp-url" alt="baby boy black friday" title="" href="/baby-boy/black-friday" shape="rect" coords="760,337,961,375" style="outline:none;" target="_self"     />
-		</map>
+		</map> -->
 
 		<img src="/mas_assets/theme/tea_collection/fineprint/black-friday/171121/171121-black-friday-hp-m.jpg" class="mobile" usemap="#hp-map-m"/>
 		<map name="hp-map-m">
@@ -119,6 +129,14 @@
 <script>
 $(document).ready(function() {
 	$('img[usemap]').rwdImageMaps();
+
+	//dev image src
+	// var imgs = $('.hp .bf img');
+	// $.each(imgs, function(i,val){
+	// 	var src = $(val).attr('src');
+	// 	var newSrc = 'https://www.teacollection.com' + src;
+	// 	$(val).attr('src', newSrc)
+	// });
 
 	//variables for urls
 	var cells = [
