@@ -282,6 +282,16 @@
 	var hideBanners = function() {
 		
 		var url = window.location.pathname;
+
+		//for black friday
+		var bf = url.split('/');
+		if(bf[2] !== undefined){
+			bf = bf[2].split('-');
+			bf = bf[0];
+			console.log(bf);
+		} else {
+			bf = bf[1];
+		}
 		// console.log(url); 
 
 		//desktop
@@ -303,6 +313,11 @@
 
 			// hide banner on black friday page
 			if(url == '/black-friday') {
+				jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			}
+
+			//hide banners on all sub cats of black friday
+			if(bf.indexOf('black') !== -1){
 				jQuery('.desktop-promo, .desktop-promo-hp').hide();
 			}
 
@@ -334,6 +349,11 @@
 			if(url == '/black-friday') {
 				jQuery('.mobile-promo, .mobile-promo-hp').hide();
 			}
+
+			//hide banners on all sub cats of black friday
+			// if(bf.indexOf('black') !== -1){
+			// 	jQuery('.mobile-promo, .mobile-promo-hp').hide();
+			// }
 
 			//hide banner on sale page
 			// if(url == '/clothing-sale') {
