@@ -180,7 +180,7 @@
 			<!-- <a href="/clothing-sale" style="width:97%">sale</a> -->
 		<!-- </div> -->
 		<h2>Details</h2>
-		<p>Tea collection items only. Limited to stock on hand. Restrictions apply.</p>
+		<p>Black Friday Event applies to select styles only. Offer ends on 11/25/2017 at 11:59pm PST. Limited to stock on hand. Restrictions apply.</p>
 
 		<p><a href="#" class="close-fancy">CLOSE</a></p>
 	</div>
@@ -319,6 +319,11 @@
 			//hide banners on all sub cats of black friday
 			if(bf.indexOf('black') !== -1){
 				jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			}
+
+			//show the banner on the baby boy & baby girl black friday page
+			if(url == '/baby-boy-black-friday' || url == '/baby-girl-black-friday'){
+				jQuery('.desktop-promo, .desktop-promo-hp').show();
 			}
 
 			// hide banner on sale page
