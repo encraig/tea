@@ -1,0 +1,113 @@
+{literal}
+<style type="text/css">
+
+.fancybox-close {
+    display:none;
+}
+
+.return {
+	cursor: pointer;
+    position: absolute;
+    left: 39px;
+    top: 38px;
+    z-index: 9999;
+}
+
+.fancybox-opened .fancybox-skin {
+	box-shadow: none;
+}
+
+.fancybox-skin {
+	background: none;
+}
+
+#thank-you {
+	width: 500px;
+    height: 500px;
+    padding-left: 11%;
+    box-sizing: border-box;
+    background:#fff;
+}
+@media screen and (max-width:737px){
+	#thank-you {
+		position: absolute;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 9999;
+    	top: 0;
+    	left: 0;
+    	padding-left: 15%;
+	}	
+}
+
+#thank-you h2 {
+	padding-top: 42%;
+    font-size: 53px;
+    line-height: 37px;
+    padding-left: 4px;
+    letter-spacing: 2.7px;
+    font-family:brown-pro-bold !important;
+    color:#074f65;
+}
+@media screen and (max-width:737px){
+	#thank-you h2 {
+		padding-top: 59%;
+	}
+}
+#thank-you h2 span {
+	font-size: 34px;
+    letter-spacing: 2px;
+}
+#thank-you p {
+	font-size: 16px;
+    margin-top: 8px;
+    line-height: 21px;
+    padding-left: 2px;
+    letter-spacing: -.2px;
+}
+</style>
+
+{/literal}
+
+{include file="store:name=index"}
+		
+<a id="thanks" href="#thank-you" class="fancybox-thanks"></a>
+
+<div id="thank-you">
+	<!-- ref -->
+	<!--<img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/thanks-ref-d.jpg"/>-->
+
+	<img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png" class="return"/>
+	<h2>Thanks<br> <span>for signing up</span></h2>
+	<p>Your first email (and 10% off code)<br> will arrive soon.</p>
+</div>
+
+
+<script>
+{literal}
+
+jQuery(document).ready(function() {
+	if($(window).width()>737){
+		jQuery(".fancybox-thanks").fancybox();
+
+		jQuery('#thanks').click();	
+
+		jQuery( "#thank-you, .fancybox-overlay" ).click(function(){
+			window.history.back();
+		});
+	}
+
+	else if($(window).width()<737){
+		jQuery( "#thank-you" ).click(function(){
+			window.history.back();
+		});
+	}
+	
+
+});
+
+
+
+
+{/literal}
+</script>
