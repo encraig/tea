@@ -1,0 +1,444 @@
+
+//-----------------------------------------------------------------------------------------------------------
+
+//overrides
+header[role="banner"] {
+	//opacity:.5;
+	height:auto !important;
+	margin-bottom:0;
+	z-index:auto;
+	width:100em;
+	margin:0 auto;
+
+	#top-nav {
+		width:901px;
+		margin: 0 0 0 99px;
+
+		div.search-block {
+			position:relative;
+			top:-14px;
+		}
+	}
+
+	#shopping-bag #shopping-cart #shopping-cart-summary hgroup {
+		h3 {
+			color:#cc0033;
+			padding-top:5px !important;
+		}
+
+		h3, &> a {
+			padding: 3px 0 0 0;
+			color: #999;
+			font-size:10px;
+			//letter-spacing: 3px;
+		}
+	}
+
+	#top-bar div.top ul li {
+		//height: 27px;
+		//padding:0;
+
+		&#welcome-member a {
+			padding:6px 0 0 0;
+		}
+
+		&#welcome-signin  a {
+			padding: 6px 0 0 0;
+			color:#999;
+			font-size:10px;
+			
+		}
+	}
+
+	#free-shipping-container, #header-banner {
+		display:none;
+	}
+
+	#main-categories {
+		width:67%;
+		height:0;
+	}
+
+}
+
+//hide the original
+#sticky-header {
+	display:none !important;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+.header-left {
+	//width:70%;
+	//float:left;
+	//padding:32px 0 0 0;
+
+	//overflow:hidden;
+	position:relative;
+	top:-30px;
+}
+
+#company-logo {
+	float:left;
+	//height: 50px;
+
+	img {
+		width:50px;
+		height:auto;
+		position:relative;
+		top:10px;
+	}
+}
+
+nav.new-nav {
+	float:left;
+	//width:92%;
+	width:auto;
+
+	ul {
+		overflow:hidden;
+
+		li {
+			float:left;
+			//width:16%;
+
+			&>a {
+				text-decoration: none;
+    			display: block;
+    			padding: 16px 0;
+    			color: #666;
+    			height:50px;
+    			font-family: brown-pro-bold !important;
+    			font-size: 16px;
+    			box-sizing: border-box;
+    			text-align: left;	
+    			letter-spacing:0.03em;
+    			//text-transform:capitalize;
+    			width:72px;
+
+    			span {
+    				padding-bottom: 2px;
+    				font-family: brown-pro-bold !important;
+    			}
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//triangle animation
+.triangle {
+  width:100%;
+  box-sizing:border-box;
+  height:20px;
+  position:absolute;
+  height:20px;
+  left:0;
+  top: 40px;
+  background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png)no-repeat left bottom;
+  background-size:18px;
+  z-index:-1;
+  display:none;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+/*
+.triangle-2 {
+  width:100%;
+  box-sizing:border-box;
+  height:20px;
+  position:absolute;
+  height:20px;
+  left:0;
+  top: 102px;
+  background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-white-2.png)no-repeat -25px bottom;
+  background-size:25px;
+  z-index:99999;
+}
+*/
+
+//----------------------------------------------------------------------------------------------------------- 
+
+#new-sticky-header { 
+	//position:fixed;
+	position:absolute;
+	width:1000px;
+
+	//opacity:.5;
+
+	//transparent bg
+	//background: rgba(255,255,255,0.9);
+
+	//not transparent bg
+	background:#fff;
+
+	//box-shadow: 2px 0 5px 0 #ccc;
+    //-webkit-box-shadow: 2px 0 5px 0 #ccc;
+    //-moz-box-shadow: 2px 0 5px 0 #ccc;
+	margin:0 auto;
+	z-index:9999;
+	display:none;
+	top:0;
+	//left:452px;
+	//padding-bottom: 22px;
+
+	.triangle {
+		top:30px;
+	}
+
+	.header-left {
+		top:0;
+
+		.new-nav {
+			//width:79%;
+			width:100%;
+
+			&> ul {
+				padding-top:10px;
+				padding-left:7px;
+				width:618px;
+				float:left;
+			}
+		}
+	}
+
+	.sign-in-copy {
+		float:left;
+		width:283px;
+		padding-top:8px;
+
+		ul {
+			overflow:hidden;
+			margin-bottom:0px;
+
+			&.clearfix {
+				display:block !important;
+			}
+
+			&:last-of-type {
+				display:none; 
+			}
+
+			li {
+				height: auto;
+
+				&#shopping-bag-tab {
+					float:right;
+				}
+
+				&#welcome-signin {
+					float:left;
+
+					a {
+						text-decoration: none;
+    					font-size: 10px;
+    					text-transform: uppercase;
+    					letter-spacing: 1px;
+    					font-family: brown-pro-bold !important;
+    					color:#999;
+    					display:block;
+    					padding:3px 0 0 0;
+					}
+				}
+
+				&#welcome-member {
+					a {
+    					font-size: 10px;
+    					color: #572501;
+    					display: block;
+    					margin-left: 0px;
+    					text-decoration: none;
+    					text-transform: uppercase;
+    					line-height: 10px;
+    					padding:6px 0 0 0;
+
+    					.arrow {
+    						width: 0;
+    						height: 0;
+    						border-top: 4px solid transparent;
+    						border-bottom: 4px solid transparent;
+    						border-left: 4px solid #572501;
+    						display: inline-block;
+    						margin: 0 0 0 5px;
+    						vertical-align: -1px;
+    					}
+					}
+
+					.popup-member {
+						background: #ffffff;
+    					position: absolute;
+    					z-index: 9996;
+    					border-width: 1px;
+    					border-style: solid;
+    					border-color: #f1f1f1 #d0d0d0 #d0d0d0 #f1f1f1;
+    					display: none;
+    					width: 141px;
+    					margin: 5px 0 0 -1px;
+    					display:none;
+
+    					ul {
+    						margin-top:5px;
+    						padding: 0;
+    						list-style-type: none;
+    						display:block;
+
+    						li {
+    							height: 15px;
+    							float: none;
+    							width: 154px;
+    							padding: 5px 0;
+    							margin: 0;
+    							letter-spacing: 1px;
+
+    							a {
+    								font-size: 10px;
+    								color: #572501;
+    								padding: 4px 0 0 15px;
+    								margin: 0;
+    							}
+
+    							&.close {
+    								margin: 0 0 5px;
+    								padding: 0;
+    								text-align: right;
+
+    								img {
+    									width: 10px;
+    									cursor: pointer;
+    									margin-right: 20px;
+    								}
+    							}
+    						}
+    					}
+					}
+				}
+			}
+		}
+
+		#site-search {
+			form {
+				border: 1px solid #f0efef;
+
+				#q {
+					width: 85%;
+    				padding: 5px 0 5px 12px;
+    				box-sizing: border-box;
+    				border:none;
+				}
+
+				.search-btn {
+					background: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/search-glass.png) no-repeat 17px 6px;
+    				border: none;
+    				cursor: pointer;
+    				height: 20px;
+    				margin: 0;
+    				padding: 5px 0;
+    				width: 36px;
+				}
+			}
+		}
+	}
+
+	#company-logo {
+		margin-right:42px;
+	}
+
+
+		.header-left {
+			padding:0;
+
+			nav.new-nav { 
+				.triangle {
+					top:50px;	
+				}
+
+				.level-2 {
+					width:1000px;
+					left:0;
+					top:70px;
+					padding: 0 15%;
+
+					li {
+						width:100%;
+
+						&.baby-girl-cats, &.baby-boy-cats, &.newborn-cats {
+							width:33%;
+						}
+					}
+				}
+				
+
+				ul li { 
+					//width: 11%;
+
+					&.newborn-cats { 
+						.nav-container .the-list {
+							.favs, .nb-gift-shop, .cats {
+								width:33%;
+      							float:left;
+
+      							ul li {
+      								width:100%;
+
+      								a {
+      									width:100%;
+      								}
+      							}
+    						}
+
+    						.favs {
+    							width: 36% !important;
+    						}
+    						.nb-gift-shop {
+    							width:33% !important;
+    						}
+    						.cats {
+    							width:31% !important;
+    						}
+    
+						}
+					}
+
+					&.clothing-sale .level-2 {
+						padding:0 30% !important;
+
+						.nav-container .the-list {
+							.cats {
+								width:65%;
+							}
+						}
+					} 
+
+
+					.nav-container {
+						top:40px;
+						width: 100%;
+						left:0;
+
+						.the-list {
+							.favs {
+								width: 33%;
+							}
+							.cats {
+								width: 66%;
+
+								ul li {
+									width: 50%;
+								}
+							}
+							a{
+								width:100%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+}
+
+
+//-----------------------------------------------------------------------------------------------------------

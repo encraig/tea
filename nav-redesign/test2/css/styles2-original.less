@@ -1,0 +1,305 @@
+.ref {
+	position:absolute;
+	top:0;
+	left:0;
+	max-width:100%;
+	opacity:.5;
+	z-index:9999;
+} 
+
+.content-wrapper {
+  //background: red !important; 
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//hover level 1
+#new-header nav ul li {
+
+  //sale hover
+  &.clothing-sale {
+    &:hover {
+      background:none;
+    }
+  }
+
+  //newborn & sale hover 
+  &.newborn-clothes:hover, &.clothing-sale:hover {
+    .nav-container {
+      top: 82px;
+      display:block;
+      border-top: 1px solid #e6e6e8;
+    }
+  }
+
+  //level 1 default hover
+  &:hover {
+    //background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png)no-repeat center bottom;
+    color:#57585b;
+    background-size:25px;
+
+    .level-2 {
+      display:block;
+    }
+
+    .nav-container {
+      //display:block;
+      top: 50px;
+    }
+
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//level 2 hover
+#new-header nav ul li:hover {
+  
+  .level-2 li:hover {
+    .nav-container {
+      display:block;
+    }
+  }
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//level 2
+#new-header nav ul li .level-2 {
+    background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-white-2.png) no-repeat -25px bottom #e6e6e8;
+    background-size:25px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    //padding: 0px 10%;
+    box-sizing: border-box;
+    overflow:visible;
+    color:#a7a8ac;
+    z-index:9999;
+    display:none;
+
+    li {
+      width: 50%;
+      text-align: center;
+      //border: 1px solid;
+      padding: 17px 0;
+      font-family: brown-pro-bold !important;
+      font-size: 15px;
+
+      span {
+        position:relative;
+      }
+    }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//hover .favs & .cats style
+#new-header nav ul li:hover .nav-container .the-list {
+  
+  .favs, .cats {
+    ul li:hover {
+      background:none;
+    }
+  }
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//.nav-container styles
+#new-header nav ul li .nav-container {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  min-height: 250px;
+  left: 0;
+  //top:40px;
+  //border-top: 1px solid #e6e6e8;
+  box-sizing:border-box;
+  padding-left:88px;
+  padding-top:10px;
+  z-index:9999;
+  display:none;
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//.the-list & .nav-img styles
+#new-header nav ul li .nav-container {
+
+  .the-list {
+    width:79%;
+    float:left;
+    color:#a7a8ac;
+  }
+
+  .nav-img {
+    width:21%;
+    float:left;
+
+    a {
+      text-align:left;
+      padding:0;
+    }
+
+    img {
+      image-rendering:-webkit-optimize-contrast;
+      max-width:100%;
+      width:190px;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//favs & cats styles
+#new-header nav ul li .nav-container .the-list {
+  .favs, .cats {
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      letter-spacing: 1px;
+      padding: 0;
+      margin: 0 0 4px;
+      text-transform: none;
+      text-align:left;
+    }
+
+    ul li {
+      float:none;
+      height:20px;
+      width:100%;
+      padding:10px 0;
+
+      a {
+        padding:0;
+        text-align: left;
+        font-size: 12px;
+        color:#a7a8ac;
+        white-space:nowrap;
+              
+        &:hover {
+          color:#e05a24;
+        }
+      }
+    }
+  }
+
+  .favs {
+    width:26%;
+    float:left;
+  }
+
+  .cats {
+    width:74%;
+    float:left;
+
+    ul li {
+      float:left;
+      width:33%;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//newborn & sale styles
+#new-header nav ul li.newborn-clothes, #new-header nav ul li.clothing-sale  {
+  
+  .nav-container .the-list .cats {
+    width:100%;
+
+    ul li {
+      width:25%;
+    }
+  }
+
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//inspiration styles for copy of footer
+.inspiration {
+  &:hover {
+    #cell-con {
+      display:block;
+    }
+  }
+
+  #cell-con {
+    position:absolute;
+    width:100%;
+    left:0;
+    z-index:99999;
+    background:#fff;
+    border-top: 1px solid #e6e6e8;
+    padding:0;
+    overflow:hidden;
+    display:none;
+    //opacity:.5;
+
+    div {
+      float:left;
+      padding: 2%;
+      width: 20%;
+      box-sizing: border-box;
+      z-index:9999;
+      text-align:center;
+
+      .header {
+        padding: 0;
+        width:100%;
+
+        .cell-con-image {
+          padding:0;
+          width:100%;
+          float:none;
+
+          img {
+            //width:100%;
+          }
+        }
+      }
+
+      p {
+        a{
+          font-size:12px;
+          width: auto !important;
+          padding:0;
+          font-family:brown-pro-regular !important;
+          font-weight:normal;
+          text-decoration:underline;
+        }
+      }
+ 
+    }
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//sale styles
+.clothing-sale {  
+  &> a {
+    color: #dc0031 !important; 
+  }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//new-sticky-header
+#new-sticky-header #new-header .header-left nav ul li {
+  
+  //newborn & sale hover 
+  &.newborn-clothes:hover, &.clothing-sale:hover {
+    .nav-container {
+      top: 50px;
+    }
+  }
+
+  .nav-container {
+    top: 50px;
+  }
+}
