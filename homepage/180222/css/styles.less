@@ -13,22 +13,6 @@ img, video {
 }
 
 /*------------------------------------------------------------------------*/
-/*-- olapic --*/
-.olapic-see-all a {
-	&:hover {
-		color:#fff !important;
-		background:#01b5b1 !important;
-	}
-}
-
-.olapic-upload a {
-	&:hover {
-		color:#fff !important;
-		background:#01b5b1 !important;
-	}
-}
-
-/*------------------------------------------------------------------------*/
 
 /*-- slideshow styles --*/
 
@@ -39,7 +23,7 @@ img, video {
 	}
 
 	position:relative;
-	display:none;
+	//display:none;
 
 }
 
@@ -60,9 +44,9 @@ img, video {
 	}
 
 	@media screen and (min-width:374px) and (max-width:376px) {
-    	bottom: -236px !important;
-    	//display:block !important;
-    	display:none !important;
+    	bottom: -321px !important;
+    	display:block !important;
+    	//display:none !important;
 	}
 
 	@media screen and (min-width:319px) and (max-width:321px) {
@@ -73,7 +57,7 @@ img, video {
 
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:737px) {
 	.bx-wrapper {
 		margin-bottom:0 !important;
 	}
@@ -92,7 +76,7 @@ img, video {
 }
 
 .desktop {
-	@media screen and (max-width:768px){
+	@media screen and (max-width:737px){
 		display:none !important;
 	}
 }
@@ -100,7 +84,7 @@ img, video {
 .mobile {
 	display:none !important;
 
-	@media screen and(max-width:768px){
+	@media screen and(max-width:737px){
 		display:block !important;
 	}
 }
@@ -337,20 +321,21 @@ img, video {
 
 			&:hover, &:active {
 				@media screen and (max-width:737px){
-					background:#fff;
-					color:@hp-font-color;
+					//background:#fff;
+					//color:@hp-font-color;
 				}
 
-				//background:none;
-				//color:#fff;
+				background:@hp-font-color;
+				color:#fff;
 			}
 
-			//color: @hp-font-color;
-			color:#598bad;
+			color: @hp-font-color; 
+			//color:#598bad;
     		margin-top: 18px;
     		margin-bottom: 0px;
     		margin-left: 0px;
-    		border: 1px solid #fff;
+    		border:none;
+    		//border: 1px solid #fff;
     		padding: 11px 0;
     		width: 250px;
     		background: #fff;
@@ -791,10 +776,3 @@ img, video {
 
 
 /*------------------------------------------------------------------------*/
-/*-- olapic styles --*/
-
-@media screen and (max-width:768px) {
-	#olapic_specific_widget, #scroll-prompt, .homepage-text-under-olapic {
-		display:none;
-	}
-}
