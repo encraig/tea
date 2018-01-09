@@ -13,22 +13,6 @@ img, video {
 }
 
 /*------------------------------------------------------------------------*/
-/*-- olapic --*/
-.olapic-see-all a {
-	&:hover {
-		color:#fff !important;
-		background:#01b5b1 !important;
-	}
-}
-
-.olapic-upload a {
-	&:hover {
-		color:#fff !important;
-		background:#01b5b1 !important;
-	}
-}
-
-/*------------------------------------------------------------------------*/
 
 /*-- slideshow styles --*/
 
@@ -39,7 +23,7 @@ img, video {
 	}
 
 	position:relative;
-	display:none;
+	//display:none;
 
 }
 
@@ -60,9 +44,9 @@ img, video {
 	}
 
 	@media screen and (min-width:374px) and (max-width:376px) {
-    	bottom: -236px !important;
-    	//display:block !important;
-    	display:none !important;
+    	bottom: -255px !important;
+    	display:block !important;
+    	//display:none !important;
 	}
 
 	@media screen and (min-width:319px) and (max-width:321px) {
@@ -73,7 +57,7 @@ img, video {
 
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:737px) {
 	.bx-wrapper {
 		margin-bottom:0 !important;
 	}
@@ -92,7 +76,7 @@ img, video {
 }
 
 .desktop {
-	@media screen and (max-width:768px){
+	@media screen and (max-width:737px){
 		display:none !important;
 	}
 }
@@ -100,7 +84,7 @@ img, video {
 .mobile {
 	display:none !important;
 
-	@media screen and(max-width:768px){
+	@media screen and(max-width:737px){
 		display:block !important;
 	}
 }
@@ -211,6 +195,13 @@ img, video {
 			margin-bottom:20px;
 		}
 
+		p {
+			@media screen and (max-width:737px){
+				font-size:1em;
+				letter-spacing: -.3px;
+			}
+		}
+
 		.cta {
 			@media screen and (max-width:736px){
 				margin-top:17px;
@@ -258,6 +249,7 @@ img, video {
 			margin-top:0;
 			padding:0;
 			text-align:center;
+			min-height:450px;
 		}
 
 
@@ -294,12 +286,14 @@ img, video {
 		}
 
 		p {
-			@media screen and (max-width:737px){
+			@media screen and (max-width:737px){ 
 				color:#7a7a7c;
 				margin-top:35px;
-				//font-size:.8em;
+				font-size:1em;
 				line-height:18px;
 				left:0;
+				text-align:center;
+				letter-spacing:-.3px;
 			}
 			
 			&.desktop {
@@ -310,7 +304,8 @@ img, video {
 			}
 
 			margin-top: 4px;
-			left:-16px;
+			left:-42px;
+			text-align:right;
 			
 			
 		}
@@ -321,11 +316,12 @@ img, video {
 				//2 cta
     			width: 42%;
     			left: 6px;
-    			margin: 13px 3% 1px 0;
+    			margin: 17px 3% -3px 0;
     			color:@hp-font-color;
     			border-color:@hp-font-color;
     			border:1px solid @hp-font-color;
     			background:#fff;
+    			padding:9px 0px;
 			}
 
 			/*&:last-of-type {
@@ -738,8 +734,8 @@ img, video {
 				h3 {
 					span {
 						@media screen and (max-width: 737px){
-							color:#fff;
-							background:#9fd063;
+							//color:#fff;
+							//background:#9fd063;
 						}
 
 						background:#fff;
@@ -790,10 +786,3 @@ img, video {
 
 
 /*------------------------------------------------------------------------*/
-/*-- olapic styles --*/
-
-@media screen and (max-width:768px) {
-	#olapic_specific_widget, #scroll-prompt, .homepage-text-under-olapic {
-		display:none;
-	}
-}
