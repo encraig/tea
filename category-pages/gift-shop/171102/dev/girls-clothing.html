@@ -1,10 +1,10 @@
 <!-- dev styles -->
-<!-- <link rel="stylesheet" type="text/css" href="../css/girls-clothing.css"> -->
+<link rel="stylesheet" type="text/css" href="../css/girls-clothing.css">
 
 <!--toolkit -->
-<style>
+<!-- <style>
 	include "../css/girls-clothing.css"
-</style>
+</style> -->
 
 <style>
 	/*c1*/
@@ -249,13 +249,13 @@
 
 
 <!-- dev -->
-<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
 <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
-<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <!-- prod -->
-<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
 <!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <script>
@@ -265,12 +265,12 @@
 		/*************************************************************************************/
 
 		//dev image src
-		// var imgs = $('.top img, .gift-shop-container img');
-		// $.each(imgs, function(i,val){
-		// 	var src = $(val).attr('src');
-		// 	var newSrc = 'https://www.teacollection.com' + src;
-		// 	$(val).attr('src', newSrc)
-		// });
+		var imgs = $('.top img, .gift-shop-container img');
+		$.each(imgs, function(i,val){
+			var src = $(val).attr('src');
+			var newSrc = 'https://www.teacollection.com' + src;
+			$(val).attr('src', newSrc)
+		});
 
 		//desktop fineprint
 		if($(window).width()>737){
@@ -391,14 +391,18 @@
 			$.each(skus, function(i,val){
 				if(val !== undefined){
 					var sku = val.split('-')[0];
-					$.get('/product/' + sku, function(data){
+					$.get('https://www.teacollection.com/product/' + sku, function(data){
 						// console.log(data);
 						//desktop
 						if($(window).width()>737){
 							var details = $(data).find('#pdp-item-details');
 							var title = $(details).find('h1[itemprop="name"]').html();
 							var price = $(details).find('span[itemprop="price"]').html();
+							
 							var sizes = $(details).find('.size-swatches ol li input');
+							console.log(title, sizes);
+							
+							
 
 							if(sku == '7f12220'){
 								var img = 'https://s.tea-global.net/mas_assets/cache/image/1/c/8/e/1000x-116967.Jpg';
