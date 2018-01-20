@@ -1,0 +1,224 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+ 
+//-----------------------------------------------------------------------------------------
+.ref {
+	@media screen and (max-width:737px){
+		top:82px;
+		left:0;
+		max-width:100%;
+		z-index:9999;
+	}
+
+	position:absolute;
+	opacity:.5;
+	top:51px;
+	left:-211px;
+	max-width:none;
+}
+
+.desktop {
+	@media screen and (max-width: 736px){
+		display:none;
+	}
+}
+
+.mobile {
+	@media screen and (max-width: 736px){
+		display:block;
+	}
+
+	display:none;
+
+	img {
+		//width:100%;
+		image-rendering:-webkit-optimize-contrast;
+	}
+}
+
+.cta {
+		@media screen and (max-width:737px){
+			width: 42%;
+    		left: 0px;
+    		padding: 1em 0;
+    		font-size: .8em;
+    		//line-height:3em;
+		}
+
+		@media screen and (max-width:415px){
+		    font-size: .8em;
+    		letter-spacing: 1.1px;
+		}
+
+		@media screen and (max-width:376px){
+    		//padding: 8px 0;
+    		font-size:.7em;
+		}
+
+		@media screen and (max-width:321px){
+			//padding: 7px 0;
+    		font-size: .6em;
+		}
+
+	display: inline-block;
+	font-family: brown-pro-bold !important; 
+    border: 1px solid;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 15px;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 11px 0 9px;
+    //font-weight:bold;
+    text-align:center;
+    box-sizing:border-box;
+    //line-height:2.8em;
+}
+
+.single-item-box img {
+	max-width:100%;
+}
+
+//-----------------------------------------------------------------------------------------
+
+//cell take over styles text
+.item.cell, .single-item-box.cell { 
+	&.this-hover {
+		div {
+			min-height:95%;
+		}
+
+		&:hover {
+			cursor:pointer;
+		}
+	}
+
+	div {
+		@media screen and (max-width:737px){
+			min-height:80%;
+			padding: 0 7%;
+		}
+
+		min-height: 95%;
+    	//background: red;
+    	color: #fff;
+    	padding: 113px 19px 0;
+    	box-sizing: border-box;
+    	position:relative;
+
+    	span {
+    		@media screen and (max-width:737px){
+    			bottom:15px;
+    			width: auto;
+    		}
+
+    		position:absolute;
+    		bottom: 29px;
+    		width:100%;
+
+            h2, h3, p {
+                @media screen and (max-width:737px){
+                    font-size:.8em !important;
+                    line-height:15px !important;
+                    margin-bottom:5px !important;
+                    font-family:brown-pro-regular !important;
+                    font-weight:normal !important;
+                    width:93%;
+                }
+            }
+
+    		
+    		h2 {
+                @media screen and (max-width:737px){
+                    //font-family:brown-pro-regular !important;
+                    font-size: 1em !important;
+                }
+    			text-transform: capitalize;
+
+        		//font-size: 18px;
+        		font-size: 1.8em;
+
+        		line-height: 24px;
+        		margin-bottom: 2px;
+        		font-family: brown-pro-bold !important;
+    		}
+
+    		h3 {
+                @media screen and (max-width:737px){
+                    font-family:brown-pro-regular !important;
+                }
+    			text-transform: capitalize;
+
+        		//font-size: 15px;
+        		font-size: 1.5em;
+
+        		line-height: 24px;
+        		margin-bottom: 5px;
+        		font-weight:normal;
+    		}
+
+    		p {
+                @media screen and (max-width:737px){
+                    margin: 0 0 10px !important;
+                }
+
+    			//font-size: 12px;
+    			font-size: 1.2em;
+
+        		line-height: 19px;
+        		font-family: brown-pro-italic !important;
+        		margin-bottom: 18px;
+    		}
+
+    		.cta {
+    			@media screen and (max-width:737px){
+    				width:92%;
+    				font-size:1em;
+    				padding: 5px 0;
+    			}
+
+    			width: 86%;
+    			font-size:1.5em;
+    			color:#fff;
+
+                &:hover {
+                    background:#fff;
+                    border-color:#fff;
+                    color:rgba(0,0,0,0.5);
+                }
+    		}
+
+    	}
+
+    	&.cell-hover {
+    		width:100%;
+    		position:absolute;
+    		display:none;
+    		padding: 41% 19px 0;
+
+    		span {
+    			position: unset;
+    			text-align:center;
+
+    			p {
+    				//font-size:15px;
+    				font-size: 1.5em;
+
+    				line-height: 22px;
+    				font-family:brown-pro-bold !important;
+    			}
+
+    			.cta {
+    				display:block;
+    				margin: 0 auto;
+    			}
+    		}
+    	}
+
+	}
+}
+
