@@ -1,0 +1,749 @@
+{* $Id: store.html 127382 2017-12-15 17:49:53Z keith $ *}
+
+{capture assign=metadesc}{$description|smarty:nodefaults|replace:'"':''|replace:'\'':''}{/capture}
+{insert name="header_tag_set" type="item" id="$sku" tag_id="META_DESCRIPTION" tag_value="$metadesc"}
+
+{introduce_script src="`$rel_assets_url`js/jcarousel/lib/jquery.jcarousel.min.js"}
+
+{introduce_css href="`$theme_assets_url`css/reviews.css" zone="footer"}
+
+{introduce_css href="`$theme_assets_url`js/fancybox_2.0/jquery.fancybox.css"}
+{introduce_script src="`$theme_assets_url`js/fancybox_2.0/jquery.mousewheel-3.0.6.pack.js"}
+{introduce_script src="`$theme_assets_url`js/fancybox_2.0/jquery.fancybox.js"}
+
+{introduce_script src="`$theme_assets_url`js/jquery.elevatezoom.min.js"}
+
+{literal}
+<style>
+</style>
+{/literal}
+<article id="product-detail-page" class="clearfix" itemscope itemtype="http://schema.org/Product" data-tea-style="{$item_attr_str.style}" data-tea-style-color="{$item_attr_str.style_color}" data-tea-sku="{$item_attr_str.sku}">
+
+	<section id="pdp-right">
+		<meta itemprop="productID" content="{$sku}">
+		<meta itemprop="image" content="{image type=id id=$file_id size=large}">
+
+		{form action="cart" page="item" name="thumb-form-$id"}
+		<input type="hidden" name="qty" value="1"> {* set qty to 1 qty select hidden for now *}
+
+		{* Chris: add the "gift-type" class" if the item is a gift certificate, it is related with the js for adding to cart via ajax in common.js *}
+		<section id="pdp-item-details" {if $item->type == 'gift_certificate'}class="gift-type"{/if}>
+			{*
+			<div class="browse-items">
+				<a href="#" class="prev"></a>&nbsp;&nbsp; Browse &nbsp;&nbsp;<a href="#" class="next"></a>
+			</div>
+			*}
+			{if $applied_inventory_control == 'in_stock_email' && $store_quantity <= 0}
+				{if $badge == 'comingsoon'}
+					<span class="comingsoon-item ic-text">Coming Soon</span>
+				{elseif $badge == 'unavailable'}
+					<span class="unavailable-item ic-text">Currently Unavailable</span>
+				{else}
+					<span class="soldout-item ic-text">Sold Out</span>
+				{/if}
+			{/if}
+
+			<span class="new-item">New</span>
+			<hgroup>
+				{if $item->type == 'gift_certificate'}
+					<h1 itemprop="name" class="gift-card">Send a Gift Card</h1>
+					<div itemprop="description" class="pdp-item-details-description escaped">{$description|smarty:nodefaults}</div>
+					<br />
+				{else}
+					<h1 itemprop="name">{$brand} {$model}</h1>
+
+					<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+						{*<p {if $retail_price|floatval <= $store_price|floatval}class="regular-price"{/if} id="store_price">
+							<strike>{$retail_price|price|money}</strike>{$store_price|price|money}
+						</p>*}
+						<p {if $retail_price|floatval <= $store_price|floatval}class="regular-price"{/if} id="store_price">
+							<span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="{$store_price|string_format:"%.2f"}">{$store_price|string_format:"%.2f"}</span>
+						</p>
+						{if ($applied_inventory_control == 'in_stock_email' || $applied_inventory_control == 'hide') && $store_quantity <= 0}
+							<meta itemprop="availability" content="http://schema.org/SoldOut">
+						{else}
+							<meta itemprop="availability" content="http://schema.org/InStock">
+						{/if}
+					</div>
+					<span class="promo-teaser" style="display:none;"></span>
+				{/if}
+			</hgroup>
+			{if $reviews_enabled}
+				<div class="reviews-rating">
+
+						<a id="read-reviews" href="#" title="Read reviews" >
+							<span class="reviews-stars reviews-stars-{$reviews_rating|replace:".":""}" 
+							title="Reviews Rating: {$reviews_rating}"></span> {*{$reviews_rating}*} {$reviews_count|default:"0"} REVIEWS
+						</a>
+
+					{*{if $reviews_count}
+						<a href="{$review_url}" title="Write Your Review" id="write_review" class="write-reviews {if !$reviews_require_login}box-ajax{/if}">Write a review</a>
+						<a href="#reviews" title="Read reviews" class="read-reviews">Read reviews</a>
+					{else}
+						<a href="{$review_url}" title="Write Your Review" id="write_review" class="write-reviews {if !$reviews_require_login}box-ajax{/if}">Be the first to write a review</a>
+					{/if}*}
+				</div>
+			{/if}
+			<div class="custom-errors" style="font-size: 14px;">{errors}</div>
+			<div class="ajax-errors status" style="font-size: 14px;"></div>
+
+			<div class="pdp-item-outfit giftcard">
+				{if $item->type != 'gift_certificate'}<a href="#" class="see-in-outfit">See It In An Outfit ></a>{/if}	
+			</div>	
+
+				{if $availability_message}
+					<p class="availability-message">{$availability_message|smarty:nodefaults}</p>
+				{/if}
+				
+				{* Parent Item *}
+				{if $item->type == 'parent'}
+					{parent_child_data sku="`$item->sku`" skip_inventory_control=true}
+				{elseif $item->type == 'gift_certificate'}
+					<dl>
+						<dd>
+							{* DO NOT REMOVE - PLACEHOLDER INSIDE ITEM *}
+							<dd id="block_inside_item">{$placeholder_inside_item|smarty:nodefaults}</dd><br />
+
+							{if $applied_inventory_control == 'in_stock_email' && $store_quantity <= 0}
+								<a href="javascript:void(0);" class="soldout-button" >Sold Out</a>
+							{else}
+								<button class="default-button" type="submit">Add To Bag</button>
+							{/if}
+						</dd>
+					</dl>
+				{else}
+					<dl>
+						<dt>
+							{*QUANTITY:*}
+						</dt>
+						<dd>
+
+							{*<select name="qty">
+								{section name=qty start=1 loop=6 step=1}
+								<option value="{$smarty.section.qty.index}"{
+								if $smarty.section.qty.index == $smarty.request.qty
+								} selected="selected"{/if}>{$smarty.section.qty.index}</option>
+								{/section}
+							</select>*}
+
+							{* DO NOT REMOVE - PLACEHOLDER INSIDE ITEM *}
+							<dd id="block_inside_item">{$placeholder_inside_item|smarty:nodefaults}</dd><br />
+
+							{if $applied_inventory_control == 'in_stock_email' && $store_quantity <= 0}
+								{*<a href="javascript:void(0);" class="soldout-button" >Sold Out</a>*}
+							{else}
+								<button  class="add-to-bag" type="submit">Add To Bag</button>
+							{/if}
+						</dd>
+					</dl>
+				{/if}
+
+
+
+
+
+			<footer>
+
+<script>
+{literal}
+jQuery(document).ready(function() {
+	var sizes = [];
+	jQuery('dd[id$="size"] label').each(function() {
+		sizes.push(jQuery(this).text());
+	});
+	jQuery('body').delegate('.alvakids', 'click', function() {
+		console.log(sizes.join());
+		{/literal}
+		openAlvakidsWidget(
+			'{$model}',
+			'{$h1_title}',
+			'{image type=id id=$file_id size=normal}',
+			sizes.join()
+		);
+		{literal}
+	});
+});
+
+
+jQuery(document).ready(function() {
+	
+	var showText='See More Reviews';
+	var hideText='See Less Reviews';
+	
+	jQuery('#read-reviews').click(function(){
+		jQuery('html, body').animate({
+			scrollTop: $( '#item-reviews' ).offset().top - 75
+			}, 500);
+			return false;
+	});
+	
+	jQuery("#toggle_reviews").click(function (e) {
+		e.preventDefault();
+        jQuery("#review-more").toggleClass("noshow show");
+		if (jQuery(this).html()==showText) {
+			jQuery(this).html(hideText);
+		}
+		else {
+			jQuery(this).html(showText);
+		}
+    });
+
+	jQuery(".size-chart").click(function(e){
+		/*
+		if (jQuery("#mega_menu li.girl").hasClass("active")) {
+			var chartdept = "girl";
+		} else if (jQuery("#mega_menu li.boy").hasClass("active")) {
+			var chartdept = "boy";
+		} else if (jQuery("#mega_menu li.baby-girl").hasClass("active")) {
+			var chartdept = "babygirl";
+		} else if (jQuery("#mega_menu li.baby-boy").hasClass("active")) {
+			var chartdept = "babyboy";
+		} else if (jQuery("#mega_menu li.newborn").hasClass("active")) {
+			var chartdept = "newborn";
+		} else {
+			var chartdept = "girl";
+		}
+	
+		window.open('{/literal}{static_url id=size-chart-inner}{literal}?template=chart&dept=' + chartdept + '&model={/literal}{$model}{literal}', 'sizechart', 'scrollbars=1, width=717, height=900');
+		return false;
+		*/
+
+		//new code
+		e.preventDefault();
+
+		//get the department & category
+		var dept = jQuery('#the-dept-cat').attr('data-department').toLowerCase();
+		var cat = jQuery('#the-dept-cat').attr('data-category').toLowerCase();
+
+		//build the url
+		var url = '/cms/size-chart-test/size-chart-test/1.html';
+		url = url + '?selectedDept=' + dept + '&selectedCat=' + cat;
+		//console.log(url);
+
+		//make the get call
+		$.get(url, function(data){
+			//find the size chart
+			var sizeChart = jQuery(data).find('#size-chart-section').html();
+			//console.log(sizeChart);
+
+			//make the overlay element
+			var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>';
+
+			//make the content element
+			var overlayContent = '<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 840px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>';
+
+			//prepend overlay element to body
+			jQuery('body').prepend(overlay);
+
+			//prepend overlay content element to body
+			jQuery('body').prepend(overlayContent);
+
+			//append sizeChart to overlayContent
+			jQuery('.overlay-content').append(sizeChart);
+
+			//close the lightbox
+			jQuery('.overlay').click(function(){
+				jQuery('.overlay, .overlay-content').remove();
+			});
+		});
+
+	});
+
+	jQuery(".fancybox-images").fancybox({
+		padding : 15,
+		wrapCSS : 'images-popup'
+	});
+});
+{/literal}
+</script>
+
+
+{*{if $applied_inventory_control != 'in_stock_email' && $store_quantity > 0}*}
+{if $store_quantity > 0}
+{if $item->type != 'gift_certificate'}
+<div class="wishlist-box" id="wishlist-box-{$id}">
+	{if $smarty.request.page eq 'item'}
+
+		<a class="add-to-wishlist add-to-list-fake" href="#wish{$id}/" title="Select A Size">Add To Wishlist</a>
+
+		{if $is_logged}
+			<a class="add-to-wishlist" href="{$secure_html_url}page=wishlists&amp;action=add&amp;id={$sku}#wish{$id}/" style="display: none;">Add To Wishlist</a>
+		{else}
+			<a class="add-to-wishlist" href="{$secure_html_url}?page=registry&amp;action=lists&amp;sku={$sku}#" style="display: none;">Add To Wishlist</a>
+		{/if}
+
+	{else}
+
+		{if $is_logged}
+			<a class="add-to-wishlist" href="{$secure_html_url}page=wishlists&amp;action=add&amp;id={$sku}#wish{$id}/">Add To Wishlist</a>
+		{else}
+			<a class="add-to-wishlist" href="{$secure_html_url}?page=registry&amp;action=lists&amp;sku={$sku}#">Add To Wishlist</a>
+		{/if}
+	{/if}
+	<div class="add-to-list-overlay" style=""></div>
+	<div class="clearfix"></div>
+</div>
+{/if}
+{/if}{* end inventory control instock email *}
+
+			</footer>
+
+		</section><!-- end of #pdp-item-details -->
+		{/form}
+		
+		<section id="details-tabs" {if $item->type == 'gift_certificate'}style="display: none;"{/if}>
+		
+			<div id="tabs">
+				<ul>
+					<li style="width: 171px;"><a href="#special">What makes it special</a></li>
+					<li style="float: right; width: 123.5px;"><a href="#features">Features & Care</a></li>
+				</ul>
+				<div id="special">
+					<div itemprop="description" class="pdp-item-details-description escaped">{$description|smarty:nodefaults}</div>
+				</div>
+				<div id="features">
+					{$fabric_and_care|smarty:nodefaults}
+					<ul>
+						<li>Style #<span itemprop="sku">{$sku}</span></li>
+					</ul>
+				</div>
+			</div>
+			{literal}
+				<script>
+					jQuery(document).ready(function(){
+						jQuery( "#tabs" ).tabs({
+							// loading spinner
+							beforeLoad: function(event, ui) {
+								ui.panel.html('<div style="text-align: center;"><img src="{/literal}{$theme_assets_url}images/misc/{literal}loader.gif"></div>');
+							},
+							load: function(event, ui) {	}
+						});
+					});
+				</script>
+			{/literal}
+		</section>
+	</section><!-- end of #pdp-right -->
+	
+	<section id="pdp-left">
+		
+		<section id="pdp-item-gallery-{$id}" class="pdp-item-gallery clearfix">
+
+			<div class="main-image-wrapper">
+			{if $type == 'parent'}
+
+				{if $applied_inventory_control == 'hide' && $store_quantity <= 0}
+				<img style="position: absolute; z-index: 999;" src="{$theme_assets_url}images/misc/SoldOutBadge_lrg.gif">
+				{else}
+				<img style="position: absolute; z-index: 999; display: none;" class="badges comingsoon-badge" src="{$theme_assets_url}images/misc/ComingSoonBadge_lrg.gif">
+				<img style="position: absolute; z-index: 999; display: none;" class="badges unavailable-badge" src="{$theme_assets_url}images/misc/CurrentlyUnavailableBadge_lrg.gif">
+				<img style="position: absolute; z-index: 999; display: none;" class="badges sold-out-badge" src="{$theme_assets_url}images/misc/SoldOutBadge_lrg.gif">
+				{/if}
+
+			{elseif $applied_inventory_control == 'in_stock_email' && $store_quantity <= 0}
+				{if $badge == 'comingsoon'}
+					<img style="position: absolute; z-index: 999;" src="{$theme_assets_url}images/misc/ComingSoonBadge_lrg.gif">
+				{elseif $badge == 'unavailable'}
+					<img style="position: absolute; z-index: 999;" src="{$theme_assets_url}images/misc/CurrentlyUnavailableBadge_lrg.gif">
+				{else}
+					<img style="position: absolute; z-index: 999;" class="sold-out-badge" src="{$theme_assets_url}images/misc/SoldOutBadge_lrg.gif">
+				{/if}
+			{/if}
+			{if $global_badge}<span class="global_badge"><img style="position: absolute; z-index: 999; right: 5px; top: 5px;" src="{$theme_assets_url}images/misc/global_badge.png"></span>{/if}
+			{if $item->type == 'gift_certificate'}
+				<img itemprop="image" src="{image type=id id=$file_id size=normal}" height="450" alt="{if $image_title_tag}{$image_title_tag}{else}{$brand|smarty:nodefaults} {$model|smarty:nodefaults}{/if}">
+			{else}
+				{*<a id="main-image-a-{$id}" href="{image type=id id=$file_id size=large}" title="{$brand} {$model}">
+					<img itemprop="image" src="{image type=id id=$file_id size=normal}" height="450" alt="{if $image_title_tag}{$image_title_tag}{else}{$brand|smarty:nodefaults} {$model|smarty:nodefaults}{/if}">
+				</a>*}
+
+				<img id="main-image-a-{$id}" itemprop="image" src="{image type=id id=$file_id size=normal}" data-zoom-image="{image type=id id=$file_id size=large}" height="450" alt="{if $image_title_tag}{$image_title_tag}{else}{$brand|smarty:nodefaults} {$model|smarty:nodefaults}{/if}">
+				{literal}
+				<script>
+				jQuery(document).ready(function() {
+					jQuery('#main-image-a-{/literal}{$id}{literal}').elevateZoom({
+						gallery: "zoom-gallery",
+						zoomType: "inner",
+						cursor: "crosshair",
+						zoomWindowFadeIn: 500,
+						zoomWindowFadeOut: 750
+				   }); 
+
+				});
+				{/literal}
+				</script>
+			{/if}
+			</div>
+
+			<div id="zoom-gallery">
+			{foreach from="$images" item="image"}
+					<a style="float: left; margin: 0 12px 12px 0;" {if $image.description} title="{$image.description|smarty:nodefaults}"{/if} 
+							href="#" data-image="{image size=large type=id id=$image.file_id}" data-zoom-image="{image size=large type=id id=$image.file_id}">
+						<img src="{image size=thumb type=id id=$image.file_id}"{if $image.title} alt="{$image.title|smarty:nodefaults}"{/if} width="75" height="75">
+					</a>
+			{/foreach}
+			</div>
+
+			{*<ul class="clearfix"></ul>*}
+			
+			<div style="clear: both;"></div>
+			
+		</section><!-- end of #pdp-item-gallery -->
+
+		<div class="new-socials-position">
+			<a class="box-ajax email" href="{$share_url}" title="Share this item with a friend"></a>
+			<a class="pint social-share" href="Pin On Pinterest" target="_blank"></a>
+			<a class="fbook social-share" href="Share On Facebook" target="_blank"></a>
+			<a class="twitter social-share" href="Share On Twitter" target="_blank"></a>
+		</div>
+		<script>
+		// ga('send', 'event', 'Product Detail Page', 'View', '{$model|smarty:nodefaults}');
+		var UrlToShare = "{$request_uri|regex_replace:"/\?.+$/":""}";
+		var TitleToShare = "{$model}";
+		var DescToShare = "{$model|smarty:nodefaults} {if $description}| {$description|strip_tags:false|smarty:nodefaults|replace:'"':''|regex_replace:"/[\r\t\n]/":""}{/if}";
+		var ImageToShare = "{image type=id id=$_wink_image_id|default:$file_id size=large}";
+		var strWindowFeatures = "menubar=0,location=0,resizable=0,scrollbars=0,status=0,width=626,height=436";
+
+		{literal}
+		jQuery(document).ready(function() {
+
+			jQuery(".social-share").click(function(){
+				var href = $(this).attr('href');
+
+				if (href == 'Share On Facebook'){
+					window.open("http://www.facebook.com/sharer.php?u=" + UrlToShare + "&t=" + TitleToShare,'sharer', strWindowFeatures);
+				}
+
+				if (href == 'Share On Twitter'){
+					window.open("http://twitter.com/share?url=" + UrlToShare + "&text=" + TitleToShare + "&via=teacollection",'sharer', strWindowFeatures);
+				}
+
+				if (href == 'Pin On Pinterest'){
+					window.open("http://pinterest.com/pin/create/button/?url=" + UrlToShare + "&media=" + ImageToShare + "&description=" + DescToShare,'sharer', strWindowFeatures);
+				}
+				return false;
+			});
+
+		});
+		{/literal}
+		</script>
+	</section><!-- end of #pdp-left -->
+	
+	<div style="clear: both;"></div>
+	
+	<div class="pdp-divider"></div>
+	
+	<section id="pdp-lgw">
+		{* Bundle/Mix & Match *}
+		{bundles template="mixandmatch"}
+
+		{*capture name="suggestions"}
+			{include file="store:name=item/suggestions&theme=tea_collection"}
+		{/capture*}
+
+		<section id="pdp-item-suggestions" class="pdp-item-suggestions-{$id}"{if trim($smarty.capture.suggestions) == ''} style="display: none;"{/if}>
+			{*<h2>Put It All Together</h2>*}
+			<h2>Looks Good With</h2>
+			<ul class="clearfix">
+				{*$smarty.capture.suggestions|smarty:nodefaults*}
+			</ul>
+		</section><!-- end of #pdp-item-suggestions -->	
+	</section>
+	
+	<section id="pdp-details" {if $item->type == 'gift_certificate'}style="display: none;"{/if}>
+		
+		<section id="photorank-container">
+			<h2>#KIDSLOVETEA</h2>
+			<h3>We want to see your kids in tea! Share your photos.</h3>
+			
+			<section id="photorank">
+				<script src="https://cdn.dashhudson.com/web/js/product-carousel-embed.js" 
+        			type="text/javascript" 
+        			data-name="dhproduct-carousel"
+        			data-id="336947275" 
+        			data-row-size="3"
+        			data-gap-size="2"
+        			data-mobile-row-size="2"
+        			data-mobile-gap-size="4"
+        			data-call-to-action="learn_more"
+        			data-links-disabled
+        			data-hide-popup-footer
+        			data-high-res="0"
+        			data-scroll-disabled
+        			data-autoplay="false"> 
+				</script>
+
+				{*
+				<div id="olapic_specific_widget"></div>
+				<script type="text/javascript" src="https://photorankstatics-a.akamaihd.net/81b03e40475846d5883661ff57b34ece/static/frontend/latest/build.min.js" data-olapic="olapic_specific_widget" data-instance="39cb085f8d6b15bc364e963616cdd11e" data-apikey="ca3781377fc6af100e2bc3c53f3dae637737bbc1547a19b69bb1ba78e2e0007b" data-tags="{$sku}" async="async"></script>
+				*}
+			</section>
+			{*{introduce_css href="`$theme_assets_url`css/olapic.css"}
+	
+			<div id="olapic_specific_widget"></div>
+			<script 
+			type="text/javascript" 
+			src="http://photorankstatics-a.akamaihd.net/static/frontend/latest/build.min.js"  
+			data-olapic="olapic_specific_widget" 
+			data-instance="4bf8c792aa6d07ddc0fda509b77604a8" 
+			data-apikey="ca3781377fc6af100e2bc3c53f3dae637737bbc1547a19b69bb1ba78e2e0007b" 
+			data-viewer="//www.photorank.me/assets/teacollection/viewer2v1.html" 
+			data-uploader="//www.photorank.me/assets/teacollection/uploader1v2.html" 
+			data-uploader-version="Uploader1v2"
+			data-tags="{$sku}"
+			></script>
+			*}
+			{literal}
+			<style>
+				#photorank-container {
+					float: left !important;
+					width: 450px !important;
+					border-top: 0 !important;
+				}
+				
+				/* overrides for olapic */				
+				/*
+				#olapic_specific_widget { margin: 0; float: none; width: 450px;}
+				.olapic .olapic-slider-header h2 { margin: 0;}
+				*/
+				
+				/* overrides for reviews */	
+				div.store-box div.error {
+					padding: 10px;
+				}
+				div.store-box h1.store-box-title {
+					text-transform: none;
+				}
+				div.store-box div.store-box-content {
+					border: 0.5em solid #ffffff;
+				}
+			</style>
+			{/literal}
+		
+			<section id="pdp-shipping" {if $item->type == 'gift_certificate'}style="display: none;"{/if}>
+				<h2>Shipping & Returns</h2>
+				<div class="shipping">
+					{*{cms name="pdp_shipping"}*}
+					<div>
+						<p>Free shipping on orders over ${cms name="free-shipping-threshold"}.</p>
+						<p>$7 shipping on everything else.</p>
+						<a class="see_details" href="/help/shipping-info" title="See Details">See Details <span class="pdp-arrow-right"></span></a>
+					</div>
+				</div>
+			</section>
+		</section>
+	
+		<section id="item-reviews">
+			<a name="reviews"></a>
+			
+			{if $reviews_count}
+				<div class="pdp-review-header">
+					<h2>Ratings & Reviews</h2>
+						<div class="rating-container">
+							<span class="rating-title"><span itemprop="ratingCount">{$reviews_count|default:"0"}</span> reviews</span>
+							<span
+								class="reviews-stars reviews-stars-{$reviews_rating|replace:".":""}"
+								title="{""|lang:"Reviews Rating:"} {$reviews_rating}">
+							</span>
+							<span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="reviews-count"> <span style="visibility: hidden;" itemprop="ratingValue">{$reviews_rating|default:"0.0"}</span> 
+								<meta itemprop="worstRating" content = "1">
+								<meta itemprop="bestRating" content = "5">
+							</span>
+						</div>
+						<div style="clear: both;"></div>
+						<div class="fit-container">
+							<span class="fit-title">Overall Fit: &nbsp;&nbsp;&nbsp;<span>based on customer reviews</span></span>
+							<div class="pdp-fitRating">
+								<div>
+									<input id="fitrating1" type="radio" name="fitrating" value="1"
+									{if $reviews_fit_rating eq 1} checked="checked" {else} disabled="disabled"{/if}>
+									<label for="fitrating1"><span>Runs Small</span></label>
+								</div>
+								<div>
+									<input id="fitrating2" type="radio" name="fitrating" value="2"
+									{if $reviews_fit_rating eq 2} checked="checked" {else} disabled="disabled"{/if}>
+									<label for="fitrating2"><span>Runs Slightly Small</span></label>
+								</div>
+								<div>
+									<input id="fitrating3" type="radio" name="fitrating" value="3"
+									{if $reviews_fit_rating eq 3} checked="checked" {else} disabled="disabled"{/if}>
+									<label for="fitrating3"><span>True To Size</span></label>
+								</div>
+								<div>
+									<input id="fitrating4" type="radio" name="fitrating" value="4"
+									{if $reviews_fit_rating eq 4} checked="checked" {else} disabled="disabled"{/if}>
+									<label for="fitrating4"><span>Runs Slightly Large</span></label>
+								</div>
+								<div>
+									<input id="fitrating5" type="radio" name="fitrating" value="5"
+									{if $reviews_fit_rating eq 5} checked="checked" {else} disabled="disabled"{/if}>
+									<label for="fitrating5"><span>Runs Large</span></label>
+								</div>
+							</div>
+
+							<div style="clear: both;"></div>
+							<div class="pdp-fit"><span class="lf">runs<br />small</span><div class="middle">true to<br />size</div><span class="rf">runs<br />large</span></div>
+							<div style="clear: both;"></div>
+						</div>
+						{if $reviews_enabled}
+							<a href="{$review_url}" title="{""|lang:"Write Your Review"}" class="review-btn {if !$reviews_require_login}box-ajax{/if}">{""|lang:"Write a review"}</a><br />
+						{/if}
+
+						{*<div class="sort-wrapper">
+							<select class="sortby" name="reviews_sort_by">
+								<option value="most_helpful" {if $reviews_sort_by_selected eq 'most_helpful'} selected="selected" {/if} >Most Helpful</option>
+								<option value="most_recent" {if $reviews_sort_by_selected eq 'most_recent'} selected="selected" {/if}>Most Recent</option>
+							</select>
+						</div>
+						{literal}
+
+						<script type="text/javascript">
+							jQuery('select[name="reviews_sort_by"]').on('change', function()
+							{															
+								current_url = jQuery(location).attr('href');						
+								sort_by_val = jQuery(this).val();					
+								jQuery.get(current_url, {'reviews_sort_by': sort_by_val, 'nocache' : 1}).done(function(html)
+								{														
+									html = jQuery.trim(html);
+									retrieved_reviews_block = jQuery(html).find('#item-reviews').html();
+									jQuery('#item-reviews').html(retrieved_reviews_block);
+								});
+
+							});
+						</script>
+
+						{/literal}*}
+
+					<div style="clear: both;"></div>
+				</div>
+				<img class="dotted_line" style="margin-top: 18px;" src="{$theme_assets_url}images/pdp/dotted_line.png">
+				<div id="review-container">
+				{assign var=display_count value=0}
+				{reviews}
+					{math equation="x + y" x=$display_count y=1 assign=display_count}
+					{if $display_count == 3 }
+						</div>
+						<div id="review-more" class="noshow">
+					{/if}
+					{if $display_count < 5 }
+					<div class="h-review">
+
+						<div class="pdp-review" itemprop="review" itemscope itemtype="http://schema.org/Review">
+								<img src="{$theme_assets_url}images/reviews/stars_{$score}.0.png" style="vertical-align:middle;margin-top: -3px;" />
+									{*{if $fit_rating}<strong>FIT:</strong> {""|lang:"$fit_rating"}<br />{/if}*}
+									<span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" style="visibility: hidden;">
+										<meta itemprop="worstRating" content = "1">
+										<meta itemprop="bestRating" content= "5">
+										<span itemprop="ratingValue" >{$score}</span>
+									</span>
+								<p class="created"><span itemprop="name">{$title}</span></p>
+								<p class="review"><span itemprop="reviewBody">{$review|nl2br}</span></p>
+								<p style="margin-bottom: 21px; line-height: 22px;">
+									<span class="reviewer" itemprop="author">{$name}</span><br />
+									{""|lang:"%s":$location}<br />
+									<span itemprop="datePublished" content="{$created|short_date}">{$created|date_format}</span>
+								</p>
+						
+								{*<p class="votes">
+									{if $votes_count}
+										{""|lang:"%d of %d people found this review helpful.":$positive:$votes_count}
+										<span class="review-votes">{""|lang:"Do you?"}</span>
+									{else}
+										<span class="review-votes">{""|lang:"Was this review helpful?"}</span>
+									{/if}
+									<br />
+									<div class="vote-wrapper"><a class="review-vote review-vote-yes" rel="{$sku}:{$review_id}">YES</a><div class="count">{$positive|default:"0"}</div></div>
+									<div class="vote-wrapper"><a class="review-vote review-vote-no" rel="{$sku}:{$review_id}">NO</a><div class="count">{$negative|default:"0"}</div></div>
+									{if $certified_buyer}  &nbsp;<b><i>{""|lang:"Certified buyer"}</i></b>{/if}
+								</p>*}
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					{*<hr class="review-divider">*}
+					{/if}
+
+				{/reviews}
+				
+				   {if $display_count > 4 }
+					<div class="box-ajax-none">
+						<a style="float:left;" href="{$html_url}?page=review&action=item&index=1&id={$sku}"
+							title="{""|lang:"Customer Reviews"} ({$reviews_next_start}-{$reviews_next_offset}): {if $brand}{$brand|smarty:nodefaults} {/if}{$model|smarty:nodefaults}"
+							class="box-ajax read-reviews">{""|lang:"Click here to read more reviews about this item"} ({$reviews_count} total)</a>
+						<br />	
+					</div>
+				   {/if}
+				</div>
+					{if $display_count >= 3 }
+						<a id="toggle_reviews" href="#" class="review-btn">See More Reviews</a>
+						<img class="dotted_line" src="{$theme_assets_url}images/pdp/dotted_line.png">
+					{else}
+						<img class="dotted_line" style="margin-top: 15px;" src="{$theme_assets_url}images/pdp/dotted_line.png">
+					{/if}
+
+			{elseif $reviews_enabled}
+				<div class="pdp-review-header">
+					<h2>Ratings & Reviews</h2>
+						<div class="rating-container">
+							<span class="rating-title"><span itemprop="ratingCount">{$reviews_count|default:"0"}</span> reviews</span>
+							<span
+								class="reviews-stars reviews-stars-{$reviews_rating|replace:".":""}"
+								title="{""|lang:"Reviews Rating:"} {$reviews_rating}">
+							</span>
+						
+							{if $reviews_count}
+								<span style="display: none;" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="reviews-count"> <span itemprop="ratingValue">{$reviews_rating|default:"0"}</span> (<span itemprop="ratingCount">{$reviews_count|default:"0"}</span> reviews)
+									<meta itemprop="worstRating" content = "1">
+									<meta itemprop="bestRating" content = "5">
+								</span>
+							{/if}						
+						</div>
+						<div style="clear: both;"></div>
+						<p class="first">Be the first to write a review.</p>
+						<a href="{$review_url}" title="{""|lang:"Write Your Review"}" class="review-btn {if !$reviews_require_login}box-ajax{/if}">{""|lang:"Write a review"}</a>
+				</div>
+				<img class="dotted_line" style="margin-top: 36px;" src="{$theme_assets_url}images/pdp/dotted_line.png">
+			{/if}
+		</section>
+		<div style="clear: both;"></div>
+	</section>
+
+</article><!-- end of #product-detail-page -->
+
+<div id="the-dept-cat" data-department="{$department}"  data-category="{$category}"></div>
+
+{if $preferred_category_id == '408'}
+<!-- Google Code for Girls Dresses -->
+<script type="text/javascript">
+
+/* <![CDATA[ */
+	var google_conversion_id = 1058961707;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "666666";
+	var google_conversion_label = "P6xuCO2qpAIQq_L5-AM";
+	var google_conversion_value = 0;
+/* ]]> */
+
+</script>
+
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1058961707/?label=P6xuCO2qpAIQq_L5-AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+{/if}
+
+{capture name="monetate_colors"}{$item_attr_str.style_color}{/capture}
+{assign var=productDetails value=$smarty.capture.monetate_colors|replace:',':'","'|replace:'-':''|smarty:nodefaults}
+
+<script>
+window.monetateQ = window.monetateQ || [];
+window.monetateQ.push(["addProductDetails", 
+            ["{$productDetails|smarty:nodefaults}"]]);
+window.monetateQ.push(["trackData"]);
+</script>
+
+{breadcrumb}
+	{$brand} {$model}
+{/breadcrumb}
