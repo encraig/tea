@@ -64,6 +64,29 @@
     }
   }
 
+  //girls clothing hover
+  &.girls-clothing {
+    &:hover {
+      .level-2 {
+        display:block;
+
+        li {
+          &> span, &> span a {
+            font-family:brown-pro-regular !important;
+
+            &:hover {
+              font-family:brown-pro-bold !important;
+            }
+          }
+
+          .nav-container {
+            display:none;
+          }
+        }
+      }
+    }
+  }
+
   //level 1 default hover
   &:hover {
     //background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png)no-repeat center bottom;
@@ -80,6 +103,50 @@
     }
 
   }
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+//level 2 positioning
+.header-left nav.new-nav ul li .level-2 li {
+  
+  &.girl-cats, &.tween-cats, &.boy-cats, &.baby-girl-cats, &.baby-boy-cats, &.newborn-cats {
+    width: auto !important;
+    text-align:left;
+  }
+
+  &.girl-cats {
+    margin-left:99px;
+    margin-right: 82px;
+  }
+
+  &.tween-cats {
+
+    a {
+      text-decoration:none;
+      font-family: brown-pro-bold !important;
+      font-size: 15px;
+      height: auto;
+      color: #666;
+    }    
+  }
+
+  &.boy-cats {
+    margin-left:172px;
+  }
+
+  &.baby-girl-cats {
+    margin-left: 249px;
+  }
+
+  &.baby-boy-cats {
+    margin-left: 363px;
+  }
+
+  &.newborn-cats {
+    margin-left: 483px;
+  }
+
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -394,7 +461,7 @@
   }
 
   .level-2 {
-    padding: 0 40.6% !important; 
+    padding: 0 40% !important; 
 
     &> li {
       color:#999;
