@@ -255,7 +255,8 @@ $(document).ready(function(){
 				sale = sale[0].outerHTML;
 			}
 
-			$(elem + ' .level-2-li').append('<div class="nav-container"></div>');
+			// $(elem + ' .level-2-li').append('<div class="nav-container"></div>');
+			$(elem).append('<div class="nav-container"></div>');
 
 			//IF NOT NEWBORN
 			if(url !== 'https://www.teacollection.com/newborn-clothes'){
@@ -332,20 +333,23 @@ $(document).ready(function(){
 	};
 
 //-----------------------------------------------------------------------------------------------------
+	//tween clothing
+	getCat('https://www.teacollection.com/girls-clothing/new-arrivals','.tween-cats','https://s.tea-global.net/mas_assets/cache/image/2/0/d/1/1000x-134423.Jpg');
+
 	//girls clothing
-	getCat('https://www.teacollection.com/girls-clothing/new-arrivals','.girls-clothing','https://s.tea-global.net/mas_assets/cache/image/2/0/d/1/1000x-134423.Jpg');
+	getCat('https://www.teacollection.com/girls-clothing/new-arrivals','.girl-cats','https://s.tea-global.net/mas_assets/cache/image/2/0/d/1/1000x-134423.Jpg');
 
 	//boys clothing
-	getCat('https://www.teacollection.com/boys-clothing/new-arrivals','.boys-clothing','https://s.tea-global.net/mas_assets/cache/image/2/0/d/4/1000x-134467.Jpg');
+	getCat('https://www.teacollection.com/boys-clothing/new-arrivals','.boy-cats','https://s.tea-global.net/mas_assets/cache/image/2/0/d/4/1000x-134467.Jpg');
 
 	//baby girl clothes
-	getCat('https://www.teacollection.com/baby-girl-clothes/new-arrivals','.baby-girl-clothes','https://s.tea-global.net/mas_assets/cache/image/2/1/6/1/1000x-136731.Jpg');
+	getCat('https://www.teacollection.com/baby-girl-clothes/new-arrivals','.baby-girl-cats','https://s.tea-global.net/mas_assets/cache/image/2/1/6/1/1000x-136731.Jpg');
 
 	//baby boy clothes
-	getCat('https://www.teacollection.com/baby-boy-clothes/new-arrivals','.baby-boy-clothes','https://s.tea-global.net/mas_assets/cache/image/2/0/d/2/1000x-134435.Jpg');
+	getCat('https://www.teacollection.com/baby-boy-clothes/new-arrivals','.baby-boy-cats','https://s.tea-global.net/mas_assets/cache/image/2/0/d/2/1000x-134435.Jpg');
 
 	//newborn clothes
-	getCat('https://www.teacollection.com/newborn-clothes','.newborn-clothes','https://s.tea-global.net/mas_assets/cache/image/1/c/9/6/416x416-117097.Jpg');
+	getCat('https://www.teacollection.com/newborn-clothes','.newborn-cats','https://s.tea-global.net/mas_assets/cache/image/1/c/9/6/416x416-117097.Jpg');
 
 	//sale
 	//the original
