@@ -56,7 +56,7 @@
 
 		<div>
 			<!-- mobile image -->
-			<a href="" class="hp-url" id="c1" alt=""><img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c1-m.png" alt="" /></a>
+			<a href="" class="hp-url" id="c1" alt=""><img class="mobile" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c1-m-v2.png" alt="" /></a>
 
 			<!-- mobile copy -->
 			<!-- <p class="mobile body-copy">&acute;Tis the Season to give the most legendary gifts ever!<br> Our new holiday styles take inspiration from the renowned<br> fables and folklore of Scotland.</p> -->
@@ -105,15 +105,15 @@
 		
 		<div>
 			<!-- desktop image -->
-			<a href="" class="hp-url desktop" id="c3" alt="" target="_blank"><img class="" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c3-d.png" alt="" /></a>  
+			<a href="" class="hp-url desktop" id="c3" alt=""><img class="" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c3-d.png" alt="" /></a>  
 
 			<!-- mobile image -->
-			<a href="" class="hp-url" id="c3" alt="" target="_blank"><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c3-m.png" class="mobile" alt=""/></a>
+			<a href="" class="hp-url" id="c3" alt=""><img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c3-m.png" class="mobile" alt=""/></a>
 
 			<p class="body-copy">Give new little<br class="desktop"> citizens the<br class="mobile"> softest,<br class="desktop"> suggliest welcome.</p>
 
 			<!-- 1 cta -->
-			<a href="" class="cta hp-url cta1" id="c3" target="_blank"></a>
+			<a href="" class="cta hp-url cta1" id="c3"></a>
 
 			<!-- 2 cta -->
 			<!-- <a href="" class="cta hp-url cta1" id="c3"></a>
@@ -248,9 +248,9 @@
 <!-- ///////////////////////////////////////////////////////////-->
 
 <!-- vimeo video -->
-<!-- <div class="video">
-	<iframe src="https://player.vimeo.com/video/235952689" id="vimeo" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-</div> -->
+<div class="video">
+	<iframe src="https://player.vimeo.com/video/250341261" id="vimeo" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
 
 <!-- ///////////////////////////////////////////////////////////-->
 
@@ -289,8 +289,8 @@ $(document).ready(function() {
 		//cell 2
 		{
 			cell: '.c2', 
-			img: {url:'#'}, 
-			cta1: {url:'#', text:'shop the collection'}, 
+			img: {url:'/native-artists'}, 
+			cta1: {url:'/native-artists', text:'shop the collection'}, 
 			cta2: {url:'/baby-boy-clothes/new-arrivals', text:'baby boy'}
 		},
 
@@ -305,8 +305,8 @@ $(document).ready(function() {
 		//cell 4
 		{
 			cell: '.c4', 
-			img: {url:'/tween-clothing'}, 
-			cta1: {url:'/tween-clothing', text:'shop tween'}, 
+			img: {url:'/tween-girls-clothing'}, 
+			cta1: {url:'/tween-girls-clothing', text:'shop tween'}, 
 			cta2: {url:'/boys-swimwear', text:'boy swim'}
 		},
 
@@ -386,7 +386,7 @@ $(document).ready(function() {
 		// 	}
 		// }
 
-	});
+	}); 
 
 	//function to animate a gif replacement
 	var makeGif = function(){
@@ -422,11 +422,11 @@ $(document).ready(function() {
 	if($(window).width() < 737) {
 		
 		//move the video below the slideshow
-		// $('.hp').after($('.hp .video'));
-		// $('.video').remove();
+		//$('.hp').after($('.hp .video'));
+		//$('.video').remove();
 
 		//change the height of vimeo video
-		// $('.video #vimeo').height(220);
+		$('.video #vimeo').height(220);
 
 		// start slick slideshow
 		// $('.hp').slick({
