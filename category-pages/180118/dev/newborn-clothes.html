@@ -53,7 +53,8 @@
 
 			<h3>perfect fit</h3>
 
-			<p>Our bodysuits and leggings stretch<br> more so new parents can stress less.</p>
+			<p>Our bodysuit necklines stretch easily<br> over newborn noggins, so new parents can stress less.</p>
+			<!-- <p>Our bodysuits and leggings stretch<br> more so new parents can stress less.</p> -->
 			
 			<a href="#" class="cta gift-it">shop bodysuit outfits</a>
 		</div>
@@ -88,7 +89,8 @@
 			<!-- mobile image -->
 			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/180118/newborn/c5b-d.jpg" alt="baby"  class="mobile"/>
 
-			<h3>footie jams forever</h3>
+			<!-- <h3>footie jams forever</h3> -->
+			<h3>footie rompers forever</h3>
 			<p>There's nothing cuter<br class="desktop"> than a baby with cozy toesies.</p>
 			
 			<a href="#" class="cta gift-it">shop rompers</a>
@@ -130,10 +132,10 @@ $(document).ready(function(e) {
 
 	// BUNDLE
 	// outfit 1
-	// outfit('8s72901-442', '8s62900-405', '8s52900-675');
+	outfit('8s72901-442', '8s62900-405', '8s52900-675');
 		
 	// dev bundle
-	outfit('6f12200-a13', '6f12200-962', '7w12327-061');
+	// outfit('6f12200-a13', '6f12200-962', '7w12327-061');
 
 	//outfit 2
 	outfit('8s72900-061', '8s72902-061', '8s62901-096');
@@ -225,6 +227,11 @@ $(document).ready(function(e) {
 						var imgSrc;
 						// var imgSrc = jsonData.parent_data[id].small_image_url;
 						// console.log(title, price, imgSrc);
+
+						//the url
+						var pdp = title.toLowerCase().replace(/ /g, '-');
+						var pdpUrl;
+						
 						
 						//get the sizes
 						var sizesArray = [];
@@ -237,6 +244,10 @@ $(document).ready(function(e) {
 							//if matches color num
 							if(skuColor == objSku){
 								// console.log('match', skuColor, objSku);
+
+								var colorName = obj.color;
+								colorName = colorName.toLowerCase();
+								pdpUrl = '/product/' + sku + '/' + pdp + '.html?nocache=1#' + colorName;
 
 								//get the image src
 								imgSrc = obj.small_image_url;
@@ -258,11 +269,11 @@ $(document).ready(function(e) {
 
 						//desktop
 						if($(window).width() > 737){
-							var li = '<li class="li-'+i+'"><div><img src="'+imgSrc+'" alt="'+title+'"/><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><div class="sizes-container sizes-wrap-'+i+'"><ul class="sizes-'+i+'"><li>size</li></ul></div><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><div class="sizes-container sizes-wrap-'+i+'"><ul class="sizes-'+i+'"><li>size</li></ul></div><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
 						}
 						//mobile
 						else if($(window).width() < 737){
-							var li = '<li class="li-'+i+'"><div><img src="'+imgSrc+'" alt="'+title+'"/><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><select class="sizes-'+i+'"><option>size</option></select><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><select class="sizes-'+i+'"><option>size</option></select><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
 						}  
 
 						
