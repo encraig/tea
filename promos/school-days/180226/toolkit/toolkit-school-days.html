@@ -1,0 +1,147 @@
+<!-- toolkit -->
+<style>
+	html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.desktop-promo img,.desktop-promo-hp img,.mobile-promo img,.mobile-promo-hp img{max-width:100%}@media screen and (max-width:736px){.desktop-promo,.desktop-promo-hp{display:none}}.mobile-promo,.mobile-promo-hp{display:none}@media screen and (max-width:736px){.mobile-promo,.mobile-promo-hp{display:block}}#details-promo{display:none;width:600px;background:#fff}@media screen and (max-width:736px){#details-promo{width:100%;position:absolute;z-index:9999;height:1100px;background:#fff}}.details-container{margin:27px;border-top:1px solid #333333;border-bottom:1px solid #333333;padding:10px 0}.details-container h2{text-transform:uppercase;font-size:15px;letter-spacing:1px}.details-container p{font-size:13px;line-height:20px}.close-fancy{display:none;text-align:center}@media screen and (max-width:736px){.close-fancy{display:block}}/*# sourceMappingURL=styles.css.map */
+</style>
+
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="desktop-promo">
+	<a href="#details-promo" class="see-details">
+		<img src="/mas_assets/theme/tea_collection/fineprint/school-days/180226/school-1-d.png" alt="" class="promo-img-alt"/>
+	</a>	
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div class="mobile-promo">
+	<a href="http://blog.teacollection.com/fundraise/" target="_blank" class="see-details">
+		<img src="/mas_assets/theme/tea_collection/fineprint/school-days/180226/school-1-m.png" alt="" class="promo-img-alt"/>
+	</a>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2>
+		<p>Enter your organization's promo code to receive 15% off your order on TeaCollection.com plus free 6-10 day shipping. Offer valid from 2/26/2018 through 3/5/2018 at 11:59 PM PT. Does not apply to Patagonia, Livie & Luca or Saltwater. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Cannot be used towards the purchase of Everyday Play Sets.</p>
+		<!-- <div class="show-fine-print"></div> -->
+		<p><a href="#" class="close-fancy">CLOSE</a></p> 
+	</div>
+</div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- dev resources -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!--prod resources -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<script>
+	$(document).ready(function(){
+	
+		//dev base url
+		var prodSrc = 'https://www.teacollection.com';
+
+		//array of img
+		var img = ['.desktop-promo-hp img','.desktop-promo img','.mobile-promo-hp img','.mobile-promo img'];
+		
+		//dev img src
+		// $(img).each(function(i,val){
+		// 	var imgName = $(val).attr('src');
+		// 	$(val).attr('src', prodSrc + imgName);
+		// 	// console.log(imgName);
+		// });
+
+		//add the alt
+		var alt = "Easiest Fundraiser Ever! Shop Tea School Days through March 5";
+		$('.promo-img-alt').attr('alt', alt);
+
+		// hide on login page on mobile and sale page
+		if($(window).width()<768) {
+			var url = window.location.pathname;
+
+			var path = window.location.href;
+			var path = path.split('?');
+			path = path[1];
+			if(path == 'page=login') {
+				$('.desktop-promo, .mobile-promo').hide();
+			}
+
+			if(url == '/clothing-sale') {
+				$('.desktop-promo, .mobile-promo').hide();
+			}
+		}
+
+		//responsive image map
+		// $('img[usemap]').rwdImageMaps();
+
+		//desktop
+		if($(window).width()>768){
+
+			//show the fineprint in a lightbox
+			$('.see-details').fancybox();
+
+			var url = window.location.pathname;
+
+			// hide banner on school days recruitment page
+			if(url == '/static/school-days.html') {
+				$('.desktop-promo, .desktop-promo-hp').hide();
+			}
+
+			//if homepage show homepage banner
+			// if(url == '/'){
+			// 	$('.desktop-promo-hp').show();
+			// 	$('.desktop-promo').hide();
+
+			// hide banner on sale page
+			// } else if(url == '/clothing-sale') {
+			// 	$('.desktop-promo, .desktop-promo-hp').hide();
+
+			//if all other pages show regular banner
+			// } else {
+			// 	$('.desktop-promo-hp').hide();
+			// 	$('.desktop-promo').show();
+			// }
+
+		// mobile 
+		} else if($(window).width()<768){
+			
+			// hide banner on school days recruitment page
+			if(url == '/static/school-days.html') {
+				$('.mobile-promo, .mobile-promo-hp').hide();
+			}
+
+			//if homepage show homepage banner
+			// if(url == '/'){
+			// 	$('.mobile-promo-hp').show();
+			// 	$('.mobile-promo').hide();
+
+			//hide banner on sale page
+			// } else if(url == '/clothing-sale') {
+			// 	$('.mobile-promo, .mobile-promo-hp').hide();
+
+			//if all other pages show regular banner
+			// } else {
+			// 	$('.mobile-promo-hp').hide();
+			// 	$('.mobile-promo').show();
+			// }
+
+			// toggle the fineprint
+			$('.see-details, .close-fancy').click(function(e){
+				e.preventDefault();
+				$('#details-promo').slideToggle();
+			});
+		}
+		
+	});
+</script>
+
