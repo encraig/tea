@@ -346,11 +346,11 @@ her tribe’s traditional patchwork. We worked with Jessica to adapt classic Sem
 
 						//desktop
 						if($(window).width() > 737){
-							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><div class="sizes-container sizes-wrap-'+i+'"><ul class="sizes-'+i+'"><li>size</li></ul></div><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title"><a href="'+ pdpUrl +'" target="_blank">'+title+'</a></span><br><span class="price">'+price+'</span></h3><div class="sizes-container sizes-wrap-'+i+'"><ul class="sizes-'+i+'"><li>size</li></ul></div><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
 						}
 						//mobile
 						else if($(window).width() < 737){
-							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><select class="sizes-'+i+'"><option>size</option></select><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+							var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title"><a href="'+ pdpUrl +'" target="_blank">'+title+'</a></span><br><span class="price">'+price+'</span></h3><select class="sizes-'+i+'"><option>size</option></select><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
 						}  
 
 						
