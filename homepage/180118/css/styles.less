@@ -235,7 +235,7 @@ img, video {
 	}
 
 	//background image
-	background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180118/c1-d.png') no-repeat top center; 
+	background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/homepage/180222/c1-d.png?nocache=12') no-repeat top center; 
 	
 	min-height:500px;
 	margin-bottom:10px;
@@ -249,7 +249,6 @@ img, video {
 			margin-top:0;
 			padding:0;
 			text-align:center;
-			min-height:450px;
 		}
 
 
@@ -260,9 +259,9 @@ img, video {
 		}
 
 		width: 329px;
-    	margin-top: 40px;
-    	//float: left;
-    	float:right;
+    	margin-top: 206px;
+    	float: left;
+    	//float:right;
     	//text-align: left;
     	text-align:center;
     	padding-left: 0;
@@ -274,11 +273,11 @@ img, video {
 				display:inline;
 			}
 
-			font-size: 58px;
+			font-size: 45px;
     		font-family: brown-pro-bold !important;
-    		line-height: 57px;
-    		text-align:right;
-    		padding-right:43px;
+    		line-height: 47px;
+    		text-align:left;
+    		padding-left:43px;
 
     		span {
     			font-size: 62px;
@@ -286,14 +285,12 @@ img, video {
 		}
 
 		p {
-			@media screen and (max-width:737px){ 
+			@media screen and (max-width:737px){
 				color:#7a7a7c;
 				margin-top:35px;
-				font-size:1em;
+				//font-size:.8em;
 				line-height:18px;
 				left:0;
-				text-align:center;
-				letter-spacing:-.3px;
 			}
 			
 			&.desktop {
@@ -304,8 +301,7 @@ img, video {
 			}
 
 			margin-top: 4px;
-			left:-42px;
-			text-align:right;
+			left:-16px;
 			
 			
 		}
@@ -316,12 +312,12 @@ img, video {
 				//2 cta
     			width: 42%;
     			left: 6px;
-    			margin: 17px 3% -3px 0;
+    			margin: 52px 3% 1px 0;
     			color:@hp-font-color;
     			border-color:@hp-font-color;
     			border:1px solid @hp-font-color;
     			background:#fff;
-    			padding:9px 0px;
+    			padding:9px 0;
 			}
 
 			/*&:last-of-type {
@@ -332,20 +328,21 @@ img, video {
 
 			&:hover, &:active {
 				@media screen and (max-width:737px){
-					background:#fff;
-					color:@hp-font-color;
+					//background:#fff;
+					//color:@hp-font-color;
 				}
 
-				background:none;
+				background:@hp-font-color;
 				color:#fff;
 			}
 
-			//color: @hp-font-color;
-			color:#598bad;
+			color: @hp-font-color; 
+			//color:#598bad;
     		margin-top: 18px;
     		margin-bottom: 0px;
     		margin-left: 0px;
-    		border: 1px solid #fff;
+    		border:none;
+    		//border: 1px solid #fff;
     		padding: 11px 0;
     		width: 250px;
     		background: #fff;
