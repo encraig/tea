@@ -1,0 +1,253 @@
+<!--toolkit-->
+<!-- <style>
+	.ref{position:absolute;opacity:.5}.my-account h1,.midbox h1{display:none}#simplemodal-container,#simplemodal-overlay{display:none !important}@media screen and (max-width:737px){.sidebar.customer-service{display:none}}.main-content{float:left;width:840px;margin-top:0 !important}@media screen and (max-width:737px){.main-content{float:none;width:100%}}.padded{padding:0 !important}.mobile{display:none !important}@media screen and (max-width:768px){.mobile{display:inline-block !important}}@media screen and (max-width:768px){.desktop{display:none !important}}.cta{display:inline-block;border:2px solid;padding:8px 0 8px;width:200px;text-decoration:none;text-transform:uppercase;position:relative;left:-3px;font-size:14px;text-align:center;font-family:brown-pro-bold !important}@media screen and (max-width:768px){.cta{padding:6px 0 6px 0;width:170px;left:0;font-size:12px}}@media screen and (max-width:737px){.cta{padding:13px 0 13px 0;width:42%;left:-1px;font-size:19px;letter-spacing:1px;margin-bottom:76px}}@media screen and (max-width:668px){.cta{width:276px;font-size:17px;margin-bottom:67px}}@media screen and (max-width:569px){.cta{width:235px;font-size:14px;padding:9px 0 9px 0;margin-bottom:59px}}@media screen and (max-width:481px){.cta{width:199px;font-size:11px;padding:10px 0 10px 0;margin-bottom:49px}}@media screen and (max-width:415px){.cta{width:170px;padding:7px 0 7px 0;font-size:10px}}@media screen and (max-width:376px){.cta{width:155px;font-size:9px;padding:7px 0 7px 0}}@media screen and (max-width:321px){.cta{width:131px;font-size:8px;padding:6px 0 6px 0}}.quiz-container{font-size:15px;line-height:1.5em}.quiz-container h2{font-size:24px;line-height:1.5em;margin-bottom:10px}.quiz-container h3{font-size:18px;line-height:1.5em;margin-bottom:10px;color:red;text-transform:uppercase}.quiz-container .cta{display:block}.q1,.q2,.q3,.the-set{display:none}.q1 input,.q2 input,.q3 input,.the-set input{width:auto}.q1 .colors{overflow:hidden !important}.q1 .colors li{width:33% !important;margin:0 !important}.q2 ul li,.q3 ul li{float:none !important;width:100% !important}.the-set .sets{overflow:hidden}/*# sourceMappingURL=styles.css.map */
+</style> -->
+
+<!-- dev styles css -->
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+ 
+<div class="quiz-container">
+    <div class="intro">
+        <h2>Ever wonder what a stylist would pair for you? Answer a few simple questions and we’ll help you find your very own unique style! </h2>
+        <a href="#" class="cta next">Let’s Get Started</a>
+    </div>
+
+    <div class="q1">
+        <h2>What colors do you love to wear</h2>
+        <ul class="colors"></ul>
+        <a href="#" class="cta next">Next</a>
+    </div>
+
+    <div class="q2">
+        <h2>What explanation best describes your wardrobe?</h2>
+        <ul class="wardrobe"></ul>
+        <a href="#" class="cta prev">Prev</a>
+        <a href="#" class="cta next">Next</a>
+    </div>
+
+    <div class="q3">
+        <h2>Which celebrated quote you like best?</h2>
+        <ul class="quote"></ul>
+        <a href="#" class="cta prev">Prev</a>
+        <a href="#" class="cta next">Next</a>
+    </div>
+
+    <div class="the-set">
+        <h2>Here is your set!</h2>
+        <ul class="sets"></ul>
+        <a href="#" class="cta prev">Prev</a>
+    </div>
+</div>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+
+<script>
+$(document).ready(function(){
+	// jQuery('img[usemap]').rwdImageMaps();
+
+    //colors
+    var colorsArray = ['yellow','green','blue','pink','grey','white','denim'];
+    $.each(colorsArray, function(i,val){
+        var elem = '<li><input type="radio" value="'+val+'" name="colors"/> <span>'+val+'</span></li>';
+        $('.colors').append(elem);
+    });
+
+    //---------------------------------------------------
+
+    //questions
+    var q2 = [
+        {q:'Dream-worthy graphic tees &amp; urban chic outfits', a:[1,5], c:['grey','blue','pink','denim','yellow']},
+        {q:'Minimalist with simple stripes &amp; artsy patterns', a:[2,3], c:['denim','green','blue','grey','pink','yellow']},
+        {q:'Anything I can explore, run &amp; cartwheel in', a:[4,6], c:['blue','yellow','white','grey','green','pink']},
+    ];
+
+    var q3 = [
+        {q:'Imperfection is beauty, madness is genius and it’s better to be absolutely ridiculous than absolutely boring” – Marilyn Monroe', a:1},
+        {q:'The question isn’t who’s going to let me; it’s who is going to stop me.” – Ayn Rand', a:2},
+        {q:'The best protection any woman can have... Is courage.” – Elizabeth Cady Stanton', a:3},
+        {q:'You can’t be the kid at the top of the waterslide, overthinking it. You have to go down the chute.” – Tina Fey', a:4},
+        {q:'Try to be a rainbow in someone else’s cloud” – Maya Angelou', a:5},
+        {q:'Spread love everywhere you go. Let no on ever come to you without leaving happier.” – Mother Teresa', a:6},
+    ];
+
+    //---------------------------------------------------
+
+    //sets
+    var sets = [
+        {skus:['7w12316','7w12320','7w12206','7f12219']},
+        {skus:['7w12318','7w12325','7w12204']},
+        {skus:['7w12325','7w12319','7w12204']},
+        {skus:['7w12315','7w12323','7w12205']},
+        {skus:['7w12108','6f12136','6f12200']},
+        {skus:['7w12109','6f12136','6f12200']},
+    ];
+
+    //---------------------------------------------------
+
+    //user selection
+    var user = {};
+
+    //function to show next/prev slide
+    var showSlide = function(elem, link){
+        $(link).closest('div').fadeOut(200);
+        setTimeout(function(){
+            $(elem).fadeIn();
+        },250);
+    }
+
+    //---------------------------------------------------
+
+    //next clicks
+    $('.intro .next').click(function(e){
+        e.preventDefault();
+        var $this = $(this);
+        showSlide('.q1', $this);
+    });
+
+    $('.q1 .next').click(function(){
+    
+        user.colors = [];
+
+        //get all the radios
+        var checkboxes = $('.colors').find('input');
+        $.each(checkboxes, function(i,val){
+            //checked if checked & push to array
+            if($(val).is(':checked')){
+                var theColor = $(val).val();
+                user.colors.push(theColor);
+            }
+        });
+
+        //if nothing is selected show the error message
+        if(user.colors.length == 0){
+            var elem = '<h3>please select a color</h3>'
+            $('.q1 h2').after(elem);
+        } else {
+            //remove the error message
+            $('.q1 h3').remove();
+            //show question 2 based on the colors selected
+            $.each(user.colors, function(i,val){
+                $.each(q2, function(j,question){
+                    $.each(question.c, function(k,color){
+                        if(val == color){
+                            var elem = '<li><input type="radio" name="wardrobe" value="'+question.a+'"/> <span>'+question.q+'</span></li>'
+                            $('.wardrobe').append(elem);
+                        }
+                    });
+                });
+            });
+
+            //show the next slide
+            var $this = $(this);
+            showSlide('.q2', $this);
+        }
+    });
+
+    $('.q2 .next').click(function(){
+
+        user.wardrobe = [];
+
+        //get all the radios
+        var checkboxes = $('.wardrobe').find('input');
+        $.each(checkboxes, function(i,val){
+            //check if selected & push to array
+            if($(val).is(':checked')){
+                var theWard = $(val).val();
+                var wardArr = theWard.split(',');
+                $.each(wardArr, function(j,arr){
+                    user.wardrobe.push(arr);
+                });
+                
+            }
+        });
+
+        //show question 3 based on the selection from question 2
+        $.each(user.wardrobe, function(i,val){
+            $.each(q3, function(j,question){
+                // console.log(val, question.a)
+                if(val == question.a){
+                    var elem = '<li><input type="radio" name="quote" value="'+question.a+'"/> <span>'+question.q+'</span></li>'
+                    $('.quote').append(elem);
+                }
+            });
+        });
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.q3', $this);
+    });
+
+    $('.q3 .next').click(function(){
+
+        user.quote = '';
+
+        //get all the radios
+        var checkboxes = $('.quote').find('input');
+        $.each(checkboxes, function(i,val){
+            //check if selected & push to array
+            if($(val).is(':checked')){
+                var theQuote = Number($(val).val());
+                user.quote = theQuote;                
+            }
+        });
+
+        //get the products
+        var baseUrl = 'https://www.teacollection.com/product/';
+        $.each(sets, function(i,val){
+            //get the set from the selection
+            var index = i + 1;
+            if(user.quote == index){
+                //loop through the skus
+                $.each(val.skus, function(j,arr){
+                    //make the get call
+                    $.get(baseUrl + arr, function(data){
+                        //variables
+                        var imgSrc = $(data).find('img[itemprop="image"]').attr('src');
+                        var title = $(data).find('h1[itemprop="name"]').text();
+                        var price = $(data).find('span[itemprop="price"]').text();
+                        
+                        var elem = '<li><h4>'+title+'</h4><h5>$'+price+'</h5><img src="'+imgSrc+'" alt="'+title+'" /></li>';
+                        $('.sets').append(elem);
+
+                    });
+                });
+            }
+        });
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.the-set', $this);
+    });
+
+    //---------------------------------------------------
+
+    //prev clicks
+    $('.q2 .prev').click(function(){
+        var $this = $(this);
+        showSlide('.q1', $this);
+        $('.wardrobe').find('li').remove();
+    });
+
+    $('.q3 .prev').click(function(){
+        var $this = $(this);
+        showSlide('.q2', $this);
+        $('.quote').find('li').remove();
+    });
+
+    $('.the-set .prev').click(function(){
+        var $this = $(this);
+        showSlide('.q3', $this);
+        $('.sets').find('li').remove();
+    });
+        
+}); 
+</script>  
