@@ -21,7 +21,7 @@
 	    }
 	    
 
-	    var contentCells = function(){
+	    var contentCells = function(){ 
 	        //remove all the .cell
 	        $('.items-list-wrapper .item.cell, .thumb-wrapper .single-item-box.cell').remove();
 
@@ -29,7 +29,7 @@
 
 	        //the content cell take over
 	        var images = [
-	            {num:1, img:'c1-v2.png', url:'', target:''},
+	            {num:1, img:'c1.png', url:'/tween-girls-clothing/favorites/quiz', target:''},
 	            {num:6, img:'c6.png', url:'', target:''},
 	            {num:10, img:'c10.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
 	            {num:17, img:'c17.jpg', url:'', target:''},
@@ -85,8 +85,19 @@
 
 	                //output item to page
 	                if(num !== null){
-	                    jQuery('.items-list-wrapper .item').eq(prev).before(elem);
-	                }	
+	                    if(num == 38){ 
+	                            
+	                        var addedItem = jQuery('.items-list-wrapper .item').length;
+
+	                        if(addedItem == 37){
+	                            jQuery('.items-list-wrapper .item').eq(36).after(elem);
+	                        }
+	                           
+	                    } 
+	                    else {
+	                        jQuery('.items-list-wrapper .item').eq(prev).before(elem);
+	                    }  
+	                }   
 	    		}
 
 	    		// if mobile
@@ -108,7 +119,19 @@
 
 	    			// output item to mobile page
 	                if(num !== null){
-	                    jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+	                    if(num == 38){ 
+	                            
+	                        var addedItem = jQuery('.thumb-wrapper .single-item-box').length;
+
+	                        if(addedItem == 37){
+	                            jQuery('.thumb-wrapper .single-item-box').eq(36).after(elem);
+	                        }
+	                           
+	                    } 
+	                    else {
+	                        jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+	                    }  
+	                    
 	                }
 	    		}
 	    	};
