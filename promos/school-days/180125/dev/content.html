@@ -1,3 +1,5 @@
+<div class="promo-wrapper">
+
 <!-- toolkit -->
 <style>
 	include "../css/styles.css"
@@ -83,64 +85,119 @@
 		//responsive image map
 		// $('img[usemap]').rwdImageMaps();
 
+		//function to hide or show the banner
+	var hideBanners = function() {
+		
+		var url = window.location.pathname;
+
+		//for black friday
+		// var sale = url.split('/');
+		// if(sale[1] !== undefined){
+		// 	sale = sale[1];
+		// }
+		// else {
+		// 	sale = undefined;
+		// }
+
+		// console.log(sale);
+
+
+		// console.log(url); 
+
 		//desktop
-		if($(window).width()>768){
+		if(jQuery(window).width()>737){
 
 			//show the fineprint in a lightbox
-			$('.see-details').fancybox();
-
-			var url = window.location.pathname;
-
-			// hide banner on school days recruitment page
-			if(url == '/static/school-days.html') {
-				$('.desktop-promo, .desktop-promo-hp').hide();
-			}
+			jQuery('.see-details').fancybox();
 
 			//if homepage show homepage banner
 			// if(url == '/'){
-			// 	$('.desktop-promo-hp').show();
-			// 	$('.desktop-promo').hide();
+			// 	jQuery('.desktop-promo-hp').show();
+			// 	jQuery('.desktop-promo').hide();
+			//}
+
+			// hide banner on homepage page
+			// if(url == '/') {
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			// }
+
+			//hide banners on all sub cats sale
+			// if(sale == 'sale'){
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			// }
+
+			// hide banner on black friday page
+			// if(url == '/black-friday') {
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			// }
+
+			//hide banners on all sub cats of black friday
+			// if(bf.indexOf('black') !== -1){
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			// }
+
+			//show the banner on the baby boy & baby girl black friday page
+			// if(url == '/baby-boy-black-friday' || url == '/baby-girl-black-friday'){
+			// 	jQuery('.desktop-promo, .desktop-promo-hp').show();
+			// }
 
 			// hide banner on sale page
-			// } else if(url == '/clothing-sale') {
-			// 	$('.desktop-promo, .desktop-promo-hp').hide();
+			if(url == '/clothing-sale') {
+				jQuery('.desktop-promo, .desktop-promo-hp').hide();
+			}	
 
-			//if all other pages show regular banner
-			// } else {
-			// 	$('.desktop-promo-hp').hide();
-			// 	$('.desktop-promo').show();
-			// }
+			//for when resize going up hide the mobile banners
+			jQuery('.mobile-promo-hp, .mobile-promo').hide();
 
 		// mobile 
-		} else if($(window).width()<768){
-			
-			// hide banner on school days recruitment page
-			if(url == '/static/school-days.html') {
-				$('.mobile-promo, .mobile-promo-hp').hide();
-			}
+		} else if(jQuery(window).width()<737){
+			//hide the desktop banners
+			//jQuery('.desktop-promo-hp, .desktop-promo').hide();
 
 			//if homepage show homepage banner
 			// if(url == '/'){
-			// 	$('.mobile-promo-hp').show();
-			// 	$('.mobile-promo').hide();
-
-			//hide banner on sale page
-			// } else if(url == '/clothing-sale') {
-			// 	$('.mobile-promo, .mobile-promo-hp').hide();
-
-			//if all other pages show regular banner
-			// } else {
-			// 	$('.mobile-promo-hp').hide();
-			// 	$('.mobile-promo').show();
+			// 	jQuery('.mobile-promo-hp').show();
+			// 	jQuery('.mobile-promo').hide();
 			// }
 
-			// toggle the fineprint
-			$('.see-details, .close-fancy').click(function(e){
-				e.preventDefault();
-				$('#details-promo').slideToggle();
-			});
-		}
+			//hide banner on homepage page
+			// if(url == '/') {
+			// 	jQuery('.mobile-promo, .mobile-promo-hp').hide();
+			// }
+
+			//hide banner on black friday page
+			// if(url == '/black-friday') {
+			// 	jQuery('.mobile-promo, .mobile-promo-hp').hide();
+			// }
+
+			//hide banners on all sub cats of black friday
+			// if(bf.indexOf('black') !== -1){
+			// 	jQuery('.mobile-promo, .mobile-promo-hp').hide();
+			// }
+
+			//hide banner on sale page
+			if(url == '/clothing-sale') {
+				jQuery('.mobile-promo, .mobile-promo-hp').hide();
+			}
+		} 
+	};
+
+		//on page load call hideBanners
+		hideBanners();
+		
+		//on window resize call hideBanners
+		$(window).resize(function(){
+			hideBanners();
+		});
+
+		// slide toggle the fineprint
+		jQuery('.see-details, .close-fancy').click(function(e){
+			e.preventDefault();
+			jQuery('#details-promo').slideToggle();
+		});
+		
 		
 	});
 </script>
 
+</div>
