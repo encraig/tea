@@ -1,0 +1,57 @@
+
+<!-- ref img -->
+<!-- <img src="../images/ref-m.png" class="ref" />  -->
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+ 
+
+<div class="size-container">
+    <h2>shop by size</h2>
+    <ul>
+        {sub_cats category=$category name=cat}
+            <li><a href="{category_url category=$cat.name}">{$cat.title|smarty:nodefaults}</a></li>
+        {/sub_cats}
+    </ul> 
+</div>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!--toolkit-->
+{literal}
+<style> 
+    include "../css/styles.css" 
+</style>
+{/literal}
+
+
+{literal}
+<script>
+$(document).ready(function(){
+ 
+    var li = $('.size-container ul li');
+    $.each(li, function(i,val){
+        var text = $(val).text();
+        var url = $(val).find('a').attr('href');
+        text = text.replace('Newborn', 'NB');
+        text = text.replace('Size','');
+        text = text.replace('months', ' M');
+        text = text.replace('to', '-');
+        text = text.replace(/ /g, '');
+        // console.log(text, url);
+        $(val).html('<a href="'+ url +'">'+ text +'</a>');
+    });
+
+    $('.size-container').show();
+
+}); 
+</script>  
+{/literal}
