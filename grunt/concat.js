@@ -4,49 +4,97 @@ module.exports = function(grunt){
         //sourceMap:true,
       },
 
+      // CONTENT CELL ---------------------------------------------------------------------------
+      cell: {
+        files: {
+          //desktop
+          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/build/local-d.html': ['local-templates/desktop/d-header-2column.html','content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev/content.html','local-templates/desktop/d-footer-2column.html'],
+          //mobile
+          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/build/local-m.html': ['local-templates/mobile/m-header.html','content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev/content.html','local-templates/mobile/m-footer.html'],
+        }
+      },
+
       // HOMEPAGE ---------------------------------------------------------------------------
       hp: {
         files: {
           //desktop
-          'homepage/<%= hp.date %>/build/local-hp-d.html': ['local-templates/desktop/d-header-hp.html','homepage/<%= hp.date %>/dev/content.html','local-templates/desktop/d-footer-hp.html'],
+          'homepage/<%= hp.date %>/build/hp-d.html': ['local-templates/desktop/header-get.html','local-templates/build/full-page.html','local-templates/desktop/footer-get.html'],
           //mobile
-          'homepage/<%= hp.date %>/build/local-hp-m.html': ['local-templates/mobile/m-header.html','homepage/<%= hp.date %>/dev/content.html','local-templates/mobile/m-footer.html'],
+          'homepage/<%= hp.date %>/build/hp-m.html': ['local-templates/mobile/header-get.html','local-templates/build/full-page.html','local-templates/mobile/footer-get.html'],
         }
       },
 
       // CATEGORY PAGES
       categories: {
-        files: {
-          //girl -----------------------------------------------------------------------------
-          //girl desktop
-          'category-pages/<%= cat.date %>/build/local-girls-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
-          //girl mobile
-          'category-pages/<%= cat.date %>/build/local-girls-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
+          files:[
+            //desktop
+            {
+              dest:'category-pages/<%= cat.date %>/build/headers-d.html',
+              src: ['local-templates/desktop/header-get.html','local-templates/build/two-column-page.html','local-templates/desktop/footer-get.html'],
+            },
+            //mobile
+            {
+              dest:'category-pages/<%= cat.date %>/build/headers-m.html',
+              src: ['local-templates/mobile/header-get.html','local-templates/build/two-column-page.html','local-templates/mobile/footer-get.html'],
+            }      
+          ]
+          
+        // files: {
+        //   //girl -----------------------------------------------------------------------------
+        //   //girl desktop
+        //   'category-pages/<%= cat.date %>/build/local-girls-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/girls-clothing.html','local-templates/desktop/d-footer-2column.html'],
+        //   //girl mobile
+        //   'category-pages/<%= cat.date %>/build/local-girls-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/girls-clothing.html','local-templates/mobile/m-footer.html'],
 
-          //boy -----------------------------------------------------------------------------
-          //boy desktop
-          'category-pages/<%= cat.date %>/build/local-boys-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
-          //boy mobile
-          'category-pages/<%= cat.date %>/build/local-boys-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
+        //   //boy -----------------------------------------------------------------------------
+        //   //boy desktop
+        //   'category-pages/<%= cat.date %>/build/local-boys-clothing-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/boys-clothing.html','local-templates/desktop/d-footer-2column.html'],
+        //   //boy mobile
+        //   'category-pages/<%= cat.date %>/build/local-boys-clothing-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/boys-clothing.html','local-templates/mobile/m-footer.html'],
 
-          //baby girl -----------------------------------------------------------------------------
-          //baby girl desktop
-          'category-pages/<%= cat.date %>/build/local-baby-girl-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
-          //baby girl mobile
-          'category-pages/<%= cat.date %>/build/local-baby-girl-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
+        //   //baby girl -----------------------------------------------------------------------------
+        //   //baby girl desktop
+        //   'category-pages/<%= cat.date %>/build/local-baby-girl-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/baby-girl-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        //   //baby girl mobile
+        //   'category-pages/<%= cat.date %>/build/local-baby-girl-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/baby-girl-clothes.html','local-templates/mobile/m-footer.html'],
 
-          //baby boy -----------------------------------------------------------------------------
-          //baby boy desktop
-          'category-pages/<%= cat.date %>/build/local-baby-boy-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
-          //baby boy mobile
-          'category-pages/<%= cat.date %>/build/local-baby-boy-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
+        //   //baby boy -----------------------------------------------------------------------------
+        //   //baby boy desktop
+        //   'category-pages/<%= cat.date %>/build/local-baby-boy-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/baby-boy-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        //   //baby boy mobile
+        //   'category-pages/<%= cat.date %>/build/local-baby-boy-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/baby-boy-clothes.html','local-templates/mobile/m-footer.html'],
 
-          //newborn -----------------------------------------------------------------------------
-          //newborn desktop
-          'category-pages/<%= cat.date %>/build/local-newborn-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
-          //newborn mobile
-          'category-pages/<%= cat.date %>/build/local-newborn-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
-        }
+        //   //newborn -----------------------------------------------------------------------------
+        //   //newborn desktop
+        //   'category-pages/<%= cat.date %>/build/local-newborn-clothes-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/newborn-clothes.html','local-templates/desktop/d-footer-2column.html'],
+        //   //newborn mobile
+        //   'category-pages/<%= cat.date %>/build/local-newborn-clothes-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/newborn-clothes.html','local-templates/mobile/m-footer.html'],
+
+        //   //girls swim -----------------------------------------------------------------------------
+        //   //girls swim desktop
+        //   'category-pages/<%= cat.date %>/build/local-girls-swimwear-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/girls-swimwear.html','local-templates/desktop/d-footer-2column.html'],
+        //   //girls swim mobile
+        //   'category-pages/<%= cat.date %>/build/local-girls-swimwear-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/girls-swimwear.html','local-templates/mobile/m-footer.html'],
+
+        //   //boys swim -----------------------------------------------------------------------------
+        //   //boys swim desktop
+        //   'category-pages/<%= cat.date %>/build/local-boys-swimwear-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/boys-swimwear.html','local-templates/desktop/d-footer-2column.html'],
+        //   //boys swim mobile
+        //   'category-pages/<%= cat.date %>/build/local-boys-swimwear-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/boys-swimwear.html','local-templates/mobile/m-footer.html'],
+
+        //   //trending tea  -----------------------------------------------------------------------------
+        //   //trending desktop
+        //   'category-pages/<%= cat.date %>/build/local-trending-tea-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/trending-tea.html','local-templates/desktop/d-footer-2column.html'],
+        //   //trending mobile
+        //   'category-pages/<%= cat.date %>/build/local-trending-tea-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/trending-tea.html','local-templates/mobile/m-footer.html'],
+
+        //   //black friday -----------------------------------------------------------------------------
+        //   //black friday desktop
+        //   'category-pages/<%= cat.date %>/build/local-black-friday-d.html': ['local-templates/desktop/d-header-2column.html','category-pages/<%= cat.date %>/dev/content.html','local-templates/desktop/d-footer-2column.html'],
+        //   //black friday mobile
+        //   'category-pages/<%= cat.date %>/build/local-black-friday-m.html': ['local-templates/mobile/m-header.html','category-pages/<%= cat.date %>/dev/content.html','local-templates/mobile/m-footer.html'],
+        // }
+
       },
 
       //catalog -----------------------------------------------------------------------------
@@ -65,9 +113,9 @@ module.exports = function(grunt){
       landingPages: {
         files: {
         //desktop
-        'landing-page/<%= landing.name %>/<%= landing.date %>/build/local-<%= landing.name %>-d.html': ['local-templates/desktop/d-header-2column.html','landing-page/<%= landing.name %>/<%= landing.date %>/dev/content.html','local-templates/desktop/d-footer-2column.html'],
+        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-d.html': ['local-templates/desktop/header-get.html','local-templates/build/two-column-page.html','local-templates/desktop/footer-get.html'],
         //mobile
-        'landing-page/<%= landing.name %>/<%= landing.date %>/build/local-<%= landing.name %>-m.html': ['local-templates/mobile/m-header.html','landing-page/<%= landing.name %>/<%= landing.date %>/dev/content.html','local-templates/mobile/m-footer.html'],
+        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-m.html': ['local-templates/mobile/header-get.html','local-templates/build/two-column-page.html','local-templates/mobile/footer-get.html'],
         } 
       },
 
@@ -173,7 +221,13 @@ module.exports = function(grunt){
 
         files: {
 
-          'nav-redesign/<%= nav.folder %>/build/local-<%= nav.name %>.html': ['nav-redesign/<%= nav.folder %>/html/header.html','nav-redesign/<%= nav.folder %>/html/nav-container-header.html','nav-redesign/<%= nav.folder %>/html/<%= nav.name %>.html','nav-redesign/<%= nav.folder %>/html/nav-container-footer.html','nav-redesign/<%= nav.folder %>/html/footer.html']
+          'nav-redesign/<%= nav.folder %>/build/local-<%= nav.name %>.html': ['nav-redesign/<%= nav.folder %>/html/header.html','nav-redesign/<%= nav.folder %>/html/nav-container-header.html','nav-redesign/<%= nav.folder %>/html/<%= nav.name %>.html','nav-redesign/<%= nav.folder %>/html/nav-container-footer.html','nav-redesign/<%= nav.folder %>/html/footer.html'],
+
+          'nav-redesign/<%= nav.folder %>/monetate/<%= nav.name %>-monetate.js': ['nav-redesign/<%= nav.folder %>/js/nav1-base.js','nav-redesign/<%= nav.folder %>/js/nav1.js','nav-redesign/<%= nav.folder %>/js/icon-bag.js','nav-redesign/<%= nav.folder %>/js/icon-search.js','nav-redesign/<%= nav.folder %>/js/icon-account.js'],
+
+          // 'nav-redesign/<%= nav.folder %>/monetate/nav-1-monetate.js': ['nav-redesign/<%= nav.folder %>/js/nav-base-1.js','nav-redesign/<%= nav.folder %>/js/nav1.js'],
+
+          // 'nav-redesign/<%= nav.folder %>/monetate/nav-2-monetate.js': ['nav-redesign/<%= nav.folder %>/js/nav-base-2.js','nav-redesign/<%= nav.folder %>/js/nav2.js'],
         
         }
       },

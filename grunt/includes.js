@@ -6,6 +6,48 @@ module.exports = function(grunt){
 			flatten:true
 		},
 
+		// BUILD  ---------------------------------------------------------------------------
+		buildIncludes: {
+
+			files: [
+				//toolkit
+				{ 
+					cwd: 'local-templates/', 
+					src: [ '*.html' ], 
+					dest:  'local-templates/build/',
+				},
+			],
+
+		},
+
+		// CONTENT ZONE  ---------------------------------------------------------------------------
+		zoneIncludes: {
+
+			files: [
+				//toolkit
+				{ 
+					cwd: 'content-zone/<%= zone.name %>/dev', 
+					src: [ '*.html' ], 
+					dest:  'content-zone/<%= zone.name %>/toolkit/',
+				},
+			],
+
+		},
+
+		// CONTENT CELL TAKE OVER  ---------------------------------------------------------------------------
+		cellIncludes: {
+
+			files: [
+				//toolkit
+				{ 
+					cwd: 'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev', 
+					src: [ '*.html' ], 
+					dest:  'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/toolkit/',
+				},
+			],
+
+		},
+
 		// HOMEPAGE  ---------------------------------------------------------------------------
 		hpIncludes: {
 
@@ -37,7 +79,7 @@ module.exports = function(grunt){
 				{ 
 					cwd: 'landing-page/<%= landing.name %>/<%= landing.date %>/dev', 
 					src: [ '*.html' ], 
-					dest:  'landing-page/<%= landing.name %>/<%= landing.date %>/toolkit/toolkit-<%= landing.name %>.html'
+					dest:  'landing-page/<%= landing.name %>/<%= landing.date %>/toolkit/'
 				},
 			],
 
@@ -60,9 +102,8 @@ module.exports = function(grunt){
 		navRedesignIncludes: {
 
 			files: [
-				//toolkit
-				// { cwd: 'nav-redesign/html', src: [ '{nav1,nav2,nav3,nav4,nav5,nav6,nav7,nav8}.html' ], dest:  'nav-redesign/monetate/'},
-				{ cwd: 'nav-redesign/<%= nav.folder %>/html', src: [ '<%= nav.name %>.html' ], dest:  'nav-redesign/<%= nav.folder %>/monetate/'},
+				
+				{ cwd: 'nav-redesign/<%= nav.folder %>/html', src: [ 'template.html' ], dest:  'nav-redesign/<%= nav.folder %>/build/'},
 			],
 
 		},

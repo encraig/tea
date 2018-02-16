@@ -8,6 +8,20 @@ module.exports = function(grunt){
           compress: true,
       },
 
+      // ZONE CSS ---------------------------------------------------------------------------
+      zoneCSS:{
+        files:{
+          'content-zone/<%= zone.name %>/css/styles.css': 'content-zone/<%= zone.name %>/css/styles.less'
+        }
+      },
+
+      // CONTENT CELL CSS ---------------------------------------------------------------------------
+      cellCSS:{
+        files:{
+          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/css/styles.css': 'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/css/styles.less'
+        }
+      },
+
       // HOMEPAGE CSS ---------------------------------------------------------------------------
       hpCSS:{
         files:{
@@ -17,18 +31,27 @@ module.exports = function(grunt){
 
       // CATEGORIES CSS ---------------------------------------------------------------------------
       categoriesCSS: {
-        files: {
+        //files: {
+          //black friday
+          //'category-pages/<%= cat.date %>/css/styles.css': 'category-pages/<%= cat.date %>/css/styles.less',
           //girls
-          'category-pages/<%= cat.date %>/css/girls-clothing.css': 'category-pages/<%= cat.date %>/css/girls-clothing.less',
+          //'category-pages/<%= cat.date %>/css/girls-clothing.css': 'category-pages/<%= cat.date %>/css/girls-clothing.less',
           //boys
-          'category-pages/<%= cat.date %>/css/boys-clothing.css': 'category-pages/<%= cat.date %>/css/boys-clothing.less',
+          //'category-pages/<%= cat.date %>/css/boys-clothing.css': 'category-pages/<%= cat.date %>/css/boys-clothing.less',
           //baby girl
-          'category-pages/<%= cat.date %>/css/baby-girl-clothes.css': 'category-pages/<%= cat.date %>/css/baby-girl-clothes.less',
+          //'category-pages/<%= cat.date %>/css/baby-girl-clothes.css': 'category-pages/<%= cat.date %>/css/baby-girl-clothes.less',
           //baby boy
-          'category-pages/<%= cat.date %>/css/baby-boy-clothes.css': 'category-pages/<%= cat.date %>/css/baby-boy-clothes.less',
+          //'category-pages/<%= cat.date %>/css/baby-boy-clothes.css': 'category-pages/<%= cat.date %>/css/baby-boy-clothes.less',
           //newborn
-          'category-pages/<%= cat.date %>/css/newborn-clothes.css': 'category-pages/<%= cat.date %>/css/newborn-clothes.less'
-        }
+          //'category-pages/<%= cat.date %>/css/newborn-clothes.css': 'category-pages/<%= cat.date %>/css/newborn-clothes.less',
+          
+        //}
+
+        expand: true,
+        cwd: 'category-pages/<%= cat.date %>/css/',
+        src: '*.less',
+        dest:'category-pages/<%= cat.date %>/css/',
+        ext: '.css',
       },
 
 
