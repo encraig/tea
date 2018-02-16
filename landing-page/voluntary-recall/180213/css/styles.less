@@ -1,0 +1,194 @@
+@page-cta-color:#1B4F9B;
+@page-font-color: #666;
+
+.ref {
+	position:absolute;
+	opacity:.5;
+	display:none;
+}
+ 
+.my-account, .midbox {
+	h1 {
+		display:none;
+	}
+} 
+
+#simplemodal-container, #simplemodal-overlay {
+	display:none !important;
+}
+
+.sidebar.customer-service {
+	@media screen and (max-width:737px){
+		display:none;
+	}
+}
+
+.main-content {
+	@media screen and (max-width:737px){
+		float:none;
+		width:100%;
+	}
+
+	float:left;
+	width: 840px;
+	margin-top:0 !important;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+.mobile {
+	@media screen and (max-width:768px){
+		display: inline-block !important;
+	}
+
+	display:none !important;
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.cta {
+	@media screen and (max-width:768px) {
+		padding:6px 0 6px 0;
+		width:170px;
+		left:0;
+		font-size:12px;
+	}
+
+	@media screen and (max-width:737px){
+		padding:13px 0 13px 0;
+		width:42%;
+		left:-1px;
+		font-size:19px;
+		letter-spacing:1px;
+		margin-bottom:76px;
+	}
+
+	@media screen and (max-width:668px){
+		width:276px;
+		font-size:17px;
+		margin-bottom:67px;
+	}
+
+	@media screen and (max-width:569px){
+		width:235px;
+		font-size:14px;
+		padding:9px 0 9px 0;	
+		margin-bottom:59px;
+	}
+
+	@media screen and (max-width:481px){
+		width:199px;
+		font-size:11px;
+		padding:10px 0 10px 0;
+		margin-bottom:49px;
+	}
+
+	@media screen and (max-width:415px){
+		width:170px;
+		padding:7px 0 7px 0;
+		font-size:10px;
+	}
+
+	@media screen and (max-width:376px){
+		width:155px;
+		font-size:9px;
+		padding:7px 0 7px 0;
+	}
+
+	@media screen and (max-width:321px){
+		width:131px;
+		font-size:8px;
+		padding:6px 0 6px 0;
+	}
+
+	display: inline-block;
+    border: 2px solid;
+    padding: 8px 0 8px;
+    width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    left: -3px;
+    font-size: 14px;
+    text-align:center;
+    font-family:brown-pro-bold !important;
+}
+
+//---------------------------------------------------------------
+
+//styles
+.recall-container {
+	@media screen and (max-width:737px){
+		padding:2em;
+	}
+
+	padding: 10px 0;
+	color:#666;
+
+	h1, h2 {
+		font-family: brown-pro-bold !important;
+		margin: 0 0 20px 0;
+	}
+
+	h1 {
+		@media screen and (max-width:737px){
+			font-size:2em;
+		}
+
+  		font-size: 32px; 
+	}
+
+	h2 {
+		@media screen and (max-width:737px){
+			font-size: 1.5em;
+		}
+
+		font-size: 24px;
+		line-height: 22px;
+
+		&:last-of-type {
+			margin:20px 0;
+		}
+	}
+
+	p {
+		@media screen and (max-width:737px){
+			font-size:1em;
+		}
+
+		margin: 0 0 10px 0;
+  		font-size: 15px;
+  		line-height: 18px;
+  		color:#666;
+	}
+
+	a {
+		color:#e05a24;
+		text-decoration:underline;
+	}
+
+	ul {
+		@media screen and (max-width:737px){
+			padding: 0 0 0 10%;
+			list-style-type:disc;
+		}
+
+		margin:0 0 10px 0;
+		padding:0 0 0 10px;
+
+		li {
+			@media screen and (max-width:737px){
+				font-size:1em;
+			}
+
+			float:none;
+			font-size:15px; 
+		}
+	}
+}
