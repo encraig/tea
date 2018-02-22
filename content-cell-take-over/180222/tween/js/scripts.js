@@ -90,12 +90,12 @@ jQuery(document).ready(function() {
 
                 //output item to page
                 if(num !== null){
-                    if(num == 38){ 
+                    if(num == 53){ 
                             
                         var addedItem = jQuery('.items-list-wrapper .item').length;
 
-                        if(addedItem == 37){
-                            jQuery('.items-list-wrapper .item').eq(36).after(elem);
+                        if(addedItem == 52){
+                            jQuery('.items-list-wrapper .item').eq(51).after(elem);
                         }
                            
                     } 
@@ -124,12 +124,12 @@ jQuery(document).ready(function() {
 
     			// output item to mobile page
                 if(num !== null){
-                    if(num == 38){ 
+                    if(num == 53){ 
                             
                         var addedItem = jQuery('.thumb-wrapper .single-item-box').length;
 
-                        if(addedItem == 37){
-                            jQuery('.thumb-wrapper .single-item-box').eq(36).after(elem);
+                        if(addedItem == 51){
+                            jQuery('.thumb-wrapper .single-item-box').eq(50).after(elem);
                         }
                            
                     } 
@@ -159,11 +159,11 @@ jQuery(document).ready(function() {
             if(val.url == 'field-notes-d.pdf'){
                 // console.log('match');
                 if($(window).width() < 737){
-                    url = baseUrl2 + 'field-notes-m.pdf';
+                    url = baseUrl + 'field-notes-m.pdf';
                     // console.log('mobile: ', url)
                 }
                 else {
-                    url = baseUrl2 + val.url;
+                    url = baseUrl + val.url;
                     // console.log('desktop: ', url);
                 }
             } else {
