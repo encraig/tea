@@ -859,6 +859,9 @@ $(document).ready(function(){
 
         });
 
+        //move the 2T/2 message to the bottom
+        $('.size-chart-table').append($('.align-center'));
+
         //remove the loading
         $('.tables-loading').remove();
 
@@ -1372,13 +1375,15 @@ catLiChange();
 
              
           fraction = td.formattedValue;
+         
           //for shoes + accessories if not L/XL
-          if(fraction !== 'L/XL'){
+          if(fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4'){
             fraction = fraction.split(' ');           
             $.each(fraction, function(m, frac){
               // console.log(m, frac);
               if(frac.indexOf('/') !== -1){
                 theFraction = frac;
+                console.log('theFraction: ',theFraction); 
               }
             });
           }
