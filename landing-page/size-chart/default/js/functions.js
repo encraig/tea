@@ -1375,7 +1375,7 @@ catLiChange();
 
              
           fraction = td.formattedValue;
-         
+          // console.log('the fraction: ',fraction);
           //for shoes + accessories if not L/XL
           if(fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4'){
             //if cell has two fractions example 58 1/2 - 61 1/2
@@ -1391,7 +1391,7 @@ catLiChange();
                 })
               });
 
-              console.log(twoFrac);
+              // console.log(twoFrac);
 
               //output
               //example 61 1/2 - 64
@@ -1438,19 +1438,17 @@ catLiChange();
                 $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+fraction[0]+ ' ' +htmlFraction+'</td>');
               } else {
                 $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+content+'</td>');
-              } 
+              }
+            } 
 
-            }
-    
+          //output sizes 'L/XL','2T/2','3T/3','4T/4'
+          } else if(fraction == 'L/XL' || fraction == '2T/2' || fraction == '3T/3' || fraction == '4T/4') {
+            // console.log('yo buddy: ', fraction);
+            $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ fraction + '</td>');
           }
-          
+    
         }
-
-        // } else {
-        //   content = '';
-        // }
-           
-        
+    
       }     
     }); 
   };
@@ -1638,7 +1636,7 @@ catLiChange();
   };  
 
   //add the loading
-  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADINGING...</div>'); 
+  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>'); 
 
   var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
   // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
