@@ -1398,14 +1398,14 @@ catLiChange();
               if(twoFrac[1].indexOf('/') !== -1 && twoFrac[3] == undefined){
                 var twoFracA = twoFrac[1].split('/');
                 twoFrac[1] = '<sup class="frac">'+twoFracA[0]+'</sup>&frasl;<span class="frac">'+ twoFracA[1]+'</span>';
-                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + twoFrac[1] + '&ndash;' + twoFrac[2] + '</td>');
+                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + '</td>');
               }
 
               //example 61 - 61 1/2
               else if(twoFrac[1].indexOf('/') == -1 && twoFrac[2].indexOf('/') !== -1){
                 var twoFracA = twoFrac[2].split('/');
                 twoFrac[2] = '<sup class="frac">'+twoFracA[0]+'</sup>&frasl;<span class="frac">'+ twoFracA[1]+'</span>';
-                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + '&ndash;' + twoFrac[1]  + twoFrac[2] + '</td>');
+                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
               }
 
               //example 58 1/2 - 61 1/2
@@ -1416,7 +1416,7 @@ catLiChange();
                 
                 var twoFracB = twoFrac[3].split('/');
                 twoFrac[3] = '<sup class="frac">'+twoFracB[0]+'</sup>&frasl;<span class="frac">'+ twoFracB[1]+'</span>';
-                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + twoFrac[1] + '&ndash;' + twoFrac[2] + twoFrac[3] +'</td>');
+                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] +'</td>');
               }
             }
 
@@ -1435,9 +1435,9 @@ catLiChange();
               if(theFraction !== undefined && theFraction.indexOf('/') !== -1){
                 theFraction = theFraction.split('/');
                 htmlFraction = '<sup class="frac">'+theFraction[0]+'</sup>&frasl;<span class="frac">'+ theFraction[1]+'</span>';
-                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+fraction[0]+ ' ' +htmlFraction+'</td>');
+                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ fraction[0] + ' ' + htmlFraction +'</td>');
               } else {
-                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+content+'</td>');
+                $(tableElem + ' tr[data-num="'+k+'"]').append('<td>' + content + '</td>');
               }
             } 
 
