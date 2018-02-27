@@ -1353,6 +1353,7 @@ catLiChange();
         var content;
         var fraction;
         var theFraction;
+        // console.log(l, rows, row);
   
         if(td.formattedValue !== undefined){
           content = td.formattedValue;
@@ -1418,6 +1419,7 @@ catLiChange();
                 twoFrac[3] = '<sup class="frac">'+twoFracB[0]+'</sup>&frasl;<span class="frac">'+ twoFracB[1]+'</span>';
                 $(tableElem + ' tr[data-num="'+k+'"]').append('<td>'+ twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] +'</td>');
               }
+
             }
 
             //only one fraction 
@@ -1505,7 +1507,7 @@ catLiChange();
 
     //add new table
     $('.size-chart-table').append('<table data-num="'+i+'"><tr class="size-chart-header"><th>'+dept+' '+subcat+' size chart</th></tr></table>');
-
+      // console.log('rows: ', val);
       rows = val.merges[0].endColumnIndex -1;
       colspan = val.merges[0].endColumnIndex;
       // console.log(colspan);
