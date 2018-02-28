@@ -36,7 +36,7 @@ module.exports = function(grunt){
       // LANDING PAGES  ---------------------------------------------------------------------------
       LandingPages: {
         files: ['landing-page/<%= landing.name %>/<%= landing.date %>/css/*.less', 'landing-page/<%= landing.name %>/<%= landing.date %>/dev/*.html', 'landing-page/<%= landing.name %>/<%= landing.date %>/js/*.js'],
-        tasks: ['less:landingPagesCSS', 'includes:landingPagesIncludes','includes:buildIncludes', 'uglify:landingPagesScripts', 'concat:landingPages'],
+        tasks: ['less:landingPagesCSS','uglify:landingPagesScripts', 'includes:landingPagesIncludes','includes:buildIncludes', 'concat:landingPages'],
       },
       
 
