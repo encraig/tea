@@ -24,12 +24,13 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-copy');
 
   	var gruntConfig = {
-      hp:{date:'171019'},
-      cat:{date:'171005'},
-      landing:{name:'seo-content-page', date:'170918'},
-      date:'170921', 
-      promo: {name:'friendsFamily', date:'170925'},
-      nav:{folder:'test2', name:'nav1'},
+      hp:{date:'default'},
+      cat:{date:'180222'},
+      landing:{name:'size-chart', date:'default'},
+      cell:{name:'tween', date:'180222'},
+      zone:{name:'footer'}, 
+      promo: {name:'bmsm', date:'default'},
+      nav:{folder:'test3', name:'nav1'},
     };
 
 
