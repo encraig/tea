@@ -117,7 +117,7 @@ class="no-js iem7">
  <script src="http://s.tea-global.net/mas_assets/theme/tea_collection/js/jquery.mousewheel.min.js"></script> 
  <script src="http://s.tea-global.net/mas_assets/theme/tea_collection/js/jquery.inview.js"></script>  
  <!-- <script src="http://tags.extole.com/1579909609/core.js"></script>  -->
- <script>(function(w,d,s,o){
+ <!--<script>(function(w,d,s,o){
       w[o.callback] = function(){var a = d.getElementById('_cahiddenstyle'); if (a)a.parentNode.removeChild(a);}
       setTimeout(function(){w[o.callback]()}, o.timeout);
       var hs = d.createElement('style'),hc = "body{visibility:hidden !important;opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}", h = d.getElementsByTagName('script')[0],
@@ -125,7 +125,7 @@ class="no-js iem7">
       hs.setAttribute('id', '_cahiddenstyle'); hs.setAttribute('type', 'text/css');
       if (hs.styleSheet)hs.styleSheet.cssText = hc; else hs.appendChild(d.createTextNode(hc)); h.parentNode.insertBefore(hs,h);
       r.setAttribute("type","text/javascript"); r.setAttribute("src", f); r.onerror=function(){w[o.callback]()}; h.parentNode.insertBefore(r,h);
-    })(window, document, screen, {timeout: 1500, callback: '_changeagain_finish'});</script> 
+    })(window, document, screen, {timeout: 1500, callback: '_changeagain_finish'});</script> -->
     </head>
     <body onload="scrollBody();" class="index">
     <script>dataLayer = [{"visitorId":"","userId":"","subscriber":"","visitorType":"NotMember"}]; </script>
@@ -424,10 +424,34 @@ display:none;
 <img src="http://s.tea-global.net/mas_assets/theme/tea_collection/images/16FW_Scroll.jpg" alt="Scroll To See More"></div>
 <div class="da-rennab-zone" data-zone="homepage">
 <style>
+	.ref {
+		position:absolute;
+		opacity:.5;
+		left:0;
+		max-width:100%;
+	}
+/**********************************************/	
 	#details-promo {
 		display:none;
 		width:600px;
 		background:#fff;
+	}
+	@media screen and (max-width:736px){
+		#details-promo {
+			width:100%;
+			position:absolute;
+			z-index:9999;
+			height:100%;
+		}
+	}
+/**********************************************/	
+	.desktop-promo {
+
+	}
+	@media screen and (max-width:736px){
+		.desktop-promo {
+			display:none;
+		}
 	}
 	.desktop-promo img {
 		max-width:100%;
@@ -435,6 +459,8 @@ display:none;
 	.desktop-promo:hover {
 		cursor:pointer;
 	}
+
+/**********************************************/	
 	.new-mobile-promo {
 		width:100%;
 		text-align:center;
@@ -444,7 +470,44 @@ display:none;
 		overflow:hidden;
 		font-size:100%;
 		display:none;
+		padding-bottom:.7em;
 	}
+	@media screen and (max-width:736px){
+		.new-mobile-promo {
+			display:block;
+		}
+	}
+	@media screen and (max-width:376px){
+		.new-mobile-promo {
+			padding:0;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-promo {
+			padding-bottom:.4em;
+		}
+	}
+/**********************************************/
+	.new-mobile-dropdown-wrap {
+		padding-top:1.9em;
+		width:800px;
+	}
+	@media screen and (max-width:736px){
+		.new-mobile-dropdown-wrap {
+			width:100%;
+		}
+	}
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown-wrap {
+			padding-top:1.8em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-dropdown-wrap {
+			padding-top:1.5em;
+		}
+	}
+/**********************************************/
 	.new-mobile-dropdown-wrap img {
 		max-width:100%;
 		opacity:.5;
@@ -452,45 +515,112 @@ display:none;
 		left:0;
 		top:-6px;
 	}
+/**********************************************/
 	.new-mobile-dropdown-wrap a {
-		font-size:.875em; /*14/16*/
+		font-size:.8em; /*14/16*/
     	position: relative;
-    	padding: 10px 11px;
+    	padding: 1.2em 0 .8em;
     	box-sizing: border-box;
     	text-transform: uppercase;
     	display: inline-block;
-    	width: 48%;
-    	margin-right: 8px;
-    	margin-bottom: 16px;
+    	width: 47.5%;
+    	margin-right: 1.3em;
+    	margin-bottom: 1.6em;
     	text-align: center;
     	background: #88AB3E;
     	color: #fff;
+    	text-decoration:none;
 	}
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown-wrap a {
+			font-size:.7em;
+    		padding: 1em 0 1em;
+    		margin-bottom: 1.7em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-dropdown-wrap a {
+			font-size:.6em; 
+		}
+	}
+/**********************************************/
 	.new-mobile-dropdown-wrap a:nth-of-type(2), .new-mobile-dropdown-wrap a:nth-of-type(4) {
 		margin-right:0;
 	}
 	.new-mobile-dropdown-wrap a:last-of-type {
-		width:100%;
+		width:96.5%;
 	}
+	@media screen and (max-width:736px){
+		.new-mobile-dropdown-wrap a:last-of-type {
+			width:100%;
+		}
+	}
+/**********************************************/
 	.new-mobile-dropdown-wrap h3 {
-		letter-spacing:2.5px;
+		letter-spacing:.15em;
+		margin-top:.8em;
 	}
-	.new-mobile-dropdown-wrap h3, .new-mobile-dropdown-wrap p {
-		margin:0 0 10px;
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown-wrap h3 {
+			letter-spacing:.1em;
+			margin-top:.9em;
+		}
 	}
+	@media screen and (max-width:321px){
+		.new-mobile-dropdown-wrap h3 {
+			margin-top:.6em;
+		}
+	}
+/**********************************************/
+	.new-mobile-dropdown-wrap p {
+		line-height:2em;
+		margin-top:.3em;
+	}
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown-wrap p {
+			line-height:1.8em;
+			margin-top:.1em;
+		}
+	}
+/**********************************************/
 	.new-mobile-dropdown-wrap .close-dropdown {
-		position: fixed;
-    	bottom: 30px;
-    	left:6%;
-    	width: 88%;
+    	margin: 3em auto;
     	text-align: center;
     	background: #a8a9ad;
-    	padding: 15px 0;
+    	padding: 1.4em 0 1.2em;
     	box-sizing:border-box;
     	color:#fff;
     	text-transform:uppercase;
     	display:none;
+    	letter-spacing:.1em;
+    	font-size:.9em;
 	}
+	@media screen and (max-width:415px){
+		.new-mobile-dropdown-wrap .close-dropdown {
+			position:fixed;
+			width: 84.2%;
+			bottom: 11.3em;
+    		left:6%;
+    		margin:0;
+		}
+	}
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown-wrap .close-dropdown {
+    		bottom: 9.6em;
+    		width: 83.7%;
+    		padding: 1.4em 0 1.1em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-dropdown-wrap .close-dropdown {
+    		position:relative;
+    		top:0;
+    		left:0;
+    		width:100%;
+    		margin: 3em auto;
+		}
+	}
+/**********************************************/
 	.details-container {
 		font-family: 'Tisa Sans',Arial, Helvetica, sans-serif;
 		margin: 27px;
@@ -507,20 +637,7 @@ display:none;
 		font-size: 13px;
 		line-height: 20px;
 	}
-	@media screen and (max-width:768px) {
-		.desktop-promo {
-			display:none;
-		}
-		.new-mobile-promo {
-			display:block;
-		}
-		#details-promo {
-			width:100%;
-			position:absolute;
-			z-index:9999;
-			height:100%;
-		}
-	}
+/**********************************************/	
 	.new-mobile-promo .close-icon {
     	float: left;
     	position: relative;
@@ -530,56 +647,51 @@ display:none;
     	box-sizing: border-box;
 
 	}
+	@media screen and (max-width:376px){
+		.new-mobile-promo .close-icon {
+    		top: 8px;
+    		margin-left: 2px;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-promo .close-icon {
+    		top: 2px;
+    		margin-left: -3px;
+		}
+	}
+/**********************************************/
 	.new-mobile-promo .shop-now-icon {
     	float: right;
-    	font-size: 14px;
+    	font-size: 1em;
     	position: relative;
-    	margin:16px 24px 10px 0;
-    	padding: 6px 11px;
+    	margin: 1.3em 2em 0 0;
+    	padding: .5em .9em;
     	box-sizing: border-box;
     	border: 2px solid;
     	text-transform: uppercase;
 	}
+	@media screen and (max-width:376px){
+		.new-mobile-promo .shop-now-icon {
+    		font-size: .8em;
+    		margin: 1.5em 2.2em 0 0;
+    		padding: .7em 1.1em .5em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-promo .shop-now-icon {
+			font-size:.7em;
+		}
+	}
+/**********************************************/
 	.new-mobile-promo .shop-now-icon a {
 		color:#fff;
 	}
+/**********************************************/
 	.new-mobile-promo .promo-message {
 		width:271px;
 		margin: 14px auto 0;
 		padding:10px 0;
 		float:left;
-	}
-	.new-mobile-promo h2 {
-		font-size:1em;
-		position:relative;
-		left:-9px;
-		letter-spacing:1.2px;
-		text-transform:uppercase;
-		margin-bottom:7px;
-	}
-	.new-mobile-promo p {
-		font-size:.875em; /*14/16*/
-		position:relative;
-		left:-9px;
-		letter-spacing:0.8px;
-	}
-	.new-mobile-promo .promo-message p i {
-		font-size:.9em;
-		letter-spacing:-0.4px;
-	}
-	.new-mobile-promo .ref {
-		position:absolute;
-		opacity:.5;
-		left:0;
-		max-width:100%;
-	}
-	.new-mobile-dropdown {
-		background: #fff;
-    	padding: 1.5em;
-    	position: absolute;
-    	color:#a8a9ad;
-    	display:none;
-    	z-index:9999;
 	}
 	@media screen and (max-width: 737px) {
 		.new-mobile-promo .promo-message {
@@ -606,17 +718,30 @@ display:none;
 			width:65%;
 		}
 	}
-	@media screen and (max-width:376px) {
-		.new-mobile-promo .close-icon {
-    		top: 8px;
-    		margin-left: 2px;
-		}
+	@media screen and (max-width:376px){
 		.new-mobile-promo .promo-message {
-			//width:234px;
 			width:62%;
 			margin:12px auto 0;
 			height:42px;
 		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-promo .promo-message {
+			width:57%;
+			margin:10px auto 0;
+			height:auto;
+		}
+	}
+/**********************************************/
+	.new-mobile-promo h2 {
+		font-size:1em;
+		position:relative;
+		left:-9px;
+		letter-spacing:1.2px;
+		text-transform:uppercase;
+		margin-bottom:7px;
+	}
+	@media screen and (max-width:376px){
 		.new-mobile-promo h2 {
 			font-size:.9em;
 			position:relative;
@@ -625,36 +750,76 @@ display:none;
 			text-transform:uppercase;
 			margin-bottom:5px;
 		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-promo h2 {
+			font-size:.6em;
+			left:1px;
+			letter-spacing:1.5px;
+			margin-bottom:4px;
+		}
+	}
+/**********************************************/	
+	.new-mobile-promo p {
+		font-size:.875em; /*14/16*/
+		position:relative;
+		left:-9px;
+		letter-spacing:0.8px;
+	}
+	@media screen and (max-width:376px){
 		.new-mobile-promo p {
 			left:-6px;
 			letter-spacing:0px;
 		}
 	}
-	@media screen and (max-width:321px) {
-		.new-mobile-promo .close-icon {
-    		top: 2px;
-    		margin-left: -3px;
-		}
-		.new-mobile-promo .promo-message {
-			//width:184px;
-			width:57%;
-			margin:10px auto 0;
-			height:44px;
-		}
-		.new-mobile-promo h2 {
-			font-size:.7em;
-			left:1px;
-			letter-spacing:1.5px;
-			margin-bottom:4px;
-		}
+	@media screen and (max-width:321px){
 		.new-mobile-promo p {
 			font-size:9px;
 		}
 	}
+/**********************************************/
+	.new-mobile-promo .promo-message p i {
+		font-size:.9em;
+		letter-spacing:-0.4px;
+		position:relative;
+	}
+
+	@media screen and (max-width:376px){
+		.new-mobile-promo .promo-message p i {
+			font-size:.8em;
+		}
+	}
+
+	@media screen and (max-width:321px){
+		.new-mobile-promo .promo-message p i {
+			left:1.8em;
+		}
+	}
+/**********************************************/
+	.new-mobile-dropdown {
+		background: #fff;
+    	padding: 0 1.9em;
+    	position: absolute;
+    	color:#a8a9ad;
+    	display:none;
+    	z-index:9999;
+	}
+	@media screen and (max-width:376px){
+		.new-mobile-dropdown {
+			padding:0 1.7em;
+		}
+	}
+	@media screen and (max-width:321px){
+		.new-mobile-dropdown {
+			padding:0 1.4em;
+		}
+	}
+/**********************************************/
+
 </style>
 
 <div class="desktop-promo">
-	<a href="#details-promo" id="see-details"><img src="/mas_assets/theme/tea_collection/fineprint/freeShipping/170323/170323-freeShipping-d.png" alt="this weekend only! FREE SHIPPING use code: SUMMER17 on orders $75+" /></a>
+	<a href="#details-promo2" id="see-details">mobile promo banner test</a>
 </div>
 
 <div id="details-promo">
@@ -666,7 +831,7 @@ display:none;
 
 
 <div class="new-mobile-promo">
-	<img src="/mas_assets/theme/tea_collection/fineprint/icons/bg.png" class="ref"/>
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/icons/bg.png" class="ref"/> -->
 	<div class="close-icon"><img src="/mas_assets/theme/tea_collection/fineprint/icons/close-btn.png" alt="close"/></div>
 	<div class="promo-message">
 		<h2>take an extra 25% off sale</h2>
@@ -674,24 +839,21 @@ display:none;
 		<!-- <p>USE CODE: <span>12345678901234567</span> <i>SEE DETAILS</i></p> -->
 		<p>USE CODE: <span>XXXXXXXXXXXXXXX</span> <i>SEE DETAILS</i></p>
 	</div>
-	<div class="shop-now-icon"><a href="#">shop<br>now</a></div>
-		
+	<div class="shop-now-icon"><a href="#">shop<br>now</a></div>	
 </div>
 
+
 <div class="new-mobile-dropdown">
-	
-	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/icons/details-drop-down.png"/> -->
-	<div class="new-mobile-dropdown-wrap">
+	<!-- <img src="/mas_assets/theme/tea_collection/fineprint/icons/details-drop-down.png" class="ref"/> -->
+	<div class="new-mobile-dropdown-wrap" id="details-promo2">
 		<a href="#">shop girl</a>
 		<a href="#">shop boy</a>
 		<a href="#">shop baby girl</a>
 		<a href="#">shop baby boy</a>
 		<a href="#">shop newborn</a>
 
-		<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum ipsum eget viverra commodo. Nunc ac velit laoreet, posuere lorem vel, feugiat nulla. Aenean feugiat venenatis sapien, ut ornare ex sollicitudin vel. Nam vel condimentum ligula. Quisque ac felis quam. In tincidunt sollicitudin egestas. Curabitur volutpat justo pulvinar, consectetur elit sit amet, interdum lectus. Morbi eleifend neque tellus, eget convallis dui viverra sit amet. Morbi congue finibus ipsum ut finibus. Nullam vehicula malesuada feugiat. Phasellus sed pharetra risus, a ornare lectus. Suspendisse id placerat ligula. Nullam varius et mi ac eleifend.</p>-->
-
 		<h3>DETAILS:</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras condimentum ipsum eget viverra commodo. Nunc ac velit laoreet, posuere lorem vel, feugiat nulla. Aenean feugiat venenatis sapien, ut ornare ex sollicitudin vel. Nam vel condimentum ligula. Quisque ac felis quam. In tincidunt sollicitudin egestas. Curabitur volutpat justo pulvinar, consectetur elit sit amet, interdum lectus. Morbi eleifend neque tellus, eget convallis dui viverra sit amet. Morbi congue finibus ipsum ut finibus. Nullam vehicula malesuada feugiat. Phasellus sed pharetra risus, a ornare lectus. Suspendisse id placerat ligula. Nullam varius et mi ac eleifend.</p>
+		<p></p>
 		<div class="close-dropdown">close</div>
 	</div>
 </div>
@@ -710,6 +872,11 @@ $(document).ready(function(){
 			$('.desktop-promo, .mobile-promo').hide();
 		}
 	}
+
+	//get the fine print
+	var fineprint = $('#details-promo p').html();
+	$('.new-mobile-dropdown-wrap p').html(fineprint);
+
 
 	jQuery('img[usemap]').rwdImageMaps();
 
