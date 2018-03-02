@@ -25,7 +25,7 @@ module.exports = function(grunt){
 
   	var gruntConfig = {
       hp:{date:'default'},
-      cat:{date:'180222'},
+      cat:{date:'default'},
       landing:{name:'size-chart', date:'default'},
       cell:{name:'tween', date:'180222'},
       zone:{name:'footer'}, 
