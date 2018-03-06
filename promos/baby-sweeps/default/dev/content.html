@@ -168,9 +168,7 @@
 		//function to add alt to area
 		var addAltArea = function(map, str){
 			var area = $(map).find('area');
-			$(area).each(function(i,val){
-				//add class bmsm to <area> for testing
-				$(val).addClass('bmsm');
+			$(area).each(function(i,val){ 
 
 				var href = $(val).attr('href');
 				href = href.replace("/","");
@@ -317,7 +315,8 @@
 			e.preventDefault();
 			jQuery('#details-promo').slideToggle();
 		});
-		
+
+		$('.banner-ad-zone').show();
 	}); 
 </script>
 
