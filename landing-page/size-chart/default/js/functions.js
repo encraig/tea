@@ -20,12 +20,13 @@ $(document).ready(function(){
     {brand:'asics tiger',url:'http://www.asicstiger.com/us/en-us/size-guide'},
     {brand:'toke',url:'https://www.tokeshoes.com/index.php/conversion/toke-conversion-chart'},
     {brand:'havaianas',url:'/static/havaianas-shoe-size-guide.html'},
+    {brand:'cienta',url:'https://cientausa.com/'},
   ];
 
   var sizeChartArr = [
     {
       dept:'girl',
-      shoes: ['yosi samra','vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'toke', 'havaianas'],
+      shoes: ['yosi samra','vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
       measure:{
         img:'girls/girls-measuring.png',
         chest:'Wrap a measuring<br class="desktop"> tape under your child\'s<br class="desktop"> armpits,<br class="mobile"> making sure it<br class="desktop"> passes across the fullest<br class="desktop"> part of her chest<br class="mobile"> and<br class="desktop"> around her shoulder<br class="desktop"> blades. Her arms should<br class="desktop"> be<br class="mobile"> relaxed naturally<br class="desktop"> against her sides.',
@@ -98,7 +99,7 @@ $(document).ready(function(){
 /*-----------------------------------------------------------------------------------------*/ 
     {
       dept:'boy',
-      shoes: ['yosi samra','vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'havaianas'],
+      shoes: ['yosi samra','vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'havaianas', 'cienta'],
       measure:{
         img:'boys/boys-measuring.png',
         chest:'Wrap a measuring<br class="desktop"> tape under your child\'s<br class="desktop"> armpits,<br class="mobile"> making sure it<br class="desktop"> passes across the fullest<br class="desktop"> part of his chest<br class="mobile"> and<br class="desktop"> around his shoulder<br class="desktop"> blades. His arms should<br class="desktop"> be<br class="mobile"> relaxed naturally<br class="desktop"> against his sides.',
@@ -162,7 +163,7 @@ $(document).ready(function(){
 /*-----------------------------------------------------------------------------------------*/ 
     {
       dept:'baby girl',
-      shoes: ['yosi samra','vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'toke', 'havaianas'],
+      shoes: ['yosi samra','vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
       measure:{
         img:'baby-girl/baby-girl-measuring.png',
         chest:'Wrap a measuring tape<br class="desktop"> under your child\'s armpits,<br> making sure it passes<br class="desktop"> across the fullest part of<br class="desktop"> her chest<br class="mobile"> and around her<br class="desktop"> shoulder blades. Her arms<br class="desktop"> should be<br class="mobile"> relaxed naturally<br class="desktop"> against her sides. (Good<br class="desktop"> luck! You\'re<br class="mobile"> going to have to be superhero-fast!)',
@@ -242,7 +243,7 @@ $(document).ready(function(){
 /*-----------------------------------------------------------------------------------------*/ 
     {
       dept:'baby boy',
-      shoes: ['yosi samra','vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'havaianas'],
+      shoes: ['yosi samra','vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger','asics', 'asics tiger', 'havaianas', 'cienta'],
       measure:{
         img:'baby-boy/baby-boy-measuring.png',
         chest:'Wrap a measuring tape<br class="desktop"> under your child\'s armpits,<br> making sure it passes<br class="desktop"> across the fullest part of<br class="desktop"> his chest<br class="mobile"> and around his<br class="desktop"> shoulder blades. His arms<br class="desktop"> should be<br class="mobile"> relaxed naturally<br class="desktop"> against his sides. (Good<br class="desktop"> luck! You\'re<br class="mobile"> going to have<br class="desktop"> to be superhero-fast!)',
