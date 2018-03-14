@@ -1,0 +1,84 @@
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+</style> 
+
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<div class="sale-content">
+    <h2 class="title mobile">sale</h2>
+    <!-- ref -->
+    <!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-m2.png" /> -->
+    
+    <a href="/sale/girls-clothing" id="content-block"><div class="content-block">
+        <div></div>
+        <h2>See what's new on <span>Sale</span></h2>
+    </div></a>
+    <!-- <a href="/sale/girls-clothing"><img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170523/170523-memorialDay-2.png" /></a> -->
+
+    <ul class="mobile-btns">
+        <li><a href="/sale/girls-clothing/view-all" data="mobile">girl</a></li>
+        <li><a href="/sale/boys-clothing/view-all" data="mobile">boy</a></li>
+        <li><a href="/sale/baby-girl-clothes/view-all" data="mobile">baby girl</a></li>
+        <li><a href="/sale/baby-boy-clothes/view-all" data="mobile">baby boy</a></li>
+        <!-- <li><a href="/newborn-clothes/view-all" data="mobile">newborn</a></li> -->
+    </ul>
+
+    <div id="details-html-editor">
+        <p class="details-cta"><a href="#">see details</a></p>
+        <div class="see-details-promo">
+            <h2>Details</h2>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="category-footer">
+        <h1>Tea Collection Sale</h1>
+
+        <p>What's better than Tea Collection clothing? How about our kids clothing sale? From our classic dress and legging combos and graphic tees and pants with reinforced knees to rompers and bodysuit tops for the wee ones, the next favorite outfit could be included in our kids and baby clothes sale! The items featured in our clothing sales are not only adorable as well as durable, but they are all hand picked by our stylists. Shop our kids clothing sale today!</p>
+    </div>
+</div>
+
+
+<!-- dev -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!-- prod -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<script>
+	$(document).ready(function(){
+		/*jQuery('img[usemap]').rwdImageMaps();*/
+
+		/*************************************************************************************/
+
+		
+    //get the fine print from the banner
+    var promoStr = $('#details-promo p').html();
+
+    if(promoStr == undefined){
+        $('#details-html-editor').hide();
+    } else {
+        //add the fine print to the sale page
+        $('.see-details-promo p').html(promoStr);
+    }
+
+    //get the content block text
+    var txt = $('.content-block h2').text();
+    //add the alt attr to the <a> for GTM
+    $('#content-block').attr('alt', txt);
+    
+
+    $('.details-cta').click(function(e){
+        e.preventDefault();
+        $('.see-details-promo').slideToggle();
+    });
+	});	
+</script>
+
+
