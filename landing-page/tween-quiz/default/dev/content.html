@@ -1,0 +1,610 @@
+<!--toolkit-->
+<style>
+	include "../css/styles.css"
+</style>
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+ 
+<div class="quiz-container">
+    <!-- ref img -->
+    <!-- <img src="/mas_assets/theme/tea_collection/images/categories/headers/180118/tween-quiz/results-m.jpg" class="ref" />  -->
+ 
+
+    <div class="the-set">
+        <div class="top">
+            <div class="left desktop">
+                <img src="" />
+                <h2><span>you are...</span><br></h2>
+                <p></p>
+            </div>
+            <div class="right">
+                <img src="" class="desktop"/>
+                <img src="" class="mobile"/>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+
+<script>
+$(document).ready(function(){
+	// jQuery('img[usemap]').rwdImageMaps(); 
+
+    //---------------------------------------------------
+
+    var theFinalSet;
+
+    //questions
+    var q = [];
+
+    var q1 = {
+        q:'Which colors do<br class="mobile"> you love to wear?',
+        options: [{text:'grey', hex:'#999'}, {text:'blue', hex:'#1A667A'}, {text:'pink', hex:'#FF8D90'}, {text:'yellow', hex:'#FFE394'}, {text:'green', hex:'#6F8356'}, {text:'white', hex:'#fff'},]
+    };
+
+    var q2 = {
+        q:'Which words best describes your favorite clothes?',
+        options: [
+            {q:'<span>Dreamy tees</span> &<br> fearless <span>street style</span>', a:[1,5], c:['grey','blue','pink','denim','yellow']},
+            {q:'<span>Classic</span> stripes &<br> <span>creative</span> combinations', a:[2,3], c:['denim','green','blue','grey','pink','yellow']},
+            {q:'Anything I can <span>explore</span>,<br> run & <span>cartwheel</span> in', a:[4,6], c:['blue','yellow','white','grey','green','pink']},
+        ]
+    };
+
+    var q3 = {
+        q:'Which of these fashion<br class="mobile"> icons speaks to you?',
+        options:[
+            {q:'"Don\'t try so hard to fit in, and certainly don’t try so hard to be different… just try hard to be you." <br><br> <span>- Zendaya</span>', a:1},
+            {q:'"Fashion is about personal expression and creativity. I want there to be a place where you can care about fashion, and even be super girly, and it doesn\'t necessarily mean that you\'re not also smart or confident or strong." <br><br> <span>- Tavi Gevinson</span>', a:2},
+            {q:'"You gotta keep it stylish. You gotta go for Converse. You gotta dance the night away, win or lose!." <br><br> <span>- Millie Bobby Brown</span>', a:3},
+            {q:'"People are their most beautiful when they are laughing, crying, dancing, playing, telling the truth, and being chased in a fun way." <br><br> <span>- Amy Poehler</span>', a:4},
+            {q:'"The only thing that really matters is spreading love and light and acceptance and unity throughout the entire world, in any way that you possibly can." <br><br> <span>- Willow Smith</span>', a:5},
+            {q:'"You make your own adventure in life…if you open your eyes to your surroundings, there\'s lots of neat stuff to be found practically anywhere on earth." <br><br> <span>- Bethany Hamilton</span>', a:6}
+        ]
+    };
+
+    var q4 = {
+        q: 'Which continent are<br class="mobile"> you going to next?',
+        options:['Asia','Africa','Europe','South America','Australia','Antarctica']
+    };
+
+    var q5 = {
+        q:'What do you love to<br class="mobile"> do on the weekend?',
+        options:['Play my favorite<br> sport with friends','Get lost<br> in a book','Anything where<br> I can be outside!','Dream of<br> faraway places','Craft, create<br> and invent']
+    };
+
+    
+    //push to q
+    q.push(q1, q2, q3, q4, q5);
+
+    console.log(q);
+
+    //---------------------------------------------------
+
+    //sets
+    var sets = [
+        {
+            name:'dreamy tees',
+            imgA: 'dreamer-a-d.jpg', 
+            imgB: 'dreamer-b-d.jpg',
+            imgM: 'dreamer-m-v2.png?nocache=12',
+            h2: 'the visionary',
+            p:'You\'re here to make a difference.',
+            skus:['8S82109K-010','8S82108K-474','8S12214R-F46','8S13207R-D10']
+        },
+        {
+            name:'classic',
+            imgA: 'classic-a-d.jpg', 
+            imgB: 'classic-b-d.jpg',
+            imgM: 'classic-m-v2.png?nocache=12',
+            h2: 'classic cool',
+            p:'Keeping it simple is always in style.',
+            skus:['8S83302K-405','8S82103K-429','8S82200K-B65']
+        },
+        //breezy boho
+        {
+            name:'creative',
+            imgA: 'breezy-a-d.jpg', 
+            imgB: 'breezy-b-d.jpg',
+            imgM: 'breezy-m-v2.png?nocache=12',
+            h2: 'breezy boho',
+            p:'You bring art to everything you do.',
+            skus:['8S81100K-405','8S82301K-F47','8S82203K-429']
+        },
+        //wild at heart
+        {
+            name:'explore',
+            imgA: 'wild-a-d.jpg', 
+            imgB: 'wild-b-d.jpg',
+            imgM: 'wild-m-v2.png?nocache=12',
+            h2: 'wild at heart',
+            p:'Nature makes your heart sing.',
+            skus:['8S82105K-061','8S82110K-079','8S82203K-462']
+        },
+        {
+            name:'street style',
+            imgA: 'street-a-d.jpg', 
+            imgB: 'street-b-d.jpg',
+            imgM: 'street-m-v2.png?nocache=12',
+            h2: 'street stylista',
+            p:'You think (and dress) for yourself.',
+            skus:['8S82106K-833','8S82102K-D22','8S12223R-F27']
+        },
+        {
+            name:'cartwheel',
+            imgA: 'cartwheeler-a-d.jpg', 
+            imgB: 'cartwheeler-b-d.jpg',
+            imgM: 'cartwheeler-m-v2.png?nocache=12',
+            h2: 'the cartwheeler',
+            p:'You\'re a mover and shaker, a risk-taker.',
+            skus:['8S82112K-G89','8S82100K-061','8S82202K-452']
+        },
+    ];
+
+    //---------------------------------------------------
+
+    //sold out function
+    var soldOut = function(elem, i){
+        //if sold out
+        if($(elem).length < 2){
+            // console.log('sold out');
+            //add the sold out badge
+            $('.li-' + i + '> div').prepend('<img src="https://s.tea-global.net/mas_assets/theme/tea_collection/images/misc/SoldOutBadge_lrg.gif" alt="sold out" class="sold-out">');
+            //hide the dropdown and add to bag
+            $('.li-' + i).find('.sizes-container').hide();
+            $('.li-' + i).find('select').hide();
+            $('.li-' + i).find('.cta').hide();
+        }
+    };
+
+    //---------------------------------------------------
+
+    var top = function(){
+        //if mobile
+        if($(window).width() < 737){
+            window.scrollTo(0,0)
+        }
+    }
+
+    //---------------------------------------------------
+
+    //output to page
+    $.each(q, function(i,val){
+        var num = i + 1;
+        $('.quiz-container').append('<div class="q'+ num +'"><h2>'+ val.q +'</h2><ul data-q="'+ num +'"></ul><a href="#" class="cta next">Next</a></div>');
+        //output the array in the obj
+        $.each(val.options, function(j, arr){
+            //q1
+            if(num == 1){
+                if(j == val.options.length -1) {
+                    $('ul[data-q="'+ num +'"]').append('<li><span style="background:'+ arr.hex +'; border: 1px solid; box-sizing: border-box;"></span>'+arr.text+'</li>');
+                } else {
+                    $('ul[data-q="'+ num +'"]').append('<li><span style="background:'+ arr.hex +'"></span>'+arr.text+'</li>');
+                }
+                
+            }
+            //q2 & q3
+            else if(num == 2 || num == 3){
+                $('ul[data-q="'+ num +'"]').append('<li><p>'+arr.q+'</p><input type="radio" value="'+ arr.a +'" name="q'+num+'"></li>');
+                $('ul[data-q="' + num +'"] li:first-of-type input').attr('checked', true);
+            }
+            //q4 & q5
+            else if(num == 4 || num == 5){
+                $('ul[data-q="'+ num +'"]').append('<li><p><span>'+arr+'</span></p><input type="radio" value="'+ arr +'" name="q'+num+'"></li>');
+                $('ul[data-q="' + num +'"] li:first-of-type input').attr('checked', true);
+            }
+            
+            
+        });
+    });
+
+    //move .the-set
+    $('.quiz-container').append($('.the-set'));
+
+    //q1 click
+    $('.q1 ul li').click(function(){
+        $(this).toggleClass('selected-color');
+    });
+
+
+    //function to show next/prev slide
+    var showSlide = function(elem, link){
+        $(link).closest('div').fadeOut(200);
+        setTimeout(function(){
+            $(elem).fadeIn();
+        },250);
+    }
+
+    //---------------------------------------------------
+
+    //next clicks
+
+    $('.q1 .next').click(function(e){
+        e.preventDefault();
+
+        var liSelected = $(this).prev().find('li');
+        var count = 0;
+
+        //loop through and check if has class selected-color
+        $.each(liSelected, function(i,val){
+            if($(val).attr('class') == 'selected-color'){
+                count += 1;
+            }
+        });
+
+        //if nothing is selected show the error message
+        if(count < 1){
+            var elem = '<h3>please select a color</h3>';
+            if($('.q1 h3').length < 1){
+                $('.q1 ul').after(elem);
+            }  
+        } 
+
+        else if(count > 0) {
+
+            //show the next slide
+            var $this = $(this);
+            showSlide('.q2', $this);
+        }
+
+    });
+
+    //q1 li click remove h3
+    $('.q1 ul li').click(function(e){
+        $('.q1 h3').remove();
+    });
+
+    $('.q2 .next').click(function(){
+        var selected;
+        
+        //get the value selected
+        var radios = $(this).prev().find('input');
+        $.each(radios, function(i,val){
+            if($(val).is(':checked')){
+                selected = $(val).val();
+            }
+        });
+
+        selected = selected.split(',');
+
+        //hide all the .q3 li
+        $('.q3 ul li').hide();
+
+        //show the next slide based on the selected
+        var nextRadios = $('.q3 ul li input');
+        $.each(nextRadios, function(i,val){
+            var num = $(val).val();
+            
+            $.each(selected, function(j,arr){
+                if(arr == num){
+                    $(val).closest('li').show();
+                    return false;
+                }
+            });
+        });
+
+        //remove the checked attr to all .q3 input
+        $('.q3 ul li input').removeAttr('checked');
+
+        //add checked attr to displayed radios
+        var lis = $('.q3 ul li');
+        $.each(lis, function(i,val){
+            if($(val).attr('style') == 'display: list-item;'){
+                $(val).find('input').attr('checked', true);
+                return false; 
+            }
+        });
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.q3', $this);
+
+    });
+
+    $('.q3 .next').click(function(){
+
+        //get the selected
+        var radios = $('.q3 ul li input');
+        $.each(radios, function(i,val){
+            if($(val).attr('checked')){
+                var set = $(val).val();
+                theFinalSet = set;
+            }
+        });
+
+        console.log(theFinalSet);
+
+        //add the .drop element
+        $('.the-set').append('<div class="drop"><ul><li class="loading" style="width:100% !important"><h3>LOADING...</h3></li></ul></div>');
+
+        // close svg element
+        var closeSvg = '<span class="close"><svg width="15" height="15" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>X to close</title><desc>Created using Figma</desc><g id="Canvas" transform="translate(4130 14276)"><g id="X to close"><g id="Rectangle"><use xlink:href="#path0_fill" transform="matrix(-0.707974 -0.706238 0.706284 -0.707928 -4129.23 -14261)" fill="#666666"/></g><g id="Rectangle"><use xlink:href="#path1_fill" transform="matrix(-0.706284 0.707928 -0.707974 -0.706238 -4115 -14261.8)" fill="#666666"/></g></g></g><defs><path id="path0_fill" d="M 0 0L 1.05949 0L 1.05949 20.1303L 0 20.1303L 0 0Z"/><path id="path1_fill" d="M 0 0L 1.05949 0L 1.05949 20.1303L 0 20.1303L 0 0Z"/></defs></svg></span>'; 
+
+        //loop through sets to get the skus
+        $.each(sets, function(x,y){
+            var num = x + 1;
+            if(num == theFinalSet){
+
+                console.log(y);
+                //add content to page
+                var imageBase = '/mas_assets/theme/tea_collection/images/categories/headers/180118/tween-quiz/results/';
+                $('.the-set .top .left img').attr('src', imageBase + y.imgA);
+                $('.the-set .top .right img.desktop').attr('src', imageBase + y.imgB);
+                $('.the-set .top .right img.mobile').attr('src', imageBase + y.imgM);
+                var origText = $('.the-set .top .left h2').html();
+                $('.the-set .top .left h2').html(origText + y.h2);
+                $('.the-set .top .left p').text(y.p);
+
+                $.each(y.skus, function(i,val){
+                    if(val !== undefined){
+                    var sku = val.split('-')[0];
+                    var skuColor = val.split('-')[1];
+                    
+                    $.get('https://www.teacollection.com/product/' + sku, function(data){
+                        // console.log($(data).find('#the-mpd'));
+
+                        var theData = $(data).find('#the-mpd').text();
+                        var jsonData = JSON.parse(theData);
+                        // console.log(jsonData);
+
+                        var id = Object.keys(jsonData.parent_data)[0];
+                        // console.log(id);
+
+                        var title = jsonData.parent_data[id].model;
+                        var price = jsonData.parent_data[id].store_price;
+                        var imgSrc;
+                        // var imgSrc = jsonData.parent_data[id].small_image_url;
+                        // console.log(title, price, imgSrc);
+
+                        //the url
+                        var pdp = title.toLowerCase().replace(/ /g, '-');
+                        var pdpUrl;
+                        
+                        
+                        //get the sizes
+                        var sizesArray = [];
+                        //loop through jsonData
+                        $.each(jsonData.parent_data, function(j,obj){
+                            
+                            var objSku = obj.sku.split('-')[1];
+                            // console.log(skuColor, objSku);
+
+                            //if matches color num
+                            if(skuColor == objSku){
+                                // console.log('match', skuColor, objSku);
+
+                                var colorName = obj.color;
+                                colorName = colorName.toLowerCase();
+                                pdpUrl = '/product/' + sku + '/' + pdp + '.html?nocache=1#' + colorName;
+
+                                //get the image src
+                                imgSrc = obj.small_image_url;
+                                // console.log(j,obj,imgSrc);
+
+                                //if store_quantity > 0
+                                if(obj.store_quantity > 0){
+                                    //push to sizesArray
+                                    sizesArray.push(obj.size);
+                                }
+                            }
+                        });
+
+                        //sort the sizesArray
+                        sizesArray.sort(function(a, b){return a-b});
+                        // console.log(sizesArray);
+
+                        var dropdownIcon = '<svg width="10" height="6" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Vector</title><desc>Created using Figma</desc><g id="Canvas" transform="translate(371 14198)"><g id="Vector"><use xlink:href="#path0_fill" transform="translate(-371 -14198)" fill="#999999"/></g></g><defs><path id="path0_fill" d="M 8.98305 0L 5.08475 3.83333L 1.01695 0L 0 1L 5.08475 6L 10 1L 8.98305 0Z"/></defs></svg>';
+
+                        //desktop
+                        if($(window).width() > 737){
+                            var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><div class="sizes-container sizes-wrap-'+i+'"><ul class="sizes-'+i+'"><li>size</li></ul></div><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+                        }
+                        //mobile
+                        else if($(window).width() < 737){
+                            var li = '<li class="li-'+i+'"><div><a href="'+ pdpUrl +'" target="_blank"><img src="'+imgSrc+'" alt="'+title+'"/></a><h3><span class="title">'+title+'</span><br><span class="price">'+price+'</span></h3><select class="sizes-'+i+'"><option>size</option></select><a href="#" class="cta add-to-bag-'+i+' disabled">add to bag</a><h4 class="size-error error-'+i+'">Please select a size</h4></div></li>';
+                        }  
+
+                        
+
+                        //make the drop down element
+                        $('.drop > ul').append(li);
+
+
+                        //show the close svg icon
+                        $('.close-svg').show();
+
+                        //desktop output sizes dropdown
+                        if($(window).width()> 737){
+                            //add the sizes to the dropdown
+                            $.each(sizesArray, function(k, size){
+                                $('.sizes-' + i).append('<li value="'+size+'">'+size+'</li>');
+                            });
+
+                            //if sold out
+                            soldOut('.sizes-' + i + ' li', i);
+
+
+                            //hide show the sizes dropdown
+                            $('.sizes-' + i).click(function(){
+                                $(this).closest('.sizes-container').toggleClass('show-sizes');
+                            });
+
+                            //sizes dropdown li click
+                            $('.sizes-' + i + ' li').click(function(){
+                                $('.sizes-' + i + ' li').removeAttr('class');
+                                var text = $(this).text();
+                                if(text !== 'size') {
+                                    $(this).addClass('selected');
+                                    var num = $(this).text();
+                                    $('.sizes-' + i + ' li:first-of-type').text(num);
+                                    $('.add-to-bag-' + i).removeClass('disabled');
+                                    $('.error-' + i).hide();
+                                }
+                            
+                            });
+                        }
+
+                        // mobile output sizes dropdown
+                        else if($(window).width()< 737) {
+                            //add the sizes to the dropdown
+                            $.each(sizesArray, function(k, size){
+                                $('.sizes-' + i).append('<option value="'+size+'">'+size+'</option>');
+                            });
+
+                            //if sold out
+                            soldOut('.sizes-' + i + ' option', i);
+                        }
+                        
+
+                        //remove the loading
+                        $('.loading').remove();
+
+                        //desktop only adjust width of .drop ul
+                        // if($(window).width()>737){
+                        //     //adjust the width of .drop > ul
+                        //     var theLength = $('.drop > ul > li');
+                        
+                        //     var count = 0;
+                        //     $.each(theLength, function(j,arr){
+                        //         if(j !== 0) {
+                        //             var width = $(arr).outerWidth();
+                        //             count = count + width;
+                        //         }
+                        //     });
+
+                        //     $('.drop > ul').css('width', count + 'px');
+                        // }
+                        
+                        
+                        //select change
+                        $('.sizes-' + i).change(function(){
+                            var theVal = $(this).val();
+                            // if select is a number remove .disable from the add to bag
+                            if(theVal !== 'size') {
+                                $('.add-to-bag-' + i).removeClass('disabled');
+                                $('.error-' + i).hide();
+                            } else {
+                                $('.add-to-bag-' + i).addClass('disabled');
+                            }
+                        });
+
+                        //add to bag click
+                        $('.add-to-bag-' + i).click(function(e){
+                            e.preventDefault();
+                            var li = $(this).closest('li');
+                            var title = $(li).find('.title').text();
+
+                            //desktop
+                            if($(window).width()>737){
+                                var select = $(this).siblings('.sizes-container').find('.selected').html();
+                            }
+
+                            //mobile
+                            else if($(window).width()<737){
+                                var select = $(this).siblings('select').val();
+                            }
+
+                            //if size not selected
+                            if(select == undefined || select == 'size'){
+                                $('.error-' + i).show();
+                                $('.sizes-' + i).focus();
+                            } else {
+                                $('.error-' + i).hide();
+                                //build the url
+                                var buyUrl = '/?page=item&action=buy&id[0]=' + val + '-' + select + '&qty[0]=1';
+
+                                //hide the cta
+                                $('.add-to-bag-' + i).hide();
+                                //add the processing message
+                                $('.add-to-bag-' + i).after('<h4 class="processing">PROCESSING...</h4>');
+                                //add to bag function
+                                $.post(buyUrl, function(){
+                                    $('.processing').html('SUCCESS!!!');
+
+                                    $(li).append('<div class="success"><h3>'+title+' added to cart.</h3><i>'+closeSvg+'</i></div>');
+                                    
+                                    $('#view-cart').trigger('mouseenter');
+                                    
+                                    // close the popup on click
+                                    $('.success i').click(function(){
+                                        $('.success').remove();
+                                        $('.processing').remove();
+                                        $('.add-to-bag-' + i).fadeIn();
+                                    });
+
+                                    setTimeout(function(){
+                                        $('.processing').remove();
+                                        $('.success').fadeOut();
+                                        $('.add-to-bag-' + i).fadeIn();
+                                    },2000);
+                                });
+
+                            }
+                        });
+                    });
+                } 
+
+                });
+            }
+        });
+
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.q4', $this);
+
+    });
+
+
+    $('.q4 .next').click(function(e){
+        e.preventDefault();
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.q5', $this);
+
+    });
+
+    $('.q5 .next').click(function(e){
+        e.preventDefault();
+
+        //show the next slide
+        var $this = $(this);
+        showSlide('.the-set', $this);
+
+    });
+
+    //---------------------------------------------------
+
+    //prev clicks
+    // $('.q2 .prev').click(function(){
+    //     var $this = $(this);
+    //     showSlide('.q1', $this);
+    //     $('.wardrobe').find('li').remove();
+    // });
+
+    // $('.q3 .prev').click(function(){
+    //     var $this = $(this);
+    //     showSlide('.q2', $this);
+    //     $('.quote').find('li').remove();
+    // });
+
+    // $('.the-set .prev').click(function(){
+    //     var $this = $(this);
+    //     showSlide('.q3', $this);
+    //     $('.sets').find('li').remove();
+    // });
+        
+}); 
+</script>  
