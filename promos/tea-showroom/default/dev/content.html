@@ -1,0 +1,108 @@
+<!-- toolkit -->
+<style>
+	include "../css/styles.css"
+</style>
+
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- OVERALL DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo">
+
+	<!-- banner with no image map -->
+
+	<a href="#details-promo" class="see-details" target="_blank"><img src="/mas_assets/media/tea_showroom/promos/2018/180319.jpg" alt="" class="promo-img-alt"/></a> 
+
+	<!-- banner with image map -->
+
+<!-- 	<img src="/mas_assets/media/tea_showroom/promos/180305/180305-dg" alt="" usemap="#map-d" class="promo-img-alt"/>
+	<map name="map-d">
+		<area  alt="" title="" href="/girls-limited-time-sale" shape="rect" coords="1067,0,1215,164" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/boys-limited-time-sale" shape="rect" coords="1221,0,1342,164" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-girl-limited-time-sale" shape="rect" coords="1349,0,1555,164" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/baby-boy-limited-time-sale" shape="rect" coords="1560,0,1772,164" style="outline:none;" target="_self"     />
+		<area  class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="1777,0,2083,164" style="outline:none;" target="_self"     />
+
+	</map> -->
+</div>
+
+
+<!-- FINE PRINT -->
+<div id="details-promo">
+	<div class="details-container">
+		<h2>Details</h2> 
+		<p>
+			Enter code MARCHMADNESS at checkout to receive 25% off all Spring product on Teashowroom.com. Offer valid from 3/19/2018 through 3/26/2018 at 11:59 PM PT. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand.
+		</p>
+		<p><a href="#" class="close-fancy">CLOSE</a></p> 
+	</div>
+</div>
+
+
+<!-- dev resources -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!--prod resources -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<script>
+	jQuery(document).ready(function(){
+		//dev image src
+		// var imgs = $('.desktop-promo img, .desktop-promo-hp img, .mobile-promo img, .mobile-promo-hp img');
+		// $.each(imgs, function(i,val){
+		// 	var src = $(val).attr('src');
+		// 	var newSrc = 'https://www.teashowroom.com' + src;
+		// 	$(val).attr('src', newSrc)
+		// });
+
+		//CHANGE THE STRING FOR THE ALT FOR ALL PROMO DESKTOP AND MOBILE IMAGES
+		var alt = "take 25% off SPRING 1 USE CODE: SPRINGFORWARD";
+
+		$('.promo-img-alt').attr('alt', alt);
+
+
+		//function to add alt to area
+		var addAltArea = function(map, str){
+			var area = $(map).find('area');
+			$(area).each(function(i,val){
+				var href = $(val).attr('href');
+				href = href.replace("/","");
+				var cat = href.split("-");
+				if(cat[0] == 'baby'){
+					cat = cat[0] + " " + cat[1];
+				} else if(cat[0].indexOf('#') !== -1) {
+					cat = 'see details';
+				} else {
+					cat = cat[0]
+				}
+
+				//add the alt
+				$(val).attr('alt', cat + areaAlt + ' ' + str);
+
+			});
+		};
+
+		
+		var areaAlt = ' promo banner cta';
+		//add the alt to areas
+		addAltArea('map[name="map-d"]', 'desktop')
+		addAltArea('map[name="map-m"]', 'mobile')
+
+		//responsive image map
+		jQuery('img[usemap]').rwdImageMaps();
+
+		//fancy box
+		jQuery('.see-details').fancybox({
+			afterClose: function(){
+				$('.fancybox-overlay').remove();
+			}
+		});
+		
+	});
+</script>
+
