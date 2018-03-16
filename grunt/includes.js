@@ -40,9 +40,9 @@ module.exports = function(grunt){
 			files: [
 				//toolkit
 				{ 
-					cwd: 'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev', 
+					cwd: 'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/dev', 
 					src: [ '*.html' ], 
-					dest:  'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/toolkit/',
+					dest:  'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/toolkit/',
 				},
 			],
 

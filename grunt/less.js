@@ -18,7 +18,7 @@ module.exports = function(grunt){
       // CONTENT CELL CSS ---------------------------------------------------------------------------
       cellCSS:{
         files:{
-          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/css/styles.css': 'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/css/styles.less'
+          'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/css/styles.css': 'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/css/styles.less'
         }
       },
 

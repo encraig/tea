@@ -8,9 +8,9 @@ module.exports = function(grunt){
       cell: {
         files: {
           //desktop
-          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/build/local-d.html': ['local-templates/desktop/d-header-2column.html','content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev/content.html','local-templates/desktop/d-footer-2column.html'],
+          'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/build/local-d.html': ['local-templates/desktop/header-get.html','content-cell-take-over/<%= cell.name %>/<%= cell.date %>/dev/content.html','local-templates/desktop/footer-get.html'],
           //mobile
-          'content-cell-take-over/<%= cell.date %>/<%= cell.name %>/build/local-m.html': ['local-templates/mobile/m-header.html','content-cell-take-over/<%= cell.date %>/<%= cell.name %>/dev/content.html','local-templates/mobile/m-footer.html'],
+          'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/build/local-m.html': ['local-templates/mobile/header-get.html','content-cell-take-over/<%= cell.name %>/<%= cell.date %>/dev/content.html','local-templates/mobile/footer-get.html'],
         }
       },
 
@@ -113,9 +113,9 @@ module.exports = function(grunt){
       landingPages: {
         files: {
         //desktop
-        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-d.html': ['local-templates/desktop/header-get.html','local-templates/build/two-column-page.html','local-templates/desktop/footer-get.html'],
+        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-d.html': ['local-templates/desktop/header-get.html','local-templates/build/full-page.html','local-templates/desktop/footer-get.html'],
         //mobile
-        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-m.html': ['local-templates/mobile/header-get.html','local-templates/build/two-column-page.html','local-templates/mobile/footer-get.html'],
+        'landing-page/<%= landing.name %>/<%= landing.date %>/build/<%= landing.name %>-m.html': ['local-templates/mobile/header-get.html','local-templates/build/full-page.html','local-templates/mobile/footer-get.html'],
         } 
       },
 
