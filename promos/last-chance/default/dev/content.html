@@ -75,10 +75,10 @@
 
 	<img src="/mas_assets/media/tea_collection/promos/last-chance/180320/180320-d.png" alt="" usemap="#map-d" class="promo-img-alt"/>
 	<map name="map-d">
-		<area  alt="" title="" href="/sale/girls-clothing/view-all" shape="rect" coords="531,0,611,60" style="outline:none;" target="_self"     />
-		<area  alt="" title="" href="/sale/boys-clothing/view-all" shape="rect" coords="613,0,675,60" style="outline:none;" target="_self"     />
-		<area  alt="" title="" href="/sale/baby-girl-clothes/view-all" shape="rect" coords="676,0,781,60" style="outline:none;" target="_self"     />
-		<area  alt="" title="" href="/sale/baby-boy-clothes/view-all" shape="rect" coords="783,0,885,60" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/girls-clothing/last-chance" shape="rect" coords="531,0,611,60" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/boys-clothing/last-chance" shape="rect" coords="613,0,675,60" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/baby-girl-clothes/last-chance" shape="rect" coords="676,0,781,60" style="outline:none;" target="_self"     />
+		<area  alt="" title="" href="/sale/baby-boy-clothes/last-chance" shape="rect" coords="783,0,885,60" style="outline:none;" target="_self"     />
 		<area  class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="889,0,1000,60" style="outline:none;" target="_self"     />
 	</map>
 </div>
@@ -114,10 +114,10 @@
 <div id="details-promo">
 	<div class="details-container">
 		<div class="mobile-promo cta-drop-down">
-			<a href="/sale/girls-clothing/view-all">girl</a>
-			<a href="/sale/boys-clothing/view-all">boy</a>
-			<a href="/sale/baby-girl-clothes/view-all">baby girl</a>
-			<a href="/sale/baby-boy-clothes/view-all">baby boy</a>
+			<a href="/sale/girls-clothing/last-chance">girl</a>
+			<a href="/sale/boys-clothing/last-chance">boy</a>
+			<a href="/sale/baby-girl-clothes/last-chance">baby girl</a>
+			<a href="/sale/baby-boy-clothes/last-chance">baby boy</a>
 			<!-- <a href="/sale/newborn-clothing" class="newborn-cta">newborn</a> -->
 			<!-- <a href="/clothing-sale" class="sale-cta">sale</a> -->
 		</div>
@@ -164,8 +164,6 @@
 		var addAltArea = function(map, str){
 			var area = $(map).find('area');
 			$(area).each(function(i,val){
-				//add class bmsm to <area> for testing
-				$(val).addClass('bmsm');
 
 				var href = $(val).attr('href');
 				href = href.replace("/","");
