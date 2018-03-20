@@ -1,0 +1,214 @@
+.desktop {
+	@media screen and (max-width:736px){
+		display:none;
+	}
+}
+
+.mobile {
+	display:none;
+	@media screen and (max-width:736px){
+		display:block;
+	}
+}
+
+.common-wrap {
+    margin: 0px 0% 0px 0% !important;
+}
+
+h1 {
+	display:none;
+}
+
+.founders-wrap {
+	@media screen and (max-width:737px){
+		background:none;
+		min-height:auto;
+	}
+
+	overflow:hidden;
+	background: url(/mas_assets/media/tea_collection/landing-pages/people/180315/bg.png) top left repeat-x;
+	min-height: 910px;
+	
+
+	h1, h2, h3 {
+		font-family:brown-pro-bold !important;
+		font-weight:normal;
+	}
+
+	.intro {
+		@media screen and (max-width:737px){
+			padding:15px 6%;
+		}
+
+		padding:40px 0 0 40px; 
+
+		h1 {
+			@media screen and (max-width:737px){
+				//font-size:18px;
+				font-size:1.38em;
+			}
+
+			display:block;
+			color: #552411;
+    		font-size: 40px;
+		}
+
+		p {
+			@media screen and (max-width:737px){
+				//font-size:12px;
+				font-size:.9em;
+				line-height:18px;
+				margin:0 0 10px 0;
+			}
+
+			color: #552411;
+    		font-size: 14px;
+    		margin: 15px 0 45px;
+    		line-height:20px;
+		}
+	}
+
+	.details-container {
+		@media screen and (max-width:737px){
+			padding:0 6%;
+		}
+
+		padding: 0 0 20px 40px;
+		overflow:hidden;
+
+		.columns {
+			@media screen and (max-width:737px){
+				float:none;
+				width:100%;
+
+			}
+
+			float:left;
+			width:40%;
+			margin: 0 40px 0 0;
+			border:none;
+
+			.img-border {
+				@media screen and (max-width:737px){
+					background:none;
+					padding:0;
+				}
+
+				background: url(/mas_assets/media/tea_collection/landing-pages/people/180315/founder-border.png) no-repeat;
+				padding: 12px;
+				box-sizing:border-box;
+
+				img {
+					@media screen and (max-width:737px){
+						height:auto;
+					}
+
+					height:321px;
+				}
+			}
+			
+
+			h2 {
+				@media screen and (max-width:737px){
+					font-size:1.5em;
+				}
+
+				font-family: brown-pro-bold !important;
+    			font-size: 20px;
+    			line-height: 24px;
+    			padding-bottom: 5px;
+    			border-bottom: 1px dashed #d6c9c0;
+    			margin-top: 20px;
+    			margin-bottom: 5px;
+    			text-transform: capitalize;
+
+    			&[data-num="0"]{
+    				color: #d92159;
+    			}
+
+    			&[data-num="1"]{
+    				color: #1877ae;;
+    			}
+			}
+
+			p {
+				@media screen and (max-width:737px){
+					font-size: 1em;
+				}
+
+				color: #958982;
+    			font-size: 13px;
+    			margin: 0 0 20px;
+			}
+
+			.info {
+				list-style-type:none;
+
+				li {
+					@media screen and (max-width:737px){
+						font-size:1em;
+					}
+
+					color: #958982;
+    				font-size: 13px;
+    				margin: 0 0 10px;
+
+    				span {
+    					@media screen and (max-width:737px){
+    						font-size: 1em;
+    					}
+
+						color: #552411;
+    					letter-spacing: 1;
+    					font-size: 12px;
+    					text-transform:uppercase;
+					}
+				}
+
+			}
+		}
+	}
+	
+
+	.world {
+		@media screen and (max-width:737px){
+			display:none;
+		}
+
+		background: url(/mas_assets/media/tea_collection/landing-pages/people/180315/world.gif) top left no-repeat;
+		min-height:310px;
+		text-align: center;
+    	color: #8d8179;
+    	font-size: 14px;
+    	padding: 50px 0 0 0;
+    	position:relative;
+
+    	img {
+    		position:absolute;
+    		top:-22px;
+    	}
+
+    	h2 {
+    		text-transform: uppercase;
+    		color: #1f8fad;
+    		font-size: 15px;
+    		margin: 0 0 10px;
+    	}
+
+    	.dashed-line {
+    		border-top: 1px dashed #d6c9c0;
+    		//padding-top: 5px;
+    		width: 150px;
+    		margin: 0 auto;
+    	}
+
+    	p {
+    		font-size: 13px;
+    		margin: 10px 0 0 0;
+    	}
+
+    	a {
+    		color: #8d8179!important;
+    	}
+	}
+}
