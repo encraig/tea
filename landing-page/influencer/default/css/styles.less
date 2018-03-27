@@ -1,0 +1,332 @@
+.ref {
+	position:absolute;
+	opacity:.5;
+	//display:none;
+}
+ 
+.my-account, .midbox {
+	h1 {
+		display:none;
+	}
+} 
+ 
+#simplemodal-container, #simplemodal-overlay, #breadcrumbs, .breadcrumb {
+	display:none !important;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+.mobile {
+	@media screen and (max-width:737px){
+		display:block;
+	}
+
+	display:none;
+}
+
+.desktop {
+	@media screen and (max-width:737px){
+		display:none;
+	}
+}
+
+//----------------------------------------------------
+
+//hide the banner ad
+div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab > .desktop-promo {
+	display:none;
+}
+
+//----------------------------------------------------
+
+/*-- slideshow styles --*/
+
+.bx-controls {
+	@media screen and (min-width:374px) and (max-width:376px) {
+		//display:block;
+		top:-30.5em;
+	}
+
+	position:relative;
+	//display:none;
+
+}
+
+.bx-controls-direction { 
+	@media screen and (min-width:374px) and (max-width:376px) {
+		//display: block !important;
+	}
+
+	display:none;
+}
+
+.bx-pager {
+	@media screen and (min-width:413px) and (max-width:415px) {
+    	left:0 !important;
+    	top:-222px !important;
+    	//display:block !important;
+    	display:none !important;
+	}
+
+	@media screen and (min-width:374px) and (max-width:376px) {
+    	bottom: -274px !important;
+    	display:block !important;
+    	//display:none !important;
+	}
+
+	@media screen and (min-width:319px) and (max-width:321px) {
+    	top: -168px !important;
+    	//display:block !important;
+    	display:none !important;
+	}
+
+}
+
+@media screen and (max-width:737px) {
+	.bx-wrapper {
+		margin-bottom:0 !important;
+	}
+}
+
+//----------------------------------------------------
+
+.cta {
+	@media screen and (max-width:737px){
+		width: 88%;
+    	font-size: .8em;
+    	padding: 9px 0 9px 0;
+	}
+
+
+	display: block;
+    border: 1px solid;
+    padding: 11px 0px;
+    width: 250px;
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 14px;
+    font-family: brown-pro-bold !important;
+} 
+
+//----------------------------------------------------
+
+.wrap-content {
+	@media screen and (max-width:737px){
+		overflow:auto;
+	}
+
+	overflow:hidden;
+
+	img {
+		max-width:100%;
+	}
+
+	h2 {
+		font-family:brown-pro-bold !important;
+	}
+
+	h3 {
+		font-weight:normal;
+		
+		span {
+			font-family:brown-pro-bold !important;
+		}
+	}
+}//end of .wrap-content
+
+//----------------------------------------------------
+
+.c1, .c2, .c3, .c4, .c5 {
+	@media screen and (max-width:737px){
+		//width: 49%;
+    	margin-right: 0;
+    	//margin-top: 6px;
+    	min-height: 430px !important;
+	}
+
+	width: 326px;
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+    text-align:center;
+    color:#595a5c;
+
+	h3 {
+		@media screen and (max-width:737px){
+			font-size: 1em;
+    		margin: 44px 0 0 0;
+    		line-height: 0px;
+    		letter-spacing: -.3px;
+		}
+
+		@media screen and (max-width: 321px){
+			font-size: .9em;
+		}
+
+		font-size: 20px;
+    	margin: 19px 0 0 0;
+    	line-height: 24px;
+    	letter-spacing: .4px;
+    	font-family:brown-pro-regular !important;
+    	color:#58595b;
+	}
+
+	p {
+		@media screen and (max-width:737px){
+			font-size:1em;
+			margin:30px 0 0 0;
+			line-height:0;
+			letter-spacing: -.2px;
+		}
+	}
+
+	.cta {
+		@media screen and (max-width:737px) {
+			margin: 26px auto 40px;
+		}
+
+		border-color:#3abfba;
+		color:#3abfba;
+		margin:19px auto 0;
+
+		&:hover {
+			background:#3abfba;
+			color:#fff;
+		}
+	}
+
+}//end of .c2
+
+//----------------------------------------------------
+
+.c1 {
+	@media screen and (max-width:737px){
+		min-height:auto;
+		color:#595a5c;
+		background:none;
+		overflow:auto;
+	}
+
+	background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/influencer/180326/c1-d.png') no-repeat center top;
+	min-height:500px;
+	overflow:hidden;
+	text-align:center;
+	margin-bottom:9px;
+	color:#fff;
+	width:100%;
+
+	div {
+		@media screen and (max-width: 737px){
+			width:100%;
+			float:none;
+			padding:0 0 20px;
+		}
+
+		width: 328px;
+		float:none;
+		padding:146px 0 0;
+
+		h2 {
+			@media screen and (max-width: 737px){
+				font-size:1.7em;
+			}
+
+			font-size: 60px;
+    		letter-spacing: .4px;
+    		line-height:60px;
+    		color:#fff;
+		}
+
+		p {
+			@media screen and (max-width:737px){
+				font-size:1em;
+				margin:43px 0 0 0;
+				line-height:0;
+				letter-spacing: -.2px;
+
+				span {
+					font-family:brown-pro-bold !important;
+				}
+			}
+
+			font-size: 29px;
+    		margin: 3px 0 0 0;
+    		line-height: 35px;
+
+    		&:last-of-type {
+    			@media screen and (max-width:737px){
+    				margin: 6px 0 0;
+    				text-transform: uppercase;
+    				font-size:1em;
+    				letter-spacing:.7px;
+				}
+
+    			font-size: 18px;
+    			margin: 6px 0 0 0;
+    			line-height: 24px;
+    			letter-spacing: 2px;
+
+    			span {
+    				text-transform: uppercase;
+    			}
+    		}
+		}
+
+		.cta {
+			@media screen and (max-width:737px){
+			    color: #3abfba;
+    			border-color: #3abfba;
+    			margin:15px auto 0;
+    			//display: inline-block;
+    			//text-transform: none;
+    			//width: auto;
+    			//padding: 0;
+    			//margin: 10px 0 0;
+			}
+
+			margin-top:20px;
+			color:#3abfba;
+			border-color:#fff;
+			background:#fff;
+
+			&:hover {
+				background:#3abfba;
+				color:#fff;
+				border-color:#3abfba;
+			}
+		}
+	}
+
+}//end of .c1
+
+//----------------------------------------------------
+
+.c3 {
+
+	h3 {
+		@media screen and (max-width:737px){
+			line-height:18px;
+			margin:35px 0 0 0;
+		}
+	}
+
+	.cta {
+		@media screen and (max-width:737px){
+			margin:17px auto;
+		}
+	}
+}
+
+//----------------------------------------------------
+
+.c4 {
+	@media screen and (min-width:737px){
+		margin-right:0;
+	}
+}
+
+
