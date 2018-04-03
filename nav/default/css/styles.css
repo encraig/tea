@@ -1,4 +1,3 @@
-
 	header[role="banner"]{height:auto !important;margin-bottom:0;z-index:auto;width:100em;margin:0 auto}
 	header[role="banner"] #top-nav{width:901px;margin:0 0 0 99px;background: transparent;}
 	header[role="banner"] #top-nav div.search-block{position:relative;top:-14px}
@@ -66,7 +65,7 @@
 		width: 100%;
 	}
 	#new-sticky-header .header-left nav.new-nav ul li.clothing-sale .level-2 {
-		padding:0 23%!important;
+		padding:0 16%!important;
 	}
 	#new-sticky-header .header-left nav.new-nav ul li .nav-container{top:40px;width:100%;left:0}
 	#new-sticky-header .header-left nav.new-nav ul li .nav-container .the-list .favs{width:33%}
@@ -173,12 +172,13 @@
 		color: #cc0033!important;
 	}
 	.clothing-sale .level-2 {
-		padding:0 40%;
+		padding:0 27%;
 	}
 	.clothing-sale .level-2>li{color:#999;float:left}
 	.clothing-sale .level-2>li:hover{font-family:brown-pro-bold !important;color:#666}
 	.clothing-sale .level-2>li.sidebar-Girl{width:100px !important}
-	.clothing-sale .level-2>li.sidebar-Boy{width:47px !important}
+	.clothing-sale .level-2>li.sidebar-Tween{width:100px !important}
+	.clothing-sale .level-2>li.sidebar-Boy{width:100px !important}
 	.clothing-sale .level-2>li.sidebar-Baby-Girl{width:140px !important}
 	.clothing-sale .level-2>li.sidebar-Baby-Boy{width:86px !important}
 	.clothing-sale .level-2>li.sidebar-Newborn{width:137px !important}
