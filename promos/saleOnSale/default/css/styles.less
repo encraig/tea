@@ -1,0 +1,119 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.desktop-promo img, .desktop-promo-hp img, .mobile-promo img, .mobile-promo-hp img {
+	
+	image-rendering: -webkit-optimize-contrast; 
+
+	max-width:100%;
+}
+ 
+//-----------------------------------------------------------------------------------------
+.desktop-promo, .desktop-promo-hp {
+	@media screen and (max-width: 736px){
+		display:none;
+	}
+}
+.mobile-promo, .mobile-promo-hp {
+	@media screen and (max-width: 736px){
+		display:block;
+		text-align:center;
+		background:#c62695;
+	}
+
+	display:none;
+
+	img {
+		//width:100%;
+		image-rendering:-webkit-optimize-contrast;
+	}
+} 
+
+//-----------------------------------------------------------------------------------------
+
+#details-promo {
+	@media screen and (max-width: 736px){
+		width:100%;
+		position:absolute;
+		z-index:9999;
+		height:100%;
+		background:#fff;
+	}
+
+	display:none;
+	width:600px;
+	min-height: 158px;
+	background:#fff;
+
+	.details-container {
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 20px 0;
+		background:#fff;
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 1px;
+			font-family:brown-pro-bold !important;
+			font-weight:normal;
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 20px;
+		}
+
+		.close-fancy {
+			@media screen and (max-width: 736px){
+				display:block;
+			}
+
+			display:none;
+			text-align:center;
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------
+
+.cta-drop-down {
+	overflow:hidden; 
+	background:#fff;
+
+	a {
+		font-size: 10px;
+    	position: relative;
+    	padding: 9px 0 7px;
+    	box-sizing: border-box;
+    	text-transform: uppercase;
+    	display: inline-block;
+    	width: 45%;
+    	margin-right: 2em;
+    	margin-bottom: 2em;
+    	text-align: center;
+
+    	background: #008ca7;
+    	color: #fff;
+    	
+    	text-decoration: none;
+    	letter-spacing: 1px;
+    	font-family:brown-pro-bold !important;
+
+    	&:nth-of-type(even){
+    		margin-right:0;
+    	}
+
+    	&.newborn-cta, &.sale-cta {
+    		@media screen and (max-width:737px){
+    			width: 98%;
+    			left:1%;
+    		}
+
+    		width: 94%;
+    	}
+	}
+}
