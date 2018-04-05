@@ -1,5 +1,5 @@
 @mobile-grey: #59595c;
-@hp-font-color: #3abfba;
+@hp-font-color: #FF8D90;
 
 /*------------------------------------------------------------------------*/
 /*-- elements styles --*/
@@ -27,7 +27,7 @@ img, video {
 
 }
 
-.bx-controls-direction { 
+.bx-controls-direction {
 	@media screen and (min-width:374px) and (max-width:376px) {
 		//display: block !important;
 	}
@@ -44,7 +44,7 @@ img, video {
 	}
 
 	@media screen and (min-width:374px) and (max-width:376px) {
-    	bottom: -315px !important;
+    	bottom: -276px !important;
     	display:block !important;
     	//display:none !important;
 	}
@@ -229,7 +229,7 @@ img, video {
 	}
 
 	//background image
-	background:url('https://www.teacollection.com/mas_assets/media/tea_collection/homepage/180315/c1-d.png') no-repeat top center; 
+	background:url('https://www.teacollection.com/mas_assets/media/tea_collection/homepage/180405/c1-d.png') no-repeat top center;  
 	
 	min-height:500px;
 	margin-bottom:10px;
@@ -253,9 +253,9 @@ img, video {
 		}
 
 		width: 329px;
-    	margin-top: 161px;
-    	//float: left;
-    	float:right;
+    	margin-top: 46px;
+    	float: left;
+    	//float:right;
     	//text-align: left;
     	text-align:center;
     	padding-left: 0;
@@ -267,16 +267,36 @@ img, video {
 				display:inline;
 			}
 
-			font-size: 57px;
+			font-size: 46px;
     		font-family: brown-pro-bold !important;
-    		line-height: 62px;
+    		line-height: 49px;
     		text-align:left;
-    		padding-left:43px;
+    		padding-left:36px;
     		color:#fff;
 
     		span {
-    			font-size: 62px;
+    			font-family:brown-pro-bold;
+    			
+    			&.float-their {
+    				position:relative;
+    				top:-3px;
+    			}
+
+    			&.boat {
+    				font-size: 76px;
+    			}
+
+    			&.shop {
+    				font-size: 21px;
+    				font-family: brown-pro-regular !important;
+    				font-weight: normal;
+    				position: relative;
+    				top: -19px;
+    				left: 1px;
+    			}
+    			
     		}
+
 		}
 
 		p {
@@ -318,20 +338,20 @@ img, video {
 				
     			width: 42%;
     			left: 6px;
-    			margin: 52px 3% 1px 0;
+    			margin: 17px 3% 1px 0;
     			color:@hp-font-color;
     			border-color:@hp-font-color;
     			border:1px solid @hp-font-color;
     			background:#fff;
     			padding:9px 0;
-    			
+    			top:0;
 
     			//4 cta
-    			/*
+    			
     			&.cta3, &.cta4 {
     				margin:13px 3% 1px 0;
     			}
-    			*/
+    			
 			}
 
 			/*&:last-of-type {
@@ -346,20 +366,22 @@ img, video {
 					//color:@hp-font-color;
 				}
 
-				//background:@hp-font-color;
-				//color:#fff;
+				background:@hp-font-color;
+				color:#fff;
 			}
 
 			color: @hp-font-color; 
 			//color:#598bad;
-    		margin-top: 20px;
-    		margin-bottom: 0px;
+    		margin-top: 0px;
+    		margin-bottom: 20px;
     		margin-left: 0px;
     		border:none;
     		//border: 1px solid #fff;
     		padding: 11px 0;
-    		width: 250px;
+    		width: 180px;
     		background: #fff;
+    		top:-11px;
+    		left:-37px;
     		
 		}
 	}
@@ -477,17 +499,17 @@ img, video {
 		.cta {
 			@media screen and (max-width:737px){
     			//2 column cta
-    			
+    			/*
     			width: 42%;
     			margin-right: 4%;
     			left: 2.5%;
     			margin-top: 17px;
-    			
+    			*/
 			}
 
 
 			//2 column cta
-			
+			/*
 			width: 140px;
     		float: left;
     		margin-right: 20px;
@@ -506,7 +528,7 @@ img, video {
 
     			display:none;
     		}
-    		
+    		*/
 		}
 	}
 	
@@ -667,7 +689,7 @@ img, video {
 	}
 	
 	width:100%;
-	padding-top:0;
+	padding-top:18px;
 
 	div {
 		img {
@@ -700,7 +722,7 @@ img, video {
     			text-align: left;
     			margin-top: 6px;
     			box-sizing: border-box;
-    			background: #F37E61;
+    			background: #3BBFBB;
     			font-family: brown-pro-bold !important;
     			position:relative;
     			overflow:hidden;
@@ -766,7 +788,7 @@ img, video {
 						}
 
 						background:#fff;
-						color: #F37E61;
+						color: #3BBFBB;
 					}
 					//background:none;
 					//color:#f38284;
