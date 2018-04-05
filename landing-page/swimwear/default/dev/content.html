@@ -1,0 +1,44 @@
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+ 
+<div class="swim-container"> 
+   <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-d.png" alt="the swim shop" usemap="#swim-d" />
+   <map name="swim-d">
+        <area  alt="" title="" href="/swimwear/girl" shape="rect" coords="603,108,797,152" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/boy" shape="rect" coords="605,162,798,210" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/baby-girl" shape="rect" coords="609,221,796,269" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/baby-boy" shape="rect" coords="608,282,797,328" style="outline:none;" target="_self"     />
+   </map>
+
+   <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-m.png" alt="the swim shop" usemap="#swim-m" />
+   <map name="swm-m">
+        <area  alt="" title="" href="/swimwear/girl" shape="rect" coords="38,591,368,661" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/boy" shape="rect" coords="382,589,713,663" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/baby-girl" shape="rect" coords="38,681,368,750" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/swimwear/baby-boy" shape="rect" coords="383,680,712,750" style="outline:none;" target="_self"     />
+   </map>
+</div>
+
+<!--toolkit-->
+<style>
+    include "../css/styles.css" 
+</style>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+
+
+<script>
+$(document).ready(function(){  
+	jQuery('img[usemap]').rwdImageMaps();    
+}); 
+</script>  
