@@ -39,6 +39,22 @@
 
 <script>
 $(document).ready(function(){  
-	jQuery('img[usemap]').rwdImageMaps();    
+	jQuery('img[usemap]').rwdImageMaps();  
+
+  //content cell take over 
+  //desktop 
+  if($(window).width() > 737) {
+    //remove .item.cell because of the way the page reloads twice
+    $('.item.cell').remove();
+
+    $('.items-list-wrapper .item').eq(3).before('<section class="item cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/c4.svg" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></section>')
+  } 
+  //mobile
+  else {
+    //remove .item.cell because of the way the page reloads twice
+    $('.single-item-box.cell').remove();
+
+    $('.thumb-wrapper .single-item-box').eq(3).before('<div class="single-item-box cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/c4.svg" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></div>')
+  }  
 }); 
 </script>  
