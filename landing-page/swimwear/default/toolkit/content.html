@@ -5,18 +5,18 @@
 <div class="swim-container"> 
    <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-d.png" alt="the swim shop" usemap="#swim-d" /> 
    <map name="swim-d">
-        <area  alt="" title="" href="/swimwear/girl" shape="rect" coords="603,108,797,152" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/boy" shape="rect" coords="605,162,798,210" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/baby-girl" shape="rect" coords="609,221,796,269" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/baby-boy" shape="rect" coords="608,282,797,328" style="outline:none;" target="_self"     /> 
+        <area  alt="" title="" href="/girls-swimwear" shape="rect" coords="603,108,797,152" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/boys-swimwear" shape="rect" coords="605,162,798,210" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/baby-girl-swimwear" shape="rect" coords="609,221,796,269" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/baby-boy-swimwear" shape="rect" coords="608,282,797,328" style="outline:none;" target="_self"     /> 
    </map>
 
    <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-m.png" alt="the swim shop" usemap="#swim-m" />
    <map name="swim-m">
-        <area  alt="" title="" href="/swimwear/girl" shape="rect" coords="38,591,368,661" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/boy" shape="rect" coords="382,589,713,663" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/baby-girl" shape="rect" coords="38,681,368,750" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/swimwear/baby-boy" shape="rect" coords="383,680,712,750" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/girls-swimwear" shape="rect" coords="38,591,368,661" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/boys-swimwear" shape="rect" coords="382,589,713,663" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/baby-girl-swimwear" shape="rect" coords="38,681,368,750" style="outline:none;" target="_self"     />
+        <area  alt="" title="" href="/baby-boy-swimwear" shape="rect" coords="383,680,712,750" style="outline:none;" target="_self"     />
    </map>
 </div>
 
@@ -44,6 +44,27 @@ $(document).ready(function(){
   //content cell take over 
   //desktop 
   if($(window).width() > 737) {
+     //change urls of left nav
+    var leftNav = $('.dept-swimwear section')
+
+    $.each(leftNav, function(i,val){
+      var a = $(val).find('a').text();
+      switch(a){
+        case 'Girl':
+          $(val).find('a').attr('href','/girls-swimwear');
+          break;
+        case 'Boy':
+          $(val).find('a').attr('href','/boys-swimwear');
+          break;
+        case 'Baby Girl':
+          $(val).find('a').attr('href','/baby-girl-swimwear');
+          break;
+        case 'Baby Boy':
+          $(val).find('a').attr('href','/baby-boy-swimwear');
+          break;
+      }
+    });
+
     //remove .item.cell because of the way the page reloads twice
     $('.item.cell').remove();
 
