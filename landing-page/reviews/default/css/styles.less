@@ -1,0 +1,254 @@
+@page-cta-color:#1B4F9B;
+@page-font-color: #666;
+
+.ref {
+	position:absolute;
+	opacity:.5;
+	//display:none;
+}
+ 
+.my-account, .midbox {
+	h1 {
+		display:none;
+	}
+} 
+
+#simplemodal-container, #simplemodal-overlay {
+	display:none !important;
+}
+
+.sidebar.customer-service {
+	@media screen and (max-width:737px){
+		display:none;
+	}
+}
+
+.main-content {
+	@media screen and (max-width:737px){
+		float:none;
+		width:100%;
+	}
+
+	float:left;
+	width: 840px;
+	margin-top:0 !important;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+.mobile {
+	@media screen and (max-width:768px){
+		display: inline-block !important;
+	}
+
+	display:none !important;
+}
+
+.desktop {
+	@media screen and (max-width:768px){
+		display:none !important;
+	}
+}
+
+.cta {
+	@media screen and (max-width:768px) {
+		padding:6px 0 6px 0;
+		width:170px;
+		left:0;
+		font-size:12px;
+	}
+
+	@media screen and (max-width:737px){
+		padding:13px 0 13px 0;
+		width:42%;
+		left:-1px;
+		font-size:19px;
+		letter-spacing:1px;
+		margin-bottom:76px;
+	}
+
+	@media screen and (max-width:668px){
+		width:276px;
+		font-size:17px;
+		margin-bottom:67px;
+	}
+
+	@media screen and (max-width:569px){
+		width:235px;
+		font-size:14px;
+		padding:9px 0 9px 0;	
+		margin-bottom:59px;
+	}
+
+	@media screen and (max-width:481px){
+		width:199px;
+		font-size:11px;
+		padding:10px 0 10px 0;
+		margin-bottom:49px;
+	}
+
+	@media screen and (max-width:415px){
+		width:170px;
+		padding:7px 0 7px 0;
+		font-size:10px;
+	}
+
+	@media screen and (max-width:376px){
+		width:155px;
+		font-size:9px;
+		padding:7px 0 7px 0;
+	}
+
+	@media screen and (max-width:321px){
+		width:131px;
+		font-size:8px;
+		padding:6px 0 6px 0;
+	}
+
+	display: inline-block;
+    border: 2px solid;
+    padding: 8px 0 8px;
+    width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    left: -3px;
+    font-size: 14px;
+    text-align:center;
+    font-family:brown-pro-bold !important;
+}
+
+//---------------------------------------------------------------
+
+//
+.reviews-container {
+
+	img {
+		max-width:100%;
+	}
+
+	.c2 {
+		position:relative;
+
+		.desktop {
+			margin: -6px 0 0 0;
+		}
+
+		.get-started {
+			position: absolute;
+    		right: 0;
+    		top: 61px;
+    		width: 289px;
+
+    		.cta {
+    			left: 0;
+    			width: 248px;
+    			background:#1a677b;
+    			border-color: #1a677b;
+    			color:#fff;
+
+    			&:hover {
+    					background:#fff;
+    					color:#1a677b;
+    			}
+    		}
+
+    		p {
+    			text-align: center;
+    			margin: 10px 0 0 0;
+    			color: #1a677b;
+    			position: relative;
+    			left: -18px;
+    			letter-spacing: .2px;
+    			line-height: 13px;
+
+    			a {
+    				color: #1a677b;
+    			}
+    		}
+		}
+	}
+
+	.c3 {
+		@media screen and (max-width:737px){
+			margin:0;
+			padding:0 0 25px;
+		}
+
+		margin: 40px 0 0 0;
+		position:relative;
+		background: #e7e689;
+    	padding: 0 0 31px;
+
+		.get-started {
+			position: absolute;
+    		right: 0;
+    		top: 133px;
+    		width: 422px;
+
+    		.cta {
+    			left: 0;
+    			width: 246px;
+    			background:#1a677b;
+    			border-color: #1a677b;
+    			color:#fff;
+
+    			&:hover {
+    					background:#fff;
+    					color:#1a677b;
+    			}
+    		}
+
+		}
+
+		.mobile {
+			//display:block !important;
+			overflow:hidden;
+			//padding: 34px 0 0 0;
+			//margin:0 0 23px;
+
+				h2 {
+					@media screen and (max-width:321px){
+						width:25%;
+					}
+
+					float:left;
+					width:32%;
+					margin:0 3% 0 0;
+					font-size:1.5em;
+					text-align:right;
+					line-height:25px;
+					color:#1a677b;
+
+					span {
+						font-size:1.5em;
+					}
+				}
+
+				p {
+					float:left;
+					line-height: 18px;
+    				letter-spacing: -.3px;
+    				color:#1a677b;
+
+					span {
+						font-family:brown-pro-bold;
+					}
+				}
+
+				.cta {
+					width: 86%;
+    				margin: 17px auto 0;
+    				display: block;
+    				color:#fff;
+    				background:#1a677b;
+    				border-color:#1a677b;
+				}
+		}
+	}		
+}
+
+//---------------------------------------------------------------
+
