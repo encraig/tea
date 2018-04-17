@@ -26,11 +26,11 @@ module.exports = function(grunt){
   	var gruntConfig = {
       hp:{date:'default'},
       cat:{date:'default'},
-      landing:{name:'size-chart', date:'default'},
-      cell:{name:'tween', date:'180222'},
+      landing:{name:'baby-sweeps-thanks', date:'default'},
+      cell:{name:'tween', date:'default'},
       zone:{name:'footer'}, 
-      promo: {name:'bmsm', date:'default'},
-      nav:{folder:'test3', name:'nav1'},
+      promo: {name:'friendsFamily', date:'default'},
+      nav:{folder:'test2', name:'nav1'},
     };
 
 
