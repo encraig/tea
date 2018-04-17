@@ -1,7 +1,4 @@
-<!--toolkit-->
-<style>
-	include "../css/styles.css"
-</style>
+
 
 <!-- dev styles css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
@@ -36,6 +33,10 @@
 <!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
 <script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
 
+<!--toolkit-->
+<style>
+    include "../css/styles.css"
+</style>
 
 <script>
 $(document).ready(function(){
@@ -96,59 +97,59 @@ $(document).ready(function(){
     var sets = [
         {
             name:'dreamy tees',
-            imgA: 'dreamer-a-d.jpg', 
-            imgB: 'dreamer-b-d.jpg',
-            imgM: 'dreamer-m-v2.png?nocache=12',
+            imgA: 'visionary-a-d.jpg', 
+            imgB: 'visionary-b-d.jpg',
+            imgM: 'visionary-m.jpg',
             h2: 'the visionary',
             p:'You\'re here to make a difference.',
-            skus:['8S82109K-010','8S82108K-474','8S12214R-F46','8S13207R-D10']
+            skus:['8M82109K-079','8M82201K-H00','8M82107K-109','8M82202K-452']
         },
         {
             name:'classic',
             imgA: 'classic-a-d.jpg', 
             imgB: 'classic-b-d.jpg',
-            imgM: 'classic-m-v2.png?nocache=12',
+            imgM: 'classic-m.jpg',
             h2: 'classic cool',
             p:'Keeping it simple is always in style.',
-            skus:['8S83302K-405','8S82103K-429','8S82200K-B65']
+            skus:['8M82104K-010','8S82200K-B65','8M82301K-452']
         },
         //breezy boho
         {
             name:'creative',
             imgA: 'breezy-a-d.jpg', 
             imgB: 'breezy-b-d.jpg',
-            imgM: 'breezy-m-v2.png?nocache=12',
+            imgM: 'breezy-m.jpg',
             h2: 'breezy boho',
             p:'You bring art to everything you do.',
-            skus:['8S81100K-405','8S82301K-F47','8S82203K-429']
+            skus:['8M82303K-321','8M82100K-E44','8S12216R-405']
         },
         //wild at heart
         {
             name:'explore',
             imgA: 'wild-a-d.jpg', 
             imgB: 'wild-b-d.jpg',
-            imgM: 'wild-m-v2.png?nocache=12',
+            imgM: 'wild-m.jpg',
             h2: 'wild at heart',
             p:'Nature makes your heart sing.',
-            skus:['8S82105K-061','8S82110K-079','8S82203K-462']
+            skus:['8M82111K-061','8M82201K-E44','8M82108K-977','8M83201K-E43']
         },
         {
             name:'street style',
             imgA: 'street-a-d.jpg', 
             imgB: 'street-b-d.jpg',
-            imgM: 'street-m-v2.png?nocache=12',
+            imgM: 'street-m.jpg',
             h2: 'street stylista',
             p:'You think (and dress) for yourself.',
-            skus:['8S82106K-833','8S82102K-D22','8S12223R-F27']
+            skus:['8M82300K-H00','8M82100K-452','8S13201R-385']
         },
         {
             name:'cartwheel',
             imgA: 'cartwheeler-a-d.jpg', 
             imgB: 'cartwheeler-b-d.jpg',
-            imgM: 'cartwheeler-m-v2.png?nocache=12',
+            imgM: 'cartwheeler-m.jpg',
             h2: 'the cartwheeler',
             p:'You\'re a mover and shaker, a risk-taker.',
-            skus:['8S82112K-G89','8S82100K-061','8S82202K-452']
+            skus:['8M82110K-272','8M82500K-G17','8M83201K-E00', '8M82105K-010', '8S82202K-977']
         },
     ];
 
@@ -288,7 +289,7 @@ $(document).ready(function(){
             
             $.each(selected, function(j,arr){
                 if(arr == num){
-                    $(val).closest('li').show();
+                    $(val).closest('li').show(); 
                     return false;
                 }
             });
@@ -338,7 +339,7 @@ $(document).ready(function(){
 
                 console.log(y);
                 //add content to page
-                var imageBase = '/mas_assets/theme/tea_collection/images/categories/headers/180118/tween-quiz/results/';
+                var imageBase = '/mas_assets/media/tea_collection/landing-pages/tween-quiz/180405/';
                 $('.the-set .top .left img').attr('src', imageBase + y.imgA);
                 $('.the-set .top .right img.desktop').attr('src', imageBase + y.imgB);
                 $('.the-set .top .right img.mobile').attr('src', imageBase + y.imgM);
