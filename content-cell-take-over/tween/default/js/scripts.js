@@ -19,29 +19,26 @@ jQuery(document).ready(function() {
 
     	var baseUrl = 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/headers/180118/tween/';
 
-        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/180222/';
+        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/180405/';
 
         //the content cell take over
         var images = [
-            {num:1, img:'c1.png', url:'/tween-girls-clothing/favorites/quiz', target:''},
+            {num:1, img:'c1.svg', url:'/tween-girls-clothing/favorites/quiz', target:''},
             {num:6, img:'c6.png', url:'', target:''},
-            {num:7, img:'c7.png', url:'', target:''},
-            // {num:10, img:'c10.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
-            {num:11, img:'c11.png', url:'', target:''},
-            {num:15, img:'c15.png', url:'', target:''},
-            {num:16, img:'c16.png', url:'', target:''},
-            // {num:17, img:'c17.jpg', url:'', target:''},
-            {num:21, img:'c21.png', url:'', target:''},
+            {num:10, img:'c10.svg', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
+            {num:17, img:'c17.png', url:'', target:''},
+            {num:22, img:'c22.svg', url:'field-notes-d.pdf', target:'_blank'},
+            {num:29, img:'c29.png', url:'', target:''},
             // {num:22, img:'c22.png', url:'field-notes-d.pdf', target:'_blank'},
-            {num:25, img:'c25.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
+            // {num:25, img:'c25.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
             // {num:30, img:'c30.jpg', url:'', target:''},
-            {num:32, img:'c32.jpg', url:'', target:''},
+            // {num:32, img:'c32.jpg', url:'', target:''},
             // {num:34, img:'c34.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
-            {num:37, img:'c37.png', url:'field-notes-d.pdf', target:'_blank'},
+            // {num:37, img:'c37.png', url:'field-notes-d.pdf', target:'_blank'},
             // {num:38, img:'c38.png', url:'', target:''},
-            {num:45, img:'c45.jpg', url:'', target:''},
-            {num:49, img:'c49.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
-            {num:53, img:'c53.png', url:'', target:''},
+            // {num:45, img:'c45.jpg', url:'', target:''},
+            // {num:49, img:'c49.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
+            // {num:53, img:'c53.png', url:'', target:''},
         ];
 
        // console.log(images);
@@ -185,7 +182,7 @@ jQuery(document).ready(function() {
     contentCells();
 
     //call contentCell again on window scroll if number of .items changes
-    $(window).scroll(function(){
+    /*$(window).scroll(function(){
         var newItems;
 
         //desktop
@@ -231,7 +228,7 @@ jQuery(document).ready(function() {
 
             // console.log('theItems has been changed to: ' , theItems);
         }
-    });
+    });*/
 
 });
 
