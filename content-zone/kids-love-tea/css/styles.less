@@ -1,0 +1,84 @@
+
+.desktop {
+    @media screen and (max-width:737px){
+        display:none !important;
+    }
+}
+
+.mobile {
+    display:none !important;
+
+    @media screen and(max-width:737px){
+        display:block !important;
+    }
+}
+
+.like-shop-container {
+    @media screen and (max-width:737px){
+        padding: 0;
+        margin:0;
+    }
+
+    overflow:hidden;
+    margin: 20px 0;
+
+    div {
+        @media screen and (max-width:737px){ 
+            width: 100%;
+            float:none;
+            //margin:0 0 10px;
+        }
+
+        width: 44%;
+        float:left;
+
+        h2 {
+            margin: 0;
+            font-size: 32px;
+            color: #5e5e61;
+            letter-spacing: .02rem;
+            line-height: 40px;
+
+            &.mobile {
+                text-align: center;
+                font-size: 1.8em;
+                text-transform: lowercase;
+                line-height: 24px;
+
+                span {
+                    text-transform: capitalize;
+                    font-size: .55em;
+                    letter-spacing: 1px;
+                }
+            }
+
+            span {
+                display:block;
+                font-size: 16px;
+                color: #5e5e61;
+                letter-spacing: .1rem;
+                line-height: 27px;
+                text-transform: uppercase
+            }
+        }
+
+
+        p {
+            @media screen and (max-width:737px){
+                font-size: .72em;
+                text-align: center;
+                line-height: 14px;
+            }
+
+            font-size: 13px;
+            letter-spacing: .02rem;
+            color: #6f6f71;
+        }
+    }
+}
+
+.like-shop-board {
+    @media screen and (max-width:737px){
+        margin: 10px 0;
+    }
+}
