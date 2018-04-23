@@ -1,0 +1,91 @@
+
+.desktop {
+    @media screen and (max-width:737px){
+        display:none !important;
+    }
+}
+
+.mobile {
+    display:none !important;
+
+    @media screen and(max-width:737px){
+        display:block !important;
+    }
+}
+
+.dash-hudson {
+    @media screen and (max-width:737px){
+        margin: 56px 0 38px;
+        padding: 29px 0 28px;
+        background: url('https://www.teacollection.com/mas_assets/media/tea_collection/content-zone/hp-dashhudson/dotted-line-m.png') center top no-repeat, url('https://www.teacollection.com/mas_assets/media/tea_collection/content-zone/hp-dashhudson/dotted-line-m.png') center bottom no-repeat;
+    }
+
+    margin: 20px 0; 
+
+    h2 {
+        @media screen and (max-width:737px){
+            font-family:brown-pro-bold;
+            font-size: 1.2em;
+            letter-spacing:0;
+        }
+
+        font-size: 16px;
+        letter-spacing: .03rem;
+        font-weight: normal;
+        line-height: 1.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align:center;
+    }
+
+    h3 {
+        @media screen and (max-width:737px){
+            font-size:1em;
+            letter-spacing:0;
+            line-height:0;
+            margin:10px 0 16px;
+        }
+
+        font-size: 13px;
+        letter-spacing: .02rem;
+        font-weight: normal;
+        line-height: 2em;
+        margin:0 0 20px;
+        text-align:center;
+
+        span {
+            font-size: 11px;
+            letter-spacing: .05rem;
+        }
+    }
+
+    .cta {
+        @media screen and (max-width:737px){
+            margin:11px auto;
+            width:88%;
+        }
+
+        display:block;
+        margin:20px auto;
+        width:200px;
+        color:#fff;
+        background:#666;
+        font-family:brown-pro-bold;
+
+        &:hover, &:active {
+            color:#666;
+            background:#fff;
+        }
+    }
+
+    p {
+        @media screen and (max-width:737px) {
+            display:none;
+        }
+
+        margin-bottom: 0;
+        margin-top:20px;
+        line-height: 1.7;
+        font-size: 13px;
+    }
+}
