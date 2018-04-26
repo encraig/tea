@@ -17,6 +17,7 @@
     @media screen and (max-width:737px){
         padding: 0;
         margin:0;
+        overflow:visible;
     }
 
     overflow:hidden;
@@ -43,12 +44,19 @@
                 text-align: center;
                 font-size: 1.8em;
                 text-transform: lowercase;
-                line-height: 24px;
+                line-height: 36px;
+                position: relative;
+                top: -13px;
+                font-weight: normal;
+                font-family: brown-pro-bold;
+                letter-spacing: 0;
 
                 span {
                     text-transform: capitalize;
                     font-size: .55em;
                     letter-spacing: 1px;
+                    font-family: brown-pro-regular;
+                    font-weight: normal;
                 }
             }
 
@@ -67,7 +75,9 @@
             @media screen and (max-width:737px){
                 font-size: .72em;
                 text-align: center;
-                line-height: 14px;
+                line-height: 15px;
+                position: relative;
+                top: -14px;
             }
 
             font-size: 13px;
@@ -79,6 +89,7 @@
 
 .like-shop-board {
     @media screen and (max-width:737px){
-        margin: 10px 0;
+        position: relative;
+        top: -6px;
     }
 }
