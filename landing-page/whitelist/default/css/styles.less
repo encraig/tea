@@ -15,7 +15,7 @@ section#breadcrumbs {
 	position:absolute;
 	max-width:100%;
 	opacity:.5;
-	//display:none;
+	display:none;
 }
 
 .my-account h1, .midbox h1, .common-wrap {
@@ -60,7 +60,7 @@ article.sidebar.customer-service {
 	h1 {
 		@media screen and (max-width:737px){
 			text-align:center;
-			font-size:1.9em;
+			font-size:1.8em;
 			margin:0 0 10px;
 		}
 
@@ -82,6 +82,7 @@ article.sidebar.customer-service {
 		line-height:18px;
 		margin:0px;
 		color:#666;
+		letter-spacing: -.03px;
 	}
 
 	h2 {
@@ -142,7 +143,7 @@ article.sidebar.customer-service {
 
 		//border-top: 1px solid #E6E7E8;
 		border-bottom: 1px solid #E6E7E8;
-		padding: 20px 0 24px;
+		padding: 24px 0;
 		width:456px;
 		color:#666;
 		box-sizing:border-box;
@@ -199,6 +200,10 @@ article.sidebar.customer-service {
 			padding: 0 0 0 20px;
 			font-family:brown-pro-bold;
 			letter-spacing: .3px;
+
+			+ ol {
+				margin:0;
+			}
 		}
 
 		p {
@@ -207,6 +212,10 @@ article.sidebar.customer-service {
 			}
 
 			margin: 0 0 8px;
+
+			+ ol {
+				margin:0;
+			}
 		}
 
 		ol {
@@ -245,6 +254,88 @@ article.sidebar.customer-service {
 				}
 
 				margin: 0 0 13px;
+			}
+		}
+
+		&.aol {
+			ol {
+				margin:0 0 20px 0;
+			}
+		}
+
+		&.aol-web-mail {
+			p {
+				margin: 0 0 19px 0;
+			}
+		}
+
+		&.yahoo {
+			ol {
+				&:last-of-type {
+					margin:0 0 24px 0;
+				}
+			}
+		}
+
+		&.hotmail {
+			ol {
+				&:last-of-type {
+					margin: 0 0 26px 0;
+				}
+			}
+		}
+
+		&.gmail {
+			ol {
+				margin: 0 0 19px 0;
+			}
+		}
+
+		&.outlook {
+			p {
+				margin:0 0 20px 0;
+			}
+
+			ul {
+				margin:0;
+
+				li {
+					a {
+						font-family: brown-pro-bold;
+    					letter-spacing: -.8px;
+					}
+				}
+			}
+
+			h3 {
+				a {
+					font-family: brown-pro-bold;
+    				letter-spacing: -.15px;
+				}
+			}
+
+			ol {
+				&:last-of-type {
+					margin:0 0 23px 0;
+				}
+			}
+		}
+
+		&.mac {
+			@media screen and (max-width:737px){
+				width:100%;
+			}
+
+			width:470px;
+
+			p {
+				&:first-of-type {
+					margin:0 0 15px 0;
+				}
+
+				&:last-of-type {
+					margin: 0 0 19px 0;
+				}
 			}
 		}
 	}
