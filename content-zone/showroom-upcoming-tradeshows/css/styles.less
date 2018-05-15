@@ -1,0 +1,65 @@
+
+.desktop {
+    @media screen and (max-width:737px){
+        display:none !important;
+    }
+}
+
+.mobile {
+    display:none !important;
+
+    @media screen and(max-width:737px){
+        display:block !important;
+    }
+}
+
+
+.upcoming-tradeshows {
+    width: 100%;
+    color:#3e5c76;
+    font-size: 15px;
+    border: 1px solid;
+
+    h2 {
+        font-size: 75px !important;
+        color:#3e5c76 !important;
+        margin: 20px 0;
+    }
+
+    th, td {
+        padding: 10px 0 !important;
+        vertical-align:middle;
+    }
+
+    .thead {
+        background: #648c84;
+        color:#fff;
+
+        th {
+            font-family:brown-pro-regular;
+            font-size:13px;
+            text-transform:uppercase;
+        }
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #9cadb7;
+
+        &:nth-of-type(even){
+            background: #eff3f2;
+        }
+
+        span {
+            color: #648c84;
+        }
+    }
+}
+
+.upcoming-tradeshows-p {
+    font-size: 15px !important;
+    color: #648c84 !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    font-family: brown-pro-regular !important;
+    padding: 20px 0 !important;
+}
