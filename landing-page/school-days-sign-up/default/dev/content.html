@@ -42,14 +42,14 @@
                <div class="q">How do I enroll in the fundraiser?</div>
                <div class="a">Click on the "SIGN UP" button above and enter your<br> organization's details. Note: You must be in the U.S. and<br> certified as a 501(c)(3) organization to participate. If you have<br> your Employer Identification Number (EIN) handy, then you're<br> ready to roll!<br>
                <br>
-               Don’t have your EIN number on hand? Click 'Learn More' to fill<br> out the basics and we’ll get in touch. 
+               Don’t have your EIN number on hand? Click 'LEARN MORE' to fill<br> out the basics and we’ll get in touch. 
                </div>
             </li>
             <li>
                <div class="q">How does it work?</div>
                <div class="a">Once you're in, we'll reach out a month before the fundraiser<br class="desktop"> begins<br class="mobile"> with a unique promo code and marketing materials for<br class="desktop"> you to share<br class="mobile"> with your community, family and friends.<br>
                <br> 
-               During the week-long fundraiser period, shoppers will shop<br> TeaSchoolDays.com and enter your unique promo code at<br class="desktop"> checkout to<br class="mobile"> get 15% of their order along with free 6-10 day<br class="desktop"> shipping, AND at the<br class="mobile"> end Tea will donate 15% of your total sales<br> to your school! 
+               During the week-long fundraiser period, shoppers will shop<br> TeaSchoolDays.com and enter your unique promo code at<br class="desktop"> checkout to<br class="mobile"> get 15% off their order along with free 6-10 day<br class="desktop"> shipping, AND at the<br class="mobile"> end Tea will donate 15% of your total sales<br> to your school! 
                </div>
             </li>
             <li>
@@ -61,7 +61,7 @@
                <div class="q">How can I help make the fundraiser successful for my school?</div>
                <div class="a">To help get the word out, we’ll provide you with branded<br> materials you can customize and print with your unique promo<br> code. These include postcards, flyers, Facebook assets and<br class="desktop"> more!<br>
                <br>
-               A shout out in your school newsletter, a reminder at parent<br> pick-up, and a little friendly fundraising competition among<br> classrooms are some other great ways to spread the word!<br>
+               A shout-out in your school newsletter, a reminder at parent<br> pick-up, and a little friendly fundraising competition among<br> classrooms are some other great ways to spread the word!<br>
                <br>
                The organization with the most creative marketing will win<br class="mobile"> an<br class="desktop"> additional $100 donation from Tea!
                </div>
@@ -78,7 +78,7 @@
       <div>
          <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/girl-d.jpg" alt="girl" class="desktop" />
          <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/girl-m.jpg" alt="girl" class="mobile" />
-         <p>"We are so grateful for this fundraiser<br> (easiest one we've tried!).</p>
+         <p>"We are so grateful for this fundraiser<br> (easiest one we've tried!)."</p>
          <p>Pittsburgh Montessori PTA</p>
       </div>
       <div>
@@ -155,6 +155,13 @@ jQuery(document).ready(function(){
          }
          else {
             console.log('this does not have expand');
+            //collapse all .a
+            $('.faq ul li .a').slideUp();
+            //remove style on all .q
+            $('.faq ul li .q').removeAttr('style');
+            //remove class expand from all li
+            $('.faq ul li').removeClass('expand');
+            //change the clicked li
             $this.addClass('expand');
             $this.find('.a').slideDown();
             $this.find('.q').css('background','url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/minus.png") no-repeat 96% 48% #E6E7E8');
