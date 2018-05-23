@@ -73,6 +73,14 @@ h1 {
     //line-height:2.8em;
 }
 
+.padded {
+	padding:0 !important;
+}
+
+#content-wrapper .breadcrumb, #breadcrumbs {
+	display:none;
+}
+
 .css-pgt1zi {
 	width: 60% !important;
     height: 80% !important;
@@ -214,6 +222,7 @@ h1 {
 			font-size: 15px;
     		line-height: 20px;
     		margin:0 0 17px 0;
+    		color:#666;
 		}
 
 		h2 {
@@ -240,11 +249,13 @@ h1 {
 
 		a {
 			@media screen and (max-width:737px){
-				width: 41%;
+				width: 42%;
     			margin: 13px 2% 0 2%;
     			padding: 8px 0 !important;
     			box-shadow: none;
     			text-shadow: none;
+    			font-weight:normal;
+    			font-size:.8em;
 			}
 
 			background:#fff;
@@ -298,8 +309,10 @@ h1 {
 
 					&.first {
 						@media screen and (max-width:737px){
-							padding: 6px 0;
-							font-size:1em;
+							padding: 8px 0;
+							font-size:.8em;
+							background-size:3%;
+							background-position:95% 48%;
 						}
 
 						padding:12px 0;
@@ -308,6 +321,11 @@ h1 {
     					font-size: 14px;
     					background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/expand.png') no-repeat 96% 48%;
     					text-align:center;
+
+    					/*&:hover {
+    						background:#1A667A;
+    						color:#fff;
+    					}*/
 					}
 
 					&.q {
@@ -315,13 +333,15 @@ h1 {
 							font-size:.7em;
 							padding: 10px 0 10px 4%;
 							text-align:left;
+							background-size:3%;
+							background-position: 95% 45%;
 						}
 
 						padding: 10px 0 10px 19px;
     					color: #1A667A;
     					font-family: brown-pro-bold;
     					font-size: 14px;
-    					background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/plus.png) no-repeat 95% 50%;
+    					background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/plus.png) no-repeat 96% 50%;
     					box-sizing: border-box;
 					}
 
@@ -329,8 +349,8 @@ h1 {
 						@media screen and (max-width:737px){
 							font-size: .7em;
     						text-align: left;
-    						padding: 7px 0 10px 4%;
-    						line-height: 14px;
+    						padding: 11px 0 10px 4%;
+    						line-height: 12px;
 						}
 
 						display:none;
@@ -403,6 +423,7 @@ h1 {
 				margin: 17px 0 0 0;
     			font-size: 15px;
     			line-height: 20px;
+    			color:#666;
 
     			&:last-of-type {
     				@media screen and (max-width:737px){
@@ -451,5 +472,91 @@ h1 {
 		&:hover {
 			cursor:pointer;
 		}
+	}
+}
+
+.learn-more-light-box, .sign-up-light-box {
+	position:fixed;
+	background: rgba(0,0,0,0.5);
+	width:100%;
+	height:100%;
+	z-index:9999;
+	top:0;
+	left:0;
+	display:none;
+
+	.learn-more-wrap, .sign-up-wrap {
+		@media screen and (max-width:737px){
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			padding: 1em;
+		}
+
+		background: #fff;
+    	position: absolute;
+    	top: 21%;
+    	left: 30%;
+    	width: 800px;
+    	padding: 20px 0;
+    	box-sizing: border-box;
+
+    	.close-icon {
+    		position:relative;
+    		left:20px;
+
+    		&:hover {
+    			cursor:pointer;
+    		}
+    	}
+
+    	h2 {
+    		@media screen and (max-width:737px){
+    			font-size: 1.1em;
+    			margin: 9px 0 0px 0;
+    			line-height: 29px;
+    		}
+
+    		font-size: 24px;
+    		line-height: 40px;
+    		color:#1A667A;
+    		text-align:center;
+    	}
+
+    	p {
+    		@media screen and (max-width:737px){
+    			margin: 16px 0 0 0;
+    			font-size: .9em;
+    			line-height: 20px;
+    		}
+
+    		@media screen and (max-width:321px){
+    			font-size:.8em;
+    		}
+
+    		margin: 17px 0 0 0;
+    		font-size: 15px;
+    		line-height: 20px;
+    		color:#666;
+    		text-align:center
+    	}
+
+    	a {
+    		@media screen and (max-width:737px){
+    			font-size:.8em;
+    			width:42%;
+    		}
+
+    		display:block;
+    		margin:20px auto;
+    		color:#1A667A;
+    		border-color:#1A667A;
+
+    		&:hover {
+    			background:#1A667A;
+    			color:#fff;
+    		}
+    	}
 	}
 }
