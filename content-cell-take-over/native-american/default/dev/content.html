@@ -243,6 +243,8 @@ her tribe’s traditional patchwork. We worked with Jessica to adapt classic Sem
 			if($(elem).length < 2){
 				// console.log('sold out');
 				//add the sold out badge
+				//add some css
+				$('.li-' + i).css('top','-71px');
 				$('.li-' + i + '> div').prepend('<img src="https://s.tea-global.net/mas_assets/theme/tea_collection/images/misc/SoldOutBadge_lrg.gif" alt="sold out" class="sold-out">');
 				//hide the dropdown and add to bag
 				$('.li-' + i).find('.sizes-container').hide();
