@@ -10,7 +10,7 @@
 	}
 } 
  
-#simplemodal-container, #simplemodal-overlay, #breadcrumbs, .breadcrumb {
+#simplemodal-container, #simplemodal-overlay, #breadcrumbs, .breadcrumb, #tea-promo-subscribe {
 	display:none !important;
 }
 
@@ -21,6 +21,14 @@
 .mobile {
 	@media screen and (max-width:737px){
 		display:block;
+	}
+
+	display:none;
+}
+
+.mobile-2 {
+	@media screen and (max-width:737px){
+		display:inline-block;
 	}
 
 	display:none;
@@ -60,6 +68,11 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 	}
 
 	display:none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	width:7px !important;
+	height: 7px !important;
 }
 
 .bx-pager {
@@ -187,14 +200,19 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 	.cta {
 		@media screen and (max-width:737px) {
 			margin: 26px auto 40px;
+			height: 30px;
+    		box-sizing: border-box;
+    		width: 88%;
+    		font-size: .7em;
+    		padding: 9px 0 0 0;
 		}
 
-		border-color:#3abfba;
-		color:#3abfba;
+		border-color:#1a667a;
+		color:#1a667a;
 		margin:19px auto 0;
 
 		&:hover {
-			background:#3abfba;
+			background:#1a667a;
 			color:#fff;
 		}
 	}
@@ -211,7 +229,7 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 		overflow:auto;
 	}
 
-	background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/influencer/180326/c1-d.png') no-repeat center top;
+	background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/influencer/2018/c1-d.png') no-repeat center top;
 	min-height:500px;
 	overflow:hidden;
 	text-align:center;
@@ -228,7 +246,7 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 
 		width: 328px;
 		float:none;
-		padding:146px 0 0;
+		padding:112px 0 0;
 
 		h2 {
 			@media screen and (max-width: 737px){
@@ -236,26 +254,36 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 			}
 
 			font-size: 60px;
-    		letter-spacing: .4px;
+    		letter-spacing: 1px;
     		line-height:60px;
-    		color:#fff;
+    		color:#1a667a;
+    		font-family:brown-pro-bold;
+    		font-weight:bold;
+
 		}
 
 		p {
 			@media screen and (max-width:737px){
-				font-size:1em;
-				margin:43px 0 0 0;
-				line-height:0;
-				letter-spacing: -.2px;
+				font-size:.9em;
+				margin:37px 0 0 0;
+				line-height:16px;
+				letter-spacing: .3px;
+				color:#666;
+				font-family:brown-pro-regular;
+				font-weight:normal;
 
 				span {
 					font-family:brown-pro-bold !important;
+					font-weight:bold;
 				}
 			}
 
-			font-size: 29px;
+			font-size: 28px;
     		margin: 3px 0 0 0;
     		line-height: 35px;
+    		color:#1a667a;
+    		font-family:brown-pro-bold;
+    		font-weight:bold;
 
     		&:last-of-type {
     			@media screen and (max-width:737px){
@@ -278,9 +306,12 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 
 		.cta {
 			@media screen and (max-width:737px){
-			    color: #3abfba;
-    			border-color: #3abfba;
+			    color: #1a667a;
+    			border-color: #1a667a;
     			margin:15px auto 0;
+    			font-size:.7em;
+    			height:30px;
+    			padding:9px 0 0 0;
     			//display: inline-block;
     			//text-transform: none;
     			//width: auto;
@@ -288,15 +319,21 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
     			//margin: 10px 0 0;
 			}
 
-			margin-top:20px;
-			color:#3abfba;
-			border-color:#fff;
-			background:#fff;
+			margin-top: 20px;
+    		color: #1a667a;
+    		border-color: #fff;
+    		background: #fff;
+    		height: 37px;
+    		box-sizing: border-box;
+    		padding: 10px 0 0 0;
+    		letter-spacing: 1px;
+    		font-size: 14px;
+    		font-family: brown-pro-bold !important;
 
 			&:hover {
-				background:#3abfba;
+				background:#1a667a;
 				color:#fff;
-				border-color:#3abfba;
+				border-color:#1a667a;
 			}
 		}
 	}
@@ -329,4 +366,47 @@ div.banner-ad-zone > .da-rennab > .mobile-promo, div.banner-ad-zone > .da-rennab
 	}
 }
 
+#influencer-fineprint {
+	@media screen and (max-width: 736px){
+		width:100%;
+		position:absolute;
+		z-index:9999;
+		height:100%;
+		background:#fff;
+		top:0;
+	}
+
+	display:none;
+	width:600px;
+	min-height: 158px;
+	background:#fff;
+
+	.details-container {
+		margin: 27px;
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		padding: 20px 0;
+		background:#fff;
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 1px;
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 20px;
+		}
+
+		.close-fancy {
+			@media screen and (max-width: 736px){
+				display:block;
+			}
+
+			display:none;
+			text-align:center;
+		}
+	}
+}
 
