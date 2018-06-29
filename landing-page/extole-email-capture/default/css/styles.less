@@ -1,0 +1,143 @@
+.my-account, .midbox {
+    h1 {
+        display:none;
+    }
+} 
+
+#simplemodal-container, #simplemodal-overlay {
+    display:none !important;
+}
+
+.sidebar.customer-service {
+    @media screen and (max-width:737px){
+        display:none;
+    }
+}
+
+.main-content {
+    @media screen and (max-width:737px){
+        float:none;
+        width:100%;
+    }
+
+    float:left;
+    width: 840px;
+    margin-top:0 !important;
+}
+
+.padded {
+    padding:0 !important;
+}
+
+.mobile {
+    @media screen and (max-width:737px){
+        display:block !important;
+    }
+	display:none !important;
+}
+
+.desktop {
+    @media screen and (max-width:737px){
+        display:none !important;
+    }
+}
+
+.ref {
+    @media screen and (max-width:737px){
+        top:-123px;
+    }
+
+	position:absolute;
+	top:-70px;
+	left:0;
+	max-width:100%;
+	opacity:.5;
+}
+
+.extole-wrap {
+    @media screen and (max-width:737px){ 
+        min-height:auto;
+    }
+
+    overflow:hidden;
+
+    div {
+        @media screen and (max-width:737px){
+            width:100%;
+            float:none;
+        }
+
+        float:left;
+        width:500px;
+
+        &.first {
+            
+
+            img {
+                display:block;
+                max-width:100%;
+            }
+
+            p {
+                @media screen and (max-width:737px){
+                    font-size:1.15em;
+                    line-height:20px;
+                    padding: 16px 0 14px 0;
+                }
+
+                background:#8AC0C5;
+                font-size:24px;
+                line-height:30px;
+                text-align:center;
+                color:#fff;
+                padding:20px 0 23px 0;
+                font-family:brown-pro-bold;
+
+                span {
+                    @media screen and (max-width:737px){
+                        font-size:.8em;
+                        line-height:24px;
+                    }
+
+                    display:block;
+                    font-size:15px;
+                    line-height:24px;
+                    font-family:brown-pro-regular;
+                    margin:3px 0 0 0;
+                }
+            }
+        }
+
+        &.second {
+
+            p {
+                @media screen and (max-width:737px){
+                    font-size:.92em;
+                    line-height:20px;
+                    margin:15px 0 20px 0;
+                }
+
+                color:#F8C6B8;
+                font-size:15px;
+                line-height:18px;
+                text-align:center;
+                font-family:brown-pro-bold;
+                margin: 38px 0 72px 0;
+
+                span.mobile {
+                    font-size:.81em;
+                    line-height: 24px;
+                    display:block;
+                    margin:0 0 0 0;
+                    font-family:brown-pro-regular;
+                }
+            }
+        }
+    }
+
+}
+
+	
+
+
+    
