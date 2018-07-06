@@ -80,14 +80,29 @@ var doStuff = function(json){
          // console.log(li);
          //desktop
          if($(window).width() > 737){
-            (elem).find('.drop-container ul').append(li);
+            //move this under size
+            if(sizeText.indexOf('NB') !== -1){
+               (elem).find('.drop-container ul li:nth-of-type(2)').before(li);
+            }
+            else {
+               (elem).find('.drop-container ul').append(li);
+            }
+
+            
          }
          //mobile
          else {
-            (elem).find('.drop-container select').append(option);
+            //move this under size
+            if(sizeText.indexOf('NB') !== -1){
+               (elem).find('.drop-container select option:nth-of-type(2)').before(option);
+            }
+            else {
+               (elem).find('.drop-container select').append(option);
+            }
+            
          }
-         $
-         // console.log(elem);
+         
+                  // console.log(elem);
       });
 
 
