@@ -24,7 +24,7 @@ var doStuff = function(json){
          img = item2.image_url;
          title = item2.model;
          price = item2.retail_price;
-         qty = item2.per_color_qty;
+         qty = item2.per_color_qty; 
          // qty = 0;
       }
  
