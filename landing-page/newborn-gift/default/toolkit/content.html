@@ -72,24 +72,7 @@
       <a href="/newborn-clothes" class="cta">SHOP ALL NEWBORN</a>
    </div>
 
-   <!-- if not logged in -->
-   <!-- {if !$smarty.session.user}
-      <h2>Welcome to Tea</h2>
-      <p>Please create an account.</p>
-      <a href="/?page=register{return_url}" class="cta">create account</a> 
-   {/if} -->
-
-   <!-- new customer logged in but never purchased -->
-   <!-- {if $smarty.session.user && !$smarty.session.user.has_ordered}
-      <h2>Welcome to Tea</h2>
-      <a href="#" class="cta test">add to bag</a>
-   {/if} -->
-
-   <!-- customer logged in but has purchased -->
-   <!-- {if $smarty.session.user && $smarty.session.user.has_ordered}
-      <h2>Welcome back to Tea</h2>
-      <p>unortunately this is only for new customers</p>
-   {/if} -->
+   <p style="padding:1em; font-family:brown-pro-regular;">Free newborn outfit offer available for new customers only. Shipping is not included. Discount automatically applied to applicable styles at checkout on teacollection.com. One time use. Offer applicable to select newborn styles only. Offer expires on 7/22/2018 at 11:59pm PST. By applying this offer, you are automatically opted into Tea Collection emails. No adjustments on previous purchases. Not redeemable for cash. Cannot be combined with other promotions. </p>
 
 </div>
 
@@ -160,12 +143,6 @@
    </div>
 </div>
 
-<!-- <div class="cart-skus">
-   {shopping_cart}
-         {$sku},
-   {/shopping_cart}
-</div> -->
-
 {literal}
 <style>
 @media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}.common-wrap{margin:0 0 0 0 !important}h1{display:none}#simplemodal-overlay,#simplemodal-container,#tea-promo-subscribe,.cart-skus{display:none !important}.ref2{position:absolute;opacity:.5}.ref{position:absolute;top:-69px;left:0;opacity:.5;z-index:9999;max-width:100%}@media screen and (max-width:737px){.ref{top:-123px}}.cta{display:inline-block;font-family:brown-pro-bold !important;border:1px solid;width:200px;position:relative;font-size:13px;letter-spacing:.2px;text-transform:uppercase;text-decoration:none;padding:12px 0 9px;text-align:center;box-sizing:border-box}@media screen and (max-width:737px){.cta{width:42%;left:0;padding:1em 0;font-size:.8em}}@media screen and (max-width:415px){.cta{font-size:.8em;letter-spacing:1.1px}}@media screen and (max-width:376px){.cta{font-size:.7em}}@media screen and (max-width:321px){.cta{font-size:.6em}}.padded{padding:0 !important}#content-wrapper .breadcrumb,#breadcrumbs{display:none}.nb-wrap img{max-width:100%}.nb-wrap p{color:#666}.nb-wrap header{min-height:500px;background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/c1-d.png) no-repeat;overflow:hidden}@media screen and (max-width:737px){.nb-wrap header{min-height:auto;background:none}}.nb-wrap header div{float:right;width:390px;box-sizing:border-box;margin:262px 0 0 0;text-align:right}@media screen and (max-width:737px){.nb-wrap header div{float:none;width:100%;margin:0 0 0 0;text-align:center}}.nb-wrap header div h2{font-size:60px;line-height:60px;padding:0 57px 0 0;color:#8AC0C5;font-family:brown-pro-bold;font-weight:normal}.nb-wrap header div p{font-size:18px;padding:0 56px 0 0;margin:11px 0 0 0;line-height:28px}@media screen and (max-width:737px){.nb-wrap header div p{font-size:.9em;line-height:18px;padding:0 0 0 0;margin:18px 0 0 0}}.nb-wrap .row1,.nb-wrap .row4,.nb-wrap .row5,.nb-wrap .row6{background:#F8C6B8;margin:46px 0 0 0;box-sizing:border-box;padding:8px 0 0 69px;font-size:24px;line-height:30px;height:50px}@media screen and (max-width:737px){.nb-wrap .row1,.nb-wrap .row4,.nb-wrap .row5,.nb-wrap .row6{margin:20px 0 0 0;padding:8px 0 15px 0;font-size:1.8em;line-height:30px;text-align:center;height:auto}}.nb-wrap .row1 h2,.nb-wrap .row4 h2,.nb-wrap .row5 h2,.nb-wrap .row6 h2{color:#fff;font-family:brown-pro-bold;font-weight:normal}.nb-wrap .row4{padding:8px 0 0 185px;height:80px}@media screen and (max-width:737px){.nb-wrap .row4{height:auto;padding:7px 0 16px 0;margin:30px 0 0 0}}.nb-wrap .row5{padding:3px 0 0 0;background:#8AC0C5;height:40px}@media screen and (max-width:737px){.nb-wrap .row5{height:auto;margin:30px 0 0 0}}.nb-wrap .row5:hover{cursor:pointer}.nb-wrap .row5 h2{font-family:brown-pro-bold-italic;font-size:21px;line-height:30px;text-align:center;text-decoration:underline;font-weight:normal}@media screen and (max-width:737px){.nb-wrap .row5 h2{font-size:15px;line-height:30px;padding:2px 0 7px 0}}.nb-wrap .row6{height:157px;padding:24px 0 0 0}@media screen and (max-width:737px){.nb-wrap .row6{height:auto;padding:16px 0 30px 0;margin:30px 0 0 0}}.nb-wrap .row6 h2{text-align:center;margin:0 0 23px 0;font-family:brown-pro-bold;font-weight:normal}@media screen and (max-width:737px){.nb-wrap .row6 h2{margin:0 0 0 0}}.nb-wrap .row6 a{background:#fff;width:395px;height:39px;padding:4px 0 0 0;margin:0 auto;display:block;color:#F8C6B8}@media screen and (max-width:737px){.nb-wrap .row6 a{width:64%;height:auto;margin:15px auto 0 auto;font-size:.4em;line-height:12px;padding:9px 0 8px 0}}.nb-wrap .row6 a:hover{background:none;color:#fff;border:1px solid}.nb-wrap .row2,.nb-wrap .row3{overflow:hidden;margin:44px 0 0 0}@media screen and (max-width:737px){.nb-wrap .row2,.nb-wrap .row3{margin:30px 0 0 0}}.nb-wrap .row2 div,.nb-wrap .row3 div{float:left;height:420px}@media screen and (max-width:737px){.nb-wrap .row2 div,.nb-wrap .row3 div{float:none;height:auto}}.nb-wrap .row2 div h2,.nb-wrap .row3 div h2{font-size:18px;line-height:24px;font-family:brown-pro-bold;font-weight:normal}.nb-wrap .row2 div p,.nb-wrap .row3 div p{font-size:15px;line-height:20px}.nb-wrap .row2 div[data="1"],.nb-wrap .row3 div[data="1"]{width:565px;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/c2-d.png') no-repeat;margin:0 15px 0 0}@media screen and (max-width:737px){.nb-wrap .row2 div[data="1"],.nb-wrap .row3 div[data="1"]{width:100%;background:none;margin:0 0 0 0}}.nb-wrap .row2 div[data="1"] div,.nb-wrap .row3 div[data="1"] div{float:none;box-sizing:border-box;width:200px;padding:253px 0 0 24px}.nb-wrap .row2 div[data="1"] div h2,.nb-wrap .row3 div[data="1"] div h2{color:#FF8D90;font-family:brown-pro-bold;font-weight:normal}.nb-wrap .row2 div[data="2"],.nb-wrap .row3 div[data="2"]{width:420px;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/c3-d.png') no-repeat}@media screen and (max-width:737px){.nb-wrap .row2 div[data="2"],.nb-wrap .row3 div[data="2"]{width:100%;background:none;margin:30px 0 0 0}}.nb-wrap .row2 div[data="2"] div,.nb-wrap .row3 div[data="2"] div{float:none;width:200px;box-sizing:border-box;padding:19px 0 0 24px}.nb-wrap .row2 div[data="2"] div h2,.nb-wrap .row3 div[data="2"] div h2{color:#8AC0C5;font-family:brown-pro-bold;font-weight:normal}.nb-wrap .row3 div[data="1"]{width:420px;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/c4-d.png') no-repeat}@media screen and (max-width:737px){.nb-wrap .row3 div[data="1"]{width:100%;background:none}}.nb-wrap .row3 div[data="1"] div{padding:19px 0 0 0;position:relative;left:265px}.nb-wrap .row3 div[data="1"] div h2{color:#8AC0C5;font-family:brown-pro-bold;font-weight:normal}.nb-wrap .row3 div[data="2"]{width:565px;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/c5-d.png') no-repeat}@media screen and (max-width:737px){.nb-wrap .row3 div[data="2"]{width:100%;background:none}}.nb-wrap .row3 div[data="2"] div{padding:19px 0 0 0;position:relative;left:422px}.nb-wrap .row3 div[data="2"] div h2{color:#FF8D90;font-family:brown-pro-bold;font-weight:normal}.nb-items{overflow:hidden;margin:44px 0 0 0}@media screen and (max-width:737px){.nb-items{margin:30px 0 0 0}}.nb-items div{float:left;width:493px}@media screen and (max-width:737px){.nb-items div{width:49%}}.nb-items div:first-of-type{margin:0 14px 0 0}@media screen and (max-width:737px){.nb-items div:first-of-type{margin:0 2% 0 0}}.nb-items div:last-of-type{margin:0}.nb-items div .unavailable{margin:0;width:493px;height:493px;position:absolute;background:rgba(0,0,0,0.1)}@media screen and (max-width:737px){.nb-items div .unavailable{width:49%;height:auto}}.nb-items div .unavailable span{font-size:45px;line-height:24px;margin:210px 0 0 0;color:#fff}@media screen and (max-width:737px){.nb-items div .unavailable span{font-size:23px;line-height:24px;margin:67px 0 0 0}}.nb-items div img{max-width:100%}.nb-items div h2{font-size:21px;line-height:24px;text-align:center;margin:14px 0 5px 0;font-family:brown-pro-bold;font-weight:normal;color:#666}@media screen and (max-width:737px){.nb-items div h2{font-size:1.2em;line-height:18px;margin:17px 0 0 0}}.nb-items div span{font-family:brown-pro-bold;color:#666;display:block;text-align:center}.nb-items div span.price{font-size:15px;line-height:22px}@media screen and (max-width:737px){.nb-items div span.price{font-size:1.1em;margin:3px 0 0 0}}.nb-items div span.size-chart{font-size:11px;line-height:13px;color:#999;text-transform:uppercase;letter-spacing:1px;margin:11px 0 0 0}@media screen and (max-width:737px){.nb-items div span.size-chart{font-size:.7em;line-height:12px;margin:12px 0 0 0}}.nb-items div span.size-chart:hover{cursor:pointer}.nb-items div .drop-container{overflow:hidden;margin:17px 0 0 0}@media screen and (max-width:737px){.nb-items div .drop-container{width:100%}}.nb-items div .drop-container ul{height:39px;width:200px;margin:0 20px 0 37px;overflow:hidden;list-style-type:none;border:1px solid #666;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/expand.png') no-repeat 167px 15px #fff;float:left;transition:height 1s;box-sizing:border-box}.nb-items div .drop-container ul li{height:39px;font-size:13px;line-height:21px;text-align:center;color:#666;font-family:brown-pro-bold;text-transform:uppercase;box-sizing:border-box;padding:10px 0 0 0;letter-spacing:1px;border-bottom:1px solid #E6E7E8}.nb-items div .drop-container ul li:first-of-type:hover{background:none}.nb-items div .drop-container ul li:last-of-type{border:none}.nb-items div .drop-container ul li.sold-out{color:#999}.nb-items div .drop-container ul li:hover{background:#E6E7E8;color:#666;cursor:pointer}.nb-items div .drop-container select{width:85%;height:30px;margin:0 auto;border:1px solid #666;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/expand.png') no-repeat 95% 10px #fff;display:block;text-align:center;font-size:.8em;line-height:12px;text-transform:uppercase;font-family:brown-pro-bold;border-radius:0;color:#666}.nb-items div .drop-container a{color:#fff;background:#999;float:right;margin:0 36px 0 0}@media screen and (max-width:737px){.nb-items div .drop-container a{float:none;display:block;width:158px;height:30px;margin:15px auto 0;padding:8px 0 0 0}}.size-lightbox{background:rgba(0,0,0,0.5);position:fixed;width:100%;height:100%;top:0;left:0;display:none;z-index:9999}.size-lightbox:hover{cursor:pointer}.expand{height:auto !important;position:absolute !important}.expand li:first-of-type{background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/collapse.png') no-repeat 167px 15px #999 !important;color:#fff !important}.expand li:first-of-type:hover{background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/collapse.png') no-repeat 167px 15px #999 !important;color:#fff !important}.disabled:hover{cursor:not-allowed}.activeCta{background:#572700 !important;color:#fff !important}.activeCta:hover{background:#381A00 !important}.size-container,.error-message,.welcome-message{background:#8AC0C5;position:fixed;width:500px;height:360px;top:13%;left:35%;display:none;z-index:9999}@media screen and (max-width:737px){.size-container,.error-message,.welcome-message{width:100%;height:100%;top:0;left:0}}.size-container img,.error-message img,.welcome-message img{max-width:100%}.size-container img.close,.error-message img.close,.welcome-message img.close{position:absolute;top:18px;left:19px}.size-container img.close:hover,.error-message img.close:hover,.welcome-message img.close:hover{cursor:pointer}.size-container h2,.error-message h2,.welcome-message h2{font-size:30px;line-height:35px;color:#fff;padding:0;margin:78px 0 0 0;text-align:center;font-family:brown-pro-bold;font-weight:normal}@media screen and (max-width:737px){.size-container h2,.error-message h2,.welcome-message h2{font-size:30px;line-height:35px;margin:173px 0 0 0}}@media screen and (max-width:321px){.size-container h2,.error-message h2,.welcome-message h2{margin:20px 0 0 0}}.size-container h3,.error-message h3,.welcome-message h3{font-size:21px;line-height:28px;color:#fff;padding:0;margin:7px 0 0 0;text-align:center;font-family:brown-pro-bold;font-weight:normal}@media screen and (max-width:737px){.size-container h3,.error-message h3,.welcome-message h3{font-size:18px;line-height:24px;margin:10px 0 0 0}}.size-container p,.error-message p,.welcome-message p{font-size:15px;line-height:21px;color:#fff;padding:0;margin:15px 0 0 0;text-align:center}@media screen and (max-width:737px){.size-container p,.error-message p,.welcome-message p{font-size:12px;line-height:18px;margin:26px 0 0 0}}.size-container form,.error-message form,.welcome-message form{margin:24px auto 0 auto;width:395px;height:39px;background:#fff}@media screen and (max-width:737px){.size-container form,.error-message form,.welcome-message form{margin:18px auto 0 auto;width:88%;height:42px}}.size-container form input[type="email"],.error-message form input[type="email"],.welcome-message form input[type="email"]{height:39px;padding:0 0 0 20px;border:none;width:352px;box-sizing:border-box;margin:0;font-size:10px;line-height:12px;text-transform:uppercase;letter-spacing:1px;color:#999;border-radius:0}@media screen and (max-width:737px){.size-container form input[type="email"],.error-message form input[type="email"],.welcome-message form input[type="email"]{height:40px;width:85%;position:relative;top:-17px}}.size-container form input[type="submit"],.error-message form input[type="submit"],.welcome-message form input[type="submit"]{width:39px;height:39px;border:none;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/apply-grey.png') no-repeat 16px 12px #E6E7E8;position:relative;left:2px;border-radius:0}@media screen and (max-width:737px){.size-container form input[type="submit"],.error-message form input[type="submit"],.welcome-message form input[type="submit"]{height:42px;width:13%;left:4px}}.size-container span,.error-message span,.welcome-message span{position:absolute;bottom:23px;left:6%;background:#fff;font-size:14px;line-height:17px;color:#666;font-family:brown-pro-bold;text-transform:uppercase;height:42px;width:88%;border:none}.error-message,.welcome-message{background:#fff}.error-message h2,.welcome-message h2{margin:86px 0 0 0;color:#F8C6B8;font-family:brown-pro-bold;font-weight:normal}@media screen and (max-width:737px){.error-message h2,.welcome-message h2{margin:192px 0 0 0 !important}}@media screen and (max-width:321px){.error-message h2,.welcome-message h2{margin:20px 0 0 0 !important}}.error-message p,.welcome-message p{font-size:18px;line-height:24px;color:#666;margin:10px 0 0 0}.error-message a,.welcome-message a{display:block;width:250px;height:39px;font-size:13px;line-height:16px;margin:24px auto 0 auto;background:#666;color:#fff;border:none}@media screen and (max-width:737px){.error-message a,.welcome-message a{width:63%;height:42px}}.error-message a:hover,.welcome-message a:hover{background:#414042}.error-message span,.welcome-message span{background:#999;color:#fff}.welcome-message h2{margin:70px 0 0 0;color:#8AC0C5;font-family:brown-pro-bold;font-weight:normal}.welcome-message a:first-of-type{background:#8AC0C5}.welcome-message a:last-of-type{background:#572700;margin:20px auto 0 auto}@media screen and (max-width:737px){.welcome-message a:last-of-type{margin:15px auto 0 auto}}.welcome-message a:last-of-type:hover{background:#381A00}.all-out{background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/babies-d.png') no-repeat;overflow:hidden;display:none}@media screen and (max-width:737px){.all-out{background:none}}.all-out img{max-width:100%}.all-out div{box-sizing:border-box}.all-out div[data="top"]{width:400px;height:500px;float:right;text-align:right;padding:60px 40px 0 0}@media screen and (max-width:737px){.all-out div[data="top"]{width:100%;height:auto;padding:0 0 0 0}}.all-out div[data="top"] h2{font-size:45px;line-height:45px;color:#8AC0C5;font-family:brown-pro-bold;font-weight:normal}.all-out div[data="top"] p{font-size:21px;line-height:30px;color:#666;margin:11px 3px 0 0}@media screen and (max-width:737px){.all-out div[data="top"] p{font-size:.9em;line-height:18px;text-align:center;margin:18px 0 20px 0}}.all-out div[data="bottom"]{clear:both;background:#F8C6B8;height:234px;text-align:center;padding:17px 0 0 0}.all-out div[data="bottom"] h2{font-size:30px;line-height:36px;color:#fff;font-family:brown-pro-bold;font-weight:normal}@media screen and (max-width:737px){.all-out div[data="bottom"] h2{font-size:1.8em;line-height:30px}}.all-out div[data="bottom"] p{font-size:21px;line-height:21px;color:#fff;position:relative;left:9px;margin:14px 0 0 0}@media screen and (max-width:737px){.all-out div[data="bottom"] p{font-size:12px;line-height:18px;margin:10px 0 0 0;left:0}}.all-out div[data="bottom"] form{margin:27px auto 0 auto;width:395px;height:39px;background:#fff}@media screen and (max-width:737px){.all-out div[data="bottom"] form{margin:18px auto 0 auto;width:88%;height:42px}}.all-out div[data="bottom"] form input[type="email"]{height:39px;padding:0 0 0 20px;border:none;width:352px;box-sizing:border-box;margin:0;font-size:10px;line-height:12px;text-transform:uppercase;letter-spacing:1px;color:#999;border-radius:0}@media screen and (max-width:737px){.all-out div[data="bottom"] form input[type="email"]{height:40px;width:85%;position:relative;top:-17px}}.all-out div[data="bottom"] form input[type="submit"]{width:39px;height:39px;border:none;background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/apply-grey.png') no-repeat 16px 12px #E6E7E8;position:relative;left:1px;border-radius:0}@media screen and (max-width:737px){.all-out div[data="bottom"] form input[type="submit"]{height:42px;width:13%;left:4px}}/*# sourceMappingURL=styles.css.map */
@@ -213,92 +190,6 @@ jQuery(document).ready(function(){
    var checkBag=function(a,b){var c,d,e=!1,f=!1;"7S72900"==a?c=a:"7S62901"==a&&(d=a),$.get("/cms/shopping-cart/shopping-cart/1.html",function(a){console.log($(a).find("#the-shopping-cart li").html());var g=$(a).find("#the-shopping-cart li");return $.each(g,function(a,b){var g=$(b).attr("data-sku");return g=g.split("-")[0],console.log(g),c==g?(e=!0,!1):d==g?(f=!0,!1):"7S72900"==g?(e=!0,!1):"7S62901"==g?(f=!0,!1):void 0}),e?($(".size-lightbox, .error-message").toggle(),!1):f?($(".size-lightbox, .error-message").toggle(),!1):void $.post(b,function(a){$("#view-cart").trigger("mouseenter")})})};
    //# sourceMappingURL=checkBag.min.js.map
 
-   // var checkBag = function(clickedSku, href){
-   //    var bornFree = false;
-   //    var cycleBaby = false;
-   //    var bornFreeSku;
-   //    var cycleBabySku;
-
-   //    if(clickedSku == '7S72900'){
-   //       bornFreeSku = clickedSku;
-   //    } 
-   //    else if(clickedSku == '7S62901'){
-   //       cycleBabySku = clickedSku;
-   //    }
-
-      // $.get('https://www.teacollection.com/?page=cart', function(data){
-         // console.log(data);
-         // var skus;
-         //desktop
-         // if($(window).width() > 737){
-         //    skus = $(data).find('.ajax-cart-edit');
-         // }
-         //mobile
-         // else {
-         //    skus $(data).find('.cart-edit');
-         // }
-         // console.log(skus);
-
-         // $.each(skus, function(i,val){
-         //    var sku = $(val).attr('href');
-         //    sku = sku.split('/')[2].split('-')[0];
-            
-         //    if(bornFreeSku == sku){
-         //       bornFree = true;
-         //       return false;
-         //    }
-
-         //    else if(cycleBabySku == sku){
-         //       cycleBaby = true;
-         //       return false;
-         //    }
-
-            //check if born free already in cart
-            // else if(sku == '7S72900'){
-            //    bornFree = true;
-            //    return false;
-            // }
-
-            //check if cycle baby already in cart
-         //    else if(sku == '7S62901'){
-         //       cycleBaby = true;
-         //       return false;
-         //    }
-
-         // });
-
-         // console.log('born free: ' + bornFree);
-         // console.log('cycle baby: ' + cycleBaby);
-
-         //display error message if already in cart
-         // if(bornFree) {
-         //    $('.size-lightbox, .error-message').toggle();
-         //    return false;
-         // }
-         //display error message if already in cart
-         // else if(cycleBaby) {
-         //    $('.size-lightbox, .error-message').toggle();
-         //    return false;
-         // }
-         //add to cart
-         // else {
-         //    $.post(href, function(data){
-               // var succMess = '<div class="success">successfully added to your cart.</div>';
-               // $(elem).after(succMess);
-
-               // setTimeout(function(){
-               //    $('.success').fadeOut(function(){
-               //       $(this).remove();
-               //    });
-               // }, 4000);   
-
-               //trigger the hover
-   //             $('#view-cart').trigger('mouseenter');    
-   //          });
-   //       }
-         
-   //    });
-   // };
 
    {/literal}
 
@@ -389,14 +280,6 @@ jQuery(document).ready(function(){
    var expandCollapse=function(a){$(a).click(function(a){var b=$(this);b.toggleClass("expand")})};
    //# sourceMappingURL=expandCollapse.min.js.map
 
-   // var expandCollapse = function(elem){
-   //    $(elem).click(function(e){
-   //          var $this = $(this);
-   //          // console.log($this);
-   //          $this.toggleClass('expand');
-   //    });
-   // };
-
    var addToBag =function(cta, sku){
       //remove disabled from the add to bag cta
       cta.removeClass('disabled').addClass('activeCta');
@@ -463,346 +346,25 @@ jQuery(document).ready(function(){
    var addSelected=function(a){$(a).click(function(b){var c=$(this),d=c.attr("data-sku");$(a).removeClass("selected"),$(a+":first-of-type").text("size");var e=$(a).closest("ul").next();if(e.addClass("disabled").removeClass("activeCta"),e.attr("href","#"),0!==c.index()&&!c.hasClass("sold-out")){c.addClass("selected");var f=c.text();$(a+":first-of-type").text(f),addToBag(e,d)}})};
    //# sourceMappingURL=addSelected.min.js.map
 
-   // var addSelected = function(elem){
-   //    $(elem).click(function(e){
-   //          var $this = $(this);
-   //          var sku = $this.attr('data-sku');
-            //remove class from all li
-            // $(elem).removeClass('selected');
-            //change the first li text back to size
-            // $(elem + ':first-of-type').text('size');
-            // var cta = $(elem).closest('ul').next();
-            //change the add to bag cta back to disabled
-            // cta.addClass('disabled').removeClass('activeCta');
-            //change the add to bag href back to #
-            // cta.attr('href','#');
-            // console.log($this.index());
-   //          if($this.index() !== 0){
-   //             if(!$this.hasClass('sold-out')){
-   //                $this.addClass('selected');
-   //                var val = $this.text();
-   //                //change the first li
-   //                $(elem + ':first-of-type').text(val);
-
-   //                addToBag(cta, sku);
-
-   //             }
-   //          }
-            
-   //    });
-   // };
-
    //selectedChange function
    var selectChange=function(a){$(a+" .drop-container select").change(function(){var a=$(this).find(":selected"),b=a.attr("data-sku"),c=$(this).next();c.addClass("disabled").removeClass("activeCta"),c.attr("href","#"),void 0!==b&&(a.hasClass("sold-out")||addToBag(c,b))})};
    //# sourceMappingURL=selectedChange.min.js.map
-
-   // var selectChange = function(elem){
-   //    $(elem + ' .drop-container select').change(function(){
-   //       var $this = $(this).find(':selected');
-   //       var sku = $this.attr('data-sku');
-   //       var cta = $(this).next();
-         //change the add to bag cta back to disabled
-         // cta.addClass('disabled').removeClass('activeCta');
-         //change the add to bag href back to #
-         // cta.attr('href','#');
-         // console.log($this.index());
-   //       if(sku !== undefined){
-   //          if(!$this.hasClass('sold-out')){
-                  
-   //             addToBag(cta, sku);
-
-   //          }
-   //       }
-   //    });
-   // };
 
    //sizeChart function
    var sizeChart=function(){var a="newborn",b="all categories",c="/cms/size-chart/size-chart-tea-collection/1.html",d=encodeURI("selectedDept="+a+"&selectedCat="+b),e=window.location.href;e.indexOf("?")!==-1?window.location.href=e+"&"+d:window.location.href=e+"?"+d,$.get(c,function(a){var b=$(a).find("#size-chart-section").html();if($(window).width()>737){var c='<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>',d=$('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');$("body").prepend(c),$("body").prepend(d),$(".overlay-content").append(b)}else if($(window).width()<737){var d=$('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');$("body").prepend(d),$(".overlay-content").append(b)}$(".size-chart-container h1").css({background:"url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 24px center",padding:"17px 0"}),$(".size-chart-container h1, .overlay").hover(function(){$(this).css("cursor","pointer")},function(){$(this).css("cursor","none")}),$(".overlay, .size-chart-container h1").click(function(){history.pushState(null,"","1.html"),$(".overlay, .overlay-content").remove()})})};
    //# sourceMappingURL=sizeChart.min.js.map
 
-   // var sizeChart = function(){
-   //    var dept = 'newborn';
-   //    var cat = 'all categories';
-
-      //the size chart url
-      // var url = '/cms/size-chart/size-chart-tea-collection/1.html';
-   
-      //append the parameters at the end of the url
-      // var params = encodeURI('selectedDept=' + dept + '&selectedCat=' + cat);
-      // var thisUrl = window.location.href;
-      //check if have parameters already
-      // if(thisUrl.indexOf('?') !== -1){
-      //    window.location.href = thisUrl + '&' + params;
-      // } else {
-      //    window.location.href = thisUrl + '?' + params;
-      // }
-
-      //make the get call
-      // $.get(url, function(data){
-
-         //find the size chart
-         // var sizeChart = $(data).find('#size-chart-section').html();
-         //console.log(sizeChart);
-
-         //desktop
-         // if($(window).width() > 737){
-            //make the overlay element
-            // var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>';
-
-            //make the content element
-            // var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-
-            //prepend overlay element to body
-            // $('body').prepend(overlay);
-
-            //prepend overlay content element to body
-            // $('body').prepend(overlayContent);
-
-            //append sizeChart to overlayContent
-            // $('.overlay-content').append(sizeChart);
-         // }
-
-         //mobile
-         // else if($(window).width() < 737){
-
-            //make the content element
-            // var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-
-            //prepend overlay content element to body
-            // $('body').prepend(overlayContent);
-
-            //append sizeChart to overlayContent
-            // $('.overlay-content').append(sizeChart);
-         // }
-
-         //hide the h1 in overlayContent
-         // $('.size-chart-container h1').text('');
-
-         //add h1 background image of the x
-         // $('.size-chart-container h1').css({background: "url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 24px center", padding:"17px 0"});
-
-         //add css for hover h1 and overlay
-         // $('.size-chart-container h1, .overlay').hover(function(){
-         //    $(this).css('cursor','pointer');
-         // }, function(){
-         //    $(this).css('cursor','none');
-         // });
-
-         //close the lightbox
-         // $('.overlay, .size-chart-container h1').click(function(){
-
-            // history.pushState(null, '', '1.html');
-
-            //remove the elements
-   //          $('.overlay, .overlay-content').remove();
-   //       });
-   //    });
-   // };
-
    //changeHeight function
    var changeHeight=function(a){if($(window).width()<737){var b=$(a+" img").css("height");$(a+" .unavailable").css("height",b)}};
    //# sourceMappingURL=changeHeight.min.js.map
-
-   // var changeHeight = function(elem){
-      //if mobile adjust the unavailable overlay height
-         // if($(window).width() < 737){
-            //get the height of the image
-            // var mHeight = $(elem + ' img').css('height');
-            //change the height of unavailable
-   //          $(elem + ' .unavailable').css('height', mHeight);
-   //       }
-   // };
 
    //doStuff function
    var doStuff=function(a){var b,c,d,e,f,g=a.parent_data,h=a.parent_data[91307],i=a.parent_data[91293];h?(b=h.image_url,c=h.model,d=h.retail_price,e=h.per_color_qty):i&&(b=i.image_url,c=i.model,d=i.retail_price,e=i.per_color_qty),f=e>0?$(window).width()>737?$('<div data-name="'+c+'" data-qty="'+e+'"><img src="'+b+'" alt="'+c+'" /><h2>'+c+'</h2><span class="price">FREE ('+d+' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><ul><li>size</li></ul><a href="#" class="cta disabled">add to bag</a></div></div>'):$('<div data-name="'+c+'" data-qty="'+e+'"><img src="'+b+'" alt="'+c+'" /><h2>'+c+'</h2><span class="price">FREE ('+d+' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><select><option>size</option></select><a href="#" class="cta disabled">add to bag</a></div></div>'):$(window).width()>737?$('<div data-name="'+c+'" data-qty="'+e+'"><!--<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/sold-out-image-ref.png?nocache=1" style="position:absolute; opacity:.5">--><div class="unavailable"><span>Unavailable</span></div><img src="'+b+'" alt="'+c+'" /><h2>'+c+'</h2><span class="price">FREE ('+d+' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><ul><li>size</li></ul><a href="#" class="cta disabled">add to bag</a></div></div>'):$('<div data-name="'+c+'" data-qty="'+e+'"><!--<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/sold-out-image-ref.png?nocache=1" style="position:absolute; opacity:.5">--><div class="unavailable"><span>Unavailable</span></div><img src="'+b+'" alt="'+c+'" /><h2>'+c+'</h2><span class="price">FREE ('+d+' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><select><option>size</option></select><a href="#" class="cta disabled">add to bag</a></div></div>'),$.each(g,function(a,b){var c=b.store_quantity,d=b.sku,e=b.size,g=e.replace("_","-");g.indexOf("NB")==-1&&(g+=" M");var h,i;c>0?(h='<li value="'+e+'" data-sku="'+d+'">'+g+"</li>",i='<option value="'+e+'" data-sku="'+d+'">'+g+"</option>"):(h='<li value="'+e+'" class="sold-out" data-sku="'+d+'"><strike>'+g+"</strike> SOLD OUT</li>",i='<option value="'+e+'" class="sold-out" data-sku="'+d+'" disabled>'+g+" SOLD OUT</option>"),$(window).width()>737?g.indexOf("NB")!==-1?f.find(".drop-container ul li:nth-of-type(2)").before(h):f.find(".drop-container ul").append(h):g.indexOf("NB")!==-1?f.find(".drop-container select option:nth-of-type(2)").before(i):f.find(".drop-container select").append(i)}),$(".nb-items").append(f);var j=$('div[data-name="Born Free Baby Outfit"]').attr("data-qty"),k=$('div[data-name="Cycle Baby Outfit"]').attr("data-qty");0==j&&0==k&&($(".nb-wrap").hide(),$(".all-out").show(),$(".all-out div").find("form").find('input[type="email"]').focus());var l=$('.nb-items div[data-name="Born Free Baby Outfit"]');$(".nb-items").prepend(l),h?(expandCollapse('div[data-name="Born Free Baby Outfit"] .drop-container ul'),addSelected('div[data-name="Born Free Baby Outfit"] .drop-container ul li'),selectChange('div[data-name="Born Free Baby Outfit"]'),$('div[data-name="Born Free Baby Outfit"] .size-chart').click(function(){history.pushState(null,"","1.html#"),sizeChart()}),setTimeout(function(){changeHeight('div[data-name="Born Free Baby Outfit"]')},1e3),$(window).resize(function(){changeHeight('div[data-name="Born Free Baby Outfit"]')})):i&&(expandCollapse('div[data-name="Cycle Baby Outfit"] .drop-container ul'),addSelected('div[data-name="Cycle Baby Outfit"] .drop-container ul li'),selectChange('div[data-name="Cycle Baby Outfit"]'),$('div[data-name="Cycle Baby Outfit"] .size-chart').click(function(){history.pushState(null,"","1.html#"),sizeChart()}),setTimeout(function(){changeHeight('div[data-name="Cycle Baby Outfit"]')},1e3),$(window).resize(function(){changeHeight('div[data-name="Cycle Baby Outfit"]')})),$(".row1, .row2, .row3, .row4, .row5, .row6, .nb-items div img, .nb-items div h2, .nb-items div .price").click(function(){$(".nb-items").find(".drop-container ul").removeClass("expand")})};
    //# sourceMappingURL=doStuff.min.js.map
 
-   // var doStuff = function(json){
-   //    var item = json.parent_data;
-      // console.log(item); 
-
-      // var img;
-      // var title;
-      // var price;
-      // var qty;
-      // var elem;
-
-      //item 1
-      // var item1 = json.parent_data['91307'];
-      //item 2
-      // var item2 = json.parent_data['91293'];
-
-      // if(item1){
-      //    img = item1.image_url;
-      //    title = item1.model;
-      //    price = item1.retail_price;
-      //    qty = item1.per_color_qty;
-         // qty = 0;
-      // } 
-      // else if(item2) {
-      //    img = item2.image_url;
-      //    title = item2.model;
-      //    price = item2.retail_price;
-      //    qty = item2.per_color_qty;
-         // qty = 0;
-      // }
- 
-
-      // if(qty > 0) {
-         //desktop
-         // if($(window).width() > 737){
-         //    elem = $('<div data-name="'+ title +'" data-qty="'+ qty +'"><img src="'+ img +'" alt="'+ title +'" /><h2>'+ title +'</h2><span class="price">FREE ('+ price +' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><ul><li>size</li></ul><a href="#" class="cta disabled">add to bag</a></div></div>');
-         // }
-         //mobile
-      //    else {
-      //       elem = $('<div data-name="'+ title +'" data-qty="'+ qty +'"><img src="'+ img +'" alt="'+ title +'" /><h2>'+ title +'</h2><span class="price">FREE ('+ price +' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><select><option>size</option></select><a href="#" class="cta disabled">add to bag</a></div></div>');
-      //    }
-         
-      // }
-      // else {
-         //desktop
-         // if($(window).width() > 737){
-         //    elem = $('<div data-name="'+ title +'" data-qty="'+ qty +'"><!--<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/sold-out-image-ref.png?nocache=1" style="position:absolute; opacity:.5">--><div class="unavailable"><span>Unavailable</span></div><img src="'+ img +'" alt="'+ title +'" /><h2>'+ title +'</h2><span class="price">FREE ('+ price +' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><ul><li>size</li></ul><a href="#" class="cta disabled">add to bag</a></div></div>');
-         // }
-         //mobile
-      //    else {
-      //       elem = $('<div data-name="'+ title +'" data-qty="'+ qty +'"><!--<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/sold-out-image-ref.png?nocache=1" style="position:absolute; opacity:.5">--><div class="unavailable"><span>Unavailable</span></div><img src="'+ img +'" alt="'+ title +'" /><h2>'+ title +'</h2><span class="price">FREE ('+ price +' value)</span><span class="size-chart">size chart ></span><div class="drop-container"><select><option>size</option></select><a href="#" class="cta disabled">add to bag</a></div></div>');
-      //    }
-         
-      // }
-
-      //add the sizes to the dropdown
-      // $.each(item, function(i,val){
-         
-      //    var storeQty = val.store_quantity;
-      //    var sku = val.sku;
-      //    var sizeVal = val.size;
-      //    var sizeText = sizeVal.replace('_','-');
-      //    if(sizeText.indexOf('NB') == -1){
-      //       sizeText = sizeText + ' M';
-      //    }
-      //    var li;
-      //    var option;
-         // storeQty = 0;
-         // console.log('store qty: ' + storeQty);
-         // console.log('size: ' + size);
-         // if(storeQty > 0){
-         //    li = '<li value="'+ sizeVal +'" data-sku="'+ sku +'">'+ sizeText +'</li>';
-         //    option = '<option value="'+ sizeVal +'" data-sku="'+ sku +'">'+ sizeText +'</option>';
-         // }
-         // else {
-         //    li = '<li value="'+ sizeVal +'" class="sold-out" data-sku="'+ sku +'"><strike>'+ sizeText +'</strike> SOLD OUT</li>';
-         //    option = '<option value="'+ sizeVal +'" class="sold-out" data-sku="'+ sku +'" disabled>'+ sizeText +' SOLD OUT</option>';;
-         // }
-
-         // console.log($(elem).find('.drop-container ul'));
-         // console.log(li);
-         //desktop
-         // if($(window).width() > 737){
-         //    (elem).find('.drop-container ul').append(li);
-         // }
-         //mobile
-         // else {
-         //    (elem).find('.drop-container select').append(option);
-         // }
-         
-         // console.log(elem);
-      // });
-
-
-      // $('.nb-items').append(elem);
-
-      //check if all sold out then hide .nb-wrap and show .all-out
-      // var bornFreeQty = $('div[data-name="Born Free Baby Outfit"]').attr('data-qty');
-      // var cycleBabyQty = $('div[data-name="Cycle Baby Outfit"]').attr('data-qty');
-      // console.log(bornFreeQty, cycleBabyQty);
-      // if(bornFreeQty == 0 && cycleBabyQty == 0) {
-      //    $('.nb-wrap').hide();
-      //    $('.all-out').show();
-      //    $('.all-out div').find('form').find('input[type="email"]').focus();
-      // }
-
-      //reorder the products
-      // var bornFree = $('.nb-items div[data-name="Born Free Baby Outfit"]');
-      // $('.nb-items').prepend(bornFree);
-
-      // if(item1){
-         //click
-         // expandCollapse('div[data-name="Born Free Baby Outfit"] .drop-container ul');
-
-         //add selected
-         // addSelected('div[data-name="Born Free Baby Outfit"] .drop-container ul li');
-
-         //select change
-         // selectChange('div[data-name="Born Free Baby Outfit"]');
-
-         //size chart click
-         // $('div[data-name="Born Free Baby Outfit"] .size-chart').click(function(){
-         //    history.pushState(null, '', '1.html#');
-         //    sizeChart();
-         // });
-
-         //if mobile adjust the unavailable overlay height
-         // setTimeout (function(){
-         //    changeHeight('div[data-name="Born Free Baby Outfit"]');
-         // },1000);
-
-      //    $(window).resize(function(){
-      //       changeHeight('div[data-name="Born Free Baby Outfit"]');
-      //    });
-
-      // } 
-      // else if(item2) {
-         //click
-         // expandCollapse('div[data-name="Cycle Baby Outfit"] .drop-container ul');
-
-         //add selected
-         // addSelected('div[data-name="Cycle Baby Outfit"] .drop-container ul li');
-
-         //select change
-         // selectChange('div[data-name="Cycle Baby Outfit"]');
-
-         //size chart click
-         // $('div[data-name="Cycle Baby Outfit"] .size-chart').click(function(){
-         //    history.pushState(null, '', '1.html#');
-         //    sizeChart();
-         // });
-
-         //if mobile adjust the unavailable overlay height
-      //    setTimeout (function(){
-      //       changeHeight('div[data-name="Cycle Baby Outfit"]');
-      //    },1000);
-
-      //    $(window).resize(function(){
-      //       changeHeight('div[data-name="Cycle Baby Outfit"]');
-      //    });
-
-      // }
-
-      //collapse the ul
-      // $('.row1, .row2, .row3, .row4, .row5, .row6, .nb-items div img, .nb-items div h2, .nb-items div .price').click(function(){
-      //    $('.nb-items').find('.drop-container ul').removeClass('expand');
-      // });
-
-
-         
-         
-   // };
-
-
    //getNb function
    var getNb=function(a){$.get(a,function(a){var b=$(a).find("#the-mpd").text(),c=JSON.parse(b);doStuff(c)})};
    //# sourceMappingURL=getNb.min.js.map
-
-   // var getNb = function(url){
-   //    $.get(url, function(data){
-   //       var mpd = $(data).find('#the-mpd').text()
-   //       var json = JSON.parse(mpd);
-         // console.log(json);
-   //       doStuff(json);
-   //    });
-      
-   // };
 
    getNb('https://www.teacollection.com/product/7S72900/born-free-baby-outfit.html?nocache=12');
    getNb('https://www.teacollection.com/product/7S62901/cycle-baby-outfit.html?nocache=12');
