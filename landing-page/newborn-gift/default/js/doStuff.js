@@ -1,6 +1,6 @@
 var doStuff = function(json){
       var item = json.parent_data;
-      // console.log(item); 
+      console.log(item); 
 
       var img;
       var title;
@@ -14,14 +14,16 @@ var doStuff = function(json){
       var item2 = json.parent_data['91293'];
 
       if(item1){
-         img = item1.image_url;
+         // img = item1.image_url;
+         img = 'https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/born-free-d.png';
          title = item1.model;
          price = item1.retail_price;
          qty = item1.per_color_qty;
          // qty = 0;
       } 
       else if(item2) {
-         img = item2.image_url;
+         // img = item2.image_url;
+         img = 'https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/newborn-gift/2018/cycle-baby-d.png';
          title = item2.model;
          price = item2.retail_price;
          qty = item2.per_color_qty; 
