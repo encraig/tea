@@ -179,7 +179,7 @@ jQuery(document).ready(function() {
     };
 
     //call contentCell
-    contentCells();
+    // contentCells();
 
     //call contentCell again on window scroll if number of .items changes
     /*$(window).scroll(function(){
