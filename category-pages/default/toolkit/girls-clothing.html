@@ -3,35 +3,48 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/girls-clothing.css"> -->
 
 <!-- desktop ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/180503/g-d-ref.jpg" class="ref" /> -->
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/0712/g-d-ref.jpg" class="ref" /> -->
 
 <!-- mobile ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/180503/g-m-ref.jpg" class="ref" /> -->
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/0712/g-m-ref.jpg" class="ref" /> -->
 
 <div class="dept-cat"> 
 
 	<!-- <h3 class="mobile title">girl</h3> -->
 
 	<!-- prod desktop image -->
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/180503/g-d.png"  />
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/0712/g-d-v2.png"  />
 
 	<!-- prod mobile image -->
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/180503/g-m.png"  />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/0712/g-m.png"  />
 
-	<p class="desktop">She is curious,<br class="mobile"> courageous<br> and completely<br class="mobile"> unique.<br class="desktop"> A free<br class="mobile"> spirit ready<br class="mobile"> to conquer<br class="desktop"> the<br class="mobile"> world around<br class="mobile"> her. She is<br class="desktop"> a<br class="mobile"> little citizen<br class="mobile"> of the world.</p>
+	<!-- <p class="desktop">She is curious,<br class="mobile"> courageous<br> and completely<br class="mobile"> unique.<br class="desktop"> A free<br class="mobile"> spirit ready<br class="mobile"> to conquer<br class="desktop"> the<br class="mobile"> world around<br class="mobile"> her. She is<br class="desktop"> a<br class="mobile"> little citizen<br class="mobile"> of the world.</p> -->
 
 </div>
 
 <!-- toolkit -->
 <style>
-
-	.ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .breadcrumb-c{padding-top:13px}@media screen and (max-width:737px){.dept-girls-clothing{display:none}}.dept-cat{overflow:hidden}@media screen and (max-width:737px){.dept-cat{margin-bottom:15px}}.dept-cat .title{color:#333333;font-size:22px;font-weight:normal;padding:0 0 10px;text-align:center;text-transform:uppercase}.dept-cat img{max-width:100%;float:left;display:inline-block;margin-right:10px}.dept-cat p{padding:158px 55px 16px 22px;float:left;font-size:15px;line-height:20px;letter-spacing:-0.6px;background:#3BBFBB;color:#fff;font-family:brown-pro-bold !important}@media screen and (max-width:737px){.dept-cat p{background:url(https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/180222/g-dept-m.png) no-repeat left top;background-size:cover;float:none;font-size:1em;padding:8% 6% 19% 0;line-height:18px;text-align:right}}/*# sourceMappingURL=girls-clothing.css.map */
-
+	.ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .breadcrumb-c{padding-top:13px}@media screen and (max-width:737px){.dept-girls-clothing{display:none}}.dept-cat{overflow:hidden}@media screen and (max-width:737px){.dept-cat{margin-bottom:15px}}.dept-cat .title{color:#333333;font-size:22px;font-weight:normal;padding:0 0 10px;text-align:center;text-transform:uppercase}.dept-cat img{max-width:100%;float:none;display:block;margin:0}/*# sourceMappingURL=girls-clothing.css.map */
 </style>
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
-<!-- <script>
+<script>
 $(document).ready(function() {
 	// $('img[usemap]').rwdImageMaps();
+
+	var src = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/0712/g-cell.png';
+	var alt='She is curious, courageous and completely unique. A free spirit ready to conquer the world around her. She is a little citizen of the world.';
+
+	$('.dept-cat img').attr('alt', alt);
+
+	//mobile add the content cell take over
+	if($(window).width() < 737){
+		var elem = $('<div class="single-item-box content-cell"><img src="'+ src +'" alt="'+ alt +'" style="max-width:100%"></div>');
+		$('#infinite .single-item-box:nth-of-type(3)').after(elem);
+
+		setTimeout(function(){
+			$('#infinite .single-item-box.content-cell').remove();
+		},500);
+	}
 });
-</script> -->
+</script>
