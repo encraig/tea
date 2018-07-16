@@ -29,7 +29,8 @@ h1 {
 	left:0;
 	opacity:.5;
 	z-index:9999;
-	display:none;
+	//display:none;
+	max-width:100%;
 }
 
 .cta {
@@ -63,6 +64,7 @@ h1 {
     position: relative;
     box-sizing: border-box;
     font-size: 13px;
+    line-height:16px;
     letter-spacing: .2px;
     text-transform: uppercase;
     text-decoration: none;
@@ -71,6 +73,7 @@ h1 {
     text-align:center;
     box-sizing:border-box;
     //line-height:2.8em;
+    height:39px;
 }
 
 .padded {
@@ -111,7 +114,7 @@ h1 {
 			overflow:visible;
 		}
 
-		background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/header-d.png') no-repeat;
+		background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/0712/header-d.png') no-repeat;
 		min-height:500px;
 		overflow:hidden;
 
@@ -127,9 +130,9 @@ h1 {
 			float: right;
     		width: 400px;
     		text-align: right;
-    		padding: 0 61px 0 0;
+    		padding: 0 36px 0 0;
     		position: relative;
-    		top: 275px;
+    		top: 208px;
 
     		img {
     			@media screen and (max-width:737px){
@@ -141,13 +144,13 @@ h1 {
     			margin: 8px 0 0 0;
     			font-size: 2.8em;
     			line-height: 42px;
-    			color:#1A667A;
+    			color:#364487;
 
     			span {
     				font-family: brown-pro-bold;
     				font-size: 1.2em;
     				letter-spacing: 1px;
-    				color:#3BBFBB;
+    				color:#61A5B5;
     			}
     		}
 
@@ -165,33 +168,43 @@ h1 {
     			line-height: 22px;
     			letter-spacing: .3px;
     			margin:0 0 23px 0;
+    			font-family:brown-pro-regular;
     		}
 
     		a {
     			@media screen and (max-width:737px){
     				width: 42%;
-    				border-color: #1A667A;
+    				border-color: #364487;
     				border-radius: 0;
-    				color: #1A667A !important;
+    				color: #364487 !important;
     				text-shadow: none;
     				box-shadow: none;
     				font-weight: normal;
     				margin: 18px 1% 0 1%;
     				font-size: .8em;
-    				padding: 7px 0 !important;
+    				padding: 5px 0 0 0 !important;
+    				height: 30px;
 
     			}
 
-    			width: 233px;
+    			width: 232px;
     			background: #fff;
     			border-color: #fff;
-    			color: #1A667A;
+    			color: #C51162;
     			margin: 0 0 20px 0;
-    			font-size: 14px;
+    			padding: 10px 0 0 0;
+    			letter-spacing: 1.1px;
+    		
 
     			&:hover {
-    				background: #1A667A;
-    				border-color:#1A667A;
+    				@media screen and (max-width:737px){
+    					border-color:#364487;
+    					background:#364487;
+    					color:#fff !important;
+    				}
+
+    				background: #C51162;
+    				border-color:#C51162;
     				color:#fff;
     			}
     		}
@@ -215,27 +228,28 @@ h1 {
 		p {
 			@media screen and (max-width:737px){
 				font-size: .9em;
-    			line-height: 19px;
-    			margin: 27px 0 0 0;
+    			line-height: 18px;
+    			margin: 30px 0 0 0;
 			}
 
 			font-size: 15px;
     		line-height: 20px;
     		margin:0 0 17px 0;
     		color:#666;
+    		font-family:brown-pro-regular;
 		}
 
 		h2 {
 			@media screen and (max-width:737px){
 				font-size: 1.1em;
-    			margin: 9px 0 0px 0;
-    			line-height: 29px;
+    			margin: 13px 0 0px 0;
+    			line-height: 28px;
 			}
 
 			font-size: 24px;
     		margin: 10px 0 16px 0;
     		line-height: 40px;
-    		color:#FF8D90;
+    		color:#C51162;
 
 			span {
 				@media screen and (max-width:737px){
@@ -249,23 +263,24 @@ h1 {
 
 		a {
 			@media screen and (max-width:737px){
-				width: 42%;
-    			margin: 13px 2% 0 2%;
-    			padding: 8px 0 !important;
+				width: 41%;
+    			margin: 14px 2% 0 2%;
+    			padding: 6px 0 0 0 !important;
     			box-shadow: none;
     			text-shadow: none;
-    			font-weight:normal;
-    			font-size:.8em;
+    			font-weight: normal;
+    			font-size: .8em;
+    			height: 30px;
 			}
 
 			background:#fff;
-			color: #1A667A;
+			color: #364487;
     		margin: 0 9px 0 9px;
     		width: 232px;
     		border-radius:0;
 
     		&:hover {
-    			background:#1A667A;
+    			background:#364487;
     			color:#fff;
     		}
 		}
@@ -273,7 +288,7 @@ h1 {
 
 	.faq {
 		@media screen and (max-width:737px){
-    		margin: 16px auto 0;
+    		margin: 14px auto 0;
     		min-height: 30px;
     		width: 87%;
 		}
@@ -290,7 +305,7 @@ h1 {
 
 			position:absolute;
 			width:100%;
-			border:1px solid #1A667A;
+			border:1px solid #364487;
 			list-style-type:none;
 			background:#fff;
 			overflow:hidden;
@@ -316,10 +331,10 @@ h1 {
 						}
 
 						padding:12px 0;
-						color:#1A667A;
+						color:#364487;
 						font-family: brown-pro-bold;
     					font-size: 14px;
-    					background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/expand.png') no-repeat 96% 48%;
+    					background:url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/0712/expand.png') no-repeat 96% 48%;
     					text-align:center;
 
     					/*&:hover {
@@ -338,10 +353,10 @@ h1 {
 						}
 
 						padding: 10px 0 10px 19px;
-    					color: #1A667A;
+    					color: #364487;
     					font-family: brown-pro-bold;
     					font-size: 14px;
-    					background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/plus.png) no-repeat 96% 50%;
+    					background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/school-days-sign-up/2018/0712/plus.png) no-repeat 96% 50%;
     					box-sizing: border-box;
 					}
 
@@ -359,6 +374,7 @@ h1 {
     					line-height: 18px;
     					box-sizing:border-box;
     					color:#666;
+    					font-family:brown-pro-regular;
 					}
 				}
 			}
@@ -404,6 +420,10 @@ h1 {
 			text-align:center;
 
 			&:last-of-type {
+				@media screen and (max-width:737px){
+					margin:29px 0 0 0;
+				}
+
 				margin: 0;
 			}
 
@@ -424,6 +444,7 @@ h1 {
     			font-size: 15px;
     			line-height: 20px;
     			color:#666;
+    			font-family:brown-pro-regular;
 
     			&:last-of-type {
     				@media screen and (max-width:737px){
@@ -520,7 +541,7 @@ h1 {
 
     		font-size: 24px;
     		line-height: 30px;
-    		color:#1A667A;
+    		color:#C51162;
     		text-align:center;
     	}
 
@@ -539,7 +560,8 @@ h1 {
     		font-size: 15px;
     		line-height: 20px;
     		color:#666;
-    		text-align:center
+    		text-align:center;
+    		font-family:brown-pro-regular;
     	}
 
     	a {
@@ -550,13 +572,13 @@ h1 {
 
     		display:block;
     		margin:20px auto;
-    		color:#1A667A;
-    		border-color:#1A667A;
+    		color:#C51162;
+    		border-color:#C51162;
 
     		&:hover {
-    			background:#1A667A;
+    			background:#C51162;
     			color:#fff;
     		}
     	}
 	}
-}
+} 
