@@ -1,0 +1,74 @@
+<div class="get-skus">
+
+<div class="what c1" name="tops" alt="Curiosi-tees">
+{load_thumbs mode="sku" list="8F22105-442-2,8F22124-250-2,8F22127-579-2,8F22128-486-2,8F22129-A53-2,8F22115-E38-2,8F22115-E39-2,8F22125-123-2,8F22130-316-2,8F22107-405-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<br><br>
+
+<div class="what c2"  name="bottoms" alt="Joggers and pants">
+{load_thumbs mode="sku" list="8F22202-E41-2, 8F22202-E63-2, 8F22204-405-2, 8F22204-585-2, 8F22203-486-2, 8F23203-A92-2, 8F23203-B37-2, 8F23202-112-2, 8F23202-405-2, 8F22200-111-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<br><br>
+
+<div class="what c3" name="layering" alt="Lovable layers">
+{load_thumbs mode="sku" list="8F22143-E41-2, 8F23100-E76-2, 8F23100-E77-2, 8F22118-E63-2, 8F22119-486-2, 8F22142-585-2, 8F22142-405-2, 8F21100-097-xs, 8F12127-405-2, PG68227-BKL-xs"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<br><br>
+
+<div class="what c4" name="shoes" alt="Finishing touches">
+{load_thumbs mode="sku" list="8F23800-G37-os, 7F22803-403-2_3, 7F22800-405-2_3, 7F22801-014-2_3, 7W22800-154-2_3, 7W22801-B55-2_3, VAN6U49-BLK-11, VAN6U4L-YLW-11, VANQUI4-BLK-4, HER1036-BLK-os"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+
+</div>

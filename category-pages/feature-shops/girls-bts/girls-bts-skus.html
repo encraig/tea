@@ -1,0 +1,99 @@
+<div class="get-skus">
+
+<div class="what c1" name="dresses" alt="Twirl-worthy dresses">
+{load_thumbs mode="sku" list="8F12307-917-2, 8F12306-065-2, 8F12304-F53-2, 8F12321-E39-2, 8F12313-F59-2, 8F13301-F92-2, 8F12311-F96-2, 8F12322-F54-2, 8F13302-E77-2, 8F12310-F97-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<div class="what c2"  name="leggings" alt="Wear-with-everything leggings">
+{load_thumbs mode="sku" list="8F12219-405-2, 8F12219-181-2, 8F12221-F90-2, 8F12220-G35-2, 8F12203-065-2, 8F12204-983-2, 8F12214-F91-2, 8F12224-231-2, 8F12223-554-2, 8F12222-109-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<div class="what c3" name="tops" alt="Unique tops and tees, please">
+{load_thumbs mode="sku" list="8F12110-971-2, 8F12111-B43-2, 8F12131-061-2, 8F12121-452-2, 8F12122-917-2, 8F12130-014-2, 8F12102-F52-2, 8F12102-F51-2, 8F12117-983-2, 8F12115-061-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<div class="what c4" name="bottoms" alt="Sweet skirts and pants">
+{load_thumbs mode="sku" list="8F12210-E63-2, 8F12229-917-2, 8F13201-D16-2, 8F12213-H52-2, 8F12212-917-2, 8F12207-983-2, 8F12228-357-2, 8F12228-676-2, 8F12206-166-2, 8F12206-405-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<div class="what c5" name="layering" alt="Lovable layers">
+{load_thumbs mode="sku" list="8F11101-097-xs, 8F12125-H52-2, 8F12126-917-2, 8F12127-405-2, 8F11100-633-xs, 8F11100-486-xs, 8F13100-D10-xs, 8F22143-E41-2, 8F22118-E63-2, 8F22119-486-2"}
+{thumb_loop count=10}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+<div class="what c6" name="shoes" alt="Finishing touches">
+{load_thumbs mode="sku" list="8F12800-633-2_3, 8F12802-061-2_3, 8F13800-G28-os, 8F23800-G37-os, VANZU49-NVY-11, OLD6029-GLD-25, HER1312-BLK-os, VANIU4W-COP-4, HER1036-ROS-os"}
+{thumb_loop count=9}
+    {thumb}
+        <div>
+            <p class="sku">{$sku}</p>
+            <p class="model">{$model}</p>
+            <p class="price">{$store_price|price|money}</p>
+            <p class="sizes">sizes {$min_size|replace:'_':'-'} to {$max_size|replace:'_':'-'}</p>
+            <p class="url">{$item->item_url}</p>
+            <img src="{image size=thumb type=item id=$sku}">
+        </div>
+    {/thumb}
+{/thumb_loop}
+</div>
+
+</div>
