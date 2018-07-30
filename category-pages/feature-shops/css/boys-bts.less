@@ -1,0 +1,277 @@
+
+
+.ref {
+	@media screen and (max-width:737px){
+		top:-123px;
+	}
+
+	position:absolute;
+	opacity:.5;
+	max-width:100%;
+	top:-100px;
+	left:0; 
+	z-index:9999;
+	//display:none;
+}
+
+.desktop {
+	@media screen and (max-width:737px){
+		display:none !important;
+	}
+}
+ 
+.mobile {
+	display:none !important;
+
+	@media screen and(max-width:737px){
+		display:block !important;
+	}
+}
+
+body.browse .breadcrumb-c {
+	padding-top: 13px;
+}
+
+@media screen and (max-width:737px){
+	.dept-girls-clothing {
+		display:none; 
+	}
+	/*.common-wrap {
+		margin:0;
+	}
+	.single-item-box {
+		width:49%;
+		margin-right:2%;
+	}
+	.single-item-box:nth-child(even){
+		margin-right:0;
+	}
+	section.item {
+		width: 49%;
+		float:left;
+		margin-right:2%;
+		text-align:center;
+
+		&:nth-child(even){
+			margin:0;
+		}
+
+		.item-details {
+			a {
+				color: #333333;
+    			font-size: 12px;
+    			letter-spacing: 0.03rem;
+    			line-height: 15px;
+    			text-decoration:none;
+			}
+		}
+	}*/
+}
+
+.heading-category {
+	line-height: 18px;
+    font-family: brown-pro-bold;
+    display: block;
+    padding: 0;
+    margin: -10px 0 13px 0;
+}
+
+.bts {
+	overflow:hidden;
+
+	.loading {
+		text-align:center;
+		color:#666;
+		text-transform:uppercase;
+		font-size: 18px;
+		font-family:brown-pro-bold;
+		margin:20px 0;
+	}
+	
+	.fixed {
+		position: fixed;
+    	top: 75px;
+    	z-index: 999;
+    	width:840px;
+	}
+
+	h1 {
+		font-family:brown-pro-bold;
+		color:#666;
+		font-size:22px;
+		line-height:18px;
+		text-align:center;
+		margin:0 0 9px 0;
+		letter-spacing: .4px;
+	}
+
+	img {
+		max-width:100%;
+	}
+
+	a {
+		&[name]{
+			position:relative;
+			display:block;
+			top: -110px;
+		}
+	}
+
+	nav {
+		height:45px;
+		background: #E6E7E8;
+		margin: -5px 0 45px 0;
+		padding: 15px 0 0 185px;
+    	box-sizing: border-box;
+
+		ul {
+			overflow:hidden;
+
+			li {
+				float:left;
+				margin: 0 48px 0 0;
+
+				a {
+					text-transform:uppercase;
+					color:#666;
+					text-decoration:none;
+					font-family:brown-pro-bold;
+					font-size:13px;
+					line-height:16px;
+					letter-spacing:.7px;
+
+					&:hover {
+						border-bottom: 2px solid #666;
+					}
+				}
+			}
+		}
+	}
+
+	.c1, .c2, .c3, .c4, .c5, .c6 {
+		@media screen and (max-width:737px){
+			margin:0 0 71px 0;
+		}
+
+		margin: 0 0 10px 0;
+		//overflow:hidden;
+
+		ul {
+			@media screen and (max-width:737px){
+				margin: 5px 0 0 0;
+			}
+
+			overflow:hidden;
+			list-style-type:none;
+			margin: 30px 0 0 0;
+
+			li {
+				float:left;
+				margin:0 6px 0 0;
+				width:276px;
+
+				a {
+					text-decoration:none;
+
+					img {
+						max-width:100%;
+					}
+
+					h2 {
+						@media screen and (max-width:737px){
+							font-family:brown-pro-bold;
+							margin:18px 0 0 0;
+							font-size:.9em;
+						}
+
+						color:#666;
+						font-size:12px;
+						line-height:13px;
+						text-align:center;
+						font-family:brown-pro-regular;
+						letter-spacing:.7px;
+						margin:5px 0 0 0;
+
+						span {
+							@media screen and (max-width:737px){
+								font-size:.9em;
+								line-height:15px;
+							}
+
+							color:#999;
+							font-family:brown-pro-regular;
+							font-size:9px;
+							line-height:13px;
+							text-transform:uppercase;
+							font-weight:normal;
+						}
+					}
+
+					h3 {
+						@media screen and (max-with:737px){
+							font-size:.7em;
+							line-height:15px;
+						}
+
+						color:#666;
+						font-family:brown-pro-bold;
+						font-size:13px;
+						line-height:20px;
+						text-align:center;
+						margin:2px 0 0 0;
+					}
+
+					h4 {
+						@media screen and (max-width:737px){
+							font-size:.7em;
+							margin:2px 0 0 0;
+						}
+
+						color:#999;
+						font-family:brown-pro-regular;
+						font-size:9px;
+						line-height:12px;
+						text-align:center;
+						text-transform:uppercase;
+						font-weight:normal;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.slick-list {
+	@media screen and (max-width:737px){
+		padding:0 0 0 0 !important;
+	}
+
+	padding:0 0 60px 0 !important;
+}
+
+.slick-prev, .slick-next {
+	@media screen and (max-width:737px){
+		display:none !important;
+	}
+
+	&:before {
+		color:transparent !important;
+	}
+
+	background:red !important;
+	z-index:9999;
+	width:30px !important;
+	height:30px !important;
+	top:35% !important;
+}
+.slick-prev {
+	left:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/slider-left-arrow.png) no-repeat 0 0 !important;
+}
+.slick-next {
+	right:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/slider-right-arrow.png) no-repeat 0 0 !important;
+}
+
+
