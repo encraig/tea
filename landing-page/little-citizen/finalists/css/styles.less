@@ -305,6 +305,18 @@
                     white-space:pre-line;
                 }
 
+                .cta {
+                    height: 30px;
+                    margin: 39px auto 0 auto;
+                    width: 100%;
+                    padding: 8px 0 0 0;
+                    letter-spacing: .7px;
+                    color: #0060A6;
+                    font-family: brown-pro-bold;
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+
                 div {
                     padding: 0;
                     margin: 0;
@@ -417,21 +429,33 @@
 
 .rules {
     @media screen and (max-width:737px){
-        margin-top:50px;
+        margin-top:30px;
     }
 
     margin-top:31px;
     text-align:center;
 
     .cta {
-        width: 153px;
-        letter-spacing: 2px;
-        font-size: 13px;
-        color:#2ec6db;
-        border-color:#2ec6db;
+        @media screen and (max-width:737px){
+            color:#0060A6;
+            border: 1px solid #0060A6;
+            width:40%;
+            font-size: 10px;
+            padding:8px 0 0 0;
+            height:30px;
+
+            &:hover, &:active {
+                background:#0060A6 !important;
+                color:#fff;
+            }
+        }
+
+        color:#A1AE57;
+        border:1px solid #A1AE57;
+        width:232px;
 
         &:hover {
-            background:#2ec6db;
+            background:#A1AE57;
             color:#fff;
         }
     }
@@ -491,6 +515,18 @@
             color:#666;
             padding:16px 16px 0 0;
             white-space:pre-line;
+        }
+
+        .cta {
+            color:#A1AE57;
+            border:1px solid #A1AE57;
+            width:232px;
+            margin: 15px 0 0 0;
+
+            &:hover {
+                background:#A1AE57;
+                color:#fff;
+            }
         }
 
 
