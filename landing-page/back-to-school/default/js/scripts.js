@@ -5,21 +5,59 @@ jQuery(document).ready(function() {
 
     jQuery('img[usemap]').rwdImageMaps();
 
-    $('.wrap-content header').bxSlider({
-        auto:true,
-        autoHover:true,
-        infiniteLoop:true,
-        //pager:true,
-        controls:false
-    });
+    //change the form submit to brown
+   $('.wrap-content').find('form').find('input[type="email"]').keyup(function(){ 
+      if($(this).val() !== '') {
+            //desktop
+            if($(window).width() > 737){
+                $('.wrap-content').find('form').find('input[type="submit"]').css('background','url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/submit-icon-white.png) no-repeat 15px 13px #572700');
+            }
+            //mobile
+            else {
+                $('.wrap-content').find('form').find('input[type="submit"]').css('background','url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/submit-icon-white.png) no-repeat 50% 14px #572700');
+            }
+         
+      } else {
+         $('.wrap-content').find('form').find('input[type="submit"]').removeAttr('style');
+      }
+   });
+
+    // $('.wrap-content header').bxSlider({
+    //     auto:true,
+    //     autoHover:true,
+    //     infiniteLoop:true,
+    //     //pager:true,
+    //     controls:false
+    // });
 
     //desktop
     if($(window).width() > 737){
-       theItems = $('.items-list-wrapper .item').length;  
+       theItems = $('.items-list-wrapper .item').length; 
+
+       $('.wrap-content header.desktop').bxSlider({
+            auto:true,
+            autoHover:true,
+            infiniteLoop:true,
+            //pager:true,
+            controls:false
+        });
+
+        //change sidebar
+        $('#sidebar-Girl h2').html('<a href="/girls-clothing/favorites/back-to-school">Girl</a>');
+        $('#sidebar-Tween h2').html('<a href="/tween-girls-clothing/favorites/back-to-school">Tween</a>'); 
+        $('#sidebar-Boy h2').html('<a href="/boys-clothing/favorites/back-to-school">Boy</a>');  
     }
     //mobile
     else if($(window).width() < 737){
-       theItems = $('.thumb-wrapper .single-item-box').length;  
+       theItems = $('.thumb-wrapper .single-item-box').length; 
+
+       $('.wrap-content header.mobile').bxSlider({
+            auto:true,
+            autoHover:true,
+            infiniteLoop:true,
+            //pager:true,
+            controls:false
+        });  
     }
     
 
@@ -31,13 +69,14 @@ jQuery(document).ready(function() {
     	var baseUrl = 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/headers/180118/tween/';
 
         //url to images
-        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/0726/';
+        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/2018/';
 
         //the content cell take over
         var images = [
-            {num:4, img:'c4.png', url:'', target:''},
-            {num:15, img:'c15.png', url:'', target:''},
-            {num:22, img:'c22.png', url:'', target:''},
+            {num:4, img:'c4.png', url:'', alt:'100% Cotton, Comfortable, Breathable, Washable, Durable, 100% Kid Friendly', target:''},
+            {num:15, img:'c15.png', url:'', alt:'Tees that tell Tales', target:''},
+            {num:22, img:'c22.png', url:'', alt:'Worn Happily Handed Down Beautifully', target:''},
+            {num:32, img:'c32.png', url:'', alt:'Prints that Play Well Together', target:''},
             
         ];
 
@@ -63,7 +102,7 @@ jQuery(document).ready(function() {
         // }
 
         //function to output to page
-    	var outPut = function(num, url, imgSrc, baseUrl, target, prev){
+    	var outPut = function(num, url, imgSrc, baseUrl, target, prev,alt){
 
     		var elem;
             var height;
@@ -76,11 +115,11 @@ jQuery(document).ready(function() {
               
     			//if element has url
     			if(url !== ''){
-    				elem = '<section class="item cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+ target +'"><img src="'+ baseUrl + imgSrc +'" alt="content cell '+ num +'" style="max-width:100%;"></a></section>';
+    				elem = '<section class="item cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+ target +'"><img src="'+ baseUrl + imgSrc +'" alt="'+ alt +'" data-num="content cell '+ num +'" style="max-width:100%;"></a></section>';
     			} 
                 //element does not have url
                 else {
-    				elem = '<section class="item cell" style="height:'+height+'px !important; overflow:hidden"><img src="'+ baseUrl + imgSrc +'" alt="content cell '+ num +'" style="max-width:100%;"></section>';
+    				elem = '<section class="item cell" style="height:'+height+'px !important; overflow:hidden"><img src="'+ baseUrl + imgSrc +'" alt="'+ alt +'" data-num="content cell '+ num +'" style="max-width:100%;"></section>';
     			}
 
                 // console.log('desktop out putting');
@@ -111,12 +150,12 @@ jQuery(document).ready(function() {
     			// element has url 
     			if(url !== ''){
     		
-                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+target+'"><img src="'+ baseUrl + imgSrc +'" alt="content cell" style="max-width:100%"></a></div>';
+                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+target+'"><img src="'+ baseUrl + imgSrc +'" alt="'+ alt +'" data-num="content cell" style="max-width:100%"></a></div>';
     			} 
                 // element doen't have url
                 else {
     			
-                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><img src="'+ baseUrl + imgSrc + '" alt="content cell" style="max-width:100%;"></div>';
+                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><img src="'+ baseUrl + imgSrc + '" alt="'+ alt +'" data-num="content cell" style="max-width:100%;"></div>';
     			}
 
     			// output item to mobile page
@@ -152,6 +191,10 @@ jQuery(document).ready(function() {
 
             //the url
             var url;
+
+            //the alt
+            var alt = val.alt;
+
             // console.log('the url: ', val.url);
             if(val.url == 'field-notes-d.pdf'){
                 // console.log('match');
@@ -174,7 +217,7 @@ jQuery(document).ready(function() {
             // console.log(num, url, imgSrc, prev);
 
             //output to screen
-    		outPut(num, url, imgSrc, baseUrl2, target, prev);
+    		outPut(num, url, imgSrc, baseUrl2, target, prev, alt);
     	});
     };
 
@@ -182,12 +225,12 @@ jQuery(document).ready(function() {
     contentCells();
 
     //call contentCell again on window scroll if number of .items changes
-    $(window).scroll(function(){
+    $(window).scroll(function(){ 
         var newItems;
 
         //desktop
         if($(window).width() > 737){
-            newItems = $('.items-list-wrapper .item').length;
+            newItems = $('.items-list-wrapper .item').length; 
 
             //for dev
             // if(newItems == 39){
@@ -219,7 +262,7 @@ jQuery(document).ready(function() {
 
         //for prod
         if(theItems !== newItems){
-            console.log(theItems, newItems);
+            // console.log(theItems, newItems);
 
             //call contentCells()
             contentCells();

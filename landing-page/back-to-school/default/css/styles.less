@@ -1,7 +1,12 @@
 .ref {
+	@media screen and (max-width:737px){
+		top: -123px;
+	}
+
 	position:absolute;
 	opacity:.5;
 	top: -69px;
+	z-index:9999;
 	//display:none;
 }
  
@@ -33,6 +38,12 @@
 	}
 }
 
+.bx-wrapper {
+	@media screen and (max-width:737px){
+		margin:0 !important;
+	}	
+}
+
 .bx-wrapper .bx-pager {
 	display:block !important;
 }
@@ -57,6 +68,11 @@
 	}
 
 	footer {
+		@media screen and (max-width:737px){
+			margin:41px 0 20px 0;
+			height:182px;
+		}
+
 		overflow:hidden;
 		text-align:center;
 		color:#fff;
@@ -68,6 +84,11 @@
 
 
 		h2 {
+			@media screen and (max-width:737px){
+				font-size:23px;
+				line-height:28px;
+			}
+
 			color:#fff;
 			font-family:brown-pro-bold;
 			font-size:21px;
@@ -75,6 +96,11 @@
 		}
 
 		p {
+			@media screen and (max-width:737px){
+				font-size:12px;
+				line-height:18px;
+			}
+
 			font-family:brown-pro-regular;
 			font-size:15px;
 			line-height:21px;
@@ -83,7 +109,7 @@
 
 		form {
 			@media screen and (max-width:737px){
-			
+				margin:17px 0 0 0;
 			}
 
 			margin:14px 0 0 0;
@@ -93,11 +119,12 @@
 						
 				&[type="email"]{
 					@media screen and (max-width:737px){
-						width:81%;
-						height:auto;
-						padding:13px 6%;
-						font-family:brown-pro-regular;
-						font-size: 1em;
+						width: 76%;
+						height:42px;    
+						padding: 0 0 0 22px;
+    					position: relative;
+    					top: -6px;
+    					left:1%;
 					}
 
 					width: 354px;
@@ -114,11 +141,8 @@
 
 				&[type="submit"]{
 					@media screen and (max-width:737px){
-						width:13%;
-						padding:13px;
-						position:relative;
-						left:-1%;
-						top:3px;
+						width:12%;
+						height:42px;
 						background-position:50% 14px;
 					}
 
