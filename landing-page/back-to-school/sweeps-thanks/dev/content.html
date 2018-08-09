@@ -1,0 +1,88 @@
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">  -->
+
+<div class="wrap-content">
+
+	<div data="thanks" id="thanks"> 
+
+		<!--ref dev-->
+		<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/bg-m.jpg" class="ref" />  -->
+
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/header-d.png" alt="Thanks for entering" class="desktop" />
+			<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/header-m.png" alt="Thanks for entering" class="mobile" />
+
+			<p>The winner will be notified via email<br> on or before September 4, 2018.</p>
+
+			<p>In the meantime, shop our latest<br> styles for back to school.</p>
+
+			<a href="/" class="cta">shop tea</a>
+
+			<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/image-m.png" alt="boy and girl" class="mobile"/>
+
+			<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2018/dots-m.png" alt="dotted line" class="mobile" />
+
+            <p class="mobile">Please select a brand from the menu<br> below for more information.</p>
+
+            <select class="brands mobile">
+            	<option>Please select a brand</option>
+            	<option val="https://www.littlepassports.com/">Little Passports</option>
+            	<option val="https://www.minted.com/">Minted</option>
+            	<option val="https://www.onepotato.com/">One Potato</option>
+            	<option val="https://www.striderbikes.com/">Strider</option>
+            	<option val="https://www.romper.com/">Romper</option>
+            </select>
+
+			<!-- mobile image map -->
+			<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/thanks-prizes-m.png" usemap="#image-maps-1" alt="" class="mobile"/>
+			<map name="image-maps-1">
+				<area  alt="PUBLIC" title="PUBLIC" href="http://www.publicbikes.com/" shape="rect" coords="62,72,277,150" style="outline:none;" target="_blank"     />
+				<area  alt="May Designs" title="May Designs" href="https://www.maydesigns.com/" shape="rect" coords="305,44,460,172" style="outline:none;" target="_blank"     />
+				<area  alt="CLIF KID" title="CLIF KID" href="http://www.clifbar.com/clif-kid" shape="rect" coords="506,47,692,176" style="outline:none;" target="_blank"     />
+				<area  alt="yumbox" title="yumbox" href="https://www.yumboxlunch.com/" shape="rect" coords="132,181,408,272" style="outline:none;" target="_blank"     />
+			</map> -->
+
+
+			<!-- desktop image map -->
+			<img  src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/logos-d.png" usemap="#image-maps-2" alt="logos" class="desktop"/>
+			<map name="image-maps-2">
+				<area  alt="" title="" href="https://www.littlepassports.com/" shape="rect" coords="0,34,247,104" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.minted.com/" shape="rect" coords="257,41,452,99" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.onepotato.com/" shape="rect" coords="147,113,452,171" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.striderbikes.com/" shape="rect" coords="0,183,254,241" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.romper.com/" shape="rect" coords="275,181,452,242" style="outline:none;" target="_blank"     />
+			</map>
+		</div>
+
+		<div>
+			<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps-thanks/2018/image-d.png" alt="boy and girls" />
+		</div>
+	</div>
+	
+</div>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+</style>
+
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	jQuery('img[usemap]').rwdImageMaps();
+
+	$('.brands').change(function(){
+		var i = $(this).find('option:selected').index();
+		// console.log(i);
+		//not the first one
+		if(i !== 0){
+			var url = $(this).find('option:selected').attr('val');
+			// console.log(url);
+			// window.open(url,'_blank');
+			window.location = url;
+		}
+	});
+});
+</script>
