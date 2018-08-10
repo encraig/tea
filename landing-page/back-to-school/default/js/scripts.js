@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
             autoHover:true,
             infiniteLoop:true,
             //pager:true,
-            controls:false
+            //controls:false
         });
 
         //change sidebar
