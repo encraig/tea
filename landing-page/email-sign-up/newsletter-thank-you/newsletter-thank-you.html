@@ -1,0 +1,586 @@
+{insert name="header_tag_set" type="static" tag_id="HTML_TITLE" tag_value="Thank You | Tea Collection"}
+{insert name="header_tag_set" type="static" tag_id="META_DESCRIPTION" tag_value="Thank you for signing up for the Tea Collection Newsletter."}
+
+{*{introduce_script src="`$rel_assets_url`js/jquery.ui/jquery-ui.min.js"}
+{introduce_css href="`$rel_assets_url`js/jquery.ui/themes/base/jquery.ui.all.css"}*}
+
+{literal}
+
+<script type="text/javascript">
+<!--
+// this tells jquery to run the function below once the DOM is read
+jQuery(document).ready(function() {
+
+var d = new Date();
+var year = d.getFullYear();
+
+function daysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+
+// choose text for the show/hide link
+var showText='<img src="{/literal}{$theme_assets_url}{literal}images/static/birthday-add-teal.png"> <span>Add Another Child</span>';
+var hideText='<img src="{/literal}{$theme_assets_url}{literal}images/static/birthday-remove-teal.png"> <span>Remove Child</span>';
+
+// append show/hide links to the element directly preceding the element with a class of "toggle"
+jQuery(".toggle").prev().html('<a href="#" class="toggleLink">'+showText+'</a>');
+
+// hide all of the elements with a class of 'toggle'
+jQuery('.toggle').hide();
+
+// capture clicks on the toggle links
+jQuery('a.toggleLink').click(function() {
+
+    // change the link depending on whether the element is shown or hidden
+    if (jQuery(this).html()==showText) {
+        jQuery(this).html(hideText);
+    }
+    else {
+        jQuery(this).html(showText);
+    }
+
+    // toggle the display
+    child_container = jQuery(this).parent().next('.toggle').toggle();
+    if (child_container.is(':visible')) {
+        copy = jQuery('body').find('div.child-birthday-container-hidden').clone();
+        copy.show();
+        dest = child_container.find('div.child-birthday-container').eq(0);
+        dest.html(copy.html());
+        input_name = 'CHILD_'+child_container.data('child-id')+'_BIRTHDAY';
+        dest.find('input.child-birthday').attr('name',input_name);
+    }
+
+    // clear selected input/select values in hidden containers
+    //
+    jQuery('div.toggle:hidden').find('input,select').each(function(i){
+        jQuery(this).val("");
+    }); 
+    
+    // return false so any link destination is not followed
+    return false;
+
+});
+
+
+jQuery('.month-select').live('change',function(){
+    var parent = jQuery(this).parent(),
+        month = jQuery(this).val(),
+        days = daysInMonth(month,year);
+
+    days_select = parent.find('select.day-select');
+    days_select.html("");
+    for (index = 1, len = days; index <= len; ++index) {
+        option = '<option value="' + index + '">' + index+ '</option>';
+        days_select.append(option);
+    }
+    // get selected day
+    //
+    day = days_select.val();
+    
+    var input = parent.find('input.child-birthday');
+    set_child_birthday_input(input, year, day, month);
+});
+
+
+
+//jQuery('.month-select').trigger('change');
+
+
+
+jQuery('.day-select').live('change',function(){
+    var parent = jQuery(this).parent(),
+        month = parent.find('select.month-select').val(),
+        day = jQuery(this).val(),
+        input = parent.find('input.child-birthday');
+    
+    set_child_birthday_input(input, year, day, month);
+});
+
+
+
+function set_child_birthday_input(input, year, day, month) {
+    if (day < 10) {
+        day = '0' + day;
+    }
+    if (month < 10) {
+        month = '0' + month;
+    }
+    input.val(month +'/'+ day +'/'+year);
+}
+});
+
+//-->
+</script>
+{/literal}
+
+{literal}
+<style>
+
+.email-signup-page .email-signup-container {
+	background: #ffffff;
+	text-align: center;
+}
+
+.email-signup-page .email-signup-container h1 {
+	color: #f66c50 !important;
+	font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif !important;
+	font-size: 40px !important;
+	float: none !important;
+	padding-top: 56px;
+	padding-bottom: 8px;
+}
+
+.email-signup-page .email-signup-container h2 {
+	color: #027b84;
+	font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20.5px;
+	line-height: 33px;
+	letter-spacing: 4.5px;
+	margin: 0px;
+}
+
+
+.email-signup-page .email-signup-container h3 {
+    font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.email-signup-page .email-signup-container h3 a {
+    color: #027b84;
+	text-decoration: none;
+}
+
+.email-signup-page .email-signup-container h3 a span  {
+	vertical-align: top;
+	color: #027b84;
+	font-size: 15px;
+	letter-spacing: 2px;
+}
+
+.email-signup-page .email-signup-container p {
+	color: #58595b;
+	font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+	margin: 0px 0 0;
+}
+
+.email-signup-page .email-signup-container ol {
+	list-style-type: none;
+	text-align: left;
+	margin: 0;
+}
+
+.email-signup-page .email-signup-container ol li {
+	text-align: right;
+}
+
+.email-signup-page .email-signup-container label {
+	color: #027b84;
+    font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.email-signup-page .email-signup-container label[for=CHILD_1_GENDER],
+.email-signup-page .email-signup-container label[for=CHILD_2_GENDER],
+.email-signup-page .email-signup-container label[for=CHILD_3_GENDER],
+.email-signup-page .email-signup-container label[for=CHILD_4_GENDER],
+.email-signup-page .email-signup-container label[for=CHILD_5_GENDER] {
+	float: left;
+}
+
+.email-signup-page .email-signup-container select[name=CHILD_1_GENDER],
+.email-signup-page .email-signup-container select[name=CHILD_2_GENDER],
+.email-signup-page .email-signup-container select[name=CHILD_3_GENDER],
+.email-signup-page .email-signup-container select[name=CHILD_4_GENDER],
+.email-signup-page .email-signup-container select[name=CHILD_5_GENDER] {
+	width: 295px;
+}
+
+.email-signup-page .email-signup-container table {
+	width: 100%;
+}
+
+.email-signup-page .email-signup-container table div.toggle {
+	text-align: left;
+}
+
+.email-signup-page .email-signup-container form .nl-signup {
+	border: 2px solid #f66c50;
+	background: #ffffff;
+	color: #f66c50;
+	font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+    padding: 12px 10px 8px;
+}
+
+.email-signup-page .email-signup-container form select {
+  border: 0.1em solid #cfc3bc;
+  width:160px;
+  font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size:15px;
+  background: #fff url({/literal}{$theme_assets_url}{literal}images/select_arrows.png) right center no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  margin: 2px 0 0;
+  padding: 9px 45px 7px;
+}
+
+.email-signup-page .email-signup-container form select.month-select {
+	margin-right: 10px;
+	font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+  	text-transform: uppercase;
+  	font-size: 15px;
+}
+
+fieldset input {
+	width: 18em;
+	font-size: 15px;
+}
+
+input {
+	font-weight: normal;
+    font-family: 'Tisa Sans Medium', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333333;
+    padding: 9px 9px 7px;
+}
+
+</style>
+{/literal}
+<article class="about-us clearfix">
+
+    <section class="static-fullwidth">
+
+        <div class="email-signup-page">
+			<div class="email-signup-container">
+				<table width="1000" height="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td rowspan="3" style="background-color: #d84f93" width="12"></td>
+						<td style="background: #e4de64" width="485" height="12"></td>
+						<td style="background: #3b5da7" width="485" height="12"></td>
+						<td rowspan="3" style="background: #f07821" width="12"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<h1>You're On The List</h1>
+							<h2>Thanks for signing up!</h2>
+			
+							<img src="{$theme_assets_url}images/static/17SS-email-signup-dotted-line.png" style="margin: 16px auto 15px;">
+
+				<!--email form begin-->
+				<form action="https://newsletter.teacollection.com/pub/rf">
+				<input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGpHCcXU7zglWPEkbkB9CJPWevPnVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGNrfayuzb0pbEfszffFXGRPb2JfR"/>
+				<input type='hidden' name='email_address_' value='{$smarty.get.email}'>
+			
+				<div style="width: 48%; float: left;">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><p style="text-align: right;">Get exclusive offers, special savings and<br >surprises&#8230; just for you and your little citizen!<br />Share some (optional) details about yourself.</p></td>
+						</tr>
+						<tr>
+							<td align="right">
+								<fieldset style="margin: 3px 0;">
+									<ol>
+										<li>
+											<label for="FIRST_NAME">First Name</label>
+											<input type="text" name="FIRST_NAME" size="30" value="">
+										</li>
+										<li>
+											<label for="LAST_NAME">Last Name</label>
+											<input type="text" name="LAST_NAME" size="30" value="">
+										</li>
+										<li>
+											<label for="POSTAL_CODE_">Zip Code</label>
+											<input type="text" name="POSTAL_CODE_" size="10" value="">
+										</li>
+									</ol>
+								</fieldset>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="width: 45%; float: right;">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><p style="text-align: left; margin-top: 21px;">Enter your child's birthday so we can send<br />something special on their big day!</p></td>
+						</tr>
+						<tr>
+							<td>
+								<div style="margin: 0 105px 0 0;">
+									<fieldset style="margin: 3px 0;">
+									<ol>
+										{*<li>
+											<label for="CHILD_1_GENDER">Gender</label>
+											<select name="CHILD_1_GENDER">
+												<option value=""></option>
+												<option value="Girl">Girl</option>
+												<option value="Boy">Boy</option>
+											</select>
+										</li>*}
+										<li>
+											<div class="child-birthday-container">
+												<select class="month-select">
+													<option value="">Month</option>
+													<option value="1">January</option>
+													<option value="2">February</option>
+													<option value="3">March</option>
+													<option value="4">April</option>
+													<option value="6">June</option>
+													<option value="7">July</option>
+													<option value="8">August</option>
+													<option value="9">September</option>
+													<option value="10">October</option>
+													<option value="11">November</option>
+													<option value="12">December</option>
+												</select>
+						
+												<select class="day-select">
+													<option value="">Day</option>
+												</select>
+												<input class="child-birthday" type="hidden" name="CHILD_1_BIRTHDAY">
+											</div>
+										</li>
+									</ol>
+									</fieldset>
+								</div>
+									<h3>Add Another Child</h3>
+									
+									<div class="toggle" style="display: none;" data-child-id="2">
+										<fieldset>
+											<ol>
+												{*<li>
+													<label for="CHILD_2_GENDER">Gender</label>
+													<select name="CHILD_2_GENDER">
+														<option value=""></option>
+														<option value="Girl">Girl</option>
+														<option value="Boy">Boy</option>
+													</select>
+												</li>*}
+												<li>
+													<div class="child-birthday-container"></div>
+												</li>
+											</ol>
+										</fieldset>
+										<h3>Add Another Child</h3>
+										
+										<div class="toggle" data-child-id="3">
+											<fieldset>
+												<ol>
+													{*<li>
+														<label for="CHILD_3_GENDER">Gender</label>
+														<select name="CHILD_3_GENDER">
+															<option value=""></option>
+															<option value="Girl">Girl</option>
+															<option value="Boy">Boy</option>
+														</select>
+													</li>*}
+													<li>
+														<div class="child-birthday-container"></div>
+													</li>
+												</ol>
+											</fieldset>
+											<h3>Add Another Child</h3>
+											
+											<div class="toggle" data-child-id="4">
+												<fieldset>
+													<ol>
+														{*<li>
+															<label for="CHILD_4_GENDER">Gender</label>
+															<select name="CHILD_4_GENDER">
+																<option value=""></option>
+																<option value="Girl">Girl</option>
+																<option value="Boy">Boy</option>
+															</select>
+														</li>*}
+														<li>
+															<div class="child-birthday-container"></div>
+														</li>
+													</ol>
+												</fieldset>
+												<h3>Add Another Child</h3>
+												
+												<div class="toggle" data-child-id="5">
+													<fieldset>
+														<ol>
+															{*<li>
+																<label for="CHILD_5_GENDER">Gender</label>
+																<select name="CHILD_5_GENDER">
+																	<option value=""></option>
+																	<option value="Girl">Girl</option>
+																	<option value="Boy">Boy</option>
+																</select>
+															</li>*}
+															<li>
+
+															<div class="child-birthday-container"></div>                        
+															</li>
+														</ol>
+													</fieldset>
+												</div>
+											</div> 
+										</div>
+									</div>
+
+							</td>
+						</tr>    
+						<tr>
+							<td>
+								
+							</td>
+						</tr>
+						</table>
+				</div>
+				<div style="clear: both;"></div>
+				<p style="padding-bottom: 48px; margin-top: 10px;"><input class="nl-signup" type="submit" value="submit"></p>
+				</form>
+				<!--email form end-->
+				</tr>
+				<tr>
+					<td style="background: #1da8a5" width="485" height="12"></td>
+					<td style="background: #b8c432" width="485" height="12"></td>
+				</tr>
+			</table>
+			</div>
+        </div>
+    </section>  
+</article>
+
+<div class="child-birthday-container-hidden" style="display:none">
+    <select class="month-select">
+		<option value="">Month</option>
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+    
+    <select class="day-select">
+		<option value="">Day</option>
+	</select>
+    <input class="child-birthday" type="hidden">
+</div>
+
+{literal}
+<script language="Javascript">function emailCheck (emailStr) {
+var emailPat=/^(.+)@(.+)$/;
+var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]";
+var validChars="\[^\\s" + specialChars + "\]";
+var quotedUser="(\"[^\"]*\")";
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+var atom=validChars + '+';
+var word="(" + atom + "|" + quotedUser + ")";
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+var matchArray=emailStr.match(emailPat);
+if (matchArray==null) {
+    alert("Email address seems incorrect (check @ and .'s)");
+    return false;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+if (user.match(userPat)==null) {
+    alert("The username doesn't seem to be valid.");
+    return false;
+}
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+      for (var i=1;i<=4;i++) {
+        if (IPArray[i]>255) {
+            alert("Destination IP address is invalid!");
+        return false;
+        }
+    }
+    return true;
+}
+var domainArray=domain.match(domainPat);
+if (domainArray==null) {
+    alert("The domain name doesn't seem to be valid.");
+    return false;
+}
+var atomPat=new RegExp(atom,"g");
+var domArr=domain.match(atomPat);
+var len=domArr.length;
+if ((domArr[domArr.length-1] != "info") &&
+    (domArr[domArr.length-1] != "name") &&
+    (domArr[domArr.length-1] != "arpa") &&
+    (domArr[domArr.length-1] != "coop") &&
+    (domArr[domArr.length-1] != "aero")) {
+        if (domArr[domArr.length-1].length<2 ||
+            domArr[domArr.length-1].length>3) {
+                alert("The address must end in a three-letter domain, or two letter country.");
+                return false;
+        }
+}
+if (len<2) {
+   var errStr="This address is missing a hostname!";
+   alert(errStr);
+   return false;
+}
+return true;
+}
+function UPTvalidateform(thisform)
+{
+    if ((thisform.val_56833.value!="")&&(thisform.val_56833.value.split('/').length!=3)){  
+alert("Please enter a valid date for Child1Birthday\nformat(mm/dd/yy)");    
+return(true);}if ((thisform.val_56834.value!="")&&(thisform.val_56834.value.split('/').length!=3)){  
+alert("Please enter a valid date for Child2Birthday\nformat(mm/dd/yy)");    
+return(true);}if ((thisform.val_56835.value!="")&&(thisform.val_56835.value.split('/').length!=3)){  
+alert("Please enter a valid date for Child3Birthday\nformat(mm/dd/yy)");    
+return(true);}if ((thisform.val_56836.value!="")&&(thisform.val_56836.value.split('/').length!=3)){  
+alert("Please enter a valid date for Child4Birthday\nformat(mm/dd/yy)");    
+return(true);}if ((thisform.val_56837.value!="")&&(thisform.val_56837.value.split('/').length!=3)){  
+alert("Please enter a valid date for Child5Birthday\nformat(mm/dd/yy)");    
+return(true);}
+    if (emailCheck(thisform.email.value)) 
+    {   
+
+        if (document.getElementById('unsubscribe') 
+            && !document.getElementById('unsubscribe').checked) {
+            alert('Thank you for signing up!');
+        } else {
+            alert('Thank you for signing up!');
+        }
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+</script>
+
+{/literal}
+<script>
+
+if (searching['email'])
+document.forms[1].email.value=searching['email'];
+</script>
+
+{breadcrumb}
+    Thank You
+{/breadcrumb}
