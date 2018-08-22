@@ -1,0 +1,203 @@
+{literal}
+<style>
+#tea-promo-subscribe {
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #fff;
+}
+div.store-box div.store-box-content {
+height: 500px;
+    width: 500px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+}
+.ref {
+    position: absolute;
+    top: 0;
+    left: 0;
+display:none;
+}
+.signup {
+position: relative;
+    background: #fff;
+    padding-left: 30px;
+}
+.signup #close-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.signup #close-icon:hover {
+cursor:pointer;
+}
+.signup h2 {
+    font-size: 54px;
+    /*line-height: 37px;*/
+    line-height:35px;
+    padding-left: 29px;
+    letter-spacing: 1px;
+    padding-top: 106px;
+    margin-bottom: 10px;
+    color: #025162;
+}
+.signup h2 span {
+    font-size: 34px;
+    letter-spacing: 2.4px;
+}
+.signup p {
+padding-left: 29px;
+    letter-spacing: .7px;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+.signup #myform1 input {
+display: block;
+    width: 94%;
+    height: 50px;
+    padding-left: 27px;
+    letter-spacing: 1px;
+    margin-bottom: 29px;
+    box-sizing: border-box;
+}
+.signup #myform1 #errors {
+    color: #990000;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+	letter-spacing: 1px;
+	display:block;
+}
+.signup #myform1 input[type="submit"]{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: brown-pro-bold!important;
+    color: #025162;
+    border-color: #025162;
+background:#fff;
+padding-left:0;
+}
+.signup #myform1 input[type="submit"]:hover, .signup #myform1 input[type="submit"]:active {
+background: #025162;
+color:#fff;
+}
+
+@media screen and (max-width:737px){
+.signup {
+    padding-left: 6%;
+}
+.signup h2 {
+    font-size: 3em;
+    /*line-height: 28px;*/
+    line-height:44px;
+    padding-left: 6%;
+    letter-spacing: 3px;
+    padding-top: 79px;
+    margin-bottom: 7px;
+    color: #025162;
+}
+.signup  h2 span {
+    font-size: 64%;
+    letter-spacing: 2px;
+}
+.signup p {
+padding-left: 6%;
+    letter-spacing: .6px;
+    font-size: .8em;
+    line-height: 16px;
+    margin-bottom: 18px;
+}
+.signup #myform1 input {
+    height: 37px;
+    padding-left: 5%;
+    letter-spacing: 1px;
+    margin-bottom: 23px;
+}
+.signup #myform1 input[type="submit"] {
+font-size: 1.2em;
+}
+
+}
+</style>
+{/literal}
+
+<div class="signup">
+<img src="mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-ref-d.jpg"  class="ref" />
+
+<div id="close-icon">
+		<img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png"/>
+	</div>
+
+<h2>20% off<br> <span>+ free shipping</span> <br> <span>on your first order</span></h2>
+<!-- <h2>Join the<br> Adventure</h2> -->
+<p>Sign up to receive an exclusive welcome offer and<br> stay up to date on our latest globally-inspired styles!</p>
+
+<form id="myform1" name="myform" action="https://newsletter.teacollection.com/pub/rf" method="post">
+        <input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGithdHzbkYt6wrJJmipyTb5zaIlXuXjazbOVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGr8H8PzeToBSW0alzcier1k30zezgwWl52DO"/>
+        <input type="hidden" name="ACQUISITION_SOURCE" value="upshotLBdesktop" />
+        <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I" />
+        <input type="hidden" name="activity" value="submit" />
+        <input type="hidden" name="COLD_STORAGE" value="N" />
+		<span id="errors"></span>
+        <input id="emailField" name="EMAIL_ADDRESS_" onFocus="prefillClear(this);" onBlur="prefillClear(this);" type="text" placeholder="Email Address" />
+        <input type="submit" value="sign me up" id="submitEmail"/>
+        
+</form>
+
+</div>
+
+{literal}
+<script>
+jQuery(document).ready(function(){
+
+//close the signup form
+	jQuery('#close-icon').click(function(){
+		if($(window).width()>768){
+			//console.log('close desktop');
+			divinity.box.close();
+		} else if($(window).width()<768){
+			//console.log('close mobile');
+			divinity.box.close();
+			$('#tea-promo-subscribe').remove();
+		}
+	});
+
+//on press enter
+		jQuery('#myform1').on('keyup keypress', function(e) {
+		  var keyCode = e.keyCode || e.which;
+		  if (keyCode === 13) { 
+			e.preventDefault();
+			ValidateEmail(document.myform.email_address_);
+			//return false;
+		  }
+		});
+
+
+//on submit form
+	jQuery('#submitEmail').click(function(e){
+		//console.log(e);
+		e.preventDefault();
+		ValidateEmail(document.myform.email_address_);
+	});
+
+//validate
+    function ValidateEmail(inputText)  {
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+		if(inputText.value.match(mailformat))  {  
+			document.myform.email_address_.focus();  
+			myform.submit();			
+			}  
+		else  {  
+			//alert("You have entered an invalid email address!");
+			document.getElementById('errors').innerHTML='Please Enter A Valid Email Address';
+			document.myform.email_address_.focus();  
+			return false;  
+		}  
+    }  
+
+});
+</script>
+{/literal}
