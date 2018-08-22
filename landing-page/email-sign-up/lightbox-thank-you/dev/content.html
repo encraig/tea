@@ -1,16 +1,21 @@
 
-{include file="store:name=index"}
-		
-<a id="thanks" href="#thank-you" class="fancybox-thanks"></a>
-
-<div id="thank-you">
-	<!-- ref -->
-	<!--<img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/thanks-ref-d.jpg"/>-->
-
-	<img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png" class="return"/>
-	<h2>Thanks<br> <span>for signing up</span></h2>
-	<!-- <p>Your first email (and 10% off code)<br> will arrive soon.</p> -->
+<div class="newsletter-confirmation2">
+	<img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-newsletter-thanks-2-d.jpg" class="ref desktop"/>
+  <!-- <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-newsletter-thanks-2-m.jpg" class="ref mobile"/> -->
+	<h1>Your Offer is Waiting!</h1>
+	<p>All that’s left to do is check your inbox and pick out styles for your little citizen.</p> 
+	<a href="#" class="cta">keep shopping</a>
+<!--
+	<div class="cta-container">
+		<a href="/girls-clothing/" class="cta">Shop Girl</a>
+		<a href="/boys-clothing/" class="cta">Shop Boy</a>
+		<a href="/baby-girl-clothes/" class="cta">Shop Baby Girl</a>
+		<a href="/baby-boy-clothes/" class="cta">Shop Baby Boy</a>
+	</div>
+-->
 </div>
+
+
 
 {literal}
 <style>
@@ -21,22 +26,11 @@
 {literal}
 <script>
 jQuery(document).ready(function() {
-	if($(window).width()>737){
-		jQuery(".fancybox-thanks").fancybox();
 
-		jQuery('#thanks').click();	
-
-		jQuery( "#thank-you, .fancybox-overlay" ).click(function(){
-			window.history.back();
-		});
-	}
-
-	else if($(window).width()<737){
-		jQuery( "#thank-you" ).click(function(){
-			window.history.back();
-		});
-	}
-	
+	$('.newsletter-confirmation2 .cta').click(function(e){
+		e.preventDefault();
+		window.history.back();
+	});
 
 });
 </script>
