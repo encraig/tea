@@ -1,0 +1,43 @@
+
+{include file="store:name=index"}
+		
+<a id="thanks" href="#thank-you" class="fancybox-thanks"></a>
+
+<div id="thank-you">
+	<!-- ref -->
+	<!--<img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/thanks-ref-d.jpg"/>-->
+
+	<img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png" class="return"/>
+	<h2>Thanks<br> <span>for signing up</span></h2>
+	<!-- <p>Your first email (and 10% off code)<br> will arrive soon.</p> -->
+</div>
+
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+{/literal}
+
+{literal}
+<script>
+jQuery(document).ready(function() {
+	if($(window).width()>737){
+		jQuery(".fancybox-thanks").fancybox();
+
+		jQuery('#thanks').click();	
+
+		jQuery( "#thank-you, .fancybox-overlay" ).click(function(){
+			window.history.back();
+		});
+	}
+
+	else if($(window).width()<737){
+		jQuery( "#thank-you" ).click(function(){
+			window.history.back();
+		});
+	}
+	
+
+});
+</script>
+{/literal}
