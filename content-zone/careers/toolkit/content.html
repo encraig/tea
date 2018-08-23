@@ -1,0 +1,106 @@
+
+<div class="careers-welcome">
+	<h1>Careers</h1>	
+	
+	<h2>Very Tea</h2>
+	<p>Sometimes someone at Tea will receive a compliment of being "very Tea." It has nothing to do with education or references, it means that someone embodies our brand spirit. They dive in with all their senses turned on, with warmth and curiosity. They have an innate desire to explore, to connect and share with others, and to find beauty wherever we go.</p>
+		
+	<p>While everyone here is "very Tea," we definitely don't come from the same backgrounds. We have designers, accountants, MBAs, buyers, salespeople and new college graduates. We have people from Venezuela, Spain, China, the UK and all around the US. We have degrees in economics, photography, business, design, merchandising, art history and political science. And we have collectively visited more than 40 countries.</p>
+
+	<p>Tea is at its heart about going into and being in the world, in a very personal way. To help everyone at Tea go there, we make a yearly contribution to each employee for international travel and exploration. Upon their return, our Tea travelers write blog posts to share their adventures with all of us (and the world).</p>
+		
+	<h3>Full Time Positions</h3>
+	<p>We are always on the lookout for creative, resourceful, talented "Tea" people who thrive in an entrepreneurial environment. Review our open positions below: </p>
+	
+	<ul class="jobs-list"></ul>
+</div>
+
+<div class="the-job"></div>
+
+{literal}
+<style>
+	@media screen and (max-width:737px){#customer-service-menu{display:none}}.careers-welcome,.the-job{color:#666}@media screen and (max-width:737px){.careers-welcome,.the-job{margin:15px 6%}}.careers-welcome a,.the-job a{color:#e05a24;font-family:brown-pro-bold;text-decoration:none}.careers-welcome a span,.the-job a span{font-family:brown-pro-bold}.careers-welcome h1,.the-job h1,.careers-welcome h2,.the-job h2,.careers-welcome h3,.the-job h3{font-weight:normal;font-family:brown-pro-bold !important;color:#666 !important}.careers-welcome h1,.the-job h1{padding:0;margin:0;font-size:34px;line-height:1em}@media screen and (max-width:737px){.careers-welcome h1,.the-job h1{font-size:18px;line-height:20px;letter-spacing:.05rem}}.careers-welcome h2,.the-job h2{text-transform:uppercase;font-size:2em;margin:1em 0 .25em 0}@media screen and (max-width:737px){.careers-welcome h2,.the-job h2{font-size:18px;letter-spacing:1px;line-height:20px}}.careers-welcome h2 span,.the-job h2 span{font-family:brown-pro-bold}.careers-welcome h3,.the-job h3{text-transform:uppercase;font-size:1.6em;margin:1em 0 .25em 0}@media screen and (max-width:737px){.careers-welcome h3,.the-job h3{font-size:14px;letter-spacing:1px;line-height:20px}}.careers-welcome p,.the-job p{margin:0 0 10px 0;font-family:brown-pro-regular;line-height:18px;font-size:12px}@media screen and (max-width:737px){.careers-welcome p,.the-job p{line-height:22px}}.jobs-list,.the-job{font-family:brown-pro-regular;list-style-type:disc !important;font-size:12px;padding:0 0 0 1em}.jobs-list ul,.the-job ul{padding:0 0 0 1em}.jobs-list li,.the-job li{list-style-type:disc !important;float:none !important;width:100% !important;margin:0 0 10px !important}.jobs-list li span,.the-job li span{display:inline-block}@media screen and (max-width:737px){.jobs-list li span,.the-job li span{display:block}}.jobs-list li span:last-of-type,.the-job li span:last-of-type{float:right}@media screen and (max-width:737px){.jobs-list li span:last-of-type,.the-job li span:last-of-type{float:none}}@media screen and (max-width:737px){.the-job h2 span{display:block}}.the-job h2 span:last-of-type{display:inline-block;float:right}@media screen and (max-width:737px){.the-job h2 span:last-of-type{float:none;margin:10px 0 0}}.the-job .job-footer{margin:10px 0}/*# sourceMappingURL=styles.css.map */
+</style>
+{/literal}
+
+{literal}
+<script>
+$(document).ready(function(){
+	var apiUrl = 'https://api.lever.co/v0/postings/teacollection';
+	//get all the job listings
+	$.get(apiUrl+'?mode=json', function(data){
+		// console.log('all jobs');
+		// console.log(data);
+
+		var jobs = data;
+		$(jobs).each(function(i,val){
+			var jobId = val.id;
+			var jobTitle = val.text;
+			var jobUrl = jobTitle.replace(',','');
+			jobUrl = jobUrl.replace(/ /g,'-');
+			var jobType = val.categories.commitment;
+			var jobLocation = val.categories.location;
+			var jobTeam = val.categories.team;
+
+			$('.jobs-list').append('<li><h4><a href="#'+jobUrl+'" data="'+jobId+'"><span>'+jobTitle+' - '+jobType+'</span><span>'+jobLocation+'</span></a></h4></li>');
+		}); //end of loop
+
+		//onclick show the job
+		$('.jobs-list li a').click(function(e){
+			window.scrollTo(0,0);
+			// e.preventDefault();
+			var jobId = $(this).attr('data');
+			//get the clicked job
+			$.get(apiUrl+'/'+jobId, function(job){
+				// console.log('single job');
+				// console.log(job);
+
+				//hide the original page content
+				$('.careers-welcome').hide();
+
+				//show the clicked job content
+				var backTo = '<p class="all-jobs"><a href="#">Back to All Jobs</a></p>';
+				var jobTitle = '<h2><span>'+job.text+'</span> <span><a href="'+job.applyUrl+'" target="_blank">apply</a></span></h2>';
+				var jobLocation = '<p>'+job.categories.location+' '+job.categories.team+' '+job.categories.commitment+'</p>'
+				var jobDesc = '<p>'+job.descriptionPlain+'</p>';
+				var jobFooter = '<p class="job-footer">'+job.additionalPlain+'</p>';
+				var jobApply = '<h2><a href="'+job.applyUrl+'" target="_blank">apply</a></h2>'
+
+				var jobContent = backTo + jobTitle + jobLocation + jobDesc;
+
+				// show the title, location, description
+				$('.the-job').append(jobContent);
+
+				//show the responsibilities & qualifications
+				var lists = job.lists;
+				$(lists).each(function(j,arr){
+					var listTitle = '<h3>'+arr.text+'</h3>';
+					var list = '<ul>'+arr.content+'</ul>';
+					var listContent = listTitle + list;
+					$('.the-job').append(listContent);
+				});
+
+				//show the footer and apply 
+				$('.the-job').append(jobFooter + jobApply);
+
+				//on click return to all jobs
+				$('.all-jobs').click(function(e){
+					window.scrollTo(0,0);
+					// e.preventDefault();
+
+					//remove the single job
+					$('.the-job').children().remove();
+
+					//show the original page content
+					$('.careers-welcome').show();
+				}); // end of .all-jobs click
+
+			}); // end of $.get single job
+
+		}); //end of .jobs-list li a click
+	
+	}); //end of $.get all jobs
+
+}); //end of document .ready
+</script>
+{/literal}
