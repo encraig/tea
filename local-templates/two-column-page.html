@@ -1,0 +1,71 @@
+<style>
+	.two-column-page {
+		width:1000px; 
+		margin: 0 auto; 
+		clear:both; 
+		position:relative;
+		/*overflow:hidden;*/
+	}
+	@media screen and (max-width:737px){
+		.two-column-page {
+			width:100%;
+		}
+	}
+	.move-this-content {
+		float:left;
+		width:840px;
+		/*position:relative;*/
+	}
+	@media screen and (max-width:737px){
+		.move-this-content {
+			float:none;
+			width:100%;
+		}
+	}
+</style>
+
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<div class="two-column-page"> 
+	<div class="move-this-content">
+		include "../landing-page/inspiration/africa/west/dev/content.html" 
+	</div>   
+</div>
+
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+
+<script>
+$(document).ready(function(){
+	$.get('https://www.teacollection.com/girls-clothing/new-arrivals',function(data){  
+		//console.log(data);
+		
+		//desktop only
+		if($(window).width() > 737){
+			var sidebar = $(data).find('article.sidebar')[0].outerHTML;
+			$('.two-column-page').prepend(sidebar);
+			var main = $(data).find('article.main-content')[0].outerHTML;  
+			$('.two-column-page').append(main);
+
+			//remove all children of article.main-content
+			$('article.main-content').empty();
+
+			//move content
+			$('article.main-content').append($('.move-this-content'));
+		}
+
+		if($(window).width() < 737){
+			//remove all children of .da-rennab
+			$('.da-rennab').empty();
+
+			//move content
+			$('.da-rennab').append($('.move-this-content'));
+
+			//remove mobile filters
+			$('div[data-zone="category_pages"]').next().hide();
+			$('#infinite').hide();
+		}
+		
+	});
+});
+</script>
