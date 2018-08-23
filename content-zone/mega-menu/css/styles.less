@@ -1,0 +1,1069 @@
+@color_1: #cc0033;
+@color_2: #999;
+@color_3: #666;
+@color_4: #572501;
+@color_5: #57585b;
+@color_6: #a7a8ac;
+@color_7: #414042;
+@color_8: #e05a24;
+@color_9: #fff;
+@font_family_1: brown-pro-bold;
+@font_family_2: brown-pro-regular;
+@font_family_3: 'brown-pro-bold';
+@border_color_1: #f1f1f1 #d0d0d0 #d0d0d0 #f1f1f1;
+
+header[role="banner"] {
+	height: auto !important;
+	margin-bottom: 0;
+	z-index: auto;
+	width: 100em;
+	margin: 0 auto;
+	#top-nav {
+		width: 901px;
+		margin: 0 0 0 99px;
+		background: transparent;
+		div.search-block {
+			position: relative;
+			top: -14px;
+		}
+	}
+	#shopping-bag {
+		#shopping-cart {
+			#shopping-cart-summary {
+				hgroup {
+					h3 {
+						color: @color_1;
+						padding-top: 5px !important;
+						padding: 2px 0 0 0;
+						color: @color_2;
+						font-size: 10px;
+					}
+					>a {
+						padding: 2px 0 0 0;
+						color: @color_2;
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+	#top-bar {
+		div.top {
+			ul {
+				li#welcome-member {
+					a {
+						padding: 6px 0 0 0;
+					}
+				}
+				li#welcome-signin {
+					a {
+						padding: 6px 0 0 0;
+						color: @color_2;
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+	#free-shipping-container {
+		display: none;
+	}
+	#header-banner {
+		display: none;
+	}
+	#main-categories {
+		width: 67%;
+		height: 0;
+	}
+}
+#sticky-header {
+	display: none !important;
+}
+.header-left {
+	position: relative;
+	top: -29px;
+	nav.new-nav {
+		ul {
+			>li {
+				height: 70px;
+			}
+			>li.girls-clothing {
+				padding-right: 1px;
+			}
+			>li.boys-clothing {
+				padding-right: 5px;
+			}
+			>li.baby-girl-clothes {
+				padding-right: 41px;
+				>a {
+					width: 73px;
+				}
+			}
+			>li.baby-boy-clothes {
+				white-space: nowrap;
+				padding-right: 48px;
+			}
+			>li.clothing-sale {
+				padding-left: 45px;
+				width: 85px;
+			}
+			li.clothing-sale {
+				&:hover {
+					background: none;
+					>a {
+						>span {
+							border-bottom: 2px solid #cc0033;
+						}
+					}
+					.level-2 {
+						li {
+							.nav-container {
+								display: none;
+							}
+						}
+					}
+				}
+				.nav-container {
+					.the-list {
+						.favs {
+							float: left;
+							width: 36%;
+						}
+						.nb-gift-shop {
+							float: left;
+							width: 33%;
+							h2 {
+								a {
+									color: @color_3;
+									text-decoration: none;
+									&:hover {
+										color: @color_8;
+									}
+								}
+							}
+						}
+						.cats {
+							float: left;
+							width: 31%;
+						}
+						ul {
+							li {
+								width: 100%;
+								padding: 10px 0 0 0;
+							}
+						}
+					}
+				}
+			}
+			li.clothing-sale.active {
+				a {
+					span {
+						border-bottom: 2px solid #cc0033;
+					}
+				}
+			}
+			li.girls-clothing {
+				&:hover {
+					.level-2 {
+						li {
+							.nav-container {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			li {
+				&:hover {
+					color: @color_5;
+					background-size: 25px;
+					a {
+						span {
+							border-bottom: 2px solid #666;
+						}
+					}
+					.nav-container {
+						display: block;
+						.the-list {
+							.favs {
+								ul {
+									li {
+										&:hover {
+											background: none;
+										}
+									}
+								}
+							}
+							.cats {
+								ul {
+									li {
+										&:hover {
+											background: none;
+										}
+									}
+								}
+							}
+						}
+					}
+					.level-2 {
+						display: block;
+						li.arrow {
+							&:hover {
+								background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-white-2.png) no-repeat center bottom;
+								background-size: 18px;
+							}
+						}
+						li {
+							&:hover {
+								.nav-container {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+				.level-2 {
+					background: #e6e6e8;
+					width: 1000px;
+					position: absolute;
+					left: -99px;
+					top: 68px;
+					box-sizing: border-box;
+					overflow: visible;
+					color: @color_6;
+					z-index: 9999;
+					display: none;
+					li {
+						color: @color_3;
+						font-family: @font_family_1 !important;
+						font-size: 15px;
+						height: auto;
+						padding: 12px 0;
+						text-align: center;
+						>a {
+							color: @color_3;
+							height: initial;
+							font-size: 15px;
+							padding: initial;
+							text-decoration: none;
+							width: initial;
+						}
+						span {
+							font-family: @font_family_1 !important;
+							position: relative;
+						}
+					}
+					.girl-cats {
+						margin-left: 99px;
+						margin-right: 82px;
+					}
+					li.boy-cats {
+						margin-left: 172px;
+					}
+					li.baby-girl-cats {
+						margin-left: 249px;
+					}
+					li.baby-boy-cats {
+						margin-left: 363px;
+					}
+					li.newborn-cats {
+						margin-left: 483px;
+					}
+					.sizes-note {
+						font-size: 12px;
+					}
+				}
+				.nav-container {
+					width: 100%;
+					position: absolute;
+					background: #fff;
+					min-height: 240px;
+					left: 0;
+					top: 40px;
+					box-sizing: border-box;
+					padding-left: 100px;
+					padding-top: 22px;
+					z-index: 9999;
+					display: none;
+					border-bottom: 1px solid #D1D3D4;
+					padding-bottom: 20px;
+					.the-list {
+						width: 65%;
+						float: left;
+						color: @color_6;
+						.favs {
+							h2 {
+								font-size: 13px;
+								color: @color_3;
+								font-weight: normal;
+								letter-spacing: 1px;
+								padding: 0;
+								margin: 0 0 4px;
+								text-transform: none;
+								font-family: @font_family_1 !important;
+								text-transform: uppercase;
+								text-align: left;
+							}
+							ul {
+								li {
+									float: none;
+									height: 20px;
+									width: 100%;
+									padding: 10px 0 0 0;
+									a {
+										padding: 0;
+										text-align: left;
+										font-size: 12px;
+										color: @color_3;
+										white-space: nowrap;
+										font-family: @font_family_2 !important;
+										&:hover {
+											color: @color_7;
+											font-family: @font_family_1 !important;
+										}
+									}
+								}
+							}
+							width: 36%;
+							float: left;
+						}
+						.nb-gift-shop {
+							h2 {
+								font-size: 13px;
+								color: @color_3;
+								font-weight: normal;
+								letter-spacing: 1px;
+								padding: 0;
+								margin: 0 0 4px;
+								text-transform: none;
+								font-family: @font_family_1 !important;
+								text-transform: uppercase;
+								text-align: left;
+							}
+							ul {
+								li {
+									float: none;
+									height: 20px;
+									width: 100%;
+									padding: 10px 0 0 0;
+									a {
+										padding: 0;
+										text-align: left;
+										font-size: 12px;
+										color: @color_3;
+										white-space: nowrap;
+										font-family: @font_family_2 !important;
+										&:hover {
+											color: @color_7;
+											font-family: @font_family_1 !important;
+										}
+									}
+								}
+							}
+						}
+						.cats {
+							h2 {
+								font-size: 13px;
+								color: @color_3;
+								font-weight: normal;
+								letter-spacing: 1px;
+								padding: 0;
+								margin: 0 0 4px;
+								text-transform: none;
+								font-family: @font_family_1 !important;
+								text-transform: uppercase;
+								text-align: left;
+							}
+							ul {
+								li {
+									float: none;
+									height: 20px;
+									width: 100%;
+									padding: 10px 0 0 0;
+									float: none;
+									width: 100%;
+									a {
+										padding: 0;
+										text-align: left;
+										font-size: 12px;
+										color: @color_3;
+										white-space: nowrap;
+										font-family: @font_family_2 !important;
+										&:hover {
+											color: @color_7;
+											font-family: @font_family_1 !important;
+										}
+									}
+								}
+								li.view-all {
+									text-transform: uppercase;
+								}
+								li.the-sale {
+									>a {
+										color: @color_1;
+										&:hover {
+											font-family: @font_family_1 !important;
+										}
+									}
+								}
+							}
+							width: 64%;
+							float: left;
+							.cats-1 {
+								float: left;
+								width: 50%;
+							}
+							.cats-2 {
+								float: left;
+								width: 50%;
+								ul {
+									li {
+										&:first-of-type {
+											padding: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+					.nav-img {
+						width: 35%;
+						float: left;
+						text-align: left;
+						a {
+							text-align: left;
+							padding: 3px 0 0 7px;
+							box-sizing: border-box;
+							display: inline-block;
+						}
+						img {
+							image-rendering: -webkit-optimize-contrast;
+							max-width: 100%;
+							width: 190px;
+						}
+					}
+				}
+			}
+			li.active {
+				a {
+					span {
+						border-bottom: 2px solid #666;
+					}
+				}
+			}
+			.girls-clothing {
+				.level-2 {
+					>li {
+						>span {
+							font-family: @font_family_2 !important;
+							&:hover {
+								font-family: @font_family_1 !important;
+							}
+						}
+						>a {
+							font-family: @font_family_2 !important;
+							&:hover {
+								font-family: @font_family_1 !important;
+							}
+						}
+					}
+				}
+			}
+			li.newborn-clothes {
+				.nav-container {
+					.the-list {
+						.favs {
+							float: left;
+							width: 36%;
+						}
+						.nb-gift-shop {
+							float: left;
+							width: 33%;
+							h2 {
+								a {
+									color: @color_3;
+									text-decoration: none;
+									&:hover {
+										color: @color_8;
+									}
+								}
+							}
+						}
+						.cats {
+							float: left;
+							width: 64%;
+						}
+						ul {
+							li {
+								width: 100%;
+								padding: 10px 0 0 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#company-logo {
+	float: left;
+	img {
+		height: auto;
+		image-rendering: -webkit-optimize-contrast;
+		position: relative;
+		top: 10px;
+		width: 50px;
+	}
+}
+nav.new-nav {
+	float: left;
+	width: auto;
+	ul {
+		overflow: hidden;
+		li {
+			float: left;
+			>a {
+				text-decoration: none;
+				display: block;
+				padding: 16px 0;
+				color: @color_3;
+				height: 50px;
+				font-family: @font_family_1 !important;
+				font-size: 16px;
+				box-sizing: border-box;
+				text-align: left;
+				letter-spacing: .03em;
+				width: 72px;
+				span {
+					padding-bottom: 2px;
+					font-family: @font_family_1 !important;
+				}
+			}
+		}
+		li.girls-clothing {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+		li.boys-clothing {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+		li.baby-girl-clothes {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+		li.baby-boy-clothes {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+		li.newborn-clothes {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+		li.clothing-sale {
+			>a {
+				padding: 25px 0 16px;
+			}
+		}
+	}
+}
+.triangle {
+	width: 100%;
+	box-sizing: border-box;
+	position: absolute;
+	height: 20px;
+	left: 0;
+	top: 50px;
+	background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png) no-repeat left bottom;
+	background-size: 18px;
+	z-index: -1;
+	display: none;
+}
+#new-sticky-header {
+	position: fixed;
+	width: 1000px;
+	background: #fff;
+	margin: 0 auto;
+	z-index: 9999;
+	display: none;
+	top: 0;
+	height: 70px;
+	.triangle {
+		top: 30px;
+	}
+	.header-left {
+		top: 0;
+		padding: 0;
+		.new-nav {
+			width: 100%;
+			>ul {
+				padding-left: 7px;
+				width: 618px;
+				float: left;
+			}
+		}
+		nav.new-nav {
+			.triangle {
+				top: 50px;
+			}
+			.level-2 {
+				width: 1000px;
+				left: 0;
+				top: 70px;
+			}
+			ul {
+				li.newborn-clothes {
+					.nav-container {
+						.the-list {
+							.favs {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+							.nb-gift-shop {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+							.cats {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				li.clothing-sale {
+					.nav-container {
+						.the-list {
+							.favs {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+							.nb-gift-shop {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+							.cats {
+								width: 33%;
+								float: left;
+								ul {
+									li {
+										width: 100%;
+										a {
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+					.level-2 {
+						padding: 0 16% !important;
+					}
+				}
+				li {
+					.nav-container {
+						top: 40px;
+						width: 100%;
+						left: 0;
+						.the-list {
+							.favs {
+								width: 33%;
+							}
+							.cats {
+								width: 66%;
+								ul {
+									li {
+										width: 50%;
+									}
+								}
+							}
+							a {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.sign-in-copy {
+		float: left;
+		width: 283px;
+		padding-top: 8px;
+		ul {
+			overflow: hidden;
+			margin-bottom: 0;
+			&:last-of-type {
+				display: none;
+			}
+			li {
+				height: auto;
+			}
+			li#shopping-bag-tab {
+				float: right;
+			}
+			li#welcome-signin {
+				float: left;
+				a {
+					text-decoration: none;
+					font-size: 10px;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-family: @font_family_1 !important;
+					color: @color_2;
+					display: block;
+					padding: 3px 0 0 0;
+				}
+			}
+			li#welcome-member {
+				a {
+					font-size: 10px;
+					color: @color_4;
+					display: block;
+					margin-left: 0;
+					text-decoration: none;
+					text-transform: uppercase;
+					line-height: 10px;
+					padding: 6px 0 0 0;
+					.arrow {
+						width: 0;
+						height: 0;
+						border-top: 4px solid transparent;
+						border-bottom: 4px solid transparent;
+						border-left: 4px solid #572501;
+						display: inline-block;
+						margin: 0 0 0 5px;
+						vertical-align: -1px;
+					}
+				}
+				.popup-member {
+					background: #ffffff;
+					position: absolute;
+					z-index: 9996;
+					border-width: 1px;
+					border-style: solid;
+					border-color: @border_color_1;
+					width: 141px;
+					margin: 5px 0 0 -1px;
+					display: none;
+					ul {
+						margin-top: 5px;
+						padding: 0;
+						list-style-type: none;
+						display: block;
+						li {
+							height: 15px;
+							float: none;
+							width: 154px;
+							padding: 5px 0;
+							margin: 0;
+							letter-spacing: 1px;
+							a {
+								font-size: 10px;
+								color: @color_4;
+								padding: 4px 0 0 15px;
+								margin: 0;
+							}
+						}
+						li.close {
+							margin: 0 0 5px;
+							padding: 0;
+							text-align: right;
+							img {
+								width: 10px;
+								cursor: pointer;
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+		ul.clearfix {
+			display: block !important;
+		}
+		#site-search {
+			form {
+				border: 1px solid #f0efef;
+				#q {
+					width: 85%;
+					padding: 5px 0 5px 12px;
+					box-sizing: border-box;
+					border: none;
+				}
+				.search-btn {
+					background: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/search-glass.png) no-repeat 17px 6px;
+					border: none;
+					cursor: pointer;
+					height: 20px;
+					margin: 0;
+					padding: 5px 0;
+					width: 36px;
+				}
+			}
+		}
+	}
+	#company-logo {
+		margin-right: 42px;
+	}
+}
+.ref {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	opacity: .5;
+	z-index: 9999;
+}
+.inspiration {
+	&:hover {
+		#cell-con {
+			display: block;
+		}
+	}
+	#cell-con {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: 99999;
+		background: #fff;
+		border-top: 1px solid #e6e6e8;
+		padding: 0;
+		overflow: hidden;
+		display: none;
+		div {
+			float: left;
+			padding: 2%;
+			width: 20%;
+			box-sizing: border-box;
+			z-index: 9999;
+			text-align: center;
+			.header {
+				padding: 0;
+				width: 100%;
+				.cell-con-image {
+					padding: 0;
+					width: 100%;
+					float: none;
+				}
+			}
+			p {
+				a {
+					font-size: 12px;
+					width: auto !important;
+					padding: 0;
+					font-family: @font_family_2 !important;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.clothing-sale {
+	>a {
+		color: @color_1 !important;
+	}
+	.level-2 {
+		padding: 0 27%;
+		>li {
+			color: @color_2;
+			float: left;
+			&:hover {
+				font-family: @font_family_1 !important;
+				color: @color_3;
+			}
+			>span {
+				>a {
+					color: @color_3 !important;
+					text-decoration: none !important;
+					cursor: pointer;
+					font-family: @font_family_2 !important;
+					&:hover {
+						font-family: @font_family_1 !important;
+					}
+				}
+			}
+			.nav-container {
+				top: 40px !important;
+				left: 0 !important;
+				width: 100% !important;
+				.the-list {
+					width: 44% !important;
+					.cats {
+						width: 100% !important;
+						ul {
+							li {
+								float: left !important;
+								width: 50% !important;
+								a {
+									width: auto !important;
+									font-family: @font_family_2 !important;
+									&:hover {
+										font-family: @font_family_1 !important;
+										color: @color_7;
+									}
+								}
+							}
+						}
+					}
+				}
+				.nav-img {
+					width: 56% !important;
+				}
+			}
+		}
+		>li.sidebar-Girl {
+			width: 100px !important;
+		}
+		>li.sidebar-Tween {
+			width: 100px !important;
+		}
+		>li.sidebar-Boy {
+			width: 100px !important;
+		}
+		>li.sidebar-Baby-Girl {
+			width: 140px !important;
+		}
+		>li.sidebar-Baby-Boy {
+			width: 86px !important;
+		}
+		>li.sidebar-Newborn {
+			width: 137px !important;
+		}
+	}
+	.nav-container {
+		.nav-img {
+			#content-block {
+				width: 380px;
+				.content-block {
+					background: #F47E61;
+					line-height: 28px;
+					min-height: 150px;
+					padding: 30px 0 10px 28px;
+					div {
+						background: #fff;
+						height: 4px;
+						width: 88px;
+						margin-bottom: 8px;
+						top: 0;
+						left: 0;
+					}
+					h2 {
+						color: @color_9;
+						font-size: 24px !important;
+						font-weight: normal;
+						left: 0 !important;
+						position: relative;
+						top: 0;
+						span {
+							font-size: 45px !important;
+							top: 8px;
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#content-block {
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: block;
+}
+.content-block {
+	background: #1d6272;
+	color: @color_9;
+	min-height: 486px;
+	padding: 0 87px;
+	font-family: @font_family_3;
+	div {
+		background: #fff;
+		height: 4px;
+		position: relative;
+		top: 90px;
+		left: 4px;
+		width: 170px;
+	}
+	h2 {
+		position: relative;
+		top: 124px;
+		font-size: 44px;
+		letter-spacing: 0px;
+		font-family: @font_family_1 !important;
+		font-weight: normal;
+		span {
+			display: block;
+			position: relative;
+			top: 56px;
+			font-size: 91px;
+		}
+	}
+}
+@media screen and (max-width:736px) {
+	.content-block {
+		padding: 0 20px;
+		min-height: 256px;
+		div {
+			left: 2px;
+			width: 114px;
+			top: 45px;
+		}
+		h2 {
+			left: -1px;
+			font-size: 30px;
+			top: 54px;
+			letter-spacing: -.5px;
+			span {
+				top: -5px;
+				font-size: 59px;
+				letter-spacing: -.5px;
+			}
+		}
+	}
+}
