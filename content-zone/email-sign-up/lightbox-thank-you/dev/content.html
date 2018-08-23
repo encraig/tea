@@ -1,0 +1,37 @@
+
+<div class="newsletter-confirmation2">
+	<img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-newsletter-thanks-2-d.jpg" class="ref desktop"/>
+  <!-- <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-newsletter-thanks-2-m.jpg" class="ref mobile"/> -->
+	<h1>Your Offer is Waiting!</h1>
+	<p>All that’s left to do is check your inbox and pick out styles for your little citizen.</p> 
+	<a href="#" class="cta">keep shopping</a>
+<!--
+	<div class="cta-container">
+		<a href="/girls-clothing/" class="cta">Shop Girl</a>
+		<a href="/boys-clothing/" class="cta">Shop Boy</a>
+		<a href="/baby-girl-clothes/" class="cta">Shop Baby Girl</a>
+		<a href="/baby-boy-clothes/" class="cta">Shop Baby Boy</a>
+	</div>
+-->
+</div>
+
+
+
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+{/literal}
+
+{literal}
+<script>
+jQuery(document).ready(function() {
+
+	$('.newsletter-confirmation2 .cta').click(function(e){
+		e.preventDefault();
+		window.history.back();
+	});
+
+});
+</script>
+{/literal}

@@ -1,0 +1,87 @@
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../../css/styles.css"> -->
+
+<div class="email-sign-up">
+	<!-- ref -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-landing-ref-d.jpg" class="ref"/> -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-landing-ref-m.jpg" class="ref"/> -->
+
+	<div class="left">
+		<h2>Join the<br> <span>Adventure</span></h2>
+		<p>We travel the world<br class="desktop"> in search<br class="mobile"> of inspiration.<br class="desktop"> Go there with us!</p>
+		<!-- <p>The latest globally inspired styles,<br class="desktop"> exclusive<br class="mobile"> travel and inspiration stories,<br class="desktop"> first alerts for<br class="mobile"> sales and more.</p> -->
+		<p>Sign up to receive an exclusive welcome offer and stay up to date on our latest globally-inspired styles.</p>
+	</div>
+
+	<div class="right">
+		<!-- <h3 class="mobile">Sign up for our emails &amp; get</h3> -->
+		<h2>20% off<br> <span>+ free shipping<br> on your first order</span></h2>
+		<p class="mobile">at TeaCollection.com.</p>
+		<p class="desktop">Shop the latest globally-inspired styles, read<br> exclusive travel stories &amp; get first alerts about sales.</p>
+
+			<form action="https://newsletter.teacollection.com/pub/rf" id="myform2" name="myform2">
+				<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGpOU0nnahFrllTzbMOzgzeKR7qzdFRPU8orAK8hVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGlURueLKwPEghHlze7whzcl2AzdFRPU8orAK8h"/>
+				<input type="hidden" name="ACQUISITION_SOURCE" value="email_signup_page" id="aq" /> 
+				<input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I"> 
+				<input type="hidden" name="activity" value="submit"> 
+				<input type="hidden" name="COLD_STORAGE" value="N"> 
+				<span id="errors"></span>
+				<input class="nl-email" id="emailField" name="EMAIL_ADDRESS_" type="email" placeholder="Email Address" required> 
+				<input type="submit" class="nl-signup" value="Sign Me Up" id="submitEmail">
+			</form>
+	</div>
+
+	<!-- <div class="email-fineprint"> 
+		<p>
+			*20% OFF + FREE SHIPPING ON YOUR FIRST ORDER To redeem, use the code in your welcome email to receive 20% off + free 6-10 day shipping on your first order at Teacollection.com. Only applies to first time purchasers. Offer excludes all third party (non-Tea) items. Does not apply for shipping to Canada. Cannot be combined with other promotions and cannot be applied towards the purchase of gift cards. One (1) use per person. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned.
+		</p>
+	</div> -->
+</div>
+
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+{/literal}
+
+{literal}
+<script>
+jQuery(document).ready(function(){
+
+	//if url parameter change the aquisition_source
+	var url = window.location.href;
+	if(url.indexOf('?') !== -1){
+		var param = url.split('?');
+		param = param[1];
+		var paramValue;
+
+		//if mulitple param
+		if(param.indexOf('&') !== -1){
+			param = param.split('&');
+
+			//loop and find src
+			$.each(param, function(i,val){
+				var theParam = val.split('=');
+				if(theParam[0] == 'src') {
+					paramValue = theParam[1];
+					console.log(paramValue);
+					return false;
+				}
+			});
+		}
+		// only 1 param
+		else {
+			paramValue = param.split('=')[1];
+			console.log(paramValue);
+		}
+
+		//change the aquisition_source
+		$('#aq').attr('value', paramValue);
+		
+	}
+ 
+
+});
+</script>
+{/literal}
