@@ -1,3 +1,4 @@
+<div class="the-overlay"></div>
 
 <div class="signup">
     <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-ref-d.jpg"  class="ref" />
@@ -40,6 +41,7 @@ jQuery(document).ready(function(){
         if($(window).width()>768){
             //console.log('close desktop');
             divinity.box.close();
+            $('#tea-promo-subscribe').remove();
         } else if($(window).width()<768){
             //console.log('close mobile');
             divinity.box.close();

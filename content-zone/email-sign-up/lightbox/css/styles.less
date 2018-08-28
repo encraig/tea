@@ -22,14 +22,32 @@ div.store-box div.store-box-content {
     display:none;
 }
 
+.the-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+}
+
 .signup {
     @media screen and (max-width:737px){
-        padding-left: 6%;
+        padding: 0 0 6% 6%;
+        position:relative;
+        width:100%;
+        top:0;
+        left:0;
+        transform:translate(0,0);
     }
 
-    position: relative;
+    position: fixed;
     background: #fff;
-    padding-left: 30px;
+    padding:0 0 30px 30px;
+    width:500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing:border-box;
 
     #close-icon {
         position: absolute;
