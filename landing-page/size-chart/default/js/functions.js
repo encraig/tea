@@ -834,7 +834,7 @@ $(document).ready(function(){
       $('.size-chart-table').children().hide();
 
       //add the loading
-      $('.size-chart-table').prepend('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADINGING...</div>');
+      $('.size-chart-table').prepend('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
 
       setTimeout(function(){
         var tables = $('.size-chart-table table');
