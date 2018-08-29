@@ -1,0 +1,83 @@
+<!--toolkit -->
+ 
+{literal}
+<style>
+	include "../css/styles.css"
+</style> 
+{/literal}
+
+
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">  -->
+
+<div class="wrap-content"> 
+
+	<!--desktop ref dev-->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-d-ref.jpg" class="ref" />  -->
+
+	<!--mobile ref dev -->
+	<!-- <img src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-m-ref.jpg" class="ref" /> -->
+
+	<div data="thanks" id="thanks"> 
+
+		<div>
+			<h2>
+				<span class="thanks">Thanks</span> 
+				<span class="for-entering">for entering</span>
+			</h2>
+
+			<p>The winner will be notified via email<br> <span class="desktop">on or before</span> <span class="mobile">by</span> December 5, 2017.</p>
+			<a href="/" class="cta">shop tea</a>
+
+			<img src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-girl-m.jpg" alt="girl" class="mobile"/>
+
+			<!-- mobile image map -->
+			<img src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-prizes-m.png" usemap="#image-maps-1" alt="" class="mobile"/>
+			<map name="image-maps-1">
+				<area  alt="" title="" href="http://redtri.com/" shape="rect" coords="0,0,209,150" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://amourvert.com/" shape="rect" coords="211,0,559,150" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.paperculture.com/" shape="rect" coords="569,0,749,147" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.farmacybeauty.com/" shape="rect" coords="0,159,301,284" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="http://www.melissaanddoug.com/" shape="rect" coords="497,158,750,284" style="outline:none;" target="_blank"     />
+			</map>
+
+
+			<!-- desktop image map -->
+			<img  src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-prizes-d.png" usemap="#image-maps-2" alt="" class="desktop"/>
+			<map name="image-maps-2">
+				<area  alt="" title="" href="http://redtri.com/" shape="rect" coords="0,0,156,106" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://amourvert.com/" shape="rect" coords="167,0,375,106" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.paperculture.com/" shape="rect" coords="384,0,523,97" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="https://www.farmacybeauty.com/" shape="rect" coords="0,109,236,243" style="outline:none;" target="_blank"     />
+				<area  alt="" title="" href="http://www.melissaanddoug.com/" shape="rect" coords="345,113,523,243" style="outline:none;" target="_blank"     />
+			</map>
+		</div>
+
+		<div>
+			<img src="/mas_assets/theme/tea_collection/images/static/holiday-sweeps/171101/thanks-girl-d.jpg?nocache=123" alt="girl" />
+		</div>
+	</div>
+	
+</div>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!-- prod -->
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+{literal}
+<script>
+$(document).ready(function(){
+	jQuery('img[usemap]').rwdImageMaps();
+
+	//dev image src
+	// var imgs = $('.wrap-content img, .pics img, .view-prizes img');
+	// $.each(imgs, function(i,val){
+	// 	var src = $(val).attr('src');
+	// 	var newSrc = 'https://www.teacollection.com' + src;
+	// 	$(val).attr('src', newSrc)
+	// });
+});
+</script>
+{/literal}
