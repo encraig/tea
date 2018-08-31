@@ -1,8 +1,3 @@
-<!--toolkit -->
-<style>
-	include "../css/styles.css"
-</style>
-
 
 <!-- dev styles -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
@@ -11,17 +6,17 @@
 	
 	<!-- check back -->
 	<div class="check-back">
-		<img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-1-d.png" alt="" class="desktop theImg" />
+		<img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-1-d.png" alt="" class="desktop theImg" />
 
-		<img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-1-m.png" alt="" class="mobile theImg" />
+		<img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-1-m.png" alt="" class="mobile theImg" />
 	</div>
 
 
 	<!-- in session -->
 	<div class="in-session">
-		<img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-2-d.png" alt="" class="desktop theImg" />
+		<img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-2-d.png" alt="" class="desktop theImg" />
 
-		<a href="/" class="mobile"><img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-2-m.png" alt="" class="mobile theImg" usemap="#map-school-days-m"/></a>
+		<a href="/" class="mobile"><img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-2-m.png" alt="" class="mobile theImg" usemap="#map-school-days-m"/></a>
 
 		<!-- <map name="map-school-days-m">
 			<area  alt="" title="" href="/" shape="rect" coords="211,996,540,1065" style="outline:none;" target="_self"     />
@@ -31,9 +26,9 @@
 
 	<!-- ended -->
 	<div class="ended">
-		<img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-3-d.png" alt="" class="desktop theImg" />
+		<img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-3-d.png" alt="" class="desktop theImg" />
 
-		<img src="/mas_assets/theme/tea_collection/images/static/school-days/180125/school-3-m.png" alt="" class="mobile theImg" />
+		<img src="/mas_assets/media/tea_collection/promos/school-days/2018/0831/school-3-m.png" alt="" class="mobile theImg" />
 	</div>
 </div>
 
@@ -48,13 +43,18 @@
 <!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
 <script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
 
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+</style>
+
 <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
 			$('img[usemap]').rwdImageMaps();
 
-			//hide the banner
+			//hide the banner 
 			$('.banner-ad-zone').hide();
 
 			//dates
@@ -64,18 +64,19 @@
 			// console.log(month, day);
 
 			// for dev
-			// month = 3;
-			// day = 5; 
+			// month = 10;
+			// day = 16; 
+			// console.log(month, day);
 
-			if(month < 2 || month <= 2 && day <= 25 ){ 
+			if(month < 10 || month == 10 && day < 8 ){ 
 				$('.check-back').show();
 			}
 			//in session
-			else if(month == 2 && day >= 26 || month == 3 && day <= 5){
+			else if(month == 10 && day >= 8 && month == 10 && day <= 15){
 				$('.in-session').show();
 			}
 			//ended
-			else if(month == 3 && day >= 6 || month > 3){
+			else if(month == 10 && day >= 16 || month > 10){
 				$('.ended').show();
 			}
 
