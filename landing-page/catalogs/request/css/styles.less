@@ -1,0 +1,140 @@
+.desktop {
+	@media screen and (max-width:736px){
+		display:none;
+	}
+}
+
+.mobile {
+	display:none;
+	@media screen and (max-width:736px){
+		display:block;
+	}
+}
+
+.title {
+  color: #666333;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 0 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.catalog-wrap {
+    @media screen and (max-width: 737px){
+      padding: 1em;
+      box-sizing:border-box;
+    }
+
+    header {
+      h1 {
+        font-family:brown-pro-bold;
+        color:#666;
+        font-size: 32px;
+        margin: 0 0 10px 0;
+      }
+    }
+
+    section {
+      margin: 0 0 20px 0;
+
+      p {
+        font-family:brown-pro-regular;
+        color:#666;
+        font-size: 14px;
+        line-height:21px;
+        margin:0 0 10px 0;
+
+        &.italic {
+          font-family:brown-pro-italic;
+        }
+      }
+
+      .responsys {
+        div {
+          margin:0 0 10px 0;
+
+          &.the-checkbox {
+            label {
+              @media screen and (max-width:737px){
+                width:auto !important;
+              }
+            }
+          }
+        }
+
+        input, label, select {
+          @media screen and (max-width:737px){
+            width:80%;
+          }
+
+          display:inline-block;
+          margin:0 10px 10px 0;
+          color:#666;
+          font-family:brown-pro-regular;
+          width: 250px;
+        }
+
+        label {
+          font-size: 14px;
+          text-transform:capitalize;
+        }
+
+        input, select {
+          border: 1px solid #666;
+          padding: 0 0 0 10px;
+          margin: 0;
+          height: 39px;
+          box-sizing: border-box;
+          background:#fff;
+
+          &[type="submit"], &[type="checkbox"] {
+            width:auto;
+          }
+
+          &[type="submit"]{
+            padding: 1em;
+            font-family:brown-pro-bold;
+            text-transform:uppercase;
+
+            &:hover {
+              background:#666;
+              color:#fff;
+            }
+          }
+        }
+
+        .error {
+          @media screen and (max-width:737px){
+            display:block;
+          }
+
+          color:#cc0033;
+          font-family:brown-pro-bold;
+          font-size:14px;
+        }
+
+        select {
+          option {
+            text-transform:capitalize;
+          }
+        }
+      }
+    }
+
+    footer {
+      h2 {
+        font-family:brown-pro-bold;
+        color:#666;
+        font-size: 18px;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-family:brown-pro-regular;
+        color:#666;
+        font-size: 14px;
+        line-height:21px;
+      }
+    }
+}
