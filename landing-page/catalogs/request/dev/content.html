@@ -1,6 +1,6 @@
 
 <!-- dev styles -->
-<link rel="stylesheet" type="text/css" href="../css/styles.css">  
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
 
 <div class="catalog-wrap">
 
@@ -15,6 +15,7 @@
 		<form name="contact_form" action="https://newsletter.teacollection.com/pub/rf" class="responsys">
 			<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGmRFvncR3RTdERcHWyC1HPT1h7UXUnVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGun9N3FGazeTYC5fpPC2hctN55DYhHn">
 			<input type="hidden" name="ACQUISITION_SOURCE" value="catalogform" />
+			<input type="hidden" form-name="Sign_Up_Form_CatalogRequest" />
 			<input type="hidden" name="POSTAL_PERMISSION_STATUS_" value="I">
 			
 			<div>
@@ -86,13 +87,13 @@
 
 
 <!--toolkit -->
-<!-- {literal}
+{literal}
 <style>
 	include "../css/styles.css" 
 </style>
-{/literal} -->
+{/literal}
 
-<!-- {literal} -->
+{literal}
 <script>
 jQuery(document).ready(function() {
 	jQuery('#optin').change(function(){
@@ -106,9 +107,9 @@ jQuery(document).ready(function() {
 
 	//add the states
 	$.getJSON("https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json", function(result){
-    	console.log(result);
+    	// console.log(result);
     	$.each(result, function(i,val){
-    		console.log(val.name);
+    		// console.log(val.name);
     		switch(val.name){
     			case 'American Samoa':
     			case 'Federated States Of Micronesia':
@@ -241,7 +242,7 @@ jQuery(document).ready(function() {
 	});
 });
 </script>
-<!-- {/literal} -->
+{/literal}
 
 
 
