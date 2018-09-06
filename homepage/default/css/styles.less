@@ -1,5 +1,5 @@
 @mobile-grey: #666;
-@hp-font-color: #375A80;
+@hp-font-color: #506E90;
 
 /*------------------------------------------------------------------------*/
 
@@ -38,7 +38,7 @@
 	}
 
 	@media screen and (min-width:374px) and (max-width:376px) {
-    	bottom: -291px !important;
+    	bottom: -255px !important;
     	display:block !important;
     	//display:none !important;
 	}
@@ -148,7 +148,7 @@
 .c2, .c3, .c4, .c5, .c6, .c7 {
 	@media screen and (max-width:737px){
 		margin:0;
-		min-height:390px;
+		min-height:450px;
 	}
 
 	//overflow:hidden;
@@ -167,6 +167,7 @@
 			}
 
 			margin-bottom:9px;
+			max-width:100%;
 		}
 
 		p {
@@ -222,8 +223,9 @@
 	}
 
 	//background image
-	background:url('https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2018/0809/c1-d-v4.png') no-repeat top center;  
+	background:url('https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2018/0906/c1-d.png') no-repeat top center;  
 	
+	background-size:cover;
 	min-height:500px;
 	margin-bottom:10px;
 	color:#fff;
@@ -247,13 +249,17 @@
 
 		.m-image {
 			margin: 0 0 40px;
+
+			img {
+				max-width:100%;
+			}
 		}
 
 		width: 329px;
-    	margin-top: 225px;
+    	margin-top: 79px;
     	float: left;
     	text-align: left;
-    	padding-left: 76px;
+    	padding-left: 37px;
     	box-sizing: border-box;
 
 		h2 {
@@ -263,11 +269,12 @@
 			}
 
 			font-size: 60px;
-    		font-family: brown-pro-bold; 
+    		font-family: brown-pro-bold;
     		line-height: 60px;
-    		text-align:right;
-    		padding-right:34px;
-    		color:#fff;
+    		text-align: left;
+    		padding-right: 34px;
+    		color: #fff;
+    		margin-left:-5px;
 
     		span {
     			font-family:brown-pro-bold; 
@@ -289,13 +296,14 @@
     			font-size: .9em;
     			line-height: 18px;
     			font-family: brown-pro-regular;
+    			letter-spacing:.1px;
 			}
 
 			font-size: 21px;
-			line-height:22px;
-    		text-align: right;
+    		line-height: 26px;
+    		text-align: left;
     		padding-right: 29px;
-    		letter-spacing: 0.3px;
+    		letter-spacing: .3px;
     		margin: 6px 0 2px 0;
 			
 			
@@ -335,12 +343,17 @@
     			top: 0;
     			height: 30px;
 
-    			//4 cta
-    			
-    			&.cta3, &.cta4 {
-    				margin:13px 3% 1px 0;
+    			//moved ctas around and 2nd cta full width
+    			&.cta2 {
+    				margin: 14px auto 0 auto;
+    				width: 88%;
+    				left: 0;
     			}
     			
+			}
+
+			&:first-of-type {
+				margin:21px 0 0 0;
 			}
 
 			&.tween {
@@ -365,13 +378,12 @@
 			}
 
 			color: @hp-font-color; 
-			//color:#598bad;
-			margin: 20px 0 0 0;
-    		border:none;
-    		width: 200px;
+    		margin: 20px 0 0 0;
+    		border: none;
+    		width: 250px;
     		background: #fff;
-    		top:5px;
-    		left:-38px;
+    		padding: 13px 0 0 0;
+    		letter-spacing: 1px;
     		
 		}
 	}
@@ -398,6 +410,11 @@
 				}
 				*/
 
+				//2 cta stacked
+				&:last-of-type {
+					margin:15px 0 0 0 !important;
+				}
+
     			//2 column cta
     			/*
     			width: 42%;
@@ -406,6 +423,11 @@
     			margin-top: 5px;
     			*/
     			
+			}
+
+			//2 cta stacked
+			&:last-of-type {
+				margin:20px 0 0 0;
 			}
 
 
@@ -499,6 +521,16 @@
     			left: 6.5%;
     			margin-top: 4px;
     			*/
+
+    			//2 cta stacked
+    			&:last-of-type {
+    				margin:15px 0 0 0 !important;
+    			}
+			}
+
+			//2 cta stacked
+			&:last-of-type {
+				margin:20px 0 0 0;
 			}
 
 
@@ -844,7 +876,7 @@
 	}
 
 	clear:both;
-	padding: 12px 0 0 0;
+	padding: 5px 0 0 0;
 	//margin-top:10px;
 	//float:left;
 	//width:100%;
