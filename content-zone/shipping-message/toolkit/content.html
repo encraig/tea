@@ -1,0 +1,76 @@
+
+<div class="shipping-message">
+	
+	<!--
+	<p style="color:#e0645a !important;"></p>
+	-->
+
+	<!--
+	<div style="margin-top:10px; color:#918075 !important;">Due to California wildfires, shipments to select <u class="show-codes">zip codes</u> may be delayed.</div> 
+	-->
+
+	<p>You may experience shipping delays if you are in areas impacted by storms. Please visit <a href="https://about.usps.com/news/service-alerts/welcome.htm" target="_blank">USPS Service Alerts</a> to find out more about service interruptions in your area.</p>
+
+</div>
+
+{literal}
+<style>
+	.shipping-message{font-size:15px;line-height:21px}.shipping-message p,.shipping-message a{color:#e0645a;font-family:brown-pro-bold}.shipping-message a{text-decoration:underline}/*# sourceMappingURL=styles.css.map */
+</style>
+{/literal}
+
+{literal}
+<script>
+$(document).ready(function(){
+	var date = new Date();
+	var month = date.getMonth() + 1;
+	var day = date.getDate();
+
+	//for dev
+	//month = 1;
+	//day = 19;
+
+	//if December
+	//if(month == 12){
+		//if day is less then 18
+		//if(day < 18){
+			//$('.harvey p').text('Need it before 12/25? Select expedited shipping (3-5 Business Days) during checkout.');
+		//}
+		// else if greater than 18
+		//else if(day == 18){
+			//$('.harvey p').text('Need it before 12/25? Select 2 Business Day shipping during checkout');
+		//}
+	//}
+
+	//----------------------------------------------------------------
+
+	//array of zipcodes
+	var zipCodes = [93001,93013,93022,93023,93024,93060,93061,93067,93101,93103,93105,93106,93108,93109,93110,93117,];
+
+
+	//----------------------------------------------------------------
+
+	//open new window for zip codes on click
+	$('.show-codes').click(function(){
+		
+		var message = $('<style>.zips{list-style-type:none;}.zips li{padding: 10px;}.zips li:nth-of-type(odd){background:#e0645a;}</style><h1>California affected zip codes</h1><ul class="zips"></ul>');
+
+		
+		$(zipCodes).each(function(i,val){
+			$(message[2]).append('<li>'+val+'</li>');
+		});
+				
+
+		var newWindow = window.open("","", "top=0, width=500, height=500");
+		newWindow.document.write(message[0].outerHTML + message[1].outerHTML + message[2].outerHTML);
+	});
+
+	//on hover show pointer
+	$('.show-codes').hover(function(){
+		$(this).css('cursor','pointer');
+	},function(){
+		$(this).css('cursor','none');
+	});
+});
+</script>
+{/literal}
