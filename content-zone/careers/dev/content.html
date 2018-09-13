@@ -29,8 +29,8 @@ $(document).ready(function(){
 	var apiUrl = 'https://api.lever.co/v0/postings/teacollection';
 	//get all the job listings
 	$.get(apiUrl+'?mode=json', function(data){
-		// console.log('all jobs');
-		// console.log(data);
+		console.log('all jobs');
+		console.log(data);
 
 		var jobs = data;
 		$(jobs).each(function(i,val){
@@ -52,19 +52,20 @@ $(document).ready(function(){
 			var jobId = $(this).attr('data');
 			//get the clicked job
 			$.get(apiUrl+'/'+jobId, function(job){
-				// console.log('single job');
-				// console.log(job);
+				console.log('single job');
+				console.log(job);
 
 				//hide the original page content
 				$('.careers-welcome').hide();
 
 				//show the clicked job content
 				var backTo = '<p class="all-jobs"><a href="#">Back to All Jobs</a></p>';
-				var jobTitle = '<h2><span>'+job.text+'</span> <span><a href="'+job.applyUrl+'" target="_blank">apply</a></span></h2>';
-				var jobLocation = '<p>'+job.categories.location+' '+job.categories.team+' '+job.categories.commitment+'</p>'
-				var jobDesc = '<p>'+job.descriptionPlain+'</p>';
-				var jobFooter = '<p class="job-footer">'+job.additionalPlain+'</p>';
-				var jobApply = '<h2><a href="'+job.applyUrl+'" target="_blank">apply</a></h2>'
+				var jobTitle = '<h2>'+job.text+'</h2>';
+				var jobApply = '<h2 style="margin: 10px 0"><a href="'+job.applyUrl+'" target="_blank">apply</a></h2>';
+				var jobLocation = '<p>'+job.categories.location+'<br> '+job.categories.team+'<br> '+job.categories.commitment+'</p>' + jobApply;
+				var jobDesc = job.description;
+				var jobFooter = job.additional;
+				
 
 				var jobContent = backTo + jobTitle + jobLocation + jobDesc;
 
