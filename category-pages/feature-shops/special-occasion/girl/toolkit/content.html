@@ -1,0 +1,45 @@
+ 
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
+
+<!-- mobile breadcrumb for dev -->
+<!-- 
+<div class="breadcrumb breadcrumb-c" itemprop="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"> <span typeof="v:Breadcrumb"> <a itemprop="url" rel="v:url" property="v:title" href="https://m.teacollection.com/">Home</a> </span><span typeof="v:Breadcrumb"> / <a href="https://m.teacollection.com/girls-clothing">Girl</a></span><span typeof="v:Breadcrumb"> / <a href="https://m.teacollection.com/girls-clothing/favorites/customer-favorites" class="last">Customer Favorites</a></span></div> -->
+ 
+<!-- desktop ref --> 
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/girl/bg-d.png" class="ref" />  -->
+
+<!-- mobile ref -->
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/girl/bg-m.png" class="ref" /> -->
+
+<div class="dept-cat">
+
+	<h3 class="mobile title">Special Occasion</h3>
+
+	<!-- desktop image --> 
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/girl/image-d.png" alt="special occasion" />
+
+	<!-- mobile image --> 
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/girl/image-m.png" alt="special occasion" />
+
+
+</div>
+
+<!-- toolkit -->
+<style>
+	.ref{position:absolute;opacity:.5;max-width:100%;top:-69px;z-index:9999}@media screen and (max-width:737px){.ref{top:-122px}}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .breadcrumb-c{padding-top:13px}@media screen and (max-width:737px){.dept-girls-clothing{display:none}}@media screen and (max-width:737px){.dept-cat{margin:-9px 0 23px 0}}.dept-cat .title{font-family:brown-pro-bold;font-size:22px;line-height:18px;text-align:center;color:#666;margin:0 0 13px 0;letter-spacing:.4px}.dept-cat img{max-width:100%}/*# sourceMappingURL=styles.css.map */
+</style>
+
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<script>
+$(document).ready(function() {
+	// $('img[usemap]').rwdImageMaps();
+
+	//mobile hide heading
+	if($(window).width() < 737){
+		$('.common-wrap .heading-category').hide();
+	} else {
+		$('.inline-header').text('');
+	}
+});
+</script>

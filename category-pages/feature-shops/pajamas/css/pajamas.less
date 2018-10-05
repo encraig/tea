@@ -2,9 +2,14 @@
 @page-font-color: #666;
 
 .ref {
+	@media screen and (max-width:737px){
+		top: -136px;
+	}
+
 	position:absolute;
 	opacity:.5;
 	display:none;
+	max-width:100%;
 }
  
 .my-account, .midbox {
@@ -21,6 +26,11 @@
 	@media screen and (max-width:737px){
 		display:none;
 	}
+}
+
+.heading-category {
+	font-family:brown-pro-bold !important;
+	font-weight:normal !important;
 }
 
 .main-content {
@@ -125,7 +135,7 @@
 //styles
 .pj-container {
 	@media screen and (max-width:737px){
-		margin: 0 0 15px;
+		margin: -4px 0 23px;
 	}
 
 	img {

@@ -1,24 +1,15 @@
 
 <!-- dev styles css -->
-<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/pajamas.css"> -->
+
+<!-- ref image -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/pajamas/bg-m.png" alt="" /> -->
  
 <div class="pj-container"> 
-   <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0712/pajamas-d.png" alt="the pj shop Equip them for extra cuddles with jammies and nighties in dreamy prints." usemap="#pj-d" />
-   <map name="pj-d">
-      <area  alt="" title="" href="/girls-pajamas-sleepwear" shape="rect" coords="620,236,805,282" style="outline:none;" target="_self"     />
-      <area  alt="" title="" href="/boys-pajamas-sleepwear" shape="rect" coords="616,296,807,341" style="outline:none;" target="_self"     />
-      <area  alt="" title="" href="/baby-girl-pajamas" shape="rect" coords="617,355,803,399" style="outline:none;" target="_self"     />
-      <area  alt="" title="" href="/baby-boy-pajamas" shape="rect" coords="613,413,807,458" style="outline:none;" target="_self"     />
-   </map>
+   <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/pajamas/pajamas-d.png" alt="the pj shop Equip them for extra cuddles with jammies and nighties in dreamy prints." usemap="#pj-d" />
 
-   <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0712/pajamas-m.png" alt="the pj shop Equip them for extra cuddles with jammies and  nighties in dreamy prints."/>
-   <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0712/pajamas-cta-m.png" alt="" usemap="#pj-m" />
-   <map name="pj-m">
-        <area  alt="" title="" href="/girls-pajamas-sleepwear" shape="rect" coords="39,110,365,178" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/boys-pajamas-sleepwear" shape="rect" coords="385,112,709,178" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-girl-pajamas" shape="rect" coords="39,200,364,269" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-boy-pajamas" shape="rect" coords="384,201,709,270" style="outline:none;" target="_self"     />
-   </map>
+   <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/pajamas/pajamas-m.png" alt="the pj shop Equip them for extra cuddles with jammies and  nighties in dreamy prints."/>
+
 </div>
 
 <!--toolkit-->
@@ -72,18 +63,21 @@ $(document).ready(function(){
     //remove .item.cell because of the way the page reloads twice
     $('.item.cell').remove();
 
-    src = 'https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0712/pajamas-cell-d.png';
+    src = 'https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/pajamas/pajamas-cell-v2.png?nocache=1';
 
     $('.items-list-wrapper .item').eq(3).before('<section class="item cell" style="overflow:hidden"><img src="'+ src +'" alt="'+ alt +'" style="max-width:100%;"></section>');
   } 
   //mobile
   else {
+    //change header text
+    $('.common-wrap .heading-category').text('The PJ Shop');
+
     //remove .item.cell because of the way the page reloads twice
     $('.single-item-box.cell').remove();
 
-    src = 'https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0712/pajamas-cell-m.png';
+    src = 'https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/pajamas/pajamas-cell-v2.png?nocache=1';
 
-    $('.thumb-wrapper .single-item-box').eq(3).before('<div class="single-item-box cell" style="overflow:hidden"><img src="'+ src +'" alt="'+ alt +'" style="max-width:100%;"></div>');
+    $('.thumb-wrapper .single-item-box').eq(3).before('<div class="single-item-box cell" style="overflow:hidden"><img src="'+ src +'" alt="'+ alt +'" style="max-width:100%; width:97%"></div>');
   }
 }); 
 </script>  
