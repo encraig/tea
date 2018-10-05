@@ -17,7 +17,7 @@ module.exports = function(grunt){
 
       // CONTENT CELL TAKE OVER ---------------------------------------------------------------------------
       Cell: {
-        files: ['content-cell/<%= cell.name %>/<%= cell.date %>/css/*.less', 'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/dev/*.html', 'content-cell-take-over/<%= cell.name %>/<%= cell.date %>/js/*.js'],
+        files: ['content-cell/<%= cell.name %>/<%= cell.date %>/css/*.less', 'content-cell/<%= cell.name %>/<%= cell.date %>/dev/*.html', 'content-cell/<%= cell.name %>/<%= cell.date %>/js/*.js'],
         tasks: ['less:cellCSS', 'includes:cellIncludes', 'concat:cell'],
       },
 

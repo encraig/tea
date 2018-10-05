@@ -26,6 +26,15 @@ module.exports = function(grunt){
           src:['*.js'],
           dest:'landing-page/<%= landing.name %>/<%= landing.date %>/js/output/',
           ext:'.min.js',
+        },
+
+        contentCellScripts: {
+          //dynamic files
+          expand:true,
+          cwd:'content-cell/<%= cell.name %>/<%= cell.date %>/js',
+          src:['*.js'],
+          dest:'content-cell/<%= cell.name %>/<%= cell.date %>/js/output/',
+          ext:'.min.js',
         }
   	}
 };
