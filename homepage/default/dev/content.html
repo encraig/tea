@@ -194,7 +194,7 @@
 
 	<!-- vimeo video -->
 <div class="vimeo">
-	<iframe src="https://player.vimeo.com/video/279355858" id="vimeo" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+	<iframe src="https://player.vimeo.com/video/293460414" id="vimeo" style="max-width:100%;" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
 
@@ -368,9 +368,9 @@ $(document).ready(function() {
 
 			if(val.cell == '.c2' || val.cell == '.c3' || val.cell == '.c4'){
 				//add the url & alt to <a> with .cta1
-				$(val.cell).find('a.cta1').html('<span>special occasion</span> ' + val.cta1.text).attr({href: val.cta1.url, alt: altCta1});
+				$(val.cell).find('a.cta1').html(val.cta1.text + ' <span>special occasion</span>').attr({href: val.cta1.url, alt: altCta1});
 				//add the url & alt to <a> with .cta2
-				$(val.cell).find('a.cta2').html('<span>special occasion</span> ' + val.cta2.text).attr({href: val.cta2.url, alt: altCta2});
+				$(val.cell).find('a.cta2').html(val.cta2.text + ' <span>special occasion</span>').attr({href: val.cta2.url, alt: altCta2});
 			}
 		}
 
