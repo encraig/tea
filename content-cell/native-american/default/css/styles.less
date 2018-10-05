@@ -5,10 +5,17 @@ section#breadcrumbs {
 }
 
 .ref {
+	@media screen and (max-width:737px){ 
+		top: -138px;
+	}
+
 	position:absolute;
 	top:-9px;
 	left:0;
 	opacity:.5;
+	max-width: 100%;
+    z-index: 9999;
+    
 }
 
 .my-account h1, .midbox h1 {
@@ -316,7 +323,7 @@ section#breadcrumbs {
 
 .gift-shop-container {
 	@media screen and (max-width: 737px){
-		//margin-top: 0;
+		margin-top: 0;
 	}
 
 	overflow:hidden;

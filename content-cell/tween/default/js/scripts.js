@@ -21,28 +21,19 @@ jQuery(document).ready(function() {
     	var baseUrl = 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/headers/180118/tween/';
 
         //url to images
-        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/0726/';
+        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/1004/tween/';
 
         //the content cell take over
         var images = [
-            {num:1, img:'c1.png?nocache=2', url:'/tween-girls-clothing/favorites/back-to-school', target:''},
+            {num:1, img:'c1-v2.png', url:'/tween-girls-clothing/favorites/special-occasion', target:''},
             {num:6, img:'c6.png', url:'', target:''},
-            {num:10, img:'c10.png?nocache=2', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
-            {num:17, img:'c17.png', url:'', target:''},
-            {num:22, img:'c22.png?nocache=2', url:'field-notes-d.pdf', target:'_blank'},
-            // {num:29, img:'c29.png', url:'', target:''},
-            // {num:22, img:'c22.png', url:'field-notes-d.pdf', target:'_blank'},
-            // {num:25, img:'c25.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
-            {num:30, img:'c30.png', url:'', target:''},
-            // {num:32, img:'c32.jpg', url:'', target:''},
+            {num:11, img:'c11.png', url:'', target:'_blank'},
+            {num:13, img:'c13-v2.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
+            {num:18, img:'c18.png', url:'', target:''},
+            {num:22, img:'c22-v2.png', url:'field-notes-d.pdf', target:'_blank'},
+            
             // {num:34, img:'c34.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
-            // {num:37, img:'c37.png', url:'field-notes-d.pdf', target:'_blank'},
-            // {num:38, img:'c38.png', url:'', target:''},
-            // {num:45, img:'c45.jpg', url:'', target:''},
-            {num:46, img:'c46.png', url:'', target:''},
-            // {num:49, img:'c49.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
-            // {num:53, img:'c53.png', url:'', target:''},
-            {num:62, img:'c62.png', url:'', target:''},
+           
         ];
 
        // console.log(images);
@@ -115,7 +106,7 @@ jQuery(document).ready(function() {
     			// element has url 
     			if(url !== ''){
     		
-                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+target+'"><img src="'+ baseUrl + imgSrc +'" alt="content cell" style="max-width:100%"></a></div>';
+                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+target+'"><img src="'+ baseUrl + imgSrc +'" alt="content cell" style="max-width:100%; width:97%;"></a></div>';
     			} 
                 // element doen't have url
                 else {
