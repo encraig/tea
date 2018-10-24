@@ -3,6 +3,21 @@ var theItems;
 
 jQuery(document).ready(function() {
 
+    //nav code to fix the duplicates
+    var removeDup = function(elem){
+        $.each(elem, function(i,val){
+            if(i !== 0){
+                $(val).remove();
+            }
+        });
+    };
+
+    var nav = $('#new-sticky-header').find('.header-left');
+    var logo = $('#new-sticky-header').find('a[title="Tea Collection"]');
+
+    removeDup(nav);
+    removeDup(logo);
+
     //desktop
     if($(window).width() > 737){
        theItems = $('.items-list-wrapper .item').length; 
