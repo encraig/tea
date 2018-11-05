@@ -1,0 +1,105 @@
+@color_1: #333333;
+@color_2: #666666;
+@color_3: #e05a24;
+@color_4: #f00;
+@font_family_1: brown-pro-bold;
+
+.title {
+	color: @color_1;
+	font-size: 22px;
+	font-weight: normal;
+	padding: 0 0 10px;
+	text-align: center;
+	text-transform: uppercase;
+	//display: none !important;
+}
+.customer-service-2 {
+	color: @color_2 !important;
+	float: left;
+	width: 800px;
+	a {
+		color: @color_3 !important;
+		text-decoration: underline;
+	}
+	ul {
+		padding-left: 15px;
+		list-style-type: disc;
+		box-sizing: border-box;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	h2 {
+		font-family: @font_family_1 !important;
+		letter-spacing: 1px !important;
+		margin: 20px 0 !important;
+		font-weight: normal !important;
+		font-size: 34px !important;
+		color: @color_2 !important;
+	}
+	h3 {
+		font-family: @font_family_1 !important;
+		font-weight: normal !important;
+		font-size: 18px !important;
+		margin: 20px 0 !important;
+		line-height: 21px !important;
+		color: @color_2 !important;
+	}
+	h4 {
+		font-family: @font_family_1 !important;
+		text-transform: uppercase !important;
+		text-decoration: none !important;
+		font-size: 15px !important;
+		letter-spacing: 1px !important;
+		font-weight: normal !important;
+		line-height: 21px !important;
+		margin-bottom: 20px !important;
+		color: @color_2 !important;
+	}
+	p {
+		margin: 0 0 20px 0 !important;
+		font-size: 15px !important;
+		line-height: 21px !important;
+		color: @color_2 !important;
+	}
+}
+.shipping-tables {
+	width: 100%;
+	font-size: 15px;
+	line-height: 21px;
+	td {
+		border: 1px solid @color_2 !important;
+		padding: 2px 5px;
+		vertical-align: middle;
+		color: @color_2;
+		width: 30%;
+		box-sizing: border-box;
+		span {
+			color: @color_4;
+			font-family: @font_family_1 !important;
+		}
+	}
+}
+@media screen and (max-width:737px) {
+	.customer-service-2 {
+		float: none !important;
+		width: 100% !important;
+		padding: 20px !important;
+		box-sizing: border-box !important;
+		h3 {
+			font-size: 1.5em !important;
+		}
+		h4 {
+			font-size: 1em !important;
+		}
+		p {
+			font-size: 1em !important;
+		}
+	}
+	.shipping-tables {
+		width: 100% !important;
+		box-sizing: border-box !important;
+		max-width: 100% !important;
+		font-size: 1em !important;
+	}
+}
