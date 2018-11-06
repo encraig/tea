@@ -1,0 +1,143 @@
+
+section#breadcrumbs {
+	margin: 0 0 0 0 !important;
+	display:none;
+}
+
+.ref {
+	@media screen and (max-width:737px){
+		top: -123px;
+	}
+
+	position:absolute;
+	top: -70px;
+    left: 0;
+	opacity:.5;
+	z-index:9999;
+	max-width:100%;
+	display:none;
+}
+
+.my-account h1, .midbox h1, #content-wrapper .common-wrap {
+	display:none;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+.desktop {
+	@media screen and (max-width:736px){
+		display:none !important;
+	}
+}
+
+.mobile {
+	display:none !important;
+	@media screen and (max-width:736px){
+		display:block !important;
+	}
+}
+
+.cta {
+		@media screen and (max-width:737px){
+			width: 42%;
+			height:30px;
+    		left: 0px;
+    		padding: 6px 0;
+    		font-size: .8em;
+    		letter-spacing:.6px;
+		}
+
+	display: inline-block;
+	font-family: brown-pro-bold !important;
+    border: 1px solid;
+    width: 200px;
+    height: 39px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height:16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0;
+    text-align:center;
+}
+
+.top {
+	
+}
+
+.top, .gift-shop-container {
+	img {
+		max-width:100%;
+	}
+}
+
+.gift-shop-container {
+	@media screen and (max-width: 737px){
+		margin-top:23px;
+	}
+
+	margin-top:41px;
+
+	img {
+		image-rendering: -webkit-optimize-contrast;
+		max-width:100%;
+	}
+
+	ul {
+		overflow:hidden;
+
+		li {
+			@media screen and (max-width:737px){
+    			width: 49%;
+    			margin: 0 2% 57px 0;
+			}
+			
+			float:left;
+			width: 494px;
+			margin:0 12px 6px 0;
+			list-style-type:none;
+
+			&:nth-of-type(even){
+				margin-right:0;
+			}
+
+			a {
+				text-decoration:none;
+				position:relative;
+
+				&:hover, &:active {
+					.cta {
+						background:#fff;
+						color: #005C7C;
+					}
+				}
+
+				.cta {	
+					@media screen and (max-width:737px){
+						position:relative;
+						left:0;
+						top:4px;
+						border: 1px solid;
+						margin: 20px auto 0;
+						display:block;
+						width:86%;
+						background:#fff;
+						color:#005C7C;
+					}
+
+					position:absolute;
+					bottom:79px;
+					left:147px;
+					border:none;
+					background:#005C7C;
+					color:#fff;
+				}
+			}
+		}
+	}	
+}
+
