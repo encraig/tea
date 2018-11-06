@@ -17,8 +17,18 @@ $('.gift-it').click(function(e){
 	var sku8 = $(div).attr('data-sku-8');
 	var sku9 = $(div).attr('data-sku-9');
 	var sku10 = $(div).attr('data-sku-10');
+	var sku11 = $(div).attr('data-sku-11');
+	var sku12 = $(div).attr('data-sku-12');
+	var sku13 = $(div).attr('data-sku-13');
+	var sku14 = $(div).attr('data-sku-14');
+	var sku15 = $(div).attr('data-sku-15');
+	var sku16 = $(div).attr('data-sku-16');
+	var sku17 = $(div).attr('data-sku-17');
+	var sku18 = $(div).attr('data-sku-18');
+	var sku19 = $(div).attr('data-sku-19');
+	var sku20 = $(div).attr('data-sku-20');
 
-	var skus = [sku1, sku2, sku3, sku4, sku5, sku6, sku7, sku8, sku9, sku10];
+	var skus = [sku1, sku2, sku3, sku4, sku5, sku6, sku7, sku8, sku9, sku10, sku11, sku12, sku13, sku14, sku15, sku16, sku17, sku18, sku19, sku20];
 
 	// close svg element
 	var closeSvg = '<span class="close"><svg width="15" height="15" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>X to close</title><desc>Created using Figma</desc><g id="Canvas" transform="translate(4130 14276)"><g id="X to close"><g id="Rectangle"><use xlink:href="#path0_fill" transform="matrix(-0.707974 -0.706238 0.706284 -0.707928 -4129.23 -14261)" fill="#666666"/></g><g id="Rectangle"><use xlink:href="#path1_fill" transform="matrix(-0.706284 0.707928 -0.707974 -0.706238 -4115 -14261.8)" fill="#666666"/></g></g></g><defs><path id="path0_fill" d="M 0 0L 1.05949 0L 1.05949 20.1303L 0 20.1303L 0 0Z"/><path id="path1_fill" d="M 0 0L 1.05949 0L 1.05949 20.1303L 0 20.1303L 0 0Z"/></defs></svg></span>';
