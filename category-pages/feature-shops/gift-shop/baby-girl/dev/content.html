@@ -1,0 +1,119 @@
+ 
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
+ 
+<!-- ref --> 
+<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/bg-m.png" class="ref" />  
+
+<div class="wrap"> 
+	<header> 
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/top-d.png" class="desktop" alt="INSPIRE CLEVER CRITTERS"/>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/top-m.png" class="mobile" alt="INSPIRE CLEVER CRITTERS"/>
+	</header>
+
+	<div class="animal-lover">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image1-d.png" class="desktop" alt="INSPIRE CLEVER CRITTERS"/>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image1-m.png" class="mobile" alt="INSPIRE CLEVER CRITTERS"/>
+		<div class="pdps items-list-wrapper item"></div>
+	</div>
+
+	<div class="dreamer">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image2-d.png" class="desktop" alt="SUIT UP STAR GAZERS"/>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image2-m.png" class="mobile" alt="SUIT UP STAR GAZERS"/>
+		<div class="pdps items-list-wrapper item"></div>
+	</div>
+
+	<div class="explorer">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image3-d.png" class="desktop" alt="GEAR UP THRILL SEEKERS"/>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/baby-girl/image3-m.png" class="mobile" alt="GEAR UP THRILL SEEKERS"/>
+		<div class="pdps items-list-wrapper item"></div>
+	</div>
+</div>
+
+<!-- toolkit -->
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+{/literal}
+
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!-- bx slider development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
+
+<!-- bx slick development-->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/slick/slick.css"/>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/slick/slick-theme.css"/> -->
+
+<!-- bx slick production-->
+<script src="/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick.css"/>
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css"/>
+
+{literal}
+<script>
+$(document).ready(function() {
+
+	$('body').addClass('browse');
+
+	var output = function(elem, theData){
+		var theElem;
+		if($(window).width() > 737){
+			theElem = $(theData).find('.what[name="'+ elem +'"] section.item');
+		}
+		else {
+			theElem = $(theData).find('.what[name="'+ elem +'"] .single-item-box');
+
+			//change the image src
+			$.each(theElem, function(i,val){
+				var img = $(val).find('.image-box').find('img');
+				//in case there are two
+				$.each(img, function(j, obj){
+					var src = $(obj).attr('data-cfsrc');
+					var style = $(obj).attr('data-cfstyle');
+					$(obj).attr('src', src);
+					$(obj).attr('style', style);
+					$(obj).addClass('show');
+				});
+			});
+			
+		} 
+
+		$('.'+ elem +' .pdps').append(theElem);
+	};
+
+	// $('img[usemap]').rwdImageMaps();
+	$.get('https://www.teacollection.com/cms/gift-shop-skus/sku/1.html', function(data){
+		var theData = $(data).find('.baby-girl-skus');
+		// console.log(theData);
+
+		output('animal-lover', theData);
+		output('dreamer', theData);
+		output('explorer', theData);
+
+		//add class to quickview
+		$('.quickview-overlay').find('a').addClass('add2list');
+
+		//show hide quick view
+		$('section.item').hover(function(){ 
+            $(this).find('.quickview-overlay').show();
+         }, function(){
+            $(this).find('.quickview-overlay').removeAttr('style');
+         });
+
+		//start slideshow
+		$('.pdps').slick({
+			infinite:true,
+			slidesToShow:3,
+			arrows:false,
+			autoplay:true,
+			responsive:[{breakpoint: 737,settings: {slidesToShow: 2}}]
+		});
+
+	});
+});
+</script>
+{/literal}

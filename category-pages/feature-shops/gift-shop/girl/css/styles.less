@@ -1,0 +1,118 @@
+
+.ref {
+	@media screen and (max-width:737px){
+		top:-162px;
+	}
+
+	position:absolute;
+	opacity:.5;
+	max-width:100%;
+	top:-160px;
+	left:0; 
+	z-index:9999;
+	display:none;
+}
+
+.desktop {
+	@media screen and (max-width:737px){
+		display:none !important;
+	}
+}
+ 
+.mobile {
+	display:none !important;
+
+	@media screen and(max-width:737px){
+		display:block !important;
+	}
+}
+
+.show {
+	display:block !important;
+	visibility:visible !important;
+}
+
+.loading {
+	text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+body.browse .breadcrumb-c {
+	padding-top: 13px;
+}
+
+.heading-category {
+	line-height: 18px;
+    font-family: brown-pro-bold;
+    display: block;
+    padding: 0;
+    margin: -10px 0 13px 0;
+}
+
+//hide the default headers
+.main-content {
+	.inline-header, #view-mode, .sort-order, #infinite, #bottom  {
+		display:none;
+	}
+}
+#content-wrapper {
+	.common-wrap, .category-page, table {
+		display:none;
+	}
+}
+
+.wrap {
+	overflow:hidden;
+
+	img {
+		max-width:100%;
+	}
+
+	header {
+		@media screen and (max-width:737px){
+			margin:0 0 30px 0;
+		}
+
+		margin:0 0 40px 0;
+	}
+
+	.pdps {
+		@media screen and (max-width:737px){
+			margin:9px 0 34px 0 !important;
+		}
+
+		margin:11px 0 0 0 !important;
+	}
+
+}
+
+
+.slick-list {
+	@media screen and (max-width:737px){
+		padding:0 0 0 0 !important;
+	}
+
+	padding:0 0 60px 0 !important;
+}
+
+.slick-prev, .slick-next {
+	&:before {
+		color:transparent !important;
+	}
+
+	background:red !important;
+	z-index:9999;
+	width:30px !important;
+	height:30px !important;
+	top:35% !important;
+}
+.slick-prev {
+	left:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-left-arrow.png) no-repeat 0 0 !important;
+}
+.slick-next {
+	right:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-right-arrow.png) no-repeat 0 0 !important;
+}
