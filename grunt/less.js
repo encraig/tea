@@ -17,16 +17,31 @@ module.exports = function(grunt){
 
       // CONTENT CELL CSS ---------------------------------------------------------------------------
       cellCSS:{
-        files:{
-          'content-cell/<%= cell.name %>/<%= cell.date %>/css/styles.css': 'content-cell/<%= cell.name %>/<%= cell.date %>/css/styles.less'
-        }
+        // files:{
+        //   'content-cell/<%= cell.name %>/<%= cell.date %>/css/styles.css': 'content-cell/<%= cell.name %>/<%= cell.date %>/css/styles.less',
+
+        //   'content-cell/<%= cell.name %>/<%= cell.date %>/css/drop-down.css': 'content-cell/<%= cell.name %>/<%= cell.date %>/css/drop-down.less'
+        // }
+
+        expand: true,
+        cwd: 'content-cell/<%= cell.name %>/<%= cell.date %>/css/',
+        src: '*.less',
+        dest:'content-cell/<%= cell.name %>/<%= cell.date %>/css/',
+        ext: '.css',
       },
 
       // HOMEPAGE CSS ---------------------------------------------------------------------------
       hpCSS:{
-        files:{
-          'homepage/<%= hp.date %>/css/styles.css': 'homepage/<%= hp.date %>/css/styles.less'
-        }
+        // files:{
+        //   'homepage/<%= hp.date %>/css/styles.css': 'homepage/<%= hp.date %>/css/styles.less'
+        // }
+
+        expand: true,
+        cwd: 'homepage/<%= hp.date %>/css/',
+        src: '*.less',
+        dest:'homepage/<%= hp.date %>/css/',
+        ext: '.css',
+      
       },
 
       // CATEGORIES CSS ---------------------------------------------------------------------------
@@ -64,9 +79,14 @@ module.exports = function(grunt){
 
       // LANDING PAGES CSS ---------------------------------------------------------------------------
       landingPagesCSS: {
-        files: {
-          'landing-page/<%= landing.name %>/<%= landing.date %>/css/styles.css':'landing-page/<%= landing.name %>/<%= landing.date %>/css/styles.less',
-        }
+        // files: {
+        //   'landing-page/<%= landing.name %>/<%= landing.date %>/css/styles.css':'landing-page/<%= landing.name %>/<%= landing.date %>/css/styles.less',
+        // }
+        expand:true,
+        cwd:'landing-page/<%= landing.name %>/<%= landing.date %>/css/',
+        src:['*.less'],
+        dest:'landing-page/<%= landing.name %>/<%= landing.date %>/css/',
+        ext:'.css',
       },
 
 
