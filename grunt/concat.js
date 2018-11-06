@@ -8,9 +8,9 @@ module.exports = function(grunt){
       cell: {
         files: {
           //desktop
-          'content-cell/<%= cell.name %>/<%= cell.date %>/build/local-d.html': ['local-templates/desktop/header-get.html','local-templates/build/full-page.html','local-templates/desktop/footer-get.html'],
+          'content-cell/<%= cell.name %>/<%= cell.date %>/build/local-d.html': ['local-templates/desktop/header-get.html','local-templates/build/two-column-page.html','local-templates/desktop/footer-get.html'],
           //mobile
-          'content-cell/<%= cell.name %>/<%= cell.date %>/build/local-m.html': ['local-templates/mobile/header-get.html','local-templates/build/full-page.html','local-templates/mobile/footer-get.html'],
+          'content-cell/<%= cell.name %>/<%= cell.date %>/build/local-m.html': ['local-templates/mobile/header-get.html','local-templates/build/two-column-page.html','local-templates/mobile/footer-get.html'],
         }
       },
 
