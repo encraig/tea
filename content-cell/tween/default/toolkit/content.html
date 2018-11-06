@@ -3,14 +3,13 @@
 	.single-item-box img{max-width:100%}/*# sourceMappingURL=styles.css.map */
 </style>
 
-<img src="https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/1004/tween/tween-bg.png" alt="tween"  style="max-width:100%; margin-bottom: 10px;"/>
+<img src="https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/1101/tween/tween-bg.png" alt="tween"  style="max-width:100%; margin-bottom: 10px;"/>
 
 <script>
 
 	var theItems;
 
 	jQuery(document).ready(function() {
-
 	    //nav code to fix the duplicates
 	    var removeDup = function(elem){
 	        $.each(elem, function(i,val){
@@ -21,6 +20,7 @@
 	    };
 
 	    var nav = $('#new-sticky-header').find('.header-left');
+
 	    var logo = $('#new-sticky-header').find('a[title="Tea Collection"]');
 
 	    removeDup(nav);
@@ -44,41 +44,24 @@
 	    	var baseUrl = 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/headers/180118/tween/';
 
 	        //url to images
-	        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/1004/tween/';
+	        var baseUrl2 = 'https://www.teacollection.com/mas_assets/media/tea_collection/content-cells/2018/1101/tween/';
 
 	        //the content cell take over
 	        var images = [
-	            {num:1, img:'c1-v2.png', url:'/tween-girls-clothing/favorites/special-occasion', target:''},
+	            {num:1, img:'c1.png', url:'', target:''},
 	            {num:6, img:'c6.png', url:'', target:''},
-	            {num:11, img:'c11.png', url:'', target:'_blank'},
-	            {num:13, img:'c13-v2.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
-	            {num:18, img:'c18.png', url:'', target:''},
-	            {num:22, img:'c22-v2.png', url:'field-notes-d.pdf', target:'_blank'},
+	            {num:11, img:'c11.png', url:'', target:''},
+	            {num:17, img:'c17.png', url:'', target:''},
+	            {num:22, img:'c22.png', url:'', target:''},
+	            {num:24, img:'c24.png', url:'https://www.instagram.com/explore/tags/teastylesquad/', target:'_blank'},
+	            {num:29, img:'c29.png', url:'', target:''},
+	            {num:33, img:'c33.png', url:'field-notes-d.pdf', target:'_blank'},
 	            
 	            // {num:34, img:'c34.png', url:'http://blog.teacollection.com/behind-the-look', target:'_blank'},
 	           
 	        ];
 
 	       // console.log(images);
-
-	        //if mobile window width change
-	        // if($(window).width()< 737){
-	        //     $(window).resize(function(){
-	        //         //get the new height
-	        //         var height = Math.round($('.single-item-box')[1].getBoundingClientRect().height * 10)/10;
-
-	        //         //change the height on the items
-	        //         var items = $('.single-item-box');
-	        //         $(items).each(function(i,val){
-	        //             //if has class cell
-	        //             var yes = $(val).hasClass('cell');
-	        //             if(yes){
-	        //                 $(val).css({'height': height, 'overflow':'hidden'});
-	        //             }
-	        //         });
-	        //         // $('.single-item-box').hasClass('cell').css({'height': height, 'overflow':'hidden'});
-	        //     });
-	        // }
 
 	        //function to output to page
 	    	var outPut = function(num, url, imgSrc, baseUrl, target, prev){
@@ -105,18 +88,22 @@
 
 	                //output item to page
 	                if(num !== null){
-	                    if(num == 53){ 
-	                            
-	                        var addedItem = jQuery('.items-list-wrapper .item').length;
+	                    
+	                    jQuery('.items-list-wrapper .item').eq(prev).before(elem);
 
-	                        if(addedItem == 52){
-	                            jQuery('.items-list-wrapper .item').eq(51).after(elem);
-	                        }
+	                    //special situations uncomment if needed
+	                    // if(num == 53){ 
+	                            
+	                    //     var addedItem = jQuery('.items-list-wrapper .item').length;
+
+	                    //     if(addedItem == 52){
+	                    //         jQuery('.items-list-wrapper .item').eq(51).after(elem);
+	                    //     }
 	                           
-	                    } 
-	                    else {
-	                        jQuery('.items-list-wrapper .item').eq(prev).before(elem);
-	                    }  
+	                    // } 
+	                    // else {
+	                    //     jQuery('.items-list-wrapper .item').eq(prev).before(elem);
+	                    // }  
 	                }   
 	    		}
 
@@ -131,6 +118,12 @@
 	    		
 	                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><a href="'+ url +'" target="'+target+'"><img src="'+ baseUrl + imgSrc +'" alt="content cell" style="max-width:100%; width:97%;"></a></div>';
 	    			} 
+
+	                //special case of pdp resizing COMMENT THIS OUT
+	                else if(num == 1){
+	                    elem = '<div class="single-item-box cell" style="height:'+height+'px !important; overflow:hidden"><img src="'+ baseUrl + imgSrc + '" alt="content cell" style="max-width:100%; width:97%;"></div>';
+	                }
+
 	                // element doen't have url
 	                else {
 	    			
@@ -139,18 +132,22 @@
 
 	    			// output item to mobile page
 	                if(num !== null){
-	                    if(num == 53){ 
-	                            
-	                        var addedItem = jQuery('.thumb-wrapper .single-item-box').length;
 
-	                        if(addedItem == 51){
-	                            jQuery('.thumb-wrapper .single-item-box').eq(50).after(elem);
-	                        }
+	                    jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+	                    
+	                    //special situations uncomment if needed
+	                    // if(num == 53){ 
+	                            
+	                    //     var addedItem = jQuery('.thumb-wrapper .single-item-box').length;
+
+	                    //     if(addedItem == 51){
+	                    //         jQuery('.thumb-wrapper .single-item-box').eq(50).after(elem);
+	                    //     }
 	                           
-	                    } 
-	                    else if(num !== 16) {
-	                        jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
-	                    }  
+	                    // } 
+	                    // else if(num !== 16) {
+	                    //     jQuery('.thumb-wrapper .single-item-box').eq(prev).before(elem);
+	                    // }  
 	                    
 	                }
 	    		}
