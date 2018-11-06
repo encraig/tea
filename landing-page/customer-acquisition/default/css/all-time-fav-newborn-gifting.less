@@ -1,0 +1,174 @@
+.all-time-fav, .newborn-gifting {
+	@media screen and (max-width:737px){
+		padding: 23px 0 0px 0;
+	}
+
+    margin: 0;
+    padding: 32px 0 6px 0;
+    box-sizing: border-box;
+
+    h2 {
+    	@media screen and (max-width:737px){
+    		font-size:2.7em;
+    	}
+
+    	text-align:center;
+    	font-size:35px;
+    	color:#666;
+    }
+
+    h3 {
+    	text-align:center;
+    	font-size: 24px;
+    	color:#666;
+    	margin: 20px 0;
+    }
+
+    .bx-wrapper { 
+    	margin: 4px auto !important;
+
+		.bx-controls-direction {
+			a {
+				top:42% !important;
+				width: 30px !important;
+				height: 30px !important;
+			}
+		}
+	}
+
+    #infinite, #newborn-gifting {
+    	overflow:hidden;
+    	margin:19px 0 0 0;
+    	display:none;
+
+    	//desktop styles
+    	section {
+    		border:none !important;
+
+    		&.item {
+    			float:left;
+    			width:247px;
+    			height:355px;
+    			margin:0 4px 0 0;
+    		}
+
+    		header {
+    			height:247px;
+    			position:relative;
+    		}
+
+    		.promo-teaser-thumb {
+    			display:block;
+    			text-align:center;
+    		}
+
+    		&.clearfix {
+    			a {
+    				font-size:12px;
+    				text-decoration:none;
+    				color:#666;
+    				font-family:brown-pro-bold;
+    				font-weight:normal;
+
+    				&.more-colors {
+    					font-family:brown-pro-regular;
+    					font-size:9px;
+    					color:#999;
+    					text-transform:uppercase;
+    				}
+    			}
+
+    			p {
+    				text-align:center;
+    				font-size: 13px;
+    				font-family:brown-pro-bold;
+    				margin:4px 0 0 0;
+
+    				&.size {
+    					font-size:9px;
+    					font-family:brown-pro-regular;
+    					color:#999;
+    					text-transform:uppercase;
+    					margin: 1px 0 0 0;
+    				}
+    			}
+    		}
+
+    		footer {
+    			p {
+    				text-align:center;
+
+    				img {
+    					margin:0 auto;
+    				}
+    			}
+    		}
+    		
+    	}
+
+    	//mobile styles
+    	.single-item-box {
+    		//width:50% !important;
+    		margin:0 0 0 0;
+
+    		.single-item-box-inner {
+    			.desc-box {
+    				padding:13px 0 0 0;
+
+    				a {
+    					span {
+    						font-family:brown-pro-bold;
+    					}
+    				}
+
+    				.price-wrapper {
+    					.price {
+    						font-family:brown-pro-bold;
+    					}
+    				}
+
+    				.thumb-rating {
+    					img {
+    						margin:0 auto;
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
+.newborn-gifting {
+	@media screen and (max-width:737px){
+		padding:24px 0 0 0;
+	}
+
+	overflow:hidden;
+	padding: 32px 0 2px 0;
+
+	h2 {
+		position:relative;
+		left:0x;
+	}
+
+	//mobile styles
+	#newborn-gifting {
+		/*.single-item-box {
+    		width:8% !important;
+    		margin:0 0% 0 -2px;
+    	}*/
+	}
+    
+	.bx-wrapper {
+		@media screen and (max-width:737px){
+			margin:0 !important;
+		}
+
+		.bx-viewport {
+			@media screen and (min-width:737px){
+				overflow:visible !important;
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,154 @@
+.column-2 {
+	@media screen and (max-width:737px){
+		margin:25px 0 0 0;
+	}
+
+	overflow:hidden;
+	margin:44px 0 0 0;
+
+	div {
+		@media screen and (max-width:737px){
+			float:none;
+			margin:0 0 41px 0;
+			width:100%;
+			height:auto;
+		}
+
+		float:left;
+		margin:0 14px 0 0;
+		text-align:center;
+		width:493px;
+		height:324px;
+		position:relative;
+
+		a {
+			@media screen and (max-width:737px){
+				width:100%;
+				height:auto;
+				padding:0;
+			}
+
+			text-decoration:none;
+			display:block;
+			//width:493px;
+			//height:324px;
+			box-sizing: border-box;
+    		padding: 88px 0 0 0;
+
+    		&:hover {
+    			background: rgba(0,0,0,.3);
+
+    			span {
+    				background:none;
+    				color:#fff;
+    			}
+    		}
+
+			h2 {
+				color:#fff;
+				font-size:34px;
+				line-height:38px;
+				margin:0 0 2px 0;
+			}
+
+			p {
+				color:#fff;
+				font-family:brown-pro-bold;
+				font-size: 16px;
+				line-height: 20px;
+			}
+
+			span {
+				background:#fff;
+				border-color:#fff;
+				color:#666;
+				letter-spacing:1px;
+				margin: 24px 0 0 0;
+			}
+		}
+
+		&:first-of-type {
+			@media screen and (max-width:737px){
+				background: none;
+			}
+
+			background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/c5-d.png') no-repeat;
+			background-size: cover;
+
+			.grey-box {
+				width: 493px;
+				height:324px;
+				position:absolute;
+				background: rgba(0,0,0,.3);
+				top:0;
+				left:0 !important;
+				display:none;
+			}
+
+			h2 {
+				color:#fff;
+				font-size:34px;
+				line-height:38px;
+				margin:88px 0 2px 0;
+				position:relative;
+			}
+
+			p {
+				color:#fff;
+				font-family:brown-pro-bold;
+				font-size: 16px;
+				line-height: 20px;
+				z-index: 1;
+    			position: relative;
+			}
+
+			a {
+				@media screen and (max-width:737px){
+					padding:0;
+				}
+
+				//padding:111px 0 0 0;
+
+				background: #fff;
+    			border-color: #fff;
+    			color: #666;
+    			letter-spacing: 1px;
+    			margin: 25px 8px 20px 9px;
+    			padding: 12px 0 0 0;
+    			display:inline-block;
+			}
+
+			&:hover {
+				.grey-box {
+					display:block;
+				}
+
+				a {
+					&:hover {
+						background:none;
+						color:#fff;
+					}
+				}
+			}
+		}
+
+
+		&:last-of-type {
+			@media screen and (max-width:737px){
+				background:none;
+			}
+
+			background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/c6-d.png') no-repeat;
+			background-size: cover;
+			margin:0;
+
+			a {
+				@media screen and (max-width:737px){
+					height:auto;
+				}
+
+				height:324px;
+			}
+		}
+	}
+}

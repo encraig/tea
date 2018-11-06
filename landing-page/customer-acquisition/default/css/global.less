@@ -1,0 +1,189 @@
+.desktop {
+	@media screen and (max-width:737px){
+		display:none !important;
+	}
+}
+
+.mobile {
+	display:none !important;
+	@media screen and (max-width:737px){
+		display:block !important;
+	}
+}
+
+.common-wrap {
+    margin: 0px 0% 0px 0% !important; 
+}
+
+article.my-account>div section {
+	max-width:100%;
+	float:none;
+	width:auto;
+}
+
+.my-account h1, .midbox h1 {
+	display:none;
+}
+
+span.new-item {
+	top: 5px !important;
+}
+
+.ref2 {
+	position:absolute;
+	opacity:.5;
+	top:0;
+	z-index:9999;
+}
+
+.ref {
+	@media screen and (max-width:737px){ 
+		top:-123px;
+	}
+
+	position:absolute;
+	top:-69px;
+	left:0;
+	opacity:.5;
+	z-index:9999;
+	max-width:100%;
+	//display:none;
+}
+
+.cta {
+    @media screen and (max-width:737px){
+        width:88%;
+        padding: 6px 0 0 0;
+        font-size: .8em;
+        height: 30px;
+    }
+
+    display: inline-block;
+    font-family: brown-pro-bold !important;
+    border: 1px solid;
+    width: 200px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height:16px;
+    height:39px;
+    letter-spacing: .2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0 0 0px;
+    text-align:center;
+    box-sizing:border-box;
+}
+
+.padded {
+	padding:0 !important;
+}
+
+#content-wrapper .breadcrumb, #breadcrumbs {
+	display:none;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	border-radius: 5px !important; 
+	width: 7px !important;
+	height: 7px !important;
+	margin: 0 7px !important;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+	@media screen and (max-width:737px){
+		//bottom:20px !important;
+	}
+}
+
+.bx-wrapper { 
+	
+	&:hover {
+		.bx-controls-direction {
+			display:block;
+		}
+	}
+
+	.bx-controls-direction {	
+		@media screen and (max-width:737px){
+			display:none !important;
+		}
+
+		display:none;
+
+		a {
+			top:52% !important;
+			width: 30px !important;
+			height: 30px !important;
+		}
+	}
+
+	.bx-pager {
+		@media screen and (max-width:321px){
+			display:none !important;
+		}
+
+		display:block !important;
+	}
+
+	.bx-prev {
+		background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/slider-left-arrow.png') no-repeat 0 0 !important;
+		left:15px !important;
+	}
+	.bx-next {
+		background: url('https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/slider-right-arrow.png') no-repeat 0 0 !important;
+		right: 15px !important;
+	}
+}
+
+.top-scroll {
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+		@media screen and (max-width:737px){
+			bottom:20px !important;
+		}
+	}
+}
+
+.bottom-scroll {
+	.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+		@media screen and (max-width:737px){
+			bottom:-26px !important;
+		}
+	}
+}
+
+#tea-promo-subscribe {
+	display:none;
+}
+
+.new-item {
+	display:none;
+}
+
+.slick-list {
+	@media screen and (max-width:737px){
+		padding:0 0 0 0 !important;
+	}
+
+	padding:0 0 60px 0 !important;
+}
+
+.slick-prev, .slick-next {
+	&:before {
+		color:transparent !important;
+	}
+
+	background:red !important;
+	z-index:9999;
+	width:30px !important;
+	height:30px !important;
+	top:35% !important;
+}
+.slick-prev {
+	left:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/slider-left-arrow.png) no-repeat 0 0 !important;
+}
+.slick-next {
+	right:15px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/slider-right-arrow.png) no-repeat 0 0 !important;
+}
