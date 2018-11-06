@@ -1,0 +1,197 @@
+@import "var.less";
+
+.c1 {
+	@media screen and (max-width:737px){
+		background:none;
+		min-height:auto;
+		margin:0;
+	}
+
+	background: url(https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2018/1101/c1-d.png) no-repeat top center;
+    background-size: cover;
+    min-height: 500px;
+	margin-bottom:12px;
+	color:#fff;
+	
+
+	img {
+		max-width:100%;
+	}
+
+	h2 {
+		font-family: brown-pro-bold;
+		font-size: 21px;
+		line-height: 25px;
+		color:#666;
+		text-align:center;
+		margin: 11px 0 0 0;
+    	letter-spacing: 3px;
+	}
+
+	div {
+		@media screen and (max-width:737px){
+			width:100%;
+			float:none;
+			margin:0;
+			padding:0;
+			text-align:center;
+		}
+
+		overflow: hidden;
+    	margin: 185px 0 0 38px;
+    	box-sizing: border-box;
+    	padding: 0;
+    	width: 239px;
+    	float: left;
+
+
+		.text {
+			margin-top:146px;
+			position:relative;
+			left:4px;
+		}
+
+		.m-image {
+			margin: 0 0 40px;
+
+			img {
+				max-width:100%;
+			}
+		}
+
+		
+
+		h2 {
+			@media screen and (max-width:737px){
+				color:#7a7a7c;
+				display:inline;
+			}
+
+			font-size: 60px;
+    		font-family: brown-pro-bold;
+    		line-height: 60px;
+    		text-align: left;
+    		padding-right: 34px;
+    		color: #fff;
+    		margin-left:-5px;
+
+    		span {
+    			font-family:brown-pro-bold; 
+    			font-size:75px;   			
+    		}
+
+		}
+
+		p {
+			@media screen and (max-width:737px){
+				color: #666;
+    			margin: 0px 0 0 0;
+    			line-height: 18px;
+    			//left: -2px;
+    			top: -10px;
+    			position: relative;
+    			padding: 0 0 0 0;
+    			text-align: center;
+    			font-size: .9em;
+    			line-height: 18px;
+    			font-family: brown-pro-regular;
+    			letter-spacing:.1px;
+			}
+
+			font-size: 21px;
+    		line-height: 26px;
+    		text-align: left;
+    		padding-right: 29px;
+    		letter-spacing: .3px;
+    		margin: 6px 0 2px 0;
+			
+			
+		}
+
+		.cta {
+			@media screen and (max-width:737px){
+				float:none;
+
+				//.tween
+				&.tween {
+					width: 88%;
+    				margin: 14px auto 0 auto;
+    				left: 0;
+    				display:block !important;
+				}
+
+				//2cta full width
+				/*
+				width:88%;
+				border:1px solid @hp-font-color;
+				margin:49px 0 0 0;
+
+				&.cta2 {
+					margin:13px 0 0 0;
+				}
+				*/
+    			
+				//2 cta
+				
+    			width: 42%;
+    			left: 6px;
+    			margin: 0px 3% 15px 0;
+    			color:@hp-font-color;
+    			border-color:@hp-font-color;
+    			border:1px solid @hp-font-color;
+    			background:#fff;
+    			padding: 6px 0 0 0;
+    			top: 0;
+    			height: 30px;
+
+    			&.cta3, &.cta4 {
+    				left:0;
+    				margin: 0 3% 1px 0;
+    			}
+
+    			//moved ctas around and 2nd cta full width
+    			/*
+    			&.cta2 {
+    				margin: 14px auto 0 auto;
+    				width: 88%;
+    				left: 0;
+    			}
+    			*/
+    			
+			}
+
+			color: @hp-font-color; 
+    		margin: 0 0 19px 0;
+    		border: 1px solid #fff;
+    		width: 200px;
+    		background: #fff;
+    		padding: 11px 0 0 0;
+    		letter-spacing: 1px;
+    		float: left;
+
+
+			&:nth-of-type(6) {
+				@media screen and (max-width:737px){
+					margin-right:0;
+				}
+
+				margin:0;
+			}
+
+			&:hover, &:active {
+				@media screen and (max-width:737px){
+					//background:#fff;
+					//color:@hp-font-color;
+				}
+
+				background: @hp-font-color;
+    			color: #fff;
+    			border: 1px solid @hp-font-color;
+			}
+
+
+    		
+		}
+	}
+
+} // end of .c1
