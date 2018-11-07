@@ -1,7 +1,7 @@
 <!--toolkit -->
 <style>
 	include "../css/styles.css"
-</style> 
+</style>
 
 <!-- dev styles -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
@@ -9,20 +9,20 @@
 <div class="sale-content">
     <h2 class="title mobile">sale</h2>
     <!-- ref -->
-    <!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-m2.png" /> -->
-    
-    <!-- <a href="/sale/girls-clothing" id="content-block"><div class="content-block">
+    <!-- <img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/categories/clothing-sale/170706/170706-d.png" style="position: absolute; opacity: .5; width: 840px;"/> -->
+
+    <a href="/sale/girls-clothing" id="content-block"><div class="content-block">
         <div></div>
         <h2>See what's new on <span>Sale</span></h2>
-    </div></a> -->
+    </div></a>
 
-    <a href="/sale/girls-clothing" class="desktop">
+    <!-- <a href="/sale/girls-clothing" class="desktop">
         <img src="/mas_assets/media/tea_collection/promos/20-off/2018/0910/180910-sale-d.svg" />
-    </a>
+    </a> -->
 
-    <a href="/sale/girls-clothing" class="mobile">
+    <!-- <a href="/sale/girls-clothing" class="mobile">
         <img src="/mas_assets/media/tea_collection/promos/20-off/2018/0910/180910-sale-m.svg" />
-    </a>
+    </a> -->
 
     <ul class="mobile-btns">
         <li><a href="/sale/girls-clothing/view-all" data="mobile">girl</a></li>
@@ -31,7 +31,7 @@
         <li><a href="/sale/baby-girl-clothes/view-all" data="mobile">baby girl</a></li>
         <li><a href="/sale/baby-boy-clothes/view-all" data="mobile">baby boy</a></li>
         <li><a href="/newborn-clothes/view-all" data="mobile">newborn</a></li>
-        
+
     </ul>
 
     <div id="details-html-editor">
@@ -66,7 +66,7 @@
 
 		/*************************************************************************************/
 
-		
+
     //get the fine print from the banner
     var promoStr = $('#details-promo p').html();
 
@@ -81,13 +81,11 @@
     var txt = $('.content-block h2').text();
     //add the alt attr to the <a> for GTM
     $('#content-block').attr('alt', txt);
-    
+
 
     $('.details-cta').click(function(e){
         e.preventDefault();
         $('.see-details-promo').slideToggle();
     });
-	});	
+	});
 </script>
-
-
