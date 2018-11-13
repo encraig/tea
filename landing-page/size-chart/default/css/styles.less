@@ -1,333 +1,309 @@
 .ref {
-	position:absolute;
-	opacity:.5;
+	position: absolute;
+	opacity: 0.5;
 	//top:84px;
-	display:none;
+	display: none;
 }
- 
-.my-account, .midbox {
-	h1 {
-		display:none;
-	}
-} 
 
-#simplemodal-container, #simplemodal-overlay {
-	display:none !important;
+.midbox,
+.my-account {
+	h1 {
+		display: none;
+	}
+}
+
+#simplemodal-container,
+#simplemodal-overlay {
+	display: none !important;
 }
 
 .sidebar.customer-service {
-	@media screen and (max-width:737px){
-		display:none;
+	@media screen and (max-width:737px) {
+		display: none;
 	}
 }
 
 .main-content {
-	@media screen and (max-width:737px){
-		float:none;
-		width:100%;
+	@media screen and (max-width:737px) {
+		float: none;
+		width: 100%;
 	}
-
-	float:left;
+	float: left;
 	width: 840px;
-	margin-top:0 !important;
+	margin-top: 0 !important;
 }
 
 .padded {
-	padding:0 !important;
+	padding: 0 !important;
 }
 
 aside#customer-service-menu {
-	@media screen and (max-width:737px){
-		display:none; 
+	@media screen and (max-width:737px) {
+		display: none;
 	}
-
-	width:160px !important;
-	padding:0 !important;
+	width: 160px !important;
+	padding: 0 !important;
 }
 
 section#size-chart-section {
-	@media screen and (max-width:737px){
-		width:100%;
+	@media screen and (max-width:737px) {
+		width: 100%;
 	}
-
-	width:840px;
+	width: 840px;
 }
 
 .mobile {
-	@media screen and (max-width:768px){
+	@media screen and (max-width:768px) {
 		display: inline-block !important;
 	}
-
-	display:none !important;
+	display: none !important;
 }
 
 .desktop {
-	@media screen and (max-width:768px){
-		display:none !important;
+	@media screen and (max-width:768px) {
+		display: none !important;
 	}
 }
 
 .align-center {
-	text-align:center;
-	font-size:12px;
+	text-align: center;
+	font-size: 12px;
 	margin-bottom: 20px;
 }
-
 //---------------------------------------------------------------
-
 .size-chart-container {
-	@media screen and (max-width:737px){
-		padding:0;
-		width:100%;
+	@media screen and (max-width:737px) {
+		padding: 0;
+		width: 100%;
 	}
-
 	padding: 0;
-	color:#666;
-	width:700px;
+	color: #666;
+	width: 700px;
 
 	h1 {
-		@media screen and (max-width:737px){
-			font-size:1.9em;
+		@media screen and (max-width:737px) {
+			font-size: 1.9em;
 			padding: 16px 0;
-			margin:0;
+			margin: 0;
 		}
-
 		text-align: center;
-    	font-size: 24px;
-    	text-transform: capitalize;
-    	font-weight: normal;
-    	font-family: brown-pro-bold !important;
-    	display:block;
-    	margin-top:19px;
+		font-size: 24px;
+		text-transform: capitalize;
+		font-weight: normal;
+		font-family: brown-pro-bold !important;
+		display: block;
+		margin-top: 19px;
 	}
 
 	.measure-take-over {
-		overflow:hidden;
-		display:none;
+		overflow: hidden;
+		display: none;
 
 		h2 {
-			font-family:brown-pro-bold !important;
-			font-weight:normal;
+			font-family: brown-pro-bold !important;
+			font-weight: normal;
 
-			&.measure, &.return {
+			&.measure,
+			&.return {
 				line-height: 1.8em;
 
 				&:hover {
-					cursor:pointer;
+					cursor: pointer;
 				}
 			}
 
 			&.measure {
-				@media screen and (max-width:737px){
-					font-size:2em;
-					padding:9px 0;
+				@media screen and (max-width:737px) {
+					font-size: 2em;
+					padding: 9px 0;
 				}
-
-				text-align:center;
+				text-align: center;
 				font-size: 24px;
 				padding: 3px 0;
-				margin:0;
-				letter-spacing:0;
-
+				margin: 0;
+				letter-spacing: 0;
 				//background: url(../images/close.png) no-repeat 24px center;
-
 				//background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 19px center;
 			}
 
 			&.return {
 				@media screen and (max-width:737px) {
 					font-size: 1.1em;
-    				margin: 0 auto;
-    				padding: 8px 0;
-    				width: 88%;
+					margin: 0 auto;
+					padding: 8px 0;
+					width: 88%;
 				}
-
 				text-align: center;
-    			font-size: 15px;
-    			text-transform: uppercase;
-    			margin-top: 5px;
-    			padding: 5px 0;
-    			letter-spacing: 2px;
-    			background:#666;
-    			color:#fff;
-    			box-sizing:border-box;
-    			border:1px solid #666;
-
-    			/*&:hover {
+				font-size: 15px;
+				text-transform: uppercase;
+				margin-top: 5px;
+				padding: 5px 0;
+				letter-spacing: 2px;
+				background: #666;
+				color: #fff;
+				box-sizing: border-box;
+				border: 1px solid #666;
+				/*&:hover {
     				color:#666;
     				background:#fff;
     			}*/
-
-    			svg {
-    				position:relative;
-    				top: 2px;
-    			}
+				svg {
+					position: relative;
+					top: 2px;
+				}
 			}
 		}
-		
-		.measure-content {
-			@media screen and (max-width:737px){
-				padding:0;
-			}
 
+		.measure-content {
+			@media screen and (max-width:737px) {
+				padding: 0;
+			}
 			padding: 0 55px;
 
 			img {
-				@media screen and (max-width:737px){
-					position:relative;
-					top:-16px;
-					z-index:-1;
+				@media screen and (max-width:737px) {
+					position: relative;
+					top: -16px;
+					z-index: -1;
 				}
-
 				//width:100%;
 			}
 
 			.text {
-				@media screen and (max-width:737px){
+				@media screen and (max-width:737px) {
 					padding: 4% 0 0 6%;
-					position:relative;
-					top:-36px;
+					position: relative;
+					top: -36px;
 				}
+				overflow: hidden;
+				background: #E6E7E8;
+				padding-bottom: 16px;
 
-				overflow:hidden;
-				background:#E6E7E8;
-				padding-bottom:16px;
-
-				.chest, .hips, .waist {
-					@media screen and (max-width:737px){
-						float:none;
-						width:100%;
-						padding:0;
-						margin-bottom:12px;
+				.chest,
+				.hips,
+				.waist {
+					@media screen and (max-width:737px) {
+						float: none;
+						width: 100%;
+						padding: 0;
+						margin-bottom: 12px;
 					}
-
-					float:left;
-					width:33%;
-					box-sizing:border-box;
-					padding-left:26px;
+					float: left;
+					width: 33%;
+					box-sizing: border-box;
+					padding-left: 26px;
 
 					h2 {
-						@media screen and (max-width:737px){
-							font-size:1em;
-							padding:0;
+						@media screen and (max-width:737px) {
+							font-size: 1em;
+							padding: 0;
 						}
-						font-size:15px;
-						padding:13px 0 0 0;
-						margin:0;
-						line-height:1.8em;
+						font-size: 15px;
+						padding: 13px 0 0;
+						margin: 0;
+						line-height: 1.8em;
 					}
 
 					p {
-						@media screen and (max-width:737px){
-							font-size:.9em;
-							padding:0;
-							line-height:19px;
+						@media screen and (max-width:737px) {
+							font-size: 0.9em;
+							padding: 0;
+							line-height: 19px;
 						}
-						font-size:13px;
-						padding:0;
-						line-height:18px;
+						font-size: 13px;
+						padding: 0;
+						line-height: 18px;
 					}
 				}
 
 				.waist {
-					@media screen and (max-width: 737px){
-						padding:0;
+					@media screen and (max-width: 737px) {
+						padding: 0;
 					}
-					padding-left:20px;
+					padding-left: 20px;
 				}
 			}
 		}
-		
-
-		
 	}
 
 	.dropdowns {
-		@media screen and (max-width:737px){
+		@media screen and (max-width:737px) {
 			padding: 0;
 		}
-
-		text-align:center;
-		padding: 20px 0 0 0;
+		text-align: center;
+		padding: 20px 0 0;
 		//overflow:hidden;
-		position:relative;
+		position: relative;
 
 		ul {
-			overflow:hidden;
-			position:absolute;
-
+			overflow: hidden;
+			position: absolute;
 			//background: url('../images/expand.png') no-repeat 30em 2em #fff;
-
 			//background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 21em 14px #fff;
-
-			background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 256px 14px #fff;
-
+			background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 256px 14px #fff;
 			//width:100%;
-
-			float:left;
-			width:285px;
-			height:40px;
-			margin:0 23px 0 0;
-			border:1px solid #D1D3D4;
-			box-sizing:border-box;
-			z-index:999;
-			
+			float: left;
+			width: 285px;
+			height: 40px;
+			margin: 0 23px 0 0;
+			border: 1px solid #D1D3D4;
+			box-sizing: border-box;
+			z-index: 999;
 
 			&.department {
 				//margin-left:66px;
-				left:55px;
+				left: 55px;
 			}
 
 			&.category {
 				//margin-right:0;
-				right:32px;
+				right: 32px;
 			}
 
 			li {
-				float:none !important;
-				width:100% !important;
+				float: none !important;
+				width: 100% !important;
 				padding: 11px 0;
-				margin:0 !important;
-				font-size:15px;
-				text-transform:capitalize;
-				font-family:brown-pro-bold !important;
+				margin: 0 !important;
+				font-size: 15px;
+				text-transform: capitalize;
+				font-family: brown-pro-bold !important;
 
 				&:first-of-type {
 					&:hover {
-						background:none;
-						color:#666;
+						background: none;
+						color: #666;
 					}
 				}
 
 				&:hover {
-					background:#666;
-					color:#fff;
-					cursor:pointer;
+					background: #666;
+					color: #fff;
+					cursor: pointer;
 				}
 			}
 		}
 
 		select {
-			@media screen and (max-width:737px){
+			@media screen and (max-width:737px) {
 				display: block !important;
-				border-radius:0;
-				margin:2px 0 16px 23px;
+				border-radius: 0;
+				margin: 2px 0 16px 23px;
 			}
-
 			-moz-appearance: window;
-    		-webkit-appearance: none;
-    		width: 88%;
-    		margin: 2px 0 13px 23px;
-    		padding: 10px;
-    		//background: #fff;
-    		background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 96% 14px #fff;
-			font-size:1.2em;
-    		text-transform: capitalize;
-    		font-family: brown-pro-bold !important;
-    		font-weight: normal;
-    		//font-size: 18px;
-    		border-color:#D1D3D4;
-    		color:#666;
+			-webkit-appearance: none;
+			width: 88%;
+			margin: 2px 0 13px 23px;
+			padding: 10px;
+			//background: #fff;
+			background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 14px #fff;
+			font-size: 1.2em;
+			text-transform: capitalize;
+			font-family: brown-pro-bold !important;
+			font-weight: normal;
+			//font-size: 18px;
+			border-color: #D1D3D4;
+			color: #666;
 
 			&.category {
 				//margin:0;
@@ -336,455 +312,411 @@ section#size-chart-section {
 	}
 
 	.measure-tips {
-		@media screen and (max-width:737px){
-    		//background-size: contain;
-
-    		//background-position: center -21px;
-    		//background-position: center 0;
-    		background-position: center -13px;
-
-    		//min-height: 376px;
-    		min-height: 350px;
-    		padding: 0;
-    		margin: 0;
+		@media screen and (max-width:737px) {
+			//background-size: contain;
+			//background-position: center -21px;
+			//background-position: center 0;
+			background-position: center -13px;
+			//min-height: 376px;
+			min-height: 350px;
+			padding: 0;
+			margin: 0;
 		}
-
 		background-repeat: no-repeat;
-		
 		//background-position: 50% 3px;
 		background-position: 54px 40px;
+		//min-height: 530px;
+		min-height: 480px;
+		background-size: auto;
+		overflow: hidden;
+		//padding: 23% 0 0 0;
+		padding: 196px 0 0;
+		box-sizing: border-box;
+		margin: 0 0 21px;
 
-    	//min-height: 530px;
-    	min-height: 480px;
-
-    	background-size: auto;
-    	overflow:hidden;
-
-    	//padding: 23% 0 0 0;
-    	padding: 196px 0 0 0;
-
-
-    	box-sizing: border-box;
-    	margin: 0 0 21px 0;
-
-    	div {
-    		@media screen and (max-width:737px){
-    			padding:0 !important;
-    			position:relative;
-    		}
-
-    		width:50%;
-    		float:left;
-    		box-sizing:border-box;
-
-    		h2 {
-    			font-size: 14px;
-    			font-family: brown-pro-bold !important;
-    			font-weight: normal;
-    			margin: 0px 0 0px 0;
-    			letter-spacing: .4px;
-    		}
-
-    		p {
-    			font-size: 13px;
-    			line-height: 17px;
-    		}
-
-    		.tips {
-    			@media screen and (max-width:737px){
-    				font-size:.8em;
-
-    				//left:0;
-    				left: 9px;
-
-    				//top: 247px;
-    				top:249px;
-
-    				//bottom:0; 
-
-    				position:relative;
-    				//position:absolute;
-
-    				line-height: 12px;
-    				padding: 38px 0;
-
-    				//background: url(../images/tips.png) no-repeat center 19px;
-
-    				background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips.png') no-repeat center 19px;
-    			}
-
-    			text-decoration: none;
-    			display: block;
-    			position: absolute;
-    			top: 185px;
-    			left: 85px;
-    			width: 87px;
-    			height: 87px;
-    			text-align: center;
-    			box-sizing: border-box;
-    			padding: 26px 0;
-    			font-size: 13px;
-    			color:#666;
-    			background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips-d.png') no-repeat center center;
-    			line-height:16px;
-    		}
-
-    		&:first-of-type {
-    			@media screen and (max-width:737px){
-    				h2, p {
-    					display:none;
-    				}
-    			}
-
-    			padding: 0 114px 0 0;
-    			text-align:right;
-    			position:relative;
-    		}
-
-    		&:last-of-type {
-    			@media screen and (max-width:737px){
-    				h2 {
-    					display:none;
-    				}
-
-    				p {
-    					text-align: center;
-    					font-size: .9em;
-
-    					//position: relative;
-    					position:absolute;
-
-    					//top: 234px;
-    					//top:219px;
-    					//top:239px;
-
-    					bottom: 23px;
-
-    					//left: 12px;
-    					left: 53px;
-
-    					line-height: 15px;
-    				}
-    			}
-
-    			padding: 0 0 0 116px;
-    		}
-
-    		&.baby-boy-swim {
-    			top:-59px !important;
-
-    			.top {
-    				top:-38px !important;
-    			}
-
-    			.bottom {
-    				top:2px !important;
-    			}
-
-    			.tips {
-    				top:185px !important;
-    			}
-    		}
-
-    		&.swim {
-    			position:relative;
-    			top: -16px;
-
-    			.tips {
-    				top:201px;
-    			}
-    		}
-
-    		&.two-rows {
-    			position:relative;
-
-    			.top {
-    				position:relative;
-    				top:-73px;
-    			}
-
-    			.bottom {
-    				position:relative;
-    				top:-31px;
-    			}
-    		}
-    	}
-	}
-
-	.size-chart-table {
-		@media screen and (max-width:737px){
-			padding:0;
-		}
-
-		box-sizing:border-box;
-		padding:0 55px;
-
-		.shoe-brands, .brands, .brands-dropdown { 
-			@media screen and (max-width:737px){
-				//padding-bottom: 20px;
-				padding-bottom: 0;
+		div {
+			@media screen and (max-width:737px) {
+				padding: 0 !important;
+				position: relative;
 			}
-
-			text-align:center;
+			width: 50%;
+			float: left;
+			box-sizing: border-box;
 
 			h2 {
-				@media screen and (max-width:737px){
-					font-size:1em;
-					padding:8px 0;
-					margin-bottom:16px;
-				}
-
-				padding: 4px 0;
-    			text-transform: capitalize;
-    			font-size: 15px;
-    			color:#fff;
-    			background:#999;
-    			font-weight:normal;
-    			font-family:brown-pro-bold !important;
-    			margin-bottom:19px;
-    			line-height:1.8em;
-    			letter-spacing:0;
+				font-size: 14px;
+				font-family: brown-pro-bold !important;
+				font-weight: normal;
+				margin: 0;
+				letter-spacing: 0.4px;
 			}
 
 			p {
-				@media screen and (max-width:737px){
-					font-size:.9em;
-					line-height:17px;
+				font-size: 13px;
+				line-height: 17px;
+			}
+
+			.tips {
+				@media screen and (max-width:737px) {
+					font-size: 0.8em;
+					//left:0;
+					left: 9px;
+					//top: 247px;
+					top: 249px;
+					//bottom:0;
+					position: relative;
+					//position:absolute;
+					line-height: 12px;
+					padding: 38px 0;
+					//background: url(../images/tips.png) no-repeat center 19px;
+					background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips.png") no-repeat center 19px;
+				}
+				text-decoration: none;
+				display: block;
+				position: absolute;
+				top: 185px;
+				left: 85px;
+				width: 87px;
+				height: 87px;
+				text-align: center;
+				box-sizing: border-box;
+				padding: 26px 0;
+				font-size: 13px;
+				color: #666;
+				background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips-d.png") no-repeat center center;
+				line-height: 16px;
+			}
+
+			&:first-of-type {
+				@media screen and (max-width:737px) {
+					h2,
+					p {
+						display: none;
+					}
+				}
+				padding: 0 114px 0 0;
+				text-align: right;
+				position: relative;
+			}
+
+			&:last-of-type {
+				@media screen and (max-width:737px) {
+					h2 {
+						display: none;
+					}
+
+					p {
+						text-align: center;
+						font-size: 0.9em;
+						//position: relative;
+						position: absolute;
+						//top: 234px;
+						//top:219px;
+						//top:239px;
+						bottom: 23px;
+						//left: 12px;
+						left: 53px;
+						line-height: 15px;
+					}
+				}
+				padding: 0 0 0 116px;
+			}
+
+			&.baby-boy-swim {
+				top: -59px !important;
+
+				.top {
+					top: -38px !important;
 				}
 
-				font-size:15px;
-				line-height:21px;
+				.bottom {
+					top: 2px !important;
+				}
+
+				.tips {
+					top: 185px !important;
+				}
+			}
+
+			&.swim {
+				position: relative;
+				top: -16px;
+
+				.tips {
+					top: 201px;
+				}
+			}
+
+			&.two-rows {
+				position: relative;
+
+				.top {
+					position: relative;
+					top: -73px;
+				}
+
+				.bottom {
+					position: relative;
+					top: -31px;
+				}
+			}
+		}
+	}
+
+	.size-chart-table {
+		@media screen and (max-width:737px) {
+			padding: 0;
+		}
+		box-sizing: border-box;
+		padding: 0 55px;
+
+		.brands,
+		.brands-dropdown,
+		.shoe-brands {
+			@media screen and (max-width:737px) {
+				//padding-bottom: 20px;
+				padding-bottom: 0;
+			}
+			text-align: center;
+
+			h2 {
+				@media screen and (max-width:737px) {
+					font-size: 1em;
+					padding: 8px 0;
+					margin-bottom: 16px;
+				}
+				padding: 4px 0;
+				text-transform: capitalize;
+				font-size: 15px;
+				color: #fff;
+				background: #999;
+				font-weight: normal;
+				font-family: brown-pro-bold !important;
+				margin-bottom: 19px;
+				line-height: 1.8em;
+				letter-spacing: 0;
+			}
+
+			p {
+				@media screen and (max-width:737px) {
+					font-size: 0.9em;
+					line-height: 17px;
+				}
+				font-size: 15px;
+				line-height: 21px;
 			}
 
 			select {
-				&.shoes, &.brand {
-					@media screen and (max-width:737px){
+				&.brand,
+				&.shoes {
+					@media screen and (max-width:737px) {
 						//padding: 12px 0;
-						padding:10px;
-
-    					margin-top: 11px;
-    					margin-bottom: 20px;
-
-    					//font-size: 1em;
-    					font-size:1.2em;
-    					width: 88%;
-
-    					border-radius:0;
-
-    					background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 94% 14px #fff;	
-    					text-transform: capitalize;
-    					font-family: brown-pro-bold !important;
-    					border-color:#D1D3D4;
-    					color:#666;
+						padding: 10px;
+						margin-top: 11px;
+						margin-bottom: 20px;
+						//font-size: 1em;
+						font-size: 1.2em;
+						width: 88%;
+						border-radius: 0;
+						background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 94% 14px #fff;
+						text-transform: capitalize;
+						font-family: brown-pro-bold !important;
+						border-color: #D1D3D4;
+						color: #666;
 					}
-
 					-moz-appearance: window;
-    				-webkit-appearance: none;
+					-webkit-appearance: none;
 					font-size: 18px;
-    				width: 100%;
-    				margin-top: 15px;
-    				padding: 13px 0;
-    				text-transform:capitalize;
+					width: 100%;
+					margin-top: 15px;
+					padding: 13px 0;
+					text-transform: capitalize;
 				}
 			}
 
 			ol {
-				margin-top:10px;
-				width:100%;
-				overflow:hidden;
+				margin-top: 10px;
+				width: 100%;
+				overflow: hidden;
 
 				li {
-					float:left;
-					width:50% !important;
-					margin:0 !important;
-					font-size:15px;
-					text-transform:capitalize;
-					font-family:brown-pro-bold !important;
+					float: left;
+					width: 50% !important;
+					margin: 0 !important;
+					font-size: 15px;
+					text-transform: capitalize;
+					font-family: brown-pro-bold !important;
 
 					a {
-						text-decoration:underline;
-						padding:11px 0;
-						display:block;
-						color:#666;
+						text-decoration: underline;
+						padding: 11px 0;
+						display: block;
+						color: #666;
 					}
 				}
-			} 
+			}
 
 			ul {
-				overflow:hidden;
+				overflow: hidden;
 				//position:absolute;
-
 				//background: url('../images/expand.png') no-repeat 67em 2em #fff;
+				background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 554px 13px #fff;
+				float: none;
+				width: 100%;
+				height: 40px;
+				margin: 16px 0 0;
+				border: 1px solid #D1D3D4;
+				box-sizing: border-box;
+				z-index: 9999;
 
-				background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 554px 13px #fff;
-
-				float:none;
-				width:100%;
-				height:40px;
-				margin:16px 0 0 0;
-				border:1px solid #D1D3D4;
-				box-sizing:border-box;
-				z-index:9999;
-			
 				li {
-					float:none !important;
-					width:100% !important;
+					float: none !important;
+					width: 100% !important;
 					padding: 11px 0;
-					margin:0 !important;
-					font-size:15px;
-					text-transform:capitalize;
-					font-family:brown-pro-bold !important;
+					margin: 0 !important;
+					font-size: 15px;
+					text-transform: capitalize;
+					font-family: brown-pro-bold !important;
 
 					&:first-of-type {
 						&:hover {
-							background:none;
-							color:#666;
+							background: none;
+							color: #666;
 						}
 					}
 
 					&:hover {
-						background:#666;
-						color:#fff;
-						cursor:pointer;
+						background: #666;
+						color: #fff;
+						cursor: pointer;
 					}
 				}
 			}
 		}
 
 		table {
-			
 			&.the-table {
-				@media screen and (max-width:737px){
+				@media screen and (max-width:737px) {
 					margin: 0 0 60px;
 				}
 			}
-
-			@media screen and (max-width:737px){
-				margin: 9px 0 35px 0;
+			@media screen and (max-width:737px) {
+				margin: 9px 0 35px;
 			}
-
 			width: 100%;
-			margin-bottom:35px;
+			margin-bottom: 35px;
 
 			tr {
 				&.size-chart-header {
 					th {
-						@media screen and (max-width:737px){
-							font-size:1em;
-							padding:11px 0;
+						@media screen and (max-width:737px) {
+							font-size: 1em;
+							padding: 11px 0;
 						}
-
 						padding: 9px 0;
-    					text-transform: capitalize;
-    					font-size: 15px;
-    					color:#fff;
-    					background:#999;
+						text-transform: capitalize;
+						font-size: 15px;
+						color: #fff;
+						background: #999;
 					}
 				}
 
-				&[data-num="3"]{
+				&[data-num="3"] {
 					background: #666 !important;
-    				font-family: brown-pro-bold !important;
-    				font-weight: normal;
-    				text-transform: lowercase;
-    				font-size: 15px;
+					font-family: brown-pro-bold !important;
+					font-weight: normal;
+					text-transform: lowercase;
+					font-size: 15px;
 
-    				td {
-    					@media screen and (max-width:737px){
-    						padding-bottom: 7px;
-    					}
+					td {
+						@media screen and (max-width:737px) {
+							padding-bottom: 7px;
+						}
+						color: #fff !important;
+						line-height: 14px;
 
-    					color: #fff !important;
-    					line-height:14px;
-
-    					&:first-of-type {
-    						text-transform:lowercase;
-    						padding-top: 14px;
-    					}
-
-    					&:nth-of-type(2){
-    						//padding-top: 14px;
-    						padding-top:9px;
-    					}
-
-    					.shoe-size {
-							padding-top: 5px;
-							font-size:12px;
+						&:first-of-type {
+							text-transform: lowercase;
+							padding-top: 14px;
 						}
 
-    					span {
-    						@media screen and (max-width:737px){
-    							font-size:.8em;
-    							position:relative;
-    							top: 0;
-    							left: 0;
-    							display: block;
-    						}
+						&:nth-of-type(2) {
+							//padding-top: 14px;
+							padding-top: 9px;
+						}
 
+						.shoe-size {
+							padding-top: 5px;
+							font-size: 12px;
+						}
 
-    						font-family:brown-pro-regular !important;
-    						font-size:11px;
-    						display:block;
-    						//position:absolute;
-    						//top:28px;
-    						//left:23px;
-    					}
-    				}
+						span {
+							@media screen and (max-width:737px) {
+								font-size: 0.8em;
+								position: relative;
+								top: 0;
+								left: 0;
+								display: block;
+							}
+							font-family: brown-pro-regular !important;
+							font-size: 11px;
+							display: block;
+							//position:absolute;
+							//top:28px;
+							//left:23px;
+						}
+					}
 				}
 
-				&:nth-of-type(odd){
-					background:#E6E7E8;
+				&:nth-of-type(odd) {
+					background: #E6E7E8;
 				}
 
 				th {
 					font-family: brown-pro-bold !important;
-    				font-weight: normal;
+					font-weight: normal;
 				}
 
 				td {
-					@media screen and (max-width:737px){
-						font-size:.7em;
+					@media screen and (max-width:737px) {
+						font-size: 0.7em;
 						padding: 12px 0;
 					}
-
 					border-right: 1px solid #999;
 					padding: 9px 0;
-					text-align:center;
-					box-sizing:border-box;
-					width:10%;
-					text-transform:lowercase;
-					font-size:12px;
-					font-family:brown-pro-bold !important;
-					color:#666;
-					position:relative;
-					font-weight:normal;
+					text-align: center;
+					box-sizing: border-box;
+					width: 10%;
+					text-transform: lowercase;
+					font-size: 12px;
+					font-family: brown-pro-bold !important;
+					color: #666;
+					position: relative;
+					font-weight: normal;
 
-					sup, span {
-
-						font-family:brown-pro-bold !important;
-						font-weight:normal;
+					span,
+					sup {
+						font-family: brown-pro-bold !important;
+						font-weight: normal;
 					}
 
 					&:first-of-type {
-						text-transform:uppercase;
+						text-transform: uppercase;
 					}
 
 					&:last-of-type {
-						border:none;
+						border: none;
 					}
 				}
 			}
 		}
 	}
-	
 }
 
 .frac {
-	@media screen and (max-width:737px){
-		font-size: .7em;
+	@media screen and (max-width:737px) {
+		font-size: 0.7em;
 	}
-
-	font-size:7px;
+	font-size: 7px;
 }
 //---------------------------------------------------------------
-

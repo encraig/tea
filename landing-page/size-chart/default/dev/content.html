@@ -1,108 +1,109 @@
-
 <!-- dev styles css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
- 
 
-<article class="customer-service clearfix"> 
 
-{if !$smarty.request.ajax}
+<article class="customer-service clearfix">
+
+  {if !$smarty.request.ajax}
   {* Note: Sidebar Customer Navigation *}
   {include file="store:name=content/static/navigation-customer"}
-{/if}
+  {/if}
 
-<section id="size-chart-section">
+  <section id="size-chart-section">
 
-<!--desktop ref -->
-<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/bg/girls-measuring-bg.png" class="ref"/>
+    <!--desktop ref -->
+    <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/bg/girls-measuring-bg.png" class="ref" />
 
-<!--mobile ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/bg/girls-sweaters-bg-m.png" class="ref"/> -->
+    <!--mobile ref -->
+    <!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/bg/girls-sweaters-bg-m.png" class="ref"/> -->
 
 
-<div class="size-chart-container">
+    <div class="size-chart-container">
 
-<!--toolkit-->
-{literal}
-<style>
-  include "../css/styles.css"
-</style>
-{/literal}
+      <!--toolkit-->
+      {literal}
+      <style>
+        include "../css/styles.css"
+      </style>
+      {/literal}
 
-  <h1>size chart</h1>
-    <div class="measure-take-over">
-      <h2 class="measure">Measuring Tips</h2>
-      <div class="measure-content">
-        <h2 class="return">
-          <!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/apply.png" alt="<"/>  -->
-          <svg width="9" height="14" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Canvas" transform="translate(-2276 9097)">
-              <g id="Union">
-                <use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 2284.35 -9097)" fill="#FFFFFF"/>
+      <h1>size chart</h1>
+      <div class="measure-take-over">
+        <h2 class="measure">Measuring Tips</h2>
+        <div class="measure-content">
+          <h2 class="return">
+            <!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/apply.png" alt="<"/>  -->
+            <svg width="9" height="14" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Canvas" transform="translate(-2276 9097)">
+                <g id="Union">
+                  <use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 2284.35 -9097)" fill="#FFFFFF" />
+                </g>
               </g>
-            </g>
-            <defs>
-              <path id="path0_fill" fill-rule="evenodd" d="M 7.27441 8.03711L 8.35303 6.99512L 8.34424 6.98828L 7.26318 5.94824L 1.07861 0L 0 1.04199L 6.1853 6.99023L 0.00610352 12.96L 1.0874 14L 7.27441 8.03711Z"/>
-            </defs>
-          </svg>  
-          return to size chart
-        </h2>
-        <img src=""/>
-        <div class="text">
-          <div class="chest">
-            <h2>Chest</h2>
-            <p></p>
-          </div>
-          <div class="hips">
-            <h2>Hips</h2>
-            <p></p>
-          </div>
-          <div class="waist">
-            <h2>Natural Waist</h2>
-            <p></p>
+              <defs>
+                <path id="path0_fill" fill-rule="evenodd" d="M 7.27441 8.03711L 8.35303 6.99512L 8.34424 6.98828L 7.26318 5.94824L 1.07861 0L 0 1.04199L 6.1853 6.99023L 0.00610352 12.96L 1.0874 14L 7.27441 8.03711Z" />
+              </defs>
+            </svg>
+            return to size chart
+          </h2>
+          <img src="" />
+          <div class="text">
+            <div class="chest">
+              <h2>Chest</h2>
+              <p></p>
+            </div>
+            <div class="hips">
+              <h2>Hips</h2>
+              <p></p>
+            </div>
+            <div class="waist">
+              <h2>Natural Waist</h2>
+              <p></p>
+            </div>
           </div>
         </div>
+
       </div>
-      
-    </div>
 
-    <div class="dropdowns">
-      <!-- desktop -->
-      <ul class="department desktop"></ul>
-      <ul class="category desktop"></ul>
-      <!-- mobile -->
-      <select class="department mobile"></select>
-      <select class="category mobile"></select>
-    </div>
-
-    <div class="measure-tips">
-      <div>
-        <h2></h2>
-        <p></p>
-        <a href="#" class="tips">Measuring<br> Tips >></a>
+      <div class="dropdowns">
+        <!-- desktop -->
+        <ul class="department desktop"></ul>
+        <ul class="category desktop"></ul>
+        <!-- mobile -->
+        <select class="department mobile"></select>
+        <select class="category mobile"></select>
       </div>
-      <div>
-        <h2></h2>
-        <p></p>
+
+      <div class="measure-tips">
+        <div>
+          <h2></h2>
+          <p></p>
+          <a href="#" class="tips">Measuring<br> Tips >></a>
+        </div>
+        <div>
+          <h2></h2>
+          <p></p>
+        </div>
       </div>
+
+      <div class="size-chart-table">
+        <table class="the-table">
+          <tr class="size-chart-header">
+            <th></th>
+          </tr>
+        </table>
+        <p class="align-center">Looking for sizes 2T/2-4T/4?<br> You can now find them in the Boys and Girls sections.</p>
+      </div>
+
+      <!-- toolkit scripts -->
+      {literal}
+      <script>
+        include "../js/output/functions.min.js"
+      </script>
+      {/literal}
+
     </div>
 
-    <div class="size-chart-table">
-      <table class="the-table">
-          <tr class="size-chart-header"><th></th></tr>
-      </table>
-      <p class="align-center">Looking for sizes 2T/2-4T/4?<br> You can now find them in the Boys and Girls sections.</p>
-    </div>
-
-<!-- toolkit scripts -->
-{literal}
-<script>
-  include "../js/output/functions.min.js"
-</script>
-{/literal}
-
-</div>
-
-</section>
+  </section>
 
 </article>
 
@@ -115,6 +116,6 @@
 <!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
 <script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
- 
+
 <!--dev scripts-->
 <!-- <script src="../js/functions.js"></script> -->
