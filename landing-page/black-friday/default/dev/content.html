@@ -1,0 +1,56 @@
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ref -->
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-m-ref.jpg" class="ref" alt="the black friday event more styles than ever $15 and under" /> -->
+
+<div class="bf">
+
+	<!-- desktop -->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-d.png" class="desktop" alt="the black friday event more styles than ever $15 and under" />
+
+	<!-- mobile -->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-m.png" class="mobile" alt="the black friday event more styles than ever $15 and under" />
+
+	<!-- <p>Black Friday Event applies to select styles only. Offer ends on 11/25/2017 at 11:59pm PST. Limited to stock on hand. Cannot be combined with any other offers. Restrictions apply.</p> -->
+
+</div>
+
+<!--toolkit-->
+<style>
+	include "../css/styles.css"
+</style>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+
+<script>
+	$(document).ready(function() {
+		// jQuery('img[usemap]').rwdImageMaps();
+		if ($(window).width() < 737) {
+			//.bf-nav is in flex fields mobile category header
+			$('.da-rennab-zone[data-zone="category_pages"]').after($('.bf-nav'));
+
+
+			console.log('run time');
+			// add class cta-sale to tween and reorder the cta so tween is last
+			var a = $('.bf-nav a');
+			$.each(a, function(i, val) {
+				var text = $(val).text();
+				text = text.toLowerCase();
+				if (text == 'tween') {
+					$(val).addClass('sale-cta');
+					$('.bf-nav').append($(val));
+				}
+			});
+		}
+	});
+</script>

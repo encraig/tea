@@ -1,0 +1,5 @@
+<nav class="bf-nav">
+  {sub_cats category=$category name=cat}
+  <a href="{category_url category=$cat.name}" class="cta">{$cat.title|smarty:nodefaults}</a>
+  {/sub_cats}
+</nav>

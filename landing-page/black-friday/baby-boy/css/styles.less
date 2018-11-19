@@ -1,0 +1,146 @@
+.ref {
+	@media screen and (max-width:737px) {
+		top: -69px;
+	}
+	position: absolute;
+	opacity: 0.5;
+	z-index: 9999;
+	max-width: 100%;
+	//display:none;
+}
+
+.midbox,
+.my-account {
+	h1 {
+		display: none;
+	}
+}
+
+#simplemodal-container,
+#simplemodal-overlay {
+	//display:none !important;
+}
+
+.sidebar.customer-service {
+	@media screen and (max-width:737px) {
+		display: none;
+	}
+}
+
+.main-content {
+	@media screen and (max-width:737px) {
+		float: none;
+		width: 100%;
+	}
+	float: left;
+	width: 840px;
+	margin-top: 0 !important;
+}
+
+.padded {
+	padding: 0 !important;
+}
+
+.mobile {
+	@media screen and (max-width:768px) {
+		display: inline-block !important;
+	}
+	display: none !important;
+}
+
+.desktop {
+	@media screen and (max-width:768px) {
+		display: none !important;
+	}
+}
+
+.category-black-friday {
+	//width:100% !important;
+}
+
+.cta {
+	@media screen and (max-width:737px) {
+		width: 42%;
+		left: 0;
+		padding: 1em 0;
+		font-size: 0.8em;
+		//line-height:3em;
+	}
+	@media screen and (max-width:415px) {
+		font-size: 0.8em;
+		letter-spacing: 1.1px;
+	}
+	@media screen and (max-width:376px) {
+		//padding: 8px 0;
+		font-size: 0.7em;
+	}
+	@media screen and (max-width:321px) {
+		//padding: 7px 0;
+		font-size: 0.6em;
+	}
+	display: inline-block;
+	font-family: brown-pro-bold !important;
+	border: 1px solid;
+	width: 200px;
+	position: relative;
+	box-sizing: border-box;
+	font-size: 13px;
+	line-height: 16px;
+	height: 39px;
+	letter-spacing: 0.2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 12px 0 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+/* black friday styles */
+.bf {
+	@media screen and (max-width:737px) {
+		margin: 0 0 20px;
+	}
+	position: relative;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.bf-nav {
+	padding: 23px 0 9px 6%;
+	background: #b4b0b1;
+	margin: 0;
+
+	a {
+		font-size: 10px;
+		position: relative;
+		padding: 7px 0 0;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		display: inline-block;
+		width: 45%;
+		margin-right: 1em;
+		margin-bottom: 15px;
+		text-align: center;
+		background: #fff;
+		color: #1d2538;
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-family: brown-pro-bold !important;
+		border: none;
+		height: 30px;
+
+		&:nth-of-type(even) {
+			margin-right: 0;
+		}
+
+		&.newborn-cta,
+		&.sale-cta {
+			@media screen and (max-width:737px) {
+				width: 94%;
+				left: 0;
+			}
+			width: 94%;
+		}
+	}
+}
