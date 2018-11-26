@@ -1,3 +1,4 @@
+
 {introduce_script src="`$theme_assets_url`js/mega-menu.js" zone="footer"}
 
 {cms name="mega-menu-css"}
@@ -7,6 +8,42 @@
 	<nav class="new-nav">
 		<div class="triangle"></div>
 		<ul>
+			{*black friday
+			<li class="black-friday"><a href="{category_url category="black-friday"}"><span>black friday</span></a>
+				<ul class="level-2">
+					<li class="boy-cats level-2-li">
+						<span>The Black Friday Event</span>
+						<div class="nav-container">
+							<div class="the-list">
+
+								<ul>
+									{sub_cats name="cat" category="black-friday"}
+									<li>
+										<a href="{$cat.url}" data="mega menu black friday">{$cat.title}</a>
+										{if $cat.subcats_count}
+											{sub_cats name="cat2" category=$cat.name}
+											<div><a href="{$cat2.url}">{$cat2.title}</a></div>
+											{/sub_cats}
+										{/if}
+									</li>
+									{/sub_cats}
+								</ul>
+
+							</div>
+							<div class="nav-img">
+								<a href="{category_url category="black-friday"}" data="mega menu black friday image">
+
+									<div class="da-rennab-zone" data-zone="mega_sale"></div>
+
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+			*}
+
+			{*girl*}
 			<li class="girls-clothing"><a href="{category_url category="girls-clothing"}"><span>girl</span></a>
 				<ul class="level-2">
 					<li class="girl-cats level-2-li arrow">
@@ -15,14 +52,14 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="girls-clothing/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu girl favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
+									<ul>
+										{sub_cats name="cat" category="girls-clothing/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu girl favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
 
-										</ul>
+									</ul>
 								</div>
 								<div class="cats">
 									<div class="cats-1">
@@ -30,9 +67,9 @@
 										<ul>
 											{assign var=i value=0}
 											{sub_cats name="cat" category="girls-clothing/shop-by-category"}
-												<li>
-													<a href="{$cat.url}" data="mega menu girl categories">{$cat.title}</a>
-												</li>
+											<li>
+												<a href="{$cat.url}" data="mega menu girl categories">{$cat.title}</a>
+											</li>
 											{if $i eq 5}
 										</ul>
 									</div>
@@ -67,13 +104,13 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="tween-girls-clothing/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu tween favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
-										</ul>
+									<ul>
+										{sub_cats name="cat" category="tween-girls-clothing/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu tween favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
 								</div>
 								<div class="cats">
 									<div class="cats-1">
@@ -81,9 +118,9 @@
 										<ul>
 											{assign var=i value=0}
 											{sub_cats name="cat" category="tween-girls-clothing/category"}
-												<li>
-													<a href="{$cat.url}" data="mega menu tween categories">{$cat.title}</a>
-												</li>
+											<li>
+												<a href="{$cat.url}" data="mega menu tween categories">{$cat.title}</a>
+											</li>
 											{if $i eq 5}
 										</ul>
 									</div>
@@ -114,6 +151,8 @@
 					</li>
 				</ul>
 			</li>
+
+			{*boy*}
 			<li class="boys-clothing"><a href="{category_url category="boys-clothing"}"><span>boy</span></a>
 				<ul class="level-2">
 					<li class="boy-cats level-2-li">
@@ -122,13 +161,13 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="boys-clothing/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu boy favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
-										</ul>
+									<ul>
+										{sub_cats name="cat" category="boys-clothing/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu boy favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
 								</div>
 								<div class="cats">
 									<div class="cats-1">
@@ -136,9 +175,9 @@
 										<ul>
 											{assign var=i value=0}
 											{sub_cats name="cat" category="boys-clothing/shop-by-category"}
-												<li>
-													<a href="{$cat.url}" data="mega menu boy categories">{$cat.title}</a>
-												</li>
+											<li>
+												<a href="{$cat.url}" data="mega menu boy categories">{$cat.title}</a>
+											</li>
 											{if $i eq 5}
 										</ul>
 									</div>
@@ -169,6 +208,8 @@
 					</li>
 				</ul>
 			</li>
+
+			{*baby girl*}
 			<li class="baby-girl-clothes"><a href="{category_url category="baby-girl-clothes"}"><span>baby girl</span></a>
 				<ul class="level-2">
 					<li class="baby-girl-cats level-2-li">
@@ -177,13 +218,13 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="baby-girl-clothes/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu baby girl favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
-										</ul>
+									<ul>
+										{sub_cats name="cat" category="baby-girl-clothes/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu baby girl favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
 								</div>
 								<div class="cats">
 									<div class="cats-1">
@@ -191,9 +232,9 @@
 										<ul>
 											{assign var=i value=0}
 											{sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
-												<li>
-													<a href="{$cat.url}" data="mega menu baby girl categories">{$cat.title}</a>
-												</li>
+											<li>
+												<a href="{$cat.url}" data="mega menu baby girl categories">{$cat.title}</a>
+											</li>
 											{if $i eq 5}
 										</ul>
 									</div>
@@ -224,6 +265,8 @@
 					</li>
 				</ul>
 			</li>
+
+			{*baby boy*}
 			<li class="baby-boy-clothes"><a href="{category_url category="baby-boy-clothes"}"><span>baby boy</span></a>
 				<ul class="level-2">
 					<li class="baby-boy-cats level-2-li">
@@ -232,13 +275,13 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="baby-boy-clothes/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu baby boy favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
-										</ul>
+									<ul>
+										{sub_cats name="cat" category="baby-boy-clothes/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu baby boy favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
 								</div>
 								<div class="cats">
 									<div class="cats-1">
@@ -246,9 +289,9 @@
 										<ul>
 											{assign var=i value=0}
 											{sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
-												<li>
-													<a href="{$cat.url}" data="mega menu baby boy categories">{$cat.title}</a>
-												</li>
+											<li>
+												<a href="{$cat.url}" data="mega menu baby boy categories">{$cat.title}</a>
+											</li>
 											{if $i eq 5}
 										</ul>
 									</div>
@@ -279,6 +322,8 @@
 					</li>
 				</ul>
 			</li>
+
+			{*newborn*}
 			<li class="newborn-clothes"><a href="{category_url category="newborn-clothes"}"><span>newborn</span></a>
 				<ul class="level-2">
 					<li class="newborn-cats level-2-li">
@@ -287,13 +332,13 @@
 							<div class="the-list">
 								<div class="favs">
 									<h2>Favorites</h2>
-										<ul>
-											{sub_cats name="cat" category="newborn-clothes/favorites"}
-												<li>
-													<a href="{$cat.url}" data="mega menu newborn favorites">{$cat.title}</a>
-												</li>
-											{/sub_cats}
-										</ul>
+									<ul>
+										{sub_cats name="cat" category="newborn-clothes/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu newborn favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
 								</div>
 								<!-- <div class="nb-gift-shop">
 									<h2>Gift Shop</h2>
@@ -307,13 +352,13 @@
 									<h2>Category</h2>
 									<ul>
 										{sub_cats name="cat" category="newborn-clothes/shop-by-category"}
-											<li>
-												<a href="{$cat.url}" data="mega menu newborn categories">{$cat.title}</a>
-											</li>
+										<li>
+											<a href="{$cat.url}" data="mega menu newborn categories">{$cat.title}</a>
+										</li>
 										{/sub_cats}
-											<li class="view-all">
-												<a href="{category_url category="newborn-clothes"}/view-all" data="mega menu newborn categories">View All</a>
-											</li>
+										<li class="view-all">
+											<a href="{category_url category="newborn-clothes"}/view-all" data="mega menu newborn categories">View All</a>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -328,6 +373,8 @@
 					</li>
 				</ul>
 			</li>
+
+			{*sale*}
 			<li class="clothing-sale"><a href="{category_url category="clothing-sale"}"><span>sale</span></a>
 				<ul class="level-2">
 					{sub_cats name="cat" category="clothing-sale"}
@@ -338,22 +385,22 @@
 								<div class="cats">
 									<ul>
 										{sub_cats name="cat2" category="`$cat.name`"}
-											<li>
-												<a href="{$cat2.url}" data="mega menu sale categories">{$cat2.title}</a>
-											</li>
+										<li>
+											<a href="{$cat2.url}" data="mega menu sale categories">{$cat2.title}</a>
+										</li>
 										{/sub_cats}
 									</ul>
 								</div>
 							</div>
 							<div class="nav-img">
 								<!-- <a href="{category_url category="clothing-sale"}" id="content-block" data="mega menu sale image"> -->
-									<!-- default -->
-									<!--<div class="content-block">
+								<!-- default -->
+								<!--<div class="content-block">
 										<div></div>
 										<h2>See what's new on <span>Sale</span></h2>
 									</div>-->
 
-									<div class="da-rennab-zone" data-zone="mega_sale"></div>
+								<div class="da-rennab-zone" data-zone="mega_sale"></div>
 
 								<!-- </a> -->
 							</div>
@@ -367,3 +414,9 @@
 	</nav>
 
 </div>
+
+{literal}
+<style>
+	#new-sticky-header {z-index:99999 !important;}
+</style>
+{/literal}
