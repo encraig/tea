@@ -189,6 +189,12 @@
 		$('.mobile-promo .skinny-see-details, #skinny-details-promo .close-fancy').click(function(e) {
 			e.preventDefault();
 			$('#skinny-details-promo').slideToggle();
+
+			//if skinny banner open close it
+			var attr = $('#details-promo').attr('style');
+			if (attr !== undefined && attr !== false) {
+				$('#details-promo').slideUp();
+			}
 		});
 
 	});
