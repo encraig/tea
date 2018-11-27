@@ -1,0 +1,195 @@
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/skinny.css"> -->
+
+<!-- OVERALL DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo skinny">
+	<!-- ref  -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/181129-skinny-d.png" alt="" class="promo-img-alt ref" /> -->
+	<p><span class="all-pjs">All PJs just $20! <span class="blue-font">It's a Jammie Session</span></span> <span class="shop-now"><a href="/pajamas">shop now</a></span> <span class="skinny-see-details"><a href="#skinny-details-promo">see details</a></span></p>
+</div>
+
+
+
+<!-- OVERALL MOBILE PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="mobile-promo skinny">
+	<!-- ref  -->
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/181129-skinny-m.png" alt="" class="promo-img-alt ref" /> -->
+</div>
+
+
+
+<!-- FINE PRINT -->
+<div id="skinny-details-promo">
+	<div class="details-container">
+		<div class="mobile-promo cta-drop-down">
+			<a href="/girls-pajamas-sleepwear">girl</a>
+			<!-- <a href="/tween-girls-clothing/favorites/black-friday">tween</a> -->
+			<a href="/boys-pajamas-sleepwear">boy</a>
+			<a href="/baby-girl-pajamas">baby girl</a>
+			<a href="/baby-boy-pajamas">baby boy</a>
+			<!-- <a href="/tween-girls-clothing/favorites/black-friday" class="sale-cta">tween</a> -->
+			<!-- <a href="/newborn-clothes">newborn</a> -->
+			<!-- <a href="/clothing-sale" class="sale-cta">sale</a> -->
+		</div>
+		<h2>Details</h2>
+		<p>
+			Offer expires 12/07/2018 at 11:59pm PST. Cannot be combined with other promotions. No adjustments on previous purchases. Limited to stock on hand.
+		</p>
+
+		<p><a href="#" class="close-fancy mobile">CLOSE</a></p>
+	</div>
+</div>
+
+
+
+<!-- dev resources -->
+<!-- <link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+
+<!--prod resources -->
+<link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<!-- toolkit -->
+<style>
+	include "../css/skinny.css"
+</style>
+
+<script>
+	$(document).ready(function() {
+
+		// desktop
+		if ($(window).width() > 737) {
+			var icons = $('#top-bar div.top ul');
+			icons.css("top", "52px");
+
+			$(window).scroll(function() {
+				scroll = $(window).scrollTop();
+
+				if (scroll >= 100) {
+					icons.css("top", "-7px");
+				} else {
+					icons.css("top", "52px");
+				}
+			});
+			// mobile
+		} else {
+			var copy = $('.desktop-promo.skinny p').clone();
+			$('.mobile-promo.skinny').append(copy);
+		}
+
+		//array of urls to hide the banners
+		var urlArray = [
+			// {
+			// 	name: 'homepage',
+			// 	url: '/',
+			// 	hpBanner: false
+			// },
+			// {
+			// 	name: 'black-friday',
+			// 	url: '/black-friday'
+			// },
+			// {
+			// 	name:'sale-page',
+			// 	url:'/clothing-sale'
+			// },
+		];
+
+		//function to hide or show the banner
+		var hideBanners = function() {
+			var url = window.location.pathname;
+
+			//desktop
+			if ($(window).width() > 737) {
+				//show the fineprint in a lightbox
+				$('.desktop-promo .skinny-see-details a').fancybox();
+
+				//for when resize going up hide the mobile banners
+				$('.mobile-promo-hp, .mobile-promo').hide();
+			}
+
+			/*
+			$.each(urlArray, function(i, val) {
+				if (url == val.url) {
+					//if homepage only banner hide regular banner and show homepage banner
+					if (val.hpBanner) {
+						$('.desktop-promo-hp').show();
+						$('.desktop-promo').hide();
+					}
+					//regular hide banner
+					else {
+						$('.desktop-promo, .desktop-promo-hp, .mobile-promo, .mobile-promo-hp').hide();
+					}
+
+				}
+				//black friday subcats hide banner
+				else if (url.split('/')[1] == 'black-friday') {
+					$('.desktop-promo, .desktop-promo-hp, .mobile-promo, .mobile-promo-hp').hide();
+					return false;
+				}
+			});
+			*/
+
+			//if black friday landing page change dropdown cta urls
+			/*
+			if (url.split('/')[1] == 'black-friday') {
+				//desktop
+				if ($(window).width() > 737) {
+					var area = $('map[name="map-d"] area');
+					$.each(area, function(i, val) {
+						var text = $(val).attr('name');
+						if (text == 'girl') {
+							$(val).attr('href', '/black-friday/girl');
+						} else if (text == 'boy') {
+							$(val).attr('href', '/black-friday/boy');
+						} else if (text == 'baby girl') {
+							$(val).attr('href', '/black-friday/baby-girl');
+						} else if (text == 'baby boy') {
+							$(val).attr('href', '/black-friday/baby-boy');
+						} else if (text == 'tween') {
+							$(val).attr('href', '/black-friday/tween');
+						}
+					});
+				}
+				//mobile
+				else {
+					var ctas = $('.cta-drop-down a');
+					$.each(ctas, function(i, val) {
+						var text = $(val).text();
+						if (text == 'girl') {
+							$(val).attr('href', '/black-friday/girl');
+						} else if (text == 'boy') {
+							$(val).attr('href', '/black-friday/boy');
+						} else if (text == 'baby girl') {
+							$(val).attr('href', '/black-friday/baby-girl');
+						} else if (text == 'baby boy') {
+							$(val).attr('href', '/black-friday/baby-boy');
+						} else if (text == 'tween') {
+							$(val).attr('href', '/black-friday/tween');
+						}
+					});
+				}
+			}*/
+
+		};
+
+		//on page load call hideBanners
+		hideBanners();
+
+		//on window resize call hideBanners
+		$(window).resize(function() {
+			hideBanners();
+		});
+
+		// slide toggle the fineprint
+		$('.mobile-promo .skinny-see-details, #skinny-details-promo .close-fancy').click(function(e) {
+			e.preventDefault();
+			$('#skinny-details-promo').slideToggle();
+		});
+
+	});
+</script>
