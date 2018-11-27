@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 
     // PROMOS  ---------------------------------------------------------------------------
     Promos: {
-      files: ['promos/<%= promo.name %>/<%= promo.date %>/css/styles.less', 'promos/<%= promo.name %>/<%= promo.date %>/dev/content.html'],
+      files: ['promos/<%= promo.name %>/<%= promo.date %>/css/*.less', 'promos/<%= promo.name %>/<%= promo.date %>/dev/*.html'],
       tasks: ['less:promosCSS', 'includes:promosIncludes', 'concat:promosHTML', ],
     },
 
