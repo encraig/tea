@@ -132,38 +132,41 @@ html {
 			font-size: 0.9em;
 		}
 		height: 35px;
-		background: #1c637c;
-		color: #ffffff;
-		text-align: center;
-		font-size: 1em;
-		position: fixed;
-		top: 0;
-		z-index: 1001;
-		width: 100%;
-		font-family: brown-pro-bold;
-		box-sizing: border-box;
-		padding: 4px 0 0;
+    background: #1c637c;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    width: 100%;
+    font-family: brown-pro-bold;
+    box-sizing: border-box;
+    padding: 2px 0 0;
 
 		span {
 			position: relative;
 
 			&.all-pjs {
-				left: 2%;
-				letter-spacing: 0.3px;
+				left: -2%;
+				letter-spacing: 0.4px;
 
 				.blue-font {
-					left: 0;
-					color: #9cd2e1;
+					left: -29%;
+    				top: 13px;
+    				color: #9cd2e1;
+    				letter-spacing: -.3px;
 				}
 			}
 
 			&.shop-now {
 				text-transform: uppercase;
-				text-decoration: underline;
-				position: relative;
-				left: 4%;
-				top: 4px;
-				font-family: brown-pro-regular;
+    			text-decoration: underline;
+    			position: relative;
+    			left: 3%;
+    			top: 6px;
+    			font-family: brown-pro-regular;
+    			z-index:9999;
 
 				a {
 					color: #fff;
@@ -172,14 +175,14 @@ html {
 
 			&.skinny-see-details {
 				font-family: brown-pro-italic;
-				text-decoration: underline;
-				float: none;
-				position: relative;
-				left: -10%;
-				top: -4px;
-				display: block;
-				letter-spacing: 0;
-				font-size: 0.9em;
+    			text-decoration: underline;
+    			float: none;
+    			position: relative;
+    			left: 2%;
+    			top: -7px;
+    			display: block;
+    			letter-spacing: 0;
+    			font-size: .8em;
 
 				a {
 					color: #fff;

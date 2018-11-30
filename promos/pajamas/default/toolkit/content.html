@@ -302,12 +302,6 @@
 		$('.mobile-promo .see-details, #details-promo .close-fancy').click(function(e) {
 			e.preventDefault();
 			$('#details-promo').slideToggle();
-
-			//if skinny banner open close it
-			var attr = $('#skinny-details-promo').attr('style');
-			if (attr !== undefined && attr !== false) {
-				$('#skinny-details-promo').slideUp();
-			}
 		});
 
 	});
