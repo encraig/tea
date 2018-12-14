@@ -1,8 +1,9 @@
 <!-- dev css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
+<!-- <link rel="stylesheet" type="text/css" href="../../global/css/global.css">   -->
 
 <!-- ref -->
-<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/bg-d.png" class="ref" />
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/bg-d.png" class="ref" /> -->
 
 <div class="wrap">
   <header>
@@ -13,26 +14,76 @@
   <div class="animal-lover">
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image1-d.png" class="desktop" alt="INSPIRE CLEVER CRITTERS" />
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image1-m.png" class="mobile" alt="INSPIRE CLEVER CRITTERS" />
-    <div class="pdps items-list-wrapper item"></div>
+
+    <div class="pdps items-list-wrapper item desktop">
+      {load_thumbs mode="sku" list="8w22115-a33-2, 8w22120-341-2, 8w22117-065-2, 8w22121-014-2, 8w22116-486-2, 8w22123-a33-2, 8w22107-065-2, 8w22106-b70-2, 8w22110-h57-2, 8w22700-h27-2, 8w22701-061-2, pg66055-fco-s_m"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
+
+    <div class="pdps items-list-wrapper item mobile">
+      {load_thumbs mode="sku" list="8w22115-a33-2, 8w22120-341-2, 8w22117-065-2, 8w22121-014-2, 8w22116-486-2, 8w22123-a33-2, 8w22107-065-2, 8w22106-b70-2, 8w22110-h57-2, 8w22700-h27-2, 8w22701-061-2, pg66055-fco-s_m"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list-mobile"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
   </div>
 
   <div class="dreamer">
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image2-d.png" class="desktop" alt="SUIT UP STAR GAZERS" />
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image2-m.png" class="mobile" alt="SUIT UP STAR GAZERS" />
-    <div class="pdps items-list-wrapper item"></div>
+    <div class="pdps items-list-wrapper item desktop">
+      {load_thumbs mode="sku" list="8w22113-a81-2, 8w22122-181-2, 8w22124-123-2, 8f23203-a92-2, chrulsp-999-os, pg66061-blb-os, pepchmt-gry-s_m, pepchsf-gry-os"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
+
+    <div class="pdps items-list-wrapper item mobile">
+      {load_thumbs mode="sku" list="8w22113-a81-2, 8w22122-181-2, 8w22124-123-2, 8f23203-a92-2, chrulsp-999-os, pg66061-blb-os, pepchmt-gry-s_m, pepchsf-gry-os"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list-mobile"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
   </div>
 
   <div class="explorer">
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image3-d.png" class="desktop" alt="GEAR UP THRILL SEEKERS" />
     <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1101/gift-shop/boy/image3-m.png" class="mobile" alt="GEAR UP THRILL SEEKERS" />
-    <div class="pdps items-list-wrapper item"></div>
+    <div class="pdps items-list-wrapper item desktop">
+      {load_thumbs mode="sku" list="8w22114-446-2, 8w22119-801-2, 8w22201-g77-2, 8w22124-g48-2, 8w21103-014-s, 8w22201-g79-2, 8w22118-390-2, 8w23201-143-2, appbenj-cyp-m, chrthwd-999-os"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
+
+    <div class="pdps items-list-wrapper item mobile">
+      {load_thumbs mode="sku" list="8w22114-446-2, 8w22119-801-2, 8w22201-g77-2, 8w22124-g48-2, 8w21103-014-s, 8w22201-g79-2, 8w22118-390-2, 8w23201-143-2, appbenj-cyp-m, chrthwd-999-os"}
+      {thumb_loop count=""}
+      {thumb}
+      {cms name="sku-list-mobile"}
+      {/thumb}
+      {/thumb_loop}
+    </div>
   </div>
 </div>
 
 <!-- toolkit -->
 {literal}
 <style>
-  .ref{position:absolute;opacity:.5;max-width:100%;top:-51px;left:0;z-index:9999;display:none}@media screen and (max-width:737px){.ref{top:-162px}}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}.show{display:block !important;visibility:visible !important}.loading{text-align:center;text-transform:uppercase;font-size:24px;margin:20px 0}body.browse .breadcrumb-c{padding-top:13px}body.browse .items-list-wrapper .item,body.browse .items-list-wrapper section:nth-of-type(3n+3){margin:0 8px 20px 0 !important;clear:none !important}body.browse .items-list-wrapper .item section .item-details h2{margin:0 0 3px 0 !important}body.browse .items-list-wrapper .item footer{position:relative !important}body.browse .items-list-wrapper .item footer p.thumb-rating img{display:inline-block !important}.heading-category{line-height:18px;font-family:brown-pro-bold;display:block;padding:0;margin:-10px 0 13px}.main-content #bottom,.main-content #infinite,.main-content #view-mode,.main-content .inline-header,.main-content .sort-order{display:none}#content-wrapper .category-page,#content-wrapper .common-wrap,#content-wrapper table{display:none}.wrap{overflow:hidden}.wrap img{max-width:100%}.wrap header{margin:0 0 40px}@media screen and (max-width:737px){.wrap header{margin:0 0 30px}}.wrap .pdps{margin:26px 0 0 0 !important}@media screen and (max-width:737px){.wrap .pdps{margin:9px 0 34px 0 !important}}.slick-list{padding:0 0 30px 0 !important}@media screen and (max-width:737px){.slick-list{padding:0 0 0 0 !important}}.slick-next,.slick-prev{background:red !important;z-index:9999;width:30px !important;height:30px !important;top:35% !important}.slick-next:before,.slick-prev:before{color:transparent !important}.slick-prev{left:15px !important;background:url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-left-arrow.png") no-repeat 0 0 !important}.slick-next{right:15px !important;background:url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-right-arrow.png") no-repeat 0 0 !important}/*# sourceMappingURL=styles.css.map */
+  .ref{position:absolute;opacity:.5;max-width:100%;top:-51px;left:0;z-index:9999;display:none}@media screen and (max-width:737px){.ref{top:-162px}}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}.show{display:block !important;visibility:visible !important}.loading{text-align:center;text-transform:uppercase;font-size:24px;margin:20px 0}body.browse .breadcrumb-c{padding-top:13px}body.browse .items-list-wrapper .item,body.browse .items-list-wrapper section:nth-of-type(3n+3){margin:0 8px 20px 0 !important;clear:none !important}body.browse .items-list-wrapper .item section .item-details h2{margin:0 0 3px 0 !important}body.browse .items-list-wrapper .item footer{position:relative !important}body.browse .items-list-wrapper .item footer p.thumb-rating img{display:inline-block !important}.heading-category{line-height:18px;font-family:brown-pro-bold;display:block;padding:0;margin:-10px 0 13px}.main-content #bottom,.main-content #infinite,.main-content #view-mode,.main-content .inline-header,.main-content .sort-order{display:none}#content-wrapper .category-page,#content-wrapper .common-wrap,#content-wrapper table{display:none}.wrap{overflow:hidden}.wrap img{max-width:100%}.wrap header{margin:0 0 40px}@media screen and (max-width:737px){.wrap header{margin:0 0 30px}}.wrap .pdps{margin:26px 0 0 0 !important}@media screen and (max-width:737px){.wrap .pdps{margin:9px 0 34px 0 !important}}.slick-list{padding:0 0 30px 0 !important}@media screen and (max-width:737px){.slick-list{padding:0 0 0 0 !important}}.slick-next,.slick-prev{background:red !important;z-index:9999;width:30px !important;height:30px !important;top:35% !important}.slick-next:before,.slick-prev:before{color:transparent !important}.slick-prev{left:15px !important;background:url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-left-arrow.png") no-repeat 0 0 !important}.slick-next{right:15px !important;background:url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1004/slider-right-arrow.png") no-repeat 0 0 !important}/*# sourceMappingURL=category-pages/feature-shops/gift-shop/girl/css/styles.css.map */
+  #simplemodal-overlay,.zoomContainer{z-index:99999 !important}#simplemodal-container{z-index:999999 !important;height:auto !important;width:672px !important}.store-box-content{width:100% !important;height:auto !important}/*# sourceMappingURL=category-pages/feature-shops/gift-shop/global/css/global.css.map */
 </style>
 {/literal}
 
@@ -59,7 +110,21 @@
     $('body').addClass('browse');
 
     //add loading...
-    $('.animal-lover, .dreamer, .explorer').append('<h2 class="loading">loading...</h2>');
+    // $('.animal-lover, .dreamer, .explorer').append('<h2 class="loading">loading...</h2>');
+
+    //start slideshow
+    $('.pdps').slick({
+      infinite: true,
+      slidesToShow: 3,
+      arrows: false,
+      autoplay: true,
+      responsive: [{
+        breakpoint: 737,
+        settings: {
+          slidesToShow: 2
+        }
+      }]
+    });
 
     var output = function(elem, theData) {
       var theElem;
@@ -90,8 +155,9 @@
     };
 
     // $('img[usemap]').rwdImageMaps();
-    $.get('https://www.teacollection.com/cms/gift-shop-skus/sku/1.html', function(data) {
-      var theData = $(data).find('.boys-skus');
+    /*
+    $.get('https://www.teacollection.com/cms/girls-gift-shop-sku/skus/1.html', function(data) {
+      var theData = $(data).find('.girls-skus');
       // console.log(theData);
 
       output('animal-lover', theData);
@@ -123,6 +189,7 @@
       });
 
     });
+    */
   });
 </script>
 {/literal}
