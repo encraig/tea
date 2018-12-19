@@ -1,19 +1,18 @@
-
 <!-- dev css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/baby-girl-clothes.css"> -->
 
 <!-- ref image -->
-<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1101/bg-bg-m.png"  /> -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-bg-m.png"  /> -->
 
 <div class="dept-cat">
 
 	<!-- <h3 class="mobile title">baby girl</h3> -->
 
-<!-- desktop image -->
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1101/bg-d.png"  />
+	<!-- desktop image -->
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-d.png" />
 
 	<!-- prod mobile image -->
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1101/bg-m.png"  />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-m.png" />
 
 </div>
 
@@ -24,26 +23,25 @@
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
-$(document).ready(function() {
-	// $('img[usemap]').rwdImageMaps();
+	$(document).ready(function() {
+		// $('img[usemap]').rwdImageMaps();
 
-	var src = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1101/bg-cell.png?nocache=1';
+		var src = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-cell.svg?nocache=1';
 
-	var alt='It’s a world of wonder for the littlest citizens, and every day is a new adventure. She’s curious. She loves to explore. And she has wide-eyed enthusiasm for every experience.';
+		var alt = 'It’s a world of wonder for the littlest citizens, and every day is a new adventure. She’s curious. She loves to explore. And she has wide-eyed enthusiasm for every experience.';
 
-	$('.dept-cat img').attr('alt', alt);
+		$('.dept-cat img').attr('alt', alt);
 
-	//mobile add the content cell take over
-	if($(window).width() < 737){ 
-		var elem = '<div class="single-item-box content-cell"><img src="'+ src +'" alt="'+ alt +'" style="max-width:100%"></div>';
-		
-		//browser doing to loads this is a fix to prevent the content cell from showing twice
-		if($('#infinite .single-item-box:nth-of-type(4)').hasClass('content-cell')){
-			console.log('do nothing');
+		//mobile add the content cell take over
+		if ($(window).width() < 737) {
+			var elem = '<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>';
+
+			//browser doing to loads this is a fix to prevent the content cell from showing twice
+			if ($('#infinite .single-item-box:nth-of-type(4)').hasClass('content-cell')) {
+				console.log('do nothing');
+			} else {
+				$('#infinite .single-item-box:nth-of-type(3)').after(elem);
+			}
 		}
-		else {
-			$('#infinite .single-item-box:nth-of-type(3)').after(elem);
-		}
-	}
-});
+	});
 </script>
