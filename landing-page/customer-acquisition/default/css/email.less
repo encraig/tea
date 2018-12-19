@@ -1,117 +1,105 @@
-	.email-sign-up {
-		@media screen and (max-width:737px){
-			margin:-18px 0 0 0;
-			padding: 17px 0 31px 0;
+.email-sign-up {
+	@media screen and (max-width:737px) {
+		margin: 40px 0 0;
+		padding: 17px 0 31px;
+	}
+	overflow: hidden;
+	margin: 46px 0 0;
+	box-sizing: border-box;
+	padding: 24px 0 26px;
+	background: #A9E5E5;
+
+	div {
+		@media screen and (max-width:737px) {
+			float: none;
+		}
+		float: left;
+
+		&:first-of-type {
+			@media screen and (max-width:737px) {
+				width: 100%;
+				padding: 0;
+				text-align: center;
+				margin: 0 0 19px;
+			}
+			width: 560px;
+			box-sizing: border-box;
+			padding: 0 0 0 46px;
+
+			h2 {
+				@media screen and (max-width:737px) {
+					font-size: 1.6em;
+					margin: 0 0 4px;
+					line-height: 27px;
+					position: relative;
+					left: -1%;
+					letter-spacing: 1px;
+				}
+				font-size: 21px;
+				margin: 0 0 10px;
+				color: #36456B;
+			}
+
+			p {
+				@media screen and (max-width:737px) {
+					font-size: 0.9em;
+					letter-spacing: 0;
+				}
+				font-size: 15px;
+				color: #36456B;
+			}
 		}
 
-		overflow:hidden;
-		margin:46px 0 0 0;
-		box-sizing:border-box;
-		padding:24px 0 26px 0;
-		background:#005C7C;
-
-		div {
-			@media screen and (max-width:737px){
-				float:none;
+		&:last-of-type {
+			@media screen and (max-width:737px) {
+				padding: 0 0 0 6%;
 			}
 
-			float:left;
-
-			&:first-of-type {
-				@media screen and (max-width:737px){
-					width:100%;
-					padding: 0;
-					text-align:center;
-					margin:0 0 19px 0;
+			form {
+				@media screen and (max-width:737px) {
+					background: none;
 				}
+				background: #fff;
 
-				width:560px;
-				box-sizing:border-box;
-				padding:0 0 0 46px;
+				input {
+					border-radius: 0;
 
-
-				h2 {
-					@media screen and (max-width:737px){
-						font-size: 1.6em;
-    					margin: 0px 0 4px 0;
-    					line-height: 27px;
-    					position: relative;
-    					left: -1%;
-    					letter-spacing: 1px;
-					}
-
-					font-size:21px;
-					margin: 0 0 10px 0;
-					color:#fff;
-				}
-
-				p {
-					@media screen and (max-width:737px){
-						font-size: .9em;
-						letter-spacing:0;
-					}
-
-					font-size: 15px;
-					color:#fff;
-				}
-			}
-
-			&:last-of-type {
-				@media screen and (max-width:737px){
-					padding:0 0 0 6%;
-				}
-
-				form {
-					@media screen and (max-width:737px){
-						background:none;
-					}
-
-					background:#fff;
-
-					input {
-						border-radius:0;
-						
-						&[type="email"]{
-							@media screen and (max-width:737px){
-								width:81%;
-								height:auto;
-								padding:13px 6%;
-								font-family:brown-pro-regular;
-								font-size: 1em;
-							}
-
-							width: 353px;
-							height:39px;
-    						padding: 11px 0 11px 19px;
-    						box-sizing: border-box;
-    						border:none;
-    						font-family:brown-pro-bold;
-    						color:#666;
-    						font-size:10px;
-    						line-height:12px;
-    						letter-spacing:.7px;
+					&[type="email"] {
+						@media screen and (max-width:737px) {
+							width: 81%;
+							height: auto;
+							padding: 13px 6%;
+							font-family: brown-pro-regular;
+							font-size: 1em;
 						}
+						width: 353px;
+						height: 39px;
+						padding: 11px 0 11px 19px;
+						box-sizing: border-box;
+						border: none;
+						font-family: brown-pro-bold;
+						color: #666;
+						font-size: 10px;
+						line-height: 12px;
+						letter-spacing: 0.7px;
+					}
 
-
-
-						&[type="submit"]{
-							@media screen and (max-width:737px){
-								width:13%;
-								padding:13px;
-								position:relative;
-								left:-1%;
-								top:3px;
-								background-position:50% 14px;
-							}
-
-							width: 39px;
-    						border: none;
-    						background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/submit-icon.png) no-repeat 15px 13px #E6E7E8;
-    						padding: 12px;
-
+					&[type="submit"] {
+						@media screen and (max-width:737px) {
+							width: 13%;
+							padding: 13px;
+							position: relative;
+							left: -1%;
+							top: 3px;
+							background-position: 50% 14px;
 						}
+						width: 39px;
+						border: none;
+						background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1101/submit-icon.png") no-repeat 15px 13px #E6E7E8;
+						padding: 12px;
 					}
 				}
 			}
 		}
 	}
+}

@@ -1,28 +1,18 @@
-
 <!-- dev styles css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
- 
-<div class="swim-container"> 
-   <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-d.png" alt="the swim shop" usemap="#swim-d" /> 
-   <map name="swim-d">
-        <area  alt="" title="" href="/girls-swimwear" shape="rect" coords="603,108,797,152" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/boys-swimwear" shape="rect" coords="605,162,798,210" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-girl-swimwear" shape="rect" coords="609,221,796,269" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-boy-swimwear" shape="rect" coords="608,282,797,328" style="outline:none;" target="_self"     /> 
-   </map>
 
-   <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/180405-m.png" alt="the swim shop" usemap="#swim-m" />
-   <map name="swim-m">
-        <area  alt="" title="" href="/girls-swimwear" shape="rect" coords="38,591,368,661" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/boys-swimwear" shape="rect" coords="382,589,713,663" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-girl-swimwear" shape="rect" coords="38,681,368,750" style="outline:none;" target="_self"     />
-        <area  alt="" title="" href="/baby-boy-swimwear" shape="rect" coords="383,680,712,750" style="outline:none;" target="_self"     />
-   </map>
+<!-- <img src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/1213/bg-m.png" class="ref" /> -->
+
+<div class="swim-container">
+  <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/1213/swim-d.png" alt="the swim shop" />
+
+  <p class="mobile">Little explorers dive into playful winter prints that<br> inspire family fun for adventures both near and far.</p>
+  <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2018/1213/swim-m.png" alt="the swim shop" />
 </div>
 
 <!--toolkit-->
 <style>
-    .ref{position:absolute;opacity:.5;display:none}.my-account h1,.midbox h1{display:none}#simplemodal-container,#simplemodal-overlay{display:none !important}@media screen and (max-width:737px){.sidebar.customer-service{display:none}}.main-content{float:left;width:840px;margin-top:0 !important}@media screen and (max-width:737px){.main-content{float:none;width:100%}}.padded{padding:0 !important}.mobile{display:none !important}@media screen and (max-width:768px){.mobile{display:inline-block !important}}@media screen and (max-width:768px){.desktop{display:none !important}}.cta{display:inline-block;border:2px solid;padding:8px 0 8px;width:200px;text-decoration:none;text-transform:uppercase;position:relative;left:-3px;font-size:14px;text-align:center;font-family:brown-pro-bold !important}@media screen and (max-width:768px){.cta{padding:6px 0 6px 0;width:170px;left:0;font-size:12px}}@media screen and (max-width:737px){.cta{padding:13px 0 13px 0;width:42%;left:-1px;font-size:19px;letter-spacing:1px;margin-bottom:76px}}@media screen and (max-width:668px){.cta{width:276px;font-size:17px;margin-bottom:67px}}@media screen and (max-width:569px){.cta{width:235px;font-size:14px;padding:9px 0 9px 0;margin-bottom:59px}}@media screen and (max-width:481px){.cta{width:199px;font-size:11px;padding:10px 0 10px 0;margin-bottom:49px}}@media screen and (max-width:415px){.cta{width:170px;padding:7px 0 7px 0;font-size:10px}}@media screen and (max-width:376px){.cta{width:155px;font-size:9px;padding:7px 0 7px 0}}@media screen and (max-width:321px){.cta{width:131px;font-size:8px;padding:6px 0 6px 0}}@media screen and (max-width:737px){.swim-container{margin:0 0 15px}}.swim-container img{max-width:100%}/*# sourceMappingURL=styles.css.map */
+  .ref{position:absolute;opacity:.5;display:none;max-width:100%;top:-135px}.midbox h1,.my-account h1{display:none}#simplemodal-container,#simplemodal-overlay{display:none !important}@media screen and (max-width:737px){.sidebar.customer-service{display:none}}.main-content{float:left;width:840px;margin-top:0 !important}@media screen and (max-width:737px){.main-content{float:none;width:100%}}.padded{padding:0 !important}.mobile{display:none !important}@media screen and (max-width:768px){.mobile{display:inline-block !important}}@media screen and (max-width:768px){.desktop{display:none !important}}@media screen and (max-width:737px){.swim-container{margin:0 0 15px}}@media screen and (max-width:737px){.swim-container p.mobile{text-align:center;display:block !important;margin:-5px 0 15px;font-size:1em;letter-spacing:-0.5px;line-height:18px}}.swim-container img{max-width:100%}/*# sourceMappingURL=landing-page/swimwear/default/css/styles.css.map */
 </style>
 
 <!-- dev -->
@@ -38,44 +28,48 @@
 
 
 <script>
-$(document).ready(function(){  
-	jQuery('img[usemap]').rwdImageMaps();  
+  $(document).ready(function() {
+    jQuery('img[usemap]').rwdImageMaps();
 
-  //content cell take over 
-  //desktop 
-  if($(window).width() > 737) {
-     //change urls of left nav
-    var leftNav = $('.dept-swimwear section')
+    //content cell take over
+    //desktop
+    if ($(window).width() > 737) {
+      //change urls of left nav
+      var leftNav = $('.dept-swimwear section')
 
-    $.each(leftNav, function(i,val){
-      var a = $(val).find('a').text();
-      switch(a){
-        case 'Girl':
-          $(val).find('a').attr('href','/girls-swimwear');
-          break;
-        case 'Boy':
-          $(val).find('a').attr('href','/boys-swimwear');
-          break;
-        case 'Baby Girl':
-          $(val).find('a').attr('href','/baby-girl-swimwear');
-          break;
-        case 'Baby Boy':
-          $(val).find('a').attr('href','/baby-boy-swimwear');
-          break;
-      }
-    });
+      $.each(leftNav, function(i, val) {
+        var a = $(val).find('a').text();
+        switch (a) {
+          case 'Girl':
+            $(val).find('a').attr('href', '/girls-swimwear');
+            break;
+          case 'Boy':
+            $(val).find('a').attr('href', '/boys-swimwear');
+            break;
+          case 'Baby Girl':
+            $(val).find('a').attr('href', '/baby-girl-swimwear');
+            break;
+          case 'Baby Boy':
+            $(val).find('a').attr('href', '/baby-boy-swimwear');
+            break;
+        }
+      });
 
-    //remove .item.cell because of the way the page reloads twice
-    $('.item.cell').remove();
+      //remove .item.cell because of the way the page reloads twice
+      $('.item.cell').remove();
 
-    $('.items-list-wrapper .item').eq(3).before('<section class="item cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/c4.svg" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></section>')
-  } 
-  //mobile
-  else {
-    //remove .item.cell because of the way the page reloads twice
-    $('.single-item-box.cell').remove();
+      $('.items-list-wrapper .item').eq(3).before(
+        '<section class="item cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/1213/c4.png" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></section>'
+      )
+    }
+    //mobile
+    else {
+      //remove .item.cell because of the way the page reloads twice
+      $('.single-item-box.cell').remove();
 
-    $('.thumb-wrapper .single-item-box').eq(3).before('<div class="single-item-box cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/c4.svg" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></div>')
-  }  
-}); 
-</script>  
+      $('.thumb-wrapper .single-item-box').eq(3).before(
+        '<div class="single-item-box cell" style="overflow:hidden"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2018/1213/c4.png" alt="our swimwear is always: upf 40+, soft agaist the skin, vibrant season after season" style="max-width:100%;"></div>'
+      )
+    }
+  });
+</script>

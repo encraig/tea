@@ -1,135 +1,83 @@
-
 .customer-wrap {
-	@media screen and (max-width:737px){
-		
-	}
-
+	@media screen and (max-width:737px) {}
 	//overflow:hidden;
-	
-	h1, h2, h3 {
-		font-family:brown-pro-bold !important;
-		font-weight:normal;
+	h1,
+	h2,
+	h3 {
+		font-family: brown-pro-bold !important;
+		font-weight: normal;
 	}
 
 	img {
-		max-width:100%;
+		max-width: 100%;
 	}
 
-	.top {
-		.c1, .c2, .c3, .c4 {
-			@media screen and (max-width:737px){
-				height:452px;
+	.top-scroll {
+		.c1,
+		.c2,
+		.c3 {
+			@media screen and (max-width:737px) {
+				height: 452px;
 			}
-
-			@media screen and (max-width:321px){
-				height:385px;
+			@media screen and (max-width:321px) {
+				height: 385px;
 			}
-
-		}
-
-		.c1, .c2 {
-			@media screen and (max-width:737px){
-				//height:auto;
-			}
-
 			height: 500px;
 
-			img {
-				max-width:100%;
-			}
-
-			h2 {
-				@media screen and (max-width:737px){
-					font-size: 15px;
-    				letter-spacing: 2px;
-    				margin: 8px 0 0 0;
-				}
-
-				color:#666;
-				font-size:21px;
-				line-height:25px;
-				font-family:brown-pro-bold;
-				text-align:center;
-				text-transform:uppercase;
-				margin: 16px 0 0 0;
-    			letter-spacing: 3px;
-			}
-
 			div {
-				@media screen and (max-width:737px){
-					margin: 7px 0 0 0;
-    				padding: 0 6%;
+				@media screen and (max-width:415px) {
+					width: 100%;
+					top: -92px !important;
+					left: 0 !important;
 				}
-
-				margin: 17px 0 0 0;
-    			padding: 0px 0 0 110px;
+				@media screen and (max-width:376px) {
+					top: -53px !important;
+				}
+				width: 200px;
+				position: relative;
 
 				.cta {
-					@media screen and (max-width:737px){
-						width: 47%;
-    					margin: 0px 4% 15px 0;
+					@media screen and (max-width:737px) {
+						width: 42%;
 
-    					&.cta3, &.cta5 {
-    						margin-right:0;
-    					}
+						&.cta1 {
+							left: -1%;
+						}
 
-    					&.tween {
-    						width:100%;
-    					}
+						&.cta2 {
+							left: 1%;
+						}
 					}
-
-					color:#09839E;
-					width:140px;
-					margin: 0 18px 0 0;
-
-					&:hover {
-						background:#09839E;
-						color:#fff;
-					}
-				}
-			}	
-		}
-
-		.c3, .c4 {
-			position:relative;
-
-			div {
-				@media screen and (max-width:737px){
-					width: 63%;
-    				margin: 0 auto;
-    				position: relative;
-    				top: -143px;
-    				right: 0;
-				}
-
-				width:250px;
-				position:absolute;
-				top: 280px;
-    			right: 60px;
-
-				.cta {
-					@media screen and (max-width:737px){
-						width: 100%;
-    					margin: 0 0 15px 0;
-    					letter-spacing: 0.5px;
-					}
-
-					width: 250px;
-					background:#fff;
+					background: #fff;
 					border: none;
-    				color: #666;
-    				margin: 0 0 19px 0;
-    				letter-spacing: 1px;
-				}
+					color: #666;
+					margin: 0 0 19px;
 
+					span {
+						font-family: brown-pro-bold;
+					}
+				}
 			}
 		}
 
-		.c4 {
+		.c1,
+		.c3 {
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1220/c1-1st-d.png") no-repeat 0 0;
+			background-size: contain;
+
 			div {
-				@media screen and (max-width:737px){
-					top: -97px;
-				}
+				top: 284px;
+				left: 60px;
+			}
+		}
+
+		.c2 {
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/1220/c1-2nd-d.png") no-repeat 0 0;
+			background-size: contain;
+
+			div {
+				left: 737px;
+				top: 284px;
 			}
 		}
 	}
