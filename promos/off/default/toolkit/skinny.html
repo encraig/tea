@@ -243,7 +243,10 @@
 		// slide toggle the fineprint
 		$('.mobile-promo.skinny a, #skinny-details-promo .close-fancy, #skinny-details-promo .signup #close-icon2').click(function(e) {
 			e.preventDefault();
-			$('#skinny-details-promo').slideToggle();
+			$('#details-promo').slideUp('fast', function() {
+				$('#skinny-details-promo').slideToggle();
+			});
+
 		});
 
 	});
