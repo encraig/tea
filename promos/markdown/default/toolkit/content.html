@@ -310,7 +310,10 @@
 		// slide toggle the fineprint
 		$('.mobile-promo .see-details, #details-promo .close-fancy').click(function(e) {
 			e.preventDefault();
-			$('#details-promo').slideToggle();
+			$('#skinny-details-promo').slideUp('fast', function() {
+				$('#details-promo').slideToggle();
+			});
+
 		});
 	});
 </script>
