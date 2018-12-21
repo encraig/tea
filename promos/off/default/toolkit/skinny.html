@@ -241,13 +241,15 @@
 		});
 
 		// slide toggle the fineprint
-		$('.mobile-promo.skinny a, #skinny-details-promo .close-fancy, #skinny-details-promo .signup #close-icon2').click(function(e) {
-			e.preventDefault();
-			$('#details-promo').slideUp('fast', function() {
-				$('#skinny-details-promo').slideToggle();
+		if ($(window).width() < 737) {
+			$('.mobile-promo.skinny a, #skinny-details-promo .close-fancy, #skinny-details-promo .signup #close-icon2').click(function(e) {
+				e.preventDefault();
+				$('#details-promo').slideUp('fast', function() {
+					$('#skinny-details-promo').slideToggle();
+				});
 			});
+		}
 
-		});
 
 	});
 </script>
