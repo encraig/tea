@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["homepage/default/css/c2.less"],"names":[],"mappings":"AAKG,mBAAoC"}
+=======
+{"version":3,"sources":["homepage/default/css/c2.less"],"names":[],"mappings":"AAKG,mBAAoC,iBAApC,GAFF,IACC,MAoBE,SAAA,CACA,eAAA,CACA,OAAA,CACA,OAAA,CACA,aAEA,GA3BH,IACC,KA0BG,MACA,WAIF,GAhCF,IACC,KA+BE,cAIA,gBAHA,mBAAoC,iBAApC,GAjCH,IACC,KA+BE,cAEC"}
+>>>>>>> 43e3738... homepage/ coded hp done 1/17
