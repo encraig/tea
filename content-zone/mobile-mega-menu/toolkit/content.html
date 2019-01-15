@@ -4,63 +4,63 @@
 
 		{* bf temp
 		<div class="hamburgerTopCategory black{if $category_obj->name == 'black-friday'} current{/if}">
-			<a class="dummy-link" href="{category_url category="black-friday"}">The Black Friday Event</a>
+			<a class="dummy-link" href="{category_url category="black-friday"}" data="mobile top-nav">The Black Friday Event</a>
 			<span class="title" style="color:#f00">The Black Friday Event</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div><a class="cat-link" href="{category_url category="black-friday/girl"}">Girl </a></div>
 				{sub_cats name="cat" category="black-friday/girl" }
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu girl black friday">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu girl black friday">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
 			</div>
 
 			<div class="hamburgerSubCategory">
-				<div><a class="cat-link" href="{category_url category="black-friday/tween"}">Tween </a> </div>
+				<div><a class="cat-link" href="{category_url category="black-friday/tween"}" data="mobile mega menu tween black friday">Tween </a> </div>
 				{sub_cats name="cat" category="black-friday/tween" }
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu tween black friday">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu tween black friday">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
 			</div>
 
 			<div class="hamburgerSubCategory">
-				<div><a class="cat-link" href="{category_url category="black-friday/boy"}">Boy </a> </div>
+				<div><a class="cat-link" href="{category_url category="black-friday/boy"}" data="mobile mega menu boy black friday">Boy </a> </div>
 				{sub_cats name="cat" category="black-friday/boy" }
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu boy black friday">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu boy black friday">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
 			</div>
 
 			<div class="hamburgerSubCategory">
-				<div><a class="cat-link" href="{category_url category="black-friday/baby-girl"}">Baby Girl</a> </div> {sub_cats name="cat" category="black-friday/baby-girl" }
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+				<div><a class="cat-link" href="{category_url category="black-friday/baby-girl"}" data="mobile mega menu baby girl black friday">Baby Girl</a> </div> {sub_cats name="cat" category="black-friday/baby-girl" }
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby girl black friday">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby girl black friday">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
 			</div>
 
 			<div class="hamburgerSubCategory">
-				<div><a class="cat-link" href="{category_url category="black-friday/baby-boy"}">Baby Boy</a> </div> {sub_cats name="cat" category="black-friday/baby-boy" }
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+				<div><a class="cat-link" href="{category_url category="black-friday/baby-boy"}" data="mobile mega menu baby boy black friday">Baby Boy</a> </div> {sub_cats name="cat" category="black-friday/baby-boy" }
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby boy black friday">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby boy black friday">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
@@ -71,17 +71,17 @@
 
 		{* girl *}
 		<div class="hamburgerTopCategory girl{if $category_obj->name == 'girls-clothing'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" girls-clothing"}">Girl</a>
+			<a class="dummy-link" href="{category_url category=" girls-clothing"}" data="mobile top-nav">Girl</a>
 			<span class="title">Girl</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Favorites</div>
 				{sub_cats name="cat" category="girls-clothing/favorites"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu girl favorites">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu girl favorites">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
@@ -90,14 +90,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="girls-clothing/shop-by-category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu girl category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu girl category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}girls-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}girls-clothing/view-all" class="hamburgerLink" data="mobile mega menu girl category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -115,17 +115,17 @@
 
 		{* tween *}
 		<div class="hamburgerTopCategory tweengirl{if $category_obj->name == 'tween-girls-clothing'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" tween-girls-clothing"}">Tween Girl</a>
+			<a class="dummy-link" href="{category_url category=" tween-girls-clothing"}" data="mobile top-nav">Tween Girl</a>
 			<span class="title">Tween</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Favorites</div>
 				{sub_cats name="cat" category="tween-girls-clothing/favorites"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu tween favorites">{$cat.title}</a>
 					{if $cat.subcats_count}
 					{sub_cats name="cat2" category=$cat.name}
-				<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+				<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu tween favorites">{$cat2.title}</a>
 				{/sub_cats}
 				{/if}
 				{/sub_cats}
@@ -134,14 +134,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="tween-girls-clothing/category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu tween category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu tween category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}tween-girls-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}tween-girls-clothing/view-all" class="hamburgerLink" data="mobile mega menu tween category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -159,17 +159,17 @@
 
 		{* boy *}
 		<div class="hamburgerTopCategory boy{if $category_obj->name == 'boys-clothing'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" boys-clothing"}">Boy</a>
+			<a class="dummy-link" href="{category_url category=" boys-clothing"}" data="mobile top-nav">Boy</a>
 			<span class="title">Boy</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Favorites</div>
 				{sub_cats name="cat" category="boys-clothing/favorites"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu boy favorites">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu boy favorites">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
@@ -178,14 +178,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="boys-clothing/shop-by-category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu boy category">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu boy category">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 					{/sub_cats}
-				<a href="{$html_url}boys-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}boys-clothing/view-all" class="hamburgerLink" data="mobile mega menu boy category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -203,17 +203,17 @@
 
 		{* baby girl *}
 		<div class="hamburgerTopCategory babygirl{if $category_obj->name == 'baby-girl-clothes'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" baby-girl-clothes"}">Baby Girl</a>
+			<a class="dummy-link" href="{category_url category=" baby-girl-clothes"}" data="mobile top-nav">Baby Girl</a>
 			<span class="title">Baby Girl</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Favorites</div>
 				{sub_cats name="cat" category="baby-girl-clothes/favorites"}
-				<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+				<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby girl favorites">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby girl favorites">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
@@ -222,14 +222,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby girl category">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby girl category">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
-				<a href="{$html_url}baby-girl-clothes/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}baby-girl-clothes/view-all" class="hamburgerLink" data="mobile mega menu baby girl category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -247,7 +247,7 @@
 
 		{* baby boy *}
 		<div class="hamburgerTopCategory babyboy{if $category_obj->name == 'baby-boy-clothes'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" baby-boy-clothes"}">Baby Boy</a>
+			<a class="dummy-link" href="{category_url category=" baby-boy-clothes"}" data="mobile top-nav">Baby Boy</a>
 			<span class="title">Baby Boy</span>
 			<div class="title-sticky-placeholder"></div>
 
@@ -255,10 +255,10 @@
 				<span class="top"></span>
 				<div>Favorites</div>
 				{sub_cats name="cat" category="baby-boy-clothes/favorites"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby boy favorites">{$cat.title}</a>
 						{if $cat.subcats_count}
 							{sub_cats name="cat2" category=$cat.name}
-								<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+								<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby boy favorites">{$cat2.title}</a>
 							{/sub_cats}
 						{/if}
 				{/sub_cats}
@@ -267,14 +267,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu baby boy category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu baby boy category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}baby-boy-clothes/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}baby-boy-clothes/view-all" class="hamburgerLink" data="mobile mega menu baby boy category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -292,17 +292,17 @@
 
 		{* newborn*}
 		<div class="hamburgerTopCategory newborn{if $category_obj->name == 'newborn-clothes'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" newborn-clothes"}">Newborn</a>
+			<a class="dummy-link" href="{category_url category=" newborn-clothes"}" data="mobile top-nav">Newborn</a>
 			<span class="title">Newborn</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Favorites</div>
 				{sub_cats name="cat" category="newborn-clothes/favorites"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu newborn favorites">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu newborn favorites">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
@@ -311,14 +311,14 @@
 			<div class="hamburgerSubCategory">
 				<div>Category</div>
 				{sub_cats name="cat" category="newborn-clothes/shop-by-category"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu newborn category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu newborn category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}newborn-clothes/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}newborn-clothes/view-all" class="hamburgerLink" data="mobile mega menu newborn category">VIEW ALL</a>
 			</div>
 
 			{*<div class="hamburgerSubCategory">
@@ -335,99 +335,99 @@
 
 		{* sale *}
 		<div class="hamburgerTopCategory sale{if $category_obj->name == 'clothing-sale'} current{/if}">
-			<a class="dummy-link" href="{category_url category=" clothing-sale"}">Sale</a>
+			<a class="dummy-link" href="{category_url category=" clothing-sale"}" data="mobile top-nav">Sale</a>
 			<span class="title">Sale</span>
 			<div class="title-sticky-placeholder"></div>
 
 			<div class="hamburgerSubCategory">
 				<div>Girl</div>
 				{sub_cats name="cat" category="sale/girls-clothing"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale girl category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale girl category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/girls-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/girls-clothing/view-all" class="hamburgerLink" data="mobile mega menu sale girl category">VIEW ALL</a>
 			</div>
 
 			<div class="hamburgerSubCategory">
 				<div>Tween</div>
 				{sub_cats name="cat" category="sale/tween-girls-clothing"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale tween category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale tween category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/tween-girls-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/tween-girls-clothing/view-all" class="hamburgerLink" data="mobile mega menu sale tween category">VIEW ALL</a>
 			</div>
 
 			<div class="hamburgerSubCategory">
 				<div>Boy</div>
 				{sub_cats name="cat" category="sale/boys-clothing"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale boy category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale boy category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/boys-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/boys-clothing/view-all" class="hamburgerLink" data="mobile mega menu sale boy category">VIEW ALL</a>
 			</div>
 
 			<div class="hamburgerSubCategory">
 				<div>Baby Girl</div>
 				{sub_cats name="cat" category="sale/baby-girl-clothes"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale baby girl category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale baby girl category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/baby-girl-clothes/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/baby-girl-clothes/view-all" class="hamburgerLink" data="mobile mega menu sale baby girl category">VIEW ALL</a>
 			</div>
 
 			<div class="hamburgerSubCategory">
 				<div>Baby Boy</div>
 				{sub_cats name="cat" category="sale/baby-boy-clothes"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale baby boy category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale baby boy category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/baby-boy-clothes/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/baby-boy-clothes/view-all" class="hamburgerLink" data="mobile mega menu sale baby boy category">VIEW ALL</a>
 			</div>
 
 			<div class="hamburgerSubCategory">
 				<div>Newborn</div>
 				{sub_cats name="cat" category="sale/newborn-clothing"}
-					<a href="{$cat.url}" class="hamburgerLink">{$cat.title}</a>
+					<a href="{$cat.url}" class="hamburgerLink" data="mobile mega menu sale newborn category">{$cat.title}</a>
 					{if $cat.subcats_count}
 						{sub_cats name="cat2" category=$cat.name}
-							<a href="{$cat2.url}" class="hamburgerLink_sub">{$cat2.title}</a>
+							<a href="{$cat2.url}" class="hamburgerLink_sub" data="mobile mega menu sale newborn category">{$cat2.title}</a>
 						{/sub_cats}
 					{/if}
 				{/sub_cats}
-				<a href="{$html_url}sale/newborn-clothing/view-all" class="hamburgerLink">VIEW ALL</a>
+				<a href="{$html_url}sale/newborn-clothing/view-all" class="hamburgerLink" data="mobile mega menu sale newborn category">VIEW ALL</a>
 			</div>
 		</div>
 
 		<div class="footer">
 			<div class="about-btn">
-				<a href="{static_url id="the-tea-story"}" class="about">About Tea</a>
+				<a href="{static_url id="the-tea-story"}" class="about" data="mobile mega menu about tea">About Tea</a>
 			</div>
 
 			<div class="signin-btn">
 				{if $is_logged && !$smarty.session.user->noreg}
-					<a href="{$secure_html_url}?page=account" class="signin">My Account</a>
+					<a href="{$secure_html_url}?page=account" class="signin" data="mobile mega menu my account">My Account</a>
 				{else}
-					<a href="{$secure_html_url}?page=login" class="signin">Sign in</a>
+					<a href="{$secure_html_url}?page=login" class="signin" data="mobile mega menu sign in">Sign in</a>
 				{/if}
 			</div>
 
