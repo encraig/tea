@@ -6,15 +6,15 @@
 <!-- UNCOMMENT IF NEEDED -->
 <div class="desktop-promo">
 
-	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-d-v3.png" alt="" usemap="#map-d" class="promo-img-alt ref" /> -->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-d-v3.png" alt="more choices! Baby sizes through 4T and Girl sizes up to 12 are back in spring arrivals." usemap="#map-d" class="promo-img-alt" />
 
-	<h2><span class="first">more choices!</span> <span class="second">Baby sizes through 4T <b>and</b> Girl sizes<br class="mobile"> up to 12 are back in spring arrivals.</span></h2>
+	<!-- <h2><span class="first">more choices!</span> <span class="second">Baby sizes through 4T <b>and</b> Girl sizes<br class="mobile"> up to 12 are back in spring arrivals.</span></h2> -->
 
 </div>
 
 <div class="mobile-promo">
 
-	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-m-v3.png" alt="" class="promo-img-alt ref" /></a> -->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-m-v3.png" alt="more choices! Baby sizes through 4T and Girl sizes up to 12 are back in spring arrivals." class="promo-img-alt" /></a>
 
 </div>
 
@@ -26,12 +26,12 @@
 
 <script>
 	$(document).ready(function() {
-		var copy = $('.desktop-promo h2').clone();
-		// console.log(copy[0].outerHTML);
-
-		$('.mobile-promo').append(copy[0].outerHTML);
-		$('.mobile-promo b').html('&amp;');
-
+		// var copy = $('.desktop-promo h2').clone();
+		// // console.log(copy[0].outerHTML);
+		//
+		// $('.mobile-promo').append(copy[0].outerHTML);
+		// $('.mobile-promo b').html('&amp;');
+		//
 		var url = window.location.href;
 		if (url == 'https://www.teacollection.com/' || url == 'https://m.teacollection.com/') {
 			$('.desktop-promo').css('margin', '0 0 10px 0');
