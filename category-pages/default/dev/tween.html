@@ -1,0 +1,76 @@
+<div class="tween-container">
+	<!--desktop-->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/tween-d.png" alt="tween" style="max-width:100%; margin-bottom: 10px;" class="desktop" />
+	<!--mobile-->
+	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/tween-m.png" alt="tween" style="max-width:100%; margin-bottom: 10px;" class="mobile" />
+</div>
+<!-- toolkit -->
+<style>
+	include "../css/girls-clothing.css"
+	include "../css/tween.css"
+</style>
+
+<script>
+	var dpSrc = null;
+	var dpAlt = null;
+
+	//function to call from flex field
+	var addCell = function(dpSrc, dpAlt) {
+		console.log('do nothing');
+		/*
+		console.log('add the content cell');
+		var tweenCells = [{
+				num: 1,
+				alt: 'pineapple graphic',
+				ext: '.jpg',
+				sku: '9S82110',
+			},
+			{
+				num: 6,
+				alt: 'tween girl',
+				ext: '.png',
+				sku: '9S82111'
+			},
+			{
+				num: 13,
+				alt: 'tween girl',
+				ext: '.png',
+				sku: '9S82301'
+			},
+		];
+		$.each(tweenCells, function(i, val) {
+			var elem;
+			//desktop
+			if ($(window).width() > 737) {
+				elem = '<section class="item content-cell" data-sku="' + val.sku + '"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/tween-' + val.num + val.ext + '" alt="' + val.alt +
+					'" style="max-width:100%;"></section>';
+				$('#infinite section.item').eq(val.num - 1).before(elem);
+			}
+			//mobile
+			else {
+				elem = '<div class="single-item-box content-cell" data-sku="' + val.sku + '"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/tween-' + val.num + val.ext + '" alt="' + val.alt +
+					'" style="max-width:100%;"></div>';
+				$('#infinite div.single-item-box').eq(val.num - 1).before(elem);
+			}
+
+		});
+		*/
+
+		$('.content-cell').click(function(e) {
+			// console.log(e);
+			// return false;
+			var sku = $(this).attr('data-sku');
+			window.location.href = 'https://www.teacollection.com/product/' + sku;
+		});
+	};
+
+	$(document).ready(function() {
+		//tracking code for gtm
+		$('a').attr('data-page', 'tween new arrivals');
+
+		var alt = 'She\'s Growing Up and So Are We Tea style designed especially for her in swim, dresses, graphics, and more. Available in sizes 7 -16.';
+
+		$('.tween-container img').attr('alt', alt);
+
+	});
+</script>

@@ -1,0 +1,211 @@
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ref images -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-d.jpg" class="ref" /> -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-m.jpg" class="ref" /> -->
+
+<div class="content-container">
+	<header>
+		<h1 data-country="Morocco" style="display:none">morocco</h1>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/morocco/2018/new-morocco-header.png" alt="morocco" />
+	</header>
+
+	<div class="main-content">
+		<div class="left">
+			<ul></ul>
+		</div>
+		<div class="right">
+			<ul></ul>
+		</div>
+	</div>
+
+	<footer>
+		<div class="these-catalogs">
+			<hr>
+			<h2>browse morocco catalogs</h2>
+			<ul></ul>
+		</div>
+
+		<div class="issuu">
+			<div class="overlay"></div>
+		</div>
+
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/morocco/2018/new-morocco-footer.png" alt="Salamo-Aleikum! Hello!" />
+	</footer>
+
+</div>
+
+
+<!-- fancy box -->
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+
+<!-- bx slider production-->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+<!-- rwd image maps -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<!-- md5 -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.md5.js"></script>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+	include "../../global/css/global.css"
+</style>
+
+
+<script>
+	//mobile change the iframe height
+	if ($(window).width() < 737) {
+		$('.iframe').attr('height', '220')
+	}
+
+	$(document).ready(function() {
+		include "../../global/js/scripts.js"
+
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		$('.issuu .overlay').click(function() {
+			$('.issuu').hide();
+		});
+
+
+		//on select change
+		$('.top-area select').change(function() {
+			var dest = $(this).val();
+			window.location.href = dest;
+		});
+
+		// constructor to make page content object
+		var Cell = function(href, src, srcHover) {
+			this.href = href;
+			this.src = src;
+			this.srcHover = srcHover;
+		};
+
+		//page content
+		var pageContent = [];
+
+		//left side content
+		var left = {
+			theClass: 'left',
+			theLi: []
+		};
+
+		//right side content
+		var right = {
+			theClass: 'right',
+			theLi: []
+		}
+
+		//include content from content-left.js and content-right.js
+		include "../js/content-left.js"
+		include "../js/content-right.js"
+
+		//push left & right object to pageContent
+		pageContent.push(left, right);
+
+		// console.log(pageContent);
+
+		//output content onto page
+		$.each(pageContent, function(i, val) {
+
+			$.each(val.theLi, function(j, arr) {
+				var li;
+				//if pdf add the target attr
+				var theHref = arr.href;
+				if (theHref.indexOf('.pdf') !== -1) {
+					li = '<li><a href="' + arr.href + '" class="fancybox" target="_blank"><img src="' + arr.src + '" data-src="' + arr.src + '"  data-hover="' + arr.srcHover + '" /></a></li>';
+					$('.main-content .' + val.theClass + ' ul').append(li);
+				} else {
+					li = '<li><a href="' + arr.href + '" class="fancybox"><img src="' + arr.src + '" data-src="' + arr.src + '"  data-hover="' + arr.srcHover + '" /></a></li>';
+					$('.main-content .' + val.theClass + ' ul').append(li);
+				}
+
+			});
+
+		});
+
+		//on hover change the img src
+		$('.main-content').find('img').hover(function(e) {
+			var hover = $(this).attr('data-hover');
+			$(this).attr('src', hover);
+		}, function() {
+			var src = $(this).attr('data-src');
+			$(this).attr('src', src);
+		});
+
+		$('.fancybox').fancybox();
+
+		//include the issuu code
+		include "../js/scripts.js"
+
+
+		// if($(window).width() > 737){
+
+		//     // $('.fancybox').fancybox();
+
+		//     // get the page url
+		//     var windowUrl = window.location.href;
+		//     // var windowUrl = 'https://google.com';
+		//     windowUrl = encodeURIComponent(windowUrl);
+		//     // console.log(windowUrl);
+
+		//     //get the page title;
+		//     var windowTitle = $('title').text().split('|')[0];
+		//     // console.log(windowTitle);
+
+		//     //get the pint-imge
+		//     var pintImg = $('#pint-img').attr('src');
+
+		//     // function to make Array
+		//     var makeArray = function(elem, attribute){
+		//         var theArray = $(elem).attr(attribute).split('?');
+		//         return theArray;
+		//     };
+
+		//     // change facebook button
+		//     var fbSrc = makeArray('#fb', 'src');
+		//     var fbBase = fbSrc[0];
+		//     fbSrc = fbSrc[1].split('&');
+		//     $(fbSrc).each(function(i,val){
+		//         if(val.indexOf('href=') !== -1){
+		//             fbSrc[i] = 'href=' + windowUrl;
+		//             // console.log(fbSrc[i]);
+		//         }
+		//     });
+		//     fbSrc = fbSrc.join('&');
+		//     var fbHref = fbBase + '?' + fbSrc;
+		//     $('#fb').attr('src',fbHref);
+
+
+		//     // change twitter button
+		//     $('.twitter-share-button').attr('data-url', windowUrl);
+		//     $('.twitter-share-button').attr('data-text', windowTitle);
+
+		//     // change pinterest
+		//     var pinHref = makeArray('#pint','href');
+		//     var pinBase = pinHref[0];
+		//     pinHref = pinHref[1].split('&');
+		//     $(pinHref).each(function(i,val){
+		//         if(val.indexOf('url=') !== -1){
+		//             pinHref[i] = 'url=' + windowUrl;
+		//             // console.log(fbSrc[i]);
+		//         }
+
+		//         if(val.indexOf('media=') !== -1){
+		//             pinHref[i] = 'media=' + pintImg;
+		//             // console.log(fbSrc[i]);
+		//         }
+		//     });
+		//     pinHref = pinHref.join('&');
+		//     pinHref = pinBase + '?' + pinHref;
+		//     $('#pint').attr('href', pinHref);
+		// }
+
+	});
+</script>

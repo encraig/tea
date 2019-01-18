@@ -5,6 +5,12 @@ module.exports = function(grunt) {
       livereload: true
     },
 
+    // GLOBAL ---------------------------------------------------------------------------
+    Global: {
+      files: ['global/css/*.less', 'global/js/*.js'],
+      tasks: ['less:globalCSS', 'uglify:globalJS'],
+    },
+
     // BUILD ---------------------------------------------------------------------------
     Build: {
       files: ['local-templates/*.html'],

@@ -7,6 +7,16 @@ module.exports = function(grunt) {
       compress: true,
     },
 
+    // GLOBAL CSS ---------------------------------------------------------------------------
+    globalCSS: {
+
+      expand: true,
+      cwd: 'global/css/',
+      src: '*.less',
+      dest: 'global/css/',
+      ext: '.css',
+    },
+
     // ZONE CSS ---------------------------------------------------------------------------
     zoneCSS: {
       files: {

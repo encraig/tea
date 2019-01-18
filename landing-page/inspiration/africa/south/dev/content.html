@@ -1,0 +1,148 @@
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ref images -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-d.jpg" class="ref" /> -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-m.jpg" class="ref" /> -->
+
+<div class="content-container">
+	<header>
+		<h1 data-country="Africa" style="display:none">south africa</h1>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/africa/south/2018/new-south-africa-header.png" alt="south africa" />
+	</header>
+
+	<div class="main-content">
+		<div class="left">
+			<ul></ul>
+		</div>
+		<div class="right">
+			<ul></ul>
+		</div>
+	</div>
+
+	<footer>
+		<div class="these-catalogs">
+			<hr>
+			<h2>browse south africa catalogs</h2>
+			<ul></ul>
+		</div>
+
+		<div class="issuu">
+			<div class="overlay"></div>
+		</div>
+
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/africa/south/2018/new-south-africa-footer.png" alt="SAWUBONA! BHOTA! HALLO! DUMELA! AVUXEN! HELLO!" />
+	</footer>
+
+</div>
+
+
+<!-- fancy box -->
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+
+<!-- bx slider production-->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+<!-- rwd image maps -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<!-- md5 -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.md5.js"></script>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+	include "../../../global/css/global.css"
+</style>
+
+
+<script>
+	//mobile change the iframe height
+	if ($(window).width() < 737) {
+		$('.iframe').attr('height', '220')
+	}
+
+	$(document).ready(function() {
+		include "../../../global/js/scripts.js"
+
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		$('.issuu .overlay').click(function() {
+			$('.issuu').hide();
+		});
+
+
+		//on select change
+		$('.top-area select').change(function() {
+			var dest = $(this).val();
+			window.location.href = dest;
+		});
+
+		// constructor to make page content object
+		var Cell = function(href, src, srcHover) {
+			this.href = href;
+			this.src = src;
+			this.srcHover = srcHover;
+		};
+
+		//page content
+		var pageContent = [];
+
+		//left side content
+		var left = {
+			theClass: 'left',
+			theLi: []
+		};
+
+		//right side content
+		var right = {
+			theClass: 'right',
+			theLi: []
+		}
+
+		//include content from content-left.js and content-right.js
+		include "../js/content-left.js"
+		include "../js/content-right.js"
+
+		//push left & right object to pageContent
+		pageContent.push(left, right);
+
+		// console.log(pageContent);
+
+		//output content onto page
+		$.each(pageContent, function(i, val) {
+
+			$.each(val.theLi, function(j, arr) {
+				var li;
+				//if pdf add the target attr
+				var theHref = arr.href;
+				if (theHref.indexOf('.pdf') !== -1) {
+					li = '<li><a href="' + arr.href + '" class="fancybox" target="_blank"><img src="' + arr.src + '" data-src="' + arr.src + '"  data-hover="' + arr.srcHover + '" /></a></li>';
+					$('.main-content .' + val.theClass + ' ul').append(li);
+				} else {
+					li = '<li><a href="' + arr.href + '" class="fancybox"><img src="' + arr.src + '" data-src="' + arr.src + '"  data-hover="' + arr.srcHover + '" /></a></li>';
+					$('.main-content .' + val.theClass + ' ul').append(li);
+				}
+
+			});
+
+		});
+
+		//on hover change the img src
+		$('.main-content').find('img').hover(function(e) {
+			var hover = $(this).attr('data-hover');
+			$(this).attr('src', hover);
+		}, function() {
+			var src = $(this).attr('data-src');
+			$(this).attr('src', src);
+		});
+
+		$('.fancybox').fancybox();
+
+		//include the issuu code
+		include "../js/scripts.js"
+
+	});
+</script>

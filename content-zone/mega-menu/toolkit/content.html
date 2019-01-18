@@ -1,4 +1,3 @@
-
 {introduce_script src="`$theme_assets_url`js/mega-menu.js" zone="footer"}
 
 {cms name="mega-menu-css"}
@@ -9,7 +8,7 @@
 		<div class="triangle"></div>
 		<ul>
 			{*black friday
-			<li class="black-friday"><a href="{category_url category="black-friday"}"><span>black friday</span></a>
+			<li class="black-friday"><a href="{category_url category="black-friday"}" data="top-nav"><span>black friday</span></a>
 				<ul class="level-2">
 					<li class="boy-cats level-2-li">
 						<span>The Black Friday Event</span>
@@ -21,9 +20,9 @@
 									<li>
 										<a href="{$cat.url}" data="mega menu black friday">{$cat.title}</a>
 										{if $cat.subcats_count}
-											{sub_cats name="cat2" category=$cat.name}
-											<div><a href="{$cat2.url}">{$cat2.title}</a></div>
-											{/sub_cats}
+										{sub_cats name="cat2" category=$cat.name}
+										<div><a href="{$cat2.url}">{$cat2.title}</a></div>
+										{/sub_cats}
 										{/if}
 									</li>
 									{/sub_cats}
@@ -44,10 +43,10 @@
 			*}
 
 			{*girl*}
-			<li class="girls-clothing"><a href="{category_url category="girls-clothing"}"><span>girl</span></a>
+			<li class="girls-clothing"><a href="{category_url category="girls-clothing"}" data="top nav"><span>girl</span></a>
 				<ul class="level-2">
 					<li class="girl-cats level-2-li arrow">
-						<a href="/girls-clothing/new-arrivals">sizes 2-8 <span class="sizes-note" style="border-bottom:0">(select styles up to 12)</span></a>
+						<span>sizes 2-12</span>
 						<div class="nav-container">
 							<div class="the-list">
 								<div class="favs">
@@ -98,65 +97,14 @@
 							</div>
 						</div>
 					</li>
-					<li class="tween-cats level-2-li arrow">
-						<a href="/tween-girls-clothing">tween sizes 7-16</a>
-						<div class="nav-container">
-							<div class="the-list">
-								<div class="favs">
-									<h2>Favorites</h2>
-									<ul>
-										{sub_cats name="cat" category="tween-girls-clothing/favorites"}
-										<li>
-											<a href="{$cat.url}" data="mega menu tween favorites">{$cat.title}</a>
-										</li>
-										{/sub_cats}
-									</ul>
-								</div>
-								<div class="cats">
-									<div class="cats-1">
-										<h2>Category</h2>
-										<ul>
-											{assign var=i value=0}
-											{sub_cats name="cat" category="tween-girls-clothing/category"}
-											<li>
-												<a href="{$cat.url}" data="mega menu tween categories">{$cat.title}</a>
-											</li>
-											{if $i eq 5}
-										</ul>
-									</div>
-									<div class="cats-2">
-										<ul>
-											{/if}
-											{math equation="x + y" x=$i y=1 assign=i}
-											{/sub_cats}
-											<li class="view-all">
-												<a href="{category_url category="tween-girls-clothing"}/view-all" data="mega menu tween favorites">View All</a>
-											</li>
-
-											{*<li class="the-sale">
-												<a href="{category_url category="sale/tween-girls-clothing"}/view-all" data="mega menu tween favorites">Sale</a>
-											</li>*}
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="nav-img">
-								<a href="{category_url category="tween-girls-clothing/new-arrivals"}" data="mega menu tween image">
-
-									<div class="da-rennab-zone" data-zone="mega_tween"></div>
-
-								</a>
-							</div>
-						</div>
-					</li>
 				</ul>
 			</li>
 
 			{*boy*}
-			<li class="boys-clothing"><a href="{category_url category="boys-clothing"}"><span>boy</span></a>
+			<li class="boys-clothing"><a href="{category_url category="boys-clothing"}" data="top nav"><span>boy</span></a>
 				<ul class="level-2">
 					<li class="boy-cats level-2-li">
-						<span>sizes 2-12 <span class="sizes-note">(select styles up to 16)</span></span>
+						<span>sizes 2-16</span>
 						<div class="nav-container">
 							<div class="the-list">
 								<div class="favs">
@@ -209,11 +157,68 @@
 				</ul>
 			</li>
 
+			{*tween*}
+			<li class="tween-girls-clothing"><a href="{category_url category="tween-girls-clothing"}" data="top-nav"><span>tween</span></a>
+				<ul class="level-2">
+					<li class="tween-cats level-2-li arrow">
+						<span>girl sizes 7-16</span>
+						<div class="nav-container">
+							<div class="the-list">
+								<div class="favs">
+									<h2>Favorites</h2>
+									<ul>
+										{sub_cats name="cat" category="tween-girls-clothing/favorites"}
+										<li>
+											<a href="{$cat.url}" data="mega menu tween favorites">{$cat.title}</a>
+										</li>
+										{/sub_cats}
+									</ul>
+								</div>
+								<div class="cats">
+									<div class="cats-1">
+										<h2>Category</h2>
+										<ul>
+											{assign var=i value=0}
+											{sub_cats name="cat" category="tween-girls-clothing/category"}
+											<li>
+												<a href="{$cat.url}" data="mega menu tween categories">{$cat.title}</a>
+											</li>
+											{if $i eq 5}
+										</ul>
+									</div>
+									<div class="cats-2">
+										<ul>
+											{/if}
+											{math equation="x + y" x=$i y=1 assign=i}
+											{/sub_cats}
+											<li class="view-all">
+												<a href="{category_url category="tween-girls-clothing"}/view-all" data="mega menu tween favorites">View All</a>
+											</li>
+
+											{*<li class="the-sale">
+												<a href="{category_url category="sale/tween-girls-clothing"}/view-all" data="mega menu tween favorites">Sale</a>
+											</li>*}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="nav-img">
+								<a href="{category_url category="tween-girls-clothing/new-arrivals"}" data="mega menu tween image">
+
+									<div class="da-rennab-zone" data-zone="mega_tween"></div>
+
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+
 			{*baby girl*}
-			<li class="baby-girl-clothes"><a href="{category_url category="baby-girl-clothes"}"><span>baby girl</span></a>
+			<li class="baby-girl-clothes"><a href="{category_url category="baby-girl-clothes"}" data="top nav"><span>baby girl</span></a>
 				<ul class="level-2">
 					<li class="baby-girl-cats level-2-li">
-						<span>sizes 0-24 months <span class="sizes-note">(select styles up to 4T)</span></span>
+						<span>sizes 0-4T</span>
 						<div class="nav-container">
 							<div class="the-list">
 								<div class="favs">
@@ -267,10 +272,10 @@
 			</li>
 
 			{*baby boy*}
-			<li class="baby-boy-clothes"><a href="{category_url category="baby-boy-clothes"}"><span>baby boy</span></a>
+			<li class="baby-boy-clothes"><a href="{category_url category="baby-boy-clothes"}" data="top nav"><span>baby boy</span></a>
 				<ul class="level-2">
 					<li class="baby-boy-cats level-2-li">
-						<span>sizes 0-24 months <span class="sizes-note">(select styles up to 4T)</span></span>
+						<span>sizes 0-4T</span>
 						<div class="nav-container">
 							<div class="the-list">
 								<div class="favs">
@@ -324,7 +329,7 @@
 			</li>
 
 			{*newborn*}
-			<li class="newborn-clothes"><a href="{category_url category="newborn-clothes"}"><span>newborn</span></a>
+			<li class="newborn-clothes"><a href="{category_url category="newborn-clothes"}" data="top nav"><span>newborn</span></a>
 				<ul class="level-2">
 					<li class="newborn-cats level-2-li">
 						<span>sizes NB to 6-9 months</span>
@@ -375,11 +380,11 @@
 			</li>
 
 			{*sale*}
-			<li class="clothing-sale"><a href="{category_url category="clothing-sale"}"><span>sale</span></a>
+			<li class="clothing-sale"><a href="{category_url category="clothing-sale"}" data="top nav"><span>sale</span></a>
 				<ul class="level-2">
 					{sub_cats name="cat" category="clothing-sale"}
 					<li class="sidebar-{$cat.title|capitalize|replace:' ':'-'} arrow">
-						<span><a href="{$cat.url}/view-all">{$cat.title|lower}</a></span>
+						<span><a href="{$cat.url}/view-all" data="top nav grey area">{$cat.title|lower}</a></span>
 						<div class="nav-container">
 							<div class="the-list">
 								<div class="cats">
@@ -417,6 +422,8 @@
 
 {literal}
 <style>
-	#new-sticky-header {z-index:99999 !important;}
+	#new-sticky-header {
+		z-index: 99999 !important;
+	}
 </style>
 {/literal}

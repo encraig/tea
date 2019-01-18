@@ -1,0 +1,59 @@
+<div class="top-area">
+
+  <div>
+    <!-- content zone for past destinations -->
+    <select>
+      <option value="">Past Destinations</option>
+      {sub_cats category="the-destinations" name=cat}
+      <option value="{category_url category=$cat.name}">{$cat.title}</option>
+      {/sub_cats}
+    </select>
+  </div>
+
+  <div>
+    <span>
+      <iframe id="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.teacollection.com%2Fthe-destinations%2Fargentina-bolivia&amp;width=50&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=20&amp;appId=134866156542403"
+        scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:20px;" allowTransparency="true"></iframe>
+    </span>
+
+    <span>
+      <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-url="https://www.teacollection.com/the-destinations/argentina-bolivia" data-text="Destination: Argentina & Bolivia, Inspirational Photos & Stories from Tea Collection"
+        data-via="teacollection" data-count="none">Tweet</a>
+
+      {literal}
+      <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+      <script>
+        window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+
+          return t;
+        }(document, "script", "twitter-wjs"));
+      </script>
+      {/literal}
+
+    </span>
+
+    <span>
+      <!-- <a onclick="return pin_click('','20160722_SITE_Japan_InspirationPage_cell03.jpg','')"><img src="https://assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a> -->
+      <a id="pint" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.teacollection.com%2Fthe-destinations%2Fargentina-bolivia&media=https://s.tea-global.net/mas_assets/theme/tea_collection/images/destination/samerica/Tile01_Map.jpg"
+        data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red" target="_blank"><img src="https://assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+      <!-- Please call pinit.js only once per page -->
+      <script type="text/javascript" async="" src="https://assets.pinterest.com/js/pinit.js"></script>
+    </span>
+  </div>
+</div>
+
+<!-- banner ad content -->
+<div class="da-rennab-zone" data-zone="cms_pages"></div>

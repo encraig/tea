@@ -1,0 +1,40 @@
+.destinations-container {
+	h1.heading-category {
+		@media screen and (max-width:737px){
+			display:block;
+			flex-basis:100%;
+			text-align:center;
+			margin: 0 0 10px 0;
+		}
+		display:none;
+		font-family:brown-pro-bold;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+
+		li {
+			@media screen and (max-width: 737px) {
+				flex-basis: 50%;
+			}
+			margin: 0 0 10px;
+			flex-basis: 24%;
+
+			a {
+				@media screen and (max-width:737px) {
+					display: block;
+					margin: 0 auto;
+					width: 90%;
+				}
+				color: #666;
+
+				&:active,
+				&:hover {
+					background: #666;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

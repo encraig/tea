@@ -1,0 +1,22 @@
+<div class="destinations-container">
+  <h1 class="heading-category">Destinations</h1>
+  <ul>
+    {sub_cats category="the-destinations" name=cat}
+    <li><a href="{category_url category=$cat.name}" class="cta">{$cat.title}</a></li>
+    {/sub_cats}
+  </ul>
+</div>
+
+{literal}
+<style>
+  include "../../../../global/css/styles.css"
+  include "../css/styles.css"
+</style>
+
+<script>
+  $(document).ready(function() {
+    //add tracking code
+    $('a, area').attr('data-page', 'the destinations landing page');
+  });
+</script>
+{/literal}

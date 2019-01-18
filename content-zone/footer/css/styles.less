@@ -1,35 +1,37 @@
 #catalogThumb {
 	//width:92px;
-	height:103px;
+	height: 103px;
 }
 
 div[data-zone="footer"] {
-	float:none !important;
+	float: none !important;
 	width: 100% !important;
-	border-right:0 !important;
+	border-right: 0 !important;
 
 	.da-rennab {
-		float:none !important;
+		float: none !important;
 		width: 100% !important;
-		border-right:0 !important;
+		border-right: 0 !important;
 
 		.banner-footer {
-			float:none !important;
+			float: none !important;
 			width: 100% !important;
-			border-right:0 !important;
+			border-right: 0 !important;
 		}
 	}
 }
 
 .banner-footer {
-	overflow:hidden;
+	overflow: hidden;
 	height: auto !important;
+	display: flex;
 
-	&> div {
-		float: left;
-    	text-align: center;
-    	height: auto !important;
-    	width: 160px;
-    	border-right: 1px solid #e6e6e1;
+	& > div {
+		float: none !important;
+		text-align: center;
+		height: auto !important;
+		width: auto !important;
+		flex-basis: 160px;
+		border-right: 1px solid #e6e6e1;
 	}
 }

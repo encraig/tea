@@ -1,0 +1,85 @@
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="../../global/css/global.css"> -->
+
+<!-- ref -->
+<!-- <img class="ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/bg-m.png" alt="" /> -->
+
+<div class="content-container">
+	<!-- desktop-->
+	<div class="desktop">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c1-d.png" alt="" />
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c2-d.png" alt="" usemap="#mapD" />
+		<map name="mapD">
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/tiger.pdf" shape="rect" coords="399,301,740,388" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/pho.pdf" shape="rect" coords="1050,511,1391,598" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/pagoda.pdf" shape="rect" coords="1204,1426,1564,1513" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/turtles.pdf" shape="rect" coords="85,879,475,966" style="outline:none;" target="_blank" />
+		</map>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c3-d.png" alt="" usemap="#blogD" />
+		<map name="blogD">
+			<area title="" href="https://blog.teacollection.com/" shape="rect" coords="790,459,1214,555" style="outline:none;" target="_blank" alt="learn more" />
+		</map>
+	</div>
+	<!-- mobile-->
+	<div class="mobile">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c1-m-v3.png" alt="" />
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c2-m-v3.png" alt="" usemap="#mapM" />
+		<map name="mapM">
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/tiger.pdf" shape="rect" coords="219,223,529,293" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/pho.pdf" shape="rect" coords="248,593,574,664" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/pagoda.pdf" shape="rect" coords="216,1223,542,1294" style="outline:none;" target="_blank" />
+			<area alt="" title="" href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/turtles.pdf" shape="rect" coords="257,944,646,1015" style="outline:none;" target="_blank" />
+		</map>
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/c3-m.png" alt="" usemap="#blogM" />
+		<map name="blogM">
+			<area title="" href="https://blog.teacollection.com/" shape="rect" coords="207,317,545,406" style="outline:none;" target="_blank" alt="learn more" />
+		</map>
+	</div>
+</div>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+	include "../../../global/css/global.css"
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		include "../../../global/js/scripts.js"
+
+		//add the alt
+		var alt = [{
+				text: 'draw the stripes'
+			},
+			{
+				text: 'fill our bowl'
+			},
+			{
+				text: 'complete the maze'
+			},
+			{
+				text: 'create sea creatures'
+			},
+
+		];
+
+		$.each(alt, function(i, val) {
+			i = i + 1;
+			$('map[name="mapD"] area:nth-of-type(' + i + ')').attr('alt', val.text);
+			$('map[name="mapM"] area:nth-of-type(' + i + ')').attr('alt', val.text);
+		});
+
+		jQuery('img[usemap]').rwdImageMaps();
+
+		//on select change
+		$('.top-area select').change(function() {
+			var dest = $(this).val();
+			window.location.href = dest;
+		});
+
+	});
+</script>

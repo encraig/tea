@@ -1,0 +1,22 @@
+<div class="destinations-container">
+  <h1 class="heading-category">Destinations</h1>
+  <ul>
+    {sub_cats category="the-destinations" name=cat}
+    <li><a href="{category_url category=$cat.name}" class="cta">{$cat.title}</a></li>
+    {/sub_cats}
+  </ul>
+</div>
+
+{literal}
+<style>
+  @media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}.cta{display:inline-block;font-family:brown-pro-bold !important;border:1px solid;width:200px;position:relative;font-size:13px;line-height:16px;height:39px;letter-spacing:.2px;text-transform:uppercase;text-decoration:none;padding:12px 0 0;text-align:center;box-sizing:border-box}@media screen and (max-width:737px){.cta{width:42%;left:0;padding:1em 0;font-size:.8em}}@media screen and (max-width:415px){.cta{font-size:.8em;letter-spacing:1.1px}}@media screen and (max-width:376px){.cta{font-size:.7em}}@media screen and (max-width:321px){.cta{font-size:.6em}}/*# sourceMappingURL=global/css/styles.css.map */
+  .destinations-container h1.heading-category{display:none;font-family:brown-pro-bold}@media screen and (max-width:737px){.destinations-container h1.heading-category{display:block;flex-basis:100%;text-align:center;margin:0 0 10px 0}}.destinations-container ul{display:flex;flex-wrap:wrap;list-style-type:none}.destinations-container ul li{margin:0 0 10px;flex-basis:24%}@media screen and (max-width:737px){.destinations-container ul li{flex-basis:50%}}.destinations-container ul li a{color:#666}@media screen and (max-width:737px){.destinations-container ul li a{display:block;margin:0 auto;width:90%}}.destinations-container ul li a:active,.destinations-container ul li a:hover{background:#666;color:#fff}/*# sourceMappingURL=landing-page/inspiration/the-destinations/css/styles.css.map */
+</style>
+
+<script>
+  $(document).ready(function() {
+    //add tracking code
+    $('a, area').attr('data-page', 'the destinations landing page');
+  });
+</script>
+{/literal}

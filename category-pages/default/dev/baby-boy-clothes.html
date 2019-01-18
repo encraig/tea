@@ -2,17 +2,17 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/baby-boy-clothes.css"> -->
 
 <!-- ref image -->
-<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-bb-m.png"  /> -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/bg-bb-m.png"  /> -->
 
 <div class="dept-cat">
 
 	<!-- <h3 class="mobile title">baby boy</h3> -->
 
 	<!-- desktop image -->
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bb-d.png" />
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/bb-d.png" />
 
 	<!-- prod mobile image -->
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bb-m.png" />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/bb-m.png" />
 
 </div>
 
@@ -23,27 +23,26 @@
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
+	var dpSrc = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/bb-cell.jpg?nocache=1';
+
+	var dpAlt = 'It’s a big, wonderful world and the littlest citizens are born to explore. He’s curious. He’s sweet. And he’s always ready for a new adventure. ';
+
+	//function to call from flex field
+	var addCell = function(src, alt) {
+		console.log('add the content cell');
+		var elem = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
+		$('#infinite .single-item-box:nth-of-type(3)').after(elem);
+		//content-cell click
+		include "../js/scripts.js"
+	};
+
 	$(document).ready(function() {
+		//add tracking code
+		$('a, area').attr('data-page', 'baby boy new arrivals page');
+
 		// $('img[usemap]').rwdImageMaps();
 
-		var src = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bb-cell.svg?nocache=1';
+		$('.dept-cat img').attr('alt', dpAlt);
 
-		var alt = 'It’s a big, wonderful world and the littlest citizens are born to explore. He’s curious. He’s sweet. And he’s always ready for a new adventure. ';
-
-		$('.dept-cat img').attr('alt', alt);
-
-		//mobile add the content cell take over
-		if ($(window).width() < 737) {
-			var elem = '<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>';
-
-			//browser doing to loads this is a fix to prevent the content cell from showing twice
-			if ($('#infinite .single-item-box:nth-of-type(4)').hasClass('content-cell')) {
-				console.log('do nothing');
-			} else {
-				$('#infinite .single-item-box:nth-of-type(3)').after(elem);
-			}
-
-			include "../../../global/js/scripts.js"
-		}
 	});
 </script>

@@ -1,0 +1,261 @@
+section#breadcrumbs {
+	margin: 0 0 0 0 !important;
+}
+/*article.about-us {
+	display:none;
+}*/
+.ref {
+	position: absolute;
+	max-width: 100%;
+	top: -3px;
+	opacity: 0.5;
+	//display:none;
+}
+
+.common-wrap,
+.midbox h1,
+.my-account h1 {
+	display: none;
+}
+
+.padded {
+	padding: 0 !important;
+}
+
+.top-area {
+	overflow: hidden;
+	@media screen and (max-width:736px) {
+		//display:none;
+		padding: 3%;
+	}
+
+	div {
+		&:first-of-type {
+			@media screen and (max-width:737px) {
+				float: none;
+				margin: 0 0 20px;
+			}
+			float: left;
+
+			select {
+				color: #666;
+				border: 0.1em solid #cfc3bc;
+				padding: 0.6em;
+				border-radius: 0;
+				background-color: #ffffff;
+				font-weight: normal;
+				font-family: 'brown-pro-regular', Arial, Helvetica, sans-serif;
+				vertical-align: middle;
+				margin: 0;
+			}
+		}
+
+		&:last-of-type {
+			@media screen and (max-width:737px) {
+				float: none;
+			}
+			float: right;
+
+			span {
+				@media screen and (max-width:737px) {
+					margin: 0 10px 0 0;
+				}
+				margin-left: 10px;
+				display: inline-block;
+				position: relative;
+
+				&:last-of-type {
+					top: -6px;
+				}
+			}
+		}
+	}
+}
+
+.cta {
+	display: inline-block;
+	font-family: brown-pro-bold !important;
+	border: 1px solid;
+	width: 200px;
+	position: relative;
+	box-sizing: border-box;
+	font-size: 13px;
+	line-height: 16px;
+	height: 39px;
+	letter-spacing: 0.2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 12px 0 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.content-container {
+	@media screen and (max-width:737px) {
+		padding: 3%;
+	}
+	//display:none;
+	margin-top: 10px;
+	overflow: hidden;
+
+	iframe,
+	img {
+		max-width: 100%;
+	}
+
+	#pint-img {
+		margin: 0;
+	}
+
+	header {
+		margin: 0 0 20px;
+
+		h1 {
+			@media screen and (max-width:737px) {
+				font-size: 1.5em;
+			}
+			color: #666;
+			display: block;
+			font-family: brown-pro-bold;
+			text-transform: uppercase;
+			font-size: 30px;
+		}
+	}
+
+	.main-content {
+		@media screen and (max-width:737px) {
+			float: none;
+			width: 100%;
+		}
+		float: left;
+		width: 667px;
+
+		h2 {
+			@media screen and (max-width:737px) {
+				font-size: 1.4em;
+			}
+			color: #666;
+			font-family: brown-pro-bold;
+			text-transform: uppercase;
+			font-size: 23px;
+			margin: 20px 0 10px;
+		}
+
+		p {
+			@media screen and (max-width:737px) {
+				font-size: 1em;
+			}
+			color: #666;
+			font-family: brown-pro-regular;
+			font-size: 12px;
+			line-height: 18px;
+			margin: 0 0 10px;
+		}
+	}
+
+	aside {
+		@media screen and (max-width:737px) {
+			float: none;
+			width: 100%;
+			padding: 0;
+			margin: 20px 0 0;
+			border-top: 1px solid #ccc;
+		}
+		float: left;
+		width: 276px;
+		box-sizing: border-box;
+		padding: 0 0 0 12px;
+
+		blockquote {
+			@media screen and (max-width:737px) {
+				font-size: 1.2em;
+			}
+			font-family: brown-pro-bold;
+			color: #666;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+}
+
+.these-catalogs {
+	display: none;
+
+	ul {
+		overflow: hidden;
+
+		li {
+			@media screen and (max-width:737px) {
+				float: none;
+				width: 100%;
+				height: auto;
+				text-align: left;
+				padding: 0 1em;
+			}
+			float: left;
+			width: 195px;
+			height: 232px;
+			text-align: center;
+			list-style-type: none;
+			padding: 0 20px;
+			margin: 0 0 20px;
+			box-sizing: border-box;
+
+			a {
+				text-decoration: none;
+
+				h4 {
+					@media screen and (max-width:737px) {
+						font-size: 1.2em;
+						margin: 10px 0 0;
+					}
+					color: #666;
+					font-family: brown-pro-bold;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+
+.issuu {
+	display: none;
+
+	.overlay {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #000;
+		opacity: 0.5;
+		z-index: 9999;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	iframe {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1000px;
+		z-index: 99999;
+		display: none;
+	}
+}
+
+.desktop {
+	@media screen and (max-width:736px) {
+		display: none !important;
+	}
+}
+
+.mobile {
+	display: none;
+	@media screen and (max-width:736px) {
+		display: block;
+	}
+}

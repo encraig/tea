@@ -2,14 +2,14 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/pajamas.css"> -->
 
 <!-- ref image -->
-<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/bg-m.png" alt="" /> -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/pajamas/2019/0117/bg-m.png" alt="" /> -->
 
-<!-- <div class="pj-container">
-  <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/pajamas-d.png" alt="It's a Jammie Session All PJs just $20" />
+<div class="pj-container">
+  <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/pajamas/2019/0117/pjs-d.png" alt="" />
 
-  <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/pajamas-m.png" alt="It's a Jammie Session All PJs just $20" />
+  <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/pajamas/2019/0117/pjs-m.png" alt="" />
 
-</div> -->
+</div>
 
 <!--toolkit-->
 <style>
@@ -29,54 +29,69 @@
 
 
 <script>
+  var dpSrc = null;
+
+  var dpAlt = null;
+
+  //function to call from flex field
+  var addCell = function(src, alt) {
+    console.log('add the content cell');
+    var pjCells = [{
+      num: 4,
+      alt: 'Our Pjs are... easy on and off, they\'re better together with two sets for $65, soft and comfy sets made of 100% cotton',
+      ext: '.jpg'
+    }];
+
+    $.each(pjCells, function(i, val) {
+      var elem;
+      //desktop
+      if ($(window).width() > 737) {
+        elem = '<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/pajamas/2019/0117/p' + val.num + val.ext + '" alt="' + val.alt +
+          '" style="max-width:100%;"></section>';
+        $('#infinite section.item').eq(val.num - 1).before(elem);
+      }
+      //mobile
+      else {
+        elem = '<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/pajamas/2019/0117/p' + val.num + val.ext + '" alt="' + val.alt +
+          '" style="max-width:100%;"></div>';
+        $('#infinite div.single-item-box').eq(val.num - 1).before(elem);
+      }
+
+    });
+
+    $('.content-cell').click(function() {
+      return false;
+    });
+  };
   $(document).ready(function() {
+    //add tracking code
+    $('a, area').attr('data-page', 'pajamas landing page');
+
     // jQuery('img[usemap]').rwdImageMaps();
 
-    var src;
-    var alt = 'Our PJs are: easy on and off, sets and one-pieces crafted with 100% brushed cotton for a comfy, cozy feel, at $20 each the\'re perfect for gifting!';
+    var alt = 'The Pj Shop goodnight and sleep tight in jammies made of natural fibers and exceptional quality, perfect for everything from slumber parties to cuddle time.';
 
-    //content cell take over
-    //desktop
-    if ($(window).width() > 737) {
-      //change urls of left nav
-      var leftNav = $('.dept-pajamas section');
+    $('.pj-container img').attr('alt', alt);
 
-      $.each(leftNav, function(i, val) {
-        var a = $(val).find('a').text();
-        switch (a) {
-          case 'Girl':
-            $(val).find('a').attr('href', '/girls-pajamas-sleepwear');
-            break;
-          case 'Boy':
-            $(val).find('a').attr('href', '/boys-pajamas-sleepwear');
-            break;
-          case 'Baby Girl':
-            $(val).find('a').attr('href', '/baby-girl-pajamas');
-            break;
-          case 'Baby Boy':
-            $(val).find('a').attr('href', '/baby-boy-pajamas');
-            break;
-        }
-      });
+    var leftNav = $('.dept-pajamas section');
 
-      //remove .item.cell because of the way the page reloads twice
-      $('.item.cell').remove();
+    $.each(leftNav, function(i, val) {
+      var a = $(val).find('a').text();
+      switch (a) {
+        case 'Girl':
+          $(val).find('a').attr('href', '/girls-pajamas-sleepwear');
+          break;
+        case 'Boy':
+          $(val).find('a').attr('href', '/boys-pajamas-sleepwear');
+          break;
+        case 'Baby Girl':
+          $(val).find('a').attr('href', '/baby-girl-pajamas');
+          break;
+        case 'Baby Boy':
+          $(val).find('a').attr('href', '/baby-boy-pajamas');
+          break;
+      }
+    });
 
-      src = 'https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/pajamas-cell.png?nocache=1';
-
-      $('.items-list-wrapper .item').eq(3).before('<section class="item cell" style="overflow:hidden"><img src="' + src + '" alt="' + alt + '" style="max-width:100%;"></section>');
-    }
-    //mobile
-    else {
-      //change header text
-      $('.common-wrap .heading-category').text('The PJ Shop');
-
-      //remove .item.cell because of the way the page reloads twice
-      $('.single-item-box.cell').remove();
-
-      src = 'https://www.teacollection.com/mas_assets/media/tea_collection/promos/pajamas/2018/1129/pajamas-cell.png?nocache=1';
-
-      $('.thumb-wrapper .single-item-box').eq(3).before('<div class="single-item-box cell" style="overflow:hidden"><img src="' + src + '" alt="' + alt + '" style="max-width:100%; width:97%"></div>');
-    }
   });
 </script>

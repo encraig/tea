@@ -1,0 +1,264 @@
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ref images -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-d.jpg" class="ref" /> -->
+<!-- <img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/usa/180118/bg-m.jpg" class="ref" /> -->
+
+<div class="content-container">
+	<header>
+		<h1 data-country="brazil">BRAZIL - SPRING/SUMMER 2009</h1>
+	</header>
+
+	<div class="main-content">
+		<img src="http://www.teacollection.com/mas_assets/theme/tea_collection/images/destination/H_Destination_Brazil.jpg" alt="BRAZIL - SPRING/SUMMER 2009" />
+
+		<h2>welcome. let's go there.</h2>
+		<p>Emily, Laura B and Matt the architect (Laura's husband) headed to Sao Paolo, Rio de Janeiro and Brasilia for inspiration and adventure, Brazilian style. All 3 of them once lived in and always love New York, so they were excited to get a glimpse
+			of this urban jungle.</p>
+
+		<p>In Sao Paolo, we visited modern art museums, walked the streets of the Jardin district, and discovered the Liberdade neighborhood during a Sunday flea market. It was interesting to learn that the first Japanese immigrants arrived by ship in
+			1908 to work on Brazil's coffee plantations. In Rio, we stayed in a bed & breakfast run by an artsy Brazilian couple. Situated in the Santa Teresa neighborhood, the house overlooked a valley populated with aging colonial homes. We spent a few
+			afternoons wandering along the cobblestone streets and took the trolley into the city, taking in all the street art. Of course, we just had to watch the sun set over Ipanema beach. To really experience the architect Oscar Niemeyer's famous
+			buildings, we flew to Brasilia, the carefully planned capital "city of the future" located in the driest region of this enormous country.</p>
+
+		<h2>bringing it home</h2>
+		<p>We combined the Japanese aesthetic with nautical notes, reflecting on the long voyage the immigrants traveled for a chance at a new way of life. The Japanese graphics on the walls of the Shimo Sushi restaurant inspired our printed French Terry
+			pieces: Izumi Dress and Taiyou Hoodie for girls, and the Waves Hooded Pullover and Long Shorts for boys. The charming wrought iron work on the colonial homes inspired girly flair for our Brasilia Crinkle Dress and Santa Teresa Dress. The street
+			art inspired our entire palette for spring. Other street art-inspired styling for our graphics - the Cavaco Polo for boys and the butterfly embroidery on our Zaba Stripe Halter Dress. The stunning Cathedral Metropolitana in Brasilia - a glorious
+			thing made of concrete and glass, draped with abstract shapes of color - came to life in the print and shape of our girls Catedral Dress.</p>
+
+		<div class="these-catalogs">
+			<hr>
+			<h2>browse norway catalogs</h2>
+			<ul></ul>
+		</div>
+
+		<div class="issuu">
+			<div class="overlay"></div>
+		</div>
+
+	</div>
+
+	<aside>
+		<blockquote>
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/quote-begin.jpg">
+			In Rio, you can easily understand how essential it is for Brazilians to express themselves through music, dance and art - as much as eating and sleeping!! - Emily M
+			<img src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/quote-end.jpg">
+		</blockquote>
+	</aside>
+
+</div>
+
+
+<!-- fancy box -->
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script>
+
+<!-- bx slider production-->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
+<!-- rwd image maps -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+
+<!-- md5 -->
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.md5.js"></script>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+	include "../../global/css/global.css"
+</style>
+
+
+<script>
+	//mobile change the iframe height
+	if ($(window).width() < 737) {
+		$('.iframe').attr('height', '220')
+	}
+
+	$(document).ready(function() {
+		include "../../global/js/scripts.js"
+
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		// $('.fancybox').fancybox();
+
+		$('.issuu .overlay').click(function() {
+			$('.issuu').hide();
+		});
+
+
+		//on select change
+		$('.top-area select').change(function() {
+			var dest = $(this).val();
+			window.location.href = dest;
+		});
+
+		//the page country
+		var theCountry = $('.content-container header h1').attr('data-country');
+		// console.log(theCountry);
+
+		//ISSUU
+		//variables
+		var baseUrl = 'https://api.issuu.com/1_0';
+		var k = 'tl93eh3m2g89gui0dbgo374otpywg8sv';
+		var s = 'juixcxy7dri2nn0lwa6rh3eclyt39wkr';
+		var access = 'access=public';
+		var a1 = access.replace(/=/g, '');
+		var action = 'action=issuu.documents.list';
+		var a2 = action.replace(/=/g, '');
+		var format = 'format=json';
+		var f = format.replace(/=/g, '');
+		var pageSize = 'pageSize=';
+		var p = pageSize.replace(/=/g, '');
+		var sig1 = s + a1 + a2 + 'apiKey' + k + f;
+		// console.log(sig1);
+		sig1 = $.md5(sig1);
+		var issu = 'https://issuu.com/teacollection/docs/';
+
+		//function to output the thumbnails
+		var showThumbs = function() {
+			var thumbs = $('.these-catalogs ul li');
+			// console.log(thumbs[0]);
+			if ($(thumbs[0]).attr('class') !== 'finished') {
+				// console.log('lets go');
+
+				$(thumbs).each(function(j, obj) {
+					var url = $(obj).attr('data-name');
+					url = issu + url;
+					url = encodeURIComponent(url);
+
+					$.get('https://issuu.com/oembed?url=' + url + '&iframe=true&format=json', function(data) {
+						// console.log('the catalog');
+						console.log(data);
+
+						//add the thumb
+						$(obj).find('a').prepend('<img src="' + data.thumbnail_url + '" alt="' + data.title + '"/>');
+
+						//add the iframe
+						$('.issuu').append(data.html);
+
+						//get the iframe num from src
+						var elem = data.html;
+						var id = $(elem).attr('src').split('#')[1].split('/')[1];
+
+						//add it to the <a> with the same title
+						var a = $('.these-catalogs ul li a');
+						$.each(a, function(k, link) {
+							var title = $(link).attr('data-title');
+							// console.log(title, data.title);
+							//find the match
+							if (title == data.title) {
+								//add the src num
+								$(link).attr('data-num', id);
+
+								if ($(window).width() < 737) {
+									//mobile change the href
+									$(link).attr('href', data.url);
+									//mobile add target="_blank"
+									$(link).attr('target', '_blank');
+								}
+
+							}
+						});
+
+					});
+
+					$(obj).addClass('finished');
+
+				});
+
+				$('.these-catalogs ul li a').click(function(e) {
+					//desktop show the lightbox
+					if ($(window).width() > 737) {
+
+						e.preventDefault();
+						// console.log('clicked a');
+
+						//hide all the iframe
+						$('.issuu iframe').hide();
+
+						//get the number data-num
+						var num = $(this).attr('data-num');
+						// console.log(num);
+
+						//show the parent elem
+						$('.issuu').show();
+
+						//find the iframe
+						var iframe = $('.issuu iframe');
+						$.each(iframe, function(i, val) {
+							var src = $(val).attr('src').split('#')[1].split('/')[1];
+							// console.log('iframes');
+							// console.log(num, src);
+
+							//find the match and show it
+							if (num == src) {
+								$(val).show();
+							}
+						});
+
+					}
+
+				});
+			}
+		};
+
+		//start the initial get of the catalogs
+		$.get(baseUrl + '?' + access + '&' + action + '&apiKey=' + k + '&' + format + '&signature=' + sig1, function(data) {
+			// console.log(data);
+			var totalCatalogs = data.rsp._content.result.totalCount;
+			var sig2 = s + a1 + a2 + 'apiKey' + k + f + p + totalCatalogs;
+			sig2 = $.md5(sig2);
+
+			//get all the catalogs
+			$.get(baseUrl + '?' + access + '&' + action + '&apiKey=' + k + '&' + format + '&pageSize=' + totalCatalogs + '&signature=' + sig2, function(data) {
+				// console.log(data);
+
+				var catalogs = data.rsp._content.result._content;
+
+				// console.log(catalogs);
+
+				//find the catalogs
+				$.each(catalogs, function(i, val) {
+
+					// console.log(val.document.description)
+					var country = val.document.description;
+					country = country.split(' ')[0].split('.')[1];
+					console.log(i, country);
+
+					if (country == 'South') {
+						country = 'Africa';
+					}
+
+					if (country == theCountry) {
+						// console.log('match');
+						// console.log(val);
+
+						//show .these-catalogs
+						$('.these-catalogs').show();
+
+						var title = val.document.title;
+						title = title.replace('Tea Collection - ', '');
+						title = title.replace(/\(|\)/gi, '');
+
+						if (!$('.these-catalogs ul').hasClass('finished')) {
+							$('.these-catalogs ul').append('<li data-name="' + val.document.name + '" data-desc="' + val.document.description + '"><a href="#iframe" data-title="' + val.document.title + '"><h4>' + title + '</h4></a></li>');
+
+						}
+
+					}
+
+				});
+
+				$('.these-catalogs ul').addClass('finished');
+
+				showThumbs();
+
+			});
+		});
+
+	});
+</script>

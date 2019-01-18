@@ -2,17 +2,17 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/boys-clothing.css"> -->
 
 <!-- ref image -->
-<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/bg-b-m.png"  /> -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/bg-b-m.png"  /> -->
 
 <div class="dept-cat">
 
 	<!-- <h3 class="mobile title">boy</h3> -->
 
 	<!-- desktop image -->
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/b-d.png" />
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/b-d.png" />
 
 	<!-- prod mobile image -->
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/b-m.png" />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/b-m.png" />
 
 </div>
 
@@ -24,29 +24,28 @@
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
+	var dpSrc = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0117/b-cell.jpg?nocache=1';
+
+	var dpAlt = 'He is fun loving, curious and kind. His dreams are big and his imagination is endless. He loves to let his mind wander and wonder. He is a little citizen of the world.';
+
+	//function to call from flex field
+	var addCell = function(src, alt) {
+		console.log('add the content cell');
+		var elem = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
+		$('#infinite .single-item-box:nth-of-type(3)').after(elem);
+		//content-cell click
+		$('.content-cell').click(function() {
+		  return false;
+		});
+	};
+
 	$(document).ready(function() {
+		//add tracking code
+		$('a, area').attr('data-page', 'boys new arrivals page');
+
 		// $('img[usemap]').rwdImageMaps();
 
-		var src = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2018/1213/b-cell.svg?nocache=1';
+		$('.dept-cat img').attr('alt', dpAlt);
 
-		var alt = 'He is fun loving, curious and kind. His dreams are big and his imagination is endless. He loves to let his mind wander and wonder. He is a little citizen of the world.';
-
-		$('.dept-cat img').attr('alt', alt);
-
-		//mobile add the content cell take over
-		if ($(window).width() < 737) {
-			var elem = '<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>';
-
-			//browser doing to loads this is a fix to prevent the content cell from showing twice
-			if ($('#infinite .single-item-box:nth-of-type(4)').hasClass('content-cell')) {
-				console.log('do nothing');
-			} else {
-				$('#infinite .single-item-box:nth-of-type(3)').after(elem);
-			}
-
-			$('.content-cell').click(function() {
-			  return false;
-			});
-		}
 	});
 </script>

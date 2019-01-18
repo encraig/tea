@@ -18,28 +18,31 @@ header[role="banner"] {
 	z-index: auto;
 	width: 100em;
 	margin: 0 auto;
+
 	#top-nav {
-		width: 901px;
-		margin: 0 0 0 99px;
+		width: 910px;
+		margin: 0 0 12px 90px !important;
 		background: transparent;
+
 		div.search-block {
 			position: relative;
 			top: -14px;
 		}
 	}
+
 	#shopping-bag {
 		#shopping-cart {
 			#shopping-cart-summary {
 				hgroup {
 					h3 {
 						color: @color_1;
-						padding-top: 5px !important;
-						padding: 2px 0 0 0;
+						padding: 2px 0 0;
 						color: @color_2;
 						font-size: 10px;
 					}
-					>a {
-						padding: 2px 0 0 0;
+
+					> a {
+						padding: 2px 0 0;
 						color: @color_2;
 						font-size: 10px;
 					}
@@ -47,17 +50,19 @@ header[role="banner"] {
 			}
 		}
 	}
+
 	#top-bar {
 		div.top {
 			ul {
 				li#welcome-member {
 					a {
-						padding: 6px 0 0 0;
+						padding: 6px 0 0;
 					}
 				}
+
 				li#welcome-signin {
 					a {
-						padding: 6px 0 0 0;
+						padding: 6px 0 0;
 						color: @color_2;
 						font-size: 10px;
 					}
@@ -65,47 +70,55 @@ header[role="banner"] {
 			}
 		}
 	}
+
 	#free-shipping-container {
 		display: none;
 	}
+
 	#header-banner {
 		display: none;
 	}
+
 	#main-categories {
-		width: 67%;
+		width: 100%;
 		height: 0;
 	}
 }
+
 #sticky-header {
 	display: none !important;
 }
+
 .header-left {
 	position: relative;
 	top: -29px;
+
 	nav.new-nav {
 		ul {
-			>li {
+			> li {
 				height: 70px;
 			}
-			>li.black-friday {
+
+			> li.black-friday {
 				span {
-					color:#f00;
-					border:none !important;
+					color: #f00;
+					border: none !important;
 				}
+
 				.level-2-li {
-					margin-left:98px;
+					margin-left: 98px;
 
 					.the-list {
 						ul {
 							li {
-								margin:0 50px 0 0;
+								margin: 0 50px 0 0;
 
 								a {
-									margin: 0 0 5px 0;
+									margin: 0 0 5px;
 								}
 
 								div {
-									margin: 0 0 5px 0;
+									margin: 0 0 5px;
 
 									a {
 										padding: 0;
@@ -127,34 +140,29 @@ header[role="banner"] {
 					}
 				}
 			}
-			>li.girls-clothing {
-				padding-right: 1px;
-			}
-			>li.boys-clothing {
-				padding-right: 5px;
-			}
-			>li.baby-girl-clothes {
-				padding-right: 41px;
-				>a {
-					width: 73px;
-				}
-			}
-			>li.baby-boy-clothes {
-				white-space: nowrap;
-				padding-right: 48px;
-			}
-			>li.clothing-sale {
-				padding-left: 45px;
-				width: 85px;
-			}
+
+			> li.tween-girls-clothing {}
+
+			> li.girls-clothing {}
+
+			> li.boys-clothing {}
+
+			> li.baby-girl-clothes {}
+
+			> li.baby-boy-clothes {}
+
+			> li.clothing-sale {}
+
 			li.clothing-sale {
 				&:hover {
 					background: none;
-					>a {
-						>span {
+
+					> a {
+						> span {
 							border-bottom: 2px solid #cc0033;
 						}
 					}
+
 					.level-2 {
 						li {
 							.nav-container {
@@ -163,38 +171,45 @@ header[role="banner"] {
 						}
 					}
 				}
+
 				.nav-container {
 					.the-list {
 						.favs {
 							float: left;
 							width: 36%;
 						}
+
 						.nb-gift-shop {
 							float: left;
 							width: 33%;
+
 							h2 {
 								a {
 									color: @color_3;
 									text-decoration: none;
+
 									&:hover {
 										color: @color_8;
 									}
 								}
 							}
 						}
+
 						.cats {
 							float: left;
 							width: 31%;
 						}
+
 						ul {
 							li {
 								width: 100%;
-								padding: 10px 0 0 0;
+								padding: 10px 0 0;
 							}
 						}
 					}
 				}
 			}
+
 			li.clothing-sale.active {
 				a {
 					span {
@@ -202,6 +217,7 @@ header[role="banner"] {
 					}
 				}
 			}
+			/*
 			li.girls-clothing {
 				&:hover {
 					.level-2 {
@@ -213,17 +229,21 @@ header[role="banner"] {
 					}
 				}
 			}
+			*/
 			li {
 				&:hover {
 					color: @color_5;
 					background-size: 25px;
+
 					a {
 						span {
 							border-bottom: 2px solid #666;
 						}
 					}
+
 					.nav-container {
 						display: block;
+
 						.the-list {
 							.favs {
 								ul {
@@ -234,6 +254,7 @@ header[role="banner"] {
 									}
 								}
 							}
+
 							.cats {
 								ul {
 									li {
@@ -245,14 +266,19 @@ header[role="banner"] {
 							}
 						}
 					}
+
 					.level-2 {
 						display: block;
+
 						li.arrow {
+							/*
 							&:hover {
 								background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-white-2.png) no-repeat center bottom;
 								background-size: 18px;
 							}
+							*/
 						}
+
 						li {
 							&:hover {
 								.nav-container {
@@ -262,17 +288,19 @@ header[role="banner"] {
 						}
 					}
 				}
+
 				.level-2 {
 					background: #e6e6e8;
 					width: 1000px;
 					position: absolute;
-					left: -99px;
+					left: -90px;
 					top: 68px;
 					box-sizing: border-box;
 					overflow: visible;
 					color: @color_6;
 					z-index: 9999;
 					display: none;
+
 					li {
 						color: @color_3;
 						font-family: @font_family_1 !important;
@@ -280,7 +308,8 @@ header[role="banner"] {
 						height: auto;
 						padding: 12px 0;
 						text-align: center;
-						>a {
+
+						> a {
 							color: @color_3;
 							height: auto;
 							font-size: 15px;
@@ -288,31 +317,42 @@ header[role="banner"] {
 							text-decoration: none;
 							width: auto;
 						}
+
 						span {
 							font-family: @font_family_1 !important;
 							position: relative;
 						}
 					}
-					.girl-cats {
-						margin-left: 99px;
-						margin-right: 82px;
+
+					li.girl-cats {
+						margin: 0 0 0 89px;
 					}
+
 					li.boy-cats {
-						margin-left: 172px;
+						margin: 0 0 0 153px;
 					}
+
+					li.tween-cats {
+						margin: 0 0 0 218px;
+					}
+
 					li.baby-girl-cats {
-						margin-left: 249px;
+						margin: 0 0 0 305px;
 					}
+
 					li.baby-boy-cats {
-						margin-left: 363px;
+						margin: 0 0 0 412px;
 					}
+
 					li.newborn-cats {
-						margin-left: 483px;
+						margin: 0 0 0 520px;
 					}
+
 					.sizes-note {
 						font-size: 12px;
 					}
 				}
+
 				.nav-container {
 					width: 100%;
 					position: absolute;
@@ -327,10 +367,12 @@ header[role="banner"] {
 					display: none;
 					border-bottom: 1px solid #D1D3D4;
 					padding-bottom: 20px;
+
 					.the-list {
 						width: 65%;
 						float: left;
 						color: @color_6;
+
 						.favs {
 							h2 {
 								font-size: 13px;
@@ -344,12 +386,14 @@ header[role="banner"] {
 								text-transform: uppercase;
 								text-align: left;
 							}
+
 							ul {
 								li {
 									float: none;
 									height: 20px;
 									width: 100%;
-									padding: 10px 0 0 0;
+									padding: 10px 0 0;
+
 									a {
 										padding: 0;
 										text-align: left;
@@ -357,6 +401,7 @@ header[role="banner"] {
 										color: @color_3;
 										white-space: nowrap;
 										font-family: @font_family_2 !important;
+
 										&:hover {
 											color: @color_7;
 											font-family: @font_family_1 !important;
@@ -367,6 +412,7 @@ header[role="banner"] {
 							width: 36%;
 							float: left;
 						}
+
 						.nb-gift-shop {
 							h2 {
 								font-size: 13px;
@@ -380,12 +426,14 @@ header[role="banner"] {
 								text-transform: uppercase;
 								text-align: left;
 							}
+
 							ul {
 								li {
 									float: none;
 									height: 20px;
 									width: 100%;
-									padding: 10px 0 0 0;
+									padding: 10px 0 0;
+
 									a {
 										padding: 0;
 										text-align: left;
@@ -393,6 +441,7 @@ header[role="banner"] {
 										color: @color_3;
 										white-space: nowrap;
 										font-family: @font_family_2 !important;
+
 										&:hover {
 											color: @color_7;
 											font-family: @font_family_1 !important;
@@ -401,6 +450,7 @@ header[role="banner"] {
 								}
 							}
 						}
+
 						.cats {
 							h2 {
 								font-size: 13px;
@@ -414,14 +464,16 @@ header[role="banner"] {
 								text-transform: uppercase;
 								text-align: left;
 							}
+
 							ul {
 								li {
 									float: none;
 									height: 20px;
 									width: 100%;
-									padding: 10px 0 0 0;
+									padding: 10px 0 0;
 									float: none;
 									width: 100%;
+
 									a {
 										padding: 0;
 										text-align: left;
@@ -429,18 +481,22 @@ header[role="banner"] {
 										color: @color_3;
 										white-space: nowrap;
 										font-family: @font_family_2 !important;
+
 										&:hover {
 											color: @color_7;
 											font-family: @font_family_1 !important;
 										}
 									}
 								}
+
 								li.view-all {
 									text-transform: uppercase;
 								}
+
 								li.the-sale {
-									>a {
+									> a {
 										color: @color_1;
+
 										&:hover {
 											font-family: @font_family_1 !important;
 										}
@@ -449,13 +505,16 @@ header[role="banner"] {
 							}
 							width: 64%;
 							float: left;
+
 							.cats-1 {
 								float: left;
 								width: 50%;
 							}
+
 							.cats-2 {
 								float: left;
 								width: 50%;
+
 								ul {
 									li {
 										&:first-of-type {
@@ -466,16 +525,19 @@ header[role="banner"] {
 							}
 						}
 					}
+
 					.nav-img {
 						width: 35%;
 						float: left;
 						text-align: left;
+
 						a {
 							text-align: left;
 							padding: 3px 0 0 7px;
 							box-sizing: border-box;
 							display: inline-block;
 						}
+
 						img {
 							image-rendering: -webkit-optimize-contrast;
 							max-width: 100%;
@@ -484,6 +546,7 @@ header[role="banner"] {
 					}
 				}
 			}
+
 			li.active {
 				a {
 					span {
@@ -491,6 +554,7 @@ header[role="banner"] {
 					}
 				}
 			}
+			/*
 			.girls-clothing {
 				.level-2 {
 					>li {
@@ -509,6 +573,7 @@ header[role="banner"] {
 					}
 				}
 			}
+			*/
 			li.newborn-clothes {
 				.nav-container {
 					.the-list {
@@ -516,27 +581,32 @@ header[role="banner"] {
 							float: left;
 							width: 36%;
 						}
+
 						.nb-gift-shop {
 							float: left;
 							width: 33%;
+
 							h2 {
 								a {
 									color: @color_3;
 									text-decoration: none;
+
 									&:hover {
 										color: @color_8;
 									}
 								}
 							}
 						}
+
 						.cats {
 							float: left;
 							width: 64%;
 						}
+
 						ul {
 							li {
 								width: 100%;
-								padding: 10px 0 0 0;
+								padding: 10px 0 0;
 							}
 						}
 					}
@@ -545,8 +615,10 @@ header[role="banner"] {
 		}
 	}
 }
+
 #company-logo {
 	float: left;
+
 	img {
 		height: auto;
 		image-rendering: -webkit-optimize-contrast;
@@ -555,14 +627,18 @@ header[role="banner"] {
 		width: 50px;
 	}
 }
+
 nav.new-nav {
-	float: left;
-	width: auto;
+	float: none;
+	width: 100%;
+
 	ul {
 		overflow: hidden;
+
 		li {
 			float: left;
-			>a {
+
+			> a {
 				text-decoration: none;
 				display: block;
 				padding: 16px 0;
@@ -572,46 +648,77 @@ nav.new-nav {
 				font-size: 16px;
 				box-sizing: border-box;
 				text-align: left;
-				letter-spacing: .03em;
+				letter-spacing: 0.03em;
 				width: 72px;
+
 				span {
 					padding-bottom: 2px;
 					font-family: @font_family_1 !important;
 				}
 			}
 		}
+
+		li.baby-boy-clothes,
+		li.baby-girl-clothes,
+		li.black-friday,
+		li.boys-clothing,
+		li.clothing-sale,
+		li.girls-clothing,
+		li.newborn-clothes,
+		li.tween-girls-clothing {
+			> a {
+				padding: 25px 0 0;
+
+				span {
+					letter-spacing: 0.1px;
+				}
+			}
+		}
+
+		li.tween-girls-clothing {
+			> a {
+				width: 87px;
+			}
+		}
+
 		li.girls-clothing {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 63px;
 			}
 		}
+
 		li.boys-clothing {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 66px;
 			}
 		}
+
 		li.baby-girl-clothes {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 106px;
 			}
 		}
+
 		li.baby-boy-clothes {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 109px;
 			}
 		}
+
 		li.newborn-clothes {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 106px;
 			}
 		}
+
 		li.clothing-sale {
-			>a {
-				padding: 25px 0 16px;
+			> a {
+				width: 109px;
 			}
 		}
 	}
 }
+
 .triangle {
 	width: 100%;
 	box-sizing: border-box;
@@ -619,11 +726,12 @@ nav.new-nav {
 	height: 20px;
 	left: 0;
 	top: 50px;
-	background: url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png) no-repeat left bottom;
+	background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/header/nav/triangle-grey-2.png") no-repeat left bottom;
 	background-size: 18px;
 	z-index: -1;
 	display: none;
 }
+
 #new-sticky-header {
 	position: fixed;
 	width: 1000px;
@@ -633,29 +741,36 @@ nav.new-nav {
 	display: none;
 	top: 0;
 	height: 70px;
+
 	.triangle {
 		top: 30px;
 	}
+
 	.header-left {
 		top: 0;
 		padding: 0;
+
 		.new-nav {
 			width: 100%;
-			>ul {
+
+			> ul {
 				padding-left: 7px;
-				width: 618px;
+				width: 901px;
 				float: left;
 			}
 		}
+
 		nav.new-nav {
 			.triangle {
 				top: 50px;
 			}
+
 			.level-2 {
 				width: 1000px;
 				left: 0;
 				top: 70px;
 			}
+
 			ul {
 				li.newborn-clothes {
 					.nav-container {
@@ -663,33 +778,41 @@ nav.new-nav {
 							.favs {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
 									}
 								}
 							}
+
 							.nb-gift-shop {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
 									}
 								}
 							}
+
 							.cats {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
@@ -699,39 +822,48 @@ nav.new-nav {
 						}
 					}
 				}
+
 				li.clothing-sale {
 					.nav-container {
 						.the-list {
 							.favs {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
 									}
 								}
 							}
+
 							.nb-gift-shop {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
 									}
 								}
 							}
+
 							.cats {
 								width: 33%;
 								float: left;
+
 								ul {
 									li {
 										width: 100%;
+
 										a {
 											width: 100%;
 										}
@@ -740,27 +872,33 @@ nav.new-nav {
 							}
 						}
 					}
+
 					.level-2 {
 						padding: 0 16% !important;
 					}
 				}
+
 				li {
 					.nav-container {
 						top: 40px;
 						width: 100%;
 						left: 0;
+
 						.the-list {
 							.favs {
 								width: 33%;
 							}
+
 							.cats {
 								width: 66%;
+
 								ul {
 									li {
 										width: 50%;
 									}
 								}
 							}
+
 							a {
 								width: 100%;
 							}
@@ -770,24 +908,31 @@ nav.new-nav {
 			}
 		}
 	}
+
 	.sign-in-copy {
 		float: left;
 		width: 283px;
 		padding-top: 8px;
+
 		ul {
 			overflow: hidden;
 			margin-bottom: 0;
+
 			&:last-of-type {
 				display: none;
 			}
+
 			li {
 				height: auto;
 			}
+
 			li#shopping-bag-tab {
 				float: right;
 			}
+
 			li#welcome-signin {
 				float: left;
+
 				a {
 					text-decoration: none;
 					font-size: 10px;
@@ -796,9 +941,10 @@ nav.new-nav {
 					font-family: @font_family_1 !important;
 					color: @color_2;
 					display: block;
-					padding: 3px 0 0 0;
+					padding: 3px 0 0;
 				}
 			}
+
 			li#welcome-member {
 				a {
 					font-size: 10px;
@@ -808,7 +954,8 @@ nav.new-nav {
 					text-decoration: none;
 					text-transform: uppercase;
 					line-height: 10px;
-					padding: 6px 0 0 0;
+					padding: 6px 0 0;
+
 					.arrow {
 						width: 0;
 						height: 0;
@@ -820,6 +967,7 @@ nav.new-nav {
 						vertical-align: -1px;
 					}
 				}
+
 				.popup-member {
 					background: #ffffff;
 					position: absolute;
@@ -830,11 +978,13 @@ nav.new-nav {
 					width: 141px;
 					margin: 5px 0 0 -1px;
 					display: none;
+
 					ul {
 						margin-top: 5px;
 						padding: 0;
 						list-style-type: none;
 						display: block;
+
 						li {
 							height: 15px;
 							float: none;
@@ -842,6 +992,7 @@ nav.new-nav {
 							padding: 5px 0;
 							margin: 0;
 							letter-spacing: 1px;
+
 							a {
 								font-size: 10px;
 								color: @color_4;
@@ -849,10 +1000,12 @@ nav.new-nav {
 								margin: 0;
 							}
 						}
+
 						li.close {
 							margin: 0 0 5px;
 							padding: 0;
 							text-align: right;
+
 							img {
 								width: 10px;
 								cursor: pointer;
@@ -863,20 +1016,24 @@ nav.new-nav {
 				}
 			}
 		}
+
 		ul.clearfix {
 			display: block !important;
 		}
+
 		#site-search {
 			form {
 				border: 1px solid #f0efef;
+
 				#q {
 					width: 85%;
 					padding: 5px 0 5px 12px;
 					box-sizing: border-box;
 					border: none;
 				}
+
 				.search-btn {
-					background: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/search-glass.png) no-repeat 17px 6px;
+					background: url("https://s.tea-global.net/mas_assets/theme/tea_collection/images/search-glass.png") no-repeat 17px 6px;
 					border: none;
 					cursor: pointer;
 					height: 20px;
@@ -887,24 +1044,28 @@ nav.new-nav {
 			}
 		}
 	}
+
 	#company-logo {
 		margin-right: 42px;
 	}
 }
+
 .ref {
 	position: absolute;
 	top: 0;
 	left: 0;
 	max-width: 100%;
-	opacity: .5;
+	opacity: 0.5;
 	z-index: 9999;
 }
+
 .inspiration {
 	&:hover {
 		#cell-con {
 			display: block;
 		}
 	}
+
 	#cell-con {
 		position: absolute;
 		width: 100%;
@@ -915,6 +1076,7 @@ nav.new-nav {
 		padding: 0;
 		overflow: hidden;
 		display: none;
+
 		div {
 			float: left;
 			padding: 2%;
@@ -922,15 +1084,18 @@ nav.new-nav {
 			box-sizing: border-box;
 			z-index: 9999;
 			text-align: center;
+
 			.header {
 				padding: 0;
 				width: 100%;
+
 				.cell-con-image {
 					padding: 0;
 					width: 100%;
 					float: none;
 				}
 			}
+
 			p {
 				a {
 					font-size: 12px;
@@ -944,45 +1109,57 @@ nav.new-nav {
 		}
 	}
 }
+
 .clothing-sale {
-	>a {
+	> a {
 		color: @color_1 !important;
 	}
+
 	.level-2 {
-		padding: 0 27%;
-		>li {
+		padding: 0 26%;
+
+		> li {
 			color: @color_2;
 			float: left;
+
 			&:hover {
 				font-family: @font_family_1 !important;
 				color: @color_3;
 			}
-			>span {
-				>a {
+
+			> span {
+				> a {
 					color: @color_3 !important;
 					text-decoration: none !important;
 					cursor: pointer;
 					font-family: @font_family_2 !important;
+
 					&:hover {
 						font-family: @font_family_1 !important;
 					}
 				}
 			}
+
 			.nav-container {
 				top: 40px !important;
 				left: 0 !important;
 				width: 100% !important;
+
 				.the-list {
 					width: 44% !important;
+
 					.cats {
 						width: 100% !important;
+
 						ul {
 							li {
 								float: left !important;
 								width: 50% !important;
+
 								a {
 									width: auto !important;
 									font-family: @font_family_2 !important;
+
 									&:hover {
 										font-family: @font_family_1 !important;
 										color: @color_7;
@@ -992,31 +1169,39 @@ nav.new-nav {
 						}
 					}
 				}
+
 				.nav-img {
 					width: 56% !important;
 				}
 			}
 		}
-		>li.sidebar-Girl {
+
+		> li.sidebar-Girl {
 			width: 100px !important;
 		}
-		>li.sidebar-Tween {
+
+		> li.sidebar-Tween {
 			width: 100px !important;
 		}
-		>li.sidebar-Boy {
+
+		> li.sidebar-Boy {
 			width: 100px !important;
 		}
-		>li.sidebar-Baby-Girl {
+
+		> li.sidebar-Baby-Girl {
 			width: 140px !important;
 		}
-		>li.sidebar-Baby-Boy {
+
+		> li.sidebar-Baby-Boy {
 			width: 86px !important;
 		}
-		>li.sidebar-Newborn {
+
+		> li.sidebar-Newborn {
 			width: 137px !important;
-			display:none;
+			display: none;
 		}
 	}
+
 	.nav-container {
 		.nav-img {
 			#content-block {
@@ -1029,6 +1214,7 @@ nav.new-nav {
 					line-height: 28px;
 					min-height: 150px;
 					padding: 30px 0 10px 28px;
+
 					div {
 						background: #fff;
 						height: 4px;
@@ -1037,6 +1223,7 @@ nav.new-nav {
 						top: 0;
 						left: 0;
 					}
+
 					h2 {
 						color: @color_9;
 						font-size: 24px !important;
@@ -1044,11 +1231,12 @@ nav.new-nav {
 						left: 0 !important;
 						position: relative;
 						top: 0;
+
 						span {
 							font-size: 45px !important;
 							top: 8px;
 							border-bottom: none;
-							display:block;
+							display: block;
 						}
 					}
 				}
@@ -1056,26 +1244,29 @@ nav.new-nav {
 		}
 	}
 }
+
 #content-block {
 	text-decoration: none;
 	margin-bottom: 10px;
 	display: block;
 }
-
 @media screen and (max-width:736px) {
 	.content-block {
 		padding: 0 20px;
 		min-height: 256px;
+
 		div {
 			left: 2px;
 			width: 114px;
 			top: 45px;
 		}
+
 		h2 {
 			left: -1px;
 			font-size: 30px;
 			top: 54px;
 			letter-spacing: -.5px;
+
 			span {
 				top: -5px;
 				font-size: 59px;
