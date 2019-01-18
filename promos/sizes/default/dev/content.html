@@ -1,0 +1,41 @@
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../../../../global/css/styles.css"> -->
+
+<!-- OVERALL DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo">
+
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-d-v3.png" alt="" usemap="#map-d" class="promo-img-alt ref" /> -->
+
+	<h2><span class="first">more choices!</span> <span class="second">Baby sizes through 4T <b>and</b> Girl sizes<br class="mobile"> up to 12 are back in spring arrivals.</span></h2>
+
+</div>
+
+<div class="mobile-promo">
+
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-m-v3.png" alt="" class="promo-img-alt ref" /></a> -->
+
+</div>
+
+<!-- toolkit -->
+<style>
+	include "../css/styles.css"
+	include "../../../../global/css/styles.css"
+</style>
+
+<script>
+	$(document).ready(function() {
+		var copy = $('.desktop-promo h2').clone();
+		// console.log(copy[0].outerHTML);
+
+		$('.mobile-promo').append(copy[0].outerHTML);
+		$('.mobile-promo b').html('&amp;');
+
+		var url = window.location.href;
+		if (url == 'https://www.teacollection.com/' || url == 'https://m.teacollection.com/') {
+			$('.desktop-promo').css('margin', '0 0 10px 0');
+			$('.mobile-promo').css('margin', '0 0 13px 0');
+		}
+	});
+</script>

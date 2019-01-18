@@ -1,0 +1,41 @@
+<!-- dev styles -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../../../../global/css/styles.css"> -->
+
+<!-- OVERALL DESKTOP PROMO -->
+<!-- UNCOMMENT IF NEEDED -->
+<div class="desktop-promo">
+
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-d-v3.png" alt="" usemap="#map-d" class="promo-img-alt ref" /> -->
+
+	<h2><span class="first">more choices!</span> <span class="second">Baby sizes through 4T <b>and</b> Girl sizes<br class="mobile"> up to 12 are back in spring arrivals.</span></h2>
+
+</div>
+
+<div class="mobile-promo">
+
+	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/sizes/2019/0117/190117-skinny-m-v3.png" alt="" class="promo-img-alt ref" /></a> -->
+
+</div>
+
+<!-- toolkit -->
+<style>
+	html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.desktop-promo img,.desktop-promo-hp img,.mobile-promo img,.mobile-promo-hp img{image-rendering:-webkit-optimize-contrast;max-width:100%}.desktop-promo h2,.mobile-promo h2{background:#B490B3;height:30px;padding:6px 0 0 201px;box-sizing:border-box}.desktop-promo h2 span,.mobile-promo h2 span{color:#fff;font-family:brown-pro-bold}.desktop-promo h2 span b,.mobile-promo h2 span b{color:#fff}.desktop-promo h2 span.first,.mobile-promo h2 span.first{text-transform:uppercase;font-size:16px;letter-spacing:.8px}.desktop-promo h2 span.second,.mobile-promo h2 span.second{font-size:13px;position:relative;left:14px}.mobile-promo{position:relative}.mobile-promo .ref{left:0}.mobile-promo h2{height:35px;padding:0;display:flex;flex-wrap:wrap}.mobile-promo h2 span{box-sizing:border-box}.mobile-promo h2 span.first{text-transform:uppercase;font-size:1.25em;letter-spacing:1.5px;flex-basis:47%;padding:8px 0 0 2%}@media screen and (max-width:321px){.mobile-promo h2 span.first{font-size:1em}}.mobile-promo h2 span.second{left:0;font-size:.8em;padding:4px 0 0;margin:0;position:relative;letter-spacing:-0.4px;flex-basis:53%;text-align:left;line-height:13px}@media screen and (max-width:321px){.mobile-promo h2 span.second{font-size:.7em}}@media screen and (max-width:737px){.desktop-promo,.desktop-promo-hp{display:none}}.mobile-promo,.mobile-promo-hp{display:none}@media screen and (max-width:737px){.mobile-promo,.mobile-promo-hp{display:block;text-align:center;background:#c62695}}.mobile-promo img,.mobile-promo-hp img{image-rendering:-webkit-optimize-contrast}/*# sourceMappingURL=promos/sizes/default/css/styles.css.map */
+	.ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}.cta{display:inline-block;font-family:brown-pro-bold !important;border:1px solid;width:200px;position:relative;font-size:13px;line-height:16px;height:39px;letter-spacing:.2px;text-transform:uppercase;text-decoration:none;padding:12px 0 0;text-align:center;box-sizing:border-box}@media screen and (max-width:737px){.cta{width:42%;left:0;padding:1em 0;font-size:.8em}}@media screen and (max-width:415px){.cta{font-size:.8em;letter-spacing:1.1px}}@media screen and (max-width:376px){.cta{font-size:.7em}}@media screen and (max-width:321px){.cta{font-size:.6em}}/*# sourceMappingURL=global/css/styles.css.map */
+</style>
+
+<script>
+	$(document).ready(function() {
+		var copy = $('.desktop-promo h2').clone();
+		// console.log(copy[0].outerHTML);
+
+		$('.mobile-promo').append(copy[0].outerHTML);
+		$('.mobile-promo b').html('&amp;');
+
+		var url = window.location.href;
+		if (url == 'https://www.teacollection.com/' || url == 'https://m.teacollection.com/') {
+			$('.desktop-promo').css('margin', '0 0 10px 0');
+			$('.mobile-promo').css('margin', '0 0 13px 0');
+		}
+	});
+</script>
