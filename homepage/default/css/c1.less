@@ -6,11 +6,13 @@
 		min-height: auto;
 		margin: 0;
 	}
-	background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2018/1220/c1-d.png") no-repeat top center;
+	background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0117/c1-d.png") no-repeat top center;
 	background-size: cover;
 	min-height: 500px;
 	margin-bottom: 14px;
 	color: #fff;
+	// flex-basis: 100%;
+	overflow: hidden;
 
 	img {
 		max-width: 100%;
@@ -34,12 +36,12 @@
 			padding: 0;
 			text-align: center;
 		}
-		overflow: hidden;
-		margin: 242px 11px 0 0;
+		// overflow: hidden;
+		margin: 191px 0 0 37px;
 		box-sizing: border-box;
 		padding: 0;
-		width: 227px;
-		float: right;
+		width: 200px;
+		float: left;
 
 		.text {
 			margin-top: 146px;
@@ -130,7 +132,7 @@
 
 				&.cta3,
 				&.cta4 {
-					//left: 0;
+					left: 0;
 					//margin: 0 3% 1px 0;
 				}
 				//moved ctas around and 2nd cta full width
@@ -142,14 +144,14 @@
     			}
     			*/
 			}
-			color: @hp-font-color;
+			color: #fff;
 			margin: 0 0 19px;
-			border: 1px solid #fff;
+			border: 2px solid #fff;
 			width: 200px;
-			background: #fff;
+			background: none;
 			padding: 11px 0 0;
 			letter-spacing: 1px;
-			float: left;
+			float: none;
 
 			&:nth-of-type(6) {
 				@media screen and (max-width:737px) {
@@ -165,9 +167,9 @@
 					// border: 1px solid #6cb89a;
 					// color: #fff;
 				}
-				background: none;
-				color: #fff;
-				border: 1px solid #fff;
+				background: #fff;
+				color: @hp-font-color;
+				border: 2px solid #fff;
 			}
 		}
 	}
