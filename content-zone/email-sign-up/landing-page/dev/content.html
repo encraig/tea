@@ -1,4 +1,3 @@
-
 <!-- dev styles css -->
 <!-- <link rel="stylesheet" type="text/css" href="../../css/styles.css"> -->
 
@@ -20,20 +19,20 @@
 		<p class="mobile">at TeaCollection.com.</p>
 		<p class="desktop">Shop the latest globally-inspired styles, read<br> exclusive travel stories &amp; get first alerts about sales.</p>
 
-			<form action="https://newsletter.teacollection.com/pub/rf" id="myform2" name="myform2">
-				<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGpOU0nnahFrllTzbMOzgzeKR7qzdFRPU8orAK8hVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGlURueLKwPEghHlze7whzcl2AzdFRPU8orAK8h"/>
-				<input type="hidden" form-name="Site_Email_SignUp_PAGE">
-				<input type="hidden" name="ACQUISITION_SOURCE" value="email_signup_page" id="aq" /> 
-				<input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I"> 
-				<input type="hidden" name="activity" value="submit"> 
-				<input type="hidden" name="COLD_STORAGE" value="N"> 
-				<span id="errors"></span>
-				<input class="nl-email" id="emailField" name="EMAIL_ADDRESS_" type="email" placeholder="Email Address" required> 
-				<input type="submit" class="nl-signup" value="Sign Me Up" id="submitEmail">
-			</form>
+		<form action="https://newsletter.teacollection.com/pub/rf" id="myform2" name="myform2" data="landing-page">
+			<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGpOU0nnahFrllTzbMOzgzeKR7qzdFRPU8orAK8hVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGlURueLKwPEghHlze7whzcl2AzdFRPU8orAK8h" />
+			<input type="hidden" form-name="Site_Email_SignUp_PAGE">
+			<input type="hidden" name="ACQUISITION_SOURCE" value="email_signup_page" id="aq" />
+			<input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I">
+			<input type="hidden" name="activity" value="submit">
+			<input type="hidden" name="COLD_STORAGE" value="N">
+			<span id="errors"></span>
+			<input class="nl-email" id="emailField" name="EMAIL_ADDRESS_" type="email" placeholder="Email Address" required>
+			<input type="submit" class="nl-signup" value="Sign Me Up" id="submitEmail">
+		</form>
 	</div>
 
-	<!-- <div class="email-fineprint"> 
+	<!-- <div class="email-fineprint">
 		<p>
 			*20% OFF + FREE SHIPPING ON YOUR FIRST ORDER To redeem, use the code in your welcome email to receive 20% off + free 6-10 day shipping on your first order at Teacollection.com. Only applies to first time purchasers. Offer excludes all third party (non-Tea) items. Does not apply for shipping to Canada. Cannot be combined with other promotions and cannot be applied towards the purchase of gift cards. One (1) use per person. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned.
 		</p>
@@ -48,41 +47,41 @@
 
 {literal}
 <script>
-jQuery(document).ready(function(){
+	jQuery(document).ready(function() {
 
-	//if url parameter change the aquisition_source
-	var url = window.location.href;
-	if(url.indexOf('?') !== -1){
-		var param = url.split('?');
-		param = param[1];
-		var paramValue;
+		//if url parameter change the aquisition_source
+		var url = window.location.href;
+		if (url.indexOf('?') !== -1) {
+			var param = url.split('?');
+			param = param[1];
+			var paramValue;
 
-		//if mulitple param
-		if(param.indexOf('&') !== -1){
-			param = param.split('&');
+			//if mulitple param
+			if (param.indexOf('&') !== -1) {
+				param = param.split('&');
 
-			//loop and find src
-			$.each(param, function(i,val){
-				var theParam = val.split('=');
-				if(theParam[0] == 'src') {
-					paramValue = theParam[1];
-					console.log(paramValue);
-					return false;
-				}
-			});
+				//loop and find src
+				$.each(param, function(i, val) {
+					var theParam = val.split('=');
+					if (theParam[0] == 'src') {
+						paramValue = theParam[1];
+						console.log(paramValue);
+						return false;
+					}
+				});
+			}
+			// only 1 param
+			else {
+				paramValue = param.split('=')[1];
+				console.log(paramValue);
+			}
+
+			//change the aquisition_source
+			$('#aq').attr('value', paramValue);
+
 		}
-		// only 1 param
-		else {
-			paramValue = param.split('=')[1];
-			console.log(paramValue);
-		}
 
-		//change the aquisition_source
-		$('#aq').attr('value', paramValue);
-		
-	}
- 
 
-});
+	});
 </script>
 {/literal}
