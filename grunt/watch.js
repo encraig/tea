@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 
     // GLOBAL ---------------------------------------------------------------------------
     Global: {
-      files: ['global/css/*.less', 'global/js/*.js'],
-      tasks: ['less:globalCSS', 'uglify:globalJS'],
+      files: ['global/<%= global.name %>/css/*.less', 'global/<%= global.name %>/js/*.js', 'global/<%= global.name %>/html/*.html'],
+      tasks: ['less:globalCSS', 'uglify:globalJS', 'includes:globalIncludes'],
     },
 
     // BUILD ---------------------------------------------------------------------------

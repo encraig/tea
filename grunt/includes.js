@@ -20,6 +20,21 @@ module.exports = function(grunt) {
 
     },
 
+    // GLOBAL  ---------------------------------------------------------------------------
+    globalIncludes: {
+
+      files: [
+        //toolkit
+        {
+          cwd: 'global/<%= global.name %>/html/',
+          src: ['*.html'],
+          dest: 'global/<%= global.name %>/toolkit/',
+        },
+      ],
+
+    },
+
+
     // CONTENT ZONE  ---------------------------------------------------------------------------
     zoneIncludes: {
 

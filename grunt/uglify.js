@@ -17,9 +17,9 @@ module.exports = function(grunt) {
     globalJS: {
       //dynamic files
       expand: true,
-      cwd: 'global/js',
+      cwd: 'global/<%= global.name %>/js',
       src: ['*.js'],
-      dest: 'global/js/output/',
+      dest: 'global/<%= global.name %>/js/output/',
       ext: '.min.js',
     },
 

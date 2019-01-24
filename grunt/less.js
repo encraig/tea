@@ -11,9 +11,9 @@ module.exports = function(grunt) {
     globalCSS: {
 
       expand: true,
-      cwd: 'global/css/',
+      cwd: 'global/<%= global.name %>/css/',
       src: '*.less',
-      dest: 'global/css/',
+      dest: 'global/<%= global.name %>/css/',
       ext: '.css',
     },
 
