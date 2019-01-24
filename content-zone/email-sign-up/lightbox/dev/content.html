@@ -26,29 +26,33 @@
 
 </div>
 
-<!-- {literal} -->
+{literal}
 <style>
   include "../css/styles.css"
 </style>
-<!-- {/literal} -->
+{/literal}
 
-<!-- {literal} -->
-<!-- <script>
+{literal}
+<script>
   jQuery(document).ready(function() {
 
     //close the signup form
-    jQuery('#close-icon').click(function() {
-      if ($(window).width() > 768) {
-        //console.log('close desktop');
-        divinity.box.close();
-        $('#tea-promo-subscribe').remove();
-      } else if ($(window).width() < 768) {
-        //console.log('close mobile');
-        divinity.box.close();
-        $('#tea-promo-subscribe').remove();
-      }
+    jQuery('.the-overlay, #close-icon2').click(function() {
+      console.log('close desktop');
+      divinity.box.close();
+      $('#tea-promo-subscribe').remove();
+
+      // if ($(window).width() > 768) {
+      //   console.log('close desktop');
+      //   divinity.box.close();
+      //   $('#tea-promo-subscribe').remove();
+      // } else if ($(window).width() < 768) {
+      //   console.log('close mobile');
+      //   divinity.box.close();
+      //   $('#tea-promo-subscribe').remove();
+      // }
     });
 
   });
-</script> -->
-<!-- {/literal} -->
+</script>
+{/literal}
