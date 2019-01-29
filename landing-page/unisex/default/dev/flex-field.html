@@ -7,8 +7,10 @@
 		pathName = pathName.replace('/', '');
 		// console.log(pathName);
 
-		if (s.url == "/?type=page&page=banner_ad&zone[]=sitewide_message&zone[]=mega_girl&zone[]=mega_boy&zone[]=mega_tween&zone[]=mega_baby_girl&zone[]=mega_baby_boy&zone[]=mega_newborn&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=sitewide_banner&zone[]=category_pages&zone[]=category_footer&zone[]=global_css&zone[]=footer&request_page=category&request_page_id=pajamas" || s.url ==
-			"/?type=page&page=banner_ad&zone[]=sitewide_message_mobile&zone[]=sitewide_banner_mobile&zone[]=category_pages&zone[]=category_footer&request_page=category&request_page_id=pajamas") {
+		if (s.url ==
+			"/?type=page&page=banner_ad&zone[]=sitewide_message&zone[]=mega_girl&zone[]=mega_boy&zone[]=mega_tween&zone[]=mega_baby_girl&zone[]=mega_baby_boy&zone[]=mega_newborn&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=sitewide_banner&zone[]=category_pages&zone[]=category_footer&zone[]=global_css&zone[]=footer&request_page=category&request_page_id=unisex" ||
+			s.url ==
+			"/?type=page&page=banner_ad&zone[]=sitewide_message_mobile&zone[]=sitewide_banner_mobile&zone[]=category_pages&zone[]=category_footer&request_page=category&request_page_id=unisex") {
 			console.log('add the content cell');
 			//check if addCell function is defined
 			if (typeof addCell == 'function') {
