@@ -1,0 +1,104 @@
+.ref {
+	position: absolute;
+	opacity: 0.5;
+	//display:none;
+}
+
+.midbox,
+.my-account {
+	h1 {
+		display: none;
+	}
+}
+
+#simplemodal-container,
+#simplemodal-overlay {
+	display: none !important;
+}
+
+.sidebar.customer-service {
+	@media screen and (max-width:737px) {
+		display: none;
+	}
+}
+
+.main-content {
+	@media screen and (max-width:737px) {
+		float: none;
+		width: 100%;
+	}
+	float: left;
+	width: 840px;
+	margin-top: 0 !important;
+}
+
+.padded {
+	padding: 0 !important;
+}
+//---------------------------------------------------------------
+//end of .wrap-content
+//---------------------------------------------------------------
+
+.wrap-content {
+	header {
+		h1 {
+			@media screen and (max-width:737px){
+				text-align:center;
+			}
+		}
+	}
+
+	.cta {
+		display:block;
+		margin: 0 auto;
+		color:	#32475c;
+
+		&:hover, &:active {
+			background: #32475c;
+			color:#fff;
+		}
+	}
+
+	p {
+		margin: 10px 0;
+		font-size: 12px;
+		line-height: 18px;
+		color: #999999;
+		text-align: center;
+	}
+
+	h1 {
+		text-align: center;
+		color: #32465c;
+		font-size: 18px;
+		letter-spacing: 0.07rem;
+		font-weight: normal;
+	}
+
+	h3 {
+		text-align: center;
+		color: #32465c;
+		font-size: 18px;
+		letter-spacing: 0.07rem;
+		font-weight: normal;
+	}
+
+	table {
+		margin: 20px 0;
+		border-style: hidden;
+		border-collapse: collapse;
+
+		td {
+			border-left: 2px #adb6bf;
+			border-right: 2px #adb6bf;
+			border-style: solid dotted;
+			padding: 11px 10px;
+			vertical-align: middle;
+			font-size: 12px;
+			font-weight: bold;
+			color: #32475c;
+			text-align: center;
+			letter-spacing: 1px;
+		}
+	}
+}
