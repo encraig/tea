@@ -1,22 +1,22 @@
- 
 <!-- dev css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
- 
-<!-- ref --> 
+
+<!-- ref -->
 <!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0809/customer-favorites/girl/bg-d.png" class="ref" />   -->
 
-<div class="wrap"> 
-	<header> 
-		<!-- desktop -->
-		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0920/customer-favorites/boy/image-d.png" class="desktop" alt=""/>
-		<!-- mobile -->
-		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/0920/customer-favorites/boy/image-m.png" class="mobile" alt=""/>
-	</header>	
+<div class="wrap">
+  <header>
+    <picture>
+      <source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/customer-favorites/0221/b-d.png">
+      <source media="(max-width: 737px)" data-srcset="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/customer-favorites/0221/b-m.png">
+      <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/customer-favorites/0221/b-m.png" />
+    </picture>
+  </header>
 </div>
 
 <!-- toolkit -->
 <style>
-	include "../css/styles.css"
+  include "../../girl/css/styles.css"
 </style>
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css"/> -->
 
 <script>
-$(document).ready(function() {
-	// $('img[usemap]').rwdImageMaps();
-});
+  $(document).ready(function() {
+    // $('img[usemap]').rwdImageMaps();
+  });
 </script>

@@ -36,14 +36,14 @@
               //desktop
               if ($(window).width() > 737) {
                 image = $(arr).find('img').attr('src');
-                theElem = '<section class="item" id="' + id + '" data-tea-style="' + teaStyle + '" data-tea-style-color="' + teaStyleColor + '" data-tea-sku="' + teaSku + '"><header><a href="' + url + '"><img src="' + image +
+                theElem = '<section class="item" id="' + id + '" data-tea-style="' + teaStyle + '" data-tea-style-color="' + teaStyleColor + '" data-tea-sku="' + teaSku + '"><header><a href="' + url + '"><img data-src="' + image +
                   '" alt="' + title + '"></a><div class="quickview-overlay"><h2><a href="#' + sku + '/' + color + '">Quick View</a></h2></div></header><section class="clearfix"><div class="item-details"><h2><a href="' + url + '">' +
                   title + '</a></h2><div class="item-prices"><p>' + price + '</p></div><p class="size"><span class="thumb-sizes">' + sizes + '</span></p></div></section><footer class="clearfix"></footer></section>';
               } else {
                 //mobile
                 image = $(arr).find('img').attr('data-cfsrc');
                 theElem = '<div id="' + id + '" class="single-item-box" data-tea-style="' + teaStyle + '" data-tea-style-color="' + teaStyleColor + '" data-tea-sku="' + teaSku +
-                  '"><div class="single-item-box-inner"><div class="image-box"><a href="' + url + '"><img src="' + image + '" alt="' + title + '"></a></div><div class="desc-box"><a href="' + url + '"><span>' + title +
+                  '"><div class="single-item-box-inner"><div class="image-box"><a href="' + url + '"><img data-src="' + image + '" alt="' + title + '"></a></div><div class="desc-box"><a href="' + url + '"><span>' + title +
                   '</span></a><div class="price-wrapper"><span class="price">' + price + '</span></div><p class="sizes"><span>' + sizes + '</span></p><p class="thumb-rating"></p></div><div class="clear"></div></div></div>';
               }
 
@@ -89,6 +89,22 @@
     console.log('ajax complete');
     console.log(e, x, s);
     if (s.url == 'https://www.teacollection.com/cms/customer-acquisition-sku/customer-acquisition-sku/1.html') {
+
+      //lazy load the images
+      $('#infinite, #newborn-gifting').on('inview', function(e, i) {
+        // console.log('from inview');
+        // console.log('images');
+        // element is now visible in the viewport
+        if (i) {
+          var img = $(this).find('img');
+          $.each(img, function(i, val) {
+            var src = $(val).attr('data-src');
+            $(val).attr('src', src);
+            $(val).removeAttr('data-src');
+          });
+        }
+      });
+
       console.log('execute slick');
       $('#infinite, #newborn-gifting').slick({
         infinite: true,
