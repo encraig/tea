@@ -1,45 +1,19 @@
- 
-<!-- dev css -->
-<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
-
-<!-- mobile breadcrumb for dev -->
-<!-- 
-<div class="breadcrumb breadcrumb-c" itemprop="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#"> <span typeof="v:Breadcrumb"> <a itemprop="url" rel="v:url" property="v:title" href="https://m.teacollection.com/">Home</a> </span><span typeof="v:Breadcrumb"> / <a href="https://m.teacollection.com/girls-clothing">Girl</a></span><span typeof="v:Breadcrumb"> / <a href="https://m.teacollection.com/girls-clothing/favorites/customer-favorites" class="last">Customer Favorites</a></span></div> -->
- 
-<!-- desktop ref --> 
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/baby-girl/bg-d.png" class="ref" />  -->
-
-<!-- mobile ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/baby-girl/bg-m.png" class="ref" /> -->
-
-<div class="dept-cat"> 
-
-	<h3 class="mobile title">Special Occasion</h3>
-
-	<!-- desktop image --> 
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/baby-girl/image-d.png" alt="special occasion" />
-
-	<!-- mobile image --> 
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2018/1004/special-occasion/baby-girl/image-m.png" alt="special occasion" />
-
-
+<div class="special-wrap">
+  <picture>
+    <source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/special-occasion/0221/image-d.png">
+    <source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/special-occasion/0221/image-m.png">
+    <img src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/special-occasion/0221/image-m.png" alt="" style="max-width:100%; margin-bottom: 10px;" />
+  </picture>
 </div>
 
 <!-- toolkit -->
 <style>
-	include "../css/styles.css"
+  include "../../landing-page/css/styles.css"
 </style>
 
-<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
-$(document).ready(function() {
-	// $('img[usemap]').rwdImageMaps();
-
-	//mobile hide heading
-	if($(window).width() < 737){
-		$('.common-wrap .heading-category').hide();
-	} else {
-		$('.inline-header').text('');
-	}
-});
+  //include the cells array
+  include "../../js/girl/array.js"
+  //include the script
+  include "../../js/scripts.js"
 </script>
