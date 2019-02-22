@@ -89,8 +89,21 @@
 			background-size: contain;
 
 			div {
-				left: 60px;
-				top: 344px;
+				@media screen and (max-width:737px){
+					width:100%;
+				}
+				left: 691px;
+				top: 401px;
+				width:250px;
+
+				.cta {
+					@media screen and (max-width:737px){
+						width:63%;
+						left:0 !important;
+					}
+					width:250px;
+					letter-spacing:1px;
+				}
 			}
 		}
 
