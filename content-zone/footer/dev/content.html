@@ -1,8 +1,3 @@
-<!--toolkit -->
-<style>
-	include "../css/styles.css"
-</style>
-
 <!-- dev styles -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">  -->
 
@@ -11,7 +6,7 @@
 	<div>
 		<a class="header" href="/catalogs">View our catalog<br />
 			<div class="cell-con-image">
-				<img class="main" src="https://image.issuu.com/190114180122-e8691dc8bc867183be1e620122bf7006/jpg/page_1_thumb_medium.jpg" alt="View Catalog" id="catalogThumb" />
+				<img class="main" data-src="https://image.issuu.com/190220005759-20617b7f94cbb03ed1332a0e1809793e/jpg/page_1_thumb_medium.jpg" alt="View Catalog" id="catalogThumb" />
 			</div>
 		</a>
 		<p><a href="/catalogs-request">or request a copy<br /> for yourself ></a></p>
@@ -20,37 +15,58 @@
 	<div>
 		<a class="header" href="/the-destinations/asia/south-east">Get inspired<br />
 			<div class="cell-con-image">
-				<img style="max-width:100%; width:92px;" class="main" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/footer-insp-icon-v2.png" alt="Inspiration" /></div>
+				<img style="max-width:100%; width:92px;" class="main" data-src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/inspiration/asia/south-east/2019/footer-insp-icon-v2.png" alt="Inspiration" /></div>
 		</a>
 		<p>visit the places<br /> behind the designs</p>
 	</div>
 
 	<div>
 		<a class="header" href="/about-tea/the-tea-story">Learn About Tea<br />
-			<div class="cell-con-image"><img class="main" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-AboutUs.jpg" alt="About Tea" /></div>
+			<div class="cell-con-image"><img class="main" data-src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-AboutUs.jpg" alt="About Tea" /></div>
 		</a>
 		<p>come on a<br />journey with us</p>
 	</div>
 
 	<div>
 		<a class="header" href="/kidslovetea" style="text-transform:none;">#teacollection<br />
-			<div class="cell-con-image"><img class="main" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-Olapic_new.jpg" alt="Travel the Tea Way" /></div>
+			<div class="cell-con-image"><img class="main" data-src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-Olapic_new.jpg" alt="Travel the Tea Way" /></div>
 		</a>
 		<p>share photos of<br />your kids in Tea</p>
 	</div>
 
 	<!--<div>
 		<a class="header" href="{$html_url}kidslovetea">#TEACOLLECTION<br />
-			<div class="cell-con-image"><img class="main" src="{$theme_assets_url}images/footer/Tea-Footer-Olapic_new.jpg" alt="#TEACOLLECTION" /></div>
+			<div class="cell-con-image"><img class="main" data-src="{$theme_assets_url}images/footer/Tea-Footer-Olapic_new.jpg" alt="#TEACOLLECTION" /></div>
 		</a>
 		<p>share photos of<br /> your kids in Tea</p>
 	</div>-->
 
 	<div class="last">
 		<a class="header" href="http://blog.teacollection.com/" target="_blank">Visit Our Blog<br />
-			<div class="cell-con-image"><img class="main" src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-blog.jpg" alt="Visit Our Blog" /></div>
+			<div class="cell-con-image"><img class="main" data-src="https://www.teacollection.com/mas_assets/theme/tea_collection/images/footer/Tea-Footer-blog.jpg" alt="Visit Our Blog" /></div>
 		</a>
 		<p>find globally inspired<br /> recipes, crafts & activities</p>
 	</div>
 
 </div>
+
+<!--toolkit -->
+<style>
+	include "../css/styles.css"
+</style>
+
+<script>
+	$(document).ajaxComplete(function(e, x, s) {
+		// console.log('ajax footer complete');
+		$('.banner-footer').on('inview', function(e, i) {
+			if (i) {
+				var img = $(this).find('img');
+				$.each(img, function(i, val) {
+					var src = $(val).attr('data-src');
+					$(val).attr('src', src);
+					$(val).removeAttr('data-src');
+				});
+			}
+		});
+	});
+</script>
