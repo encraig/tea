@@ -30,8 +30,22 @@
 	//function to call from flex field
 	var addCell = function(src, alt) {
 		console.log('add the content cell');
-		var elem = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
-		$('#infinite .single-item-box:nth-of-type(3)').after(elem);
+
+		if ($(window).width() > 737) {
+			var elem2 = $(
+				'<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></section>'
+			);
+			$('#infinite').prepend(elem2);
+		} else {
+			var elem1 = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
+			$('#infinite .single-item-box:nth-of-type(2)').after(elem1);
+
+			var elem2 = $(
+				'<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></div>'
+			);
+			$('#infinite').prepend(elem2);
+		}
+
 		//content-cell click
 		$('.content-cell').click(function() {
 		  return false;
