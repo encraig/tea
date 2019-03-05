@@ -47,5 +47,80 @@
 
 		// $('.dept-cat img').attr('alt', dpAlt);
 
+		var url = window.location.pathname;
+		url = url.replace('/', '');
+
+		var cats = [{
+				class: 'girl',
+				url: 'girls-dresses'
+			},
+			{
+				class: 'girl',
+				url: 'girls-leggings'
+			},
+			{
+				class: 'girl',
+				url: 'girls-tees-tops'
+			},
+			{
+				class: 'girl',
+				url: 'girls-skirts'
+			},
+			{
+				class: 'girl',
+				url: 'girls-shorts'
+			},
+			{
+				class: 'girl',
+				url: 'girls-pants-jeans'
+			},
+			{
+				class: 'girl',
+				url: 'girls-sweaters'
+			},
+			{
+				class: 'girl',
+				url: 'girls-outerwear'
+			},
+			{
+				class: 'girl',
+				url: 'girls-pajamas-sleepwear'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-dresses'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-leggings'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-tees-tops'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-pants'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-shorts'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-sweaters'
+			},
+			{
+				class: 'baby-girl',
+				url: 'baby-girl-outerwear'
+			},
+		];
+
+		$.each(cats, function(i, val) {
+			if (url == val.url) {
+				$('.' + val.class).show();
+			}
+		});
+
 	});
 </script>
