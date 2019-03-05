@@ -8,10 +8,16 @@
 
 	<!-- <h3 class="mobile title">girl</h3> -->
 
-	<picture>
-		<source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-d.png">
-		<source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-m.png">
-		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-m.png" />
+	<picture class="girl">
+		<source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-g-d.png">
+		<source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-g-m.png">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-m.png" alt="MORE CHOICES! Girl sizes up to 12 are back in spring arrivals." />
+	</picture>
+
+	<picture class="baby-girl">
+		<source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-d.png">
+		<source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-m.png">
+		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-m.png" alt="MORE CHOICES! Baby girl sizes up to 4T are back in spring arrivals." />
 	</picture>
 
 </div>
@@ -24,8 +30,6 @@
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
 	// var dpSrc = 'https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-cell.png';
-
-	var dpAlt = 'MORE CHOICES! Girl sizes up to 12 are back in spring arrivals.';
 
 	//function to call from flex field
 	// var addCell = function(src, alt) {
@@ -41,7 +45,7 @@
 
 		// $('img[usemap]').rwdImageMaps();
 
-		$('.dept-cat img').attr('alt', dpAlt);
+		// $('.dept-cat img').attr('alt', dpAlt);
 
 	});
 </script>
