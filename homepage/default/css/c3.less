@@ -2,9 +2,14 @@
 
 .c3 {
 	div {
-		
+		p {
+			@media screen and (min-width: 737px) {
+				// white-space: nowrap;
+			}
+		}
+
 		.cta {
-			@media screen and (max-width:737px){
+			@media screen and (max-width:737px) {
 				//2cta full width
 				/*
 				width:88%;
@@ -16,9 +21,8 @@
 					margin:13px 0 0 0;
 				}
 				*/
-
-    			//2 column cta
-    			/*
+				//2 column cta
+				/*
     			width: 42%;
     			margin-right: 4%;
     			left: 2px;
@@ -29,11 +33,8 @@
 					left: -2px;
 				}
     			*/
-
-    			//margin-top:9px;
-    			
+				//margin-top:9px;
 			}
-
 			//2 cta stacked
 			/*
 			&:last-of-type {
@@ -44,7 +45,6 @@
 				margin:20px 0 0 0;
 			}
 			*/
-
 			//2 column cta
 			/*
 			width: 140px;
@@ -57,8 +57,7 @@
     			margin-left:0;
     		}
     		*/
- 
 		}
 	}
-
-} //end of .c3
+}
+//end of .c3

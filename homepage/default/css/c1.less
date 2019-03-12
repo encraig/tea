@@ -1,13 +1,13 @@
 @import "var.less";
 
 .c1 {
-	// @media screen and (max-width:737px) {
-	// 	background: none;
-	// 	min-height: auto;
-	// 	margin: 0;
-	// }
-	// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0221/c1-d.png") no-repeat top center;
-	// background-size: cover;
+	@media screen and (max-width:737px) {
+		background: none;
+		min-height: auto;
+		margin: 0;
+	}
+	background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0307/v2/c1-d.png") no-repeat top center;
+	background-size: cover;
 	min-height: 500px;
 	margin-bottom: 14px;
 	color: #fff;
@@ -29,60 +29,19 @@
 	}
 
 	div {
-		// @media screen and (max-width:737px) {
-		// 	width: 100%;
-		// 	float: none;
-		// 	margin: 0;
-		// 	padding: 0;
-		// 	text-align: center;
-		// }
+		@media screen and (max-width:737px) {
+			width: 100%;
+			float: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
 		// overflow: hidden;
-		// margin: 191px 37px 0;
+		margin: 191px 37px 0;
 		box-sizing: border-box;
 		padding: 0;
-		background-size: cover;
-		height: 500px;
-		// width: 200px;
-		// float: right;
-		&.first {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0307/test/c1-d.png") no-repeat top center;
-
-			.ref {
-				top: -35px;
-			}
-
-			.cta {
-				top: 354px;
-				left: 691px;
-				width: 250px;
-			}
-		}
-
-		&.second {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0221/test/c1-2nd-d.png") no-repeat top center;
-
-			.ref {
-				top: 465px;
-			}
-
-			.cta {
-				top: 295px;
-				left: 740px;
-			}
-		}
-
-		&.third {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0221/test/c1-3rd-d.png") no-repeat top center;
-
-			.ref {
-				top: 965px;
-			}
-
-			.cta {
-				top: 354px;
-				left: 60px;
-			}
-		}
+		width: 200px;
+		float: right;
 
 		.text {
 			margin-top: 146px;
@@ -99,10 +58,10 @@
 		}
 
 		h2 {
-			// @media screen and (max-width:737px) {
-			// 	color: #7a7a7c;
-			// 	display: inline;
-			// }
+			@media screen and (max-width:737px) {
+				color: #7a7a7c;
+				display: inline;
+			}
 			font-size: 60px;
 			font-family: brown-pro-bold;
 			line-height: 60px;
@@ -118,20 +77,20 @@
 		}
 
 		p {
-			// @media screen and (max-width:737px) {
-			// 	color: #666;
-			// 	margin: 0;
-			// 	line-height: 18px;
-			// 	//left: -2px;
-			// 	top: -10px;
-			// 	position: relative;
-			// 	padding: 0;
-			// 	text-align: center;
-			// 	font-size: 0.9em;
-			// 	line-height: 18px;
-			// 	font-family: brown-pro-regular;
-			// 	letter-spacing: 0.1px;
-			// }
+			@media screen and (max-width:737px) {
+				color: #666;
+				margin: 0;
+				line-height: 18px;
+				//left: -2px;
+				top: -10px;
+				position: relative;
+				padding: 0;
+				text-align: center;
+				font-size: 0.9em;
+				line-height: 18px;
+				font-family: brown-pro-regular;
+				letter-spacing: 0.1px;
+			}
 			font-size: 21px;
 			line-height: 26px;
 			text-align: left;
@@ -141,50 +100,50 @@
 		}
 
 		.cta {
-			// @media screen and (max-width:737px) {
-			// 	float: none;
-			// 	//.tween
-			// 	&.tween {
-			// 		width: 88%;
-			// 		margin: 0 auto 20px !important;
-			// 		left: 0;
-			// 		display: block !important;
-			// 	}
-			// 	//2cta full width
-			// 	/*
-			// 	width:88%;
-			// 	border:1px solid @hp-font-color;
-			// 	margin:49px 0 0 0;
-			//
-			// 	&.cta2 {
-			// 		margin:13px 0 0 0;
-			// 	}
-			// 	*/
-			// 	//2 cta
-			// 	width: 42%;
-			// 	left: 6px;
-			// 	margin: 0 3% 15px 0;
-			// 	color: @hp-font-color;
-			// 	border-color: @hp-font-color;
-			// 	border: 1px solid @hp-font-color;
-			// 	padding: 6px 0 0;
-			// 	top: 0;
-			// 	height: 30px;
-			//
-			// 	&.cta3,
-			// 	&.cta4 {
-			// 		left: 0;
-			// 		//margin: 0 3% 1px 0;
-			// 	}
-			// 	//moved ctas around and 2nd cta full width
-			// 	/*
-			// 		&.cta2 {
-			// 			margin: 14px auto 0 auto;
-			// 			width: 88%;
-			// 			left: 0;
-			// 		}
-			// 		*/
-			// }
+			@media screen and (max-width:737px) {
+				float: none;
+				//.tween
+				&.tween {
+					width: 88%;
+					margin: 0 auto 20px !important;
+					left: 0;
+					display: block !important;
+				}
+				//2cta full width
+				/*
+				width:88%;
+				border:1px solid @hp-font-color;
+				margin:49px 0 0 0;
+
+				&.cta2 {
+					margin:13px 0 0 0;
+				}
+				*/
+				//2 cta
+				width: 42%;
+				left: 6px;
+				margin: 0 3% 15px 0;
+				color: @hp-font-color;
+				border-color: @hp-font-color;
+				border: 1px solid @hp-font-color;
+				padding: 6px 0 0;
+				top: 0;
+				height: 30px;
+
+				&.cta3,
+				&.cta4 {
+					left: 0;
+					//margin: 0 3% 1px 0;
+				}
+				//moved ctas around and 2nd cta full width
+				/*
+    			&.cta2 {
+    				margin: 14px auto 0 auto;
+    				width: 88%;
+    				left: 0;
+    			}
+    			*/
+			}
 			color: #fff;
 			margin: 0 0 19px;
 			border: 2px solid #fff;
@@ -193,21 +152,21 @@
 			padding: 11px 0 0;
 			letter-spacing: 1px;
 			float: none;
-			display: block;
-			position: relative;
-			// &:nth-of-type(6) {
-			// 	// @media screen and (max-width:737px) {
-			// 	// 	//margin-right: 0;
-			// 	// }
-			// 	margin: 0;
-			// }
+
+			&:nth-of-type(6) {
+				@media screen and (max-width:737px) {
+					//margin-right: 0;
+				}
+				margin: 0;
+			}
+
 			&:active,
 			&:hover {
-				// @media screen and (max-width:737px) {
-				// 	// background: #6cb89a;
-				// 	// border: 1px solid #6cb89a;
-				// 	// color: #fff;
-				// }
+				@media screen and (max-width:737px) {
+					// background: #6cb89a;
+					// border: 1px solid #6cb89a;
+					// color: #fff;
+				}
 				background: #fff;
 				color: @hp-font-color;
 				border: 2px solid #fff;
