@@ -1,0 +1,34 @@
+<!-- start babylist -->
+<a href="#" class="babylist">Add to Babylist</a>
+
+{literal}
+<style>
+	include "../css/styles.css"
+</style>
+
+<script>
+jQuery(document).ready(function(e){
+  var url = window.location.href;
+{/literal}
+  var images = '{$html_url}{image type=id id=$file_id size=normal}';
+  var price = '{$store_price|string_format:"%.2f"}';
+  var title = '{$brand} {$model}';
+  //console.log('babylist info');
+  //console.log(url, images, price, title);
+{literal}
+  jQuery('.babylist').click(function(e){
+    e.preventDefault();
+  	bl.addToRegistry({
+  		images: images,
+  		price: price,
+  		title: title,
+  		url: url
+  	});
+  });
+});
+</script>
+{/literal}
+
+<script type="text/javascript">window._bl = {literal} { partner: 'https://www.teacollection.com/' } {/literal};</script>
+<script async type="text/javascript" src="https://babylist.com/add.js"></script>
+  <!-- end babylist -->
