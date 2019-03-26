@@ -81,7 +81,7 @@
         if (day >= 23) {
           $('.holiday-closure').hide();
         } else if (day <= 22) {
-          message = '<h3>Thanksgiving Day ' + month + '/22/' + year + '</h3>';
+          message = '<h3>Thanksgiving Day ' + month + '/28/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -94,7 +94,7 @@
 
         if (day >= 1) {
           year = year + 1;
-          message = '<ul><li>Christmas Day ' + month + '/25</li><li>New Years Day 1/1/' + year + '</li></ul>';
+          message = '<ul><li>Christmas Eve ' + month + '/24</li><li>New Years Day 1/1/' + year + '</li></ul>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -125,17 +125,17 @@
         if (day <= 16) {
           $('.holiday-closure').hide();
         } else if (day >= 17) {
-          message = '<h3>Easter ' + month + '/1/' + year + '</h3>';
+          message = '<h3>Easter ' + month + '/21/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
         break;
         //april
       case 4:
-        if (day >= 3) {
+        if (day >= 21) {
           $('.holiday-closure').hide();
-        } else if (day <= 2) {
-          message = '<h3>Easter ' + month + '/1/' + year + '</h3>';
+        } else if (day <= 21) {
+          message = '<h3>Easter ' + month + '/21/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -145,7 +145,7 @@
         if (day <= 15) {
           $('.holiday-closure').hide();
         } else if (day >= 16) {
-          message = '<h3>Memorial Day ' + month + '/28/' + year + '</h3>';
+          message = '<h3>Memorial Day ' + month + '/27/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -177,7 +177,7 @@
           $('.holiday-closure').hide();
         } else if (day >= 16) {
           var month = month + 1;
-          message = '<h3>Labor Day ' + month + '/3/' + year + '</h3>';
+          message = '<h3>Labor Day ' + month + '/2/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -187,7 +187,7 @@
         if (day >= 5) {
           $('.holiday-closure').hide();
         } else if (day <= 4) {
-          message = '<h3>Labor Day ' + month + '/3/' + year + '</h3>';
+          message = '<h3>Labor Day ' + month + '/2/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
