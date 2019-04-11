@@ -7,6 +7,16 @@ module.exports = function(grunt) {
       compress: true,
     },
 
+    // MEGA MENU CSS ---------------------------------------------------------------------------
+    megaCSS: {
+
+      expand: true,
+      cwd: 'mega-menu/css/',
+      src: '*.less',
+      dest: 'mega-menu/css/',
+      ext: '.css',
+    },
+
     // GLOBAL CSS ---------------------------------------------------------------------------
     globalCSS: {
 

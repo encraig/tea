@@ -20,6 +20,20 @@ module.exports = function(grunt) {
 
     },
 
+    // MEGA MENU  ---------------------------------------------------------------------------
+    megaIncludes: {
+
+      files: [
+        //toolkit
+        {
+          cwd: 'mega-menu/dev/',
+          src: ['*.html'],
+          dest: 'mega-menu/toolkit/',
+        },
+      ],
+
+    },
+
     // GLOBAL  ---------------------------------------------------------------------------
     globalIncludes: {
 

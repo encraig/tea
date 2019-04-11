@@ -5,6 +5,12 @@ module.exports = function(grunt) {
       livereload: true
     },
 
+    // MEGA MENU ---------------------------------------------------------------------------
+    MegaMenu: {
+      files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html'],
+      tasks: ['less:megaCSS', 'includes:megaIncludes'],
+    },
+
     // GLOBAL ---------------------------------------------------------------------------
     Global: {
       files: ['global/<%= global.name %>/css/*.less', 'global/<%= global.name %>/js/*.js', 'global/<%= global.name %>/html/*.html'],
