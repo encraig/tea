@@ -1,0 +1,323 @@
+.midbox,
+.my-account {
+	h1 {
+		display: none;
+	}
+}
+
+#breadcrumbs,
+.breadcrumb {
+	display: none;
+}
+
+.padded {
+	padding: 0 !important;
+}
+
+.wrap-content {
+	overflow: hidden;
+
+	img {
+		max-width: 100%;
+	}
+}
+//end of .wrap-content
+
+div[data="form"] {
+	@media screen and(max-width:737px) {
+		width: 100%;
+		margin-top: 0;
+		padding-left: 0;
+		float: none;
+	}
+	/*tablet*/
+	@media screen and(min-width:767px) and (max-width:769px) {
+		float: none;
+		width: 100%;
+	}
+	float: left;
+	width: 483px;
+	margin-top: 50px;
+	box-sizing: border-box;
+
+	.c1 {
+		@media screen and (max-width:737px) {
+			height: auto;
+			padding-left: 0;
+			background-position: -0.1em 0;
+			text-align: center;
+			background-size: contain;
+		}
+
+		img {
+			&.mobile {
+				margin: 0;
+			}
+
+			&.desktop {
+				/*tablet*/
+				@media screen and(min-width:767px) and (max-width:769px) {
+					display: block;
+				}
+				left: 48px;
+				position: relative;
+
+				&.partners {
+					margin-top: 10px;
+				}
+			}
+
+			&.babies {
+				margin: 0;
+			}
+		}
+
+		p {
+			@media screen and (max-width:737px) {
+				padding: 0 6%;
+				text-align: center;
+				margin: 15px 0 0;
+				font-size: 0.9em;
+				line-height: 18px;
+				left: 0;
+				top: 0;
+			}
+			font-size: 13px;
+			letter-spacing: 0.4px;
+			line-height: 21px;
+			position: relative;
+			left: 47px;
+			top: -8px;
+
+			&.rules {
+				top: 0;
+				margin: 20px 0;
+
+				a {
+					color: #666;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.cta {
+			@media screen and (max-width:737px) {
+				margin: 17px auto 0;
+				height: 30px;
+				left: 0;
+				top: 0;
+				padding: 5px 0 0;
+			}
+			position: relative;
+			left: 49px;
+			top: 6px;
+			margin: 0;
+			padding: 9px 0 0;
+			letter-spacing: 0.7px;
+
+			&:first-of-type {
+				margin-right: 10px;
+			}
+		}
+
+		.dots {
+			&.mobile {
+				margin: 0;
+				top: 0;
+				left: 0;
+			}
+			position: relative;
+			top: 7px;
+			left: 48px;
+		}
+	}
+
+	.cta {
+		color: #fff;
+		background: #97ccd4;
+		border-color: #97ccd4;
+
+		&:hover {
+			background: #fff;
+			color: #97ccd4;
+		}
+	}
+
+	form {
+		@media screen and (max-width:737px) {
+			margin: 0;
+			padding: 0 0 0 15%;
+		}
+		/*tablet*/
+		@media screen and(min-width:767px) and (max-width:769px) {
+			margin-top: 10px;
+		}
+		padding: 0 0 0 48px;
+		margin-top: 2px;
+
+		.error-mess {
+			color: red;
+			font-weight: bold;
+			display: none;
+		}
+
+		input {
+			@media screen and (max-width:737px) {
+				width: 83%;
+				padding: 7px 0 7px 3%;
+				margin: 0 0 15px;
+			}
+			display: block;
+			width: 301px;
+			margin-bottom: 17px;
+			padding: 9px 0 9px 13px;
+			box-sizing: border-box;
+			border: 1px solid;
+			outline: none;
+			color: lightslategrey;
+			border-radius: 0;
+
+			&[placeholder="Zip Code*"] {
+				@media screen and (max-width:737px) {
+					margin: 0 0 11px;
+				}
+				margin: 0 0 14px;
+			}
+
+			&::placeholder {
+				@media screen and (max-width:737px) {
+					//text-align:center;
+					//font-size:2em;
+				}
+				color: lightslategrey;
+			}
+
+			&[type="checkbox"] {
+				display: none;
+
+				&:checked ~ .the-checkbox {
+					//background:red;
+				}
+			}
+		}
+
+		.the-checkbox {
+			border: 1px solid;
+			width: 13px;
+			height: 13px;
+			position: absolute;
+			top: 1px;
+			left: -1px;
+		}
+
+		label {
+			&.how {
+				@media screen and (max-width:737px) {
+					font-size: 1em;
+					letter-spacing: 0.2px;
+					margin: 0 0 3px;
+				}
+				font-family: brown-pro-italic !important;
+				letter-spacing: 0.8px;
+				display: block;
+				margin: 0 0 7px;
+			}
+			font-size: 14px;
+		}
+
+		p {
+			&[name="official-rules"] {
+				@media screen and (max-width:737px) {
+					font-size: 0.9em;
+					padding: 0 0 0 9%;
+					line-height: 22px;
+				}
+				position: relative;
+				padding: 0 0 0 25px;
+				letter-spacing: 0.8px;
+				line-height: 21px;
+
+				.req-message {
+					@media screen and (max-width:737px) {
+						font-size: 0.8em;
+						margin: 6px 0 0 20%;
+						padding: 0;
+					}
+					display: block;
+					font-size: 10px;
+					margin: 10px 0 0;
+					letter-spacing: 1px;
+					padding: 0 0 0 3px;
+				}
+			}
+			font-size: 14px;
+		}
+
+		a {
+			@media screen and (max-width:737px) {
+				text-decoration: underline;
+			}
+			color: #444444;
+		}
+
+		#enter {
+			@media screen and (max-width:737px) {
+				margin: 12px 0 0 16%;
+				height: 30px;
+				top: 0;
+				width: 50%;
+			}
+			margin: 0;
+			position: relative;
+			top: 17px;
+			padding: 0;
+		}
+	}
+
+	img {
+		&.partners {
+			margin: 0;
+		}
+	}
+}
+// end of forms div
+
+div[data="pics"] {
+	@media screen and (max-width:737px) {
+		display: none;
+	}
+	/*tablet*/
+	@media screen and(min-width:767px) and (max-width:769px) {
+		float: none;
+		width: 100%;
+	}
+	float: left;
+	width: 517px;
+
+	img {
+		&:first-of-type {
+			margin: 48px 0 0;
+			position: relative;
+			left: 47px;
+		}
+
+		&:last-of-type {
+			margin: -5px 0 0;
+		}
+	}
+}
+//end of pics div
+
+#view-prizes {
+	@media screen and (max-width:737px) {
+		width: 100%;
+	}
+	clear: both;
+	width: 775px;
+	display: none;
+
+	img {
+		max-width: 100%;
+	}
+}
+//end of #view-prizes div
