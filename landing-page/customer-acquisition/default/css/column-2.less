@@ -6,6 +6,12 @@
 	margin: 44px 0 0;
 
 	div {
+		/* tablet */
+		@media screen and (min-width:767px) and (max-width:769px) {
+			width: 768px;
+			height: 505px;
+			margin: 0 0 14px;
+		}
 		@media screen and (max-width:737px) {
 			float: none;
 			margin: 0 0 41px;
@@ -66,10 +72,14 @@
 
 		&:first-of-type,
 		&:last-of-type {
+			/* tablet */
+			@media screen and (min-width:767px) and (max-width:769px) {
+				background-size: contain !important;
+			}
 			@media screen and (max-width:737px) {
 				background: none;
 			}
-			// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0221/c5-d.png") no-repeat;
+			// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c5-d.png") no-repeat;
 			background-size: cover !important;
 
 			.grey-box {
@@ -131,24 +141,24 @@
 			@media screen and (max-width:737px) {
 				background: none;
 			}
-			// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0221/c6-d.png") no-repeat;
+			// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c6-d.png") no-repeat;
 			background-size: cover !important;
 			margin: 0;
 
 			h2 {
-				margin: 87px 0 2px;
+				margin: 110px 0 2px;
 			}
 
 			a {
 				@media screen and (max-width:737px) {}
-				margin: 25px auto;
+				margin: 21px auto;
 
 				&:first-of-type {
 					left: -8px;
 				}
 
 				&:last-of-type {
-					left: 10px;
+					left: 0;
 				}
 			}
 		}

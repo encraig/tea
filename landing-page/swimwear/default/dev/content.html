@@ -1,13 +1,11 @@
 <!-- dev styles css -->
 <!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
 
-<!-- <img src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0117/swim-ref-m.png" class="ref" /> -->
+<!-- <img src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0404/v2/swim-ref-m.png" class="ref" /> -->
 
 <div class="swim-container">
-  <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0117/swim-d.png" alt="the swim shop" />
-
-  <!-- <p class="mobile">Little explorers dive into playful winter prints that<br> inspire family fun for adventures both near and far.</p> -->
-  <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0117/swim-m.png" alt="the swim shop" style="position:relative; top:-1px;" />
+  <img class="desktop" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0404/v2/swim-d.png" alt="the swim shop" />
+  <img class="mobile" src="/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0404/v2/swim-m.png" alt="the swim shop" style="position:relative; top:-1px;" />
 </div>
 
 <!--toolkit-->
@@ -37,49 +35,52 @@
     console.log('add the content cell');
     var swimCells = [{
         num: 4,
-        alt: 'tiger prints',
+        alt: 'beautiful handmade original patterns',
         ext: '.gif'
       },
       {
         num: 12,
         alt: 'girl',
-        ext: '.jpg'
+        ext: '.png'
       },
       {
         num: 17,
         alt: 'boy',
-        ext: '.jpg'
+        ext: '.png'
       },
       {
         num: 22,
         alt: 'baby girl',
-        ext: '.jpg'
+        ext: '.png'
       },
       {
         num: 30,
         alt: 'baby boy',
-        ext: '.jpg'
+        ext: '.png'
       },
     ];
+
+    //remove all the content cells
+    $('#infinite section.content-cell, #infinite div.content-cell').remove();
 
     $.each(swimCells, function(i, val) {
       var elem;
       //desktop
       if ($(window).width() > 737) {
-        elem = '<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0117/s' + val.num + val.ext + '" alt="' + val.alt +
+        elem = '<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0404/v2/s-' + val.num + val.ext + '" alt="' + val.alt +
           '" style="max-width:100%;"></section>';
         $('#infinite section.item').eq(val.num - 1).before(elem);
       }
       //mobile
       else {
-        elem = '<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0117/s' + val.num + val.ext + '" alt="' + val.alt +
+        elem = '<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/swimwear/2019/0404/v2/s-' + val.num + val.ext + '" alt="' + val.alt +
           '" style="max-width:100%;"></div>';
         $('#infinite div.single-item-box').eq(val.num - 1).before(elem);
       }
 
     });
 
-    include "../../../../global/js/scripts.js"
+    include "../../../../global/dev/js/scripts.js"
 
   };
 

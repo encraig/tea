@@ -2,21 +2,12 @@
 <!-- <link rel="stylesheet" type="text/css" href="../css/baby-girl-clothes.css"> -->
 
 <!-- ref image -->
-<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-bg-m.png"  /> -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/v3/bg-bg-m.png"  /> -->
 
 <div class="dept-cat">
-
 	<!-- <h3 class="mobile title">baby girl</h3> -->
-
-	<!-- <picture>
-		<source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-d.png">
-		<source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-m.png">
-		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-m.png" />
-	</picture> -->
-
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-d.png" />
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-m.png" />
-
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/v3/bg-d.png" />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/v3/bg-m.png" />
 </div>
 
 <!-- toolkit-->
@@ -26,27 +17,27 @@
 
 <!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 <script>
-	var dpSrc = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/bg-cell.jpg?nocache=1';
+	var dpSrc = 'https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/v3/bg-cell.jpg';
 
-	var dpAlt = 'It’s a world of wonder for the littlest citizens, and every day is a new adventure. She’s curious. She loves to explore. And she has wide-eyed enthusiasm for every experience.';
+	var dpAlt = 'Wrap baby girl in soft and adorable looks available in sizes 0-3M thru 4T';
 
 	//function to call from flex field
 	var addCell = function(src, alt) {
 		console.log('add the content cell');
 
 		if ($(window).width() > 737) {
-			var elem2 = $(
-				'<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></section>'
-			);
-			$('#infinite').prepend(elem2);
+			// var elem2 = $(
+			// 	'<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></section>'
+			// );
+			// $('#infinite').prepend(elem2);
 		} else {
-			// var elem1 = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
-			// $('#infinite .single-item-box:nth-of-type(2)').after(elem1);
+			var elem1 = $('<div class="single-item-box content-cell"><img src="' + src + '" alt="' + alt + '" style="max-width:100%"></div>');
+			$('#infinite .single-item-box:nth-of-type(2)').after(elem1);
 
-			var elem2 = $(
-				'<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></div>'
-			);
-			$('#infinite').prepend(elem2);
+			// var elem2 = $(
+			// 	'<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/category-pages/2019/0304/more-sizes/more-sizes-bg-cell.png" alt="more choices baby girl sizes up to 4T are back in spring arrivals." style="max-width:100%"></div>'
+			// );
+			// $('#infinite').prepend(elem2);
 		}
 
 		//content-cell click

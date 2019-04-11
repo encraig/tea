@@ -1,0 +1,97 @@
+<!-- dev styles css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+
+<!-- ref image -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/tee-shop/2019/0404/v2/bg-m.png" alt="" /> -->
+
+<div class="new-arrivals-container">
+  <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/new-arrivals/2019/0404/v2/new-arrivals-d.png" alt="" />
+  <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/new-arrivals/2019/0404/v2/new-arrivals-m.png" alt="" />
+</div>
+
+<!--toolkit-->
+<style>
+  .midbox h1,.my-account h1{display:none}@media screen and (max-width:737px){.sidebar.customer-service{display:none}}.heading-category{font-family:brown-pro-bold !important;font-weight:normal !important}.main-content{float:left;width:840px;margin-top:0 !important}@media screen and (max-width:737px){.main-content{float:none;width:100%}}.padded{padding:0 !important}@media screen and (max-width:737px){.new-arrivals-container{margin:-4px 0 23px}}.new-arrivals-container img{max-width:100%}/*# sourceMappingURL=landing-page/new-arrivals/default/css/styles.css.map */
+  .ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .heading-category{font-family:brown-pro-bold}.cta{display:inline-block;font-family:brown-pro-bold !important;border:1px solid;width:200px;position:relative;font-size:13px;line-height:16px;height:39px;letter-spacing:.2px;text-transform:uppercase;text-decoration:none;padding:12px 0 0;text-align:center;box-sizing:border-box}@media screen and (max-width:737px){.cta{width:42%;left:0;padding:1em 0;font-size:.8em}}@media screen and (max-width:415px){.cta{font-size:.8em;letter-spacing:1.1px}}@media screen and (max-width:376px){.cta{font-size:.7em}}@media screen and (max-width:321px){.cta{font-size:.6em}}/*# sourceMappingURL=global/dev/css/styles.css.map */
+</style>
+
+<!-- dev -->
+<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- prod -->
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+
+
+<script>
+  // var dpSrc = null;
+  // var dpAlt = null;
+  //
+  // //function to call from flex field
+  // var addCell = function(src, alt) {
+  //   console.log('add the content cell');
+  //   var teeCells = [{
+  //     num: 4,
+  //     alt: 'bowl of pho graphic',
+  //     ext: '.gif'
+  //   }];
+  //
+  //   $.each(teeCells, function(i, val) {
+  //     var elem;
+  //     //desktop
+  //     if ($(window).width() > 737) {
+  //       elem = '<section class="item content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/tee-shop/2019/0404/v2/t' + val.num + val.ext + '" alt="' + val.alt +
+  //         '" style="max-width:100%;"></section>';
+  //       $('#infinite section.item').eq(val.num - 1).before(elem);
+  //     }
+  //     //mobile
+  //     else {
+  //       elem = '<div class="single-item-box content-cell"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/tee-shop/2019/0404/v2/t' + val.num + val.ext + '" alt="' + val.alt +
+  //         '" style="max-width:100%;"></div>';
+  //       $('#infinite div.single-item-box').eq(val.num - 1).before(elem);
+  //     }
+  //
+  //   });
+  //
+  //   include "../../../../global/js/scripts.js"
+  //
+  // };
+  $(document).ready(function() {
+    //add tracking code
+    $('a, area').attr('data-page', 'new arrivals landing page');
+
+    // jQuery('img[usemap]').rwdImageMaps();
+
+    var alt = "new arrivals";
+
+    $('.new-arrivals-container img').attr('alt', alt);
+
+    var leftNav = $('.dept-new-arrivals section');
+
+    $.each(leftNav, function(i, val) {
+      var a = $(val).find('a').text();
+      switch (a) {
+        case 'Tween':
+          $(val).find('a').attr('href', '/tween-girls-clothing/favorites/new-arrivals');
+          break;
+        case 'Girl':
+          $(val).find('a').attr('href', '/girls-clothing/new-arrivals');
+          break;
+        case 'Boy':
+          $(val).find('a').attr('href', '/boys-clothing/new-arrivals');
+          break;
+        case 'Baby Girl':
+          $(val).find('a').attr('href', '/baby-girl-clothes/new-arrivals');
+          break;
+        case 'Baby Boy':
+          $(val).find('a').attr('href', '/baby-boy-clothes/new-arrivals');
+          break;
+      }
+    });
+
+  });
+</script>

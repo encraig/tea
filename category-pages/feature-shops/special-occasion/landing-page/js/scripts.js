@@ -50,8 +50,8 @@ var addCell = function(dpSrc, dpAlt) {
     //desktop
     if ($(window).width() > 737) {
 
-      elem = '<section class="item content-cell" data-sku="' + val.sku + '"><picture><img src="' + url + val.num + val.ext + '" alt="' + val.alt +
-        '" style="max-width:100%;"></picture></section>';
+      elem = '<section class="item content-cell" data-sku="' + val.sku + '"><img src="' + url + val.num + val.ext + '" alt="' + val.alt +
+        '" style="max-width:100%;"></section>';
       $('#infinite section.item').eq(val.num - 1).before(elem);
     }
     //mobile
@@ -90,28 +90,34 @@ jQuery(document).ready(function() {
 
     $.each(leftNav, function(i, val) {
       var h2 = $(val).find('h2');
-      var text = h2.text().replace(/\r?\n/g, '');
+      // var text = h2.text().replace(/\r?\n/g, '');
+      var text = h2.text();
       // console.log(text);
 
       switch (text) {
-        case 'Girl':
-          h2.html('<h2><a href="">' + text + '</a></h2>');
+        case ' Girl ':
+          // console.log('match');
+          // h2.html('<h2><a href="">' + text + '</a></h2>');
           h2.find('a').attr('href', '/girls-clothing/favorites/special-occasion');
           break;
-        case 'Tween':
-          h2.html('<h2><a href="">' + text + '</a></h2>');
+        case ' Tween ':
+          // console.log('match');
+          // h2.html('<h2><a href="">' + text + '</a></h2>');
           h2.find('a').attr('href', '/tween-girls-clothing/favorites/special-occasion');
           break;
-        case 'Boy':
-          h2.html('<h2><a href="">' + text + '</a></h2>');
+        case ' Boy ':
+          // console.log('match');
+          // h2.html('<h2><a href="">' + text + '</a></h2>');
           h2.find('a').attr('href', '/boys-clothing/favorites/special-occasion');
           break;
-        case 'Baby Girl':
-          h2.html('<h2><a href="">' + text + '</a></h2>');
+        case ' Baby Girl ':
+          // console.log('match');
+          // h2.html('<h2><a href="">' + text + '</a></h2>');
           h2.find('a').attr('href', '/baby-girl-clothes/favorites/special-occasion');
           break;
-        case 'Baby Boy':
-          h2.html('<h2><a href="">' + text + '</a></h2>');
+        case ' Baby Boy ':
+          // console.log('match');
+          // h2.html('<h2><a href="">' + text + '</a></h2>');
           h2.find('a').attr('href', '/baby-boy-clothes/favorites/special-occasion');
           break;
       }

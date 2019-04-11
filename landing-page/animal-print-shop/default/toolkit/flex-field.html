@@ -2,7 +2,8 @@
 <script>
 	var changeCSS = function() {
 		var pathName = window.location.pathname;
-		//check if landing page then add class
+		check
+		if landing page then add class
 		if (pathName == '/animal-print-shop') {
 			$('body.browse article.main-content').css({
 				float: 'none',
@@ -38,13 +39,13 @@
 				console.log('no addCell function');
 			}
 			//call changeCSS
-			changeCSS();
+			// changeCSS();
 		}
 
 		//because of pdp lazyload call changeCSS
-		if (s.url == '/?page=category&id=unisex') {
-			changeCSS();
-		}
+		// if (s.url == '/?page=category&id=unisex') {
+		// changeCSS();
+		// }
 
 	});
 </script>

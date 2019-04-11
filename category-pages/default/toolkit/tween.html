@@ -1,21 +1,12 @@
 <div class="tween-container">
-	<!--desktop-->
-	<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-d.png" alt="tween" style="max-width:100%; margin-bottom: 10px;" class="desktop" /> -->
-	<!-- 
-	<picture>
-		<source media="(min-width: 738px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-d.png">
-		<source media="(max-width: 737px)" srcset="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-m.png">
-		<img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-m.png" />
-	</picture> -->
-
-	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-d.png" />
-	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-m.png" />
-
+	<img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/tween/t-d.png" />
+	<img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/tween/t-m.png" />
 </div>
+
 <!-- toolkit -->
 <style>
 	.ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.ref{top:-123px}}.heading-category{font-family:brown-pro-bold !important}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .breadcrumb-c{padding-top:13px}@media screen and (max-width:737px){.dept-girls-clothing{display:none}}.dept-cat{overflow:hidden}@media screen and (max-width:737px){.dept-cat{margin-bottom:2px}}.dept-cat .title{color:#333333;font-size:22px;font-weight:normal;padding:0 0 10px;text-align:center;text-transform:uppercase}.dept-cat picture{max-width:100%}.dept-cat img{max-width:100%;float:none;display:block;margin:0}@media screen and (max-width:737px){.dept-cat img{margin:0 0 20px}}/*# sourceMappingURL=category-pages/default/css/girls-clothing.css.map */
-	.single-item-box img{max-width:100%}.content-cell:hover{cursor:pointer}@media screen and (max-width:737px){.tween-container{margin:0 0 20px}}.tween-container img,.tween-container picture{max-width:100%}/*# sourceMappingURL=category-pages/default/css/tween.css.map */
+	.single-item-box img{max-width:100%}@media screen and (max-width:737px){.tween-container{margin:0 0 20px}}.tween-container img,.tween-container picture{max-width:100%}/*# sourceMappingURL=category-pages/default/css/tween.css.map */
 </style>
 
 <script>
@@ -28,32 +19,56 @@
 
 		console.log('add the content cell');
 		var tweenCells = [{
-				num: 1,
-				alt: 'inspired by the 700-year-old tradition of Vietnamese hand embroidery',
-				ext: '.png',
+				num: 7,
+				alt: 'sandwich graphic',
+				ext: '.gif',
 				sku: '',
 			},
 			{
-				num: 6,
-				alt: 'sparkle & shine in metallic print',
+				num: 12,
+				alt: 'captures he majestic islands of Southeast Asia',
+				ext: '.png',
+				sku: ''
+			},
+			{
+				num: 18,
+				alt: 'faces graphic',
 				ext: '.gif',
 				sku: ''
 			},
 			{
-				num: 10,
-				alt: 'the lotus is the national flower of Vietname',
+				num: 24,
+				alt: 'features sparkly gold metalic print',
 				ext: '.png',
 				sku: ''
 			},
 			{
-				num: 21,
-				alt: 'tiger print',
-				ext: '.jpg',
+				num: 25,
+				alt: 'inspired by the  700-year-old tradition of Vietnamese hand embroidery',
+				ext: '.png',
 				sku: ''
 			},
 			{
-				num: 49,
-				alt: 'cat print',
+				num: 30,
+				alt: 'sparkly & shine in metallic print',
+				ext: '.gif',
+				sku: ''
+			},
+			{
+				num: 34,
+				alt: 'the lotus is the national flower of Vietnam',
+				ext: '.png',
+				sku: ''
+			},
+			{
+				num: 45,
+				alt: 'tigers graphic',
+				ext: '.png',
+				sku: ''
+			},
+			{
+				num: 73,
+				alt: 'cat graphic',
 				ext: '.gif',
 				sku: ''
 			},
@@ -69,14 +84,14 @@
 			//desktop
 			if ($(window).width() > 737) {
 
-				elem = '<section class="item content-cell" data-sku="' + val.sku + '"><picture><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-' + val.num + val.ext + '" alt="' + val.alt +
-					'" style="max-width:100%;"></picture></section>';
+				elem = '<section class="item content-cell" data-sku="' + val.sku + '"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/tween/tween-' + val.num + val.ext + '" alt="' + val.alt +
+					'" style="max-width:100%;"></section>';
 				$('#infinite section.item').eq(val.num - 1).before(elem);
 			}
 			//mobile
 			else {
 
-				elem = '<div class="single-item-box content-cell" data-sku="' + val.sku + '"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0221/tween-' + val.num + val.ext + '" alt="' + val.alt +
+				elem = '<div class="single-item-box content-cell" data-sku="' + val.sku + '"><img src="https://www.teacollection.com/mas_assets/media/tea_collection/dept-pages/2019/0404/tween/tween-' + val.num + val.ext + '" alt="' + val.alt +
 					'" style="max-width:100%;"></div>';
 				$('#infinite div.single-item-box').eq(val.num - 1).before(elem);
 			}

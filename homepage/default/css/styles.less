@@ -2,6 +2,7 @@
 
 .hp {
 	overflow: hidden;
+	visibility: hidden;
 	// display: flex;
 	// flex-wrap: wrap;
 }
@@ -12,7 +13,11 @@
 .c5,
 .c6,
 .c7,
-.c8 {
+.c8,
+.first,
+.fourth,
+.second,
+.third {
 	/* tablet */
 	@media screen and (min-width:767px) and (max-width:769px) {
 		position: relative;
@@ -28,22 +33,14 @@
 		min-height: 450px;
 		// flex-basis: 100% !important;
 	}
-	//overflow:hidden;
 	position: relative;
-	//opacity:.5;
 	float: left;
 	width: 324px;
-	min-height: 497px;
-	// flex-basis: 326px;
 	margin-right: 14px;
 	text-align: center;
-	margin-bottom: 36px;
+	margin-bottom: 46px;
 
 	div {
-		picture {
-			max-width: 100%;
-		}
-
 		img {
 			@media screen and (max-width: 737px) {
 				margin-bottom: 35px;
@@ -96,6 +93,15 @@
 			}
 		}
 	}
+}
+
+.c2,
+.c3,
+.c4 {
+	@media screen and (max-width:737px) {
+		margin-top: 0;
+	}
+	margin-top: 30px;
 }
 
 .c4,
