@@ -1,0 +1,15 @@
+{literal}
+<script>
+$(document).ready(function(){
+  var url = window.location.href;
+
+  //check if pdp page or category pager
+  if(url.split('/')[3] == "product"){
+    include "../js/pdp-d.js"
+  }
+  else {
+    include "../js/not-pdp-d.js"
+  }
+});
+</script>
+{/literal}
