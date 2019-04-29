@@ -1,5 +1,5 @@
-@import "var.less";
-//hide breadcrumbs
+@import "var.less"; //hide breadcrumbs
+
 #breadcrumbs,
 .common-wrap {
 	display: none;
@@ -75,6 +75,16 @@
 			text-align: center;
 			margin: 63px 0 23px;
 			color: #666;
+
+			&.fine-print {
+				@media screen and (max-width:737px) {
+					font-size: 0.8em;
+				}
+				text-align: center;
+				width: 100%;
+				margin: 20px 0;
+				font-size: 12px;
+			}
 
 			span {
 				color: @color;
