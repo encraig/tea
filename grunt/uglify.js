@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   return {
     options: {
       compress: true,
-      sourceMap: true
+      // sourceMap: true
     },
 
     navRedesignScripts: {

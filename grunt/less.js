@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   return {
 
     options: {
-      sourceMap: true,
+      // sourceMap: true,
       compress: true,
     },
 
