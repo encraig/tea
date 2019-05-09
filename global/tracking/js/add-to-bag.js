@@ -1,5 +1,3 @@
-{literal}
-<script>
 $(document).ready(function() {
   //variables
   var url = window.location.href;
@@ -43,5 +41,3 @@ $(document).ready(function() {
   });
 
 });
-</script>
-{/literal}
