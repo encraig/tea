@@ -1,0 +1,26 @@
+<!-- dev css -->
+<!-- <link rel="stylesheet" type="text/css" href="../css/girls-clothing.css"> -->
+
+<!-- ref image -->
+<!-- <img class="mobile ref" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/summer-packing/0502/bg-g-m.png"  /> -->
+
+<div class="dept-cat">
+  <!-- <h3 class="mobile title">girl</h3> -->
+  <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/summer-packing/0502/b-d.png" />
+  <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/feature-shops/2019/summer-packing/0502/b-m.png" />
+</div>
+
+<!-- toolkit -->
+<style>
+  include "../css/styles.css"
+</style>
+
+<script>
+  $(document).ready(function() {
+    //add the alt
+    var alt = 'Summer Packing List from staycays to family getaways, we have new summer styles for him that\'ll make packing a breeze.';
+    $('.dept-cat img').attr('alt', alt);
+
+    $('.inline-header').text('Packing List');
+  });
+</script>
