@@ -14,6 +14,15 @@ module.exports = function(grunt) {
       ext: '.min.js',
     },
 
+    hpJS: {
+      //dynamic files
+      expand: true,
+      cwd: 'homepage/<%= hp.date %>/js',
+      src: ['*.js'],
+      dest: 'homepage/<%= hp.date %>/js/output/',
+      ext: '.min.js',
+    },
+
     globalJS: {
       //dynamic files
       expand: true,

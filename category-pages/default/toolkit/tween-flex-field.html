@@ -1,22 +1,22 @@
 {literal}
 <script>
 	$(document).ajaxComplete(function(e, x, s) {
-		console.log('ajax complete');
+		// console.log('ajax complete');
 		// console.log(e, x, s);
-		console.log(s.url);
+		// console.log(s.url);
 
 		if (s.url ==
 			"/?type=page&page=banner_ad&zone[]=sitewide_message&zone[]=mega_girl&zone[]=mega_boy&zone[]=mega_tween&zone[]=mega_baby_girl&zone[]=mega_baby_boy&zone[]=mega_newborn&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=mega_sale&zone[]=sitewide_banner&zone[]=category_pages&zone[]=category_footer&zone[]=global_css&zone[]=footer&request_page=category&request_page_id=tween-girls-clothing/favorites/new-arrivals" ||
 			s.url == "/?type=page&page=banner_ad&zone[]=sitewide_message_mobile&zone[]=sitewide_banner_mobile&zone[]=category_pages&zone[]=category_footer&request_page=category&request_page_id=tween-girls-clothing/favorites/new-arrivals" || s.url ==
 			"/?page=category&id=tween-girls-clothing/favorites/new-arrivals" || s.url == "https://www.teacollection.com/tween-girls-clothing/favorites/new-arrivals"
 		) {
-			console.log('execute from flex');
+			// console.log('execute from flex');
 			//check if addCell function is defined
 			if (typeof addCell == 'function') {
-				console.log('addCell function available');
+				// console.log('addCell function available');
 				addCell(dpSrc, dpAlt);
 			} else {
-				console.log('no addCell function');
+				// console.log('no addCell function');
 			}
 		}
 

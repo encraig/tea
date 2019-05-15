@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     // GLOBAL ---------------------------------------------------------------------------
     Global: {
-      files: ['global/<%= global.name %>/css/*.less', 'global/<%= global.name %>/js/*.js', 'global/<%= global.name %>/dev/*.html'],
+      files: ['global/<%= global.name %>/css/*.less', 'global/<%= global.name %>/js/*.js', 'global/<%= global.name %>/html/*.html'],
       tasks: ['less:globalCSS', 'uglify:globalJS', 'includes:globalIncludes'],
     },
 
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 
     // HOMEPAGE ---------------------------------------------------------------------------
     HP: {
-      files: ['homepage/<%= hp.date %>/css/*.less', 'homepage/<%= hp.date %>/dev/content.html'],
-      tasks: ['less:hpCSS', 'includes:hpIncludes', 'includes:buildIncludes', 'concat:hp'],
+      files: ['homepage/<%= hp.date %>/css/*.less', 'homepage/<%= hp.date %>/dev/content.html', 'homepage/<%= hp.date %>/js/*.js'],
+      tasks: ['less:hpCSS', 'uglify:hpJS', 'includes:hpIncludes', 'includes:buildIncludes', 'concat:hp'],
     },
 
     // CATEGORIES ---------------------------------------------------------------------------

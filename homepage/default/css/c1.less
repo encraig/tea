@@ -5,9 +5,19 @@
 .fourth,
 .second,
 .third {
+	h2 {
+		margin: 31px 0 0;
+		font-size: 1.6em;
+		font-weight: normal;
+		font-family: brown-pro-bold;
+		text-transform: capitalize;
+		color: #757F4C;
+	}
+
 	p {
-		margin: 31px 0 13px;
+		margin: 6px 0 10px;
 		font-size: 0.9em;
+		line-height: 17px;
 	}
 
 	.cta {
@@ -21,7 +31,7 @@
 	}
 }
 
-.first,
+.second,
 .third {
 	.cta {
 		@media screen and (max-width:737px) {
@@ -68,7 +78,7 @@
 		min-height: auto;
 		margin: 0;
 	}
-	// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0404/compress4/c1-d.png") no-repeat top center;
+	// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0502/v1/c1-d.png") no-repeat top center;
 	// background-size: cover;
 	min-height: 500px;
 	margin-bottom: 16px;
@@ -129,19 +139,24 @@
 		}
 
 		&.first {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/promos/sos/2019/0409/v4/c1-2nd-d.png") no-repeat top center;
+			/* tablet */
+			@media screen and (min-width:767px) and (max-width:769px) {
+				background-position: -92px 0 !important;
+			}
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0502/v1/c1-1-d.png") no-repeat top center;
 
 			.cta {
 				/* tablet */
 				@media screen and (min-width:767px) and (max-width:769px) {
-					left: 52px;
-					top: 141px;
+					left: 520px;
+					top: 266px;
 				}
-				left: 85px;
-				top: 155px;
+				left: 714px;
+				top: 292px;
 				display: block;
 				color: @hp-font-color;
-				border-color: @hp-font-color;
+				border-color: #fff;
+				background: #fff;
 				position: relative;
 
 				&:active,
@@ -154,7 +169,11 @@
 		}
 
 		&.second {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0404/compress4/c1-2nd-d.png") no-repeat top center;
+			/* tablet */
+			@media screen and (min-width:767px) and (max-width:769px) {
+				background-position: 0 0 !important;
+			}
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0502/v1/c1-2-d.png") no-repeat top center;
 
 			.cta {
 				/* tablet */
@@ -162,14 +181,36 @@
 					top: 209px;
 					left: 33px;
 				}
-				top: 263px;
-				left: 85px;
-				width: 250px;
+				color: @hp-font-color;
+				border-color: #fff;
+				background: #fff;
+
+				&:active,
+				&:hover {
+					background: @hp-font-color;
+					color: #fff;
+					border-color: @hp-font-color;
+				}
+
+				&.girl {
+					top: 253px;
+					left: 85px;
+				}
+
+				&.boy {
+					top: 310px;
+					left: 85px;
+				}
+				// width: 250px;
 			}
 		}
 
 		&.third {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/promos/sos/2019/0409/v4/c1-4th-d.png") no-repeat top center;
+			/* tablet */
+			@media screen and (min-width:767px) and (max-width:769px) {
+				background-position: 0 0 !important;
+			}
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0502/v1/c1-3-d.png") no-repeat top center;
 
 			.cta {
 				width: 175px;
@@ -177,8 +218,8 @@
 				&.girl {
 					/* tablet */
 					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 200px;
-						left: 210px;
+						top: 222px;
+						left: 245px;
 					}
 					top: 253px;
 					left: 315px;
@@ -187,8 +228,8 @@
 				&.boy {
 					/* tablet */
 					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 200px;
-						left: 393px;
+						top: 222px;
+						left: 436px;
 					}
 					top: 253px;
 					left: 511px;
@@ -197,8 +238,8 @@
 				&.baby-girl {
 					/* tablet */
 					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 256px;
-						left: 210px;
+						top: 275px;
+						left: 245px;
 					}
 					top: 310px;
 					left: 315px;
@@ -207,8 +248,8 @@
 				&.baby-boy {
 					/* tablet */
 					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 256px;
-						left: 393px;
+						top: 275px;
+						left: 436px;
 					}
 					top: 310px;
 					left: 511px;
@@ -217,7 +258,7 @@
 		}
 
 		&.fourth {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0404/compress4/c1-4th-d.png") no-repeat top center;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0502/v1/c1-4-d.png") no-repeat top center;
 
 			.cta {
 				/* tablet */

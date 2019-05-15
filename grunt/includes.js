@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       files: [
         //toolkit
         {
-          cwd: 'global/<%= global.name %>/dev/',
+          cwd: 'global/<%= global.name %>/html/',
           src: ['*.html'],
           dest: 'global/<%= global.name %>/toolkit/',
         },

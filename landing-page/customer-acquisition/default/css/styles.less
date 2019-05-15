@@ -1,4 +1,7 @@
+@import "var.less";
+
 .customer-wrap {
+	visibility: hidden;
 	@media screen and (max-width:737px) {}
 	//overflow:hidden;
 	h1,
@@ -49,9 +52,9 @@
 
 				.cta {
 					@media screen and (max-width:737px) {
-						width: 42%;
-						border-color: #1BA8A0;
-						color: #1BA8A0;
+						width: 42% !important;
+						border-color: @color;
+						color: @color;
 
 						&.cta1 {
 							left: -1%;
@@ -63,10 +66,17 @@
 					}
 					background: #fff;
 					border: 1px solid #fff;
-					color: #666;
+					color: @color;
 					margin: 0 0 19px;
+					padding: 10px 0 0;
+					font-size: 14px;
 
-					&:hover {
+					&:hover,
+					:active {
+						@media screen and (max-width:737px) {
+							background: @color;
+							color: #fff;
+						}
 						background: none;
 						color: #fff;
 					}
@@ -79,41 +89,41 @@
 		}
 
 		.c1 {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c1-1st-d.png") no-repeat 0 0;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0502/v3/c1-1-d.png") no-repeat 0 0;
 			background-size: contain;
 
 			div {
 				/* tablet */
 				@media screen and (min-width:767px) and (max-width:769px) {
-					top: 261px;
-					left: 48px;
+					top: 200px;
+					left: 70%;
 				}
-				top: 344px;
-				left: 60px;
+				top: 271px;
+				left: 715px;
 			}
 		}
 
 		.c2 {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c1-2nd-d.png") no-repeat 0 0;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0502/v3/c1-2-d.png") no-repeat 0 0;
 			background-size: contain;
 
 			div {
 				/* tablet */
 				@media screen and (min-width:767px) and (max-width:769px) {
-					left: 7px;
-					top: 302px;
+					left: 3%;
+					top: 200px;
 				}
 				@media screen and (max-width:737px) {
 					width: 100%;
 				}
-				left: 60px;
-				top: 401px;
+				left: 85px;
+				top: 273px;
 				width: 250px;
 
 				.cta {
 					@media screen and (max-width:737px) {
-						width: 63%;
-						left: 0 !important;
+						// width: 63%;
+						// left: 0 !important;
 					}
 					width: 200px;
 					letter-spacing: 1px;
@@ -122,32 +132,58 @@
 		}
 
 		.c3 {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c1-3rd-d.png") no-repeat 0 0;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0502/v3/c1-3-d.png") no-repeat 0 0;
 			background-size: contain;
 
 			div {
 				/* tablet */
 				@media screen and (min-width:767px) and (max-width:769px) {
-					left: 524px;
-					top: 259px;
+					left: 7%;
+					top: 240px;
 				}
-				left: 740px;
-				top: 344px;
+				left: 85px;
+				top: 312px;
+
+				.cta {
+					@media screen and (max-width:737px) {
+						border-color: @color;
+						color: @color;
+						left: 0 !important;
+						width: 50% !important;
+					}
+					background: none;
+					color: #fff;
+					border-color: #fff;
+
+					&:active,
+					&:hover {
+						@media screen and (max-width:737px) {
+							border-color: @color;
+							background: @color;
+							color: #fff;
+						}
+						background: #fff;
+						color: @color;
+					}
+				}
 			}
 		}
 
 		.c4 {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0404/v2/c1-4th-d.png") no-repeat 0 0;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2019/0502/v3/c1-4-d.png") no-repeat 0 0;
 			background-size: contain;
 
 			div {
 				/* tablet */
 				@media screen and (min-width:767px) and (max-width:769px) {
-					top: 261px;
-					left: 48px;
+					top: 230px;
+					left: 7%;
 				}
-				left: 738px;
-				top: 402px;
+				@media screen and (max-width:737px) {
+					top: -43px !important;
+				}
+				left: 85px;
+				top: 295px;
 			}
 		}
 	}
@@ -172,15 +208,39 @@
 				span {
 					/* tablet */
 					@media screen and (min-width:767px) and (max-width:769px) {
-						bottom: 41px;
-						right: 21px;
+						// bottom: 41px;
+						// right: 21px;
 					}
 					position: absolute;
-					bottom: 60px;
-					right: 60px;
+					// bottom: 139px;
+					// right: 85px;
 					border: 1px solid #fff;
 					background: #fff;
-					color: #666;
+					color: @color;
+				}
+			}
+
+			&.tween {
+				span {
+					/* tablet */
+					@media screen and (min-width:767px) and (max-width:769px) {
+						bottom: 100px;
+						right: 5%;
+					}
+					bottom: 139px;
+					right: 85px;
+				}
+			}
+
+			&.boy {
+				span {
+					/* tablet */
+					@media screen and (min-width:767px) and (max-width:769px) {
+						top: 100px;
+						left: 6%;
+					}
+					top: 141px;
+					left: 85px;
 				}
 			}
 
@@ -197,14 +257,26 @@
 						/* tablet */
 						@media screen and (min-width:767px) and (max-width:769px) {
 							top: 150px;
-							left: 60px;
+							left: 6%;
 						}
 						border: 1px solid #96CCD4;
 						background: #96CCD4;
 						color: #fff;
-						top: 201px;
-						left: 60px;
+						top: 206px;
+						left: 85px;
 					}
+				}
+			}
+
+			&.pj {
+				span {
+					/* tablet */
+					@media screen and (min-width:767px) and (max-width:769px) {
+						top: 240px;
+						right: 5%;
+					}
+					bottom: 147px;
+					right: 85px;
 				}
 			}
 		}

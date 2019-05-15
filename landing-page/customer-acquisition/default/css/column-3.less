@@ -1,3 +1,5 @@
+@import "var.less";
+
 .column-3 {
 	@media screen and (max-width:737px) {
 		margin: 0;
@@ -55,7 +57,7 @@
 			span {
 				background: #fff;
 				border-color: #fff;
-				color: #666;
+				color: @color;
 				letter-spacing: 1px;
 			}
 		}
@@ -129,19 +131,20 @@
 					background: #fff;
 					border: none;
 					width: auto;
-					color: #666;
+					color: @color;
 					padding: 12px 0;
 					letter-spacing: 1px;
 				}
 			}
 
 			span {
-				width: 120px;
-				left: -9px;
-
+				width: 225px;
+				left: 0;
+				/*
 				&:last-of-type {
 					left: 9px;
 				}
+				*/
 			}
 
 			.grey-box {
