@@ -1,0 +1,95 @@
+.ref {
+  @media screen and (max-width:737px) {
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    z-index: 99999;
+  }
+  position: fixed;
+  opacity: 0.5;
+  max-width: 100%;
+  left: 953px;
+  top: 456px;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 26%;
+}
+
+.warehouse-overlay {
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  background: #000;
+  opacity: 0.5;
+  float: none !important;
+  border: none !important;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.warehouse-popup {
+  @media screen and (max-width:737px) {
+    width: 100% !important;
+  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 497px !important;
+  float: none !important;
+  height: auto !important;
+  border: none !important;
+  z-index: 9999;
+  display: none;
+
+  img {
+    @media screen and (max-width:737px) {
+      width: 100%;
+    }
+
+    &.close {
+      @media screen and (max-width:737px) {
+        left: 84%;
+        top: 3%;
+      }
+      width: auto;
+      position: fixed;
+      left: 91%;
+      top: 2%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    width: 497px;
+  }
+
+  .cta {
+    @media screen and (max-width:737px) {
+      top: 72%;
+      left: 21%;
+      width: 57%;
+    }
+    position: fixed;
+    top: 85.5%;
+    left: 33.3%;
+    width: 178px;
+    height: 29px;
+    padding: 5px 0 0;
+    background: #F35C56;
+    border-color: #F35C56;
+    color: #fff;
+
+    &:active,
+    &:hover {
+      color: #fff !important;
+      background: #F35C56 !important;
+    }
+  }
+}

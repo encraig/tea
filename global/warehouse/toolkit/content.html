@@ -1,0 +1,72 @@
+<!-- ref -->
+<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/warehouse/2019/0507/v2/190507-popup-ref-m.png" class="ref"> -->
+
+<div class="warehouse-overlay"></div>
+<div class="warehouse-popup">
+  <img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png" class="close">
+  <img class="desktop" src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/warehouse/2019/0507/v2/190507-popup-d.png">
+  <img class="mobile" src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/warehouse/2019/0507/v2/190507-popup-m.png">
+  <a href="/warehouse" class="cta">shop now</a>
+</div>
+
+{literal}
+<style>
+  .ref{position:absolute;opacity:.5;max-width:100%}@media screen and (max-width:737px){.desktop{display:none !important}}.mobile{display:none !important}@media screen and (max-width:737px){.mobile{display:block !important}}body.browse .heading-category{font-family:brown-pro-bold}.cta{display:inline-block;font-family:brown-pro-bold !important;border:1px solid;width:200px;position:relative;font-size:13px;line-height:16px;height:39px;letter-spacing:.2px;text-transform:uppercase;text-decoration:none;padding:12px 0 0;text-align:center;box-sizing:border-box}@media screen and (max-width:737px){.cta{width:42%;left:0;padding:1em 0;font-size:.8em}}@media screen and (max-width:415px){.cta{font-size:.8em;letter-spacing:1.1px}}@media screen and (max-width:376px){.cta{font-size:.7em}}@media screen and (max-width:321px){.cta{font-size:.6em}}/*# sourceMappingURL=global/dev/css/styles.css.map */
+  .ref{position:fixed;opacity:.5;max-width:100%;left:953px;top:456px;transform:translate(-50%, -50%);height:auto;width:26%}@media screen and (max-width:737px){.ref{left:50%;top:50%;width:100%;z-index:99999}}.warehouse-overlay{width:100% !important;height:100% !important;position:fixed;background:#000;opacity:.5;float:none !important;border:none !important;top:0;left:0;z-index:9999;display:none}.warehouse-overlay:hover{cursor:pointer}.warehouse-popup{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:497px !important;float:none !important;height:auto !important;border:none !important;z-index:9999;display:none}@media screen and (max-width:737px){.warehouse-popup{width:100% !important}}.warehouse-popup img{width:497px}@media screen and (max-width:737px){.warehouse-popup img{width:100%}}.warehouse-popup img.close{width:auto;position:fixed;left:91%;top:2%}@media screen and (max-width:737px){.warehouse-popup img.close{left:84%;top:3%}}.warehouse-popup img.close:hover{cursor:pointer}.warehouse-popup .cta{position:fixed;top:85.5%;left:33.3%;width:178px;height:29px;padding:5px 0 0;background:#F35C56;border-color:#F35C56;color:#fff}@media screen and (max-width:737px){.warehouse-popup .cta{top:72%;left:21%;width:57%}}.warehouse-popup .cta:active,.warehouse-popup .cta:hover{color:#fff !important;background:#F35C56 !important}/*# sourceMappingURL=global/warehouse/css/styles.css.map */
+</style>
+{/literal}
+
+{literal}
+<script>
+  $(document).ready(function() {
+
+    $('.warehouse-popup .close, .warehouse-overlay').click(function() {
+      $('.warehouse-overlay, .warehouse-popup').remove();
+      document.cookie = 'closeSale=true; path=/';
+    });
+
+    var cookie = window.document.cookie;
+    cookie = cookie.replace(/ /g, '');
+    cookie = cookie.split(';');
+
+    $.each(cookie, function(i, val) {
+      // if they close the popup check for cookie
+      if (val.indexOf('closeSale') !== -1) {
+        console.log('already closed popup');
+        //remove popup
+        $('.warehouse-overlay, .warehouse-popup').remove();
+        document.cookie = "warehouse=1; path=/";
+        return false;
+
+        //have not seen popup yet
+      } else {
+
+        if (val.indexOf('warehouse') == -1) {
+          console.log('no warehouse creating cookie');
+          document.cookie = "warehouse=1; path=/";
+
+        } else {
+          console.log('yes warehouse replacing cookie');
+          //six page views pop the popup
+          if (val == 'warehouse=5') {
+            console.log('six page views kick off popup');
+            $('.warehouse-popup, .warehouse-overlay').show();
+            document.cookie = "warehouse=6; path=/";
+            return false;
+
+            //nope not six page views yet
+          } else {
+            var num = Number(val.split('=')[1]) + 1;
+            document.cookie = "warehouse=" + num + "; path=/";
+            console.log(val);
+            return false;
+          }
+
+        }
+      }
+
+    });
+
+  });
+</script>
+{/literal}
