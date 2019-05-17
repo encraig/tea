@@ -7,27 +7,23 @@ var cells = [
     slides: [
       //first slide
       {
-        imgUrl: '/new-arrivals',
+        imgUrl: '/swimwear',
         name: '.first',
         cta1: {
-          url: '/new-arrivals',
-          text: 'shop new arrivals',
-
+          url: '/swimwear',
+          text: 'the swim shop',
         },
         cta2: {
-          url: '/new-arrivals',
-          text: 'shop new arrivals',
-
+          url: '/swimwear',
+          text: 'the swim shop',
         },
         cta3: {
-          url: '/new-arrivals',
-          text: 'shop new arrivals',
-
+          url: '/swimwear',
+          text: 'the swim shop',
         },
         cta4: {
-          url: '/new-arrivals',
-          text: 'shop new arrivals',
-
+          url: '/swimwear',
+          text: 'the swim shop',
         },
       },
       //second slide

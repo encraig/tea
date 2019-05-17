@@ -39,7 +39,7 @@ if ($(window).width() < 737) {
     infiniteLoop: true,
     auto: true,
     onSliderLoad: function() {
-      console.log('show the slideshow');
+      // console.log('show the slideshow');
       $('.hp').css('visibility', 'visible');
     }
   });
@@ -51,7 +51,7 @@ else {
     infiniteLoop: true,
     auto: true,
     onSliderLoad: function() {
-      console.log('show the slideshow');
+      // console.log('show the slideshow');
       $('.hp').css('visibility', 'visible');
     }
   });
