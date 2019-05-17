@@ -3,39 +3,38 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-.desktop-promo img,
-.desktop-promo-hp img,
-.mobile-promo img,
-.mobile-promo-hp img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
+.the-promo-2 {
+	@media screen and (max-width:737px) {
+		margin: 0 0 10px;
+	}
+	//display: none;
+	img {
+		max-width: 100%;
+	}
 }
-//-----------------------------------------------------------------------------------------
 
-.desktop-promo,
-.desktop-promo-hp {
+.desktop-promo-fat,
+.mobile-promo-fat {
+	img {
+		image-rendering: -webkit-optimize-contrast;
+		max-width: 100%;
+	}
+}
+
+.desktop-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: none;
 	}
 }
 
-.mobile-promo,
-.mobile-promo-hp {
+.mobile-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: block;
-		text-align: center;
-		background: #c62695;
 	}
 	display: none;
-
-	img {
-		//width:100%;
-		image-rendering: -webkit-optimize-contrast;
-	}
 }
-//-----------------------------------------------------------------------------------------
 
-#details-promo {
+#details-promo-2 {
 	@media screen and (max-width: 736px) {
 		width: 100%;
 		position: absolute;
@@ -50,6 +49,8 @@ html {
 
 	.details-container {
 		margin: 27px;
+		// border-top: 1px solid #333333;
+		// border-bottom: 1px solid #333333;
 		padding: 20px 0;
 		background: #fff;
 
@@ -57,8 +58,6 @@ html {
 			text-transform: uppercase;
 			font-size: 15px;
 			letter-spacing: 1px;
-			font-family: brown-pro-bold !important;
-			font-weight: normal;
 		}
 
 		p {
@@ -66,7 +65,7 @@ html {
 			line-height: 20px;
 		}
 
-		.close-fancy {
+		.close-fancy-2 {
 			@media screen and (max-width: 736px) {
 				display: block;
 			}
@@ -75,7 +74,6 @@ html {
 		}
 	}
 }
-//-----------------------------------------------------------------------------------------
 
 .cta-drop-down {
 	overflow: hidden;
@@ -92,8 +90,8 @@ html {
 		margin-right: 2em;
 		margin-bottom: 2em;
 		text-align: center;
-		background: #2A8989;
-		color: #fff;
+		background: #FBF7C0;
+		color: #105F7F;
 		text-decoration: none;
 		letter-spacing: 1px;
 		font-family: brown-pro-bold !important;
