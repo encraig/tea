@@ -67,7 +67,7 @@
     $('a, area').attr('data-page', 'animal print shop landing page');
 
     //force sidebar to expand
-    $('.dept-animal-print-shop').append('<span style="visibility:hidden">tiger cub club</span>');
+    // $('.dept-animal-print-shop').append('<span style="visibility:hidden">tiger cub club</span>');
 
     // jQuery('img[usemap]').rwdImageMaps();
 
@@ -75,25 +75,30 @@
 
     $('.content-container img').attr('alt', alt);
 
-    // var leftNav = $('.dept-pajamas section');
-    //
-    // $.each(leftNav, function(i, val) {
-    //   var a = $(val).find('a').text();
-    //   switch (a) {
-    //     case 'Girl':
-    //       $(val).find('a').attr('href', '/girls-pajamas-sleepwear');
-    //       break;
-    //     case 'Boy':
-    //       $(val).find('a').attr('href', '/boys-pajamas-sleepwear');
-    //       break;
-    //     case 'Baby Girl':
-    //       $(val).find('a').attr('href', '/baby-girl-pajamas');
-    //       break;
-    //     case 'Baby Boy':
-    //       $(val).find('a').attr('href', '/baby-boy-pajamas');
-    //       break;
-    //   }
-    // });
+    var leftNav = $('.dept-animal-print-shop section');
+
+    $.each(leftNav, function(i, val) {
+      var h2 = val.innerText;
+      console.log(h2);
+      switch (h2) {
+        case 'Girl':
+          console.log('match');
+          $(val).find('h2').html('<a href="/girls-clothing/favorites/animal-print-shop">' + h2 + '</a>');
+          break;
+        case 'Boy':
+          $(val).find('h2').html('<a href="/boys-clothing/favorites/animal-print-shop">' + h2 + '</a>');
+          break;
+        case 'Baby Girl':
+          $(val).find('h2').html('<a href="/baby-girl-clothes/favorites/animal-print-shop">' + h2 + '</a>');
+          break;
+        case 'Baby Boy':
+          $(val).find('h2').html('<a href="/baby-boy-clothes/favorites/animal-print-shop">' + h2 + '</a>');
+          break;
+        case 'Tween':
+          $(val).find('h2').html('<a href="/tween-girls-clothing/favorites/animal-print-shop">' + h2 + '</a>');
+          break;
+      }
+    });
 
   });
 </script>
