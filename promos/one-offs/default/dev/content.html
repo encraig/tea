@@ -6,13 +6,16 @@
 <div class="the-promo">
 
 	<!-- banner with no image map -->
-	<!-- <a href="#details-promo" class="desktop-promo-fat see-details"><img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0413/190413-d.png" alt="" class="promo-img-alt" /></a> -->
+	<!-- <a href="#details-promo" class="desktop-promo-fat see-details" alt="promo banner"><img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0514/190514-d.png" alt="" class="promo-img-alt" /></a> -->
 
-	<a href="#details-promo" class="mobile-promo-fat see-details" target="_blank"><img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0413/190413-m.png" alt="" class="promo-img-alt" /></a>
+	<a href="/clothing-sale" class="" alt="promo banner">
+		<img class="desktop-promo-fat promo-img-alt" src="/mas_assets/media/tea_collection/promos/one-offs/2019/0514/190514-d.png" alt="" />
+		<img class="mobile-promo-fat promo-img-alt" src="/mas_assets/media/tea_collection/promos/one-offs/2019/0514/190514-m.png" alt="" />
+	</a>
 
 
 	<!-- banner with image map -->
-	<img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0413/190413-d.png" alt="" usemap="#map-d" class="desktop-promo-fat promo-img-alt" />
+	<!-- <img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0514/190514-d.png" alt="" usemap="#map-d" class="desktop-promo-fat promo-img-alt" />
 	<map name="map-d">
 		<area alt="" title="" href="/girls-clothing" shape="rect" coords="486,0,552,60" style="outline:none;" target="_self" />
 		<area alt="" title="" href="/boys-clothing" shape="rect" coords="554,0,614,60" style="outline:none;" target="_self" />
@@ -20,9 +23,9 @@
 		<area alt="" title="" href="/baby-girl-clothes" shape="rect" coords="686,0,782,60" style="outline:none;" target="_self" />
 		<area alt="" title="" href="/baby-boy-clothes" shape="rect" coords="784,0,891,60" style="outline:none;" target="_self" />
 		<area class="see-details" alt="" title="" href="#details-promo" shape="rect" coords="902,0,1000,60" style="outline:none;" target="_self" />
-	</map>
+	</map> -->
 
-	<!-- <img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0413/190413-m-v2.png" alt="" usemap="#map-m" class="mobile-promo-fat promo-img-alt" />
+	<!-- <img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0514/190514-m-v2.png" alt="" usemap="#map-m" class="mobile-promo-fat promo-img-alt" />
 	<map name="map-m">
 		<area  alt="" title="" href="/girls-clothing/new-arrivals" shape="rect" coords="0,101,136,160" style="outline:none;" target="_self"     />
 		<area  alt="" title="" href="/boys-clothing/new-arrivals" shape="rect" coords="142,100,251,160" style="outline:none;" target="_self"     />
@@ -35,17 +38,17 @@
 
 
 <!-- FINE PRINT -->
-<div id="details-promo">
+<!-- <div id="details-promo">
 	<div class="details-container">
 		<div class="mobile-promo-fat cta-drop-down">
-			<a href="/girls-clothing/new-arrivals">girl</a>
-			<a href="/boys-clothing/new-arrivals">boy</a>
-			<a href="/baby-girl-clothes/new-arrivals">baby girl</a>
-			<a href="/baby-boy-clothes/new-arrivals">baby boy</a>
-			<a href="/tween-girls-clothing/favorites/new-arrivals" class="sale-cta">tween</a>
-			<!-- <a href="/newborn-clothing" class="newborn-cta">newborn</a> -->
-			<!-- <a href="/clothing-sale" class="sale-cta">sale</a> -->
-		</div>
+			<a href="/girls-clothing/new-arrivals" alt="promo banner">girl</a>
+			<a href="/boys-clothing/new-arrivals" alt="promo banner">boy</a>
+			<a href="/baby-girl-clothes/new-arrivals" alt="promo banner">baby girl</a>
+			<a href="/baby-boy-clothes/new-arrivals" alt="promo banner">baby boy</a>
+			<a href="/tween-girls-clothing/favorites/new-arrivals" class="sale-cta" alt="promo banner">tween</a> -->
+<!-- <a href="/newborn-clothing" class="newborn-cta" alt="promo banner">newborn</a> -->
+<!-- <a href="/clothing-sale" class="sale-cta" alt="promo banner">sale</a> -->
+<!-- </div>
 		<h2>Details</h2>
 		<p>
 			Enter code BUNNY during checkout to receive $10 Express: 2 Day shipping at Teacollection.com. Offer valid through 4/16/2019 at 11:59 PM PT. Does not apply to third party brands. Discount taken pre-tax. Cannot be combined with other promotions. No
@@ -56,7 +59,7 @@
 
 		<p><a href="#" class="close-fancy">CLOSE</a></p>
 	</div>
-</div>
+</div> -->
 
 
 
@@ -79,7 +82,7 @@
 	jQuery(document).ready(function() {
 
 		//CHANGE THE STRING FOR THE ALT FOR ALL PROMO DESKTOP AND MOBILE IMAGES
-		var alt = "Dressy looks Just in Time $10 Two-Day Shipping USE CODE: BUNNY";
+		var alt = "New Sale Styles Just Added! Fresh sunny looks are now on sale. SHOP NOW promo banner";
 
 		$('.promo-img-alt').attr('alt', alt);
 
@@ -116,8 +119,8 @@
 		jQuery('img[usemap]').rwdImageMaps();
 		//array of urls to hide the banners
 		var urlArray = [{
-				name: 'special occasion',
-				url: '/special-occasion',
+				name: 'select styles',
+				url: '/select-styles',
 			},
 			// {
 			// 	name: 'black-friday',
@@ -144,9 +147,11 @@
 
 			$.each(urlArray, function(i, val) {
 				if (url == val.url) {
-					$('.the-promo').show();
-				} else if (url.split('/')[3] == 'special-occasion') {
-					$('.the-promo').show();
+					$('div[data-zone="sitewide_banner"]').hide();
+					$('div[data-zone="sitewide_banner_mobile"]').hide();
+				} else if (url.split('/')[1] == 'select-styles') {
+					$('div[data-zone="sitewide_banner"]').hide();
+					$('div[data-zone="sitewide_banner_mobile"]').hide();
 					return false;
 				}
 			});
@@ -201,9 +206,9 @@
 		});
 
 		// slide toggle the fineprint
-		$('.mobile-promo-fat.see-details, #details-promo .close-fancy').click(function(e) {
-			e.preventDefault();
-			$('#details-promo').slideToggle();
-		});
+		// $('.mobile-promo-fat.see-details, #details-promo .close-fancy').click(function(e) {
+		// 	e.preventDefault();
+		// 	$('#details-promo').slideToggle();
+		// });
 	});
 </script>
