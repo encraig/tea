@@ -1,146 +1,122 @@
-module.exports = function(grunt) {
+var config = require("./../gruntConfig.js");
+// console.log(config.landing);
 
-  return {
+module.exports = {
 
-    options: {
-      flatten: true
-    },
+  options: {
+    flatten: true
+  },
 
-    // BUILD  ---------------------------------------------------------------------------
-    buildIncludes: {
+  // BUILD
+  build: {
 
-      files: [
-        //toolkit
-        {
-          cwd: 'local-templates/',
-          src: ['*.html'],
-          dest: 'local-templates/build/',
-        },
-      ],
-
-    },
-
-    // MEGA MENU  ---------------------------------------------------------------------------
-    megaIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'mega-menu/dev/',
-          src: ['*.html'],
-          dest: 'mega-menu/toolkit/',
-        },
-      ],
-
-    },
-
-    // GLOBAL  ---------------------------------------------------------------------------
-    globalIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'global/<%= global.name %>/html/',
-          src: ['*.html'],
-          dest: 'global/<%= global.name %>/toolkit/',
-        },
-      ],
-
-    },
-
-
-    // CONTENT ZONE  ---------------------------------------------------------------------------
-    zoneIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'content-zone/<%= zone.name %>/dev',
-          src: ['*.html'],
-          dest: 'content-zone/<%= zone.name %>/toolkit/',
-        },
-      ],
-
-    },
-
-    // CONTENT CELL TAKE OVER  ---------------------------------------------------------------------------
-    cellIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'content-cell/<%= cell.name %>/<%= cell.date %>/dev',
-          src: ['*.html'],
-          dest: 'content-cell/<%= cell.name %>/<%= cell.date %>/toolkit/',
-        },
-      ],
-
-    },
-
-    // HOMEPAGE  ---------------------------------------------------------------------------
-    hpIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'homepage/<%= hp.date %>',
-          src: ['dev/content.html'],
-          dest: 'homepage/<%= hp.date %>/toolkit/toolkit-homepage.html',
-        },
-      ],
-
-    },
-
-    // CATEGORIES  ---------------------------------------------------------------------------
-    categoriesIncludes: {
-
-      files: [
-        //toolkit
-        {
-          cwd: 'category-pages/<%= cat.date %>/dev',
-          src: ['*.html'],
-          dest: 'category-pages/<%= cat.date %>/toolkit/'
-        },
-      ],
-
-    },
-
-    // LANDING PAGES  ---------------------------------------------------------------------------
-    landingPagesIncludes: {
-
-      files: [{
-        cwd: 'landing-page/<%= landing.name %>/<%= landing.date %>/dev',
+    files: [
+      //build toolkit
+      {
+        cwd: 'local-templates/',
         src: ['*.html'],
-        dest: 'landing-page/<%= landing.name %>/<%= landing.date %>/toolkit/'
-      }, ],
+        dest: 'local-templates/build/',
+      },
+    ],
 
-    },
+  },
 
-    // PROMOS  ---------------------------------------------------------------------------
-    promosIncludes: {
+  // MEGA MENU
+  mega: {
 
-      files: [
-        // promo template toolkit
-        {
-          cwd: 'promos/<%= promo.name %>/<%= promo.date %>/dev',
-          src: ['*.html'],
-          dest: 'promos/<%= promo.name %>/<%= promo.date %>/toolkit/',
-        },
-      ]
-    },
+    files: [
+      //toolkit
+      {
+        cwd: 'mega-menu/dev/',
+        src: ['*.html'],
+        dest: 'mega-menu/toolkit/',
+      },
+    ],
 
-    // NAV REDESIGIN  ---------------------------------------------------------------------------
-    navRedesignIncludes: {
+  },
 
-      files: [
+  // GLOBAL
+  global: {
 
-        {
-          cwd: 'nav-redesign/<%= nav.folder %>/html',
-          src: ['template.html'],
-          dest: 'nav-redesign/<%= nav.folder %>/build/'
-        },
-      ],
+    files: [
+      //global toolkit
+      {
+        cwd: 'global/' + config.global.name + '/html/',
+        src: ['*.html'],
+        dest: 'global/' + config.global.name + '/toolkit/',
+      },
+    ],
 
-    },
-  }
+  },
+
+
+  // CONTENT ZONE
+  zone: {
+
+    files: [
+      //content zone toolkit
+      {
+        cwd: 'content-zone/' + config.zone.name + '/dev',
+        src: ['*.html'],
+        dest: 'content-zone/' + config.zone.name + '/toolkit/',
+      },
+    ],
+
+  },
+
+  // HOMEPAGE
+  hp: {
+
+    files: [
+      //home toolkit
+      {
+        cwd: 'homepage/' + config.hp.date + '/dev',
+        src: ['*.html'],
+        dest: 'homepage/' + config.hp.date + '/toolkit/',
+      },
+    ],
+
+  },
+
+  // CATEGORIES
+  categories: {
+
+    files: [
+      //categories toolkit
+      {
+        cwd: 'category-pages/' + config.cat.date + '/dev',
+        src: ['*.html'],
+        dest: 'category-pages/' + config.cat.date + '/toolkit/'
+      },
+    ],
+
+  },
+
+  // LANDING PAGES
+  landing: {
+
+    files: [
+      // landing pages toolkit
+      {
+        cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/dev',
+        src: ['*.html'],
+        dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/toolkit/'
+      },
+    ],
+
+  },
+
+  // PROMOS
+  promos: {
+
+    files: [
+      // promo toolkit
+      {
+        cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/dev',
+        src: ['*.html'],
+        dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/toolkit/',
+      },
+    ]
+  },
+
 };

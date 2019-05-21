@@ -1,101 +1,58 @@
-module.exports = function(grunt) {
+var config = require("./../gruntConfig.js");
+// console.log(config.landing);
 
-  return {
-    options: {
-      livereload: true
-    },
+module.exports = {
 
-    // MEGA MENU ---------------------------------------------------------------------------
-    MegaMenu: {
-      files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html'],
-      tasks: ['less:megaCSS', 'includes:megaIncludes'],
-    },
+  options: {
+    livereload: true
+  },
 
-    // GLOBAL ---------------------------------------------------------------------------
-    Global: {
-      files: ['global/<%= global.name %>/css/*.less', 'global/<%= global.name %>/js/*.js', 'global/<%= global.name %>/html/*.html'],
-      tasks: ['less:globalCSS', 'uglify:globalJS', 'includes:globalIncludes'],
-    },
+  // MEGA MENU
+  mega: {
+    files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html'],
+    tasks: ['less:mega', 'includes:mega'],
+  },
 
-    // BUILD ---------------------------------------------------------------------------
-    Build: {
-      files: ['local-templates/*.html'],
-      tasks: ['includes:buildIncludes'],
-    },
+  // GLOBAL
+  global: {
+    files: ['global/' + config.global.name + '/css/*.less', 'global/' + config.global.name + '/js/*.js', 'global/' + config.global.name + '/html/*.html'],
+    tasks: ['less:global', 'uglify:global', 'includes:global'],
+  },
 
-    // CONTENT ZONE ---------------------------------------------------------------------------
-    Zone: {
-      files: ['content-zone/<%= zone.name %>/css/*.less', 'content-zone/<%= zone.name %>/dev/*.html'],
-      tasks: ['less:zoneCSS', 'includes:zoneIncludes'],
-    },
+  // BUILD
+  build: {
+    files: ['local-templates/*.html'],
+    tasks: ['includes:build'],
+  },
 
-    // CONTENT CELL TAKE OVER ---------------------------------------------------------------------------
-    Cell: {
-      files: ['content-cell/<%= cell.name %>/<%= cell.date %>/css/*.less', 'content-cell/<%= cell.name %>/<%= cell.date %>/dev/*.html', 'content-cell/<%= cell.name %>/<%= cell.date %>/js/*.js'],
-      tasks: ['less:cellCSS', 'includes:cellIncludes', 'concat:cell'],
-    },
+  // CONTENT ZONE
+  zone: {
+    files: ['content-zone/' + config.zone.name + '/*.less', 'content-zone/' + config.zone.name + '/dev/*.html'],
+    tasks: ['less:zone', 'includes:zone'],
+  },
 
-    // HOMEPAGE ---------------------------------------------------------------------------
-    HP: {
-      files: ['homepage/<%= hp.date %>/css/*.less', 'homepage/<%= hp.date %>/dev/content.html', 'homepage/<%= hp.date %>/js/*.js'],
-      tasks: ['less:hpCSS', 'uglify:hpJS', 'includes:hpIncludes', 'includes:buildIncludes', 'concat:hp'],
-    },
+  // HOMEPAGE
+  hp: {
+    files: ['homepage/' + config.hp.date + '/*.less', 'homepage/' + config.hp.date + '/dev/content.html', 'homepage/' + config.hp.date + '/js/*.js'],
+    tasks: ['less:hp', 'uglify:hp', 'includes:hp', 'includes:build', 'concat:hpD', 'concat:hpM'],
+  },
 
-    // CATEGORIES ---------------------------------------------------------------------------
-    Categories: {
-      files: ['category-pages/<%= cat.date %>/css/*.less', 'category-pages/<%= cat.date %>/dev/*.html'],
-      tasks: ['less:categoriesCSS', 'includes:categoriesIncludes', 'includes:buildIncludes', 'concat:categories'],
-    },
+  // CATEGORIES
+  categories: {
+    files: ['category-pages/' + config.cat.date + '/*.less', 'category-pages/' + config.cat.date + '/dev/*.html'],
+    tasks: ['less:categories', 'includes:categories'],
+  },
 
-    // LANDING PAGES  ---------------------------------------------------------------------------
-    LandingPages: {
-      files: ['landing-page/<%= landing.name %>/<%= landing.date %>/css/*.less', 'landing-page/<%= landing.name %>/<%= landing.date %>/dev/*.html', 'landing-page/<%= landing.name %>/<%= landing.date %>/js/*.js'],
-      tasks: ['less:landingPagesCSS', 'uglify:landingPagesScripts', 'includes:landingPagesIncludes', 'includes:buildIncludes', 'concat:landingPages'],
-    },
+  // LANDING PAGES
+  landing: {
+    files: ['landing-page/' + config.landing.name + '/' + config.landing.date + '/*.less', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/dev/*.html', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/*.js'],
+    tasks: ['less:landing', 'uglify:landing', 'includes:landing', 'includes:build', 'concat:landingD', 'concat:landingM'],
+  },
 
+  // PROMOS
+  promos: {
+    files: ['promos/' + config.promo.name + '/' + config.promo.date + '//*.less', 'promos/' + config.promo.name + '/' + config.promo.date + '/dev/*.html'],
+    tasks: ['less:promos', 'includes:promos'],
+  },
 
-    // BACK TO SCHOOL SWEEPS  ---------------------------------------------------------------------------
-    BackToSchool: {
-      files: ['landing-page/back-to-school-sweeps/css/styles.less', 'landing-page/back-to-school-sweeps/dev/*.html'],
-      tasks: ['less:backToSchoolCSS', 'includes:landingPagesIncludes', 'concat:backToSchool'],
-    },
-
-
-    // NAV REDESIGN  ---------------------------------------------------------------------------
-    NavRedesign: {
-      files: ['nav-redesign/<%= nav.folder %>/css/*.less', 'nav-redesign/<%= nav.folder %>/html/*.html', 'nav-redesign/<%= nav.folder %>/js/*.js'],
-      tasks: ['less:navRedesignCSS', 'includes:navRedesignIncludes', 'concat:navRedesignHTML', 'uglify:navRedesignScripts'],
-    },
-
-    // HEADER REDESIGN  ---------------------------------------------------------------------------
-    HeaderRedesign: {
-      files: ['header-redesign/*.less', 'header-redesign/*.html'],
-      tasks: ['less:headerRedesignCSS', 'concat:headerRedesignHTML'],
-    },
-
-    // PROMOS  ---------------------------------------------------------------------------
-    Promos: {
-      files: ['promos/<%= promo.name %>/<%= promo.date %>/css/*.less', 'promos/<%= promo.name %>/<%= promo.date %>/dev/*.html'],
-      tasks: ['less:promosCSS', 'includes:promosIncludes', 'concat:promosHTML', ],
-    },
-
-
-    // PROMO TEST HTML ---------------------------------------------------------------------------
-    htmlPromoTest: {
-      files: ['promos/test/dev/*.html'],
-      tasks: ['concat:promoTestM']
-    },
-
-    // FILTER ---------------------------------------------------------------------------
-    Filter: {
-      files: ['filter/dev/*.html', 'filter/css/*less'],
-      tasks: ['less:filterCSS', 'concat:filterHTML']
-    },
-
-    // js: {
-    //   files: ['dev/**/*.js'],
-    //   tasks: ['concat','uglify']
-    // }
-
-  }
 };

@@ -1,53 +1,38 @@
-module.exports = function(grunt) {
-  return {
-    options: {
-      compress: true,
-      // sourceMap: true
-    },
+var config = require("./../gruntConfig.js");
+// console.log(config.landing);
 
-    navRedesignScripts: {
-      //dynamic files
-      expand: true,
-      cwd: 'nav-redesign/<%= nav.folder %>/js',
-      src: ['*.js'],
-      dest: 'nav-redesign/<%= nav.folder %>/js/output/',
-      ext: '.min.js',
-    },
+module.exports = {
 
-    hpJS: {
-      //dynamic files
-      expand: true,
-      cwd: 'homepage/<%= hp.date %>/js',
-      src: ['*.js'],
-      dest: 'homepage/<%= hp.date %>/js/output/',
-      ext: '.min.js',
-    },
+  options: {
+    compress: true,
+    // sourceMap: true
+  },
 
-    globalJS: {
-      //dynamic files
-      expand: true,
-      cwd: 'global/<%= global.name %>/js',
-      src: ['*.js'],
-      dest: 'global/<%= global.name %>/js/output/',
-      ext: '.min.js',
-    },
+  hp: {
+    //dynamic files
+    expand: true,
+    cwd: 'homepage/' + config.hp.date + '/js',
+    src: ['*.js'],
+    dest: 'homepage/' + config.hp.date + '/js/output/',
+    ext: '.min.js',
+  },
 
-    landingPagesScripts: {
-      //dynamic files
-      expand: true,
-      cwd: 'landing-page/<%= landing.name %>/<%= landing.date %>/js',
-      src: ['*.js'],
-      dest: 'landing-page/<%= landing.name %>/<%= landing.date %>/js/output/',
-      ext: '.min.js',
-    },
+  global: {
+    //dynamic files
+    expand: true,
+    cwd: 'global/' + config.global.name + '/js',
+    src: ['*.js'],
+    dest: 'global/' + config.global.name + '/js/output/',
+    ext: '.min.js',
+  },
 
-    contentCellScripts: {
-      //dynamic files
-      expand: true,
-      cwd: 'content-cell/<%= cell.name %>/<%= cell.date %>/js',
-      src: ['*.js'],
-      dest: 'content-cell/<%= cell.name %>/<%= cell.date %>/js/output/',
-      ext: '.min.js',
-    }
-  }
+  landing: {
+    //dynamic files
+    expand: true,
+    cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js',
+    src: ['*.js'],
+    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/output/',
+    ext: '.min.js',
+  },
+
 };
