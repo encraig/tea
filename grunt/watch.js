@@ -27,31 +27,31 @@ module.exports = {
 
   // CONTENT ZONE
   zone: {
-    files: ['content-zone/' + config.zone.name + '/*.less', 'content-zone/' + config.zone.name + '/dev/*.html'],
+    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html'],
     tasks: ['less:zone', 'includes:zone'],
   },
 
   // HOMEPAGE
   hp: {
-    files: ['homepage/' + config.hp.date + '/*.less', 'homepage/' + config.hp.date + '/dev/content.html', 'homepage/' + config.hp.date + '/js/*.js'],
+    files: ['homepage/' + config.hp.date + '/css/*.less', 'homepage/' + config.hp.date + '/dev/content.html', 'homepage/' + config.hp.date + '/js/*.js'],
     tasks: ['less:hp', 'uglify:hp', 'includes:hp', 'includes:build', 'concat:hpD', 'concat:hpM'],
   },
 
   // CATEGORIES
   categories: {
-    files: ['category-pages/' + config.cat.date + '/*.less', 'category-pages/' + config.cat.date + '/dev/*.html'],
+    files: ['category-pages/' + config.cat.date + '/css/*.less', 'category-pages/' + config.cat.date + '/dev/*.html'],
     tasks: ['less:categories', 'includes:categories'],
   },
 
   // LANDING PAGES
   landing: {
-    files: ['landing-page/' + config.landing.name + '/' + config.landing.date + '/*.less', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/dev/*.html', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/*.js'],
+    files: ['landing-page/' + config.landing.name + '/' + config.landing.date + '/css/*.less', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/dev/*.html', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/*.js'],
     tasks: ['less:landing', 'uglify:landing', 'includes:landing', 'includes:build', 'concat:landingD', 'concat:landingM'],
   },
 
   // PROMOS
   promos: {
-    files: ['promos/' + config.promo.name + '/' + config.promo.date + '//*.less', 'promos/' + config.promo.name + '/' + config.promo.date + '/dev/*.html'],
+    files: ['promos/' + config.promo.name + '/' + config.promo.date + '/css/*.less', 'promos/' + config.promo.name + '/' + config.promo.date + '/dev/*.html'],
     tasks: ['less:promos', 'includes:promos'],
   },
 
