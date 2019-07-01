@@ -3,41 +3,33 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-.desktop-promo img,
-.desktop-promo-hp img,
-.mobile-promo img,
-.mobile-promo-hp img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
+.the-promo {
+	//display: none;
+	img {
+		max-width: 100%;
+	}
 }
-//-----------------------------------------------------------------------------------------
 
-.desktop-promo,
-.desktop-promo-hp {
+.desktop-promo-fat,
+.mobile-promo-fat {
+	img {
+		image-rendering: -webkit-optimize-contrast;
+		max-width: 100%;
+	}
+}
+
+.desktop-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: none;
 	}
 }
 
-.mobile-promo,
-.mobile-promo-hp {
+.mobile-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: block;
-		text-align: center;
-		background: #c62695;
 	}
 	display: none;
-
-	img {
-		//width:100%;
-		image-rendering: -webkit-optimize-contrast;
-	}
 }
-
-.breadcrumb-c span:last-child {
-	display: inline !important;
-}
-//-----------------------------------------------------------------------------------------
 
 #details-promo {
 	@media screen and (max-width: 736px) {
@@ -63,26 +55,22 @@ html {
 			text-transform: uppercase;
 			font-size: 15px;
 			letter-spacing: 1px;
-			font-family: brown-pro-bold !important;
-			font-weight: normal;
 		}
 
 		p {
 			font-size: 13px;
 			line-height: 20px;
-			margin: 10px 0 0;
 		}
 
 		.close-fancy {
-			@media screen and (max-width: 736px) {
-				display: block !important;
+			@media screen and (max-width: 768px) {
+				display: block;
 			}
 			display: none;
 			text-align: center;
 		}
 	}
 }
-//-----------------------------------------------------------------------------------------
 
 .cta-drop-down {
 	overflow: hidden;
@@ -99,8 +87,8 @@ html {
 		margin-right: 2em;
 		margin-bottom: 2em;
 		text-align: center;
-		background: #1c637c;
-		color: #fff;
+		background: #EFF482;
+		color: #173853;
 		text-decoration: none;
 		letter-spacing: 1px;
 		font-family: brown-pro-bold !important;
@@ -113,7 +101,7 @@ html {
 		&.sale-cta {
 			@media screen and (max-width:737px) {
 				width: 98%;
-				left: 1%;
+				left: 0;
 			}
 			width: 94%;
 		}
