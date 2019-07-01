@@ -1,0 +1,261 @@
+
+
+.disabled {
+	background: #999 !important;
+
+	&:hover {
+		cursor: not-allowed;
+	}
+}
+
+.size-error {
+	@media screen and (max-width:737px){
+		width:100%;
+		left:0;
+		text-align:center;
+	}
+
+	font-size: 12px;
+    color: #C80000;
+    display: none;
+    font-family: brown-pro-bold !important;
+    margin-top: 6px;
+    position:absolute;
+    left:30%;
+}
+
+.success {
+	@media screen and (max-width:737px){
+		width: 100%;
+	}
+
+	position:absolute;
+	top:30%;
+	left:0;
+	width: 276px;
+	border: 1px solid #D1D3D4;
+	background: #fff;
+	z-index:999;
+	box-sizing: border-box;
+    padding: 15px 10px !important;
+    margin: 0 !important;
+    text-align:left;
+
+	h3 {
+		color: #C80000 !important;
+		font-size: 12px !important;
+		margin: 0 !important;
+		display: inline-block;
+    	float: left;
+    	width: 90%;
+	}
+
+	i {
+		@media screen and (max-width:737px){
+			top: -62px;
+		}
+
+		float: right;
+    	display: inline-block;
+    	position: relative;
+    	top: -14px;
+	}
+}
+
+.show-sizes {
+	overflow:visible !important;
+	z-index:999;
+
+	ul {
+		background-image: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/mobile/ARROW_DKgrey_up.png) !important;
+	}
+}
+
+
+
+//styles for dynamic drop down
+.drop {
+	clear:both;
+	width:100%;
+	margin: 4px 0 27px;
+
+	ul {
+		@media screen and (max-width:737px){
+			border:none;
+		}
+
+		border: 1px solid #D0D0D0;
+
+		li {
+			@media screen and (max-width:737px){
+				width:48% !important;
+
+				&:nth-of-type(2){
+					margin-right:3% !important;
+				}
+			}
+
+			position:relative;
+			float:none !important;
+			width:276px !important;
+			text-align:center;
+			box-sizing:border-box;
+			display:inline-block;
+			margin:0 !important;
+			padding: 0 10px;
+			box-sizing:border-box;
+			//padding-bottom: 32px;
+
+			div {
+				padding-bottom: 32px;
+			}
+
+			&:first-of-type {
+				width:100% !important;
+				padding:0;
+			}
+
+			.sold-out {
+				position:absolute;
+				width:auto !important;
+				z-index:9999;
+				top:0;
+				left:10px;
+			}
+
+			.close {
+				margin:11px 0 0 10px;
+				color:#666;
+				font-size:15px;
+				text-align:left;
+				display:block;
+
+				&:hover {
+					cursor:pointer;
+				}
+			}
+
+			h3 {
+				@media screen and (max-width: 737px){
+					margin: 11px 0 15px;
+				}
+
+				font-family: brown-pro-bold !important;
+				font-size: 15px;
+				color:#5A5A5C;
+				line-height: 24px;
+				margin: 16px 0 8px;
+
+				.title {
+					@media screen and (max-width:737px){
+						font-size: 1.6em/2;
+						display:inline-block;
+					}
+
+					a {
+						color:#5A5A5C;
+						text-decoration:none;
+					}
+				}
+
+				.price {
+					@media screen and (max-width:737px){
+						font-size: .7em;
+					}
+				}
+			}
+
+			select {
+				@media screen and (max-width:737px){
+					width:88%;
+					font-size:.85em;
+					padding: 8px 0 8px 33%;
+					display:block;
+					margin: 0 auto 15px;
+					box-sizing:border-box;
+					text-transform:uppercase;
+				}
+
+				width: 200px;
+				font-size: 12px;
+				color:#999;
+				text-align:center;
+				margin-bottom: 20px;
+				border-radius:0;
+				background: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/mobile/ARROW_DKgrey_down.png) no-repeat 94% 12px #fff;
+				background-size:15px;
+
+				option {
+					text-align:center;
+				}
+			}
+
+			.sizes-container {
+				width: 200px;
+				border: 1px solid #999;
+				margin: 10px auto 20px;
+				position:relative;
+				box-sizing:border-box;
+				overflow:hidden;
+			}
+
+			ul {
+				position:absolute;
+				padding-top: 10px;
+				width:102%;
+				border: 1px solid #999;
+				box-sizing:border-box;
+				left:-1px;
+				top:-1px;
+				background: url(https://s.tea-global.net/mas_assets/theme/tea_collection/images/mobile/ARROW_DKgrey_down.png) no-repeat 94% 13px #fff;
+    			background-size: 10px;
+
+				li {
+					font-size: 12px;
+					font-family: brown-pro-bold !important;
+					width: 100% !important;
+					color:#5A5A5C;
+					padding: 2px 0;
+		
+					&:first-of-type {
+						color: #999;
+						text-transform:uppercase;
+						padding-bottom: 7px;
+
+						&:hover {
+							background:none;
+							color:#999;
+						}
+					}
+
+					&[data-qty="not-this"] {
+						&:hover {
+							cursor:not-allowed;
+						}
+					}
+
+					&:hover {
+						cursor:pointer;
+						background: #5A5A5C;
+						color: #fff;
+					}
+				}
+			}
+
+			.cta {
+				@media screen and (max-width:737px){
+					width:88%;
+					font-size:.85em;
+					padding: 8px 0;
+					display:block;
+					margin: 0 auto;
+					box-sizing:border-box;
+				}
+
+				background:#572700;
+				color: #fff;
+				width:200px; 
+			}
+		}
+	}
+}

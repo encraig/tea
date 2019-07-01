@@ -10,7 +10,7 @@
 		z-index: 999999;
 		top: -122px;
 	}
-	top: 20px;
+	top: -65px;
 }
 @color: #7990A5;
 
@@ -21,6 +21,10 @@
 
 	header {
 		//tablet
+		@media screen and (min-width:799px) and (max-width:801px) {
+			height: 361px;
+			background-size: contain;
+		}
 		@media screen and (min-width:767px) and (max-width:769px) {
 			height: 349px;
 			background-size: contain;
@@ -31,10 +35,25 @@
 			height: auto;
 		}
 		margin: 0 0 40px;
-		background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0426/v1/c1-d.png") no-repeat 0 0;
+		background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/c1-d.png") no-repeat 0 0;
 		height: 451px;
 
+		img {
+			&.mobile {
+				@media screen and (max-width:737px) {
+					width: 100%;
+				}
+			}
+		}
+
 		h1 {
+			@media screen and (max-width:737px) {
+				font-size: 20px;
+				line-height: 26px;
+				padding: 6px 0 0;
+				position: absolute;
+				width: 100%;
+			}
 			color: @color;
 			font-weight: normal;
 			font-size: 28px;
@@ -44,6 +63,10 @@
 			box-sizing: border-box;
 
 			span {
+				@media screen and (max-width:737px) {
+					font-size: 16px;
+					letter-spacing: 2px;
+				}
 				font-family: brown-pro-regular;
 				font-size: 17px;
 				letter-spacing: 5px;
@@ -66,7 +89,7 @@
 
 		p {
 			@media screen and (max-width:737px) {
-				margin: 46px 0 18px;
+				margin: 38px 0 18px;
 				font-size: 0.9em;
 				line-height: 18px;
 			}
@@ -95,6 +118,9 @@
 		div {
 			&:first-of-type {
 				//tablet
+				@media screen and (min-width:799px) and (max-width:801px) {
+					flex-basis: 50%;
+				}
 				@media screen and (min-width:767px) and (max-width:769px) {
 					flex-basis: 100%;
 				}
@@ -104,20 +130,68 @@
 				flex-basis: 435px;
 
 				img {
-					@media screen and (max-width:737px) {
-						width: 88%;
+					@media screen and (min-width:799px) and (max-width:801px) {
+						width: 30%;
 					}
-					display: block;
+					@media screen and (max-width:737px) {
+						width: 41%;
+					}
+
+					&.mobile {
+						@media screen and (max-width:737px) {
+							&.first {
+								left: 6%;
+							}
+
+							&.second {
+								left: 11%;
+							}
+							display: inline-block !important;
+						}
+					}
+
+					&.desktop {
+						&.first {
+							@media screen and (min-width:799px) and (max-width:801px) {
+								left: 20%;
+							}
+							@media screen and (min-width:767px) and (max-width:769px) {
+								left: 25%;
+							}
+							left: 31px;
+						}
+
+						&.second {
+							@media screen and (min-width:799px) and (max-width:801px) {
+								left: 25%;
+							}
+							@media screen and (min-width:767px) and (max-width:769px) {
+								left: 32%;
+							}
+							left: 46px;
+						}
+					}
+					display: inline-block;
+					width: 180px;
+					position: relative;
 					margin: 0 auto;
+					// left: 46px;
 				}
 			}
 
 			&:last-of-type {
 				//tablet
+				@media screen and (min-width:799px) and (max-width:801px) {
+					flex-basis: 50%;
+				}
 				@media screen and (min-width:767px) and (max-width:769px) {
 					flex-basis: 100%;
 					text-align: center;
 					margin: 30px 0 0;
+
+					img {
+						width: 100%;
+					}
 				}
 				@media screen and (max-width:737px) {
 					flex-basis: 100%;
@@ -133,6 +207,14 @@
 
 		&.banner {
 			//tablet
+			@media screen and (max-width:1025px) {
+				width: 100%;
+				margin: 0;
+			}
+			// @media screen and (min-width:799px) and (max-width:801px) {
+			// 	width: 100%;
+			// 	margin: 0;
+			// }
 			@media screen and (min-width:767px) and (max-width:769px) {
 				padding: 7px 0 0;
 				width: 100%;
@@ -195,6 +277,93 @@
 				width: 300px;
 				position: relative;
 
+				.sizes-container {
+					@media screen and (max-width:737px) {
+						display: inline-block;
+						width: 50%;
+						position: relative;
+						left: 0 !important;
+						border: none;
+						margin: 21px 0 0;
+					}
+					@media screen and (max-width:321px) {
+						display: block;
+						width: 100%;
+					}
+					left: 0;
+					top: 0;
+					width: 225px;
+					border: 1px solid @color;
+					margin: 25px auto 0;
+					height: 39px;
+					overflow: hidden;
+					z-index: 99;
+					box-sizing: border-box;
+
+					select {
+						@media screen and (max-width:321px) {
+							width: 88%;
+							left: 0;
+							margin: 0 auto;
+						}
+						width: 84%;
+						position: relative;
+						left: 12%;
+						padding: 6px 0;
+						box-sizing: border-box;
+						height: 29px;
+						text-align: center;
+						font-size: 14px;
+						padding: 0;
+					}
+
+					&.drop {
+						height: auto;
+
+						ul {
+							li {
+								&:first-of-type {
+									color: #fff;
+									background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/collapse.svg") no-repeat 191px 14px @color;
+
+									&:hover {
+										background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/collapse.svg") no-repeat 191px 14px @color;
+									}
+								}
+
+								&.sold-out {
+									color: #999;
+								}
+
+								&:hover {
+									background: @grey;
+								}
+							}
+						}
+					}
+
+					ul {
+						list-style-type: none;
+
+						li {
+							&:first-of-type {
+								background: none;
+								background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/expand.svg") no-repeat 191px 14px;
+							}
+							height: 40px;
+							text-align: center;
+							box-sizing: border-box;
+							text-transform: uppercase;
+							font-size: 13px;
+							letter-spacing: 1px;
+							padding: 10px 0 0;
+							color: @color;
+							background: #fff;
+							border-bottom: 1px solid #E6E7E8;
+						}
+					}
+				}
+
 				h2 {
 					@media screen and (max-width:737px) {
 						font-size: 1.53em;
@@ -208,6 +377,124 @@
 					margin: 0 0 7px;
 				}
 
+				a {
+					display: block;
+					text-align: center;
+					margin: 14px 0 0;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 13px;
+					color: #999;
+
+					&.size-chart {
+						@media screen and (max-width:737px) {
+							display: inline-block;
+							margin: 0;
+							font-size: 12px;
+							position: relative;
+							left: 17%;
+							width: 21%;
+						}
+						@media screen and (min-width:735px) and (max-width:737px) {
+							display: block;
+							left: 0;
+							width: 100%;
+						}
+						@media screen and (min-width:666px) and (max-width:668px) {
+							display: block;
+							left: 0;
+							width: 100%;
+						}
+						@media screen and (min-width:599px) and (max-width:601px) {
+							display: block;
+							left: 0;
+							width: 100%;
+						}
+						@media screen and (min-width:567px) and (max-width:569px) {
+							display: block;
+							left: 0;
+							width: 100%;
+						}
+						@media screen and (max-width:321px) {
+							display: block;
+							width: 100%;
+							left: 0;
+						}
+					}
+
+					&.details {
+						@media screen and (max-width:737px) {
+							display: inline-block;
+							margin: 5px 0 0;
+							font-size: 12px;
+							position: relative;
+							left: 37%;
+						}
+						@media screen and (min-width:735px) and (max-width:737px) {
+							display: block;
+							left: 0;
+						}
+						@media screen and (min-width:666px) and (max-width:668px) {
+							display: block;
+							left: 0;
+						}
+						@media screen and (min-width:599px) and (max-width:601px) {
+							display: block;
+							left: 0;
+						}
+						@media screen and (min-width:567px) and (max-width:569px) {
+							display: block;
+							left: 0;
+						}
+						@media screen and (max-width:321px) {
+							display: block;
+							left: 0;
+						}
+						color: @color;
+						margin: 3px 0 0;
+					}
+
+					&.add-to-bag {
+						@media screen and (max-width:737px) {
+							position: relative;
+							display: inline-block;
+							width: 42%;
+							margin: 0;
+						}
+						@media screen and (max-width:321px) {
+							width: 88%;
+							display: block;
+							margin: 10px auto;
+						}
+						margin: 20px auto 0;
+						width: 225px;
+						color: #fff;
+						background: @color;
+						position: absolute;
+						cursor: not-allowed;
+
+						&.enabled {
+							cursor: pointer;
+						}
+					}
+
+					&.completely-sold-out {
+						background: @lightgrey;
+						border-color: @lightgrey;
+					}
+				}
+
+				&.completely-sold-out {
+					border-color: @lightgrey;
+
+					ul {
+						li {
+							color: @lightgrey;
+							background: #fff;
+						}
+					}
+				}
+
 				p {
 					@media screen and (max-width:737px) {
 						font-size: 0.95em;
@@ -219,6 +506,13 @@
 					font-size: 15px;
 					line-height: 22px;
 					margin: 0 0 3px;
+
+					&.adding-to-bag,
+					&.success {
+						margin: 25px 0 0;
+						text-transform: uppercase;
+						display: none;
+					}
 
 					&.sizes {
 						@media screen and (max-width:737px) {
@@ -244,39 +538,124 @@
 
 		&.girl {
 			//tablet
+			@media screen and (min-width:799px) and (max-width:801px) {
+				height: 420px;
+				background-size: contain;
+			}
 			@media screen and (min-width:767px) and (max-width:769px) {
 				background-position: -150px 0;
 			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0426/v1/c2-d.png") no-repeat 0 0;
-			height: 420px;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/c2-d.png") no-repeat 0 0;
+			height: 525px;
 
 			div {
 				//tablet
+				@media screen and (min-width:799px) and (max-width:801px) {
+					left: 48px;
+					top: 51px;
+				}
 				@media screen and (min-width:767px) and (max-width:769px) {
 					left: 10px;
 				}
-				left: 131px;
-				top: 91px;
+				left: 120px;
+				top: 100px;
+
+				a {
+					&.add-to-bag {
+						@media screen and (max-width:737px) {
+							left: 1%;
+							top: -11px;
+						}
+						@media screen and (max-width: 415px) {
+							left: 1%;
+							top: 0;
+						}
+						@media screen and (max-width:321px) {
+							left: 0;
+							top: 0;
+						}
+						left: 37px;
+						top: 256px;
+					}
+				}
 			}
 		}
 
 		&.boy {
 			//tablet
+			@media screen and (min-width:799px) and (max-width:801px) {
+				height: 421px;
+				background-size: contain;
+			}
 			@media screen and (min-width:767px) and (max-width:769px) {
 				background-position: -80px 0;
 			}
 			@media screen and (max-width:737px) {
-				margin: 39px 0 0;
+				margin: 30px 0 0;
 			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0426/v1/c3-d.png") no-repeat 0 0;
+			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/royal-baby/2019/0627/v1/c3-d.png") no-repeat 0 0;
 			height: 525px;
 
 			div {
+				@media screen and (min-width:799px) and (max-width:801px) {
+					left: 476px;
+					top: 112px;
+				}
 				@media screen and (min-width:767px) and (max-width:769px) {
 					left: 460px;
 				}
-				left: 569px;
-				top: 133px;
+				left: 581px;
+				top: 112px;
+
+				.sizes-container {
+					@media screen and (min-width:1024px) {
+						left: 12%;
+						margin: 25px 0 0;
+					}
+					@media screen and (min-width:1023px) and (max-width:1024px) {
+						left: 13%;
+					}
+					@media screen and (min-width:799px) and (max-width:801px) {
+						left: 13%;
+					}
+					@media screen and (min-width:767px) and (max-width:769px) {
+						left: 13%;
+					}
+					margin: 19px 0 0;
+				}
+
+				a {
+					&.add-to-bag {
+						@media screen and (min-width:1024px) {
+							left: 12%;
+						}
+						@media screen and (min-width:1023px) and (max-width:1024px) {
+							left: 13%;
+							top: 232px;
+						}
+						@media screen and (min-width:799px) and (max-width:801px) {
+							left: 13%;
+							top: 232px;
+						}
+						@media screen and (min-width:767px) and (max-width:769px) {
+							left: 13%;
+						}
+						@media screen and (max-width:737px) {
+							left: 1%;
+							top: -10px;
+						}
+						@media screen and (max-width:415px) {
+							left: 1%;
+							top: 0;
+						}
+						@media screen and (max-width:321px) {
+							left: 0;
+							top: 0;
+						}
+						left: 0;
+						top: 232px;
+					}
+				}
 			}
 		}
 	}
