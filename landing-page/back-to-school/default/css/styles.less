@@ -1,189 +1,187 @@
 .ref {
-	@media screen and (max-width:737px) {
-		top: -115px;
+	@media screen and (max-width:737px){
+		top: -123px;
 	}
-	position: absolute;
-	opacity: 0.5;
-	top: -18px;
-	z-index: 9999;
+
+	position:absolute;
+	opacity:.5;
+	top: -69px;
+	z-index:9999;
 	//display:none;
 }
-
-.common-wrap {
-	display: none;
-}
-
-.midbox,
-.my-account {
+ 
+.my-account, .midbox {
 	h1 {
-		display: none;
+		display:none;
 	}
-}
+} 
 
-#simplemodal-container,
-#simplemodal-overlay {
-	display: none !important;
+#simplemodal-container, #simplemodal-overlay {
+	display:none !important;
 }
 
 .padded {
-	padding: 0 !important;
+	padding:0 !important;
 }
 
 .mobile {
-	@media screen and (max-width:768px) {
+	@media screen and (max-width:768px){
 		display: inline-block !important;
 	}
-	display: none !important;
+
+	display:none !important;
 }
 
 .desktop {
-	@media screen and (max-width:768px) {
-		display: none !important;
+	@media screen and (max-width:768px){
+		display:none !important;
 	}
 }
+
+.bx-wrapper {
+	@media screen and (max-width:737px){
+		margin:0 !important;
+	}	
+}
+
+.bx-wrapper .bx-pager {
+	display:block !important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	width:7px !important;
+	height: 7px !important;
+	border-radius: 5px !important;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	width:30px !important;
+	height:30px !important;
+}
+
+.bx-wrapper .bx-prev {
+	left:10px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/slider-left-arrow.png) no-repeat 0 0 !important;
+}
+
+.bx-wrapper .bx-next {
+	right:10px !important;
+	background:url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/slider-right-arrow.png) no-repeat 0 0 !important;
+}
+
+//---------------------------------------------------------------
 
 .wrap-content {
-	overflow: hidden;
-
+	overflow:hidden;
+	
 	img {
-		max-width: 100%;
+		max-width:100%;
 	}
 
-	.c1,
-	.c2,
-	.c3,
-	.c4 {
-		@media screen and (max-width:737px) {
-			margin: 0;
-		}
-		margin: 0 0 37px;
-	}
-}
+	header {
 
-.grid {
-	h2 {
-		@media screen and (max-width:737px) {
-			font-size: 1.5rem;
-			margin: 43px 0 0;
-		}
-		text-align: center;
-		font-family: gilroy-bold;
-		text-transform: uppercase;
-		font-size: 1.8rem;
-		letter-spacing: 6px;
-		margin: 36px 0 0;
-		color: #436FC1;
 	}
 
-	p {
-		@media screen and (max-width:737px) {
-			font-size: 1rem;
-			margin: 12px 0 0;
-			letter-spacing: 0.5px;
-			line-height: 22px;
-		}
-		text-align: center;
-		font-family: souvenirstd-light;
-		font-size: 1.3rem;
-		margin: 29px 0 0;
-		color: #47363D;
-	}
-}
-
-.pdps {
-	@media screen and (max-width:737px) {
-		padding: 29px 1.5rem;
-	}
-	display: flex;
-	flex-wrap: wrap;
-	padding: 53px 1.5rem;
-
-	div {
-		&:nth-of-type(3n) {
-			@media screen and (max-width:737px) {
-				margin: 0;
-			}
-			margin: 0 0 20px;
-		}
-		@media screen and (max-width:737px) {
-			flex-basis: 100%;
-			margin: 0 0 10px;
-		}
-		flex-basis: 32%;
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0 2% 20px 0;
-		position: relative;
-
-		img {
-			max-width: 100%;
+	footer {
+		@media screen and (max-width:737px){
+			margin:41px 0 20px 0;
+			height:182px;
 		}
 
-		a {
-			&.cta {
-				@media screen and (max-width:414px) {
-					font-size: 0.7rem;
-					letter-spacing: 3px;
-				}
-				background: url("/mas_assets/media/tea_collection/landing-pages/back-to-school/default/2019/0724/v2/+.svg") no-repeat #436FC1;
-				color: #fff;
-				font-family: gilroy-bold;
-				text-align: center;
-				display: block;
-				padding: 0.8rem 0;
-				background-size: 4%;
-				background-position: 94% 48%;
-				text-decoration: none;
-				letter-spacing: 2px;
-				font-size: 0.8rem;
-				text-transform: uppercase;
-				// &:hover + nav {
-				// 	display: block;
-				// }
+		overflow:hidden;
+		text-align:center;
+		color:#fff;
+		background: #375A80;
+		height: 145px;
+		margin: 46px 0 0 0;
+		padding: 16px 0 0 0;
+    	box-sizing: border-box;
+
+
+		h2 {
+			@media screen and (max-width:737px){
+				font-size:23px;
+				line-height:28px;
 			}
 
-			&.open {
-				background-image: url("/mas_assets/media/tea_collection/landing-pages/back-to-school/default/2019/0724/v2/-.svg");
-
-				&+ nav {
-					display: block;
-				}
-			}
+			color:#fff;
+			font-family:brown-pro-bold;
+			font-size:21px;
+			line-height:25px;
 		}
 
-		nav {
-			display: none;
-			position: absolute;
-			background: #fafafa;
-			width: 100%;
-			bottom: 42px;
-			left: 0;
-			padding: 10px 0 0;
+		p {
+			@media screen and (max-width:737px){
+				font-size:12px;
+				line-height:18px;
+			}
 
-			ul {
-				li {
-					@media screen and (max-width:737px) {
-						padding: 1rem 0 1rem 3rem;
+			font-family:brown-pro-regular;
+			font-size:15px;
+			line-height:21px;
+			margin:2px 0 0 0;
+		}
+
+		form {
+			@media screen and (max-width:737px){
+				margin:17px 0 0 0;
+			}
+
+			margin:14px 0 0 0;
+
+			input {
+				border-radius:0;
+						
+				&[type="email"]{
+					@media screen and (max-width:737px){
+						width: 76%;
+						height:42px;    
+						padding: 0 0 0 22px;
+    					position: relative;
+    					top: -6px;
+    					left:1%;
 					}
-					padding: 0 0 9px 1.8rem;
 
-					a {
-						@media screen and (max-width:737px) {
-							font-size: 1rem;
-						}
-						text-decoration: none;
-						font-family: gilroy-regular;
-						font-size: 0.8rem;
-						text-transform: capitalize;
-						color: #47363D;
+					width: 354px;
+					height:39px;
+    				padding: 11px 0 11px 19px;
+    				box-sizing: border-box;
+    				border:none;
+    				font-family:brown-pro-bold;
+    				color:#666;
+    				font-size:10px;
+    				line-height:12px;
+    				letter-spacing:.7px;
+				}
 
-						&:hover {
-							font-family: gilroy-bold;
-							text-decoration: underline;
-						}
+				&[type="submit"]{
+					@media screen and (max-width:737px){
+						width:12%;
+						height:42px;
+						background-position:50% 14px;
 					}
+
+					width: 39px;
+					height:39px;
+    				border: none;
+    				background: url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/customer-aquisition/2018/0712/submit-icon.png) no-repeat 15px 13px #E6E7E8;
+    				padding: 12px;
+    				position:relative;
+    				left:-2px;
+
 				}
 			}
 		}
 	}
+
+	
+}//end of .wrap-content
+
+//---------------------------------------------------------------
+
+.error-mess {
+	color:red;
+	font-weight:bold;
+	display:none;
 }
+

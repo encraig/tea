@@ -1,499 +1,119 @@
 .ref {
-	position:absolute;
-	opacity:.5;
+	position: absolute;
+	opacity: 0.5;
 	//display:none;
 }
- 
-.my-account, .midbox {
-	h1 {
-		display:none;
-	}
-} 
 
-#simplemodal-container, #simplemodal-overlay {
-	display:none !important;
+.midbox,
+.my-account {
+	h1 {
+		display: none;
+	}
+}
+
+#simplemodal-container,
+#simplemodal-overlay,
+.common-wrap {
+	display: none !important;
 }
 
 .padded {
-	padding:0 !important;
+	padding: 0 !important;
 }
 
 .mobile {
-	@media screen and (max-width:768px){
+	@media screen and (max-width:768px) {
 		display: inline-block !important;
 	}
-
-	display:none !important;
+	display: none !important;
 }
 
 .desktop {
-	@media screen and (max-width:768px){
-		display:none !important;
+	@media screen and (max-width:768px) {
+		display: none !important;
 	}
 }
-
-.cta {
-	@media screen and (max-width:737px){
-		height:30px;
-		padding:6px 0 0 0;
-		font-size:10px;
-		width:42%;
-	}
-
-	display: inline-block;
-	font-family: brown-pro-bold !important;
-    border: 1px solid;
-    width: 200px;
-    position: relative;
-    box-sizing: border-box;
-    font-size: 13px;
-    line-height:16px;
-    height:39px;
-    letter-spacing: .2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 0 0 0px;
-    text-align:center;
-    box-sizing:border-box;
-}
-
-//---------------------------------------------------------------
 
 .wrap-content {
-	overflow:hidden;
-	
+	overflow: hidden;
 
 	img {
-		max-width:100%;
+		max-width: 100%;
 	}
 
-	
-}//end of .wrap-content
-
-//---------------------------------------------------------------
-
-div[data="form"] {
-	@media screen and(max-width:737px){
-		width:100%;
-		margin-top:0;
-		padding-left:0;
-	}
-
-	float:left;
-	width:523px;
-	margin:48px 0 0 0;
-	padding:0 0 0 26px;
-	box-sizing:border-box;
-
-	.c1 {
-		@media screen and (max-width:737px){
-			height:auto;
-			padding-left:0;
-    		text-align:center;
-    		background: none;
-		}
-
-		padding-left:20px;
-
-		img {
-			&.desktop{
-				display:block;
-				margin:22px 0 0 -1px;
-			}
-
-			&.mobile[alt="dotted line"] {
-				display:block;
-				margin:17px 0 0 0;
-			}
-		}
-	}
-
-	
-	p {
-		@media screen and (max-width:737px){
-			margin: 17px 0 0 0;
-    		text-align: center;
-    		font-size: 12px;
-    		line-height: 18px;
-    		letter-spacing: 0.2px;
-		}
-
-		@media screen and (max-width:321px){
-			font-size:10px;
-		}
-
-		font-size: 15px;
-    	line-height: 21px;
-    	font-family: brown-pro-regular;
-    	letter-spacing: 0.3px;
-    	margin: 3px 0 0 0;
-    	color:#666;
-	}
-
-	.cta {
-		@media screen and (max-width:737px){
-			margin:15px 0 0 0;
-			padding:6px 0 0 0;
-		}
-
-		color:#fff;
-		background:#1d4382;
-		border-color:#1d4382;
-		margin: 19px 0 0 2px;
-		padding: 10px 0 0 0;
-    	letter-spacing: .5px;
-
-		&:hover {
-			background:#fff;
-			color:#1d4382;
-		}
-	}
-
-
-
-	form {
-		@media screen and (max-width:737px){
-			padding:16px 0 0 0;
-		}
-
-		padding: 20px 0 0 22px;
-
-		.error-mess {
-			color:red;
-			font-weight:bold;
-			display:none;
-		}
-
-		input, select {
-			@media screen and (max-width:737px){
-				display: block;
-    			width: 70.8%;
-    			height:30px;
-    			margin:0 auto 16px auto;
-    			background:#fff;
-			}
-
-			display: block;
-    		width: 301px;
-    		margin: 0 0 18px 0;
-    		padding: 0 0 0 12px;
-    		height: 35px;
-    		box-sizing: border-box;
-    		border: 1px solid #666;
-    		outline: none;
-    		border-radius: 0 !important;
-    		font-size: 15px;
-    		line-height: 21px;
-    		letter-spacing: .2px;
-    		color:#666;
-
-    		&::placeholder {
-    			@media screen and (max-width:737px){
-    				text-align:center;
-    				//font-size:2em;
-    			}
-
-    			@media screen and (max-width:668px){
-    				//font-size:1.7em;
-    			}
-
-    			@media screen and (max-width:569px){
-    				//font-size:1.4em;
-    			}
-
-    			//color:lightslategrey;
-    		}
-
-
-			&[type="checkbox"]{
-				display:none;
-
-				&:checked ~ .the-checkbox {
-					//background:red;
-				}
-			}
-
-			&[name="HOW_HEARD"]{
-				@media screen and (max-width:737px){
-					position: relative;
-    				top: -6px;
-				}
-			}
-			
-		}
-
-		.the-checkbox {
-			@media screen and (max-width:737px){
-    			left: -189px;
-    			top: -40px;
-			}
-
-			@media screen and (max-width:321px){
-				left:-220px;
-			}
-
-			border: 1px solid;
-    		width: 13px;
-    		height: 13px;
-    		position: relative;
-    		top: -61px;
-    		left:-278px;
-
-    		.the-mark {
-    			@media screen and (max-width:737px){
-    				top:-4px;
-    			}
-
-    			position:relative;
-    			top:-3px;
-    		}
-
-		}
-
-		label {
-			@media screen and (max-width:737px){
-				font-size:1em;
-			}
-
-			font-size: 15px;
-			line-height:21px;
-			letter-spacing:.3px;
-			display:inline-block;
-			color:#666;
-
-			&:first-of-type {
-				@media screen and (max-width:737px){
-					text-align: center;
-    				display: block;
-    				letter-spacing: .2px;
-				}
-
-
-				font-family:brown-pro-italic !important;
-				margin: 0px 0 0 0;
-    			position: relative;
-    			top: -6px;
-			}
-
-
-			&:nth-of-type(2) {
-				@media screen and (max-width:737px){
-					position: relative;
-    				left: 86px;
-    				top: -6px;
-    				line-height: 22px;
-				}
-
-				@media screen and (max-width:321px){
-					left:47px;
-				}
-
-				position: relative;
-    			left: 26px;
-    			top:-3px;
-			}
-		}
-
-		p {
-			@media screen and (max-width:737px){
-    			left: -3px;
-    			letter-spacing: 0px;
-    			font-size: .9em;
-			}
-
-			margin-top: 9px;
-    		font-family: brown-pro-italic;
-    		font-size: 11px;
-    		position: relative;
-    		left: 27px;
-    		letter-spacing: 1px;
-    		color:#666;
-
-    		&.mobile {
-    			@media screen and (max-width:737px){
-    				display:block !important;
-    			}
-
-    			text-align:center;
-    			font-family:brown-pro-regular;
-    			left:0;
-    			margin:0 0 10px 0;
-    			font-size:12px;
-    		}
-		}
+	.rules {
+		text-align: center;
+		margin: 20px 0;
 
 		a {
-			@media screen and (max-width:737px){
-				text-decoration:underline;
-			}
-
-			color:#444444;
+			text-decoration: none;
+			font-family: brown-pro-bold;
+			text-transform: uppercase;
+			color: #666;
+			font-size: 14px;
 		}
+	}
 
-		button.cta {
-			@media screen and (max-width:737px){
-				margin: 26px auto 0 auto;
-    			display: block;
+	.c1 {
+		position: relative;
+
+		div {
+			@media screen and (max-width:768px) {
+				top: 1189px;
+				padding: 0 0 0 126px;
 			}
-
-			padding:0;
-			margin:19px 0 0 0;
-		}
-
-		img {
-			@media screen and (max-width:737px){
-				margin:20px 0 0 0;
+			@media screen and (max-width:414px) {
+				top: 651px;
+				padding: 0 0 0 71px;
 			}
-		}
+			@media screen and (max-width:376px) {
+				top: 589px;
+				padding: 0 0 0 63px;
+			}
+			@media screen and (max-width:321px) {
+				top: 499px;
+				padding: 0 0 0 53px;
+			}
+			position: absolute;
+			top: 306px;
+			padding: 0 0 0 82px;
 
-		select.mobile {
-			@media screen and (max-width:737px){
-				display:block !important;
-				background:url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 96% 12px #fff;
-				color:#666;
+			a {
+				@media screen and (max-width: 414px) {
+					font-size: 9px;
+					border-bottom: 1px solid;
+					padding: 0 0 4px;
+					letter-spacing: 3px;
+					margin: 0 43px 0 0;
+				}
+				@media screen and (max-width:321px) {
+					margin: 0 23px 0 0;
+				}
+				color: #fff;
+				font-size: 16px;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-bottom: 2px solid;
+				padding: 0 0 5px;
+				font-family: brown-pro-bold;
+				letter-spacing: 3px;
+				margin: 0 62px 0 0;
 			}
 		}
 	}
-	
-} // end of forms div
-
-//---------------------------------------------------------------
-
-div[data="pics"] {
-	@media screen and (max-width:737px){
-		display:none;
-	}
-
-	float:left;
-	width:477px;
-
-	img {
-		&:first-of-type {
-			margin-top: 48px;
-    		position: relative;
-    		left: 8px;
-		}
-
-		&:last-of-type {
-    		position: relative;
-    		left: 8px;
-    		top: -5px;
-		}
-	}
-	
-} //end of pics div
-
-//---------------------------------------------------------------
+}
+//end of .wrap-content
 
 #view-prizes {
-	@media screen and (max-width:737px){
-		width:100%;
+	@media screen and (max-width:737px) {
+		width: 100%;
 	}
-
-	clear:both;
-	width:775px;
-	display:none;
+	clear: both;
+	width: 775px;
+	display: none;
 
 	img {
-		max-width:100%;
+		max-width: 100%;
 	}
-	
-} //end of #view-prizes div
-
-//---------------------------------------------------------------
-
-div[data="thanks"] {
-
-	overflow:hidden;
-
-	div {
-		&:first-of-type {
-			@media screen and (max-width:737px){
-				width:100%;
-			}
-
-			float:left;
-			width:512px;
-			text-align:center;
-			
-			h2 {
-				@media screen and (max-width:737px){
-					margin-top:25px;
-					font-size:23px;
-				}
-
-				font-family: 'brown-pro-bold' !important;
-    			margin-top: 76px;
-    			color: #b9c633;
-    			font-size: 32px;
-    			line-height: 31px;
-
-				span {
-					@media screen and (max-width:737px){
-						font-size: 46px;
-    					letter-spacing: 5px;
-    					left: 2px;
-					}
-
-					font-size: 58px;
-    				text-transform: uppercase;
-    				letter-spacing: 5px;
-    				position: relative;
-    				left: -3px;
-    				color:#d26f83;
-				}
-			}
-
-			p {
-				@media screen and (max-width:737px){
-					line-height: 15px;
-    				letter-spacing: .1px;
-    				left: 0;
-    				font-size: 13px;
-				}
-
-				font-size: 15px;
-    			margin-top: 10px;
-    			line-height: 20px;
-    			letter-spacing: 0.3px;
-    			position: relative;
-    			left: -5px;
-			}
-
-			.cta {
-				@media screen and (max-width:737px){
-					margin-top: 23px;
-    				margin-bottom: 30px;
-    				left: 0;
-				}
-
-				margin-top:24px;
-				left:-6px;
-				color:#fff;
-				background:#1e4382;
-				border-color:#1e4382;
-				margin-bottom:21px;
-
-				&:hover {
-					background:#fff;
-					color:#1e4382;
-				}
-			}
-		}
-
-		&:last-of-type {
-			@media screen and (max-width:737px){
-				display:none;
-			}
-
-			float:left;
-
-			img {
-				margin-top: 53px;
-    			position: relative;
-    			left: 12px;
-			}
-		}
-	}
-	
-} //end of thanks div
+}
+//end of #view-prizes div
