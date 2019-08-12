@@ -1,61 +1,63 @@
 @import "var.less";
 
-.c8 {
-	/* tablet */
-	@media screen and (min-width:767px) and (max-width:769px) {
-		width: 100%;
-		margin-right: 0;
-		/* margin-bottom: 0; */
-	}
-	width: 493px;
-	margin-bottom: 0;
+.hp.desktop {
+	.c8 {
+		/* tablet */
+		@media screen and (min-width:767px) and (max-width:769px) {
+			width: 100%;
+			margin-right: 0;
+			/* margin-bottom: 0; */
+		}
+		flex-basis: 1000px;
+		background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c8-d.png") no-repeat top;
+		min-height: 500px;
 
-	div {
-		.cta {
-			@media screen and (max-width:737px) {
-				//margin: 5px 0 0 0;
-				//2cta full width
-				/*
-				width:88%;
-				border:1px solid @hp-font-color;
-				margin:18px auto 0 auto;
-				float:none;
+		div {
+			width: 363px;
+			position: relative;
+			left: 62%;
+			top: 9px;
 
-				&.cta2 {
-					margin:13px 0 0 0;
+			p {
+				&.blog {
+					text-transform: uppercase;
+					font-family: gilroy-bold;
+					letter-spacing: 3px;
+					font-size: 12px;
+					color: #00DBC0;
 				}
-				*/
-				//2 column cta
-				/*
-				width: 41.5%;
-				margin-right: 5%;
-				left: 6%;
-				margin-top: 4px;
-				margin-left: 0;
-				*/
-				//2 cta stacked
-				/*
-    			&:last-of-type {
-    				margin:15px 0 0 0 !important;
-    			}
-    			*/
+				font-family: souvenirstd-light;
+				font-size: 20px;
+				margin: 23px 0 0;
+				line-height: 26px;
+				color: #fff;
 			}
-			//2 cta stacked
-			/*&:last-of-type {
-				margin:20px 0 0 0;
-			}*/
-			//2 column cta
-			/*
-			width: 140px;
-			float: left;
-			margin-right: 20px;
-			margin-left: 99px;
 
-			&:last-of-type {
-				margin-right: 0;
-				margin-left: 0;
+			h2 {
+				font-family: souvenirstd-light;
+				font-size: 50px;
+				margin: 18px 0 0;
+				line-height: 50px;
+				color: #E8E511;
 			}
-			*/
+
+			.cta {
+				@media screen and (max-width:737px) {}
+				border: none;
+				border-bottom: 1px solid;
+				height: auto;
+				padding: 0 0 5px;
+				width: auto;
+				margin: 37px 0 0;
+				letter-spacing: 3px;
+				color: #E8E511;
+
+				&:active,
+				&:hover {
+					background: none;
+					color: #E8E511;
+				}
+			}
 		}
 	}
 }

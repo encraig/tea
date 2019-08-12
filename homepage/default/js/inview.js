@@ -9,7 +9,7 @@ var changeSrc = function(array, attr1, attr2) {
 //lazy load the images
 //desktop
 if ($(window).width() > 737) {
-  $('.hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .c9').on('inview', function(e, i) {
+  $('.hp .c0, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .c9').on('inview', function(e, i) {
     // console.log('from inview');
     // console.log('images');
 
