@@ -4,79 +4,40 @@ var cells = [
   //cell 1
   {
     cell: '.c1',
-    slides: [
-      //first slide
-      {
-        imgUrl: '/swimwear',
-        name: '.first',
-        cta1: {
-          url: '/swimwear',
-          text: 'the swim shop',
-        },
-        cta2: {
-          url: '/swimwear',
-          text: 'the swim shop',
-        },
-        cta3: {
-          url: '/swimwear',
-          text: 'the swim shop',
-        },
-        cta4: {
-          url: '/swimwear',
-          text: 'the swim shop',
-        },
-      },
-      //second slide
-      {
-        imgUrl: '/girls-clothing/favorites/packing-list',
-        name: '.second',
-        cta1: {
-          url: '/girls-clothing/favorites/packing-list',
-          text: 'shop girl',
 
-        },
-        cta2: {
-          url: '/boys-clothing/favorites/packing-list',
-          text: 'shop boy',
+    img: {
+      url: '/sale/girls-clothing'
+    },
 
-        },
-        cta3: {
-          url: '/girls-clothing/favorites/packing-list',
-          text: 'shop girl',
+    cta1: {
+      url: '/girls-clothing/new-arrivals',
+      text: 'girl',
+    },
+    cta2: {
+      url: '/boys-clothing/new-arrivals',
+      text: 'boy',
+    },
+    cta3: {
+      url: '/sale/baby-girl-clothes',
+      text: 'baby girl',
+    },
+    cta4: {
+      url: '/sale/baby-boy-clothes',
+      text: 'baby boy',
+    },
+    cta5: {
+      url: '/sale/tween-girls-clothing/',
+      text: 'tween',
+    },
+    cta6: {
+      url: '/newborn-clothes/view-all',
+      text: 'newborn',
+    },
+    cta7: {
+      url: '/clothing-sale/view-all',
+      text: 'sale',
+    },
 
-        },
-        cta4: {
-          url: '/girls-clothing/favorites/packing-list',
-          text: 'shop boy',
-
-        },
-      },
-      //third slide
-      {
-        imgUrl: '/girls-clothing-sets',
-        name: '.third',
-        cta1: {
-          url: '/girls-clothing-sets',
-          text: 'shop girl',
-
-        },
-        cta2: {
-          url: '/boys-clothing-sets',
-          text: 'shop boy',
-
-        },
-        cta3: {
-          url: '/baby-girl-clothing-sets',
-          text: 'shop baby girl',
-
-        },
-        cta4: {
-          url: '/baby-boy-clothing-sets',
-          text: 'shop baby boy',
-
-        },
-      },
-    ],
   },
 
 
@@ -84,15 +45,15 @@ var cells = [
   {
     cell: '.c2',
     img: {
-      url: '/dress-shop'
+      url: '/baby-new-arrivals'
     },
     cta1: {
-      url: '/dress-shop',
-      text: 'shop dresses'
+      url: '/baby-new-arrivals',
+      text: 'shop baby new arrivals'
     },
     cta2: {
-      url: '/dress-shop',
-      text: 'shop dresses'
+      url: '/baby-new-arrivals',
+      text: 'shop baby new arrivals'
     }
   },
 
@@ -100,15 +61,15 @@ var cells = [
   {
     cell: '.c3',
     img: {
-      url: '/romper-shop'
+      url: '/girls-dresses'
     },
     cta1: {
-      url: '/romper-shop',
-      text: 'shop rompers + outfits'
+      url: '/girls-dresses',
+      text: 'shop girl dresses'
     },
     cta2: {
-      url: '/romper-shop',
-      text: 'shop rompers + outfits'
+      url: '/girls-dresses',
+      text: 'shop girl dresses'
     }
   },
 
@@ -116,15 +77,15 @@ var cells = [
   {
     cell: '.c4',
     img: {
-      url: '/shorts-shop'
+      url: '/tee-shop'
     },
     cta1: {
-      url: '/shorts-shop',
-      text: 'shop shorts'
+      url: '/tee-shop',
+      text: 'shop tees'
     },
     cta2: {
-      url: '/shorts-shop',
-      text: 'shop shorts'
+      url: '/tee-shop',
+      text: 'shop tees'
     }
   },
 
@@ -132,15 +93,15 @@ var cells = [
   {
     cell: '.c5',
     img: {
-      url: '/tween-girls-clothing/favorites/new-arrivals'
+      url: '/himalayas'
     },
     cta1: {
-      url: '/tween-girls-clothing/favorites/new-arrivals',
-      text: 'shop tween'
+      url: '/himalayas',
+      text: 'view our journey'
     },
     cta2: {
-      url: '/tween-girls-clothing/favorites/new-arrivals',
-      text: 'shop tween'
+      url: '/himalayas',
+      text: 'view our journey'
     }
   },
 
@@ -148,15 +109,15 @@ var cells = [
   {
     cell: '.c6',
     img: {
-      url: '/tee-shop'
+      url: '/giveback'
     },
     cta1: {
-      url: '/tee-shop',
-      text: 'the tee shop'
+      url: '/giveback',
+      text: 'learn more'
     },
     cta2: {
-      url: '/tee-shop',
-      text: 'the tee shop'
+      url: '/giveback',
+      text: 'learn more'
     }
   },
 

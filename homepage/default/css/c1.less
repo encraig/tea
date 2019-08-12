@@ -1,87 +1,25 @@
 @import "var.less"; //mobile styles
 //mobile
 
-.first,
-.fourth,
-.second,
-.third {
-	h2 {
-		margin: 31px 0 0;
-		font-size: 1.6em;
-		font-weight: normal;
-		font-family: brown-pro-bold;
-		text-transform: capitalize;
-		color: #757F4C;
-	}
-
-	p {
-		margin: 6px 0 10px;
-		font-size: 0.9em;
-		line-height: 17px;
-	}
-
-	.cta {
-		@media screen and (max-width:737px) {
-			width: 88%;
-			height: 30px;
-			padding: 5px 0 0;
-			color: @hp-font-color;
-			border-color: @hp-font-color;
-		}
-	}
-}
-
-.second,
-.third {
-	.cta {
-		@media screen and (max-width:737px) {
-			width: 42%;
-			left: -5px;
-			margin: 0 0 15px;
-
-			&.baby-boy,
-			&.boy,
-			&.cta2,
-			&.cta4 {
-				left: 6px;
-			}
-
-			&.cta5 {
-				left: 6%;
-				width: 88%;
-			}
-		}
-	}
-}
-
-.second {
-	.cta {
-		@media screen and (max-width:737px) {}
-	}
-}
-
-.third {
-	.cta {
-		@media screen and (max-width:737px) {}
-	}
-}
-
-.fourth {
-	.cta {
-		@media screen and (max-width:737px) {}
-	}
-}
-
 .c1 {
 	@media screen and (max-width:737px) {
 		background: none;
-		min-height: auto;
+		min-height: 420px;
 		margin: 0;
+		background: #006A6D;
 	}
-	// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0516/v1/c1-d.png") no-repeat top center;
+	@media screen and (min-width:413px) and (max-width:415px) {
+		min-height: 441px;
+	}
+	/* tablet */
+	@media screen and (min-width:767px) and (max-width:769px) {
+		background-size: contain;
+		min-height: 386px;
+	}
+	// background: url("https://www.teacollection.com/mas_assets/media/tea_collection/promos/eos/2019/0626/v1/190626-hp-d.png") no-repeat top center;
 	// background-size: cover;
 	min-height: 500px;
-	margin-bottom: 16px;
+	margin-bottom: 10px;
 	color: #fff;
 	// flex-basis: 100%;
 	overflow: hidden;
@@ -96,187 +34,32 @@
 			float: none;
 			margin: 0;
 			padding: 0;
+			left: 0;
+			top: 0;
 			text-align: center;
 		}
 		/* tablet */
 		@media screen and (min-width:767px) and (max-width:769px) {
-			margin: 0;
-			box-sizing: border-box;
-			padding: 0;
-			width: 200px;
-			float: none;
-			min-height: 430px;
+			top: 62px;
+			left: 432px;
 		}
 		// overflow: hidden;
-		margin: 0;
-		box-sizing: border-box;
-		padding: 0;
-		// width: 100%;
-		min-height: 500px;
-		// float: left;
-		//desktop styles
-		&.first,
-		&.fourth,
-		&.second,
-		&.third {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-size: contain !important;
-			}
-
-			.cta {
-				position: absolute;
-				color: #fff;
-				border-color: #fff;
-
-				&:active,
-				&:hover {
-					background: #fff;
-					color: #666;
-					border-color: #fff;
-				}
-			}
-		}
-
-		&.first {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: -92px 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0516/v1/c1-1-d.png") no-repeat top center;
-
-			.cta {
-				/* tablet */
-				@media screen and (min-width:767px) and (max-width:769px) {
-					left: 520px;
-					top: 266px;
-				}
-				left: 85px;
-				top: 281px;
-				display: block;
-				// color: @hp-font-color;
-				color: #fff;
-				border-color: #fff;
-				background: none;
-				position: relative;
-
-				&:active,
-				&:hover {
-					// background: @hp-font-color;
-					// color: #fff;
-					// border-color: @hp-font-color;
-				}
-			}
-		}
-
-		&.second {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: 0 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0516/v1/c1-2-d.png") no-repeat top center;
-
-			.cta {
-				/* tablet */
-				@media screen and (min-width:767px) and (max-width:769px) {
-					top: 209px;
-					left: 33px;
-				}
-				color: @hp-font-color;
-				border-color: #fff;
-				background: #fff;
-
-				&:active,
-				&:hover {
-					background: @hp-font-color;
-					color: #fff;
-					border-color: @hp-font-color;
-				}
-
-				&.girl {
-					top: 253px;
-					left: 85px;
-				}
-
-				&.boy {
-					top: 310px;
-					left: 85px;
-				}
-				// width: 250px;
-			}
-		}
-
-		&.third {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: 0 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0516/v1/c1-3-d.png") no-repeat top center;
-
-			.cta {
-				width: 175px;
-
-				&.girl {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 222px;
-						left: 245px;
-					}
-					top: 253px;
-					left: 315px;
-				}
-
-				&.boy {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 222px;
-						left: 436px;
-					}
-					top: 253px;
-					left: 511px;
-				}
-
-				&.baby-girl {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 275px;
-						left: 245px;
-					}
-					top: 310px;
-					left: 315px;
-				}
-
-				&.baby-boy {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {
-						top: 275px;
-						left: 436px;
-					}
-					top: 310px;
-					left: 511px;
-				}
-			}
-		}
-
-		&.fourth {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0516/v1/c1-4-d.png") no-repeat top center;
-
-			.cta {
-				/* tablet */
-				@media screen and (min-width:767px) and (max-width:769px) {
-					top: 209px;
-					left: 33px;
-				}
-				top: 263px;
-				left: 85px;
-				width: 250px;
-			}
-		}
-
+		// margin: 0;
+		// box-sizing: border-box;
+		// padding: 0;
+		// position: relative;
+		// top: 81px;
+		// left: 592px;
+		// width: 201px;
 		.text {
 			margin-top: 146px;
 			position: relative;
 			left: 4px;
+		}
+
+		p {
+			margin: 34px 0 0;
+			color: #fff;
 		}
 
 		.mobile-span {
@@ -287,71 +70,48 @@
 		}
 
 		.m-image {
-			margin: 0 0 40px;
+			margin: 0 0 30px;
+			left: 0;
 
 			img {
 				max-width: 100%;
 			}
 		}
 
-		h2 {
-			@media screen and (max-width:737px) {
-				//color: #7a7a7c;
-				display: inline;
-			}
-			font-size: 28px;
-			font-family: brown-pro-bold;
-			line-height: 32px;
-			text-align: left;
-			color: #F46560;
-			letter-spacing: 0;
-		}
-
-		p {
-			@media screen and (max-width:737px) {
-				color: #666;
-				margin: 0;
-				line-height: 18px;
-				//left: -2px;
-				top: -10px;
-				position: relative;
-				padding: 0;
-				text-align: center;
-				font-size: 0.9em;
-				line-height: 18px;
-				font-family: brown-pro-regular;
-				letter-spacing: 0.1px;
-			}
-			font-size: 15px;
-			line-height: 22px;
-			text-align: left;
-			color: #555;
-			letter-spacing: 0;
-			margin: 8px 0 0;
-		}
-
-		.cta {
+		a {
 			/* tablet */
 			@media screen and (min-width:767px) and (max-width:769px) {
-				color: #fff;
-				margin: 0 0 19px;
-				border: 2px solid #fff;
-				width: 175px;
-				background: none;
-				padding: 11px 0 0;
-				letter-spacing: 1px;
-				float: none;
+				margin: 0 21px 0 0;
 			}
-			@media screen and (max-width:737px) {
-				//.tween
-				&.tween {
-					width: 88%;
-					margin: 0 auto 20px !important;
-					left: 0;
-					display: block !important;
+			color: #fff;
+			// font-size: 16px;
+			text-transform: uppercase;
+			font-family: brown-pro-bold;
+			font-weight: normal;
+			position: relative;
+			text-decoration: none;
+
+			&.cta {
+				/* tablet */
+				@media screen and (min-width:767px) and (max-width:769px) {
+					margin: 0 0 19px;
+					width: 175px;
+					padding: 9px 0 0;
+					letter-spacing: 1px;
+					float: none;
+					height: 35px;
+					font-size: 16px;
 				}
-				//2cta full width
-				/*
+				@media screen and (max-width:737px) {
+					//.tween
+					&.tween {
+						width: 88%;
+						margin: 0 auto 20px !important;
+						left: 0;
+						display: block !important;
+					}
+					//2cta full width
+					/*
 				width:88%;
 				border:1px solid @hp-font-color;
 				margin:49px 0 0 0;
@@ -360,38 +120,68 @@
 					margin:13px 0 0 0;
 				}
 				*/
-				//2 cta
-				width: 42%;
-				left: 6px;
-				margin: 0 3% 15px 0;
-				color: @hp-font-color;
-				border-color: @hp-font-color;
-				border: 1px solid @hp-font-color;
-				padding: 6px 0 0;
-				top: 0;
-				height: 30px;
+					//2 cta
+					width: 42%;
+					left: -4px;
+					margin: 14px 0 0;
+					color: #E8E511;
+					background: none;
+					border: 1px solid #E8E511;
+					padding: 4px 0 0;
+					top: 0;
+					height: 28px;
+					font-size: 0.7em;
+					display: inline-block !important;
 
-				&.cta3,
-				&.cta4 {
-					// left: 0;
-					//margin: 0 3% 1px 0;
+					&.cta2 {
+						left: 7px;
+					}
+
+					&.cta3,
+					&.cta4 {
+						// left: 0;
+						//margin: 0 3% 1px 0;
+					}
 				}
-			}
-			color: @hp-font-color;
-			margin: 20px 0 0;
-			border: 1px solid @hp-font-color;
-			width: 200px;
-			background: none;
-			padding: 11px 0 0;
-			letter-spacing: 1px;
-			float: none;
 
-			&:active,
-			&:hover {
-				@media screen and (max-width:737px) {}
-				background: @hp-font-color;
-				color: #fff;
-				border: 1px solid @hp-font-color;
+				&.cta1,
+				&.cta3 {
+					// margin-right: 18px;
+				}
+
+				&.cta5 {
+					/* tablet */
+					@media screen and (min-width:767px) and (max-width:769px) {
+						// width: 358px;
+					}
+					@media screen and (max-width:737px) {
+						width: 81.5%;
+					}
+					// width: 430px;
+				}
+				color: #F16F6C;
+				margin: 0 0 19px;
+				border: 1px solid #F16F6C;
+				width: 200px;
+				background: none;
+				padding: 16px 0 0;
+				letter-spacing: 0;
+				float: none;
+				display: inline-block;
+				height: 48px;
+				font-size: 18px;
+
+				&:active,
+				&:hover {
+					@media screen and (max-width:737px) {
+						background: #E8E511;
+						color: @hp-font-color;
+						border: 1px solid #E8E511;
+					}
+					// background: #F16F6C;
+					// color: #Fff;
+					// border: 1px solid #F16F6C;
+				}
 			}
 		}
 	}
