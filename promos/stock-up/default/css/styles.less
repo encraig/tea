@@ -3,21 +3,30 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-.the-promo img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
+.the-promo {
+	//display: none;
+	img {
+		max-width: 100%;
+	}
 }
 
-.desktop-promo {
+.desktop-promo-fat,
+.mobile-promo-fat {
+	img {
+		image-rendering: -webkit-optimize-contrast;
+		max-width: 100%;
+	}
+}
+
+.desktop-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: none;
 	}
 }
 
-.mobile-promo {
+.mobile-promo-fat {
 	@media screen and (max-width: 736px) {
 		display: block;
-		text-align: center;
 	}
 	display: none;
 }
@@ -37,6 +46,8 @@ html {
 
 	.details-container {
 		margin: 27px;
+		// border-top: 1px solid #333333;
+		// border-bottom: 1px solid #333333;
 		padding: 20px 0;
 		background: #fff;
 
@@ -52,7 +63,7 @@ html {
 		}
 
 		.close-fancy {
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 768px) {
 				display: block;
 			}
 			display: none;
@@ -76,7 +87,7 @@ html {
 		margin-right: 2em;
 		margin-bottom: 2em;
 		text-align: center;
-		background: #425070;
+		background: #ff81bc;
 		color: #fff;
 		text-decoration: none;
 		letter-spacing: 1px;
@@ -90,7 +101,7 @@ html {
 		&.sale-cta {
 			@media screen and (max-width:737px) {
 				width: 98%;
-				left: 1%;
+				left: 0;
 			}
 			width: 94%;
 		}
