@@ -1,0 +1,299 @@
+<div class="wrap-content">
+	<div>
+		<h2>girl</h2>
+		<ul>
+			{sub_cats name="cat" category="girls-clothes"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>boy</h2>
+		<ul>
+			{sub_cats name="cat" category="boys-clothes"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>baby</h2>
+		<ul>
+			{sub_cats name="cat" category="baby-clothes"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>sale</h2>
+		<ul>
+			{sub_cats name="cat" category="clothing-sale"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>here to help</h2>
+		<ul>
+			{sub_cats name="cat" category="here-to-help"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>your order</h2>
+		<ul>
+			{sub_cats name="cat" category="order"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>our company</h2>
+		<ul>
+			{sub_cats name="cat" category="about"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>join us</h2>
+		<ul>
+			{sub_cats name="cat" category="affiliate"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>policy</h2>
+		<ul>
+			{sub_cats name="cat" category="policy"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+
+	<div>
+		<h2>destinations</h2>
+		<ul>
+			{sub_cats name="cat" category="the-destinations"}
+			<li>
+				<a href="{$cat.url}">{$cat.title}</a>
+				<ul>
+				{if $cat.subcats_count}
+				{sub_cats name="cat2" category=$cat.name}
+					<li>
+						<a href="{$cat2.url}">{$cat2.title}</a>
+						<ul>
+						{if $cat.subcats_count}
+						{sub_cats name="cat3" category=$cat2.name}
+							<li>
+								<a href="{$cat3.url}">{$cat3.title}</a>
+							</li>
+						{/sub_cats}
+						{/if}
+						</ul>
+					</li>
+				{/sub_cats}
+				{/if}
+				</ul>
+			</li>
+			{/sub_cats}
+		</ul>
+	</div>
+	
+</div>
+
+
+{literal}
+<style>
+	.wrap-content{font-size:1rem;display:flex;flex-wrap:wrap}.wrap-content div{flex-basis:25%}@media screen and (max-width:812px){.wrap-content div{flex-basis:50%}}@media screen and (max-width:414px){.wrap-content div{flex-basis:100%}}.wrap-content div h2{text-transform:capitalize}.wrap-content div ul{padding:0 0 0 2rem}
+</style>
+{/literal}

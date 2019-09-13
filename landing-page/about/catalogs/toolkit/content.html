@@ -1,0 +1,172 @@
+<article class="catalogs clearfix" id="flipBook"></article>
+
+<section class="navigation-catalog">
+	<h1>Browse Tea Catalogs</h1>
+	<ul></ul>
+</section>
+
+{literal}
+<style>
+	@media screen and (max-width:767px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:767px){.mobile{display:block}}#flipBook .issuuembed.issuu-isrendered{width:100% !important}#flipBook p{font-size:1rem;text-align:center;line-height:25px;margin:2rem auto;width:70%}@media screen and (max-width:1024px){#flipBook p{width:100%}}@media screen and (max-width:737px){#flipBook p{font-size:1rem}}.reader-container{background:#fff !important}.mobile-catalog{display:none}@media screen and (max-width:737px){.mobile-catalog{display:block}}.title{color:#333333;font-size:1.375rem;font-weight:normal;padding:0 0 10px;text-align:center;text-transform:uppercase}@media screen and (max-width:737px){.navigation-catalog{margin:0 !important;padding:2em;box-sizing:border-box}}@media screen and (max-width:737px){.navigation-catalog h1{padding:0 !important;margin:0 !important}}@media screen and (max-width:414px){.navigation-catalog h1{text-align:center}}.navigation-catalog ul{display:flex;flex-wrap:wrap;list-style-type:none}.navigation-catalog ul li{flex-basis:33%;height:auto;text-align:center;margin:2rem 0}@media screen and (max-width:1024px){.navigation-catalog ul li{flex-basis:50%}}@media screen and (max-width:414px){.navigation-catalog ul li{flex-basis:100%}}.navigation-catalog ul li[data-name="childrens-clothes-gifts-2009"] img,.navigation-catalog ul li[data-name="kids-baby-clothes-holidays-2009"] img{width:22%}@media screen and (max-width:414px){.navigation-catalog ul li[data-name="childrens-clothes-gifts-2009"] img,.navigation-catalog ul li[data-name="kids-baby-clothes-holidays-2009"] img{width:50%}}.navigation-catalog ul li:hover{cursor:pointer}.navigation-catalog ul li img{max-width:100%}.navigation-catalog ul li h4{letter-spacing:0;width:70%;margin:0 auto}.load-more{text-align:center}.load-more span{display:inline-block;border:1px solid;width:200px;position:relative;box-sizing:border-box;font-size:1rem;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;padding:12px 1px 9px 0;color:#572700}.load-more span:hover{background:#572700;cursor:pointer;color:#fff}.issuuembed div div:last-of-type{display:none !important}
+</style>
+
+<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.md5.js"></script>
+<script>
+	$(document).ready(function() {
+		//variables
+		var baseUrl = 'https://api.issuu.com/1_0';
+		var k = 'tl93eh3m2g89gui0dbgo374otpywg8sv';
+		var s = 'juixcxy7dri2nn0lwa6rh3eclyt39wkr';
+		var access = 'access=public';
+		var a1 = access.replace(/=/g, '');
+		var action = 'action=issuu.documents.list';
+		var a2 = action.replace(/=/g, '');
+		var format = 'format=json';
+		var f = format.replace(/=/g, '');
+		var pageSize = 'pageSize=';
+		var p = pageSize.replace(/=/g, '');
+		var sig1 = s + a1 + a2 + 'apiKey' + k + f;
+		// console.log(sig1);
+		sig1 = $.md5(sig1);
+		var issu = 'https://issuu.com/teacollection/docs/';
+
+		//function to output the catalog flipbook
+		var showCatalog = function(name, width, desc) {
+			var url = name;
+			url = issu + url;
+			url = encodeURIComponent(url);
+			$.get('https://issuu.com/oembed?url=' + url + '&format=json&maxwidth=' + width, function(data) {
+				// console.log(data);
+				$('#flipBook').append(data.html);
+				$('#flipBook').append('<p>' + desc + '</p>');
+			});
+		};
+
+		//function to output the thumbnails
+		var showThumbs = function() {
+			var thumbs = $('.navigation-catalog ul li');
+			$(thumbs).each(function(i, val) {
+				var url = $(val).attr('data-name');
+				url = issu + url;
+				url = encodeURIComponent(url);
+				$.get('https://issuu.com/oembed?url=' + url + '&format=json', function(data) {
+					// console.log(data);
+					$(val).prepend('<img src="' + data.thumbnail_url + '" alt="' + data.title + '"/>');
+				});
+			});
+		};
+
+		//function to change the height of the thumbnails
+		var changeHeight = function() {
+			var thumbHeight = 0;
+			var h4Height = 0;
+			setTimeout(function() {
+				$('.navigation-catalog ul li h4').each(function(i, val) {
+					var thisHeight = $(val).height();
+					// console.log(thumbHeight,thisHeight);
+					if (thisHeight > h4Height) {
+						h4Height = thisHeight;
+					}
+				});
+
+				$('.navigation-catalog ul li h4').css('height', h4Height);
+
+				var thumbs = $('.navigation-catalog ul li');
+				$(thumbs).each(function(i, val) {
+					var thisHeight = $(val).height();
+					// console.log(thumbHeight,thisHeight);
+					if (thisHeight > thumbHeight) {
+						thumbHeight = thisHeight;
+					}
+				});
+
+				thumbs.css('height', thumbHeight);
+
+			}, 2000);
+		};
+
+		//start the initial get of the catalogs
+		$.get(baseUrl + '?' + access + '&' + action + '&apiKey=' + k + '&' + format + '&signature=' + sig1, function(data) {
+			// console.log(data);
+			var totalCatalogs = data.rsp._content.result.totalCount;
+			var sig2 = s + a1 + a2 + 'apiKey' + k + f + p + totalCatalogs;
+			sig2 = $.md5(sig2);
+
+			//get all the catalogs
+			$.get(baseUrl + '?' + access + '&' + action + '&apiKey=' + k + '&' + format + '&pageSize=' + totalCatalogs + '&signature=' + sig2, function(data) {
+				console.log(data);
+				var catalogs = data.rsp._content.result._content;
+
+				// sort the catalogs from most recent
+				catalogs.sort(function(x, y) {
+					return new Date(y.document.publishDate) - new Date(x.document.publishDate);
+				});
+
+				//append the li with data-name
+				$(catalogs).each(function(i, val) {
+					var title = val.document.title;
+					title = title.replace('Tea Collection - ', '');
+					title = title.replace(/\(|\)/gi, '');
+					$('.navigation-catalog ul').append('<li data-name="' + val.document.name + '" data-desc="' + val.document.description + '"><h4>' + title + '</h4></li>');
+				});
+
+				//add load more button
+				// var more = data.rsp._content.result.more;
+				// if(more) {
+				// 	var pageSize = data.rsp._content.result.pageSize;
+				// 	$('.navigation-catalog').append('<div class="load-more"><span data-pageSize="'+pageSize+'">Load More</span></div>');
+				// }
+
+				//load the first catalog
+				var firstThumb = $('.navigation-catalog ul li:first-of-type').attr('data-name');
+				var firstDesc = $('.navigation-catalog ul li:first-of-type').attr('data-desc');
+				if ($(window).width() > 768) {
+					showCatalog(firstThumb, 1000, firstDesc);
+				} else if ($(window).width() < 768) {
+					var width = $('#flipBook').width();
+					showCatalog(firstThumb, width, firstDesc);
+				}
+
+				//load the thumbnails
+				showThumbs();
+
+				//change thumb height to the largest one
+				// changeHeight();
+
+				// $(window).resize(function(){
+				// 	$('.navigation-catalog ul li, .navigation-catalog ul li h4').removeAttr('style');
+				// 	changeHeight();
+				// });
+
+
+				//click thumb change the flipbook
+				$('.navigation-catalog ul li').click(function() {
+					console.log('li clicked');
+					var name = $(this).attr('data-name');
+					var desc = $(this).attr('data-desc');
+					$('#flipBook').children().remove();
+
+					if ($(window).width() > 768) {
+						showCatalog(name, 1000, desc);
+						window.scrollTo(0, 140);
+					} else if ($(window).width() < 768) {
+						var width = $('#flipBook').width();
+						showCatalog(name, width, desc);
+						window.scrollTo(0, 0);
+					}
+
+				});
+
+				//click load more button
+				// $('.load-more span').click(function(){
+				// 	var pageSize = $(this).attr('data-pageSize');
+				// 	console.log(pageSize);
+				// });
+
+			}); //end of $.get
+		}); //end of $.get
+
+
+	}); //end of .ready
+</script>
+{/literal}

@@ -1,0 +1,47 @@
+.founders-wrap {
+	header {
+		text-align: center;
+
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+
+	.details-container {
+		@media screen and (max-width:414px) {
+			flex-wrap: wrap;
+		}
+		display: flex;
+		margin: 5em 0 0;
+
+		div {
+			@media screen and (max-width:414px) {
+				flex-basis: 100%;
+				margin: 0 0 5em;
+			}
+			flex-basis: 50%;
+
+			img {
+				max-width: 100%;
+			}
+
+			ul {
+				list-style-type: none;
+
+				li {
+					h4 {
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom {
+		@media screen and (max-width:414px) {
+			margin: 0;
+		}
+		text-align: center;
+		margin: 5em 0 0;
+	}
+}
