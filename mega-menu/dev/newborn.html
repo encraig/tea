@@ -1,4 +1,18 @@
+<img id="mega-menu-newborn" class="mega-menu-img" alt="newborn" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/n.jpg">
 <style>
-  include "../css/newborn.css"
+  include "../css/girl.css"
 </style>
-<img class="mega-menu-newborn-img" alt="newborn" data-src="https://s.tea-global.net/mas_assets/cache/image/2/6/8/e/416x416-157920.Jpg">
+<script>
+  if ($(window).width() > 768) {
+    $('#mega-menu-newborn').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

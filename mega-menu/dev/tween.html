@@ -1,4 +1,18 @@
+<img id="mega-menu-tween" class="mega-menu-img" alt="tween girl" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/t.jpg">
 <style>
-  include "../css/tween.css"
+  include "../css/girl.css"
 </style>
-<img class="mega-menu-tween-img" alt="tween girl" data-src="https://www.teacollection.com/mas_assets/media/tea_collection/mega-menu/2019/0404/t.jpg">
+<script>
+  if ($(window).width() > 768) {
+    $('#mega-menu-tween').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

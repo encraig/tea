@@ -1,4 +1,18 @@
+<img id="mega-menu-girl" class="mega-menu-img" alt="mega menu" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/g.jpg">
 <style>
-
+  .mega-menu-img{width:100%;max-width:100%}
 </style>
-<img class="mega-menu-girl-img" alt="girl" data-src="https://www.teacollection.com/mas_assets/media/tea_collection/mega-menu/2019/0502/v1/g.jpg">
+<script>
+  if ($(window).width() > 768) {
+    $('#mega-menu-girl').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

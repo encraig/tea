@@ -1,4 +1,18 @@
+<img id="mega-menu-baby-girl" class="mega-menu-img" alt="baby girl" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/bg.jpg">
 <style>
-
+  .mega-menu-img{width:100%;max-width:100%}
 </style>
-<img class="mega-menu-baby-girl-img" alt="baby girl" data-src="https://www.teacollection.com/mas_assets/media/tea_collection/mega-menu/2019/0502/v1/bg.jpg">
+<script>
+  if ($(window).width() > 768) {
+    $('#mega-menu-baby-girl').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

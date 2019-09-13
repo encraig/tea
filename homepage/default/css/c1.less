@@ -1,249 +1,443 @@
-@import "var.less"; //mobile styles
-
-.first,
-.fourth,
-.second,
-.third,
-.zero {
-	.pos {
-		h2 {
-			font-size: 51px;
-			font-family: @souv;
-			line-height: 50px;
-			text-align: center;
-			color: #fff;
-			letter-spacing: 0;
-		}
-
-		p {
-			font-size: 20px;
-			line-height: 26px;
-			color: #fff;
-			letter-spacing: 0;
-			margin: 20px 0 0;
-			text-align: center;
-			font-family: @souv;
-		}
-
-		.cta {
-			@media screen and (max-width:737px) {
-				width: 88%;
-				height: 30px;
-				padding: 5px 0 0;
-				color: @hp-font-color;
-				border-color: @hp-font-color;
-			}
-			border: none;
-			border-bottom: 1px solid;
-			padding: 0 0 5px;
-			letter-spacing: 4px;
-			font-size: 12px;
-			width: auto;
-			height: auto;
-
-			&:active,
-			&:hover {
-				background: none;
-				color: #fff;
-			}
-		}
-	}
-}
-
 .c1 {
-	@media screen and (max-width:737px) {
-		background: none;
-		min-height: auto;
-		margin: 0;
-	}
-	min-height: 500px;
-	color: #fff;
+  overflow: hidden;
 
-	img {
-		max-width: 100%;
-	}
+  .slide {
+    position: relative;
 
-	div {
-		@media screen and (max-width:737px) {}
-		/* tablet */
-		@media screen and (min-width:767px) and (max-width:769px) {}
-		// overflow: hidden;
-		margin: 0;
-		box-sizing: border-box;
-		padding: 0;
-		min-height: 500px;
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
 
-		&.first,
-		&.fourth,
-		&.second,
-		&.third,
-		&.zero {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-size: contain !important;
-			}
+    div {
+      &.the-content {
+        @media screen and (max-width:812px) {
+          width: 100% !important;
+        }
+        @media screen and (max-width:767px) {
+          position: relative;
+        }
+        position: absolute;
+        text-align: center;
+      }
 
-			.cta {
-				color: #fff;
-				border-color: #fff;
+      a,
+      h2,
+      p {
+        @media screen and (max-width:812px) {
+          color: #fff !important;
+        }
+        color: #fff;
+        font-family: souvenirstd-light;
+        margin: 0 auto;
+      }
 
-				&:active,
-				&:hover {}
-			}
-		}
+      h2 {
+        @media screen and (min-width:1680px) {
+          font-size: 100px;
+        }
+        @media screen and (max-width:812px) {
+          font-size: 10.4vw;
+        }
+        font-size: 5.4vw;
+      }
 
-		&.first {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: -92px 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-1-d.png") no-repeat top center;
+      p {
+        @media screen and (min-width:1680px) {
+          font-size: 29px !important;
+        }
+        @media screen and (max-width:1024px) {
+          font-size: 1.8vw;
+        }
+        @media screen and (max-width:812px) {
+          font-size: 2.8vw !important;
+        }
+        @media screen and (max-width:767px) {
+          font-size: 4.4vw !important;
+        }
+        font-size: 1.5vw;
+      }
 
-			.pos {
-				width: 215px;
-				position: relative;
-				left: 60%;
-				min-height: auto;
-				top: 91px;
+      a {
+        @media screen and (min-width:1680px) {
+          font-size: 21px;
+        }
+        @media screen and (max-width:812px) {
+          font-size: 2vw;
+        }
+        @media screen and (max-width:767px) {
+          font-size: 3.6vw;
+        }
+        font-family: gilroy-bold;
+        font-size: 1.1vw;
+      }
+    }
 
-				h2,
-				p {
-					text-align: center;
-				}
+    &.slide1,
+    &.slide2,
+    &.slide4 {
+      div {
+        &.the-content {
+          @media screen and (max-width:767px) {
+            padding: 6% 0 11%;
+          }
+        }
+      }
+    }
 
-				.cta {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {}
-					margin: 41px 0 0;
+    &.slide0 {
+      @media screen and (max-width:767px) {
+        background: #ffdee5;
+        padding: 0 0 2%;
+      }
 
-					&:active,
-					&:hover {}
-				}
-			}
-		}
+      div {
+        &.the-content {
+          @media screen and (max-width:768px) {
+            top: 80%;
+            left: 66%;
+            width: 21% !important;
+          }
+          // @media screen and (max-width:767px) {
+          //   top: 0;
+          // }
+          @media screen and (max-width:414px) {
+            position: absolute;
+            width: 100% !important;
+            left: 0;
+            top: 84%;
+          }
+          top: 77%;
+          right: 0;
+          width: 49%;
+        }
 
-		&.second {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: 0 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-2-d.png") no-repeat top center;
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 23px 0 0;
+          }
+          @media screen and (max-width:812px) {
+            margin: 5% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 9% 0 0;
+          }
+          margin: 48px 0 0;
 
-			.pos {
-				width: 260px;
-				position: relative;
-				left: 67%;
-				min-height: auto;
-				top: 125px;
+          a {
+            @media screen and (min-width:768px) and (max-width:769px) {
+              color: #ecd867 !important;
+            }
+            @media screen and (max-width:414px) {
+              color: #8d0034 !important;
+            }
+            color: #8d0034 !important;
+          }
+        }
+      }
+    }
 
-				h2 {
-					color: #70B3BB;
-				}
+    &.slide1 {
+      @media screen and (max-width:767px) {
+        background: #A66E97;
+      }
 
-				.cta {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {}
-					color: #70B3BB;
-					margin: 41px 0 29px;
-					border-color: #70B3BB;
-					left: 6%;
+      div {
+        &.the-content {
+          @media screen and (max-width:812px) {
+            top: 48%;
+          }
+          @media screen and (max-width:767px) {
+            top: 0;
+          }
+          top: 20%;
+          right: 0;
+          width: 49%;
+        }
 
-					&.cta2 {
-						margin: 0;
-					}
-				}
-			}
-		}
+        h2 {
+          @media screen and (max-width:812px) {
+            width: 100%;
+          }
+          @media screen and (max-width:767px) {
+            color: #E8E511 !important;
+          }
+          width: 50%;
+          color: #CC478E;
+        }
 
-		&.third {
-			/* tablet */
-			@media screen and (min-width:767px) and (max-width:769px) {
-				background-position: 0 0 !important;
-			}
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-3-d.png") no-repeat top center;
+        p {
+          @media screen and (max-width:1024px) {
+            width: 64%;
+            margin: 13px auto 0;
+          }
+          @media screen and (max-width:812px) {
+            width: 70%;
+            margin: 1% auto 0;
+          }
+          @media screen and (max-width:767px) {
+            color: #98BBCF !important;
+            width: 80%;
+          }
+          font-size: 1.5vw;
+          width: 49%;
+          margin: 0 auto;
+          color: #EBC6E6;
+        }
 
-			.pos {
-				width: 380px;
-				position: relative;
-				left: 61%;
-				top: 160px;
-				min-height: auto;
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 23px 0 0;
+          }
+          @media screen and (max-width:812px) {
+            margin: 5% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 9% 0 0;
+          }
+          margin: 48px 0 0;
 
-				.cta {
-					margin: 39px 0 0;
-					left: 20%;
-				}
-			}
-		}
+          &:last-of-type {
+            @media screen and (max-width:1024px) {
+              margin: 36px 0 0;
+            }
+            @media screen and (max-width:812px) {
+              margin: 3% 0 0;
+            }
+            @media screen and (max-width:767px) {
+              margin: 8% 0 0;
+            }
+            margin: 34px 0 0;
+          }
 
-		&.fourth {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-4-d.png") no-repeat top center;
+          a {}
+        }
+      }
+    }
 
-			.pos {
-				width: 380px;
-				position: relative;
-				left: 3%;
-				top: 141px;
+    &.slide2 {
+      @media screen and (max-width:767px) {
+        background: #22458D;
+      }
 
-				.cta {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {}
-					margin: 40px 0 0;
-					left: 14%;
-				}
-			}
-		}
+      div {
+        &.the-content {
+          @media screen and (max-width:812px) {
+            top: 47.5%;
+          }
+          @media screen and (max-width:767px) {
+            top: 0;
+          }
+          top: 22%;
+          right: 0;
+          width: 33.3%;
 
-		&.zero {
-			background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-0-d.png") no-repeat top center;
+          img {
+            @media screen and (max-width:812px) {
+              display: none;
+            }
+            width: 68%;
+            display: block;
+            margin: 0 auto;
+          }
+        }
 
-			.pos {
-				width: 380px;
-				position: relative;
-				left: 58%;
-				top: 102px;
-				text-align:center;
+        h2 {
+          @media screen and (max-width:812px) {
+            width: 100%;
+          }
+          @media screen and (max-width:767px) {
+            color: #CDB81C !important;
+          }
+          width: 58%;
+          color: #CDB81C;
+        }
 
-				h2 {
-					font-size: 63px;
-					font-family: souvenirstd-light;
-					line-height: 61px;
-					text-align: center;
-					color: #fff;
-					letter-spacing: 0;
-				}
+        p {
+          @media screen and (max-width:1024px) {
+            width: 64%;
+            margin: 13px auto 0;
+          }
+          @media screen and (max-width:812px) {
+            width: 54%;
+            margin: 1% auto 0;
+          }
+          @media screen and (max-width:767px) {
+            color: #E59DD2 !important;
+            width: 60%;
+          }
+          font-size: 1.5vw;
+          width: 70%;
+          margin: 7px auto 0;
+          color: #E59DD2;
+        }
 
-				.cta {
-					/* tablet */
-					@media screen and (min-width:767px) and (max-width:769px) {}
-					margin: 28px 0 0;
-					left: 0;
-					padding: 0 0 9px;
-					// font-size: 16px;
-				}
-			}
-		}
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 23px 0 0;
+          }
+          @media screen and (max-width:812px) {
+            margin: 5% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 9% 0 0;
+          }
+          margin: 56px 0 0;
 
-		.text {
-			margin-top: 146px;
-			position: relative;
-			left: 4px;
-		}
+          &:last-of-type {
+            @media screen and (max-width:1024px) {
+              margin: 36px 0 0;
+            }
+            @media screen and (max-width:812px) {
+              margin: 4% 0 0;
+            }
+            @media screen and (max-width:767px) {
+              margin: 8% 0 0;
+            }
+            margin: 36px 0 0;
+          }
 
-		.mobile-span {
-			@media screen and (max-width:737px) {
-				display: inline-block;
-			}
-			display: none;
-		}
+          a {}
+        }
+      }
+    }
 
-		.m-image {
-			margin: 0 0 40px;
+    &.slide3 {
+      @media screen and (max-width:767px) {
+        background: #A30069;
+      }
 
-			img {
-				max-width: 100%;
-			}
-		}
-	}
+      div {
+        &.the-content {
+          @media screen and (max-width:1024px) {
+            top: 26%;
+          }
+          @media screen and (max-width:812px) {
+            top: 55%;
+          }
+          @media screen and (max-width:767px) {
+            padding: 6% 0 25%;
+            top: 0;
+          }
+          top: 25%;
+          left: 0;
+          width: 48%;
+        }
+
+        h2 {
+          @media screen and (max-width:1024px) {
+            width: 50%;
+          }
+          @media screen and (max-width:812px) {
+            width: 100%;
+          }
+          @media screen and (max-width:767px) {
+            color: #70B3BB !important;
+            width: 100%;
+          }
+          width: 58%;
+          color: #E8E511;
+        }
+
+        p {
+          @media screen and (max-width:1024px) {
+            width: 47%;
+          }
+          @media screen and (max-width:767px) {
+            width: 70%;
+            color: #E8E511 !important;
+          }
+          width: 45%;
+          color: #EF56A8;
+        }
+
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 37px 0 0;
+          }
+          @media screen and (max-width:812px) {
+            margin: 43px 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 12% 0 0;
+          }
+          margin: 53px 0 0;
+
+          a {}
+        }
+      }
+    }
+
+    &.slide4 {
+      @media screen and (max-width:767px) {
+        background: #70B3BB;
+      }
+
+      div {
+        &.the-content {
+          @media screen and (max-width:812px) {
+            top: 48%;
+          }
+          @media screen and (max-width:767px) {
+            top: 0;
+          }
+          top: 27.5%;
+          width: 48%;
+          right: 0;
+        }
+
+        h2 {
+          @media screen and (max-width:812px) {
+            width: 48%;
+          }
+          @media screen and (max-width:767px) {
+            color: #A30069 !important;
+            width: 100%;
+          }
+          width: 60%;
+          color: #77E4DD;
+        }
+
+        p {
+          @media screen and (max-width:812px) {
+            width: 55%;
+          }
+          @media screen and (max-width:767px) {
+            width: 65%;
+            color: #E8E511 !important;
+          }
+          width: 55%;
+          color: #E8E511;
+        }
+
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 30px 0 0;
+          }
+          @media screen and (max-width:812px) {
+            margin: 5.5% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 10% 0 0;
+          }
+          margin: 68px 0 0;
+
+          &:last-of-type {
+            @media screen and (max-width:1024px) {
+              margin: 36px 0 0;
+            }
+            @media screen and (max-width:812px) {
+              margin: 3% 0 0;
+            }
+            @media screen and (max-width:767px) {
+              margin: 8% 0 0;
+            }
+            margin: 35px 0 0;
+          }
+
+          a {}
+        }
+      }
+    }
+  }
 }
-// end of .c1

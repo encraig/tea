@@ -1,15 +1,26 @@
-<!-- ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c1-0-d-ref.png" class="ref" /> -->
+<!-- <img src="/mas_assets/media/tea_collection/promos/one-offs/2019/0910/v2/190910-hp-d-ref.jpg" class="ref"> -->
 
-<link href="https://www.teacollection.com/mas_assets/media/tea_collection/fonts/gilroy/gilroy-font.css" rel="stylesheet" type="text/css">
+<div class="hp">
+  include "c1.html"
+  include "c2.html"
+  include "c3.html"
+  include "c4.html"
+  include "c5.html"
+  include "c6.html"
+  include "c7.html"
+  include "c8.html"
 
-include "desktop.html"
-include "mobile.html"
+</div>
 
-<!--toolkit -->
+<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
+<!-- <script src="/mas_assets/media/tea_collection/js/jquery.inview.js"></script> -->
+<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
+
 <style>
-  include "../css/global.css"
-  include "../css/styles.css"
+  /* include "../css/elements.css" */
+  include "../css/classes.css"
+  /* include "../css/body.css" */
+  include "../css/hp.css"
   include "../css/c1.css"
   include "../css/c2.css"
   include "../css/c3.css"
@@ -18,50 +29,46 @@ include "mobile.html"
   include "../css/c6.css"
   include "../css/c7.css"
   include "../css/c8.css"
-  include "../css/c9.css"
+  include "../css/cell-bxslider.css"
+  include "../css/bxslider.css"
+  /* include "../css/dashudson.css" */
 </style>
 
-<!-- responsive image maps plugin -->
-<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
-
-<!-- bx slider development-->
-<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" /> -->
-
-<!-- inview development-->
-<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.inview.js"></script> -->
-
-<!-- bx slider production-->
-<script src="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/bxslider/jquery.bxslider.css" />
-
-<!-- bx slick production-->
-<!-- <script src="/mas_assets/theme/tea_collection/js/slick/slick.min.js"></script>
-<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick.css"/>
-<link rel="stylesheet" href="/mas_assets/theme/tea_collection/js/slick/slick-theme.css"/> -->
-
-<!-- track vimeo play gtm -->
-<!-- <script src="/mas_assets/media/tea_collection/js/vimeo.ga.min.js"></script> -->
-
 <script>
-  $(document).ready(function(e) {
-    // $('img[usemap]').rwdImageMaps();
+  $(document).ready(function() {
+    //tracking
+    include "../js/tracking.js"
 
-    //add data-page attr to all <a>
-    $('a').attr('data-page', 'home page');
+    //add alt
+    include "../js/alt.js"
 
-    include "../js/output/inview.min.js"
+    //add urls
+    include "../js/urls.js"
+    include "../js/c1.js"
 
-    include "../js/output/cells.min.js"
+    //inview
+    include "../js/inview.js"
 
-    include "../js/output/loop-cells.min.js"
+    //sliders
+    include "../js/sliders.js"
 
-    include "../js/output/start-slideshow.min.js"
-
-    //small mobile
-    if ($(window).width() < 321) {
-      $('.hp').find('p').find('br').remove();
-    }
+    // var sc = document.createElement('script');
+    // sc.src = 'https://cdn.dashhudson.com/web/js/board-carousel-embed.js';
+    // sc.type = 'text/javascript';
+    // $(sc).attr('data-name', 'dhboard-carousel');
+    // $(sc).attr('data-id', '336947275');
+    // $(sc).attr('data-board-id', '12337');
+    // $(sc).attr('data-row-size', '1');
+    // $(sc).attr('data-gap-size', '1');
+    // $(sc).attr('data-mobile-row-size', '1');
+    // $(sc).attr('data-mobile-gap-size', '1');
+    // $(sc).attr('show-header', '0');
+    // // $(sc).attr('data-autoplay', 'true');
+    // $(sc).attr('data-scroll-disabled', 'true');
+    // $(sc).attr('data-call-to-action', 'shop_now');
+    // $(sc).attr('data-infinite', 'true');
+    // // console.log(sc);
+    // $('.dash').append(sc);
 
   });
 </script>

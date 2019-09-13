@@ -1,0 +1,18 @@
+<img id="mega-menu-toddler-boy" class="mega-menu-img" alt="toddler boy" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/tb.jpg">
+<style>
+  .mega-menu-img{width:100%;max-width:100%}
+</style>
+<script>
+  if ($(window).width() > 768) {
+    $('#mega-menu-toddler-boy').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

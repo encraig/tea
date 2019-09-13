@@ -1,15 +1,29 @@
-<style>
-  include "../css/sale.css"
-</style>
 <!-- default -->
-<a href="/clothing-sale" id="content-block">
+<!-- <a href="/clothing-sale" id="content-block">
   <div class="content-block">
     <div>&nbsp;</div>
     <h2>See what's new on <span>Sale</span></h2>
   </div>
-</a>
+</a> -->
 
 <!-- image -->
-<!-- <a href="/clothing-sale">
-  <img class="mega-menu-sale-img" alt="sale" data-src="https://www.teacollection.com/mas_assets/media/tea_collection/mega-menu/2019/0404/s.jpg">
-</a> -->
+<a href="/clothing-sale">
+  <img class="mega-menu-sale-img" alt="sale" data-src="/mas_assets/media/tea_collection/mega-menu/2019/0904/sale.svg">
+</a>
+<style>
+  include "../css/sale.css"
+</style>
+<script>
+  if ($(window).width() > 768) {
+    $('.mega-menu-sale-img').on('inview', function(event, isInView) {
+      if (isInView) {
+        // element is now visible in the viewport
+        // console.log('in view');
+        var src = $(this).attr('data-src');
+        console.log(src);
+        $(this).attr('src', src);
+        $(this).removeAttr('data-src');
+      }
+    });
+  }
+</script>

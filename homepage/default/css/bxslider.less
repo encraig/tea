@@ -1,0 +1,49 @@
+.bx-wrapper {
+  margin: 0 !important;
+
+  .bx-viewport {
+    background: none;
+  }
+
+  .bx-controls {
+    margin: -45px 0 0;
+
+    .bx-pager.bx-default-pager {
+      @media screen and (max-width:1024px) {
+        top: -16.6rem;
+      }
+      @media screen and (max-width:812px) {
+        transform: rotate(0);
+        left: 0;
+        top: 0;
+      }
+      @media screen and (max-width:414px) {
+        top: -21rem;
+      }
+      @media screen and (max-width:375px) {
+        top: -19rem;
+      }
+      display: block;
+      transform: rotate(90deg);
+      position: relative;
+      left: 47.5%;
+      top: -29.6rem;
+
+      .bx-pager-item {
+        a {
+          border-radius: 7px;
+          background: #fff;
+          opacity: 0.5;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .bx-controls-direction {
+      display: none;
+    }
+  }
+}

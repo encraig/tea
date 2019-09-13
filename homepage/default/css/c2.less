@@ -1,63 +1,99 @@
-@import "var.less";
+.c2 {
+  @media screen and (max-width:767px) {
+    margin: 0;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
 
-.hp {
-	.c2 {
-		div {
-			.cta {
-				@media screen and (max-width:737px) {
-					//2cta full width
-					/*
-				width:88%;
-				border:1px solid @hp-font-color;
-				margin:18px auto 0 auto;
-				float:none;
+  div {
+    &.first,
+    &.second {
+      display: flex;
+    }
 
-				&.cta2 {
-					margin:13px 0 0 0;
-				}
-				*/
-					//2 cta stacked
-					/*
-				&:last-of-type {
-					margin:15px 0 0 0 !important;
-				}
-				*/
-					//2 column cta
-					/*
-				width: 42%;
-				margin-right: 7%;
-				left: 21px;
-				top: 4px;
-				margin-top: 0;
+    &.first {
+      @media screen and (max-width:767px) {
+        padding: 0 0 13%;
+        order: 2;
+      }
 
-				&.cta2 {
-					left: 6px;
-				}
-				*/
-				}
-				//2 cta stacked
-				/*
-			&:last-of-type {
-				@media screen and (max-width:737px) {
-					margin: 0;
-				}
-				margin: 20px 0 0;
-			}
-			*/
-				//2 column cta
-				/*
-			width: 140px;
-    		float: left;
-    		margin-right: 20px;
-    		margin-left: 13px;
+      .slides {
+        a {}
+      }
+    }
 
-    		&:last-of-type {
-    			margin-right:0;
-    			margin-left:0;
-    		}
-    		*/
-			}
-		}
-	}
+    &.second {
+      position: relative;
+      @media screen and (max-width:1024px) {}
+      @media screen and (max-width:767px) {
+        order: 1;
+      }
+
+      img {
+        @media screen and (max-width:1024px) {
+          align-self: center;
+        }
+        width: 100%;
+      }
+
+      .the-content {
+        @media screen and (max-width:1024px) {
+          top: 33%;
+        }
+        @media screen and (max-width:767px) {
+          top: 39%;
+        }
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 267px;
+
+        h2 {
+          @media screen and (min-width:1680px) {
+            font-size: 89px;
+          }
+          @media screen and (max-width:1024px) {
+            font-size: 5.4vw;
+          }
+          @media screen and (max-width:767px) {
+            font-size: 11.4vw;
+          }
+          font-family: souvenirstd-light;
+          display: block;
+          text-align: center;
+          font-size: 4.6vw;
+          margin: 0 auto;
+          position: relative;
+          color: #fff;
+          width: 65%;
+        }
+
+        div {
+          @media screen (max-width:1024px) {
+            margin: 2% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 8% 0 0;
+          }
+          margin: 35px 0 0;
+
+          &:last-of-type {
+            @media screen and (max-width:1024px) {
+              margin: 4% 0 0;
+            }
+          }
+
+          a {
+            @media screen and (min-width:1680px) {
+              font-size: 22px;
+            }
+            @media screen and (max-width:1024px) {}
+            @media screen and (max-width:767px) {}
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
-//end of .c2

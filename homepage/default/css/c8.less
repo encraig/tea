@@ -1,64 +1,143 @@
-@import "var.less";
+.c8 {
+  @media screen and (max-width:1024px) {
+    padding: 3em 0;
+  }
+  @media screen and (max-width:768px) {
+    padding: 2em 0;
+  }
+  @media screen and (max-width:767px) {
+    padding: 6% 0 19%;
+  }
+  display: flex;
+  background: #006A6D;
+  flex-wrap: wrap;
+  padding: 5em 0;
 
-.hp.desktop {
-	.c8 {
-		/* tablet */
-		@media screen and (min-width:767px) and (max-width:769px) {
-			width: 100%;
-			margin-right: 0;
-			/* margin-bottom: 0; */
-		}
-		flex-basis: 1000px;
-		background: url("https://www.teacollection.com/mas_assets/media/tea_collection/homepage/2019/0724/v2/c8-d.png") no-repeat top;
-		min-height: 500px;
+  div {
+    &.first,
+    &.second {}
 
-		div {
-			width: 363px;
-			position: relative;
-			left: 62%;
-			top: 9px;
+    &.first {
+      @media screen and (max-width:767px) {
+        flex-basis: 100%;
+        text-align: center;
+      }
+      flex-basis: 67%;
+      text-align: right;
 
-			p {
-				&.blog {
-					text-transform: uppercase;
-					font-family: gilroy-bold;
-					letter-spacing: 3px;
-					font-size: 12px;
-					color: #00DBC0;
-				}
-				font-family: souvenirstd-light;
-				font-size: 20px;
-				margin: 23px 0 0;
-				line-height: 26px;
-				color: #fff;
-			}
+      img {
+        @media screen and (max-width:767px) {
+          width: 89%;
+        }
+        width: 94%;
+      }
+    }
 
-			h2 {
-				font-family: souvenirstd-light;
-				font-size: 50px;
-				margin: 18px 0 0;
-				line-height: 50px;
-				color: #E8E511;
-			}
+    &.second {
+      @media screen and (max-width:767px) {
+        flex-basis: 100%;
+      }
+      flex-basis: 33%;
+      position: relative;
 
-			.cta {
-				@media screen and (max-width:737px) {}
-				border: none;
-				border-bottom: 1px solid;
-				height: auto;
-				padding: 0 0 5px;
-				width: auto;
-				margin: 37px 0 0;
-				letter-spacing: 3px;
-				color: #E8E511;
+      .the-content {
+        @media screen and (max-width:1024px) {
+          top: 9%;
+        }
+        @media screen and (max-width:767px) {
+          top: 0;
+          position: relative;
+          padding: 12% 0 0;
+        }
+        position: absolute;
+        top: 89px;
+        text-align: center;
 
-				&:active,
-				&:hover {
-					background: none;
-					color: #E8E511;
-				}
-			}
-		}
-	}
+        h2,
+        p {
+          font-family: souvenirstd-light;
+          text-align: center;
+        }
+
+        span {
+          @media screen and (min-width:1680px) {
+            font-size: 22px;
+          }
+          @media screen and (max-width:1024px) {
+            font-size: 1.5vw;
+            letter-spacing: 3px;
+          }
+          @media screen and (max-width:767px) {
+            font-size: 4vw;
+          }
+          display: block;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1.1vw;
+          font-family: gilroy-bold;
+          color: #00DBC0;
+          letter-spacing: 8px;
+        }
+
+        h2 {
+          @media screen and (min-width:1680px) {
+            font-size: 89px;
+          }
+          @media screen and (max-width:1024px) {
+            font-size: 5vw;
+            width: 80%;
+            margin: 3% auto 0;
+          }
+          @media screen and (max-width:767px) {
+            font-size: 10vw;
+            margin: 4% auto 0;
+          }
+          font-size: 4.5vw;
+          margin: 41px auto 0;
+          color: #CDB81C;
+          text-transform: capitalize;
+          position: relative;
+          width: 90%;
+        }
+
+        p {
+          @media screen and (min-width:1680px) {
+            font-size: 29px;
+          }
+          @media screen and (max-width:1024px) {
+            font-size: 1.8vw;
+            width: 75%;
+          }
+          @media screen and (max-width:767px) {
+            font-size: 4.4vw;
+            width: 62%;
+            margin: 2% auto 0;
+          }
+          font-size: 1.5vw;
+          margin: 0 auto;
+          position: relative;
+          color: #fff;
+          width: 71%;
+        }
+
+        div {
+          @media screen and (max-width:1024px) {
+            margin: 14% 0 0;
+          }
+          @media screen and (max-width:767px) {
+            margin: 11% 0 0;
+          }
+          margin: 53px 0 0;
+
+          a {
+            @media screen and (min-width:1680px) {
+              font-size: 22px;
+            }
+            color: #CDB81C;
+            font-size: 1.1vw;
+          }
+        }
+      }
+    }
+  }
 }
-//end of .c6
