@@ -3,41 +3,23 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
-.sale-promo,
-.size-promo {
-	display: none;
-}
-
-.desktop-promo img,
-.desktop-promo-hp img,
-.mobile-promo img,
-.mobile-promo-hp img,
-.sale-promo img,
-.size-promo img {
+.the-promo img {
 	image-rendering: -webkit-optimize-contrast;
 	max-width: 100%;
 }
 
-.desktop-promo,
-.desktop-promo-hp {
+.desktop-promo {
 	@media screen and (max-width: 736px) {
 		display: none;
 	}
 }
 
-.mobile-promo,
-.mobile-promo-hp {
+.mobile-promo {
 	@media screen and (max-width: 736px) {
 		display: block;
 		text-align: center;
-		background: #c62695;
 	}
 	display: none;
-
-	img {
-		//width:100%;
-		image-rendering: -webkit-optimize-contrast;
-	}
 }
 
 #details-promo {
@@ -62,8 +44,6 @@ html {
 			text-transform: uppercase;
 			font-size: 15px;
 			letter-spacing: 1px;
-			font-family: brown-pro-bold !important;
-			font-weight: normal;
 		}
 
 		p {
@@ -92,12 +72,12 @@ html {
 		box-sizing: border-box;
 		text-transform: uppercase;
 		display: inline-block;
-		width: 45%;
+		width: 46%;
 		margin-right: 2em;
 		margin-bottom: 2em;
 		text-align: center;
-		background: #7AABA7;
-		color: #fff;
+		background: #9cccea;
+		color: #903f49;
 		text-decoration: none;
 		letter-spacing: 1px;
 		font-family: brown-pro-bold !important;
@@ -107,10 +87,11 @@ html {
 		}
 
 		&.newborn-cta,
-		&.sale-cta {
+		&.sale-cta,
+		&.tween-cta {
 			@media screen and (max-width:737px) {
-				width: 98%;
-				left: 1%;
+				width: 100%;
+				left: 0;
 			}
 			width: 94%;
 		}
