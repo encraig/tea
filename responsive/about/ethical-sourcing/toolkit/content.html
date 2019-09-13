@@ -1,0 +1,62 @@
+<div class="wrap-content">
+  <header>
+    <h1>Our Manufacturing Partners</h1>
+    <h2>RESPONSIBLE RELATIONSHIPS, ETHICAL SOURCING</h2>
+    <img src="https://s.tea-global.net/mas_assets/theme/tea_collection/images/about/ethical-sourcing.jpg">
+    <p>Respect for all people in all cultures is a cornerstone of our company, whether we're traveling the world in search of inspiration for our clothing collection or hiring a manufacturing partner to actually make the clothes in that collection.
+    </p>
+    <p>We follow ethical sourcing practices so we can all feel good about our global impact. We are mindful of our presence in the world and our responsibility to those around us. </p>
+    <p>While we can't be in every factory all the time, we are incredibly diligent to ensure that our partners around the globe follow the highest possible standards. We have no tolerance for anything unlawful or even slightly questionable.</p>
+  </header>
+  <div class="partners">
+    <div><img src="/mas_assets/theme/tea_collection/images/about/ethical-img1.jpg"></div>
+    <div><img src="/mas_assets/theme/tea_collection/images/about/ethical-img2.jpg"></div>
+    <p>Our partners from Thailand visited the Tea home office in San Francisco and shared a beautiful piece of art.</p>
+  </div>
+  <div class="faq">
+    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+    <ul></ul>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width:736px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:736px){.mobile{display:block}}.wrap-content img{max-width:100%}.wrap-content p{font-size:1rem}.wrap-content header{height:auto}.wrap-content div.partners{display:flex;flex-wrap:wrap}.wrap-content div.partners div{flex-basis:50%}@media screen and (max-width:414px){.wrap-content div.partners div{flex-basis:100%;margin:0 0 1rem}}.wrap-content div.partners p{flex-basis:100%}.wrap-content div.faq ul{list-style-type:none}
+</style>
+
+<script>
+  $(document).ready(function() {
+    var faq = [{
+        q: 'Where is your clothing made? ',
+        a: 'We work with several different factories in Peru, India, Thailand, Vietnam, Bulgaria and China.'
+      },
+      {
+        q: 'Are any of your products made in the USA? ',
+        a: 'All our clothing collections are designed in San Francisco. We have made a few special garments in the USA and will continue to do so, but Tea clothing is currently made around the world.\n\n No matter where our clothing is made, we uphold the same high standards in outstanding product quality and responsible labor laws for all our manufacturing partners. '
+      },
+      {
+        q: 'How do you decide what factories to work with? ',
+        a: 'The issues of social responsibility and fair trade are very near to our hearts, and we discuss them with each of our vendors on an ongoing basis. We are careful to work only with reputable manufacturers who follow our high standards of good working conditions and no child/slave labor. These requirements are documented and reviewed regularly, and we have no tolerance for anything unlawful or even the slightest bit questionable.'
+      },
+      {
+        q: 'How long have you worked with these factories? ',
+        a: 'Several of the factories that produce Tea clothing have been our partners for nearly a decade. We have built financially sound, long-term, sustainable relationships with them to the point that we\'ve even gotten to know their families personally. '
+      },
+      {
+        q: 'How do you make sure the people who actually sew Tea clothing are treated fairly, ethically and responsibly? ',
+        a: 'We visit our factories often and walk around the grounds to see with our own eyes what the conditions are and how the workers are being treated.\n\n Of course, we can\'t be in every factory all the time, so we are incredibly diligent to ensure that our partners around the globe follow the highest possible standards. We have local agents in each country who are an extension of our Tea family. They are our eyes and ears and manage the day-to-day happenings in each factory. '
+      },
+      {
+        q: 'Are you Fair Trade USA certified? ',
+        a: 'We do not have official certification from Fair Trade USA, however, we do have a Fair Trade act with all of our manufacturing partners. Each factory must sign a Workplace Code of Conduct contract that outlines fair employment practices, facilities safety guidelines and compliance assurance methods.'
+      },
+    ];
+
+    var liWrap = '';
+    $.each(faq, function(i, val) {
+      var li = '<li><h4>' + val.q + '</h4><p>' + val.a + '</p></li>';
+      liWrap += li;
+    });
+
+    $('.faq ul').append(liWrap);
+  });
+</script>

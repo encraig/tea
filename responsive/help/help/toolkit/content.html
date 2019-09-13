@@ -1,0 +1,16 @@
+<div class="wrap-content">
+  <h1>Help</h1>
+  <ul>
+    {sub_cats name="cat" category="here-to-help"}
+    <li>
+      <a href="{$cat.url}">{$cat.title}</a>
+    </li>
+    {/sub_cats}
+  </ul>
+</div>
+
+{literal}
+<style>
+  .site-content .site-content-inner .site-content-bg-wrapper{padding:0}.wrap-content ul{list-style-type:none;display:flex;flex-wrap:wrap}.wrap-content ul li{flex-basis:33%;box-sizing:border-box;padding:1rem}@media screen and (max-width:414px){.wrap-content ul li{flex-basis:100%}}.site-content-inner .row-padded .nav{display:none !important}.site-content-inner .row-padded .content{width:100%}.site-content-inner .row-padded .content .subcategories-list{display:none !important}
+</style>
+{/literal}

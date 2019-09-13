@@ -1,0 +1,1 @@
+.wrap-content{font-size:1rem;display:flex;flex-wrap:wrap}.wrap-content div{flex-basis:25%}@media screen and (max-width:812px){.wrap-content div{flex-basis:50%}}@media screen and (max-width:414px){.wrap-content div{flex-basis:100%}}.wrap-content div h2{text-transform:capitalize}.wrap-content div ul{padding:0 0 0 2rem}

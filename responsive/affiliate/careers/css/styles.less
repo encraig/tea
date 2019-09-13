@@ -1,0 +1,80 @@
+.careers-welcome,
+.the-job {
+	a {
+		color: #cc0033;
+	}
+
+	b,
+	i {}
+
+	b {}
+
+	i {}
+
+	div {
+		span {}
+	}
+
+	h1,
+	h2,
+	h3 {}
+
+	h1 {}
+
+	h2 {}
+
+	b,
+	h3 {}
+
+	p {}
+
+	.jobs-list,
+	.the-job {
+		ul {}
+
+		li {
+			list-style-type: none;
+
+			a {
+				display: block;
+			}
+
+			span {
+				@media screen and (max-width:737px) {
+					display: block;
+				}
+				display: inline-block;
+
+				&:last-of-type {
+					@media screen and (max-width:737px) {
+						float: none;
+					}
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.the-job {
+	h2 {
+		span {
+			@media screen and (max-width:737px) {
+				display: block;
+			}
+
+			&:last-of-type {
+				@media screen and (max-width:737px) {
+					float: none;
+					margin: 10px 0 0;
+				}
+				display: inline-block;
+				float: right;
+			}
+		}
+	}
+
+	.job-footer {
+		margin: 10px 0;
+	}
+}

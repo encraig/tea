@@ -1,7 +1,16 @@
 // WEBP-CONVERTER
 
 // var webp = require('webp-converter');
-// var fs = require('fs');
+var fs = require('fs');
+var request = require('request');
+
+// -------------------------------------------------------------------------------------------
+
+// request
+request.get('https://www.teacollection.com/about/catalogs-request').pipe(fs.createWriteStream('request.html'));
+
+
+// -------------------------------------------------------------------------------------------
 
 //pass input image(.jpeg,.pnp .....) path ,output image(give path where to save and image file name with .webp extension)
 //pass option(read  documentation for options)
@@ -36,41 +45,41 @@
 
 // COMPRESS-IMAGES
 
-var compress_images = require('compress-images')
-
-var INPUT_path_to_your_images = 'mega-menu/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}';
-var OUTPUT_path = 'mega-menu/compress/';
-
-compress_images(INPUT_path_to_your_images, OUTPUT_path, {
-    compress_force: false,
-    statistic: true,
-    autoupdate: true
-  },
-  false, {
-    jpg: {
-      engine: 'mozjpeg',
-      command: ['-quality', '90']
-    }
-  }, {
-    png: {
-      engine: 'pngquant',
-      command: ['--quality=20-50']
-    }
-  }, {
-    svg: {
-      engine: 'svgo',
-      command: '--multipass'
-    }
-  }, {
-    gif: {
-      engine: 'gifsicle',
-      command: ['--colors', '64', '--use-col=web']
-    }
-  },
-  function(error, completed, statistic) {
-    console.log('-------------');
-    console.log(error);
-    console.log(completed);
-    console.log(statistic);
-    console.log('-------------');
-  });
+// var compress_images = require('compress-images')
+//
+// var INPUT_path_to_your_images = 'mega-menu/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}';
+// var OUTPUT_path = 'mega-menu/compress/';
+//
+// compress_images(INPUT_path_to_your_images, OUTPUT_path, {
+//     compress_force: false,
+//     statistic: true,
+//     autoupdate: true
+//   },
+//   false, {
+//     jpg: {
+//       engine: 'mozjpeg',
+//       command: ['-quality', '90']
+//     }
+//   }, {
+//     png: {
+//       engine: 'pngquant',
+//       command: ['--quality=20-50']
+//     }
+//   }, {
+//     svg: {
+//       engine: 'svgo',
+//       command: '--multipass'
+//     }
+//   }, {
+//     gif: {
+//       engine: 'gifsicle',
+//       command: ['--colors', '64', '--use-col=web']
+//     }
+//   },
+//   function(error, completed, statistic) {
+//     console.log('-------------');
+//     console.log(error);
+//     console.log(completed);
+//     console.log(statistic);
+//     console.log('-------------');
+//   });
