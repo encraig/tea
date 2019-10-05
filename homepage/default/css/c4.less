@@ -1,69 +1,84 @@
 .c4 {
   @media screen and (max-width:767px) {
-    background: #3E4666;
+    flex-wrap: wrap;
   }
-  position: relative;
+  display: flex;
 
-  img {
-    width: 100%;
+  div {
+    &.first,
+    &.second {
+      display: flex;
+    }
 
-    &.desktop-img {
+    &.first {
       @media screen and (max-width:767px) {
-        display: none;
+        order: 2;
+      }
+
+      img {
+        @media screen and (max-width:1024px) {
+          // align-self: center;
+          // -webkit-align-self: center;
+        }
+        width: 100%;
+        max-width: 100%;
+        align-self: center;
+        -webkit-align-self: center;
       }
     }
-  }
 
-  .the-content {
-    @media screen and (max-width:1024px) {
-      top: 33%;
-    }
-    @media screen and (max-width:767px) {
+    &.second {
       position: relative;
-      top: 0;
-      padding: 7% 0 14%;
-    }
-    position: absolute;
-    top: 282px;
-    width: 100%;
-    text-align: center;
 
-    h2 {
-      @media screen and (min-width:1680px) {
-        font-size: 89px;
-      }
-      @media screen and (max-width:1024px) {
-        font-size: 5.4vw;
-      }
-      @media screen and (max-width:767px) {
-        color: #36B9BF;
-        margin: 0 auto;
-        font-size: 10.4vw;
-        width: 96%;
-      }
-      color: #fff;
-      font-family: souvenirstd-light;
-      font-size: 5vw;
-    }
-
-    div {
-      @media screen and (max-width:1024px) {
-        margin: 4% 0 0;
-      }
-      @media screen and (max-width:767px) {
-        margin: 6% 0 0;
-      }
-      margin: 75px 0 0;
-
-      a {
-        @media screen and (min-width:1680px) {
-          font-size: 22px;
+      .the-content {
+        @media screen and (max-width:1024px) {
+          top: 57%;
         }
         @media screen and (max-width:767px) {
-          color: #36B9BF;
+          order: 1;
+          top: 55%;
         }
-        color: #fff;
-        font-size: 1.1vw;
+        position: absolute;
+        top: 59%;
+        text-align: center;
+        width: 100%;
+
+        h2,
+        p {
+          font-family: souvenirstd-light;
+          text-align: center;
+        }
+
+        h2 {
+          @media screen and (min-width:1680px) {
+            font-size: 78px;
+          }
+          @media screen and (max-width:1024px) {}
+          @media screen and (max-width:767px) {
+            font-size: 12vw;
+            width: 100%;
+          }
+          font-size: 5.4vw;
+          width: 50%;
+          margin: 0 auto;
+          color: #fff;
+        }
+
+        div {
+          @media screen and (max-width:1024px) {}
+          @media screen and (max-width:767px) {
+            margin: 10% 0 0;
+          }
+          margin: 4% 0 0;
+
+          span {
+            @media screen and (min-width:1680px) {
+              font-size: 22px;
+            }
+            color: #fff;
+            font-size: 1.1vw;
+          }
+        }
       }
     }
   }

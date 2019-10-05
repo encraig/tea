@@ -25,22 +25,25 @@
       background: url("/mas_assets/media/tea_collection/homepage/2019/0904/v1/stamp.svg") no-repeat left 5em #F9EBE6;
       background-size: 31%;
 
+      a#c6 {
+        display: block;
+        width: 100%;
+      }
+
       .the-content {
-        @media screen and (max-width:1024px) {
-          top: 28%;
-        }
+        @media screen and (max-width:1024px) {}
         @media screen and (max-width:767px) {
           top: 0;
         }
         position: relative;
-        top: 331px;
+        top: 30%;
         text-align: center;
         width: 100%;
 
         img {
           display: block;
           margin: 0 auto;
-          width: 25%;
+          width: 52%;
         }
 
         h2,
@@ -49,57 +52,41 @@
           text-align: center;
         }
 
-        h2 {
-          @media screen and (min-width:1680px) {
-            font-size: 100px;
-          }
-          @media screen and (max-width:1024px) {
-            margin: 5% 0 2%;
-            font-size: 6vw;
-          }
-          @media screen and (max-width:767px) {
-            font-size: 11vw;
-            margin: 3% 0 0;
-          }
-          font-size: 5.4vw;
-          position: relative;
-          color: #A30069;
-        }
-
         p {
           @media screen and (min-width:1680px) {
-            font-size: 29px;
+            font-size: 25px;
           }
           @media screen and (max-width:1024px) {
-            font-size: 1.8vw;
-            width: 50%;
+            font-size: 1.5vw;
+            width: 40%;
           }
           @media screen and (max-width:767px) {
             font-size: 4.4vw;
             width: 53%;
             margin: 1% auto 0;
           }
-          font-size: 1.5vw;
-          margin: 0 auto;
-          position: relative;
-          width: 48%;
+          position: absolute;
+          top: 41%;
+          left: 50%;
+          transform: translate(-50%,0);
+          width: 40%;
           color: #47363D;
         }
 
         div {
-          @media screen and (max-width:1024px) {
-            margin: 5% 0 0;
-          }
+          @media screen and (max-width:1024px) {}
           @media screen and (max-width:767px) {
             margin: 9% 0 0;
           }
-          margin: 65px 0 0;
+          position: absolute;
+          width: 100%;
+          top: 89%;
 
-          a {
+          span {
             @media screen and (min-width:1680px) {
               font-size: 22px;
             }
-            color: #A30069;
+            color: #62062E;
             font-size: 1.1vw;
           }
         }
@@ -109,10 +96,13 @@
     &.second {
       img {
         @media screen and (max-width:1024px) {
-          align-self: center;
+          // align-self: center;
+          // -webkit-align-self: center;
         }
         width: 100%;
         max-width: 100%;
+        align-self: center;
+        -webkit-align-self: center;
       }
     }
   }

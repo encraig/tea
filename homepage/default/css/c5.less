@@ -1,30 +1,75 @@
 .c5 {
   @media screen and (max-width:767px) {
-    flex-wrap: wrap;
+    // background: #3E4666;
   }
-  display: flex;
+  position: relative;
 
-  div {
-    &.first,
-    &.second {
-      display: flex;
+  img {
+    width: 100%;
+
+    &.desktop-img {
+      @media screen and (max-width:767px) {
+        display: none;
+      }
     }
+  }
 
-    &.first {
-      a {
-        display: block;
-        width: 100%;
+  .the-content {
+    @media screen and (max-width:1024px) {}
+    @media screen and (max-width:767px) {
+      width: 100%;
+      top: 61%;
+    }
+    position: absolute;
+    top: 26%;
+    width: 49%;
+    text-align: center;
+    right: 0;
 
-        img {
-          max-width: 100%;
-          width: 100%;
+    h2 {
+      @media screen and (min-width:1680px) {
+        font-size: 89px;
+      }
+      @media screen and (max-width:1024px) {
+        font-size: 5.4vw;
+      }
+      @media screen and (max-width:767px) {
+        margin: 0 auto;
+        font-size: 10.4vw;
+        width: 96%;
+      }
+      width: 50%;
+      margin: 0 auto;
+      color: #BE8B0B;
+      font-family: souvenirstd-light;
+      font-size: 5vw;
+
+      span {
+        @media screen and (max-width: 767px) {
+          &:after {
+            content: '\A';
+            white-space: pre;
+          }
         }
       }
     }
 
-    &.second {
+    div {
+      @media screen and (max-width:1024px) {
+        margin: 1% 0 0;
+      }
       @media screen and (max-width:767px) {
-        padding: 0 0 13%;
+        margin: 7% 0 0;
+      }
+      margin: 2% 0 0;
+
+      span {
+        @media screen and (min-width:1680px) {
+          font-size: 22px;
+        }
+        @media screen and (max-width:767px) {}
+        color: #fff;
+        font-size: 1.1vw;
       }
     }
   }

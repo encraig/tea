@@ -1,9 +1,4 @@
 var c1 = [{
-    elem: '.slide0 .cta1',
-    url: '/select-styles',
-    text: 'shop the sale'
-  },
-  {
     elem: '.slide1 .cta1',
     url: '/girls-clothing/new-arrivals',
     text: 'shop girl new arrivals'
@@ -14,9 +9,14 @@ var c1 = [{
     text: 'shop boy new arrivals'
   },
   {
+    elem: '.slide1 .cta3',
+    url: '/baby-new-arrivals ',
+    text: 'shop baby new arrivals'
+  },
+  {
     elem: '.slide2 .cta1',
-    url: '/girls-clothing/new-arrivals',
-    text: 'shop girl new arrivals'
+    url: '/special-occasion',
+    text: 'shop special occasion'
   },
   {
     elem: '.slide2 .cta2',
@@ -25,13 +25,13 @@ var c1 = [{
   },
   {
     elem: '.slide3 .cta1',
-    url: '/baby-new-arrivals',
-    text: 'shop baby new arrivals'
+    url: '/dress-shop',
+    text: 'shop dresses'
   },
   {
     elem: '.slide4 .cta1',
-    url: '/girls-tees-tops',
-    text: 'shop girl tees + tops'
+    url: '/pajamas',
+    text: 'shop pjs'
   },
   {
     elem: '.slide4 .cta2',
