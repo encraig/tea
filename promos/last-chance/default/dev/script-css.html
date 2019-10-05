@@ -1,0 +1,12 @@
+<script>
+	$(document).ready(function() {
+		//expand sidebar
+		$('.shops h2').addClass('open');
+		$('.shops h2 span').removeClass('fa-plus').addClass('fa-minus');
+		$('.shops .links').show();
+
+		//change color
+		$('.shops .links .sub a.active').css('color', '#d94d52');
+		$('.shops .links .sub .sub a').css('color', '#d94d52');
+	});
+</script>

@@ -1,0 +1,242 @@
+<div class="site-nav-submenu sale">
+	<div class="bar">
+		<div>
+			<a href="/sale/girls-clothing/view-all" data="mega menu sale girl">Girl</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu sale girl view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/girls-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale girl categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div>
+			<a href="/sale/boys-clothing/view-all" data="mega menu sale boy" >Boy</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu sale boy view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/boys-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale boy categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div>
+			<a href="/sale/tween-girls-clothing/view-all" data="mega menu sale tween" >Tween</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/tween-girls-clothing/view-all" data="mega menu sale tween view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/tween-girls-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale tween categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+
+		<div>
+			<a href="/sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl" >Toddler Girl</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/toddler-girls-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale tween categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div>
+			<a href="/sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy" >Toddler Boy</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/toddler-boys-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale tween categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div>
+			<a href="/sale/baby-girl-clothes/view-all" data="mega menu sale baby girl" >Baby Girl</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu sale baby girl view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/baby-girl-clothes"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale baby girl categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div>
+			<a href="/sale/baby-boy-clothes/view-all" data="mega menu sale baby boy">Baby Boy</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu sale baby boy view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/baby-boy-clothes"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale baby boy categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div>
+			<a href="/sale/newborn-clothing/view-all" data="mega menu sale newborn" >Newborn</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/newborn-clothing/view-all" data="mega menu sale newborn view all" >View All</a></li>
+							{sub_cats name="cat" category="sale/newborn-clothing"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}" data="mega menu sale newborn categories" >{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		{* clearance cat is inactive for now <div>
+			<a href="/sale/clearance/view-all">Clearance</a>
+			<span class="line"></span>
+			<div class="menu">
+				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+					{assign var=i value=0}
+						<ul class="category-sale">
+							<li>Shop by Category</li>
+							<li><a href="{$secure_html_url}sale/clearance/view-all">View All</a></li>
+							{sub_cats name="cat" category="sale/clearance"}
+							{if $i && $i % 6 eq 0}
+								</ul>
+								<ul class="category-sale">
+									<li class="spacer">Spacer</li>
+							{/if}
+								<li><a href="{$cat.url}">{$cat.title}</a></li>
+							{math equation="x + y" x=$i y=1 assign=i}
+							{/sub_cats}
+						</ul>
+				</div>
+				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+					<div class="da-rennab-zone" data-zone="mega_sale"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>*}
+	</div>
+</div>
