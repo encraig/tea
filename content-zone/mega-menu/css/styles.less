@@ -4,9 +4,23 @@
 	padding: 2% 5% !important;
 }
 
-.panel-1, .panel-2, .panel-3 {
-	width:auto;
-	float:none;
+.panel-1,
+.panel-2,
+.panel-3 {
+	width: auto;
+	float: none;
+}
+
+.new.arrivals {
+	color: #436FC1 !important;
+	font-family:gilroy-bold !important;
+	
+	&:hover {
+
+		&:before {
+				background-color: #436FC1 !important;
+		}
+	}
 }
 
 .panel-1 {
@@ -21,11 +35,11 @@
 		&:nth-of-type(1) {
 			width: 51%;
 		}
+
 		&.category {
-			padding:0 !important;
+			padding: 0 !important;
 		}
 	}
-
 }
 
 .panel-3 {
@@ -38,10 +52,21 @@
 	}
 }
 
-#mega-menu-girl, #mega-menu-toddler-girl, #mega-menu-tween, #mega-menu-boy, #mega-menu-toddler-boy, #mega-menu-baby-girl, #mega-menu-baby-boy, #mega-menu-newborn {
+#mega-menu-baby-boy,
+#mega-menu-baby-girl,
+#mega-menu-boy,
+#mega-menu-girl,
+#mega-menu-newborn,
+#mega-menu-toddler-boy,
+#mega-menu-toddler-girl,
+#mega-menu-tween {
 	// width: 100% !important;
 }
 
 header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before {
 	content: none !important;
+}
+
+header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover {
+	font-family:gilroy-bold !important;
 }

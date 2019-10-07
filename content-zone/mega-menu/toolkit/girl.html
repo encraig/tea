@@ -16,7 +16,7 @@
           <ul class="category">
             <li class="spacer">Spacer</li>
         {/if}
-          <li><a href="{$cat.url}" data="mega menu girl categories" >{$cat.title}</a></li>
+          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl categories" >{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
           <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
@@ -27,7 +27,7 @@
       <ul class="category first">
         <li>Shop by Collection</li>
         {sub_cats name="cat" category="girls-clothing/favorites"}
-          <li><a href="{$cat.url}" data="mega menu girl favorites">{$cat.title}</a></li>
+          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl favorites">{$cat.title}</a></li>
         {/sub_cats}
       </ul>
     </div>
