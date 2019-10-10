@@ -5,6 +5,7 @@ var addAlt = function(elem, alt) {
   });
 };
 
+addAlt('.hp .c1 .slide0 img', 'mix & match flash sale $15 tops & leggings + $25 bottoms');
 addAlt('.hp .c1 .slide1 img', 'boy and girl');
 addAlt('.hp .c1 .slide2 img', 'dresses');
 addAlt('.hp .c1 .slide3 img', 'two girls');
