@@ -1,4 +1,24 @@
 var c1 = [{
+    elem: '.slide0 .cta1',
+    url: '/girls-clothing/view-all',
+    text: 'shop girl'
+  },
+  {
+    elem: '.slide0 .cta2',
+    url: '/boys-clothing/view-all',
+    text: 'shop boy'
+  },
+  {
+    elem: '.slide0 .cta3',
+    url: '/baby-clothes/view-all',
+    text: 'shop baby'
+  },
+  {
+    elem: '.slide0 .cta4',
+    url: '/clothing-sale',
+    text: 'shop sale'
+  },
+  {
     elem: '.slide1 .cta1',
     url: '/girls-clothing/new-arrivals',
     text: 'shop girl new arrivals'

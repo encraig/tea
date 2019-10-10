@@ -1,4 +1,7 @@
 .c1 {
+  @media screen and (max-width:767px) {
+    background: #1A342B;
+  }
   overflow: hidden;
 
   .slide {
@@ -73,6 +76,7 @@
       }
     }
 
+    &.slide0,
     &.slide1,
     &.slide2,
     &.slide4 {
@@ -80,6 +84,109 @@
         &.the-content {
           @media screen and (max-width:767px) {
             padding: 6% 0 11%;
+          }
+        }
+      }
+    }
+
+    &.slide0 {
+      div {
+        &.the-content {
+          @media screen and (max-width:812px) {
+            top: 80%;
+          }
+          @media screen and (max-width:767px) {
+            top: 71%;
+          }
+          top: 72%;
+          left: 50%;
+          width: 49%;
+          transform: translate(-50%, 0);
+        }
+
+        div {
+          &:nth-of-type(1) {
+            @media screen and (max-width:1024px) {
+              margin: 5% 0 0;
+            }
+            @media screen and (max-width:767px) {
+              margin: 9% 0 0;
+            }
+            margin: 6.5% 0 0;
+          }
+
+          &:nth-of-type(2) {
+            @media screen and (max-width:1024px) {
+              margin: 2% 0 0;
+            }
+            @media screen and (max-width:812px) {
+              margin: 4% 0 0;
+            }
+            @media screen and (max-width:767px) {
+              margin: 7% 0 0;
+            }
+            margin: 4% 0 0;
+          }
+
+          &:nth-of-type(4) {
+            @media screen and (max-width:767px) {
+              margin: 7% 0 0;
+            }
+          }
+
+          &:nth-of-type(5) {
+            @media screen and (max-width:767px) {
+              margin: 10% 0 0;
+            }
+          }
+
+          a {
+            @media screen and (min-width:1680px) {
+              // font-size: 16px;
+            }
+            @media screen and (max-width:1024px) {
+              left: 3%;
+            }
+            @media screen and (max-width:767px) {
+              left: 0;
+            }
+            // letter-spacing: 0.23vw;
+            // padding: 0 0 0.5%;
+            color: #FFB1C7 !important;
+
+            &:nth-of-type(1) {
+              @media screen and (max-width:812px) {
+                left: -12%;
+              }
+              @media screen and (max-width:767px) {
+                left: -10%;
+              }
+              left: -2%;
+            }
+
+            &:nth-of-type(2) {
+              @media screen and (max-width:812px) {
+                left: -5%;
+              }
+              @media screen and (max-width:767px) {
+                left: 10%;
+              }
+              left: 2%;
+            }
+
+            &:nth-of-type(3) {
+              @media screen and (max-width:812px) {
+                left: 3%;
+              }
+              left: 2%;
+            }
+
+            &:nth-of-type(4) {
+              @media screen and (max-width:812px) {
+                left: 11%;
+              }
+              left: 2%;
+            }
           }
         }
       }
