@@ -1,32 +1,32 @@
 var c1 = [{
     elem: '.slide0 .cta1',
-    url: '/girls-clothing/favorites/limited-time-sale',
+    url: '/girls-clothing/',
     text: 'shop girl'
   },
   {
     elem: '.slide0 .cta2',
-    url: '/boys-clothing/favorites/limited-time-sale',
+    url: '/boys-clothing/',
     text: 'shop boy'
   },
   {
     elem: '.slide0 .cta3',
-    url: '/tween-girls-clothing/favorites/limited-time-sale',
+    url: '/tween-girls-clothing/',
     text: 'shop tween'
   },
   {
     elem: '.slide0 .cta4',
-    url: '/baby-girl-clothes/favorites/limited-time-sale',
+    url: '/baby-girl-clothes/',
     text: 'shop baby girl'
   },
   {
     elem: '.slide0 .cta5',
-    url: '/baby-boy-clothes/favorites/limited-time-sale',
+    url: '/baby-boy-clothes/',
     text: 'shop baby boy'
   },
   {
     elem: '.slide0 .cta6',
-    url: '/select-styles',
-    text: 'shop the sale'
+    url: '/new-arrivals',
+    text: 'shop new arrivals'
   },
   {
     elem: '.slide1 .cta1',
