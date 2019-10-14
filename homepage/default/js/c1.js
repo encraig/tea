@@ -26,7 +26,7 @@ var c1 = [{
   {
     elem: '.slide0 .cta6',
     url: '/new-arrivals',
-    text: 'shop new arrivals'
+    text: 'shop now'
   },
   {
     elem: '.slide1 .cta1',
