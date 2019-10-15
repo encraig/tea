@@ -2,6 +2,7 @@
   <h1>Become a Tea Retailer</h1>
   <p>Thank you for your interest in becoming a Tea Retailer. Please fill out the form below.
     We'll be in touch with you shortly (typically, within 2 days).</p>
+  <P>* required fields</P>
   <form name="salesforce" method="post" action="https://www.teacollection.com/">
     <input type="hidden" name="type" value="">
     <input type="hidden" name="page" value="tea">
@@ -12,34 +13,33 @@
     <input type="hidden" name="retURL" value="http://www.teacollection.com/static/newsletter-confirmation.html">
 
 
-    <label for="first_name">First Name</label>
-    <input id="first_name" maxlength="15" name="first_name" size="20" type="text" required="">
-    <label for="last_name">Last Name</label>
-    <input id="last_name" maxlength="15" name="last_name" size="20" type="text" required="">
-    <label for="email">Email</label>
-    <input id="email" maxlength="80" name="email" size="20" type="text" required="">
+    <label for="first_name">First Name*</label>
+    <input id="first_name" maxlength="15" name="first_name" size="20" type="text" required>
+    <label for="last_name">Last Name*</label>
+    <input id="last_name" maxlength="15" name="last_name" size="20" type="text" required>
+    <label for="email">Email*</label>
+    <input id="email" maxlength="80" name="email" size="20" type="text" required>
     <label for="phone">Phone</label>
-    <input id="phone" maxlength="40" name="phone" size="20" type="text" required="">
-
-
-
+    <input id="phone" maxlength="40" name="phone" size="20" type="text">
     <label for="company">Company</label>
-    <input id="company" maxlength="40" name="company" size="20" type="text" required="">
+    <input id="company" maxlength="40" name="company" size="20" type="text">
     <label for="URL">Website</label>
-    <input id="URL" maxlength="80" name="URL" size="20" type="text" required="">
+    <input id="URL" maxlength="80" name="URL" size="20" type="text">
     <label for="city">City</label>
-    <input id="city" maxlength="30" name="city" size="20" type="text" required="">
+    <input id="city" maxlength="30" name="city" size="20" type="text">
     <label for="state">State/Provnce</label>
-    <input id="state" maxlength="20" name="state" size="20" type="text" required="">
+    <input id="state" maxlength="20" name="state" size="20" type="text">
+    <h2 class="processing">Processing...</h2>
+    <h2 class="sent">SUCCESSFULLY SENT!!!</h2>
     <button type="submit" class="form-button g-recaptcha" data-sitekey="6LcfCSgUAAAAACiGZNGJuVHDntJwshDD5aME3LC9" data-callback="onSubmit">Submit</button>
     <!-- <div>
-      <div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px;">
-        <div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcfCSgUAAAAACiGZNGJuVHDntJwshDD5aME3LC9&amp;co=aHR0cHM6Ly93d3cudGVhY29sbGVjdGlvbi5jb206NDQz&amp;hl=en&amp;v=v1559543665173&amp;size=invisible&amp;cb=s5ny64o1y38c"
-            role="presentation" name="a-q78vjlv8hzr" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="256"
-            height="60" frameborder="0"></iframe></div>
-        <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-      </div>
-    </div> -->
+        <div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px;">
+          <div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcfCSgUAAAAACiGZNGJuVHDntJwshDD5aME3LC9&amp;co=aHR0cHM6Ly93d3cudGVhY29sbGVjdGlvbi5jb206NDQz&amp;hl=en&amp;v=v1559543665173&amp;size=invisible&amp;cb=s5ny64o1y38c"
+              role="presentation" name="a-q78vjlv8hzr" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="256"
+              height="60" frameborder="0"></iframe></div>
+          <div class="grecaptcha-error"></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+        </div>
+      </div> -->
 
   </form>
 </div>
@@ -47,3 +47,54 @@
 <style>
   include "../css/styles.css"
 </style>
+
+<script>
+  $(document).ready(function() {
+    $('.content-wrap form').submit(function(e) {
+      e.preventDefault();
+      var firstName = $('#first_name').val();
+      var lastName = $('#last_name').val();
+      var email = $('#email').val();
+      var phone = $('#phone').val();
+      var company = $('#company').val();
+      var website = $('#URL').val();
+      var city = $('#city').val();
+      var state = $('#state').val();
+
+      console.log(firstName, lastName, email, phone, company, website, city, state);
+      $('.content-wrap form .processing').show();
+      $('.content-wrap form button').hide();
+
+      Sailthru.integration("userSignUp", {
+        "id": email,
+        "email": email,
+        "lists": {
+          "WHOLESALE_LEADS": 1
+        },
+        "vars": {
+          "first name": firstName,
+          "last name": lastName,
+          "phone": phone,
+          "company": company,
+          "website": website,
+          "city": city,
+          "state": state
+        },
+        "onSuccess": function() {
+          console.log('sailthru tea retailer sucess');
+          $('.content-wrap form .processing').hide();
+          $('.content-wrap form .sent').show();
+          // $('#emailField').val('')
+          setTimeout(function() {
+            $('.content-wrap form .sent').fadeOut();
+            $('.content-wrap form button').fadeIn();
+          }, 2000);
+        },
+        "onError": function() {
+          console.log('sailthru footer error');
+        }
+      });
+
+    });
+  });
+</script>
