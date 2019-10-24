@@ -9,11 +9,8 @@
 		<p>Yes, I'd love to receive Tea's seasonal catalogs (only available in the US at present).</p>
 		<p>Please fill in the fields below:</p>
 		<p class="italic">* Required Fields</p>
-		<form name="contact_form" action="https://newsletter.teacollection.com/pub/rf" class="responsys" data="catalogs-request">
-			<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGmRFvncR3RTdERcHWyC1HPT1h7UXUnVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGun9N3FGazeTYC5fpPC2hctN55DYhHn">
-			<input type="hidden" name="ACQUISITION_SOURCE" value="catalogform" />
-			<input type="hidden" form-name="Sign_Up_Form_CatalogRequest" />
-			<input type="hidden" name="POSTAL_PERMISSION_STATUS_" value="I">
+		<form name="contact_form" class="responsys" data="catalogs-request">
+			<input type="hidden" name="CATALOG_REQUEST" value="yes" />
 
 			<div>
 				<label>first name*</label>
@@ -59,7 +56,7 @@
 
 			<div class="the-checkbox">
 				<label>Subscribe To Email List</label>
-				<input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="I" checked="checked">
+				<input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="yes" checked="checked">
 			</div>
 
 			<div>
@@ -70,6 +67,8 @@
 			</div>
 
 			<div>
+				<p class="success">successfully sent!!!</p>
+				<p class="sending">sending...</p>
 				<input type="submit" value="Submit">
 			</div>
 		</form>
@@ -97,9 +96,9 @@
 		jQuery('#optin').change(function() {
 			cb = jQuery(this);
 			if (cb.prop('checked')) {
-				jQuery(this).val('I');
+				jQuery(this).val('yes');
 			} else {
-				jQuery(this).val('O');
+				jQuery(this).val('no');
 			}
 		});
 
@@ -219,6 +218,22 @@
 		$('.responsys').submit(function(e) {
 			e.preventDefault();
 
+			$('form.responsys input[type="submit"]').hide();
+			$('form.responsys .sending').show();
+
+			var fname = $('form.responsys input[name="FIRST_NAME"]').val();
+			var lname = $('form.responsys input[name="LAST_NAME"]').val();
+			var address1 = $('form.responsys input[name="POSTAL_STREET_1_"]').val();
+			var address2 = $('form.responsys input[name="POSTAL_STREET_2_"]').val();
+			var city = $('form.responsys input[name="CITY_"]').val();
+			var state = $('#states').val();
+			var zip = $('form.responsys input[name="POSTAL_CODE_"]').val();
+			var email = $('form.responsys input[name="EMAIL_ADDRESS_"]').val();
+			var subscribe = $('#optin').val();
+			var howHear = $('#user-src').val();
+			if (howHear == "Please Select") {
+				howHear = "";
+			}
 			//remove all errors
 			$('.responsys .the-error').remove();
 
@@ -228,8 +243,37 @@
 				var err = '<div class="the-error"><label></label><span class="error">Please Select a State</span></div>';
 				$('#states').closest('div').before(err);
 			} else {
-				$(this)[0].submit();
-				// console.log($(this)[0]);
+
+				Sailthru.integration("userSignUp", {
+					"id": email,
+					"email": email,
+					"lists": {
+						"MASTER_CONTACTS_LIST": 1
+					},
+					"vars": {
+						"CATALOG_REQUEST": "yes",
+						"First Name": fname,
+						"Last Name": lname,
+						"Address 1": address1,
+						"Address 2": address2,
+						"City": city,
+						"State": state,
+						"Zip": zip,
+						"Subscribe": subscribe,
+						"How Did You Hear About Tea?": howHear
+					},
+					"onSuccess": function() {
+						$('form.responsys .sending').hide();
+						$('form.responsys .success').show();
+
+						setTimeout(function() {
+							$('form.responsys .success').fadeOut(function() {
+								$('form.responsys input[type="submit"]').fadeIn();
+							});
+						}, 2000);
+					},
+
+				});
 			}
 		});
 

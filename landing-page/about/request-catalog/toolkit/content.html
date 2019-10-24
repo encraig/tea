@@ -9,11 +9,8 @@
 		<p>Yes, I'd love to receive Tea's seasonal catalogs (only available in the US at present).</p>
 		<p>Please fill in the fields below:</p>
 		<p class="italic">* Required Fields</p>
-		<form name="contact_form" action="https://newsletter.teacollection.com/pub/rf" class="responsys" data="catalogs-request">
-			<input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGmRFvncR3RTdERcHWyC1HPT1h7UXUnVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGun9N3FGazeTYC5fpPC2hctN55DYhHn">
-			<input type="hidden" name="ACQUISITION_SOURCE" value="catalogform" />
-			<input type="hidden" form-name="Sign_Up_Form_CatalogRequest" />
-			<input type="hidden" name="POSTAL_PERMISSION_STATUS_" value="I">
+		<form name="contact_form" class="responsys" data="catalogs-request">
+			<input type="hidden" name="CATALOG_REQUEST" value="yes" />
 
 			<div>
 				<label>first name*</label>
@@ -59,7 +56,7 @@
 
 			<div class="the-checkbox">
 				<label>Subscribe To Email List</label>
-				<input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="I" checked="checked">
+				<input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="yes" checked="checked">
 			</div>
 
 			<div>
@@ -70,6 +67,8 @@
 			</div>
 
 			<div>
+				<p class="success">successfully sent!!!</p>
+				<p class="sending">sending...</p>
 				<input type="submit" value="Submit">
 			</div>
 		</form>
@@ -87,7 +86,7 @@
 <!--toolkit -->
 
 <style>
-	.catalog-wrap h1{margin:0 0 2rem}.catalog-wrap section{margin:0 0 2rem}.catalog-wrap section p{font-size:1rem;margin:0 0 1rem}.catalog-wrap section .responsys div{display:flex;flex-wrap:wrap;margin:0 0 1rem}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div label,.catalog-wrap section .responsys div select{display:inline-block;margin:0 1rem 1rem 0;font-family:gilroy-regular}.catalog-wrap section .responsys div label{font-size:1rem;text-transform:capitalize;width:20%;font-family:gilroy-regular}@media screen and (max-width:1024px){.catalog-wrap section .responsys div label{width:30%}}@media screen and (max-width:414px){.catalog-wrap section .responsys div label{width:100%}}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{padding:.75rem 1.125rem;width:28%;margin:0;box-sizing:border-box;background:#EDEBEC}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:53%;padding:1rem 2rem}}@media screen and (max-width:414px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:100%}}.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:16px !important;height:16px;border:1px solid #47363D;background:#fff;box-sizing:border-box;padding:0}.catalog-wrap section .responsys div input[type="checkbox"]:checked,.catalog-wrap section .responsys div select[type="checkbox"]:checked,.catalog-wrap section .responsys div input[type="checkbox"]:hover,.catalog-wrap section .responsys div select[type="checkbox"]:hover{background:#47363D}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"],.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:auto}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{text-transform:uppercase;border:2px solid #47363D;background:#fff;color:#47363D;font-family:gilroy-bold;padding:.75rem 1.25rem}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{padding:1rem 2rem}}.catalog-wrap section .responsys div input[type="submit"]:hover,.catalog-wrap section .responsys div select[type="submit"]:hover{background:#75686D;color:#fff}.catalog-wrap section .responsys div input[type="submit"]:active,.catalog-wrap section .responsys div select[type="submit"]:active{background:#47363D}.catalog-wrap section .responsys div .error{color:#cc0033;font-size:1rem}@media screen and (max-width:737px){.catalog-wrap section .responsys div .error{display:block}}.catalog-wrap section .responsys div select option{text-transform:capitalize}.catalog-wrap footer h2{margin:0 0 1rem}.catalog-wrap footer p{font-size:1rem}
+	.catalog-wrap h1{margin:0 0 2rem}.catalog-wrap section{margin:0 0 2rem}.catalog-wrap section p{font-size:1rem;margin:0 0 1rem}.catalog-wrap section .responsys p{text-transform:uppercase;font-size:1rem;display:none}.catalog-wrap section .responsys p.success{font-family:gilroy-bold}.catalog-wrap section .responsys p.sending{font-family:gilroy-regular}.catalog-wrap section .responsys div{display:flex;flex-wrap:wrap;margin:0 0 1rem}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div label,.catalog-wrap section .responsys div select{display:inline-block;margin:0 1rem 1rem 0;font-family:gilroy-regular}.catalog-wrap section .responsys div label{font-size:1rem;text-transform:capitalize;width:20%;font-family:gilroy-regular}@media screen and (max-width:1024px){.catalog-wrap section .responsys div label{width:30%}}@media screen and (max-width:414px){.catalog-wrap section .responsys div label{width:100%}}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{padding:.75rem 1.125rem;width:28%;margin:0;box-sizing:border-box;background:#EDEBEC}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:53%;padding:1rem 2rem}}@media screen and (max-width:414px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:100%}}.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:16px !important;height:16px;border:1px solid #47363D;background:#fff;box-sizing:border-box;padding:0}.catalog-wrap section .responsys div input[type="checkbox"]:checked,.catalog-wrap section .responsys div select[type="checkbox"]:checked,.catalog-wrap section .responsys div input[type="checkbox"]:hover,.catalog-wrap section .responsys div select[type="checkbox"]:hover{background:#47363D}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"],.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:auto}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{text-transform:uppercase;border:2px solid #47363D;background:#fff;color:#47363D;font-family:gilroy-bold;padding:.75rem 1.25rem}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{padding:1rem 2rem}}.catalog-wrap section .responsys div input[type="submit"]:hover,.catalog-wrap section .responsys div select[type="submit"]:hover{background:#75686D;color:#fff}.catalog-wrap section .responsys div input[type="submit"]:active,.catalog-wrap section .responsys div select[type="submit"]:active{background:#47363D}.catalog-wrap section .responsys div .error{color:#cc0033;font-size:1rem}@media screen and (max-width:737px){.catalog-wrap section .responsys div .error{display:block}}.catalog-wrap section .responsys div select option{text-transform:capitalize}.catalog-wrap footer h2{margin:0 0 1rem}.catalog-wrap footer p{font-size:1rem}
 </style>
 
 
@@ -97,9 +96,9 @@
 		jQuery('#optin').change(function() {
 			cb = jQuery(this);
 			if (cb.prop('checked')) {
-				jQuery(this).val('I');
+				jQuery(this).val('yes');
 			} else {
-				jQuery(this).val('O');
+				jQuery(this).val('no');
 			}
 		});
 
@@ -219,6 +218,22 @@
 		$('.responsys').submit(function(e) {
 			e.preventDefault();
 
+			$('form.responsys input[type="submit"]').hide();
+			$('form.responsys .sending').show();
+
+			var fname = $('form.responsys input[name="FIRST_NAME"]').val();
+			var lname = $('form.responsys input[name="LAST_NAME"]').val();
+			var address1 = $('form.responsys input[name="POSTAL_STREET_1_"]').val();
+			var address2 = $('form.responsys input[name="POSTAL_STREET_2_"]').val();
+			var city = $('form.responsys input[name="CITY_"]').val();
+			var state = $('#states').val();
+			var zip = $('form.responsys input[name="POSTAL_CODE_"]').val();
+			var email = $('form.responsys input[name="EMAIL_ADDRESS_"]').val();
+			var subscribe = $('#optin').val();
+			var howHear = $('#user-src').val();
+			if (howHear == "Please Select") {
+				howHear = "";
+			}
 			//remove all errors
 			$('.responsys .the-error').remove();
 
@@ -228,8 +243,37 @@
 				var err = '<div class="the-error"><label></label><span class="error">Please Select a State</span></div>';
 				$('#states').closest('div').before(err);
 			} else {
-				$(this)[0].submit();
-				// console.log($(this)[0]);
+
+				Sailthru.integration("userSignUp", {
+					"id": email,
+					"email": email,
+					"lists": {
+						"MASTER_CONTACTS_LIST": 1
+					},
+					"vars": {
+						"CATALOG_REQUEST": "yes",
+						"First Name": fname,
+						"Last Name": lname,
+						"Address 1": address1,
+						"Address 2": address2,
+						"City": city,
+						"State": state,
+						"Zip": zip,
+						"Subscribe": subscribe,
+						"How Did You Hear About Tea?": howHear
+					},
+					"onSuccess": function() {
+						$('form.responsys .sending').hide();
+						$('form.responsys .success').show();
+
+						setTimeout(function() {
+							$('form.responsys .success').fadeOut(function() {
+								$('form.responsys input[type="submit"]').fadeIn();
+							});
+						}, 2000);
+					},
+
+				});
 			}
 		});
 
