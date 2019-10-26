@@ -25,7 +25,7 @@ var c1 = [{
   },
   {
     elem: '.slide0 .cta6',
-    url: '/new-arrivals',
+    url: '/select-styles',
     text: 'shop with code fallfest'
   },
   {
