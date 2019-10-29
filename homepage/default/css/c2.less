@@ -4,6 +4,7 @@
   }
   @media screen and (max-width:768px) {
     margin: 3.7% 0 0;
+    padding: 0;
   }
   @media screen and (max-width:414px) {
     margin: 11% 0 0;
@@ -21,15 +22,44 @@
     display: block;
     text-decoration: none;
 
+    img {
+      &.gfc1 {
+        @media screen and (max-width:768px) {
+          display: block;
+        }
+        @media screen and (max-width:414px) {
+          display: none;
+        }
+        display: none;
+      }
+
+      &.gfc2 {
+        @media screen and (max-width:414px) {
+          display: block;
+        }
+        display: none;
+      }
+    }
+
     h2 {
+      @media screen and (max-width:1679px) {
+        font-size: 1.1vw;
+      }
+      @media screen and (max-width:768px) {
+        display: none;
+      }
       font-size: 19px;
       line-height: 23px;
       letter-spacing: 0.25em;
       color: #fff;
       position: relative;
-      left: 13%;
+      left: 50%;
+      transform: translate(-37%,0);
 
       span {
+        @media screen and (max-width:1679px) {
+          font-size: 1.1vw;
+        }
         color: #E8E511;
         letter-spacing: 0.25em;
         text-transform: uppercase;

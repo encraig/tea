@@ -6,18 +6,18 @@ $(cells).each(function(i, val) {
     $.each(val.slides, function(j, obj) {
       //desktop
       $(val.cell + ' ' + obj.name).find('.m-image').attr('href', obj.imgUrl);
-      $(val.cell + ' ' + obj.name).find('.cta1').attr('href', obj.cta1.url).text(obj.cta1.text);
-      $(val.cell + ' ' + obj.name).find('.cta2').attr('href', obj.cta2.url).text(obj.cta2.text);
-      $(val.cell + ' ' + obj.name).find('.cta3').attr('href', obj.cta3.url).text(obj.cta3.text);
-      $(val.cell + ' ' + obj.name).find('.cta4').attr('href', obj.cta4.url).text(obj.cta4.text);
+      $(val.cell + ' ' + obj.name).find('.cta1').attr('href', obj.cta1.url).html(obj.cta1.text);
+      $(val.cell + ' ' + obj.name).find('.cta2').attr('href', obj.cta2.url).html(obj.cta2.text);
+      $(val.cell + ' ' + obj.name).find('.cta3').attr('href', obj.cta3.url).html(obj.cta3.text);
+      $(val.cell + ' ' + obj.name).find('.cta4').attr('href', obj.cta4.url).html(obj.cta4.text);
       var thealt = $(val.cell + ' ' + obj.name).find('p').text();
       $(val.cell + ' ' + obj.name).find('.m-image').find('img').attr('alt', thealt);
       //mobile
       $(obj.name).find('.m-image').attr('href', obj.imgUrl);
-      $(obj.name).find('.cta1').attr('href', obj.cta1.url).text(obj.cta1.text);
-      $(obj.name).find('.cta2').attr('href', obj.cta2.url).text(obj.cta2.text);
-      $(obj.name).find('.cta3').attr('href', obj.cta3.url).text(obj.cta3.text);
-      $(obj.name).find('.cta4').attr('href', obj.cta4.url).text(obj.cta4.text);
+      $(obj.name).find('.cta1').attr('href', obj.cta1.url).html(obj.cta1.text);
+      $(obj.name).find('.cta2').attr('href', obj.cta2.url).html(obj.cta2.text);
+      $(obj.name).find('.cta3').attr('href', obj.cta3.url).html(obj.cta3.text);
+      $(obj.name).find('.cta4').attr('href', obj.cta4.url).html(obj.cta4.text);
       var thealt = $(obj.name).find('p').text();
       $(obj.name).find('.m-image').find('img').attr('alt', thealt);
     });

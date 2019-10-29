@@ -11,19 +11,73 @@
     }
 
     &.first {
-      @media screen and (max-width:767px) {
+      @media screen and (max-width:414px) {
         order: 2;
       }
 
-      img {
-        @media screen and (max-width:1024px) {
-          // align-self: center;
-          // -webkit-align-self: center;
+      a {
+        @media screen and (max-width:1679px) {
+          border: 2.5vw solid #CDB81C;
         }
+        display: block;
         width: 100%;
-        max-width: 100%;
-        align-self: center;
-        -webkit-align-self: center;
+        box-sizing: border-box;
+        border: 3em solid #CDB81C;
+        background: #D860A4;
+        text-decoration: none;
+        position: relative;
+
+        div {
+          @media screen and (max-width:768px) {
+            top: 21%;
+          }
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%,0);
+          text-align: center;
+          top: 27%;
+          width: 56%;
+
+          span {
+            @media screen and (max-width:1679px) {
+              font-size: 1vw;
+            }
+            @media screen and (max-width:768px) {
+              font-size: 2vw;
+            }
+            font-size: 19px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+            font-family: gilroy-bold;
+
+            &:nth-of-type(2) {
+              @media screen and (max-width:1679px) {
+                font-size: 1.1vw;
+              }
+              @media screen and (max-width:768px) {
+                font-size: 2vw;
+              }
+              border-bottom: 1px solid;
+              padding: 0 0 1%;
+            }
+          }
+
+          h2 {
+            @media screen and (max-width:1679px) {
+              font-size: 5.3vw;
+              line-height: 5.5vw;
+            }
+            color: #163B5A;
+            font-size: 89px;
+            line-height: 93px;
+            letter-spacing: 0.01em;
+            font-family: SouvenirStd-Light;
+            margin: 11% 0 17%;
+          }
+        }
       }
     }
 
@@ -31,17 +85,15 @@
       position: relative;
 
       .the-content {
-        @media screen and (max-width:1024px) {
-          top: 35%;
-        }
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:414px) {
           order: 1;
-          // top: 55%;
         }
         position: absolute;
-        top: 35%;
+        top: 36%;
         text-align: center;
-        width: 100%;
+        width: 71%;
+        left: 50%;
+        transform: translate(-50%, 0);
 
         h2,
         p {
@@ -50,33 +102,32 @@
         }
 
         h2 {
-          @media screen and (min-width:1680px) {
-            font-size: 90px;
+          @media screen and (max-width:1679px) {
+            font-size: 5.3vw;
+            line-height: 5.5vw;
           }
-          @media screen and (max-width:1024px) {}
-          @media screen and (max-width:767px) {
-            font-size: 11vw;
-            width: 60%;
-          }
-          font-size: 5.4vw;
-          width: 50%;
-          margin: 0 auto;
+          font-size: 89px;
+          line-height: 93px;
+          letter-spacing: 0.01em;
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
           color: #fff;
         }
 
         div {
-          @media screen and (max-width:1024px) {}
-          @media screen and (max-width:767px) {
-            margin: 10% 0 0;
-          }
-          margin: 4% 0 0;
+          margin: 10% 0 0;
 
           span {
-            @media screen and (min-width:1680px) {
-              font-size: 22px;
+            @media screen and (max-width:1679px) {
+              font-size: 1.1vw;
             }
-            color: #fff;
-            font-size: 1.1vw;
+            @media screen and (max-width:768px) {
+              font-size: 2vw;
+            }
+            font-size: 19px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #FFFFFF;
           }
         }
       }

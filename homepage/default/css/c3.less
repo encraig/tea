@@ -1,83 +1,52 @@
 .c3 {
-  @media screen and (max-width:767px) {
-    // background: #3E4666;
-  }
   position: relative;
 
-  img {
-    width: 100%;
-
-    &.desktop-img {
-      @media screen and (max-width:767px) {
-        display: none;
-      }
-    }
-  }
-
   .the-content {
-    @media screen and (max-width:1024px) {
-      top: 33%;
-    }
-    @media screen and (max-width:767px) {
-      top: 58%;
-    }
     position: absolute;
-    top: 35%;
-    width: 100%;
+    top: 32%;
+    width: 44%;
     text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
 
     h2 {
-      @media screen and (min-width:1680px) {
-        font-size: 89px;
+      @media screen and (max-width:1679px) {
+        font-size: 5.3vw;
+        line-height: 5.5vw;
       }
-      @media screen and (max-width:1024px) {
-        font-size: 5.4vw;
-      }
-      @media screen and (max-width:767px) {
-        color: #BE8B0B;
-        font-size: 9.4vw;
-      }
+      font-size: 89px;
+      line-height: 95px;
+      letter-spacing: 0.01em;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
+      margin: 0;
+      text-transform: capitalize;
       color: #fff;
       font-family: souvenirstd-light;
-      font-size: 5vw;
     }
 
     div {
-      @media screen and (max-width:1024px) {
-        margin: 4% 0 0;
-      }
-      @media screen and (max-width:767px) {
-        margin: 6% 0 0;
-      }
-      margin: 4% 0 0;
+      margin: 8.5% 0 0;
 
       &.mobile {
         margin: 11% 0 0;
       }
 
-      a {
-        @media screen and (min-width:1680px) {
-          font-size: 22px;
+      span {
+        @media screen and (max-width:1679px) {
+          font-size: 1.1vw;
         }
-        @media screen and (max-width:767px) {}
-
-        &:nth-of-type(1) {
-          @media screen and (max-width:767px) {
-            left: 0;
-          }
-          position: relative;
-          left: -2%;
+        @media screen and (max-width:768px) {
+          font-size: 2vw;
         }
-
-        &:nth-of-type(2) {
-          @media screen and (max-width:767px) {
-            left: 0;
-          }
-          position: relative;
-          left: 2%;
-        }
+        font-size: 19px;
+        line-height: 28px;
         color: #fff;
-        font-size: 1.1vw;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding: 0 0 1%;
+        font-family: gilroy-bold;
       }
     }
   }

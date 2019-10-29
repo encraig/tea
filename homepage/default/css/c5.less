@@ -1,75 +1,144 @@
 .c5 {
   @media screen and (max-width:767px) {
-    // background: #3E4666;
+    flex-wrap: wrap;
   }
-  position: relative;
+  display: flex;
 
-  img {
-    width: 100%;
-
-    &.desktop-img {
-      @media screen and (max-width:767px) {
-        display: none;
-      }
+  div {
+    &.first,
+    &.second {
+      display: flex;
+      position: relative;
     }
-  }
 
-  .the-content {
-    @media screen and (max-width:1024px) {}
-    @media screen and (max-width:767px) {
-      width: 100%;
-      top: 61%;
-    }
-    position: absolute;
-    top: 26%;
-    width: 49%;
-    text-align: center;
-    right: 0;
+    &.first {
+      @media screen and (max-width:414px) {
+        order: 2;
+      }
 
-    h2 {
-      @media screen and (min-width:1680px) {
-        font-size: 89px;
-      }
-      @media screen and (max-width:1024px) {
-        font-size: 5.4vw;
-      }
-      @media screen and (max-width:767px) {
-        margin: 0 auto;
-        font-size: 10.4vw;
-        width: 96%;
-      }
-      width: 50%;
-      margin: 0 auto;
-      color: #BE8B0B;
-      font-family: souvenirstd-light;
-      font-size: 5vw;
+      .the-content {
+        @media screen and (max-width:768px) {
+          top: 33%;
+        }
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+        width: 60%;
 
-      span {
-        @media screen and (max-width: 767px) {
-          &:after {
-            content: '\A';
-            white-space: pre;
+        h2 {
+          @media screen and (max-width:1679px) {
+            font-size: 5.3vw;
+            line-height: 5.5vw;
+          }
+          font-size: 89px;
+          line-height: 93px;
+          letter-spacing: 0.01em;
+          text-shadow: 0 4px 4px rgba(0,0,0,0.45);
+          color: #fff;
+          font-family: souvenirstd-light;
+        }
+
+        div {
+          @media screen and (max-width:768px) {
+            margin: 17% 0 0;
+          }
+          margin: 12% 0 0;
+
+          a {
+            @media screen and (max-width:1679px) {
+              font-size: 1.1vw;
+            }
+            @media screen and (max-width:768px) {
+              font-size: 2vw;
+            }
+            font-size: 19px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            position: relative;
+
+            span {
+              @media screen and (max-width:768px) {
+                display: none;
+              }
+            }
+
+            &:nth-of-type(1) {
+              @media screen and (max-width:1679px) {
+                left: -3%;
+              }
+              left: -5%;
+            }
+
+            &:nth-of-type(2) {
+              @media screen and (max-width:1679px) {
+                left: 6%;
+              }
+              left: 4%;
+            }
           }
         }
       }
     }
 
-    div {
-      @media screen and (max-width:1024px) {
-        margin: 1% 0 0;
-      }
-      @media screen and (max-width:767px) {
-        margin: 7% 0 0;
-      }
-      margin: 2% 0 0;
+    &.second {
+      position: relative;
 
-      span {
-        @media screen and (min-width:1680px) {
-          font-size: 22px;
+      .the-content {
+        @media screen and (max-width:768px) {
+          top: 21%;
         }
-        @media screen and (max-width:767px) {}
-        color: #fff;
-        font-size: 1.1vw;
+        @media screen and (max-width:414px) {
+          order: 1;
+        }
+        position: absolute;
+        top: 25%;
+        text-align: center;
+        width: 55%;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        h2,
+        p {
+          font-family: souvenirstd-light;
+          text-align: center;
+        }
+
+        h2 {
+          @media screen and (max-width:1679px) {
+            font-size: 5.3vw;
+            line-height: 5.5vw;
+          }
+          font-size: 89px;
+          line-height: 93px;
+          letter-spacing: 0.01em;
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
+          color: #fff;
+        }
+
+        div {
+          @media screen and (max-width:768px) {
+            margin: 20% 0 0;
+          }
+          margin: 13% 0 0;
+
+          span {
+            @media screen and (max-width:1679px) {
+              font-size: 1.1vw;
+            }
+            @media screen and (max-width:768px) {
+              font-size: 2vw;
+            }
+            font-size: 19px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+          }
+        }
       }
     }
   }
