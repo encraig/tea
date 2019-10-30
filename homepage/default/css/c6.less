@@ -1,3 +1,5 @@
+@import "var.less";
+
 .c6 {
   @media screen and (max-width:767px) {
     flex-wrap: wrap;
@@ -5,8 +7,12 @@
   display: flex;
 
   a {
+    @media screen and (max-width:767px) {
+      flex-wrap: wrap;
+    }
     display: flex;
     width: 100%;
+    text-decoration: none;
 
     div {
       &.first,
@@ -35,6 +41,11 @@
             top: 28%;
             width: 62%;
           }
+          @media screen and (max-width:414px) {
+            position: relative;
+            top: 0;
+            padding: 39% 0 31%;
+          }
           position: absolute;
           top: 31%;
           text-align: center;
@@ -43,6 +54,9 @@
           transform: translate(-50%, 0);
 
           img {
+            @media screen and (max-width:414px) {
+              width: 40%;
+            }
             display: block;
             margin: 0 auto;
             width: 52%;
@@ -50,44 +64,33 @@
 
           h2,
           p {
-            font-family: souvenirstd-light;
+            font-family: @souv;
             text-align: center;
           }
 
           h2 {
-            @media screen and (max-width:1679px) {
-              font-size: 5.3vw;
+            @media screen and (max-width:414px) {
+              font-size: 11vw;
             }
-            @media screen and (max-width:768px) {
-              margin: -5% 0 0;
-            }
-            font-size: 89px;
-            line-height: 93px;
             color: #62062E;
-            letter-spacing: 0.01em;
             margin: 9% 0 0;
           }
 
           p {
-            @media screen and (max-width:1679px) {
-              font-size: 1.5vw;
-              line-height: 2.3vw;
+            @media screen and (max-width:414px) {
+              width: 88%;
             }
-            @media screen and (max-width:768px) {
-              font-size: 2.3vw;
-              line-height: 3vw;
-              width: 100%;
-              margin: -6% 0 0;
-            }
-            font-size: 25px;
-            line-height: 38px;
-            letter-spacing: 0.01em;
             color: #47363D;
             width: 83%;
             margin: 5% auto 0;
           }
 
           div {
+            @media screen and (max-width:414px) {
+              position: relative;
+              top: 0;
+              margin: 13% 0 0;
+            }
             position: relative;
             top: 0;
             margin: 11% 0 0;
@@ -98,6 +101,9 @@
               }
               @media screen and (max-width:768px) {
                 font-size: 2vw;
+              }
+              @media screen and (max-width:414px) {
+                font-size: 4vw;
               }
               font-size: 19px;
               line-height: 28px;

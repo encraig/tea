@@ -1,3 +1,5 @@
+@import "var.less";
+
 .c2 {
   @media screen and (max-width:1024px) {
     margin: 2.7% 0 0;
@@ -7,10 +9,13 @@
     padding: 0;
   }
   @media screen and (max-width:414px) {
-    margin: 11% 0 0;
+    margin: 6.5% 0 0;
   }
   @media screen and (max-width:375px) {
-    margin: 12% 0 0;
+    margin: 7% 0 0;
+  }
+  @media screen and (max-width:320px) {
+    margin: 8% 0 0;
   }
   display: flex;
   flex-wrap: wrap;
@@ -55,6 +60,7 @@
       position: relative;
       left: 50%;
       transform: translate(-37%,0);
+      font-family: @gilroyb;
 
       span {
         @media screen and (max-width:1679px) {
@@ -63,7 +69,7 @@
         color: #E8E511;
         letter-spacing: 0.25em;
         text-transform: uppercase;
-        font-family: gilroy-bold;
+        font-family: @gilroyb;
         font-size: 19px;
         line-height: 28px;
         border-bottom: 1px solid;

@@ -1,3 +1,5 @@
+@import "var.less";
+
 .c1 {
   overflow: hidden;
 
@@ -6,13 +8,27 @@
 
     img {
       width: 100%;
+
+      &.img-d {
+        @media screen and (max-width:768px) {
+          display: none;
+        }
+      }
+
+      &.img-t {
+        @media screen and (max-width:768px) {
+          display: block;
+        }
+        display: none;
+      }
     }
 
     div {
       &.the-content {
         @media screen and (max-width:414px) {
           position: relative;
-          padding: 7% 0 17%;
+          padding: 7% 0 0;
+          min-height: 25rem;
         }
         position: absolute;
         text-align: center;
@@ -22,15 +38,11 @@
       h2,
       p {
         color: #fff;
-        font-family: souvenirstd-light;
+        font-family: @souv;
         margin: 0 auto;
       }
 
       h2 {
-        @media screen and (max-width:1679px) {
-          font-size: 5.3vw;
-          line-height: 5.5vw;
-        }
         @media screen and (max-width: 768px) {
           font-size: 9vw;
           line-height: 10vw;
@@ -39,16 +51,9 @@
         @media screen and (max-width:414px) {
           font-size: 10vw;
         }
-        font-size: 89px;
-        line-height: 93px;
-        letter-spacing: 0.01em;
       }
 
       p {
-        @media screen and (max-width:1679px) {
-          font-size: 1.6vw;
-          line-height: 2.2vw;
-        }
         @media screen and (max-width: 768px) {
           font-size: 2.9vw;
           line-height: 4.1vw;
@@ -57,9 +62,6 @@
           font-size: 4.3vw;
           line-height: 6vw;
         }
-        font-size: 25px;
-        line-height: 38px;
-        letter-spacing: 0.01em;
       }
 
       a {
@@ -72,7 +74,7 @@
         @media screen and (max-width: 414px) {
           font-size: 4vw;
         }
-        font-family: gilroy-bold;
+        font-family: @gilroyb;
         font-size: 19px;
         line-height: 28px;
         letter-spacing: 0.25em;
@@ -96,7 +98,7 @@
           @media screen and (max-width: 414px) {
             top: 0;
             background: #163B5A;
-            padding-bottom: 27%;
+            // padding-bottom: 32%;
           }
           top: 27%;
           right: 7%;
@@ -138,12 +140,19 @@
           }
           text-transform: uppercase;
           color: #BE8B0B;
-          font-family: gilroy-bold;
+          font-family: @gilroyb;
           font-weight: normal;
           font-size: 22px;
           line-height: 28px;
           letter-spacing: 0.25em;
           margin: 6% 0 0;
+
+          span {
+            @media screen and (max-width:414px) {
+              display: inline;
+            }
+            display: none;
+          }
         }
 
         div {
@@ -245,6 +254,7 @@
           @media screen and (max-width: 414px) {
             top: 0;
             background: #BE8B0B;
+            // padding-bottom: 23%;
           }
           top: 21%;
           right: 0;
@@ -316,7 +326,7 @@
     }
 
     &.slide3 {
-      backround: #F9EBE6;
+      background: #F9EBE6;
 
       div {
         &.the-content {
@@ -327,8 +337,8 @@
           }
           @media screen and (max-width: 414px) {
             top: 0;
-            backround: #F9EBE6;
-            padding-bottom: 32%;
+            background: #F9EBE6;
+            // padding-bottom: 38%;
           }
           top: 29.5%;
           right: 6%;

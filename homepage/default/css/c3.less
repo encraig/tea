@@ -1,52 +1,72 @@
+@import "var.less";
+
 .c3 {
   position: relative;
 
-  .the-content {
-    position: absolute;
-    top: 32%;
-    width: 44%;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  a {
+    text-decoration: none;
 
-    h2 {
-      @media screen and (max-width:1679px) {
-        font-size: 5.3vw;
-        line-height: 5.5vw;
+    .the-content {
+      @media screen and (max-width:414px) {
+        position: relative;
+        top: 0;
+        width: 100%;
+        left: 0;
+        transform: translate(0,0);
+        background: #62062E;
+        padding: 9% 0 14%;
       }
-      font-size: 89px;
-      line-height: 95px;
-      letter-spacing: 0.01em;
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
-      margin: 0;
-      text-transform: capitalize;
-      color: #fff;
-      font-family: souvenirstd-light;
-    }
+      position: absolute;
+      top: 32%;
+      width: 44%;
+      text-align: center;
+      left: 50%;
+      transform: translate(-50%, 0%);
 
-    div {
-      margin: 8.5% 0 0;
-
-      &.mobile {
-        margin: 11% 0 0;
-      }
-
-      span {
+      h2 {
         @media screen and (max-width:1679px) {
-          font-size: 1.1vw;
+          // font-size: 5.3vw;
+          // line-height: 5.5vw;
         }
-        @media screen and (max-width:768px) {
-          font-size: 2vw;
+        @media screen and (max-width:414px) {
+          color: #BE8B0B;
+          width: 86%;
+          margin: 0 auto;
         }
-        font-size: 19px;
-        line-height: 28px;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        text-decoration: none;
-        border-bottom: 1px solid;
-        padding: 0 0 1%;
-        font-family: gilroy-bold;
+        margin: 0;
+        text-transform: capitalize;
+      }
+
+      div {
+        @media screen and (max-width:414px) {
+          margin: 10% 0 0;
+        }
+        margin: 8.5% 0 0;
+
+        &.mobile {
+          margin: 11% 0 0;
+        }
+
+        span {
+          @media screen and (max-width:1679px) {
+            font-size: 1.1vw;
+          }
+          @media screen and (max-width:768px) {
+            font-size: 2vw;
+          }
+          @media screen and (max-width:414px) {
+            font-size: 4vw;
+          }
+          font-size: 19px;
+          line-height: 28px;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 0.25em;
+          text-decoration: none;
+          border-bottom: 1px solid;
+          padding: 0 0 1%;
+          font-family: @gilroyb;
+        }
       }
     }
   }
