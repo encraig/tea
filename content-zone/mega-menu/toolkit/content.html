@@ -47,6 +47,16 @@
           {assign var=i value=0}
           <ul class="category first">
             <li>Shop by Category</li>
+            <li>
+              <a href="{$secure_html_url}black-friday/girl" data="mega menu girl black friday" class="black-friday">BLACK FRIDAY</a>
+              <ul class="black-friday">
+                {sub_cats name="cat" category="black-friday/girl"}
+                  <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+                {/sub_cats}
+              </ul>
+            </li>
+
+
             <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
             {sub_cats name="cat" category="girls-clothing/shop-by-category"}
             {if $i && $i % 8 eq 0}
@@ -85,6 +95,15 @@
           {assign var=i value=0}
           <ul class="category first">
             <li>Shop by Category</li>
+            <li>
+              <a href="{$secure_html_url}black-friday/tween" data="mega menu tween black friday" class="black-friday">BLACK FRIDAY</a>
+              <ul class="black-friday">
+                {sub_cats name="cat" category="black-friday/tween"}
+                  <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu boy black friday categories" >{$cat.title}</a></li>
+                {/sub_cats}
+              </ul>
+            </li>
+
             <li><a href="{$secure_html_url}tween-girls-clothing/view-all" data="mega menu tween view all" >View All</a></li>
             {sub_cats name="cat" category="tween-girls-clothing/category"}
             {if $i && $i % 6 eq 0}
@@ -166,6 +185,15 @@
           {assign var=i value=0}
           <ul class="category first">
             <li>Shop by Category</li>
+            <li>
+              <a href="{$secure_html_url}black-friday/boy" data="mega menu boy black friday" class="black-friday">BLACK FRIDAY</a>
+              <ul class="black-friday">
+                {sub_cats name="cat" category="black-friday/boy"}
+                  <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu boy black friday categories" >{$cat.title}</a></li>
+                {/sub_cats}
+              </ul>
+            </li>
+
             <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all" >View All</a></li>
             {sub_cats name="cat" category="boys-clothing/shop-by-category"}
             {if $i && $i % 6 eq 0}
@@ -209,6 +237,15 @@
           {assign var=i value=0}
           <ul class="category first">
             <li>Shop by Category</li>
+            <li>
+              <a href="{$secure_html_url}black-friday/baby-girl" data="mega menu baby girl black friday" class="black-friday">BLACK FRIDAY</a>
+              <ul class="black-friday">
+                {sub_cats name="cat" category="black-friday/baby-girl"}
+                  <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+                {/sub_cats}
+              </ul>
+            </li>
+
             <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all" >View All</a></li>
             {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
             {if $i && $i % 8 eq 0}
@@ -247,6 +284,15 @@
           {assign var=i value=0}
           <ul class="category first">
             <li>Shop by Category</li>
+            <li>
+              <a href="{$secure_html_url}black-friday/baby-boy" data="mega menu baby boy black friday" class="black-friday">BLACK FRIDAY</a>
+              <ul class="black-friday">
+                {sub_cats name="cat" category="black-friday/baby-boy"}
+                  <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+                {/sub_cats}
+              </ul>
+            </li>
+            
             <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all" >View All</a></li>
             {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
             {if $i && $i % 6 eq 0}
@@ -593,6 +639,15 @@
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
+				    <li>
+				      <a href="{$secure_html_url}black-friday/girl" data="mega menu girl black friday" class="black-friday">BLACK FRIDAY</a>
+				      <ul class="black-friday">
+				        {sub_cats name="cat" category="black-friday/girl"}
+				          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+				        {/sub_cats}
+				      </ul>
+				    </li>
+				    
 				    <li><a href="{$secure_html_url}girls-clothing/view-all" data="mobile mega menu girl view all" >View All</a></li>
 				    {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl categories" >{$cat.title}</a></li>
@@ -612,6 +667,15 @@
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
+				    <li>
+				      <a href="{$secure_html_url}black-friday/tween" data="mega menu tween black friday" class="black-friday">BLACK FRIDAY</a>
+				      <ul class="black-friday">
+				        {sub_cats name="cat" category="black-friday/tween"}
+				          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu boy black friday categories" >{$cat.title}</a></li>
+				        {/sub_cats}
+				      </ul>
+				    </li>
+
 				    <li><a href="{$secure_html_url}tween-girls-clothing/view-all" data="mobile mega menu tween view all" >View All</a></li>
 				    {sub_cats name="cat" category="tween-girls-clothing/category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tween categories" >{$cat.title}</a></li>
@@ -656,6 +720,15 @@
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
+				    <li>
+				      <a href="{$secure_html_url}black-friday/boy" data="mega menu boy black friday" class="black-friday">BLACK FRIDAY</a>
+				      <ul class="black-friday">
+				        {sub_cats name="cat" category="black-friday/boy"}
+				          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu boy black friday categories" >{$cat.title}</a></li>
+				        {/sub_cats}
+				      </ul>
+				    </li>
+				    
 				    <li><a href="{$secure_html_url}boys-clothing/view-all" data="mobile mega menu boy view all">View All</a></li>
 				    {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu boy categories">{$cat.title}</a></li>
@@ -681,6 +754,15 @@
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
+				    <li>
+				      <a href="{$secure_html_url}black-friday/baby-girl" data="mega menu baby girl black friday" class="black-friday">BLACK FRIDAY</a>
+				      <ul class="black-friday">
+				        {sub_cats name="cat" category="black-friday/baby-girl"}
+				          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+				        {/sub_cats}
+				      </ul>
+				    </li>
+				    
 				    <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mobile mega menu baby girl view all" >View All</a></li>
 				    {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories" >{$cat.title}</a></li>
@@ -700,6 +782,15 @@
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
+				    <li>
+				      <a href="{$secure_html_url}black-friday/baby-boy" data="mega menu baby boy black friday" class="black-friday">BLACK FRIDAY</a>
+				      <ul class="black-friday">
+				        {sub_cats name="cat" category="black-friday/baby-boy"}
+				          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+				        {/sub_cats}
+				      </ul>
+				    </li>
+				    
 				    <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mobile mega menu baby boy view all" >View All</a></li>
 				    {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy categories" >{$cat.title}</a></li>
@@ -852,6 +943,6 @@
 
 {literal}
 <style>
-.flex-menu{display:flex !important;flex-wrap:wrap;padding:2% 25px !important}.panel-1{border-right:1px solid #b2bac4;flex-basis:36%;float:none;width:auto}.panel-1 ul:nth-of-type(1){width:50%}.panel-1 ul.category{padding:0 !important}.panel-2{flex-basis:31%;float:none;width:auto}.panel-2 ul.category{padding:0 0 0 19% !important;padding:0 0 0 72px !important}.panel-3{flex-basis:33%;float:none;width:auto}.new.arrivals{color:#436fc1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436fc1 !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first:before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}@media screen and (min-width:1024px){.flex-menu{display:flex !important;flex-wrap:wrap;padding:2% !important}}
+.black-friday{float:none !important;color:#EE696D !important}.black-friday:hover:before{background-color:#EE696D !important}.black-friday li{padding:10px 0 10px 10px !important}.black-friday li a{color:#EE696D !important}.black-friday li a:hover:before{background-color:#EE696D !important}.flex-menu{display:flex !important;flex-wrap:wrap;padding:2% 25px !important}.panel-1{border-right:1px solid #b2bac4;flex-basis:36%;float:none;width:auto}.panel-1 ul:nth-of-type(1){width:50%}.panel-1 ul.category{padding:0 !important}.panel-2{flex-basis:31%;float:none;width:auto}.panel-2 ul.category{padding:0 0 0 19% !important;padding:0 0 0 72px !important}.panel-3{flex-basis:33%;float:none;width:auto}.new.arrivals{color:#436fc1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436fc1 !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first:before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}@media screen and (min-width:1024px){.flex-menu{display:flex !important;flex-wrap:wrap;padding:2% !important}}
 </style>
 {/literal}
