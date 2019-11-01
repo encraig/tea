@@ -1,72 +1,94 @@
+@color0: #b2bac4;
+@color1: #436fc1;
+
 .flex-menu {
 	display: flex !important;
 	flex-wrap: wrap;
-	padding: 2% 5% !important;
-}
-
-.panel-1,
-.panel-2,
-.panel-3 {
-	width: auto;
-	float: none;
-}
-
-.new.arrivals {
-	color: #436FC1 !important;
-	font-family:gilroy-bold !important;
-	
-	&:hover {
-
-		&:before {
-				background-color: #436FC1 !important;
-		}
-	}
+	padding: 2% 25px !important;
 }
 
 .panel-1 {
-	flex-basis: 33%;
-}
-
-.panel-2 {
-	border-right: 1px solid #B2BAC4;
+	border-right: 1px solid @color0;
+	border-right: 1px solid @color0;
 	flex-basis: 36%;
+	// flex-basis: 417px;
+	float: none;
+	width: auto;
 
 	ul {
 		&:nth-of-type(1) {
-			width: 51%;
+			width: 50%;
 		}
+	}
 
-		&.category {
-			padding: 0 !important;
-		}
+	ul.category {
+		padding: 0 !important;
+	}
+}
+
+.panel-2 {
+	flex-basis: 31%;
+	// flex-basis: 315px;
+	float: none;
+	width: auto;
+
+	ul.category {
+		padding: 0 0 0 19% !important;
+		padding: 0 0 0 72px !important;
 	}
 }
 
 .panel-3 {
-	flex-basis: 31%;
+	flex-basis: 33%;
+	float: none;
+	width: auto;
+}
 
-	ul {
-		&.category {
-			padding: 0 0 0 19% !important;
+.new.arrivals {
+	color: @color1 !important;
+	font-family: gilroy-bold !important;
+
+	&:hover {
+		&:before {
+			background-color: @color1 !important;
 		}
 	}
 }
 
-#mega-menu-baby-boy,
-#mega-menu-baby-girl,
-#mega-menu-boy,
-#mega-menu-girl,
-#mega-menu-newborn,
-#mega-menu-toddler-boy,
-#mega-menu-toddler-girl,
-#mega-menu-tween {
-	// width: 100% !important;
-}
+header {
+	.site-header-inner {
+		.site-nav-submenu {
+			div {
+				div {
+					.menu {
+						.panel {
+							ul.category.first {
+								&:before {
+									content: none !important;
+								}
+							}
 
-header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before {
-	content: none !important;
+							ul {
+								li {
+									a {
+										&:hover {
+											font-family: gilroy-bold !important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
-header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover {
-	font-family:gilroy-bold !important;
+@media screen and (min-width: 1024px) {
+	.flex-menu {
+		display: flex !important;
+		flex-wrap: wrap;
+		// padding: 2% 50px !important;
+		padding: 2% !important;
+	}
 }
