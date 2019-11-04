@@ -1,0 +1,38 @@
+.gif {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  // transform: translate(-50%, -50%);
+  display: none;
+
+  .yeti {
+    @media screen and (max-width:768px) {
+      width: 55%;
+    }
+    @media screen and (max-width:414px) {
+      width: 50%;
+    }
+    width: 70%;
+  }
+
+  .close-gif {
+    @media screen and (max-width:768px) {
+      left: 42%;
+    }
+    @media screen and (max-width:414px) {
+      top: -6px;
+      left: 39%;
+      width: 7%;
+    }
+    position: absolute;
+    top: -21px;
+    left: 54%;
+    z-index: 9999;
+    width: 7%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

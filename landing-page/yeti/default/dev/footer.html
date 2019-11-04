@@ -1,0 +1,66 @@
+<div class="content-wrap-bottom" id="yeti">
+  <img alt="You Found Everest! Now Win Big." src="/mas_assets/media/tea_collection/yeti/v1/yeti-bottom-d.jpg" class="desktop">
+  <img alt="You Found Everest! Now Win Big." src="/mas_assets/media/tea_collection/yeti/v1/yeti-bottom-t.jpg" class="tablet">
+  <img alt="You Found Everest! Now Win Big." src="/mas_assets/media/tea_collection/yeti/v1/yeti-bottom-m.jpg" class="mobile">
+  <form>
+    <h2>successfully sent!!!</h2>
+    <h3>sending...</h3>
+    <input type="email" placeholder="Email" required>
+    <button>Submit</button>
+    <p><a href="/mas_assets/media/tea_collection/yeti/v1/official-rules.pdf" target="_blank">*See details</a></p>
+  </form>
+
+</div>
+
+{literal}
+<style>
+  include "../css/styles.css"
+</style>
+
+<script>
+  $(document).ready(function() {
+    $('.js-qv').click(function() {
+      console.log('clicked qv');
+      setTimeout(function() {
+        var sku = $('#pdp input[name=id]').val();
+        console.log(sku);
+        if (sku == "9f22153") {
+          $('.size-chart').hide();
+        }
+      }, 500);
+    });
+
+    $('.content-wrap-bottom form').submit(function(e) {
+      e.preventDefault();
+      console.log('form submit');
+      var email = $('#yeti form input').val();
+      console.log('email: ' + email);
+      $('#yeti form input, #yeti form button').hide();
+      $('#yeti form h3').show();
+
+      Sailthru.integration("userSignUp", {
+        "id": email,
+        "email": email,
+        "lists": {
+          "YETI": 1
+        },
+        "onSuccess": function() {
+          $('#yeti form h3').hide();
+          $('#yeti form input').val('');
+          $('#yeti form input, #yeti form button, #yeti form h2').show();
+          setTimeout(function() {
+            $('#yeti form h2').fadeOut('fast', function() {
+              window.scrollTo(0, 0)
+            });
+          }, 2000);
+        },
+        "onError": function(e) {
+          console.log('sailthru error');
+          console.log(e);
+        }
+      });
+
+    });
+  });
+</script>
+{/literal}

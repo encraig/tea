@@ -1,0 +1,61 @@
+<div class="gif">
+  <img src="/mas_assets/media/tea_collection/yeti/v1/X.svg" class="close-gif">
+  <a href="/everest#yeti">
+    <img class="yeti" src="/mas_assets/media/tea_collection/yeti/v1/yeti.gif">
+    <!-- <video autoplay loop>
+			<source src="https://media.giphy.com/media/ZaF5ecBGv9np9oX3vH/giphy.mp4" type="video/mp4">
+		</video> -->
+  </a>
+</div>
+
+<style>
+  include "../css/gif.css"
+</style>
+
+<script>
+  $(document).ready(function() {
+
+    var url = window.location.pathname;
+    var cookies = document.cookie;
+    cookies = cookies.split(';');
+    var yeti = false;
+
+    $.each(cookies, function(i, val) {
+      // console.log(val);
+      if (val.indexOf('yeti') !== -1) {
+        // console.log('yeti');
+        yeti = true;
+        return false;
+      } else {
+        // console.log('no yeti cookie found');
+      }
+    });
+
+    // console.log('yeti: ' + yeti);
+
+    if (yeti == false) {
+      if (url == '/') {
+        console.log('do nothing on this page');
+        return false;
+      } else if (url !== "/everest") {
+        var num = Math.floor(Math.random() * 10);
+        console.log('num: ' + num);
+        if (num >= 6) {
+          $('.gif').show();
+        }
+      }
+    } else {
+      console.log('yeti cookie found dont do anything');
+    }
+
+
+    $('.gif').click(function() {
+      document.cookie = "yeti=found; path=/";
+    })
+
+    $('.close-gif').click(function() {
+      $('.gif').remove();
+    });
+
+  });
+</script>
