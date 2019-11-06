@@ -1,15 +1,19 @@
-module.exports = function(grunt){
-	return {
-		babysweeps:{
-  			files:{
-  				'landing-page/baby-sweeps/css/styles.css': 'landing-page/baby-sweeps/css/styles.css'
-  			}
-  		},
+var config = require("./../gruntConfig.js");
+// console.log(config.promo.date);
 
-      littleCitizen:{
-        files:{
-          'landing-page/little-citizen/170723/css/styles.css': 'landing-page/little-citizen/170723/css/styles.css'
-        }
-      },
+module.exports = {
+
+  options: {
+    //sourceMap:true,
+  },
+
+  promos: {
+    files: [{
+      expand: true,
+      cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/css/purify/',
+      src: '*.css',
+      dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/css/cssmin/'
+    }]
   }
+
 };

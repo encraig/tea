@@ -52,7 +52,7 @@ module.exports = {
   // PROMOS
   promos: {
     files: ['promos/' + config.promo.name + '/' + config.promo.date + '/css/*.less', 'promos/' + config.promo.name + '/' + config.promo.date + '/dev/*.html'],
-    tasks: ['less:promos', 'includes:promos'],
+    tasks: ['less:promos', 'purifycss:promos', 'cssmin:promos', 'babel:promos', 'uglify:promos', 'includes:promos', 'htmlmin:promos'],
   },
 
 };

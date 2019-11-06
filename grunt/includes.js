@@ -114,7 +114,7 @@ module.exports = {
       {
         cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/dev',
         src: ['*.html'],
-        dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/toolkit/',
+        dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/includes/',
       },
     ]
   },

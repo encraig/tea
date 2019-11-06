@@ -35,4 +35,13 @@ module.exports = {
     ext: '.min.js',
   },
 
+  promos: {
+    //dynamic files
+    expand: true,
+    cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/babel/',
+    src: ['*.js'],
+    dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/jsmin/',
+    ext: '.min.js',
+  },
+
 };
