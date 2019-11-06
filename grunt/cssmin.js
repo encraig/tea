@@ -7,6 +7,15 @@ module.exports = {
     //sourceMap:true,
   },
 
+  zone: {
+    files: [{
+      expand: true,
+      cwd: 'content-zone/' + config.zone.name + '/css/purify/',
+      src: '*.css',
+      dest: 'content-zone/' + config.zone.name + '/css/cssmin/'
+    }]
+  },
+
   promos: {
     files: [{
       expand: true,

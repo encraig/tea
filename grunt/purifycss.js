@@ -13,6 +13,12 @@ module.exports = {
   //   dest: 'homepage/default/css/purify/styles.css'
   // },
 
+  zone: {
+    src: ['content-zone/' + config.zone.name + '/dev/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],
+    css: ['content-zone/' + config.zone.name + '/css/styles.css'],
+    dest: 'content-zone/' + config.zone.name + '/css/purify/styles.css'
+  },
+
   promos: {
     src: ['promos/' + config.promo.name + '/' + config.promo.date + '/dev/content.html', 'promos/' + config.promo.name + '/' + config.promo.date + '/js/babel/scripts.js'],
     css: ['promos/' + config.promo.name + '/' + config.promo.date + '/css/styles.css'],

@@ -35,6 +35,15 @@ module.exports = {
     ext: '.min.js',
   },
 
+  zone: {
+    //dynamic files
+    expand: true,
+    cwd: 'content-zone/' + config.zone.name + '/js/babel/',
+    src: ['*.js'],
+    dest: 'content-zone/' + config.zone.name + '/js/jsmin/',
+    ext: '.min.js',
+  },
+
   promos: {
     //dynamic files
     expand: true,

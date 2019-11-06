@@ -27,8 +27,8 @@ module.exports = {
 
   // CONTENT ZONE
   zone: {
-    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html'],
-    tasks: ['less:zone', 'includes:zone'],
+    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html', 'content-zone/' + config.zone.name + '/js/*.js'],
+    tasks: ['less:zone', 'purifycss:zone', 'cssmin:zone', 'babel:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone', ],
   },
 
   // HOMEPAGE

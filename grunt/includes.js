@@ -58,7 +58,7 @@ module.exports = {
       {
         cwd: 'content-zone/' + config.zone.name + '/dev',
         src: ['*.html'],
-        dest: 'content-zone/' + config.zone.name + '/toolkit/',
+        dest: 'content-zone/' + config.zone.name + '/includes/',
       },
     ],
 

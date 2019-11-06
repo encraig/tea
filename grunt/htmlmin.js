@@ -13,6 +13,21 @@ module.exports = {
   //   }
   // },
 
+  zone: {
+    options: {
+      removeComments: true,
+      collapseWhitespace: true
+    },
+
+    files: [{
+      expand: true,
+      cwd: 'content-zone/' + config.zone.name + '/includes/',
+      src: '*.html',
+      dest: 'content-zone/' + config.zone.name + '/toolkit/'
+    }]
+
+  },
+
   promos: {
     options: {
       removeComments: true,

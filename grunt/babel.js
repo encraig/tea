@@ -8,6 +8,15 @@ module.exports = {
     presets: ['@babel/preset-env']
   },
 
+  zone: {
+    files: [{
+      expand: true,
+      cwd: 'content-zone/' + config.zone.name + '/js/',
+      src: '*.js',
+      dest: 'content-zone/' + config.zone.name + '/js/babel/'
+    }]
+  },
+
   promos: {
     files: [{
       expand: true,
@@ -15,6 +24,6 @@ module.exports = {
       src: '*.js',
       dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/babel/'
     }]
-  }
+  },
 
 };
