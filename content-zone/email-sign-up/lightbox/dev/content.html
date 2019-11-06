@@ -1,59 +1,43 @@
-<div class="the-overlay"></div>
+<!-- <div class="the-overlay"></div> -->
 
 <div class="signup">
-  <!-- <img src="/mas_assets/theme/tea_collection/images/email-sign-up/170706/bg-ref-d.jpg" class="ref" /> -->
+  <!-- <img src="mas_assets/media/tea_collection/content-zone/email-sign-up/lightbox/2019/0724/v1/thanks.png" class="ref" /> -->
 
-  <div id="close-icon2">
-    <img src="/mas_assets/theme/tea_collection/images/static/fancybox-close.png" />
+  <img id="close-icon2" src="mas_assets/media/tea_collection/content-zone/email-sign-up/lightbox/2019/0724/v1/+.svg" />
+
+
+  <div class="the-form">
+    <h4>Get on the List!</h4>
+    <h2>Sign up to get 15% off</h2>
+    <h4>your first order</h4>
+
+    <p>Receive a first look at new styles, exclusive offers, and early sale access.</p>
+
+    <p class="sending">sending...</p>
+
+    <div class="form">
+      <label>email</label>
+      <span class="error">please enter a valid email</span>
+      <input type="email" autofocus required>
+      <button>sign me up</button>
+    </div>
   </div>
 
-  <h2>15% off
-    <!--<br> <span>+ free shipping</span>--> <br> <span>on your first order</span></h2>
-  <!-- <h2>Join the<br> Adventure</h2> -->
-  <p>Sign up to receive an exclusive welcome offer and<br> stay up to date on our latest globally-inspired styles!</p>
-
-  <form id="myform1" name="myform" action="https://newsletter.teacollection.com/pub/rf" data="lightbox">
-    <input type="hidden" name="_ri_" value="X0Gzc2X%3DYQpglLjHJlYQGithdHzbkYt6wrJJmipyTb5zaIlXuXjazbOVwjpnpgHlpgneHmgJoXX0Gzc2X%3DYQpglLjHJlYQGr8H8PzeToBSW0alzcier1k30zezgwWl52DO" />
-    <input type="hidden" FORM-NAME="Site_Lightbox_Popup" />
-    <input type="hidden" name="ACQUISITION_SOURCE" value="upshotLB" />
-    <input type="hidden" name="EMAIL_PERMISSION_STATUS_" value="I" />
-    <input type="hidden" name="activity" value="submit" />
-    <input type="hidden" name="COLD_STORAGE" value="N" />
-    <span id="errors"></span>
-    <input id="emailField" name="EMAIL_ADDRESS_" type="email" placeholder="Email Address" required />
-    <input type="submit" value="sign me up" id="submitEmail" />
-
-  </form>
+  <div class="thanks">
+    <h2>you're all<br> signed up!</h2>
+    <p>Check your email to get 15% off your first order.</p>
+  </div>
 
 </div>
 
 {literal}
 <style>
-  include "../css/styles.css"
+  include "../css/cssmin/styles.css"
 </style>
 {/literal}
 
 {literal}
 <script>
-  jQuery(document).ready(function() {
-
-    //close the signup form
-    jQuery('.the-overlay, #close-icon2').click(function() {
-      console.log('close desktop');
-      divinity.box.close();
-      $('#tea-promo-subscribe').remove();
-
-      // if ($(window).width() > 768) {
-      //   console.log('close desktop');
-      //   divinity.box.close();
-      //   $('#tea-promo-subscribe').remove();
-      // } else if ($(window).width() < 768) {
-      //   console.log('close mobile');
-      //   divinity.box.close();
-      //   $('#tea-promo-subscribe').remove();
-      // }
-    });
-
-  });
+  include "../js/jsmin/scripts.min.js"
 </script>
 {/literal}
