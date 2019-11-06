@@ -33,8 +33,8 @@ module.exports = {
 
   // HOMEPAGE
   hp: {
-    files: ['homepage/' + config.hp.date + '/css/*.less', 'homepage/' + config.hp.date + '/dev/*.html', 'homepage/' + config.hp.date + '/js/*.js'],
-    tasks: ['less:hp', 'uglify:hp', 'includes:hp', 'includes:build', 'concat:hpD', 'concat:hpM'],
+    files: ['homepage/default/css/*.less', 'homepage/default/dev/*.html', 'homepage/default/js/*.js'],
+    tasks: ['less:hp', 'purifycss:hp', 'cssmin:hp', 'babel:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
   },
 
   // CATEGORIES

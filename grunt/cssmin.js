@@ -7,6 +7,15 @@ module.exports = {
     //sourceMap:true,
   },
 
+  hp: {
+    files: [{
+      expand: true,
+      cwd: 'homepage/default/css/purify/',
+      src: '*.css',
+      dest: 'homepage/default/css/cssmin/'
+    }]
+  },
+
   zone: {
     files: [{
       expand: true,

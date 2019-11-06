@@ -70,9 +70,9 @@ module.exports = {
     files: [
       //home toolkit
       {
-        cwd: 'homepage/' + config.hp.date + '/dev',
+        cwd: 'homepage/default/dev',
         src: ['*.html'],
-        dest: 'homepage/' + config.hp.date + '/toolkit/',
+        dest: 'homepage/default/includes/',
       },
     ],
 

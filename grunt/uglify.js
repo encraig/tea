@@ -11,9 +11,9 @@ module.exports = {
   hp: {
     //dynamic files
     expand: true,
-    cwd: 'homepage/' + config.hp.date + '/js',
+    cwd: 'homepage/default/js/',
     src: ['*.js'],
-    dest: 'homepage/' + config.hp.date + '/js/output/',
+    dest: 'homepage/default/js/jsmin/',
     ext: '.min.js',
   },
 

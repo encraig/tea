@@ -1,4 +1,5 @@
 var config = require("./../gruntConfig.js");
+var hp = 'homepage/default';
 // console.log(config.promo.date);
 
 module.exports = {
@@ -7,11 +8,11 @@ module.exports = {
     //sourceMap:true,
   },
 
-  // hp: {
-  //   src: ['homepage/default/dev/c1.html', 'homepage/default/dev/c2.html', 'homepage/default/dev/c3.html', 'homepage/default/dev/c4.html', 'homepage/default/dev/c5.html', 'homepage/default/dev/c6.html', 'homepage/default/dev/c7.html', 'homepage/default/dev/c8.html'],
-  //   css: ['homepage/default/css/c1.css', 'homepage/default/css/c2.css', 'homepage/default/css/c3.css', 'homepage/default/css/c4.css', 'homepage/default/css/c5.css', 'homepage/default/css/c6.css', 'homepage/default/css/c7.css', 'homepage/default/css/c8.css', 'homepage/default/css/classes.css', 'homepage/default/css/hp.css'],
-  //   dest: 'homepage/default/css/purify/styles.css'
-  // },
+  hp: {
+    src: [hp + '/dev/c1.html', hp + '/dev/c2.html', hp + '/dev/c3.html', hp + '/dev/c4.html', hp + '/dev/c5.html', hp + '/dev/c6.html', hp + '/dev/c7.html', hp + '/dev/content.html', hp + '/js/alt.js', hp + '/js/c1.js', hp + '/js/inview.js', hp + '/js/sliders.js', hp + '/js/tracking.js', hp + '/js/urls.js'],
+    css: [hp + '/css/c1.css', hp + '/css/c2.css', hp + '/css/c3.css', hp + '/css/c4.css', hp + '/css/c5.css', hp + '/css/c6.css', hp + '/css/c7.css', hp + '/css/classes.css', hp + '/css/hp.css', hp + '/css/bxslider.css', hp + '/css/var.css'],
+    dest: hp + '/css/purify/styles.css'
+  },
 
   zone: {
     src: ['content-zone/' + config.zone.name + '/dev/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],

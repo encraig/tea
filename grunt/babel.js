@@ -11,6 +11,15 @@ module.exports = {
   zone: {
     files: [{
       expand: true,
+      cwd: 'homepage/default/js/',
+      src: '*.js',
+      dest: 'homepage/default/js/babel/'
+    }]
+  },
+
+  zone: {
+    files: [{
+      expand: true,
       cwd: 'content-zone/' + config.zone.name + '/js/',
       src: '*.js',
       dest: 'content-zone/' + config.zone.name + '/js/babel/'
