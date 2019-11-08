@@ -1,45 +1,13 @@
-<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1001/v0/191001-banner-d.png" alt="" /> -->
+<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1031/v0/191031-banner-d-ref.png" alt="" /> -->
 
 <div class="the-promo">
-
-	<span class="first">15% Off Full-Price Styles &amp; Extra 20% Off Sale Styles</span>
+	<span class="first">extra 20% off sale <i>including newly marked-down</i> styles</span>
 	<!-- <span class="second">Save up to 65% off spring &amp; summer styles</span> -->
 	<span class="shop-now">
-		<a href="/clothing-sale">Shop with Code DoubleDip</a>
+		<a href="/clothing-sale">Shop with Code EXTRATEA</a>
 	</span>
-	<span class="details"><a class="see-details" href="#details-promo">more info</a></span>
+	<span class="details"><a class="see-details" href="#details-promo">details</a></span>
 
-	<!-- banner with no image map -->
-	<!-- <a href="#details-promo" class="see-details" alt="promo banner"> -->
-	<!-- desktop -->
-	<!-- <img class="desktop-promo-fat promo-img-alt" src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-d.png" alt="" /> -->
-	<!-- tablet -->
-	<!-- <img class="tablet-promo-fat promo-img-alt" src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-t.png" alt="" /> -->
-	<!-- mobile -->
-	<!-- <img class="mobile-promo-fat promo-img-alt" src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-m.png" alt="" /> -->
-	<!-- </a> -->
-
-
-	<!-- banner with image map -->
-	<!-- <img src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-d.png?nocache=1" alt="" usemap="#map-d" class="desktop-promo-fat promo-img-alt" />
-	<map name="map-d">
-		<area target="" alt="" title="" href="/select-styles" coords="6,1,1554,61" shape="rect">
-		<area class="see-details" target="" alt="" title="" href="#details-promo" coords="1560,1,1680,58" shape="rect">
-	</map> -->
-
-	<!-- banner with image map -->
-	<!-- <img src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-t.png" alt="" usemap="#map-t" class="tablet-promo-fat promo-img-alt" />
-	<map name="map-t">
-		<area target="" alt="" title="" href="/select-styles" coords="1,0,682,99" shape="rect">
-		<area class="see-details" target="" alt="" title="" href="#details-promo" coords="684,0,767,98" shape="rect">
-	</map> -->
-
-	<!-- banner with image map -->
-	<!-- <img src="/mas_assets/media/tea_collection/promos/last-chance/2019/0924/v0/190924-banner-m.png" alt="" usemap="#map-m" class="mobile-promo-fat promo-img-alt" />
-	<map name="map-m">
-		<area target="" alt="" title="" href="/select-styles" coords="3,0,326,69" shape="rect">
-		<area class="see-details" target="" alt="" title="" href="#details-promo" coords="328,0,374,70" shape="rect">
-	</map> -->
 </div>
 
 
@@ -57,20 +25,14 @@
 		</div> -->
 		<h2>Details</h2>
 		<p>
-			Enter code DOUBLEDIP during checkout to receive 15% off full-priced styles, and an extra 20% off sale styles marked '20% off applied at checkout' at Teacollection.com. Offer valid through 10/11/2019 at 11:59 PM PT. Does not apply to Tea x
-			Abominable Collaboration styles, Patagonia, Livie & Luca, Saltwater, or any other third party items. Excludes Value Sets. Discount taken pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for
-			cash. Cannot be combined with other offers. Limited to stock on hand.
+			Use code EXTRATEA at checkout to receive an extra 20% off sale styles. Offer available online at teacollection.com only and valid through 11/6/2019 at 11:59 PM PST. Excludes third party items. Cannot be combined with other promotions. No
+			adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Cannot be used towards the purchase of gift cards. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off
+			each item returned.
 		</p>
 
 		<p><a href="#" class="close-fancy">CLOSE</a></p>
 	</div>
 </div>
-
-<!--prod resources -->
-<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
-
-<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <!-- toolkit -->
 <style>
@@ -79,43 +41,6 @@
 
 <script>
 	jQuery(document).ready(function() {
-
-		//CHANGE THE STRING FOR THE ALT FOR ALL PROMO DESKTOP AND MOBILE IMAGES
-		// var alt = "LAST CHANCE SALE SAVE UP TO 65%";
-
-		// $('.promo-img-alt').attr('alt', alt);
-
-		//function to add alt to area
-		var addAltArea = function(map, str) {
-			var area = $(map).find('area');
-			$(area).each(function(i, val) {
-
-				var href = $(val).attr('href');
-				href = href.replace("/", "");
-				var cat = href.split("-");
-				if (cat[0] == 'baby') {
-					cat = cat[0] + " " + cat[1];
-				} else if (cat[0].indexOf('#') !== -1) {
-					cat = 'see details';
-				} else {
-					cat = cat[0]
-				}
-
-				//add the alt
-				$(val).attr('alt', cat + areaAlt + ' ' + str);
-
-			});
-		};
-
-
-		var areaAlt = ' promo banner cta';
-
-		//add the alt to areas
-		// addAltArea('map[name="map-d"]', 'desktop')
-		// addAltArea('map[name="map-m"]', 'mobile')
-
-		//responsive image map
-		// jQuery('img[usemap]').rwdImageMaps();
 
 		//array of urls to hide the banners
 		var urlArray = [{
@@ -127,8 +52,8 @@
 			// 	url: '/black-friday'
 			// },
 			// {
-			// 	name:'sale-page',
-			// 	url:'/clothing-sale'
+			// 	name: 'sale-page',
+			// 	url: '/clothing-sale'
 			// },
 		];
 
@@ -137,7 +62,6 @@
 			var url = window.location.pathname;
 
 			// $('.the-promo .see-details').fancybox();
-
 
 			$.each(urlArray, function(i, val) {
 				if (url == val.url) {
@@ -192,60 +116,14 @@
 		};
 
 		//on page load call hideBanners
-		hideBanners();
-
-
-		// slide toggle the fineprint
-		// $('.mobile-promo-fat.see-details, #details-promo .close-fancy, .the-promo .see-details').click(function(e) {
-		// 	e.preventDefault();
-		// 	if ($(window).width() > 769) {
-		// 		if(e.target.className == 'see-details'){
-		// 			$('.the-promo .see-details').fancybox();
-		// 		}
-		// 	}
-		// 	if ($(window).width() < 769) {
-		// 		if(e.target.className == 'see-details'){
-		// 				$('#details-promo').slideToggle();
-		// 		}
-		// 	}
-		// });
+		// hideBanners();
 
 		$('.the-promo .see-details').fancybox();
-
-
-		// $('.the-promo').click(function(e) {
-		// console.log(e.target.parentNode.className);
-		// e.preventDefault();
-		// if (e.target.className == 'see-details') {
-		// 	$('.the-promo .see-details').fancybox();
-		// }
-
-		// if ($(window).width() > 767) {
-		// 	if (e.target.className == 'see-details') {
-		// 		$('.the-promo .see-details').fancybox();
-		// 	}
-		// }
-		// if ($(window).width() < 767) {
-		// 	e.preventDefault();
-		// 	if (e.target.parentNode.className == "mobile-promo-fat see-details") {
-		// 		$('#details-promo').slideToggle();
-		// 	}
-		// }
-		// });
-
 
 		$('.close-fancy').click(function(e) {
 			// e.preventDefault();
 			$.fancybox.close();
-
-			// if ($(window).width() == 768) {
-			// 	$.fancybox.close();
-			// }
-			// if ($(window).width() < 767) {
-			// 	$('#details-promo').slideToggle();
-			// }
 		});
-
 
 	});
 </script>

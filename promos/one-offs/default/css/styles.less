@@ -1,8 +1,3 @@
-html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-
 .ref {
 	position: absolute;
 	opacity: 0.5;
@@ -12,132 +7,115 @@ html {
 }
 
 .the-promo {
-	@media screen and (max-width:414px) {
-		padding: 0.5rem 0 0;
+	@media screen and (max-width:1679px) {
+		padding: 0.8% 0;
+	}
+	@media screen and (max-width:768px) {
+		padding: 2% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
-	padding: 0.9rem 0;
+	padding: 0.7% 0;
 	position: relative;
-	background: #1a332b;
+	background: #3e5d76;
 	text-align: center;
-	// .see-details {
-	// 	display: block;
-	// 	text-align: center;
-	// }
+
 	span {
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width:414px) {
 			display: block;
+			left: 0 !important;
 		}
 		position: relative;
 		font-family: gilroy-bold;
 
 		&.first {
-			@media screen and (max-width:1500px) {
-				font-size: 1vw;
+			@media screen and (max-width:1679px) {
+				font-size: 1.1vw;
 			}
 			@media screen and (max-width:768px) {
-				font-size: 1.7vw;
+				font-size: 1.5vw;
+				left: -3%;
 			}
 			@media screen and (max-width:414px) {
-				display: block;
-				font-size: 3vw;
-				width: 75%;
-				margin: 0 auto;
+				font-size: 5vw;
 			}
-			left: 0;
-			font-size: 12px;
+			left: -11.4%;
+			font-size: 20px;
 			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: #d3a539;
+			letter-spacing: 0.2em;
+			color: #daad43;
+
+			i {
+				@media screen and (max-width:414px) {
+					display: none;
+				}
+				font-style: normal;
+			}
 		}
 
-		&.second {
-			@media screen and (max-width:1500px) {
-				font-size: 1.8rem;
-				display: block;
-				left: 0;
-				text-align: center;
-			}
-			@media screen and (max-width:414px) {
-				font-size: 1rem;
-			}
-			left: 11%;
-			font-size: 1.28rem;
-			color: #d3a539;
-		}
+		&.second {}
 
 		&.shop-now {
+			@media screen and (max-width:1679px) {
+				left: 3%;
+			}
 			@media screen and (max-width:768px) {
-				// left: 1%;
 				left: 0;
 			}
 			@media screen and (max-width:414px) {
-				display: block;
-				left: 0;
+				margin: 1% 0 0;
 			}
-			left: 5%;
+			left: 0;
 			text-align: center;
 			border: none;
 
 			a {
-				@media screen and (max-width:1500px) {
-					font-size: 1vw;
+				@media screen and (max-width:1679px) {
+					font-size: 0.9vw;
 				}
 				@media screen and (max-width:768px) {
-					font-size: 1.6vw;
-					letter-spacing: 1px;
+					font-size: 1.5vw;
 				}
 				@media screen and (max-width:414px) {
 					font-size: 3vw;
 				}
 				font-family: gilroy-bold;
 				text-transform: uppercase;
-				font-size: 9px;
+				font-size: 16px;
 				text-decoration: none;
-				color: #9bf7da;
+				color: #f9ebe5;
 				border-bottom: 1px solid;
-				padding-bottom: 0.1%;
-				margin: 1.125rem;
-				letter-spacing: 4px;
+				letter-spacing: 0.2em;
 			}
 		}
 
 		&.details {
-			@media screen and (max-width:1024px) {
-				// left: 18%;
+			@media screen and (max-width:1679px) {
+				left: 16%;
 			}
 			@media screen and (max-width:768px) {
-				// left: 3%;
-				top: 35%;
+				left: 2%;
 			}
 			@media screen and (max-width:414px) {
-				display: block;
-				left: 0;
 				text-align: right;
-				position: relative;
-				// top: -1em;
-				top: 0;
-				padding: 0 3% 0 0;
+				padding: 0 5%;
 			}
-			// left: 21%;
-			left: 94%;
-			position: absolute;
+			left: 13%;
 
 			a {
-				@media screen and (max-width:1500px) {
-					font-size: 1vw;
+				@media screen and (max-width:1679px) {
+					font-size: 0.9vw;
 				}
-				@media screen and (max-width:1024px) {
-					// font-size: 0.8rem;
+				@media screen and (max-width:768px) {
+					font-size: 1.5vw;
 				}
 				@media screen and (max-width:414px) {
-					font-size: 2vw;
+					font-size: 3vw;
 				}
 				color: #FFF;
-				font-size: 10px;
+				font-size: 16px;
 				text-decoration: none;
-				font-family: gilroy-regularitalic;
+				font-family: gilroy-regular;
 				text-transform: capitalize;
 			}
 		}
@@ -146,37 +124,6 @@ html {
 	img {
 		max-width: 100%;
 	}
-}
-
-.desktop-promo-fat,
-.mobile-promo-fat,
-.tablet-promo-fat {
-	// img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
-	// width: 100%;
-	// }
-}
-
-.desktop-promo-fat {
-	@media screen and (min-width: 769px) {
-		display: block;
-	}
-	display: none;
-}
-
-.tablet-promo-fat {
-	@media screen and (min-width: 415px) and (max-width: 768px) {
-		display: block;
-	}
-	display: none;
-}
-
-.mobile-promo-fat {
-	@media screen and (max-width: 414px) {
-		display: block;
-	}
-	display: none;
 }
 
 #details-promo {
@@ -225,7 +172,7 @@ html {
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #1a332b;
+		background: #3e5d76;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
@@ -244,7 +191,7 @@ html {
 }
 
 .header-banner {
-	background: #1a332b;
+	background: #3e5d76;
 	max-width: 100%;
 	width: 100%;
 	padding: 0;
