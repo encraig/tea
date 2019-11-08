@@ -11,9 +11,9 @@ module.exports = {
   hp: {
     //dynamic files
     expand: true,
-    cwd: 'homepage/' + config.hp.date + '/js',
+    cwd: 'homepage/default/js/babel/',
     src: ['*.js'],
-    dest: 'homepage/' + config.hp.date + '/js/output/',
+    dest: 'homepage/default/js/jsmin/',
     ext: '.min.js',
   },
 
@@ -32,6 +32,24 @@ module.exports = {
     cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js',
     src: ['*.js'],
     dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/output/',
+    ext: '.min.js',
+  },
+
+  zone: {
+    //dynamic files
+    expand: true,
+    cwd: 'content-zone/' + config.zone.name + '/js/babel/',
+    src: ['*.js'],
+    dest: 'content-zone/' + config.zone.name + '/js/jsmin/',
+    ext: '.min.js',
+  },
+
+  promos: {
+    //dynamic files
+    expand: true,
+    cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/babel/',
+    src: ['*.js'],
+    dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/jsmin/',
     ext: '.min.js',
   },
 

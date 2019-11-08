@@ -1,8 +1,6 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.landing);
-var src = ['local-templates/mobile/header-get.html',
-  'local-templates/build/full-page.html', 'local-templates/mobile/footer-get.html'
-];
+var hp = 'homepage/default'
 
 module.exports = {
 
@@ -10,25 +8,9 @@ module.exports = {
     //sourceMap:true,
   },
 
-  // HOMEPAGE ---------------------------------------------------------------------------
-  hpD: {
-    src: src,
-    dest: 'homepage/' + config.hp.date + '/build/hp-d.html'
-  },
-  hpM: {
-    src: src,
-    dest: 'homepage/' + config.hp.date + '/build/hp-m.html'
-  },
-
-
-  // landing page -----------------------------------------------------------------------------
-  landingD: {
-    src: src,
-    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/build/' + config.landing.name + '-d.html'
-  },
-  landingM: {
-    src: src,
-    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/build/' + config.landing.name + '-m.html'
+  hp: {
+    src: [hp + '/js/babel/urls.js', hp + '/js/babel/c1.js', hp + '/js/babel/alt.js', hp + '/js/babel/inview.js', hp + '/js/babel/sliders.js', hp + '/js/babel/tracking.js'],
+    dest: hp + '/js/babel/scripts.js'
   },
 
 };

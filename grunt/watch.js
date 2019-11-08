@@ -27,14 +27,14 @@ module.exports = {
 
   // CONTENT ZONE
   zone: {
-    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html'],
-    tasks: ['less:zone', 'includes:zone'],
+    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html', 'content-zone/' + config.zone.name + '/js/*.js'],
+    tasks: ['less:zone', 'purifycss:zone', 'cssmin:zone', 'babel:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone', ],
   },
 
   // HOMEPAGE
   hp: {
-    files: ['homepage/' + config.hp.date + '/css/*.less', 'homepage/' + config.hp.date + '/dev/*.html', 'homepage/' + config.hp.date + '/js/*.js'],
-    tasks: ['less:hp', 'uglify:hp', 'includes:hp', 'includes:build', 'concat:hpD', 'concat:hpM'],
+    files: ['homepage/default/css/*.less', 'homepage/default/dev/*.html', 'homepage/default/js/*.js'],
+    tasks: ['less:hp', /*'purifycss:hp',*/ 'cssmin:hp', 'babel:hp', 'concat:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
   },
 
   // CATEGORIES
@@ -52,7 +52,7 @@ module.exports = {
   // PROMOS
   promos: {
     files: ['promos/' + config.promo.name + '/' + config.promo.date + '/css/*.less', 'promos/' + config.promo.name + '/' + config.promo.date + '/dev/*.html'],
-    tasks: ['less:promos', 'includes:promos'],
+    tasks: ['less:promos', 'purifycss:promos', 'cssmin:promos', 'babel:promos', 'uglify:promos', 'includes:promos', 'htmlmin:promos'],
   },
 
 };

@@ -58,7 +58,7 @@ module.exports = {
       {
         cwd: 'content-zone/' + config.zone.name + '/dev',
         src: ['*.html'],
-        dest: 'content-zone/' + config.zone.name + '/toolkit/',
+        dest: 'content-zone/' + config.zone.name + '/includes/',
       },
     ],
 
@@ -70,9 +70,9 @@ module.exports = {
     files: [
       //home toolkit
       {
-        cwd: 'homepage/' + config.hp.date + '/dev',
+        cwd: 'homepage/default/dev',
         src: ['*.html'],
-        dest: 'homepage/' + config.hp.date + '/toolkit/',
+        dest: 'homepage/default/includes/',
       },
     ],
 
@@ -114,7 +114,7 @@ module.exports = {
       {
         cwd: 'promos/' + config.promo.name + '/' + config.promo.date + '/dev',
         src: ['*.html'],
-        dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/toolkit/',
+        dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/includes/',
       },
     ]
   },
