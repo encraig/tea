@@ -1,43 +1,44 @@
 var c1 = [{
     elem: '.slide1 .cta1',
     url: '/girls-clothing/new-arrivals',
-    text: 'shop girl new arrivals'
+    text: '<span>shop</span> girl'
   },
   {
     elem: '.slide1 .cta2',
     url: '/boys-clothing/new-arrivals',
-    text: 'shop boy new arrivals'
+    text: '<span>shop</span> boy'
   },
   {
     elem: '.slide1 .cta3',
-    url: '/baby-new-arrivals ',
-    text: 'shop baby new arrivals'
+    url: '/tween-girls-clothing/favorites/new-arrivals',
+    text: '<span>shop</span> tween'
+  },
+  {
+    elem: '.slide1 .cta4',
+    url: '/baby-girl-clothes/new-arrivals',
+    text: '<span>shop</span> baby girl'
+  },
+  {
+    elem: '.slide1 .cta5',
+    url: '/baby-boy-clothes/new-arrivals',
+    text: '<span>shop</span> baby boy'
+  },
+  {
+    elem: '.slide1 .cta6',
+    url: '/newborn-clothes/favorites/new-arrivals',
+    text: '<span>shop</span> newborn'
   },
   {
     elem: '.slide2 .cta1',
-    url: '/special-occasion',
-    text: 'shop special occasion'
-  },
-  {
-    elem: '.slide2 .cta2',
-    url: '/boys-clothing/new-arrivals',
-    text: 'shop boy new arrivals'
-  },
-  {
-    elem: '.slide3 .cta1',
-    url: '/dress-shop',
-    text: 'shop dresses'
-  },
-  {
-    elem: '.slide4 .cta1',
     url: '/pajamas',
     text: 'shop pjs'
   },
   {
-    elem: '.slide4 .cta2',
-    url: '/boys-tees-tops',
-    text: 'shop boy tees + tops'
+    elem: '.slide3 .cta1',
+    url: '/tee-shop',
+    text: 'shop graphic tees'
   },
+
 ];
 
 addUrls(c1);
