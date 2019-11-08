@@ -1,4 +1,34 @@
-var c1 = [{
+const c1 = [{
+    elem: '.slide0 .cta1',
+    url: '/girls-clothing/favorites/limited-time-sale',
+    text: '<span>shop</span> girl'
+  },
+  {
+    elem: '.slide0 .cta2',
+    url: '/boys-clothing/favorites/limited-time-sale',
+    text: '<span>shop</span> boy'
+  },
+  {
+    elem: '.slide0 .cta3',
+    url: '/tween-girls-clothing/favorites/limited-time-sale',
+    text: '<span>shop</span> tween'
+  },
+  {
+    elem: '.slide0 .cta4',
+    url: '/baby-girl-clothes/favorites/limited-time-sale',
+    text: '<span>shop</span> baby girl'
+  },
+  {
+    elem: '.slide0 .cta5',
+    url: '/baby-boy-clothes/favorites/limited-time-sale',
+    text: '<span>shop</span> baby boy'
+  },
+  {
+    elem: '.slide0 .cta6',
+    url: '/select-styles',
+    text: '<span>shop</span> the sale'
+  },
+  {
     elem: '.slide1 .cta1',
     url: '/girls-clothing/new-arrivals',
     text: '<span>shop</span> girl'

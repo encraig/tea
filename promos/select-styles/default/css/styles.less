@@ -1,8 +1,3 @@
-html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-
 .ref {
 	position: absolute;
 	opacity: 0.5;
@@ -11,172 +6,114 @@ html {
 	z-index: 9999;
 }
 
-.header-banner {
-	background: #693115;
-	max-width: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
 .the-promo {
-	@media screen and (max-width:414px) {
-		padding: 0.9rem 0 0;
+	@media screen and (max-width:1679px) {
+		padding: 0.8% 0;
+	}
+	@media screen and (max-width:768px) {
+		padding: 2% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
-	padding: 0.8rem 0 0.9rem;
+	padding: 0.7% 0;
 	position: relative;
-	background: #693115;
+	background: #233752;
 	text-align: center;
-	// .see-details {
-	// 	display: block;
-	// 	text-align: center;
-	// }
+
 	span {
-		@media screen and (max-width: 768px) {}
+		@media screen and (max-width:414px) {
+			display: block;
+			left: 0 !important;
+		}
 		position: relative;
 		font-family: gilroy-bold;
 
-		&.span-wrap {
-			@media screen and (max-width: 768px) {
-				left: -10%;
-			}
-			@media screen and (max-width:650px) {
-				left: 0;
-				display: block;
-			}
-			left: -21%;
-		}
-
 		&.first {
-			@media screen and (max-width:1679px) {}
+			@media screen and (max-width:1679px) {
+				font-size: 1.1vw;
+			}
 			@media screen and (max-width:768px) {
-				font-size: 1rem;
+				font-size: 1.5vw;
+				left: -3%;
 			}
-			@media screen and (max-width:650px) {
-				font-size: 0.9rem;
-				left: 1%;
+			@media screen and (max-width:414px) {
+				font-size: 5vw;
 			}
-			@media screen and (max-width:320px) {
-				display: block;
-			}
-			left: 0;
-			font-size: 1.28rem;
+			left: -11.4%;
+			font-size: 20px;
 			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: #abe6a8;
-			position: relative;
+			letter-spacing: 0.2em;
+			color: #9bf7da;
+
+			i {
+				@media screen and (max-width:414px) {
+					display: none;
+				}
+				font-style: normal;
+			}
 		}
 
-		&.second {
-			@media screen and (max-width:1679px) {}
-			@media screen and (max-width:1024px) {}
-			@media screen and (max-width:768px) {
-				left: 0;
-				font-size: 1rem;
-			}
-			@media screen and (max-width:650px) {
-				left: 1%;
-				top: 0;
-				font-size: 0.9rem;
-			}
-			@media screen and (max-width:320px) {
-				font-size: 0.8rem;
-			}
-			left: 2%;
-			font-size: 1.28rem;
-			color: #ffab99;
-			letter-spacing: 2px;
-		}
+		&.second {}
 
 		&.shop-now {
-			@media screen and (max-width:1679px) {}
-			@media screen and (max-width:1024px) {}
+			@media screen and (max-width:1679px) {
+				left: 3%;
+			}
 			@media screen and (max-width:768px) {
-				left: 70.5%;
-			}
-			@media screen and (max-width:650px) {
-				position: relative;
 				left: 0;
-				top: 0;
 			}
-			left: 64%;
+			@media screen and (max-width:414px) {
+				margin: 1% 0 0;
+			}
+			left: 0;
 			text-align: center;
 			border: none;
-			position: absolute;
-			top: 20%;
 
 			a {
-				@media screen and (max-width:1679px) {}
+				@media screen and (max-width:1679px) {
+					font-size: 0.9vw;
+				}
 				@media screen and (max-width:768px) {
-					font-size: 0.6rem;
-					padding-bottom: 6%;
+					font-size: 1.5vw;
 				}
-				@media screen and (max-width:650px) {
-					padding-bottom: 1%;
+				@media screen and (max-width:414px) {
+					font-size: 3vw;
 				}
-				@media screen and (max-width:320px) {}
 				font-family: gilroy-bold;
 				text-transform: uppercase;
-				font-size: 0.9rem;
+				font-size: 16px;
 				text-decoration: none;
 				color: #fff;
 				border-bottom: 1px solid;
-				padding-bottom: 3%;
-				margin: 0;
-				letter-spacing: 2px;
-
-				span {
-					&.code {
-						@media screen and (max-width:768px) {
-							display: none;
-						}
-						@media screen and (max-width:650px) {
-							display: inline;
-						}
-					}
-
-					&.sale {
-						@media screen and (max-width:768px) {
-							display: inline;
-						}
-						@media screen and (max-width:650px) {
-							display: none;
-						}
-						display: none;
-					}
-				}
+				letter-spacing: 0.2em;
 			}
 		}
 
 		&.details {
-			@media screen and (max-width:1679px) {}
-			@media screen and (max-width:1024px) {}
+			@media screen and (max-width:1679px) {
+				left: 16%;
+			}
 			@media screen and (max-width:768px) {
-				left: 92%;
-				position: absolute;
-				top: 27%;
+				left: 2%;
 			}
-			@media screen and (max-width:650px) {
-				display: block;
-				left: 0;
+			@media screen and (max-width:414px) {
 				text-align: right;
-				position: relative;
-				top: 0;
-				padding: 0 3% 0 0;
+				padding: 0 5%;
 			}
-			left: 94.5%;
-			position: absolute;
+			left: 13%;
 
 			a {
-				@media screen and (max-width:1679px) {}
-				@media screen and (max-width:1024px) {}
-				@media screen and (max-width:650px) {
-					font-size: 0.7rem;
+				@media screen and (max-width:1679px) {
+					font-size: 0.9vw;
+				}
+				@media screen and (max-width:768px) {
+					font-size: 1.5vw;
+				}
+				@media screen and (max-width:414px) {
+					font-size: 3vw;
 				}
 				color: #FFF;
-				font-size: 1rem;
+				font-size: 16px;
 				text-decoration: none;
 				font-family: gilroy-regular;
 				text-transform: capitalize;
@@ -187,37 +124,6 @@ html {
 	img {
 		max-width: 100%;
 	}
-}
-
-.desktop-promo-fat,
-.mobile-promo-fat,
-.tablet-promo-fat {
-	// img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
-	// width: 100%;
-	// }
-}
-
-.desktop-promo-fat {
-	@media screen and (min-width: 769px) {
-		display: block;
-	}
-	display: none;
-}
-
-.tablet-promo-fat {
-	@media screen and (min-width: 415px) and (max-width: 768px) {
-		display: block;
-	}
-	display: none;
-}
-
-.mobile-promo-fat {
-	@media screen and (max-width: 414px) {
-		display: block;
-	}
-	display: none;
 }
 
 #details-promo {
@@ -255,12 +161,8 @@ html {
 
 	a {
 		@media screen and (max-width: 414px) {
-			font-size: 0.7rem;
+			// padding: 1rem 2rem;
 			flex-basis: 46%;
-		}
-		@media screen and (max-width:320px) {
-			font-size: 0.7rem;
-			margin: 0 0.6rem 0.6rem 0;
 		}
 		position: relative;
 		padding: 0.75rem 1.25rem;
@@ -270,7 +172,7 @@ html {
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #693115;
+		background: #233752;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
@@ -286,6 +188,14 @@ html {
 			margin: 0;
 		}
 	}
+}
+
+.header-banner {
+	background: #233752;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .fancybox-inner {

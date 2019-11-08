@@ -1,10 +1,11 @@
-var addAlt = function(elem, alt) {
-  var img = $(elem);
+const addAlt = (elem, alt) => {
+  let img = $(elem);
   $.each(img, function(i, val) {
     $(val).attr('alt', alt);
   });
 };
 
+addAlt('.hp .c1 .slide0 img', 'girl & boy');
 addAlt('.hp .c1 .slide1 img', 'girl with presents');
 addAlt('.hp .c1 .slide2 img', 'boy & girl in PJs');
 addAlt('.hp .c1 .slide3 img', 'girl & boy');

@@ -14,7 +14,7 @@
 }
 
 header.site-header {
-  // top: 0 !important;
+  top: 0 !important;
 }
 
 .hp {
@@ -31,16 +31,20 @@ header.site-header {
       font-size: 5.3vw;
       line-height: 5.5vw;
     }
+    @media screen and (max-width: 768px) {
+      font-size: 5.2vw;
+      line-height: 5.2vw;
+    }
     @media screen and (max-width: 414px) {
-      font-size: 10vw;
-      line-height: 12vw;
+      font-size: 10vw !important;
+      line-height: 12vw !important;
     }
     font-family: @souv;
     font-size: 89px;
-    line-height: 95px;
+    line-height: 93px;
     text-align: center;
     letter-spacing: 0.01em;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
+    // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
     color: #FFFFFF;
   }
 
@@ -49,9 +53,13 @@ header.site-header {
       font-size: 1.5vw;
       line-height: 2.3vw;
     }
+    // @media screen and (max-width: 768px) {
+    //   font-size: 2.9vw;
+    //   line-height: 4.1vw;
+    // }
     @media screen and (max-width: 414px) {
-      font-size: 4vw;
-      line-height: 6vw;
+      font-size: 4vw !important;
+      line-height: 6vw !important;
     }
     font-family: @souv;
     font-size: 25px;
