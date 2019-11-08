@@ -10,9 +10,10 @@ module.exports = {
   hp: {
     files: [{
       expand: true,
-      cwd: 'homepage/default/css/purify/',
+      cwd: 'homepage/default/css/',
       src: '*.css',
-      dest: 'homepage/default/css/cssmin/'
+      dest: 'homepage/default/css/cssmin/',
+      ext: '.min.css'
     }]
   },
 

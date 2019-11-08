@@ -3,10 +3,14 @@ var config = require("./../gruntConfig.js");
 
 module.exports = {
 
-  // options: {
-  //   sourceMap: true,
-  //   presets: ['@babel/preset-env']
-  // },
+  hp: {
+    files: [{
+      expand: true,
+      cwd: 'homepage/default/js/',
+      src: '*.js',
+      dest: 'homepage/default/js/browserify/'
+    }]
+  },
 
   promos: {
     files: [{
@@ -15,6 +19,6 @@ module.exports = {
       src: '*.js',
       dest: 'promos/' + config.promo.name + '/' + config.promo.date + '/js/browserify/'
     }]
-  }
+  },
 
 };

@@ -11,7 +11,7 @@ module.exports = {
   hp: {
     //dynamic files
     expand: true,
-    cwd: 'homepage/default/js/',
+    cwd: 'homepage/default/js/babel/',
     src: ['*.js'],
     dest: 'homepage/default/js/jsmin/',
     ext: '.min.js',

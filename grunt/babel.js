@@ -8,7 +8,7 @@ module.exports = {
     presets: ['@babel/preset-env']
   },
 
-  zone: {
+  hp: {
     files: [{
       expand: true,
       cwd: 'homepage/default/js/',
