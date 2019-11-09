@@ -1,0 +1,48 @@
+<div>
+  <a href="/baby-boy-clothes/new-arrivals" data="mega menu baby boy" >Baby Boy (0&#8211;4T)</a>
+  <span class="line"></span>
+  <div class="menu flex-menu">
+    <div class="panel panel-1 col-s-4 col-xs-4 col-xxs-4">
+      {assign var=i value=0}
+      <ul class="category first">
+        <li>Shop by Category</li>
+        <li>
+          <a href="{$secure_html_url}black-friday/baby-boy" data="mega menu baby boy black friday" class="black-friday">BLACK FRIDAY</a>
+          <ul class="black-friday">
+            {sub_cats name="cat" category="black-friday/baby-boy"}
+              <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl black friday categories" >{$cat.title}</a></li>
+            {/sub_cats}
+            <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu baby boy black friday view all" class="black-friday">VIEW ALL</a></li>
+          </ul>
+        </li>
+
+        {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
+        {if $i && $i % 6 eq 0}
+          </ul>
+          <ul class="category">
+            <li class="spacer">Spacer</li>
+        {/if}
+          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy categories" >{$cat.title}</a></li>
+        {math equation="x + y" x=$i y=1 assign=i}
+        {/sub_cats}
+
+          <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all" >View All</a></li>
+          <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale" >Sale</a></li>
+        </ul>
+      </ul>
+    </div>
+    <div class="panel panel-2 col-s-4 col-xs-4 col-xxs-4">
+      <ul class="category">
+        <li>Shop by Collection</li>
+          <li><a href="/everest" class="everest" data="mega menu baby boy favorites"> Tea x Abominable</a></li>
+        {sub_cats name="cat" category="baby-boy-clothes/favorites"}
+          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy favorites" >{$cat.title}</a></li>
+        {/sub_cats}
+      </ul>
+    </div>
+    <div class="panel panel-3 col-s-4 col-xs-4 col-xxs-4">
+      <div class="da-rennab-zone" data-zone="mega_baby_boy"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>

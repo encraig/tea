@@ -1,12 +1,17 @@
-@color0: #b2bac4;
-@color1: #436fc1;
+// Color variables (appears count calculates by raw css)
+@color0: #ee696d; // Appears 4 times
+@color1: #b2bac4; // Appears 2 times
+@color2: #436fc1; // Appears 2 times
+// Width variables (appears count calculates by raw css)
+@width0: 208px; // Appears 2 times
 
 .black-friday {
-	float:none !important;
-	color:#EE696D !important;
+	color: @color0 !important;
+	float: none !important;
+
 	&:hover {
-		&:before {
-			background-color: #EE696D !important;
+		before {
+			background-color: @color0 !important;
 		}
 	}
 
@@ -14,10 +19,11 @@
 		padding: 10px 0 10px 10px !important;
 
 		a {
-			color:#EE696D !important;
+			color: @color0 !important;
+
 			&:hover {
-				&:before {
-					background-color: #EE696D !important;
+				before {
+					background-color: @color0 !important;
 				}
 			}
 		}
@@ -31,10 +37,10 @@
 }
 
 .panel-1 {
-	border-right: 1px solid @color0;
-	border-right: 1px solid @color0;
+	border-right: 1px solid @color1;
+	border-right: 1px solid @color1;
+	flex-basis: inherit;
 	flex-basis: 36%;
-	// flex-basis: 417px;
 	float: none;
 	width: auto;
 
@@ -46,12 +52,13 @@
 
 	ul.category {
 		padding: 0 !important;
+		width: @width0;
 	}
 }
 
 .panel-2 {
 	flex-basis: 31%;
-	// flex-basis: 315px;
+	flex-basis: 315px;
 	float: none;
 	width: auto;
 
@@ -62,18 +69,28 @@
 }
 
 .panel-3 {
+	flex-basis: 20%;
 	flex-basis: 33%;
 	float: none;
 	width: auto;
 }
 
+.panel {
+	float: none;
+	width: auto;
+
+	ul.category-sale {
+		width: @width0 !important;
+	}
+}
+
 .new.arrivals {
-	color: @color1 !important;
+	color: @color2 !important;
 	font-family: gilroy-bold !important;
 
 	&:hover {
-		&:before {
-			background-color: @color1 !important;
+		before {
+			background-color: @color2 !important;
 		}
 	}
 }
@@ -107,11 +124,10 @@ header {
 		}
 	}
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width:1024px) {
 	.flex-menu {
 		display: flex !important;
 		flex-wrap: wrap;
-		// padding: 2% 50px !important;
-		padding: 2% !important;
+		padding: 2% 0 2% 50px !important;
 	}
 }
