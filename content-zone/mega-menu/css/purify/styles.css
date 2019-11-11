@@ -3,7 +3,7 @@
   float: none !important;
 }
 
-.black-friday:hover before {
+.black-friday:hover:before {
   background-color: #ee696d !important;
 }
 
@@ -15,7 +15,7 @@
   color: #ee696d !important;
 }
 
-.black-friday li a:hover before {
+.black-friday li a:hover:before {
   background-color: #ee696d !important;
 }
 
