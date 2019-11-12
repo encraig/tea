@@ -15,7 +15,7 @@ module.exports = {
   },
 
   zone: {
-    src: ['content-zone/' + config.zone.name + '/includes/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],
+    src: ['content-zone/' + config.zone.name + '/dev/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],
     css: ['content-zone/' + config.zone.name + '/css/styles.css'],
     dest: 'content-zone/' + config.zone.name + '/css/purify/styles.css'
   },
