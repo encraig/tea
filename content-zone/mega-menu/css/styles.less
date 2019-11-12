@@ -1,9 +1,31 @@
+.black-friday {
+	float: none !important;
+	color: #EE696D !important;
+
+	&:hover:before {
+		background-color: #EE696D !important;
+	}
+
+	li {
+		padding: 10px 0 10px 10px !important;
+
+		a {
+			color: #EE696D !important;
+
+			&:hover:before {
+				background-color: #EE696D !important;
+			}
+		}
+	}
+}
+
 .flex-menu {
 	display: flex !important;
 	flex-wrap: wrap;
-	padding: 2% 5% !important;
+	padding: 2% 25px !important;
 }
 
+.panel,
 .panel-1,
 .panel-2,
 .panel-3 {
@@ -13,54 +35,36 @@
 
 .new.arrivals {
 	color: #436FC1 !important;
-	font-family:gilroy-bold !important;
-	
-	&:hover {
+	font-family: gilroy-bold !important;
 
-		&:before {
-				background-color: #436FC1 !important;
-		}
+	&:hover:before {
+		background-color: #436FC1 !important;
 	}
 }
 
 .panel-1 {
-	flex-basis: 33%;
+	flex-basis: 36%;
+	border-right: 1px solid #B2BAC4;
+
+	ul:nth-of-type(1) {
+		width: 50%;
+	}
+
+	ul.category {
+		padding: 0 !important;
+	}
 }
 
 .panel-2 {
-	border-right: 1px solid #B2BAC4;
-	flex-basis: 36%;
+	flex-basis: 31%;
 
-	ul {
-		&:nth-of-type(1) {
-			width: 51%;
-		}
-
-		&.category {
-			padding: 0 !important;
-		}
+	ul.category {
+		padding: 0 0 0 19% !important;
 	}
 }
 
 .panel-3 {
-	flex-basis: 31%;
-
-	ul {
-		&.category {
-			padding: 0 0 0 19% !important;
-		}
-	}
-}
-
-#mega-menu-baby-boy,
-#mega-menu-baby-girl,
-#mega-menu-boy,
-#mega-menu-girl,
-#mega-menu-newborn,
-#mega-menu-toddler-boy,
-#mega-menu-toddler-girl,
-#mega-menu-tween {
-	// width: 100% !important;
+	flex-basis: 33%;
 }
 
 header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before {
@@ -68,5 +72,37 @@ header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.fir
 }
 
 header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover {
-	font-family:gilroy-bold !important;
+	font-family: gilroy-bold !important;
+}
+@media (min-width: 1024px) {
+	.flex-menu {
+		display: flex !important;
+		flex-wrap: wrap;
+		padding: 2% 0 2% 50px !important;
+	}
+
+	.panel-1 {
+		flex-basis: inherit;
+		border-right: 1px solid #B2BAC4;
+
+		ul.category {
+			width: 208px;
+		}
+	}
+
+	.panel-2 {
+		flex-basis: 315px;
+
+		ul.category {
+			padding: 0 0 0 72px !important;
+		}
+	}
+
+	.panel-3 {
+		flex-basis: 20%;
+	}
+
+	.panel ul.category-sale {
+		width: 208px !important;
+	}
 }
