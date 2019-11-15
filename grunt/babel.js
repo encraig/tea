@@ -17,6 +17,15 @@ module.exports = {
     }]
   },
 
+  landing: {
+    files: [{
+      expand: true,
+      cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/',
+      src: '*.js',
+      dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/babel/'
+    }]
+  },
+
   zone: {
     files: [{
       expand: true,
