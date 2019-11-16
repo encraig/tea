@@ -19,6 +19,9 @@
         @media screen and (max-width:768px) {
           display: block;
         }
+        @media screen and (max-width:414px) {
+          display: none;
+        }
         display: none;
       }
 
@@ -98,117 +101,111 @@
         // padding-bottom: 0 0 1%;
       }
     }
-    // &.slide0 {
-    //   @media screen and (max-width: 414px) {
-    //     background: url("/mas_assets/media/tea_collection/promos/select-styles/2019/1107/v0/191107-hp-m.jpg") no-repeat center top;
-    //     background-size: cover;
-    //     min-height: 60em;
-    //   }
-    //   @media screen and (max-width: 375px) {
-    //     min-height: 57em;
-    //   }
-    //   @media screen and (max-width: 320px) {
-    //     min-height: 53em;
-    //   }
-    //
-    //   img.img-t {
-    //     @media screen and (max-width:414px) {
-    //       display: none;
-    //     }
-    //   }
-    //
-    //   div {
-    //     &.the-content {
-    //       @media screen and (max-width:768px) {
-    //         top: 77%;
-    //       }
-    //       @media screen and (max-width: 414px) {
-    //         width: 43%;
-    //         top: 0;
-    //         bottom: 0;
-    //         padding: 150% 0 0;
-    //       }
-    //       top: 56.5%;
-    //       left: 50%;
-    //       width: 32%;
-    //       transform: translate(-50%, 0);
-    //     }
-    //
-    //     div {
-    //       &:nth-of-type(1) {
-    //         @media screen and (max-width:768px) {
-    //           display: none;
-    //         }
-    //         margin: 3% 0 0;
-    //
-    //         a {
-    //           span {
-    //             @media screen and (max-width: 414px) {
-    //               display: none;
-    //             }
-    //           }
-    //
-    //           &.cta1 {
-    //             left: -6%;
-    //           }
-    //
-    //           &.cta2 {
-    //             left: 0;
-    //           }
-    //
-    //           &.cta3 {
-    //             left: 6%;
-    //           }
-    //         }
-    //       }
-    //
-    //       &:nth-of-type(2) {
-    //         @media screen and (max-width:768px) {
-    //           display: none;
-    //         }
-    //         margin: 5% 0 0;
-    //
-    //         a {
-    //           span {
-    //             @media screen and (max-width: 414px) {
-    //               display: none;
-    //             }
-    //           }
-    //
-    //           &.cta4 {
-    //             @media screen and (max-width:768px) {
-    //               left: -7%;
-    //             }
-    //             @media screen and (max-width:414px) {
-    //               left: -2%;
-    //             }
-    //             left: -4%;
-    //           }
-    //
-    //           &.cta5 {
-    //             @media screen and (max-width:768px) {
-    //               left: 0;
-    //             }
-    //             @media screen and (max-width:414px) {
-    //               left: 4%;
-    //             }
-    //             left: 4%;
-    //           }
-    //         }
-    //       }
-    //
-    //       &:nth-of-type(3) {
-    //         @media screen and (max-width:768px) {
-    //           display: block;
-    //         }
-    //         display: none;
-    //         margin: 4% 0 0;
-    //
-    //         a {}
-    //       }
-    //     }
-    //   }
-    // }
+
+    &.slide0 {
+      div {
+        &.the-content {
+          @media screen and (max-width:768px) {
+            top: 77%;
+          }
+          @media screen and (max-width: 414px) {
+            width: 43%;
+            top: 0;
+            bottom: 0;
+            padding: 150% 0 0;
+          }
+          top: 69.5%;
+          right: 1%;
+          width: 44%;
+          text-align: center;
+        }
+
+        div {
+          &:nth-of-type(1) {
+            @media screen and (max-width:768px) {
+              display: none;
+            }
+            margin: 3% 0 0;
+
+            a {
+              span {
+                @media screen and (max-width: 414px) {
+                  display: none;
+                }
+              }
+
+              &.cta1 {
+                left: -7%;
+              }
+
+              &.cta2 {
+                left: -1%;
+              }
+
+              &.cta3 {
+                left: 5%;
+              }
+            }
+          }
+
+          &:nth-of-type(2) {
+            @media screen and (max-width:768px) {
+              display: none;
+            }
+            margin: 5% 0 0;
+
+            a {
+              span {
+                @media screen and (max-width: 414px) {
+                  display: none;
+                }
+              }
+
+              &.cta4 {
+                @media screen and (max-width:768px) {
+                  left: -7%;
+                }
+                @media screen and (max-width:414px) {
+                  left: -2%;
+                }
+                left: -7%;
+              }
+
+              &.cta5 {
+                @media screen and (max-width:768px) {
+                  left: 0;
+                }
+                @media screen and (max-width:414px) {
+                  left: 4%;
+                }
+                left: -2%;
+              }
+
+              &.cta6 {
+                @media screen and (max-width:768px) {
+                  left: 0;
+                }
+                @media screen and (max-width:414px) {
+                  left: 4%;
+                }
+                left: 3%;
+              }
+            }
+          }
+
+          &:nth-of-type(3) {
+            @media screen and (max-width:768px) {
+              display: block;
+            }
+            display: none;
+            margin: 4% 0 0;
+
+            a {}
+          }
+        }
+      }
+    }
+
     &.slide1 {
       background: #F9EBE6;
 
