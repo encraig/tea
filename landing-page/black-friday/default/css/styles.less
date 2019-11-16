@@ -32,6 +32,67 @@
 		position: absolute;
 		top: 58%;
 		width: 100%;
+		display: none;
+
+		.bf-desktop.price-buckets {
+			a {
+				span {
+					@media screen and (max-width:768px) {
+						display: inline;
+					}
+				}
+
+				&:nth-of-type(1) {
+					left: -11%;
+				}
+
+				&:nth-of-type(2) {
+					left: -6%;
+				}
+
+				&:nth-of-type(3) {
+					left: 0;
+				}
+
+				&:nth-of-type(4) {
+					left: 6%;
+				}
+
+				&:nth-of-type(5) {
+					left: 12%;
+				}
+			}
+		}
+
+		.bf-mobile.price-buckets {
+			a {
+				span {
+					@media screen and (max-width:768px) {
+						display: none;
+					}
+				}
+
+				&:nth-of-type(1) {
+					left: -13%;
+				}
+
+				&:nth-of-type(2) {
+					left: -7%;
+				}
+
+				&:nth-of-type(3) {
+					left: 0;
+				}
+
+				&:nth-of-type(4) {
+					left: 7%;
+				}
+
+				&:nth-of-type(5) {
+					left: 14%;
+				}
+			}
+		}
 
 		.bf-desktop {
 			width: 71%;
@@ -76,6 +137,20 @@
 		text-align: center;
 		background: #691326;
 		padding: 0 0 8%;
+
+		a {
+			&:nth-of-type(1) {
+				left: -4%;
+			}
+
+			&:nth-of-type(2) {
+				left: 1%;
+			}
+
+			&:nth-of-type(3) {
+				left: 5%;
+			}
+		}
 
 		div {
 			&:nth-of-type(1) {

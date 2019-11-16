@@ -33,12 +33,65 @@
   position: absolute;
   top: 58%;
   width: 100%;
+  display: none;
 }
 
 @media screen and (max-width:414px) {
   .bf-landing .shop-all-cats {
     top: 56%;
   }
+}
+
+@media screen and (max-width:768px) {
+  .bf-landing .shop-all-cats .bf-desktop.price-buckets a span {
+    display: inline;
+  }
+}
+
+.bf-landing .shop-all-cats .bf-desktop.price-buckets a:nth-of-type(1) {
+  left: -11%;
+}
+
+.bf-landing .shop-all-cats .bf-desktop.price-buckets a:nth-of-type(2) {
+  left: -6%;
+}
+
+.bf-landing .shop-all-cats .bf-desktop.price-buckets a:nth-of-type(3) {
+  left: 0;
+}
+
+.bf-landing .shop-all-cats .bf-desktop.price-buckets a:nth-of-type(4) {
+  left: 6%;
+}
+
+.bf-landing .shop-all-cats .bf-desktop.price-buckets a:nth-of-type(5) {
+  left: 12%;
+}
+
+@media screen and (max-width:768px) {
+  .bf-landing .shop-all-cats .bf-mobile.price-buckets a span {
+    display: none;
+  }
+}
+
+.bf-landing .shop-all-cats .bf-mobile.price-buckets a:nth-of-type(1) {
+  left: -13%;
+}
+
+.bf-landing .shop-all-cats .bf-mobile.price-buckets a:nth-of-type(2) {
+  left: -7%;
+}
+
+.bf-landing .shop-all-cats .bf-mobile.price-buckets a:nth-of-type(3) {
+  left: 0;
+}
+
+.bf-landing .shop-all-cats .bf-mobile.price-buckets a:nth-of-type(4) {
+  left: 7%;
+}
+
+.bf-landing .shop-all-cats .bf-mobile.price-buckets a:nth-of-type(5) {
+  left: 14%;
 }
 
 .bf-landing .shop-all-cats .bf-desktop {
@@ -81,6 +134,18 @@
   text-align: center;
   background: #691326;
   padding: 0 0 8%;
+}
+
+.bf-landing .bf-mobile a:nth-of-type(1) {
+  left: -4%;
+}
+
+.bf-landing .bf-mobile a:nth-of-type(2) {
+  left: 1%;
+}
+
+.bf-landing .bf-mobile a:nth-of-type(3) {
+  left: 5%;
 }
 
 .bf-landing .bf-mobile div:nth-of-type(1) {
