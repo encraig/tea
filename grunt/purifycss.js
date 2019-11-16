@@ -14,8 +14,14 @@ module.exports = {
     dest: hp + '/css/purify/styles.css'
   },
 
+  landing: {
+    src: ['landing-page/' + config.landing.name + '/' + config.landing.date + '/dev/content.html', 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/babel/scripts.js'],
+    css: ['landing-page/' + config.landing.name + '/' + config.landing.date + '/css/styles.css'],
+    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/css/purify/styles.css'
+  },
+
   zone: {
-    src: ['content-zone/' + config.zone.name + '/includes/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],
+    src: ['content-zone/' + config.zone.name + '/dev/content.html', 'content-zone/' + config.zone.name + '/js/babel/scripts.js'],
     css: ['content-zone/' + config.zone.name + '/css/styles.css'],
     dest: 'content-zone/' + config.zone.name + '/css/purify/styles.css'
   },

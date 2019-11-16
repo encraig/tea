@@ -16,6 +16,15 @@ module.exports = {
     }]
   },
 
+  landing: {
+    files: [{
+      expand: true,
+      cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/includes/',
+      src: '*.html',
+      dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/toolkit/'
+    }]
+  },
+
   zone: {
     files: [{
       expand: true,

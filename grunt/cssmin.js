@@ -17,6 +17,15 @@ module.exports = {
     }]
   },
 
+  landing: {
+    files: [{
+      expand: true,
+      cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/css/purify/',
+      src: '*.css',
+      dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/css/cssmin/'
+    }]
+  },
+
   zone: {
     files: [{
       expand: true,

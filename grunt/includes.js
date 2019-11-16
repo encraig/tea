@@ -100,7 +100,7 @@ module.exports = {
       {
         cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/dev',
         src: ['*.html'],
-        dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/toolkit/'
+        dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/includes/'
       },
     ],
 

@@ -29,9 +29,9 @@ module.exports = {
   landing: {
     //dynamic files
     expand: true,
-    cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js',
+    cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/babel/',
     src: ['*.js'],
-    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/output/',
+    dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/jsmin/',
     ext: '.min.js',
   },
 
