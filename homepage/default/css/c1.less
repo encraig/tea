@@ -106,13 +106,18 @@
       div {
         &.the-content {
           @media screen and (max-width:768px) {
-            top: 77%;
+            top: 74%;
+            width: 100%;
+            right: 0;
           }
           @media screen and (max-width: 414px) {
-            width: 43%;
-            top: 0;
-            bottom: 0;
-            padding: 150% 0 0;
+            top: 67%;
+            width: 100%;
+            left: 50%;
+            position: absolute;
+            padding: 0;
+            min-height: auto;
+            transform: translate(-50%, 0);
           }
           top: 69.5%;
           right: 1%;
@@ -122,7 +127,7 @@
 
         div {
           &:nth-of-type(1) {
-            @media screen and (max-width:768px) {
+            @media screen and (max-width:414px) {
               display: none;
             }
             margin: 3% 0 0;
@@ -139,17 +144,23 @@
               }
 
               &.cta2 {
+                @media screen and (max-width:768px) {
+                  left: 0;
+                }
                 left: -1%;
               }
 
               &.cta3 {
+                @media screen and (max-width:768px) {
+                  left: 7%;
+                }
                 left: 5%;
               }
             }
           }
 
           &:nth-of-type(2) {
-            @media screen and (max-width:768px) {
+            @media screen and (max-width:414px) {
               display: none;
             }
             margin: 5% 0 0;
@@ -183,7 +194,7 @@
 
               &.cta6 {
                 @media screen and (max-width:768px) {
-                  left: 0;
+                  left: 7%;
                 }
                 @media screen and (max-width:414px) {
                   left: 4%;
@@ -194,13 +205,33 @@
           }
 
           &:nth-of-type(3) {
-            @media screen and (max-width:768px) {
+            @media screen and (max-width:414px) {
               display: block;
             }
             display: none;
             margin: 4% 0 0;
 
-            a {}
+            a {
+              margin: 0 0 7%;
+
+              &.cta1,
+              &.cta4 {
+                left: -3%;
+              }
+
+              &.cta6 {
+                left: -6%;
+              }
+
+              &.cta2,
+              &.cta5 {
+                left: 4%;
+              }
+
+              &.cta3 {
+                left: 0;
+              }
+            }
           }
         }
       }
