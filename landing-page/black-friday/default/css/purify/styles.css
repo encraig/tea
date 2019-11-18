@@ -1,5 +1,7 @@
 .bf-landing {
   position: relative;
+  background: #691326;
+  text-align: center;
 }
 
 .bf-landing .ref {
@@ -7,10 +9,6 @@
   top: 0;
   opacity: .5;
   z-index: 9999;
-}
-
-.bf-landing img {
-  width: 100%;
 }
 
 @media screen and (max-width:414px) {
@@ -25,7 +23,7 @@
 
 @media screen and (max-width:414px) {
   .bf-landing .bf-mobile {
-    display: block;
+    display: inline;
   }
 }
 
