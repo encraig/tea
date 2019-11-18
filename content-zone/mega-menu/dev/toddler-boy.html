@@ -1,5 +1,5 @@
 <div>
-  <a href="/toddler-boys-clothes/favorites/new-arrivals" data="mega menu toddler boy" >Toddler (2&#8211;4)</a>
+  <a href="/toddler-boys-clothes/favorites/new-arrivals" data="mega menu toddler boy">Toddler (2&#8211;4)</a>
   <span class="line"></span>
   <div class="menu flex-menu">
     <div class="panel panel-1 col-s-4 col-xs-4 col-xxs-4">
@@ -10,33 +10,33 @@
           <a href="{$secure_html_url}black-friday/boy" data="mega menu toddler boy black friday" class="black-friday">BLACK FRIDAY</a>
           <ul class="black-friday">
             {sub_cats name="cat" category="black-friday/boy"}
-              <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy black friday categories" >{$cat.title}</a></li>
+            <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy black friday categories">{$cat.title}</a></li>
             {/sub_cats}
-            <li><a href="{$secure_html_url}black-friday/boy" data="mega menu toddler boy black friday view all" class="black-friday">VIEW ALL</a></li>
+            <li><a href="{$secure_html_url}black-friday/boy/view-all" data="mega menu toddler boy black friday shop all" class="black-friday">Shop All</a></li>
           </ul>
         </li>
 
         {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
         {if $i && $i % 6 eq 0}
-          </ul>
-          <ul class="category">
-            <li class="spacer">Spacer</li>
+      </ul>
+      <ul class="category">
+        <li class="spacer">Spacer</li>
         {/if}
-          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy categories" >{$cat.title}</a></li>
+        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy categories">{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
 
-          <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all" >View All</a></li>
-          <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale" >Sale</a></li>
-        </ul>
+        <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
+        <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale">Sale</a></li>
+      </ul>
       </ul>
     </div>
     <div class="panel panel-2 col-s-4 col-xs-4 col-xxs-4">
       <ul class="category">
         <li>Shop by Collection</li>
-          <li><a href="/everest" class="everest" data="mega menu toddler boy favorites"> Tea x Abominable</a></li>
+        <li><a href="/everest" class="everest" data="mega menu toddler boy favorites"> Tea x Abominable</a></li>
         {sub_cats name="cat" category="toddler-boys-clothes/favorites"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy favorites" >{$cat.title}</a></li>
+        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy favorites">{$cat.title}</a></li>
         {/sub_cats}
       </ul>
     </div>
