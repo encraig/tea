@@ -159,17 +159,18 @@
 		          </ul>
 		        </li>
 
+		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all">View All</a></li>
+
 		        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu girl categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all">View All</a></li>
 		        <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -198,14 +199,16 @@
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 		        <li>
-		          <a href="{$secure_html_url}black-friday/girl" data="mega menu toddler girl black friday" class="black-friday">BLACK FRIDAY</a>
+		          <a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu toddler girl black friday" class="black-friday">BLACK FRIDAY</a>
 		          <ul class="black-friday">
-		            {sub_cats name="cat" category="black-friday/girl"}
+		            {sub_cats name="cat" category="black-friday/toddler-girl"}
 		            <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler girl black friday categories">{$cat.title}</a></li>
 		            {/sub_cats}
-		            <li><a href="{$secure_html_url}black-friday/girl/view-all" data="mega menu toddler girl black friday shop all" class="black-friday">Shop All</a></li>
+		            <li><a href="{$secure_html_url}black-friday/toddler-girl/view-all" data="mega menu toddler girl black friday shop all" class="black-friday">Shop All</a></li>
 		          </ul>
 		        </li>
+
+		        <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
 
 		        {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -213,11 +216,10 @@
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler girl categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu toddler girl categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
 		        <li><a class="sale" href="/sale/toddler-girls-clothing" data="mega menu toddler girl sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -256,18 +258,20 @@
 		          </ul>
 		        </li>
 
-
 		        <li><a href="{$secure_html_url}tween-girls-clothing/view-all" data="mega menu tween view all">View All</a></li>
+
 		        {sub_cats name="cat" category="tween-girls-clothing/category"}
 		        {if $i && $i % 6 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu tween categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu tween categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
+
 		        <li><a class="sale" href="{$secure_html_url}sale/tween-girls-clothing/view-all" data="mega menu tween sale">Sale</a></li>
+
 		      </ul>
 		      </ul>
 		    </div>
@@ -309,17 +313,18 @@
 		          </ul>
 		        </li>
 
+		        <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all">View All</a></li>
+
 		        {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu boy categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu boy categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all">View All</a></li>
 		        <li><a class="sale" href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu boy sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -348,14 +353,16 @@
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 		        <li>
-		          <a href="{$secure_html_url}black-friday/boy" data="mega menu toddler boy black friday" class="black-friday">BLACK FRIDAY</a>
+		          <a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu toddler boy black friday" class="black-friday">BLACK FRIDAY</a>
 		          <ul class="black-friday">
-		            {sub_cats name="cat" category="black-friday/boy"}
+		            {sub_cats name="cat" category="black-friday/toddler-boy"}
 		            <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy black friday categories">{$cat.title}</a></li>
 		            {/sub_cats}
-		            <li><a href="{$secure_html_url}black-friday/boy/view-all" data="mega menu toddler boy black friday shop all" class="black-friday">Shop All</a></li>
+		            <li><a href="{$secure_html_url}black-friday/toddler-boy/view-all" data="mega menu toddler boy black friday shop all" class="black-friday">Shop All</a></li>
 		          </ul>
 		        </li>
+
+		        <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
 
 		        {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -363,11 +370,10 @@
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu toddler boy categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
 		        <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -410,17 +416,18 @@
 		          </ul>
 		        </li>
 
+		        <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all">View All</a></li>
+
 		        {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby girl categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu baby girl categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all">View All</a></li>
 		        <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu baby girl sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -458,17 +465,18 @@
 		          </ul>
 		        </li>
 
+		        <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all">View All</a></li>
+
 		        {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu baby boy categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all">View All</a></li>
 		        <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale">Sale</a></li>
 		      </ul>
 		      </ul>
@@ -507,16 +515,19 @@
 		        </li>
 
 		        <li><a href="{$secure_html_url}newborn-clothes/view-all" data="mega menu newborn view all">View All</a></li>
+
 		        {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
 		      </ul>
 		      <ul class="category">
 		        <li class="spacer">Spacer</li>
 		        {/if}
-		        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu newborn categories">{$cat.title}</a></li>
+		        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu newborn categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
+
 		        <li><a class="sale" href="{$secure_html_url}sale/newborn-clothes/view-all" data="mega menu newborn sale">Sale</a></li>
+
 		      </ul>
 		      </ul>
 		    </div>

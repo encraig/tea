@@ -16,17 +16,18 @@
           </ul>
         </li>
 
+        <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all">View All</a></li>
+
         {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
         {if $i && $i % 6 eq 0}
       </ul>
       <ul class="category">
         <li class="spacer">Spacer</li>
         {/if}
-        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy categories">{$cat.title}</a></li>
+        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu baby boy categories">{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
 
-        <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all">View All</a></li>
         <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale">Sale</a></li>
       </ul>
       </ul>

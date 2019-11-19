@@ -7,14 +7,16 @@
       <ul class="category first">
         <li>Shop by Category</li>
         <li>
-          <a href="{$secure_html_url}black-friday/boy" data="mega menu toddler boy black friday" class="black-friday">BLACK FRIDAY</a>
+          <a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu toddler boy black friday" class="black-friday">BLACK FRIDAY</a>
           <ul class="black-friday">
-            {sub_cats name="cat" category="black-friday/boy"}
+            {sub_cats name="cat" category="black-friday/toddler-boy"}
             <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy black friday categories">{$cat.title}</a></li>
             {/sub_cats}
-            <li><a href="{$secure_html_url}black-friday/boy/view-all" data="mega menu toddler boy black friday shop all" class="black-friday">Shop All</a></li>
+            <li><a href="{$secure_html_url}black-friday/toddler-boy/view-all" data="mega menu toddler boy black friday shop all" class="black-friday">Shop All</a></li>
           </ul>
         </li>
+
+        <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
 
         {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
         {if $i && $i % 6 eq 0}
@@ -22,11 +24,10 @@
       <ul class="category">
         <li class="spacer">Spacer</li>
         {/if}
-        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy categories">{$cat.title}</a></li>
+        <li class="{$cat.title|lower} regular-category"><a href="{$cat.url}" class="{$cat.title|lower} regular-category" data="mega menu toddler boy categories">{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
 
-        <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
         <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale">Sale</a></li>
       </ul>
       </ul>
