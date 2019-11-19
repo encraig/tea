@@ -133,6 +133,11 @@ html {
 
 #details-promo .details-container h2 {
   letter-spacing: 1px;
+  font-family: gilroy-bold;
+}
+
+#details-promo .details-container p {
+  font-family: gilroy-regular;
 }
 
 #details-promo .details-container .close-fancy {
