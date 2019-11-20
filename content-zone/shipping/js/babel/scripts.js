@@ -1,13 +1,13 @@
 "use strict";
 
 $(document).ready(function () {
-  var url = window.location.href;
+  var url = window.location.pathname;
   var html = $('#shipping-message');
 
-  if (url == "http://tea-development.teacollection.com/order/shipping-info") {
+  if (url == "/order/shipping-info") {
     $('div[data-zone="category_pages"]').before(html);
     $(html).show();
-  } else {
+  } else if ($('.customer-service .title').length == 1) {
     $('.customer-service .title').before(html);
     $(html).css('textAlign', 'center').show();
   }
