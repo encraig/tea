@@ -22,7 +22,13 @@ html {
 
 @media screen and (max-width:768px) {
   .the-promo {
-    padding: 1% 0 3%;
+    padding: 2% 0;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .the-promo {
+    padding: 5% 0;
   }
 }
 
@@ -35,6 +41,18 @@ html {
   text-transform: uppercase;
 }
 
+@media screen and (max-width:768px) {
+  .the-promo span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .the-promo span {
+    font-size: 13px;
+  }
+}
+
 .the-promo span.span-wrap {
   left: 0;
 }
@@ -42,10 +60,9 @@ html {
 .the-promo span.first {
   color: #CEBCF1;
   position: relative;
-  font-family: gilroy-heavy;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:414px) {
   .the-promo span.first {
     left: 0;
     display: block;
@@ -56,7 +73,7 @@ html {
   color: #D36374;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:414px) {
   .the-promo span.second {
     display: block;
   }
@@ -87,25 +104,31 @@ html {
 }
 
 .the-promo span.details {
-  left: 93.5%;
+  left: 92.5%;
   position: absolute;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:414px) {
   .the-promo span.details {
-    left: 0;
-    position: relative;
+    left: 83.5%;
+    bottom: 25%;
   }
 }
 
 .the-promo span.details a {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 18px;
   color: #FFF;
   text-decoration: none;
   font-family: gilroy-regular;
   text-transform: capitalize;
   letter-spacing: 0;
+}
+
+@media screen and (max-width:414px) {
+  .the-promo span.details a {
+    font-size: 13px;
+  }
 }
 
 .the-promo img {

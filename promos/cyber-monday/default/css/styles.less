@@ -21,7 +21,10 @@ html {
 
 .the-promo {
 	@media screen and (max-width:768px) {
-		padding: 1% 0 3%;
+		padding: 2% 0;
+	}
+	@media screen and (max-width:414px) {
+		padding: 5% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
@@ -34,6 +37,12 @@ html {
 	// 	text-align: center;
 	// }
 	span {
+		@media screen and (max-width:768px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width:414px) {
+			font-size: 13px;
+		}
 		position: relative;
 		font-family: gilroy-bold;
 		font-size: 20px;
@@ -46,18 +55,17 @@ html {
 		}
 
 		&.first {
-			@media screen and (max-width:768px) {
+			@media screen and (max-width:414px) {
 				left: 0;
 				display: block;
 			}
 			// left: -1%;
 			color: #CEBCF1;
 			position: relative;
-			font-family: gilroy-heavy;
 		}
 
 		&.second {
-			@media screen and (max-width:768px) {
+			@media screen and (max-width:414px) {
 				display: block;
 			}
 			color: #D36374;
@@ -85,15 +93,18 @@ html {
 		}
 
 		&.details {
-			@media screen and (max-width:768px) {
-				left: 0;
-				position: relative;
+			@media screen and (max-width:414px) {
+				left: 83.5%;
+				bottom: 25%;
 			}
-			left: 93.5%;
+			left: 92.5%;
 			position: absolute;
 
 			a {
-				font-size: 12px;
+				@media screen and (max-width:414px) {
+					font-size: 13px;
+				}
+				font-size: 16px;
 				line-height: 18px;
 				color: #FFF;
 				text-decoration: none;
