@@ -11,28 +11,28 @@ var addUrls = function addUrls(arr) {
 
 var c1 = [{
   elem: '.slide0 .cta1',
-  url: '/black-friday/girl',
+  url: '/girls-clothing/view-all',
   text: '<span>shop</span> girl'
 }, {
   elem: '.slide0 .cta2',
-  url: '/black-friday/boy',
+  url: '/boys-clothing/view-all',
   text: '<span>shop</span> boy'
 }, {
   elem: '.slide0 .cta3',
-  url: '/black-friday/tween',
+  url: '/tween-girls-clothing/view-all',
   text: '<span>shop</span> tween'
 }, {
   elem: '.slide0 .cta4',
-  url: '/black-friday/baby-girl',
+  url: '/baby-girl-clothes/view-all',
   text: '<span>shop</span> baby girl'
 }, {
   elem: '.slide0 .cta5',
-  url: '/black-friday/baby-boy',
+  url: '/baby-boy-clothes/view-all',
   text: '<span>shop</span> baby boy'
 }, {
   elem: '.slide0 .cta6',
-  url: '/black-friday/newborn',
-  text: '<span>shop</span> newborn'
+  url: '/clothing-sale',
+  text: '<span>shop</span> sale'
 }, {
   elem: '.slide1 .cta1',
   url: '/baby-girl-clothes/new-arrivals',
