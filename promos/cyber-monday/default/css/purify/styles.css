@@ -70,12 +70,14 @@ html {
 }
 
 .the-promo span.second {
+  left: 1%;
   color: #D36374;
 }
 
 @media screen and (max-width:414px) {
   .the-promo span.second {
     display: block;
+    left: 0;
   }
 }
 
@@ -207,23 +209,6 @@ html {
 
 .cta-drop-down a:nth-of-type(even) {
   margin-right: 0;
-}
-
-.cta-drop-down a.full-cta {
-  flex-basis: 99%;
-  margin: 0;
-}
-
-@media screen and (max-width:768px) {
-  .cta-drop-down a.full-cta {
-    flex-basis: 95%;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .cta-drop-down a.full-cta {
-    flex-basis: 98%;
-  }
 }
 
 .fancybox-wrap {
