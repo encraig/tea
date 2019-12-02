@@ -11,134 +11,128 @@ html {
 	z-index: 9999;
 }
 
+.header-banner {
+	background: #313987;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
 .the-promo {
+	@media screen and (max-width:768px) {
+		// padding: 2% 0;
+	}
 	@media screen and (max-width:414px) {
-		padding: 0.5rem 0 0;
+		// padding: 5% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
-	padding: 0.9rem 0;
+	// padding: 1% 0;
 	position: relative;
-	background: #1a332b;
+	background: #313987;
 	text-align: center;
-	// .see-details {
-	// 	display: block;
-	// 	text-align: center;
-	// }
+
+	.desktop-img {
+		@media screen and (max-width:1024px) {
+			display: none;
+		}
+	}
+
+	.tablet-img {
+		@media screen and (max-width:1024px) {
+			display: inline;
+		}
+		@media screen and (max-width:767px) {
+			display: none;
+		}
+		display: none;
+	}
+
+	.mobile-img {
+		@media screen and (max-width:767px) {
+			display: inline;
+		}
+		display: none;
+	}
+
 	span {
-		@media screen and (max-width: 768px) {
-			display: block;
+		@media screen and (max-width:768px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width:414px) {
+			font-size: 13px;
 		}
 		position: relative;
 		font-family: gilroy-bold;
+		font-size: 20px;
+		line-height: 18px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+
+		&.span-wrap {
+			left: 0;
+		}
 
 		&.first {
-			@media screen and (max-width:1500px) {
-				font-size: 1vw;
-			}
-			@media screen and (max-width:768px) {
-				font-size: 1.7vw;
-			}
 			@media screen and (max-width:414px) {
+				left: 0;
 				display: block;
-				font-size: 3vw;
-				width: 75%;
-				margin: 0 auto;
 			}
-			left: 0;
-			font-size: 12px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			color: #d3a539;
+			// left: -1%;
+			color: #CEBCF1;
+			position: relative;
 		}
 
 		&.second {
-			@media screen and (max-width:1500px) {
-				font-size: 1.8rem;
+			@media screen and (max-width:414px) {
 				display: block;
 				left: 0;
-				text-align: center;
 			}
-			@media screen and (max-width:414px) {
-				font-size: 1rem;
-			}
-			left: 11%;
-			font-size: 1.28rem;
-			color: #d3a539;
+			left: 1%;
+			color: #D36374;
 		}
 
 		&.shop-now {
 			@media screen and (max-width:768px) {
-				// left: 1%;
 				left: 0;
 			}
-			@media screen and (max-width:414px) {
-				display: block;
-				left: 0;
-			}
-			left: 5%;
+			left: 1%;
 			text-align: center;
 			border: none;
+			position: relative;
+			top: 0;
 
 			a {
-				@media screen and (max-width:1500px) {
-					font-size: 1vw;
-				}
-				@media screen and (max-width:768px) {
-					font-size: 1.6vw;
-					letter-spacing: 1px;
-				}
-				@media screen and (max-width:414px) {
-					font-size: 3vw;
-				}
+				font-size: 12px;
+				line-height: 18px;
+				letter-spacing: 2px;
 				font-family: gilroy-bold;
 				text-transform: uppercase;
-				font-size: 9px;
 				text-decoration: none;
-				color: #9bf7da;
-				border-bottom: 1px solid;
-				padding-bottom: 0.1%;
-				margin: 1.125rem;
-				letter-spacing: 4px;
+				color: #fff;
 			}
 		}
 
 		&.details {
-			@media screen and (max-width:1024px) {
-				// left: 18%;
-			}
-			@media screen and (max-width:768px) {
-				// left: 3%;
-				top: 35%;
-			}
 			@media screen and (max-width:414px) {
-				display: block;
-				left: 0;
-				text-align: right;
-				position: relative;
-				// top: -1em;
-				top: 0;
-				padding: 0 3% 0 0;
+				left: 83.5%;
+				bottom: 25%;
 			}
-			// left: 21%;
-			left: 94%;
+			left: 92.5%;
 			position: absolute;
 
 			a {
-				@media screen and (max-width:1500px) {
-					font-size: 1vw;
-				}
-				@media screen and (max-width:1024px) {
-					// font-size: 0.8rem;
-				}
 				@media screen and (max-width:414px) {
-					font-size: 2vw;
+					font-size: 13px;
 				}
+				font-size: 16px;
+				line-height: 18px;
 				color: #FFF;
-				font-size: 10px;
 				text-decoration: none;
-				font-family: gilroy-regularitalic;
+				font-family: gilroy-regular;
 				text-transform: capitalize;
+				letter-spacing: 0;
 			}
 		}
 	}
@@ -146,37 +140,6 @@ html {
 	img {
 		max-width: 100%;
 	}
-}
-
-.desktop-promo-fat,
-.mobile-promo-fat,
-.tablet-promo-fat {
-	// img {
-	image-rendering: -webkit-optimize-contrast;
-	max-width: 100%;
-	// width: 100%;
-	// }
-}
-
-.desktop-promo-fat {
-	@media screen and (min-width: 769px) {
-		display: block;
-	}
-	display: none;
-}
-
-.tablet-promo-fat {
-	@media screen and (min-width: 415px) and (max-width: 768px) {
-		display: block;
-	}
-	display: none;
-}
-
-.mobile-promo-fat {
-	@media screen and (max-width: 414px) {
-		display: block;
-	}
-	display: none;
 }
 
 #details-promo {
@@ -195,9 +158,12 @@ html {
 
 		h2 {
 			letter-spacing: 1px;
+			font-family: gilroy-bold;
 		}
 
-		p {}
+		p {
+			font-family: gilroy-regular;
+		}
 
 		.close-fancy {
 			display: block;
@@ -213,9 +179,13 @@ html {
 	flex-wrap: wrap;
 
 	a {
-		@media screen and (max-width: 414px) {
-			// padding: 1rem 2rem;
+		@media screen and (max-width: 768px) {
+			font-size: 0.7rem;
 			flex-basis: 46%;
+		}
+		@media screen and (max-width:320px) {
+			font-size: 0.7rem;
+			margin: 0 0.6rem 0.6rem 0;
 		}
 		position: relative;
 		padding: 0.75rem 1.25rem;
@@ -225,41 +195,38 @@ html {
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #1a332b;
+		background: #313987;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 
 		&:nth-of-type(even) {
 			margin-right: 0;
 		}
 
-		&.newborn-cta,
-		&.sale-cta {
+		&.full-cta {
+			@media screen and (max-width:768px) {
+				flex-basis: 95%;
+			}
+			@media screen and (max-width:414px) {
+				flex-basis: 98%;
+			}
 			flex-basis: 99%;
 			margin: 0;
 		}
 	}
 }
 
-.header-banner {
-	background: #1a332b;
-	max-width: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
 .fancybox-inner {
-	@media screen and (max-width:414px) {
+	@media screen and (max-width:768px) {
 		width: auto !important;
 		height: auto !important;
 	}
 }
 
 .fancybox-wrap {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 768px) {
 		width: 95% !important;
 		position: absolute !important;
 		top: 20px !important;
