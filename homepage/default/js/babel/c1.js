@@ -2,23 +2,23 @@
 
 var c1 = [{
   elem: '.slide0 .cta1',
-  url: '/girls-clothing/view-all',
+  url: '/girls-clothing/favorites/limited-time-sale',
   text: '<span>shop</span> girl'
 }, {
   elem: '.slide0 .cta2',
-  url: '/boys-clothing/view-all',
+  url: '/boys-clothing/favorites/limited-time-sale',
   text: '<span>shop</span> boy'
 }, {
   elem: '.slide0 .cta3',
-  url: '/tween-girls-clothing/view-all',
+  url: '/tween-girls-clothing/favorites/limited-time-sale',
   text: '<span>shop</span> tween'
 }, {
   elem: '.slide0 .cta4',
-  url: '/baby-girl-clothes/view-all',
+  url: '/baby-girl-clothes/favorites/limited-time-sale',
   text: '<span>shop</span> baby girl'
 }, {
   elem: '.slide0 .cta5',
-  url: '/baby-boy-clothes/view-all',
+  url: '/baby-boy-clothes/favorites/limited-time-sale',
   text: '<span>shop</span> baby boy'
 }, {
   elem: '.slide0 .cta6',
