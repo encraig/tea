@@ -91,6 +91,7 @@ var addAlt = function addAlt(elem, alt) {
   });
 };
 
+addAlt('.hp .c1 .slide0 img', 'girl and boy');
 addAlt('.hp .c1 .slide1 img', 'babies');
 addAlt('.hp .c1 .slide3 img', 'girl with presents');
 addAlt('.hp .c1 .slide2 img', 'boy & girl in PJs'); // addAlt('.hp .c1 .slide3 img', 'girl & boy');
@@ -144,11 +145,12 @@ $('.hp .c1').on('inview', function (event, isInView) {
 });
 //# sourceMappingURL=inview.js.map
 
-// $('.hp .c1').bxSlider({
-//   infiniteLoop: true,
-//   auto: true
-// });
 "use strict";
+
+$('.hp .c1').bxSlider({
+  infiniteLoop: true // auto: true
+
+});
 //# sourceMappingURL=sliders.js.map
 
 "use strict";

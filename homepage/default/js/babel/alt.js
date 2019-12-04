@@ -7,6 +7,7 @@ var addAlt = function addAlt(elem, alt) {
   });
 };
 
+addAlt('.hp .c1 .slide0 img', 'girl and boy');
 addAlt('.hp .c1 .slide1 img', 'babies');
 addAlt('.hp .c1 .slide3 img', 'girl with presents');
 addAlt('.hp .c1 .slide2 img', 'boy & girl in PJs'); // addAlt('.hp .c1 .slide3 img', 'girl & boy');
