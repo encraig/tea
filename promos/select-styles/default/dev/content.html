@@ -1,12 +1,12 @@
-<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/select-styles/2019/1027/v1/191027-banner-d-ref.png" alt="" /> -->
+<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/select-styles/2019/1207/v0/191207-banner-d-ref.jpg" alt="" /> -->
 
 <div class="the-promo">
 	<span class="span-wrap">
-		<span class="first">TEA'S FALL FEST</span>
-		<span class="second">25% OFF SELECT STYLES</span>
+		<span class="first">MIX + MATCH FLASH SALE</span>
+		<span class="second"> $15 TOPS + $20 BOTTOMS</span>
 	</span>
 	<span class="shop-now">
-		<a data="promo banner" href="/select-styles">SHOP <span class="code">WITH CODE FALLFEST</span> <span class="sale">THE SALE</span></a>
+		<a data="promo banner" href="/select-styles">SHOP THE SALE</a>
 	</span>
 	<span class="details"><a data="promo banner" class="see-details" href="#details-promo">details</a></span>
 
@@ -16,7 +16,7 @@
 <!-- FINE PRINT -->
 <div id="details-promo">
 	<div class="details-container">
-		<div class="">
+		<!-- <div class="">
 			<div class="cta-drop-down">
 				<a data="promo banner lightbox" href="/girls-clothing/favorites/limited-time-sale">girl</a>
 				<a data="promo banner lightbox" href="/boys-clothing/favorites/limited-time-sale">boy</a>
@@ -24,23 +24,16 @@
 				<a data="promo banner lightbox" href="/baby-boy-clothes/favorites/limited-time-sale">baby boy</a>
 				<a data="promo banner lightbox" href="/tween-girls-clothing/favorites/limited-time-sale" class="sale-cta">tween</a>
 			</div>
-		</div>
+		</div> -->
 		<h2>Details</h2>
 		<p>
-			Use code FALLFEST at checkout to receive 25% off select styles. Valid on items labeled '25% off with FALLFEST'. Offer available online at teacollection.com only and valid through 10/29/2019 at 11:59 PM PST. Excludes Tea x Abominable Collaboration
-			styles, Value Sets, Sussex Baby Sets, and third party items. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Cannot be used towards the purchase of gift cards.
-			Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned.
+			Prices as marked on styles labeled ‘select sale style'. Offer available online at teacollection.com only and valid through 12/8/2019 at 11:59 PM PST. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable
+			for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned.
 		</p>
 
 		<p><a href="#" class="close-fancy">CLOSE</a></p>
 	</div>
 </div>
-
-<!--prod resources -->
-<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
-
-<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <!-- toolkit -->
 <style>
@@ -49,43 +42,6 @@
 
 <script>
 	jQuery(document).ready(function() {
-
-		//CHANGE THE STRING FOR THE ALT FOR ALL PROMO DESKTOP AND MOBILE IMAGES
-		// var alt = "LAST CHANCE SALE SAVE UP TO 65%";
-
-		// $('.promo-img-alt').attr('alt', alt);
-
-		//function to add alt to area
-		var addAltArea = function(map, str) {
-			var area = $(map).find('area');
-			$(area).each(function(i, val) {
-
-				var href = $(val).attr('href');
-				href = href.replace("/", "");
-				var cat = href.split("-");
-				if (cat[0] == 'baby') {
-					cat = cat[0] + " " + cat[1];
-				} else if (cat[0].indexOf('#') !== -1) {
-					cat = 'see details';
-				} else {
-					cat = cat[0]
-				}
-
-				//add the alt
-				$(val).attr('alt', cat + areaAlt + ' ' + str);
-
-			});
-		};
-
-
-		var areaAlt = ' promo banner cta';
-
-		//add the alt to areas
-		// addAltArea('map[name="map-d"]', 'desktop')
-		// addAltArea('map[name="map-m"]', 'mobile')
-
-		//responsive image map
-		// jQuery('img[usemap]').rwdImageMaps();
 
 		//array of urls to hide the banners
 		var urlArray = [{
@@ -108,114 +64,22 @@
 
 			// $('.the-promo .see-details').fancybox();
 
-
 			$.each(urlArray, function(i, val) {
 				if (url == val.url) {
 					$('div[data-zone="sitewide_banner"]').empty();
 				}
-				// else if (url.split('/')[1] == 'select-styles') {
-				// 	$('div[data-zone="sitewide_banner"]').hide();
-				// 	$('div[data-zone="sitewide_banner_mobile"]').hide();
-				// 	return false;
-				// }
 			});
-
-			//if black friday landing page change dropdown cta urls
-			// if (url.split('/')[1] == 'black-friday') {
-			// 	//desktop
-			// 	if ($(window).width() > 737) {
-			// 		var area = $('map[name="map-d"] area');
-			// 		$.each(area, function(i, val) {
-			// 			var text = $(val).attr('name');
-			// 			if (text == 'girl') {
-			// 				$(val).attr('href', '/black-friday/girl');
-			// 			} else if (text == 'boy') {
-			// 				$(val).attr('href', '/black-friday/boy');
-			// 			} else if (text == 'baby girl') {
-			// 				$(val).attr('href', '/black-friday/baby-girl');
-			// 			} else if (text == 'baby boy') {
-			// 				$(val).attr('href', '/black-friday/baby-boy');
-			// 			} else if (text == 'tween') {
-			// 				$(val).attr('href', '/black-friday/tween');
-			// 			}
-			// 		});
-			// 	}
-			// 	//mobile
-			// 	else {
-			// 		var ctas = $('.cta-drop-down a');
-			// 		$.each(ctas, function(i, val) {
-			// 			var text = $(val).text();
-			// 			if (text == 'girl') {
-			// 				$(val).attr('href', '/black-friday/girl');
-			// 			} else if (text == 'boy') {
-			// 				$(val).attr('href', '/black-friday/boy');
-			// 			} else if (text == 'baby girl') {
-			// 				$(val).attr('href', '/black-friday/baby-girl');
-			// 			} else if (text == 'baby boy') {
-			// 				$(val).attr('href', '/black-friday/baby-boy');
-			// 			} else if (text == 'tween') {
-			// 				$(val).attr('href', '/black-friday/tween');
-			// 			}
-			// 		});
-			// 	}
-			// }
 		};
 
 		//on page load call hideBanners
 		hideBanners();
 
-
-		// slide toggle the fineprint
-		// $('.mobile-promo-fat.see-details, #details-promo .close-fancy, .the-promo .see-details').click(function(e) {
-		// 	e.preventDefault();
-		// 	if ($(window).width() > 769) {
-		// 		if(e.target.className == 'see-details'){
-		// 			$('.the-promo .see-details').fancybox();
-		// 		}
-		// 	}
-		// 	if ($(window).width() < 769) {
-		// 		if(e.target.className == 'see-details'){
-		// 				$('#details-promo').slideToggle();
-		// 		}
-		// 	}
-		// });
-
 		$('.the-promo .see-details').fancybox();
-
-
-		// $('.the-promo').click(function(e) {
-		// console.log(e.target.parentNode.className);
-		// e.preventDefault();
-		// if (e.target.className == 'see-details') {
-		// 	$('.the-promo .see-details').fancybox();
-		// }
-
-		// if ($(window).width() > 767) {
-		// 	if (e.target.className == 'see-details') {
-		// 		$('.the-promo .see-details').fancybox();
-		// 	}
-		// }
-		// if ($(window).width() < 767) {
-		// 	e.preventDefault();
-		// 	if (e.target.parentNode.className == "mobile-promo-fat see-details") {
-		// 		$('#details-promo').slideToggle();
-		// 	}
-		// }
-		// });
-
 
 		$('.close-fancy').click(function(e) {
 			// e.preventDefault();
 			$.fancybox.close();
-
-			// if ($(window).width() == 768) {
-			// 	$.fancybox.close();
-			// }
-			// if ($(window).width() < 767) {
-			// 	$('#details-promo').slideToggle();
-			// }
 		});
-
 
 	});
 </script>
