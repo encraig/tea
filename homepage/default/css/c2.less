@@ -1,61 +1,46 @@
 @import "var.less";
 
 .c2 {
+  @media screen and (max-width:1024px) {
+    margin: 2.7% 0 0;
+  }
+  @media screen and (max-width:768px) {
+    margin: 3.7% 0 0;
+    padding: 0;
+  }
+  @media screen and (max-width:414px) {
+    margin: 6.5% 0 0;
+  }
+  @media screen and (max-width:375px) {
+    margin: 7% 0 0;
+  }
+  @media screen and (max-width:320px) {
+    margin: 9% 0 0;
+  }
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  // background: #4B6769;
-  // padding: 1.2% 0 1.6%;
-  background: #FDF5F2;
-  justify-content: center;
-
-  .desktop-img {
-    @media screen and (max-width:1024px) {
-      display: none;
-    }
-  }
-
-  .tablet-img {
-    @media screen and (max-width:1024px) {
-      display: inline;
-    }
-    @media screen and (max-width:767px) {
-      display: none;
-    }
-    display: none;
-  }
-
-  .mobile-img {
-    @media screen and (max-width:767px) {
-      display: inline;
-    }
-    display: none;
-  }
+  margin: 1.6% 0 0;
+  background: #4B6769;
+  padding: 1.2% 0 1.6%;
 
   a {
     display: block;
     text-decoration: none;
 
     img {
-      &.desktop-img {
-        @media screen and (max-width:1024px) {
-          display: none;
+      &.gfc1 {
+        @media screen and (max-width:768px) {
+          display: block;
         }
-      }
-
-      &.tablet-img {
-        @media screen and (max-width:1024px) {
-          display: inline;
-        }
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:414px) {
           display: none;
         }
         display: none;
       }
 
-      &.mobile-img {
-        @media screen and (max-width:767px) {
-          display: inline;
+      &.gfc2 {
+        @media screen and (max-width:414px) {
+          display: block;
         }
         display: none;
       }
