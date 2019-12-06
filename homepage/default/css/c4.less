@@ -101,47 +101,52 @@
     &.second {
       position: relative;
 
-      .the-content {
-        @media screen and (max-width:414px) {
-          order: 1;
-          top: 33%;
-        }
-        position: absolute;
-        top: 36%;
-        text-align: center;
-        width: 71%;
-        left: 50%;
-        transform: translate(-50%, 0);
+      a {
+        color: #fff;
+        text-decoration: none;
 
-        h2,
-        p {
-          font-family: @souv;
-          text-align: center;
-          text-shadow: 0 4px 4px rgba(0,0,0,.45);
-        }
-
-        div {
+        .the-content {
           @media screen and (max-width:414px) {
-            margin: 14% 0 0;
+            order: 1;
+            top: 33%;
           }
-          margin: 13% 0 0;
+          position: absolute;
+          top: 36%;
+          text-align: center;
+          width: 71%;
+          left: 50%;
+          transform: translate(-50%, 0);
 
-          span {
-            // @media screen and (max-width:1679px) {
-            //   font-size: 1.1vw;
-            // }
-            // @media screen and (max-width:768px) {
-            //   font-size: 2vw;
-            // }
-            // @media screen and (max-width:414px) {
-            //   font-size: 4vw;
-            // }
-            // font-size: 19px;
-            // line-height: 28px;
-            // letter-spacing: 0.25em;
-            // text-transform: uppercase;
-            color: #FFFFFF;
+          h2,
+          p {
+            font-family: @souv;
+            text-align: center;
             text-shadow: 0 4px 4px rgba(0,0,0,.45);
+          }
+
+          div {
+            @media screen and (max-width:414px) {
+              margin: 14% 0 0;
+            }
+            margin: 13% 0 0;
+
+            span {
+              // @media screen and (max-width:1679px) {
+              //   font-size: 1.1vw;
+              // }
+              // @media screen and (max-width:768px) {
+              //   font-size: 2vw;
+              // }
+              // @media screen and (max-width:414px) {
+              //   font-size: 4vw;
+              // }
+              // font-size: 19px;
+              // line-height: 28px;
+              // letter-spacing: 0.25em;
+              // text-transform: uppercase;
+              color: #FFFFFF;
+              text-shadow: 0 4px 4px rgba(0,0,0,.45);
+            }
           }
         }
       }
