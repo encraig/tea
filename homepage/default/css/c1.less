@@ -103,32 +103,42 @@
     }
 
     &.slide0 {
+      background: #0F6051;
+
       div {
         &.the-content {
           @media screen and (max-width:768px) {
-            top: 74%;
+            top: 69%;
             width: 100%;
             right: 0;
           }
           @media screen and (max-width: 414px) {
-            top: 67%;
+            top: 0;
             width: 100%;
-            left: 50%;
-            position: absolute;
-            padding: 0;
+            left: 0;
+            position: relative;
+            padding: 7% 0 21%;
             min-height: auto;
-            transform: translate(-50%, 0);
           }
-          top: 69.5%;
-          right: 1%;
-          width: 44%;
+          top: 67%;
+          right: 10%;
+          width: 30%;
           text-align: center;
+
+          .img-m {
+            width: auto;
+            margin: 0 auto;
+          }
         }
 
         div {
+          a {
+            color: #ff9ca3;
+          }
+
           &:nth-of-type(1) {
             @media screen and (max-width:414px) {
-              display: none;
+              margin: 7% 0 0;
             }
             margin: 3% 0 0;
 
@@ -144,24 +154,27 @@
               }
 
               &.cta2 {
-                @media screen and (max-width:768px) {
-                  left: 0;
-                }
-                left: -1%;
+                // @media screen and (max-width:768px) {
+                //   left: 0;
+                // }
+                left: 0;
               }
 
               &.cta3 {
-                @media screen and (max-width:768px) {
-                  left: 7%;
-                }
-                left: 5%;
+                // @media screen and (max-width:768px) {
+                //   left: 7%;
+                // }
+                left: 7%;
               }
             }
           }
 
           &:nth-of-type(2) {
+            @media screen and (max-width:768px) {
+              margin: 3% 0 0;
+            }
             @media screen and (max-width:414px) {
-              display: none;
+              margin: 8% 0 0;
             }
             margin: 5% 0 0;
 
@@ -173,23 +186,23 @@
               }
 
               &.cta4 {
-                @media screen and (max-width:768px) {
-                  left: -7%;
-                }
-                @media screen and (max-width:414px) {
-                  left: -2%;
-                }
+                // @media screen and (max-width:768px) {
+                //   left: -7%;
+                // }
+                // @media screen and (max-width:414px) {
+                //   left: -2%;
+                // }
                 left: -7%;
               }
 
               &.cta5 {
-                @media screen and (max-width:768px) {
-                  left: 0;
-                }
-                @media screen and (max-width:414px) {
-                  left: 4%;
-                }
-                left: -2%;
+                // @media screen and (max-width:768px) {
+                //   left: 0;
+                // }
+                // @media screen and (max-width:414px) {
+                //   left: 4%;
+                // }
+                left: 7%;
               }
 
               &.cta6 {
