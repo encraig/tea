@@ -14,24 +14,22 @@ html {
 .the-promo {
   max-width: 1680px;
   margin: 0 auto;
-  padding: .9rem 0;
+  padding: 1% 0;
   position: relative;
   background: #cb5a6a;
   text-align: center;
 }
 
-@media screen and (max-width:414px) {
-  .the-promo {
-    padding: .5rem 0 0;
-  }
-}
-
 .the-promo span {
   position: relative;
   font-family: gilroy-bold;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:414px) {
   .the-promo span {
     display: block;
   }
@@ -39,52 +37,12 @@ html {
 
 .the-promo span.first {
   left: 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #d3a539;
-}
-
-@media screen and (max-width:1500px) {
-  .the-promo span.first {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.first {
-    font-size: 1.7vw;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.first {
-    display: block;
-    font-size: 3vw;
-    width: 75%;
-    margin: 0 auto;
-  }
+  color: #ffcfcc;
 }
 
 .the-promo span.second {
   left: 0;
-  font-size: 1.28rem;
   color: #580326;
-}
-
-@media screen and (max-width:1500px) {
-  .the-promo span.second {
-    font-size: 1.8rem;
-    display: block;
-    left: 0;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.second {
-    font-size: 1rem;
-  }
 }
 
 .the-promo span.shop-now {
@@ -93,48 +51,14 @@ html {
   border: none;
 }
 
-@media screen and (max-width:768px) {
-  .the-promo span.shop-now {
-    left: 0;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.shop-now {
-    display: block;
-    left: 0;
-  }
-}
-
 .the-promo span.shop-now a {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
   font-family: gilroy-bold;
   text-transform: uppercase;
-  font-size: 9px;
   text-decoration: none;
-  color: #9bf7da;
-  border-bottom: 1px solid;
-  padding-bottom: .1%;
-  margin: 1.125rem;
-  letter-spacing: 4px;
-}
-
-@media screen and (max-width:1500px) {
-  .the-promo span.shop-now a {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.shop-now a {
-    font-size: 1.6vw;
-    letter-spacing: 1px;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.shop-now a {
-    font-size: 3vw;
-  }
+  color: #fff;
 }
 
 .the-promo span.details {
@@ -144,58 +68,23 @@ html {
 
 @media screen and (max-width:768px) {
   .the-promo span.details {
-    top: 35%;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.details {
-    display: block;
-    left: 0;
-    text-align: right;
-    position: relative;
-    top: 0;
-    padding: 0 3% 0 0;
+    top: 45%;
+    left: 88%;
   }
 }
 
 .the-promo span.details a {
+  font-size: 12px;
+  line-height: 18px;
   color: #FFF;
-  font-size: 10px;
   text-decoration: none;
-  font-family: gilroy-regularitalic;
+  font-family: gilroy-regular;
   text-transform: capitalize;
-}
-
-@media screen and (max-width:1500px) {
-  .the-promo span.details a {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.details a {
-    font-size: 2vw;
-  }
+  letter-spacing: 0;
 }
 
 .the-promo img {
   max-width: 100%;
-}
-
-.mobile-promo-fat {
-  image-rendering: -webkit-optimize-contrast;
-  max-width: 100%;
-}
-
-.mobile-promo-fat {
-  display: none;
-}
-
-@media screen and (max-width:414px) {
-  .mobile-promo-fat {
-    display: block;
-  }
 }
 
 #details-promo {
