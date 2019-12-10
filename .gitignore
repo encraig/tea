@@ -1,0 +1,17 @@
+/**/*.jpg
+/**/*.png
+/**/*.psd
+/**/*.gif
+/**/*.docx
+/**/*.pdf
+/**/build
+/**/design
+/**/designs
+**/images
+log/
+myRegistry/**
+node_modules/**
+api.js
+fb.html
+makeFile.js
+bower_components
