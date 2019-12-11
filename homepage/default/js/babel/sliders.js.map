@@ -1,1 +1,1 @@
-{"version":3,"sources":["../sliders.js"],"names":["$","bxSlider","infiniteLoop"],"mappings":";;AAAAA,CAAC,CAAC,SAAD,CAAD,CAAaC,QAAb,CAAsB;AACpBC,EAAAA,YAAY,EAAE,IADM,CAEpB;;AAFoB,CAAtB","sourcesContent":["$('.hp .c1').bxSlider({\r\n  infiniteLoop: true,\r\n  // auto: true\r\n});"],"file":"sliders.js"}
+{"version":3,"sources":["../sliders.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","sourcesContent":["// $('.hp .c1').bxSlider({\r\n//   infiniteLoop: true,\r\n//   auto: true\r\n// });"],"file":"sliders.js"}

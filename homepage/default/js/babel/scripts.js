@@ -151,12 +151,11 @@ $('.hp .c1').on('inview', function (event, isInView) {
 });
 //# sourceMappingURL=inview.js.map
 
+// $('.hp .c1').bxSlider({
+//   infiniteLoop: true,
+//   auto: true
+// });
 "use strict";
-
-$('.hp .c1').bxSlider({
-  infiniteLoop: true // auto: true
-
-});
 //# sourceMappingURL=sliders.js.map
 
 "use strict";
