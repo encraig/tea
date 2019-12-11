@@ -84,6 +84,9 @@
       position: relative;
 
       .the-content {
+        @media screen and (max-width:768px) {
+          top: 44%;
+        }
         @media screen and (max-width:414px) {
           order: 1;
           top: 33%;
@@ -103,7 +106,7 @@
         }
 
         div {
-          @media screen and (max-width:414px) {
+          @media screen and (max-width:768px) {
             margin: 14% 0 0;
           }
           margin: 13% 0 0;
@@ -131,6 +134,13 @@
 
             &.cta2 {
               left: 4%;
+            }
+
+            &.cta1,
+            &.cta2 {
+              @media screen and (max-width:768px) {
+                left: 0;
+              }
             }
           }
         }

@@ -33,17 +33,17 @@ const c1 = [
 
   {
     elem: '.slide1 .cta1',
-    url: '/',
+    url: '/tees-pants',
     text: '<span>shop</span> tees & pants'
   },
   {
     elem: '.slide1 .cta2',
-    url: '/',
+    url: '/dresses-leggings',
     text: '<span>shop</span> dresses & leggings'
   },
   {
     elem: '.slide1 .cta3',
-    url: '/',
+    url: '/romper-shop',
     text: '<span>shop</span> rompers & outfits'
   },
 
