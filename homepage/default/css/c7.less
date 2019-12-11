@@ -2,27 +2,38 @@
 
 .c7 {
   position: relative;
-  background: #4B6769;
+  background: #747ACE;
 
   a#c7 {
     @media screen and (max-width:414px) {
-      padding: 5% 5% 19%;
+      // padding: 5% 5% 19%;
     }
     display: block;
     width: 100%;
     position: relative;
     text-decoration: none;
+    text-align: center;
 
     img {
-      &.sisters1 {
-        @media screen and (max-width:414px) {
+      &.d {
+        @media screen and (max-width:768px) {
           display: none;
         }
       }
 
-      &.sisters2 {
+      &.t {
+        @media screen and (max-width:768px) {
+          display: inline;
+        }
         @media screen and (max-width:414px) {
-          display: block;
+          display: none;
+        }
+        display: none;
+      }
+
+      &.m {
+        @media screen and (max-width:414px) {
+          display: inline;
         }
         display: none;
       }
