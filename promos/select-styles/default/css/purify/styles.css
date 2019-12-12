@@ -1,3 +1,8 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 .ref {
   position: absolute;
   opacity: .5;
@@ -9,16 +14,10 @@
 .the-promo {
   max-width: 1680px;
   margin: 0 auto;
-  padding: .7% 0;
+  padding: 1% 0;
   position: relative;
-  background: #233752;
+  background: #0f6050;
   text-align: center;
-}
-
-@media screen and (max-width:1679px) {
-  .the-promo {
-    padding: .8% 0;
-  }
 }
 
 @media screen and (max-width:768px) {
@@ -30,151 +29,83 @@
 .the-promo span {
   position: relative;
   font-family: gilroy-bold;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-@media screen and (max-width:414px) {
-  .the-promo span {
-    display: block;
-    left: 0 !important;
-  }
+.the-promo span.span-wrap {
+  left: 0;
 }
 
 .the-promo span.first {
-  left: -11.4%;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #9bf7da;
-}
-
-@media screen and (max-width:1679px) {
-  .the-promo span.first {
-    font-size: 1.1vw;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.first {
-    font-size: 1.5vw;
-    left: -3%;
-  }
+  left: -1%;
+  color: #f8ca0e;
+  position: relative;
+  font-family: gilroy-heavy;
 }
 
 @media screen and (max-width:414px) {
   .the-promo span.first {
-    font-size: 5vw;
+    left: 0;
+    display: block;
   }
 }
 
-.the-promo span.first i {
-  font-style: normal;
+.the-promo span.second {
+  color: #fdf5f2;
 }
 
 @media screen and (max-width:414px) {
-  .the-promo span.first i {
+  .the-promo span.second {
     display: none;
   }
 }
 
 .the-promo span.shop-now {
-  left: 0;
+  left: 1%;
   text-align: center;
   border: none;
+  position: relative;
+  top: 0;
 }
 
-@media screen and (max-width:1679px) {
-  .the-promo span.shop-now {
-    left: 3%;
-  }
-}
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:414px) {
   .the-promo span.shop-now {
     left: 0;
   }
 }
 
-@media screen and (max-width:414px) {
-  .the-promo span.shop-now {
-    margin: 1% 0 0;
-  }
-}
-
 .the-promo span.shop-now a {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2px;
   font-family: gilroy-bold;
   text-transform: uppercase;
-  font-size: 16px;
   text-decoration: none;
-  color: #fff;
-  border-bottom: 1px solid;
-  letter-spacing: .2em;
-}
-
-@media screen and (max-width:1679px) {
-  .the-promo span.shop-now a {
-    font-size: .9vw;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.shop-now a {
-    font-size: 1.5vw;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.shop-now a {
-    font-size: 3vw;
-  }
+  color: #ff9ca3;
 }
 
 .the-promo span.details {
-  left: 13%;
-}
-
-@media screen and (max-width:1679px) {
-  .the-promo span.details {
-    left: 16%;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.details {
-    left: 2%;
-  }
+  left: 93.5%;
+  position: absolute;
 }
 
 @media screen and (max-width:414px) {
   .the-promo span.details {
-    text-align: right;
-    padding: 0 5%;
+    left: 86%;
   }
 }
 
 .the-promo span.details a {
+  font-size: 12px;
+  line-height: 18px;
   color: #FFF;
-  font-size: 16px;
   text-decoration: none;
   font-family: gilroy-regular;
   text-transform: capitalize;
-}
-
-@media screen and (max-width:1679px) {
-  .the-promo span.details a {
-    font-size: .9vw;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .the-promo span.details a {
-    font-size: 1.5vw;
-  }
-}
-
-@media screen and (max-width:414px) {
-  .the-promo span.details a {
-    font-size: 3vw;
-  }
+  letter-spacing: 0;
 }
 
 .the-promo img {
@@ -202,6 +133,11 @@
 
 #details-promo .details-container h2 {
   letter-spacing: 1px;
+  font-family: gilroy-bold;
+}
+
+#details-promo .details-container p {
+  font-family: gilroy-regular;
 }
 
 #details-promo .details-container .close-fancy {
@@ -225,16 +161,24 @@
   text-transform: uppercase;
   margin: 0 1rem 1rem 0;
   text-align: center;
-  background: #233752;
+  background: #0f6050;
   color: #fff;
   text-decoration: none;
   font-family: gilroy-bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:768px) {
   .cta-drop-down a {
+    font-size: .7rem;
     flex-basis: 46%;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .cta-drop-down a {
+    font-size: .7rem;
+    margin: 0 .6rem .6rem 0;
   }
 }
 
@@ -257,7 +201,7 @@
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:768px) {
   .fancybox-wrap {
     width: 95% !important;
     position: absolute !important;

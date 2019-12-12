@@ -1,3 +1,8 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
 .ref {
 	position: absolute;
 	opacity: 0.5;
@@ -6,117 +11,94 @@
 	z-index: 9999;
 }
 
+.header-banner {
+	background: #0f6050;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
 .the-promo {
-	@media screen and (max-width:1679px) {
-		padding: 0.8% 0;
-	}
 	@media screen and (max-width:768px) {
 		padding: 2% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
-	padding: 0.7% 0;
+	padding: 1% 0;
 	position: relative;
-	background: #233752;
+	background: #0f6050;
 	text-align: center;
-
+	// .see-details {
+	// 	display: block;
+	// 	text-align: center;
+	// }
 	span {
-		@media screen and (max-width:414px) {
-			display: block;
-			left: 0 !important;
-		}
 		position: relative;
 		font-family: gilroy-bold;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 
-		&.first {
-			@media screen and (max-width:1679px) {
-				font-size: 1.1vw;
-			}
-			@media screen and (max-width:768px) {
-				font-size: 1.5vw;
-				left: -3%;
-			}
-			@media screen and (max-width:414px) {
-				font-size: 5vw;
-			}
-			left: -11.4%;
-			font-size: 20px;
-			text-transform: uppercase;
-			letter-spacing: 0.2em;
-			color: #9bf7da;
-
-			i {
-				@media screen and (max-width:414px) {
-					display: none;
-				}
-				font-style: normal;
-			}
+		&.span-wrap {
+			left: 0;
 		}
 
-		&.second {}
+		&.first {
+			@media screen and (max-width:414px) {
+				left: 0;
+				display: block;
+			}
+			left: -1%;
+			color: #f8ca0e;
+			position: relative;
+			font-family: gilroy-heavy;
+		}
+
+		&.second {
+			@media screen and (max-width:414px) {
+				display: none;
+			}
+			color: #fdf5f2;
+		}
 
 		&.shop-now {
-			@media screen and (max-width:1679px) {
-				left: 3%;
-			}
-			@media screen and (max-width:768px) {
+			@media screen and (max-width:414px) {
 				left: 0;
 			}
-			@media screen and (max-width:414px) {
-				margin: 1% 0 0;
-			}
-			left: 0;
+			left: 1%;
 			text-align: center;
 			border: none;
+			position: relative;
+			top: 0;
 
 			a {
-				@media screen and (max-width:1679px) {
-					font-size: 0.9vw;
-				}
-				@media screen and (max-width:768px) {
-					font-size: 1.5vw;
-				}
-				@media screen and (max-width:414px) {
-					font-size: 3vw;
-				}
+				font-size: 12px;
+				line-height: 18px;
+				letter-spacing: 2px;
 				font-family: gilroy-bold;
 				text-transform: uppercase;
-				font-size: 16px;
 				text-decoration: none;
-				color: #fff;
-				border-bottom: 1px solid;
-				letter-spacing: 0.2em;
+				color: #ff9ca3;
 			}
 		}
 
 		&.details {
-			@media screen and (max-width:1679px) {
-				left: 16%;
-			}
-			@media screen and (max-width:768px) {
-				left: 2%;
-			}
 			@media screen and (max-width:414px) {
-				text-align: right;
-				padding: 0 5%;
+				left: 86%;
 			}
-			left: 13%;
+			left: 93.5%;
+			position: absolute;
 
 			a {
-				@media screen and (max-width:1679px) {
-					font-size: 0.9vw;
-				}
-				@media screen and (max-width:768px) {
-					font-size: 1.5vw;
-				}
-				@media screen and (max-width:414px) {
-					font-size: 3vw;
-				}
+				font-size: 12px;
+				line-height: 18px;
 				color: #FFF;
-				font-size: 16px;
 				text-decoration: none;
 				font-family: gilroy-regular;
 				text-transform: capitalize;
+				letter-spacing: 0;
 			}
 		}
 	}
@@ -142,9 +124,12 @@
 
 		h2 {
 			letter-spacing: 1px;
+			font-family: gilroy-bold;
 		}
 
-		p {}
+		p {
+			font-family: gilroy-regular;
+		}
 
 		.close-fancy {
 			display: block;
@@ -160,9 +145,13 @@
 	flex-wrap: wrap;
 
 	a {
-		@media screen and (max-width: 414px) {
-			// padding: 1rem 2rem;
+		@media screen and (max-width: 768px) {
+			font-size: 0.7rem;
 			flex-basis: 46%;
+		}
+		@media screen and (max-width:320px) {
+			font-size: 0.7rem;
+			margin: 0 0.6rem 0.6rem 0;
 		}
 		position: relative;
 		padding: 0.75rem 1.25rem;
@@ -172,11 +161,11 @@
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #233752;
+		background: #0f6050;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 
 		&:nth-of-type(even) {
 			margin-right: 0;
@@ -190,23 +179,15 @@
 	}
 }
 
-.header-banner {
-	background: #233752;
-	max-width: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
 .fancybox-inner {
-	@media screen and (max-width:414px) {
+	@media screen and (max-width:768px) {
 		width: auto !important;
 		height: auto !important;
 	}
 }
 
 .fancybox-wrap {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 768px) {
 		width: 95% !important;
 		position: absolute !important;
 		top: 20px !important;
