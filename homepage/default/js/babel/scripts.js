@@ -154,8 +154,8 @@ $('.hp .c1').on('inview', function (event, isInView) {
 "use strict";
 
 $('.hp .c1').bxSlider({
-  infiniteLoop: true // auto: true
-
+  infiniteLoop: true,
+  auto: true
 });
 //# sourceMappingURL=sliders.js.map
 

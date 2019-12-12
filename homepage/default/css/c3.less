@@ -17,7 +17,7 @@
 
     &.first {
       @media screen and (max-width:414px) {
-        order: 2;
+        // order: 2;
       }
 
       a {
@@ -43,6 +43,15 @@
             width: 71%;
             left: 50%;
             transform: translate(-50%, 0);
+
+            img {
+              @media screen and (max-width:768px){
+                width:45%;
+              }
+              @media screen and (max-width:414px){
+                width:50%;
+              }
+            }
 
             h2,
             p {
@@ -83,12 +92,17 @@
     &.second {
       position: relative;
 
+      img {
+        align-self: center;
+        -webkit-align-self: center;
+      }
+
       .the-content {
         @media screen and (max-width:768px) {
-          top: 44%;
+          top: 37%;
         }
         @media screen and (max-width:414px) {
-          order: 1;
+          // order: 1;
           top: 33%;
         }
         position: absolute;

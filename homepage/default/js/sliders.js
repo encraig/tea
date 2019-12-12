@@ -1,4 +1,4 @@
 $('.hp .c1').bxSlider({
   infiniteLoop: true,
-  // auto: true
+  auto: true
 });
