@@ -1,0 +1,13 @@
+/**/*.jpg
+/**/*.png
+/**/*.psd
+/**/*.gif
+/**/*.docx
+/**/*.pdf
+/**/build
+/**/design
+/**/designs
+**/images
+log/
+node_modules/**
+bower_components
