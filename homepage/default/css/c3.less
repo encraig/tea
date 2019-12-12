@@ -45,11 +45,11 @@
             transform: translate(-50%, 0);
 
             img {
-              @media screen and (max-width:768px){
-                width:45%;
+              @media screen and (max-width:768px) {
+                width: 45%;
               }
-              @media screen and (max-width:414px){
-                width:50%;
+              @media screen and (max-width:414px) {
+                width: 50%;
               }
             }
 
@@ -126,6 +126,11 @@
           margin: 13% 0 0;
 
           a {
+            span {
+              @media screen and (max-width:768px) {
+                display: none;
+              }
+            }
             // @media screen and (max-width:1679px) {
             //   font-size: 1.1vw;
             // }
@@ -148,13 +153,6 @@
 
             &.cta2 {
               left: 4%;
-            }
-
-            &.cta1,
-            &.cta2 {
-              @media screen and (max-width:768px) {
-                left: 0;
-              }
             }
           }
         }
