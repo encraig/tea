@@ -1,12 +1,19 @@
-<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1031/v0/191031-banner-d-ref.png" alt="" /> -->
+<!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1001/v0/191001-banner-d.png" alt="" /> -->
 
 <div class="the-promo">
-	<span class="first">Take an extra 20% off markdowns!</span>
+
+	<!-- <span class="first">15% Off Full-Price Styles &amp; Extra 20% Off Sale Styles</span> -->
 	<!-- <span class="second">Save up to 65% off spring &amp; summer styles</span> -->
-	<span class="shop-now">
-		<a href="/clothing-sale">Shop with code EXTRATEA</a>
+	<!-- <span class="shop-now">
+		<a href="/clothing-sale">Shop with Code DoubleDip</a>
 	</span>
-	<span class="details"><a class="see-details" href="#details-promo">details</a></span>
+	<span class="details"><a class="see-details" href="#details-promo">more info</a></span> -->
+
+	<a href="#details-promo" class="see-details">
+		<img class="desktop-img" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1203/v0/191203-banner-d.gif" alt="CYBER MONDAY SALE 30% OFF + FREE SHIPPING FOR EVERY PURCHASE MADE TODAY, WE'LL DONTATE AN OUTFIT TO A CHILD IN NEED">
+		<img class="tablet-img" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1203/v0/191203-banner-t.gif" alt="CYBER MONDAY SALE 30% OFF + FREE SHIPPING FOR EVERY PURCHASE MADE TODAY, WE'LL DONTATE AN OUTFIT TO A CHILD IN NEED">
+		<img class="mobile-img" src="/mas_assets/media/tea_collection/promos/one-offs/2019/1203/v1/191203-banner-m.gif" alt="CYBER MONDAY SALE 30% OFF + FREE SHIPPING FOR EVERY PURCHASE MADE TODAY, WE'LL DONTATE AN OUTFIT TO A CHILD IN NEED">
+	</a>
 
 </div>
 
@@ -14,25 +21,33 @@
 <!-- FINE PRINT -->
 <div id="details-promo">
 	<div class="details-container">
-		<!-- <div class="mobile-promo-fat">
+		<div class="">
 			<div class="cta-drop-down">
-				<a href="/sale/girls-clothing/last-chance">girl</a>
-				<a href="/sale/boys-clothing/last-chance">boy</a>
-				<a href="/sale/baby-girl-clothes/last-chance">baby girl</a>
-				<a href="/sale/baby-boy-clothes/last-chance">baby boy</a>
-				<a href="/sale/tween-girls-clothing/last-chance" class="sale-cta">tween</a>
+				<a data="promo banner lightbox" href="/girls-clothing/view-all">girl</a>
+				<a data="promo banner lightbox" href="/boys-clothing/view-all">boy</a>
+				<a data="promo banner lightbox" href="/baby-girl-clothes/view-all">baby girl</a>
+				<a data="promo banner lightbox" href="/baby-boy-clothes/view-all">baby boy</a>
+				<a data="promo banner lightbox" class="" href="/tween-girls-clothing/view-all">tween</a>
+				<a data="promo banner lightbox" href="/clothing-sale">sale</a>
 			</div>
-		</div> -->
+		</div>
 		<h2>Details</h2>
 		<p>
-			fine print: Use code EXTRATEA at checkout to receive an extra 20% off sale styles. Offer available online at teacollection.com only and valid through 11/21/2019 at 11:59 PM PST. Excludes third party items. Cannot be combined with other
-			promotions. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand. Cannot be used towards the purchase of gift cards. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will
-			be taken off each item returned.
+			Cyber Monday fine print: Receive 30% off your order and free U.S. 6-10 day shipping and $7 off of 8-12 day shipping to Canada on TeaCollection.com. Discount auto-applied during checkout. Excludes Gift Sets and third party items. Offer expires
+			12/5/2019 at 11:59pm PST. Discount taken will be pre-tax. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable for cash. Cannot be used towards the purchase of gift cards. Limited to stock on hand.<br>
+			<br>
+			For every purchase completed on Teacollection.com during Giving Tuesday (12/3/19), Tea will donate two (2) articles of clothing, up to a total of five thousand (5,000) units, to selected charities for children in need.
 		</p>
 
 		<p><a href="#" class="close-fancy">CLOSE</a></p>
 	</div>
 </div>
+
+<!--prod resources -->
+<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
+<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
+
+<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
 
 <!-- toolkit -->
 <style>
@@ -40,5 +55,51 @@
 </style>
 
 <script>
-	include "../js/jsmin/scripts.min.js"
+	jQuery(document).ready(function() {
+
+		//responsive image map
+		// jQuery('img[usemap]').rwdImageMaps();
+
+		//array of urls to hide the banners
+		var urlArray = [{
+				name: 'hp',
+				url: '/',
+			},
+			// {
+			// 	name: 'black-friday',
+			// 	url: '/black-friday'
+			// },
+			// {
+			// 	name:'sale-page',
+			// 	url:'/clothing-sale'
+			// },
+		];
+
+		//function to hide or show the banner
+		var hideBanners = function() {
+			var url = window.location.pathname;
+
+			// $('.the-promo .see-details').fancybox();
+
+			$.each(urlArray, function(i, val) {
+				if (url == val.url) {
+					$('div[data-zone="sitewide_banner"]').empty();
+				}
+			});
+
+		};
+
+		//on page load call hideBanners
+		hideBanners();
+
+		$('.the-promo .see-details').fancybox();
+
+		$('.close-fancy').click(function(e) {
+			// e.preventDefault();
+			$.fancybox.close();
+
+		});
+
+
+	});
 </script>

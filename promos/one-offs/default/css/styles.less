@@ -1,3 +1,8 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
 .ref {
 	position: absolute;
 	opacity: 0.5;
@@ -6,117 +11,128 @@
 	z-index: 9999;
 }
 
+.header-banner {
+	background: #313987;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
 .the-promo {
-	@media screen and (max-width:1679px) {
-		padding: 0.8% 0;
-	}
 	@media screen and (max-width:768px) {
-		padding: 2% 0;
+		// padding: 2% 0;
+	}
+	@media screen and (max-width:414px) {
+		// padding: 5% 0;
 	}
 	max-width: 1680px;
 	margin: 0 auto;
-	padding: 0.7% 0;
+	// padding: 1% 0;
 	position: relative;
-	background: #3e5d76;
+	background: #313987;
 	text-align: center;
 
+	.desktop-img {
+		@media screen and (max-width:1024px) {
+			display: none;
+		}
+	}
+
+	.tablet-img {
+		@media screen and (max-width:1024px) {
+			display: inline;
+		}
+		@media screen and (max-width:767px) {
+			display: none;
+		}
+		display: none;
+	}
+
+	.mobile-img {
+		@media screen and (max-width:767px) {
+			display: inline;
+		}
+		display: none;
+	}
+
 	span {
+		@media screen and (max-width:768px) {
+			font-size: 16px;
+		}
 		@media screen and (max-width:414px) {
-			display: block;
-			left: 0 !important;
+			font-size: 13px;
 		}
 		position: relative;
 		font-family: gilroy-bold;
+		font-size: 20px;
+		line-height: 18px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 
-		&.first {
-			@media screen and (max-width:1679px) {
-				font-size: 1.1vw;
-			}
-			@media screen and (max-width:768px) {
-				font-size: 1.5vw;
-				left: -3%;
-			}
-			@media screen and (max-width:414px) {
-				font-size: 5vw;
-			}
-			left: -11.4%;
-			font-size: 20px;
-			text-transform: uppercase;
-			letter-spacing: 0.2em;
-			color: #daad43;
-
-			i {
-				@media screen and (max-width:414px) {
-					display: none;
-				}
-				font-style: normal;
-			}
+		&.span-wrap {
+			left: 0;
 		}
 
-		&.second {}
+		&.first {
+			@media screen and (max-width:414px) {
+				left: 0;
+				display: block;
+			}
+			// left: -1%;
+			color: #CEBCF1;
+			position: relative;
+		}
+
+		&.second {
+			@media screen and (max-width:414px) {
+				display: block;
+				left: 0;
+			}
+			left: 1%;
+			color: #D36374;
+		}
 
 		&.shop-now {
-			@media screen and (max-width:1679px) {
-				left: 3%;
-			}
 			@media screen and (max-width:768px) {
 				left: 0;
 			}
-			@media screen and (max-width:414px) {
-				margin: 1% 0 0;
-			}
-			left: 0;
+			left: 1%;
 			text-align: center;
 			border: none;
+			position: relative;
+			top: 0;
 
 			a {
-				@media screen and (max-width:1679px) {
-					font-size: 0.9vw;
-				}
-				@media screen and (max-width:768px) {
-					font-size: 1.5vw;
-				}
-				@media screen and (max-width:414px) {
-					font-size: 3vw;
-				}
+				font-size: 12px;
+				line-height: 18px;
+				letter-spacing: 2px;
 				font-family: gilroy-bold;
 				text-transform: uppercase;
-				font-size: 16px;
 				text-decoration: none;
-				color: #f9ebe5;
-				border-bottom: 1px solid;
-				letter-spacing: 0.2em;
+				color: #fff;
 			}
 		}
 
 		&.details {
-			@media screen and (max-width:1679px) {
-				left: 16%;
-			}
-			@media screen and (max-width:768px) {
-				left: 2%;
-			}
 			@media screen and (max-width:414px) {
-				text-align: right;
-				padding: 0 5%;
+				left: 83.5%;
+				bottom: 25%;
 			}
-			left: 13%;
+			left: 92.5%;
+			position: absolute;
 
 			a {
-				@media screen and (max-width:1679px) {
-					font-size: 0.9vw;
-				}
-				@media screen and (max-width:768px) {
-					font-size: 1.5vw;
-				}
 				@media screen and (max-width:414px) {
-					font-size: 3vw;
+					font-size: 13px;
 				}
-				color: #FFF;
 				font-size: 16px;
+				line-height: 18px;
+				color: #FFF;
 				text-decoration: none;
 				font-family: gilroy-regular;
 				text-transform: capitalize;
+				letter-spacing: 0;
 			}
 		}
 	}
@@ -142,9 +158,12 @@
 
 		h2 {
 			letter-spacing: 1px;
+			font-family: gilroy-bold;
 		}
 
-		p {}
+		p {
+			font-family: gilroy-regular;
+		}
 
 		.close-fancy {
 			display: block;
@@ -160,9 +179,13 @@
 	flex-wrap: wrap;
 
 	a {
-		@media screen and (max-width: 414px) {
-			// padding: 1rem 2rem;
+		@media screen and (max-width: 768px) {
+			font-size: 0.7rem;
 			flex-basis: 46%;
+		}
+		@media screen and (max-width:320px) {
+			font-size: 0.7rem;
+			margin: 0 0.6rem 0.6rem 0;
 		}
 		position: relative;
 		padding: 0.75rem 1.25rem;
@@ -172,41 +195,38 @@
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #3e5d76;
+		background: #313987;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 
 		&:nth-of-type(even) {
 			margin-right: 0;
 		}
 
-		&.newborn-cta,
-		&.sale-cta {
+		&.full-cta {
+			@media screen and (max-width:768px) {
+				flex-basis: 95%;
+			}
+			@media screen and (max-width:414px) {
+				flex-basis: 98%;
+			}
 			flex-basis: 99%;
 			margin: 0;
 		}
 	}
 }
 
-.header-banner {
-	background: #3e5d76;
-	max-width: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
 .fancybox-inner {
-	@media screen and (max-width:414px) {
+	@media screen and (max-width:768px) {
 		width: auto !important;
 		height: auto !important;
 	}
 }
 
 .fancybox-wrap {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 768px) {
 		width: 95% !important;
 		position: absolute !important;
 		top: 20px !important;
