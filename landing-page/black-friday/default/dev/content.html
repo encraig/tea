@@ -1,56 +1,43 @@
-<!-- dev styles css -->
-<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css"> -->
+<div class="bf-landing">
+	<!-- <img src="/mas_assets/media/tea_collection/promos/black-friday/2019/1125/v0/bf-landing-cats-d-ref.svg" class="ref" alt="the black friday event" /> -->
 
-<!-- ref -->
-<!-- <img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-m-ref.jpg" class="ref" alt="the black friday event more styles than ever $15 and under" /> -->
+	<img src="/mas_assets/media/tea_collection/promos/black-friday/2019/1125/v0/bf-landing-page-bg-d.svg" class="bf-desktop" alt="the black friday event" />
 
-<div class="bf">
+	<img src="/mas_assets/media/tea_collection/promos/black-friday/2019/1125/v0/bf-landing-page-bg-m.svg" class="bf-mobile" alt="the black friday event" />
 
-	<!-- desktop -->
-	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-d.png" class="desktop" alt="the black friday event more styles than ever $15 and under" />
+	<div class="shop-all-cats">
+		<div class="bf-desktop">
+			<a href="/black-friday/girl"><span>shop</span> girl</a>
+			<a href="/black-friday/boy"><span>shop</span> boy</a>
+			<a href="/black-friday/tween"><span>shop</span> tween</a>
+			<a href="/black-friday/baby-girl"><span>shop</span> baby girl</a>
+			<a href="/black-friday/baby-boy"><span>shop</span> baby boy</a>
+			<a href="/black-friday/newborn"><span>shop</span> newborn</a>
+		</div>
 
-	<!-- mobile -->
-	<img src="https://www.teacollection.com/mas_assets/media/tea_collection/promos/black-friday/2018/181119-landing-m.png" class="mobile" alt="the black friday event more styles than ever $15 and under" />
+		<div class="bf-mobile">
+			<div>
+				<a href="/black-friday/girl">girl</a>
+				<a href="/black-friday/boy">boy</a>
+				<a href="/black-friday/tween">tween</a>
+			</div>
 
-	<!-- <p>Black Friday Event applies to select styles only. Offer ends on 11/25/2017 at 11:59pm PST. Limited to stock on hand. Cannot be combined with any other offers. Restrictions apply.</p> -->
+			<div>
+				<a href="/black-friday/baby-girl">baby girl</a>
+				<a href="/black-friday/baby-boy">baby boy</a>
+				<a href="/black-friday/newborn">newborn</a>
+			</div>
+		</div>
+	</div>
 
 </div>
 
 <!--toolkit-->
 <style>
-	include "../css/styles.css"
+	include "../css/cssmin/styles.css"
 </style>
-
-<!-- dev -->
-<!-- <script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
-
-<!-- prod -->
-<!-- <script src="/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script> -->
-<!-- <link rel="stylesheet" type="text/css" href="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.css">
-<script src="/mas_assets/theme/tea_collection/js/fancybox_2.0/jquery.fancybox.js"></script> -->
 
 
 <script>
-	$(document).ready(function() {
-		// jQuery('img[usemap]').rwdImageMaps();
-		if ($(window).width() < 737) {
-			//.bf-nav is in flex fields mobile category header
-			$('.da-rennab-zone[data-zone="category_pages"]').after($('.bf-nav'));
-
-
-			console.log('run time');
-			// add class cta-sale to tween and reorder the cta so tween is last
-			var a = $('.bf-nav a');
-			$.each(a, function(i, val) {
-				var text = $(val).text();
-				text = text.toLowerCase();
-				if (text == 'tween') {
-					$(val).addClass('sale-cta');
-					$('.bf-nav').append($(val));
-				}
-			});
-		}
-	});
+	include "../js/jsmin/scripts.min.js"
 </script>
