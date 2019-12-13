@@ -1,0 +1,20 @@
+<div class="email-wrap">
+  <div class="default">
+    <p>default message</p>
+  </div>
+  <div class="promo-message"></div>
+  <div>
+    <input type="email" placeholder="emal" required>
+    <button>submit</button>
+  </div>
+</div>
+
+{literal}
+<style>
+
+</style>
+
+<script>
+  "use strict";$(document).ready(function(){var a,b,c=window.location.href;if(c.indexOf("?")!==-1){var d=c.split("?")[1].split("&");$.each(d,function(c,d){if(d.indexOf("campaign")!==-1){var e=d.split("=")[1];a=e}else if(d.indexOf("promo")!==-1){var f=d.split("=")[1];b=f}});var e="<p>save ".concat(b,"% off</p>\n    <p>you're welcome.</p>\n    <p>btw the acquisition source is: ").concat(a,"</p>\n    ");$(".email-wrap .default").hide(),$(".email-wrap .promo-message").append(e)}});
+</script>
+{/literal}
