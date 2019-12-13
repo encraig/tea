@@ -1,34 +1,29 @@
 @import "var.less";
 
 .c2 {
-  @media screen and (max-width:1024px) {
-    margin: 2.7% 0 0;
-  }
-  @media screen and (max-width:768px) {
-    margin: 3.7% 0 0;
-    padding: 0;
-  }
-  @media screen and (max-width:414px) {
-    margin: 7% 0 0;
-  }
-  @media screen and (max-width:375px) {
-    margin: 7% 0 0;
-  }
-  @media screen and (max-width:320px) {
-    margin: 9% 0 0;
-  }
+  @media screen and (max-width:1024px) {}
+  @media screen and (max-width:768px) {}
+  @media screen and (max-width:414px) {}
+  @media screen and (max-width:375px) {}
+  @media screen and (max-width:320px) {}
   display: flex;
   flex-wrap: wrap;
-  margin: 1.6% 0 0;
-  background: #4B6769;
-  padding: 1.2% 0 1.6%;
+  margin: 0;
+  background: #068989;
+  padding: 0;
 
   a {
     display: block;
     text-decoration: none;
 
     img {
-      &.gfc1 {
+      &.img-d {
+        @media screen and (max-width:768px) {
+          display: none;
+        }
+      }
+
+      &.img-t {
         @media screen and (max-width:768px) {
           display: block;
         }
@@ -38,7 +33,7 @@
         display: none;
       }
 
-      &.gfc2 {
+      &.img-m {
         @media screen and (max-width:414px) {
           display: block;
         }

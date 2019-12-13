@@ -9,47 +9,62 @@ var addUrls = function addUrls(arr) {
 
 "use strict";
 
-var c1 = [{
-  elem: '.slide0 .cta1',
-  url: '/girls-clothing',
-  text: '<span>shop</span> girl'
-}, {
-  elem: '.slide0 .cta2',
-  url: '/boys-clothing',
-  text: '<span>shop</span> boy'
-}, {
-  elem: '.slide0 .cta3',
-  url: '/tween-girls-clothing',
-  text: '<span>shop</span> tween'
-}, {
-  elem: '.slide0 .cta4',
-  url: '/baby-girl-clothes',
-  text: '<span>shop</span> baby girl'
-}, {
-  elem: '.slide0 .cta5',
-  url: '/baby-boy-clothes',
-  text: '<span>shop</span> baby boy'
-}, {
-  elem: '.slide0 .cta6',
-  url: '/clothing-sale',
-  text: '<span>shop</span> sale'
-}, {
+var c1 = [// {
+//   elem: '.slide0 .cta1',
+//   url: '/girls-clothing',
+//   text: '<span>shop</span> girl'
+// },
+// {
+//   elem: '.slide0 .cta2',
+//   url: '/boys-clothing',
+//   text: '<span>shop</span> boy'
+// },
+// {
+//   elem: '.slide0 .cta3',
+//   url: '/tween-girls-clothing',
+//   text: '<span>shop</span> tween'
+// },
+// {
+//   elem: '.slide0 .cta4',
+//   url: '/baby-girl-clothes',
+//   text: '<span>shop</span> baby girl'
+// },
+// {
+//   elem: '.slide0 .cta5',
+//   url: '/baby-boy-clothes',
+//   text: '<span>shop</span> baby boy'
+// },
+// {
+//   elem: '.slide0 .cta6',
+//   url: '/clothing-sale',
+//   text: '<span>shop</span> sale'
+// },
+{
   elem: '.slide1 .cta1',
-  url: '/tees-pants',
-  text: '<span>shop</span> tees & pants'
+  url: '/girls-clothing/new-arrivals',
+  text: 'girl'
 }, {
   elem: '.slide1 .cta2',
-  url: '/dresses-leggings',
-  text: '<span>shop</span> dresses & leggings'
+  url: '/boys-clothing/new-arrivals',
+  text: 'boy'
 }, {
   elem: '.slide1 .cta3',
-  url: '/romper-shop',
-  text: '<span>shop</span> rompers & outfits'
+  url: '/tween-girls-clothing/favorites/new-arrivals',
+  text: 'tween'
 }, {
-  elem: '.slide2 .cta1',
-  url: '/pajamas',
-  text: 'shop pjs'
+  elem: '.slide1 .cta4',
+  url: '/baby-girl-clothes/new-arrivals',
+  text: 'baby girl'
+}, {
+  elem: '.slide1 .cta5',
+  url: '/baby-boy-clothes/new-arrivals',
+  text: 'baby boy'
 } // {
+//   elem: '.slide2 .cta1',
+//   url: '/pajamas',
+//   text: 'shop pjs'
+// },
+// {
 //   elem: '.slide3 .cta1',
 //   url: '/girls-clothing/new-arrivals',
 //   text: '<span>shop</span> girl'
@@ -97,18 +112,12 @@ var addAlt = function addAlt(elem, alt) {
   });
 };
 
-addAlt('.hp .c1 .slide0 img', 'girl and boy');
-addAlt('.hp .c1 .slide1 img', 'boy & girl');
-addAlt('.hp .c1 .slide2 img', 'boy & girl in PJs'); // addAlt('.hp .c1 .slide3 img', 'girl & boy');
-// addAlt('.hp .c1 .slide4 img', 'kids in pajamas');
-
+addAlt('.hp .c1 .slide1 img', '2 girls');
 addAlt('.hp .c2 img', 'tea gives back');
 addAlt('.hp .c3 .first img', 'girl');
 addAlt('.hp .c3 .second img', 'baby');
-addAlt('.hp .c4 .second img', 'girl');
-addAlt('.hp .c5 .first img', '2 girls');
-addAlt('.hp .c5 .second img', 'baby clothes');
-addAlt('.hp .c6 .second img', '2 girls');
+addAlt('.hp .c4 .first img', '2 girls');
+addAlt('.hp .c4 .second img', 'baby');
 addAlt('.hp .c7 img', 'Giving Tuesday: Giving Back for Good');
 //# sourceMappingURL=alt.js.map
 
@@ -151,12 +160,11 @@ $('.hp .c1').on('inview', function (event, isInView) {
 });
 //# sourceMappingURL=inview.js.map
 
+// $('.hp .c1').bxSlider({
+//   infiniteLoop: true,
+//   auto: true
+// });
 "use strict";
-
-$('.hp .c1').bxSlider({
-  infiniteLoop: true,
-  auto: true
-});
 //# sourceMappingURL=sliders.js.map
 
 "use strict";
