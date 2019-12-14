@@ -228,7 +228,7 @@
     //   }
     // }
     &.slide1 {
-      background: #5CAAB7;
+      background: #fff;
 
       div {
         &.the-content {
@@ -240,8 +240,8 @@
           }
           @media screen and (max-width: 414px) {
             top: 0;
-            background: #5CAAB7;
-            // padding-bottom: 32%;
+            background: #fff;
+            padding: 5% 0 10%;
           }
           top: 25%;
           right: 10%;
@@ -253,6 +253,10 @@
             width: 32%;
             margin: 0;
           }
+          @media screen and (max-width:414px) {
+            width: 44%;
+            margin: 0 auto;
+          }
           width: 48%;
           margin: 0 0 3%;
         }
@@ -263,10 +267,10 @@
             text-shadow: 0 4px 4px rgba(0,0,0,.45);
           }
           @media screen and (max-width:414px) {
-            color: #173B5B !important;
+            color: #FF836E !important;
+            text-shadow: none;
           }
           color: #FF836E;
-          text-shadow: none;
         }
 
         p {
@@ -277,8 +281,10 @@
             text-shadow: 0 4px 4px rgba(0,0,0,.45);
           }
           @media screen and (max-width:414px) {
-            width: 81%;
-            margin: 1% auto 0;
+            width: 86%;
+            margin: 2% auto 0;
+            color: #068989;
+            text-shadow: none;
           }
           width: 95%;
           margin: 4% auto 0;
@@ -298,7 +304,8 @@
           @media screen and (max-width:414px) {
             font-size: 4vw;
             margin: 7% 0 0;
-            color: #62062E;
+            color: #FF836E;
+            text-shadow: none;
           }
           text-transform: uppercase;
           color: #FF836E;
@@ -321,6 +328,10 @@
               color: #fff;
               text-shadow: 0 4px 4px rgba(0,0,0,.45);
             }
+            @media screen and (max-width: 768px) {
+              color: #FEA500;
+              text-shadow: none;
+            }
             color: #FEA500;
           }
 
@@ -329,8 +340,7 @@
               margin: 3.5% auto 0;
             }
             @media screen and (max-width:414px) {
-              margin: 7% auto 0;
-              width: 90%;
+              margin: 5% auto 0;
             }
             margin: 3% 0 0;
 
@@ -355,9 +365,7 @@
 
               &.cta3 {
                 @media screen and (max-width:768px) {}
-                @media screen and (max-width:414px) {
-                  left: 0;
-                }
+                @media screen and (max-width:414px) {}
                 left: 8%;
               }
             }
@@ -367,7 +375,9 @@
             @media screen and (max-width:768px) {
               margin: 2.5% 0 0;
             }
-            @media screen and (max-width:414px) {}
+            @media screen and (max-width:414px) {
+              margin: 6.5% 0 0;
+            }
             margin: 4% 0 0;
 
             a {
