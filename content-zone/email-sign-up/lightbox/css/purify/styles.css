@@ -5,27 +5,6 @@
   width: auto;
 }
 
-div.store-box,div.store-box div.store-box-content {
-  background: none;
-}
-
-#simplemodal-container .modalCloseImg {
-  display: none;
-}
-
-#simplemodal-container .store-box .store-box-content {
-  padding: 0;
-  overflow: hidden;
-}
-
-@media screen and (max-width:414px) {
-  #simplemodal-container,  #simplemodal-data .store-box,  .simplemodal-wrap {
-    min-width: 100% !important;
-    width: 100% !important;
-    left: 0 !important;
-  }
-}
-
 .the-overlay {
   position: fixed;
   width: 100%;
