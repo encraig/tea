@@ -3,70 +3,125 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
+.ref {
+	position: absolute;
+	opacity: 0.5;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 9999;
+}
+
 .the-promo {
-	//display: none;
+	@media screen and (max-width:768px) {
+		// padding: 1% 0 3%;
+	}
+	max-width: 1680px;
+	margin: 0 auto;
+	padding: 1% 0;
+	position: relative;
+	background: #025661;
+	text-align: center;
+	// .see-details {
+	// 	display: block;
+	// 	text-align: center;
+	// }
+	span {
+		@media screen and (max-width: 414px) {
+			display: block;
+		}
+		position: relative;
+		font-family: gilroy-bold;
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+
+		&.first {
+			@media screen and (max-width:768px) {}
+			@media screen and (max-width:414px) {}
+			left: 0;
+			color: #e9ad63;
+		}
+
+		&.second {
+			@media screen and (max-width:414px) {}
+			left: 0;
+			color: #580326;
+		}
+
+		&.shop-now {
+			@media screen and (max-width:768px) {}
+			@media screen and (max-width:414px) {}
+			left: 1%;
+			text-align: center;
+			border: none;
+
+			a {
+				@media screen and (max-width:768px) {}
+				@media screen and (max-width:414px) {}
+				letter-spacing: 2px;
+				font-family: gilroy-bold;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #fff;
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+
+		&.details {
+			@media screen and (max-width:1024px) {}
+			@media screen and (max-width:768px) {
+				left: 85%;
+			}
+			@media screen and (max-width:414px) {
+				top: 47%;
+			}
+			// left: 21%;
+			left: 94%;
+			position: absolute;
+
+			a {
+				@media screen and (max-width:1024px) {}
+				@media screen and (max-width:414px) {}
+				font-size: 12px;
+				line-height: 18px;
+				color: #FFF;
+				text-decoration: none;
+				font-family: gilroy-regular;
+				text-transform: capitalize;
+				letter-spacing: 0;
+			}
+		}
+	}
+
 	img {
 		max-width: 100%;
 	}
-}
-
-.desktop-promo-fat,
-.mobile-promo-fat {
-	img {
-		image-rendering: -webkit-optimize-contrast;
-		max-width: 100%;
-	}
-}
-
-.desktop-promo-fat {
-	@media screen and (max-width: 736px) {
-		display: none;
-	}
-}
-
-.mobile-promo-fat {
-	@media screen and (max-width: 736px) {
-		display: block;
-	}
-	display: none;
 }
 
 #details-promo {
-	@media screen and (max-width: 736px) {
-		width: 100%;
-		position: absolute;
-		z-index: 9999;
-		height: 100%;
-		background: #fff;
+	@media screen and (max-width:767px) {
+		width: 95%;
 	}
 	display: none;
-	width: 600px;
-	min-height: 158px;
 	background: #fff;
+	width: 700px;
+	margin: 0 auto;
 
 	.details-container {
 		margin: 27px;
-		// border-top: 1px solid #333333;
-		// border-bottom: 1px solid #333333;
 		padding: 20px 0;
 		background: #fff;
 
 		h2 {
-			text-transform: uppercase;
-			font-size: 15px;
 			letter-spacing: 1px;
 		}
 
-		p {
-			font-size: 13px;
-			line-height: 20px;
-		}
+		p {}
 
 		.close-fancy {
-			@media screen and (max-width: 768px) {
-				display: block;
-			}
-			display: none;
+			display: block;
 			text-align: center;
 		}
 	}
@@ -75,23 +130,27 @@ html {
 .cta-drop-down {
 	overflow: hidden;
 	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
 
 	a {
-		font-size: 10px;
+		@media screen and (max-width: 414px) {
+			// padding: 1rem 2rem;
+			flex-basis: 46%;
+		}
 		position: relative;
-		padding: 9px 0 7px;
+		padding: 0.75rem 1.25rem;
 		box-sizing: border-box;
-		text-transform: uppercase;
 		display: inline-block;
-		width: 45%;
-		margin-right: 2em;
-		margin-bottom: 2em;
+		flex-basis: 48%;
+		text-transform: uppercase;
+		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #F16F6C;
+		background: #025661;
 		color: #fff;
 		text-decoration: none;
+		font-family: gilroy-bold;
 		letter-spacing: 1px;
-		font-family: brown-pro-bold !important;
 
 		&:nth-of-type(even) {
 			margin-right: 0;
@@ -99,11 +158,39 @@ html {
 
 		&.newborn-cta,
 		&.sale-cta {
-			@media screen and (max-width:737px) {
-				width: 98%;
-				left: 0;
-			}
-			width: 94%;
+			flex-basis: 99%;
+			margin: 0;
 		}
 	}
+}
+
+.header-banner {
+	background: #025661;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.fancybox-inner {
+	@media screen and (max-width:414px) {
+		width: auto !important;
+		height: auto !important;
+	}
+}
+
+.fancybox-wrap {
+	@media screen and (max-width: 414px) {
+		width: 95% !important;
+		position: absolute !important;
+		top: 20px !important;
+		transform: translate(-50%, 0);
+	}
+	height: auto;
+	position: fixed !important;
+	top: 50% !important;
+	left: 50% !important;
+	opacity: 1;
+	overflow: visible;
+	transform: translate(-50%, -50%);
 }
