@@ -1,20 +1,24 @@
+<!-- <img src="/mas_assets/media/tea_collection/landing-pages/email-sign-up/2019/1226/v0/default-signup-d.png" class="ref"> -->
 <div class="email-wrap">
+  <h1>get on the list!</h1>
   <div class="default">
-    <p>default message</p>
+    <p>Score a sneak peek at new styles, enjoy exclusive offers, and gain early sale access.</p>
   </div>
   <div class="promo-message"></div>
-  <div>
-    <input type="email" placeholder="emal" required>
-    <button>submit</button>
+  <div class="input-fields">
+    <label>Email</label>
+    <input type="email" placeholder="email" required>
+    <button>SIGN ME UP</button>
   </div>
+  <p class="new-customers">* New customers only</p>
 </div>
 
 {literal}
 <style>
-
+  .ref{position:absolute;opacity:.5;transform:translate(-50%, 0);left:50%}.email-wrap{background:#FCF5F2;padding:4.5% 0 6%}.email-wrap h1{font-size:40px;line-height:45px;text-align:center;letter-spacing:.15em;text-transform:uppercase;color:#436FC1}.email-wrap p{font-family:souvenirstd-light;font-size:22px;line-height:30px;text-align:center;letter-spacing:.005em;color:#47363D;margin:0}.email-wrap p.new-customers{font-family:souvenirstd-light;font-size:14px;line-height:24px;text-align:center;letter-spacing:.005em;color:#436FC1;display:none;margin:3% 0 0}.email-wrap label{font-family:gilroy-regular;font-size:12px;line-height:28px;letter-spacing:1px;color:#436FC1;position:relative;left:-9%}.email-wrap input{width:370px;height:55px;background:#FFFFFF;font-family:gilroy-regular;font-size:14px;line-height:28px;letter-spacing:1px;color:#436FC1;display:block;margin:0 auto;border:none;padding:0 0 0 1.5%}.email-wrap button{border:2px solid #B16B61 !important;box-sizing:border-box;font-family:gilroy-bold !important;font-size:16px;line-height:28px;text-align:center;letter-spacing:.15em !important;text-transform:uppercase !important;color:#B16B61 !important;width:370px;height:55px;margin:1.7% 0 0}.email-wrap button:hover{background-color:#B16B61 !important;color:#fff !important}.email-wrap div.default{width:29%;margin:1% auto}.email-wrap div.promo-message{width:23%;margin:1% auto 0}.email-wrap div.input-fields{text-align:center;margin:1.5% 0 0}.nav.col-l-2.col-m-3.col-s-12.col-xs-12{display:none}.content.col-l-10.col-m-9.col-s-12.col-xs-12{width:100%;padding:0;float:none}
 </style>
 
 <script>
-  "use strict";$(document).ready(function(){var a,b,c=window.location.href;if(c.indexOf("?")!==-1){var d=c.split("?")[1].split("&");$.each(d,function(c,d){if(d.indexOf("campaign")!==-1){var e=d.split("=")[1];a=e}else if(d.indexOf("promo")!==-1){var f=d.split("=")[1];b=f}});var e="<p>save ".concat(b,"% off</p>\n    <p>you're welcome.</p>\n    <p>btw the acquisition source is: ").concat(a,"</p>\n    ");$(".email-wrap .default").hide(),$(".email-wrap .promo-message").append(e)}});
+  "use strict";$(document).ready(function(){var a,b,c=window.location.href,d=$(".email-wrap").find("input").val(),e=$(".email-wrap").find("button"),f=function(a){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a)};if(c.indexOf("?")!==-1){var g=c.split("?")[1].split("&");$.each(g,function(c,d){if(d.indexOf("c")!==-1){var e=d.split("=")[1];a=e}else if(d.indexOf("p")!==-1){var f=d.split("=")[1];b=f}});var h="<p>Sign up for exclusive offers, new styles, and ".concat(b,"% off your first order!*</p>");$(".email-wrap .default").hide(),$(".email-wrap .promo-message").append(h),$(".email-wrap .new-customers").show()}else a="email sign up landing page";$(e).click(function(c){c.preventDefault(),console.log(d,a,b);var e=f(d);console.log("valid:"+e),e&&Sailthru.integration("userSignUp",{id:d,email:d,lists:{"test list":1},vars:{ACQUISITION_SOURCE:a},source:a,onSuccess:function(){console.log("sailthru email sign up page success")},onError:function(){console.log("sailthru email sign up page error")}})})});
 </script>
 {/literal}
