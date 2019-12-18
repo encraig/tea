@@ -7,11 +7,11 @@ $(document).ready(function() {
   }
 
   var ac;
-  var promo;
+  var promo = null;
   if (url.indexOf('?') !== -1) {
     let paramArr = url.split('?')[1].split('&');
     $.each(paramArr, function(i, val) {
-      if (val.indexOf('c') !== -1) {
+      if (val.indexOf('utm_campaign') !== -1) {
         var str1 = val.split('=')[1];
         ac = str1;
       } else if (val.indexOf('p') !== -1) {
@@ -20,14 +20,18 @@ $(document).ready(function() {
       }
     });
 
-    const message = `<p>Sign up for exclusive offers, new<br> styles, and ${promo}% off your first order!*</p>`;
-    $('.email-wrap .sign-up .default').hide();
-    $('.email-wrap .sign-up .promo-message').append(message);
-    $('.email-wrap .new-customers').show();
+    console.log(promo);
 
-    const thanksMessage = `<p>Keep an eye on your<br> inbox for ${promo}% off.</p>`;
-    $('.email-wrap .thanks .default').hide();
-    $('.email-wrap .thanks .promo-message').append(thanksMessage);
+    if (promo !== null) {
+      const message = `<p>Sign up for exclusive offers, new<br> styles, and ${promo}% off your first order!*</p>`;
+      $('.email-wrap .sign-up .default').hide();
+      $('.email-wrap .sign-up .promo-message').append(message);
+      $('.email-wrap .new-customers').show();
+
+      const thanksMessage = `<p>Keep an eye on your<br class="br-m"> inbox for ${promo}% off.</p>`;
+      $('.email-wrap .thanks .default').hide();
+      $('.email-wrap .thanks .promo-message').append(thanksMessage);
+    }
 
   } else {
     ac = "email sign up landing page";
@@ -42,7 +46,8 @@ $(document).ready(function() {
     var valid = emailIsValid(email);
     // console.log('valid:' + valid);
     if (valid) {
-      $('.email-wrap .sending').show();
+      $('.email-wrap .sign-up .load-more-wrap').show();
+      $('.email-wrap .input-fields').hide();
 
       Sailthru.integration("userSignUp", {
         "id": email,
@@ -66,7 +71,8 @@ $(document).ready(function() {
       });
     } else {
       $('.email-wrap .error').show();
-      $('.email-wrap .sending').hide();
+      $('.email-wrap .input-fields').show();
+      $('.email-wrap .sign-up .load-more-wrap').hide();
     }
   });
 

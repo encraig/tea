@@ -7,7 +7,17 @@
 
 .email-wrap {
   background: #FCF5F2;
-  padding: 4.5% 0 6%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .br-m {
+    @media screen and (max-width:414px) {
+      display: inline;
+    }
+    display: none;
+  }
 
   h1 {
     @media screen and (max-width:768px) {
@@ -20,6 +30,7 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #436FC1;
+    margin: 0 auto 5%;
   }
 
   p {
@@ -37,7 +48,7 @@
 
     &.new-customers {
       @media screen and (max-width:414px) {
-        margin: 10% 0 0;
+        // margin: 10% 0 0;
       }
       font-family: souvenirstd-light;
       font-size: 14px;
@@ -46,7 +57,7 @@
       letter-spacing: 0.005em;
       color: #436FC1;
       display: none;
-      margin: 3% 0 0;
+      margin: 15% 0 0;
     }
   }
 
@@ -65,7 +76,7 @@
       line-height: 28px;
     }
     @media screen and (max-width:414px) {
-      padding: 0 0 0 15%;
+      padding: 0 0 0 5%;
     }
     font-family: gilroy-regular;
     font-size: 12px;
@@ -84,13 +95,13 @@
       line-height: 28px;
     }
     @media screen and (max-width:414px) {
-      width: 80%;
+      width: 100%;
       padding: 0 0 0 5%;
     }
     width: 370px;
     height: 55px;
     background: #F9EBE6;
-    font-family: gilroy-regular;
+    font-family: gilroy-bold;
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 1px;
@@ -99,18 +110,19 @@
     margin: 0 auto;
     border: none;
     padding: 0 0 0 6%;
+    border-radius: 0;
   }
 
   a,
   button {
     @media screen and (max-width:768px) {
-      margin: 5% auto 0;
+      // margin: 5% auto 0;
       font-size: 14px;
       line-height: 21px;
     }
     @media screen and (max-width:414px) {
-      width: 80%;
-      margin: 8% auto 0;
+      width: 100%;
+      // margin: 8% auto 0;
     }
     border: 2px solid #B16B61 !important;
     box-sizing: border-box;
@@ -135,12 +147,16 @@
   div {
     &.sign-up {
       // display: none;
+      .load-more-wrap {
+        display: none;
+      }
+
       .default {
         // @media screen and (max-width:768px) {
         //   width: 60%;
         // }
         // width: 29%;
-        margin: 1% auto;
+        margin: 0 auto 8%;
       }
 
       .promo-message {
@@ -148,7 +164,7 @@
         //   width: 55%;
         // }
         // width: 23%;
-        margin: 1% auto 0;
+        margin: 0 auto 8%;
       }
 
       .error,
@@ -170,14 +186,13 @@
 
     &.thanks {
       display: none;
-      margin: 5% 0 0;
-
+      // margin: 5% 0 0;
       h1 {
         @media screen and (max-width:414px) {
           width: 75%;
           position: relative;
-          left: 50%;
-          transform: translate(-50%,0);
+          // left: 50%;
+          // transform: translate(-50%,0);
         }
       }
 
@@ -202,14 +217,14 @@
 
       a {
         @media screen and (max-width:414px) {
-          margin: 5% auto 0;
+          // margin: 5% auto 0;
         }
         text-decoration: none;
         display: flex;
         flex-basis: 370px;
         justify-content: center;
         align-items: center;
-        margin: 2% auto 0;
+        margin: 8% auto 0;
       }
     }
   }

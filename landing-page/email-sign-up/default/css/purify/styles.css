@@ -7,7 +7,20 @@
 
 .email-wrap {
   background: #FCF5F2;
-  padding: 4.5% 0 6%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-wrap .br-m {
+  display: none;
+}
+
+@media screen and (max-width:414px) {
+  .email-wrap .br-m {
+    display: inline;
+  }
 }
 
 .email-wrap h1 {
@@ -17,6 +30,7 @@
   letter-spacing: .15em;
   text-transform: uppercase;
   color: #436FC1;
+  margin: 0 auto 5%;
 }
 
 @media screen and (max-width:768px) {
@@ -51,13 +65,7 @@
   letter-spacing: .005em;
   color: #436FC1;
   display: none;
-  margin: 3% 0 0;
-}
-
-@media screen and (max-width:414px) {
-  .email-wrap p.new-customers {
-    margin: 10% 0 0;
-  }
+  margin: 15% 0 0;
 }
 
 .email-wrap form {
@@ -92,7 +100,7 @@
 
 @media screen and (max-width:414px) {
   .email-wrap label {
-    padding: 0 0 0 15%;
+    padding: 0 0 0 5%;
   }
 }
 
@@ -100,7 +108,7 @@
   width: 370px;
   height: 55px;
   background: #F9EBE6;
-  font-family: gilroy-regular;
+  font-family: gilroy-bold;
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 1px;
@@ -109,6 +117,7 @@
   margin: 0 auto;
   border: none;
   padding: 0 0 0 6%;
+  border-radius: 0;
 }
 
 @media screen and (max-width:768px) {
@@ -120,7 +129,7 @@
 
 @media screen and (max-width:414px) {
   .email-wrap input {
-    width: 80%;
+    width: 100%;
     padding: 0 0 0 5%;
   }
 }
@@ -143,7 +152,6 @@
 
 @media screen and (max-width:768px) {
   .email-wrap a,  .email-wrap button {
-    margin: 5% auto 0;
     font-size: 14px;
     line-height: 21px;
   }
@@ -151,8 +159,7 @@
 
 @media screen and (max-width:414px) {
   .email-wrap a,  .email-wrap button {
-    width: 80%;
-    margin: 8% auto 0;
+    width: 100%;
   }
 }
 
@@ -161,15 +168,19 @@
   color: #fff !important;
 }
 
+.email-wrap div.sign-up .load-more-wrap {
+  display: none;
+}
+
 .email-wrap div.sign-up .default {
-  margin: 1% auto;
+  margin: 0 auto 8%;
 }
 
 .email-wrap div.sign-up .promo-message {
-  margin: 1% auto 0;
+  margin: 0 auto 8%;
 }
 
-.email-wrap div.sign-up .error,.email-wrap div.sign-up .sending {
+.email-wrap div.sign-up .error {
   display: none;
 }
 
@@ -184,15 +195,12 @@
 
 .email-wrap div.thanks {
   display: none;
-  margin: 5% 0 0;
 }
 
 @media screen and (max-width:414px) {
   .email-wrap div.thanks h1 {
     width: 75%;
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
   }
 }
 
@@ -219,11 +227,5 @@
   flex-basis: 370px;
   justify-content: center;
   align-items: center;
-  margin: 2% auto 0;
-}
-
-@media screen and (max-width:414px) {
-  .email-wrap div.thanks a {
-    margin: 5% auto 0;
-  }
+  margin: 8% auto 0;
 }
