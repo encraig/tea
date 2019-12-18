@@ -1,4 +1,13 @@
-<a href="#" class="babylist">Add to Babylist</a> {literal}<style>.babylist{background-color:#E8E511;border:2px solid #E8E511;color:#000;height:54px;display:flex;justify-content:center;align-items:center;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:9% 0;box-sizing:border-box;flex-basis:100%;display:none}</style><script>jQuery(document).ready(function(e){
+<!-- start babylist -->
+<a href="#" class="babylist">Add to Babylist</a>
+
+{literal}
+<style>
+	.babylist{background-color:#E8E511;border:2px solid #E8E511;color:#000;height:54px;display:flex;justify-content:center;align-items:center;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:9% 0;box-sizing:border-box;flex-basis:100%;display:none}
+</style>
+
+<script>
+jQuery(document).ready(function(e){
 	$('.add-to-cart').after($('.babylist'))
   var url = window.location.href;
 
@@ -23,4 +32,11 @@
   		url: url
   	});
   });
-});</script>{/literal}<script type="text/javascript">window._bl = {literal} { partner: 'https://www.teacollection.com/' } {/literal};</script><script async type="text/javascript" src="https://babylist.com/add.js"></script>
+});
+</script>
+
+{/literal}
+
+<script type="text/javascript">window._bl = {literal} { partner: 'https://www.teacollection.com/' } {/literal};</script>
+<script async type="text/javascript" src="https://babylist.com/add.js"></script>
+  <!-- end babylist -->
