@@ -1,6 +1,5 @@
 $(document).ready(function() {
   const url = window.location.href;
-  var email = $('.email-wrap').find('input').val();
   const button = $('.email-wrap').find('button');
 
   const emailIsValid = (email) => {
@@ -21,20 +20,30 @@ $(document).ready(function() {
       }
     });
 
-    const message = `<p>Sign up for exclusive offers, new styles, and ${promo}% off your first order!*</p>`;
-    $('.email-wrap .default').hide();
-    $('.email-wrap .promo-message').append(message);
+    const message = `<p>Sign up for exclusive offers, new<br> styles, and ${promo}% off your first order!*</p>`;
+    $('.email-wrap .sign-up .default').hide();
+    $('.email-wrap .sign-up .promo-message').append(message);
     $('.email-wrap .new-customers').show();
+
+    const thanksMessage = `<p>Keep an eye on your<br> inbox for ${promo}% off.</p>`;
+    $('.email-wrap .thanks .default').hide();
+    $('.email-wrap .thanks .promo-message').append(thanksMessage);
+
   } else {
     ac = "email sign up landing page";
   }
 
   $(button).click(function(e) {
     e.preventDefault();
-    console.log(email, ac, promo);
+    let email = $('.email-wrap').find('input').val();
+    $('.email-wrap .error').hide();
+
+    // console.log(email, ac, promo);
     var valid = emailIsValid(email);
-    console.log('valid:' + valid);
+    // console.log('valid:' + valid);
     if (valid) {
+      $('.email-wrap .sending').show();
+
       Sailthru.integration("userSignUp", {
         "id": email,
         "email": email,
@@ -48,11 +57,16 @@ $(document).ready(function() {
         "source": ac,
         "onSuccess": function() {
           console.log('sailthru email sign up page success');
+          $('.email-wrap .sign-up').hide();
+          $('.email-wrap .thanks').show();
         },
         "onError": function() {
           console.log('sailthru email sign up page error');
         }
       });
+    } else {
+      $('.email-wrap .error').show();
+      $('.email-wrap .sending').hide();
     }
   });
 

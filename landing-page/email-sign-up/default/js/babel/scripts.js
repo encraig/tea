@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
   var url = window.location.href;
-  var email = $('.email-wrap').find('input').val();
   var button = $('.email-wrap').find('button');
 
   var emailIsValid = function emailIsValid(email) {
@@ -23,21 +22,26 @@ $(document).ready(function () {
         promo = str2;
       }
     });
-    var message = "<p>Sign up for exclusive offers, new styles, and ".concat(promo, "% off your first order!*</p>");
-    $('.email-wrap .default').hide();
-    $('.email-wrap .promo-message').append(message);
+    var message = "<p>Sign up for exclusive offers, new<br> styles, and ".concat(promo, "% off your first order!*</p>");
+    $('.email-wrap .sign-up .default').hide();
+    $('.email-wrap .sign-up .promo-message').append(message);
     $('.email-wrap .new-customers').show();
+    var thanksMessage = "<p>Keep an eye on your<br> inbox for ".concat(promo, "% off.</p>");
+    $('.email-wrap .thanks .default').hide();
+    $('.email-wrap .thanks .promo-message').append(thanksMessage);
   } else {
     ac = "email sign up landing page";
   }
 
   $(button).click(function (e) {
     e.preventDefault();
-    console.log(email, ac, promo);
-    var valid = emailIsValid(email);
-    console.log('valid:' + valid);
+    var email = $('.email-wrap').find('input').val();
+    $('.email-wrap .error').hide(); // console.log(email, ac, promo);
+
+    var valid = emailIsValid(email); // console.log('valid:' + valid);
 
     if (valid) {
+      $('.email-wrap .sending').show();
       Sailthru.integration("userSignUp", {
         "id": email,
         "email": email,
@@ -51,11 +55,16 @@ $(document).ready(function () {
         "source": ac,
         "onSuccess": function onSuccess() {
           console.log('sailthru email sign up page success');
+          $('.email-wrap .sign-up').hide();
+          $('.email-wrap .thanks').show();
         },
         "onError": function onError() {
           console.log('sailthru email sign up page error');
         }
       });
+    } else {
+      $('.email-wrap .error').show();
+      $('.email-wrap .sending').hide();
     }
   });
 });
