@@ -20,6 +20,12 @@ html {
   text-align: center;
 }
 
+@media screen and (max-width:768px) {
+  .the-promo {
+    padding: 2% 0;
+  }
+}
+
 .the-promo span {
   position: relative;
   font-family: gilroy-bold;
@@ -32,6 +38,7 @@ html {
 @media screen and (max-width:414px) {
   .the-promo span {
     display: block;
+    font-size: 14px;
   }
 }
 
@@ -46,7 +53,7 @@ html {
 }
 
 .the-promo span.shop-now {
-  left: 1%;
+  left: 2%;
   text-align: center;
   border: none;
 }
