@@ -16,7 +16,7 @@ html {
   margin: 0 auto;
   padding: 1% 0;
   position: relative;
-  background: #025661;
+  background: #991c1f;
   text-align: center;
 }
 
@@ -44,7 +44,7 @@ html {
 
 .the-promo span.first {
   left: 0;
-  color: #e9ad63;
+  color: #fcd1ca;
 }
 
 .the-promo span.second {
@@ -63,7 +63,7 @@ html {
   font-family: gilroy-bold;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #fecb77;
   font-size: 14px;
   line-height: 18px;
 }
@@ -143,7 +143,7 @@ html {
   text-transform: uppercase;
   margin: 0 1rem 1rem 0;
   text-align: center;
-  background: #025661;
+  background: #991c1f;
   color: #fff;
   text-decoration: none;
   font-family: gilroy-bold;
