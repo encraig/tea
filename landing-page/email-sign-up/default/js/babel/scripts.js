@@ -51,8 +51,8 @@ $(document).ready(function () {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
-          "test list": 1
+          "MASTER_CONTACTS_LIST": 1 // "test list": 1
+
         },
         "vars": {
           "ACQUISITION_SOURCE": ac
