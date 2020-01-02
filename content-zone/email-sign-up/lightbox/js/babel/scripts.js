@@ -1,6 +1,9 @@
 "use strict";
 
 $(document).ready(function () {
+  var url = window.location.href;
+  var ac = "Desktop pop-up";
+
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
@@ -22,12 +25,18 @@ $(document).ready(function () {
 
         },
         "vars": {
-          "ACQUISITION_SOURCE": "Desktop pop-up"
+          "ACQUISITION_SOURCE": ac
         },
-        "source": "Desktop pop-up",
+        "source": ac,
         "onSuccess": function onSuccess() {
           $('.signup .the-form').hide();
           $('.signup .thanks').show();
+          window.dataLayer.push({
+            'event': 'sailthru',
+            'theUrl': url,
+            'sailthruEmail': email,
+            'sailthruSource': ac
+          });
         }
       });
     } else {

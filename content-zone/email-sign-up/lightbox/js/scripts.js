@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+  const url = window.location.href;
+  const ac = "Desktop pop-up";
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
@@ -20,12 +21,18 @@ $(document).ready(function() {
           // "test list": 1
         },
         "vars": {
-          "ACQUISITION_SOURCE": "Desktop pop-up",
+          "ACQUISITION_SOURCE": ac,
         },
-        "source": "Desktop pop-up",
+        "source": ac,
         "onSuccess": function() {
           $('.signup .the-form').hide();
           $('.signup .thanks').show();
+          window.dataLayer.push({
+            'event':'sailthru',
+            'theUrl': url,
+            'sailthruEmail': email,
+            'sailthruSource': ac
+          })
         }
       });
 
