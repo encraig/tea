@@ -62,6 +62,12 @@ $(document).ready(function () {
           console.log('sailthru email sign up page success');
           $('.email-wrap .sign-up').hide();
           $('.email-wrap .thanks').show();
+          window.dataLayer.push({
+            'event': 'sailthru',
+            'theUrl': url,
+            'sailthruEmail': email,
+            'sailthruSource': ac
+          });
         },
         "onError": function onError() {
           console.log('sailthru email sign up page error');
