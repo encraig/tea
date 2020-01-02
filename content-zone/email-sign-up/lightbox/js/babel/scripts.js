@@ -24,6 +24,7 @@ $(document).ready(function () {
         "vars": {
           "ACQUISITION_SOURCE": "Desktop pop-up"
         },
+        "source": "Desktop pop-up",
         "onSuccess": function onSuccess() {
           $('.signup .the-form').hide();
           $('.signup .thanks').show();
