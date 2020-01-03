@@ -7,7 +7,7 @@ var addAlt = function addAlt(elem, alt) {
   });
 };
 
-addAlt('.hp .c1 .slide1 img', '2 girls');
+addAlt('.hp .c1 img', '2 girls');
 addAlt('.hp .c2 img', 'tea gives back');
 addAlt('.hp .c3 .first img', 'girl');
 addAlt('.hp .c3 .second img', 'baby');
