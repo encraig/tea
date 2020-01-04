@@ -6,7 +6,7 @@
   }
   opacity: 0.5;
   width: 1680px;
-  top: -9px;
+  top: -119px;
   position: absolute;
   z-index: 9999;
 }
@@ -39,6 +39,31 @@ header.site-header {
   h3,
   p {
     margin: 0;
+  }
+
+  img {
+    &.img-d {
+      @media screen and (max-width:768px) {
+        display: none;
+      }
+    }
+
+    &.img-t {
+      @media screen and (max-width:768px) {
+        display: inline;
+      }
+      @media screen and (max-width:414px) {
+        display: none;
+      }
+      display: none;
+    }
+
+    &.img-m {
+      @media screen and (max-width:414px) {
+        display: block;
+      }
+      display: none;
+    }
   }
 
   h2 {
