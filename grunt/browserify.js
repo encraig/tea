@@ -6,7 +6,7 @@ module.exports = {
   hp: {
     files: [{
       expand: true,
-      cwd: 'homepage/default/js/',
+      cwd: 'homepage/default/js/babel/',
       src: '*.js',
       dest: 'homepage/default/js/browserify/'
     }]
