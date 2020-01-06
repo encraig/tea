@@ -9,6 +9,11 @@
     position: relative;
 
     .the-content {
+      @media screen and (max-width: 414px) {
+        width: 100%;
+        right: 0;
+        top: 9%;
+      }
       position: absolute;
       top: 19%;
       right: 27%;
@@ -22,12 +27,18 @@
       }
 
       h2 {
-        width: 83%;
+        @media screen and (max-width: 414px) {
+          margin: 0 0 8%;
+        }
+        width: 80%;
         display: inline-block;
         margin: 0 0 13%;
       }
 
       p {
+        @media screen and (max-width:414px) {
+          display: none;
+        }
         margin: 0 0 9%;
       }
 

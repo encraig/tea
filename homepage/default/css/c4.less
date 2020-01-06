@@ -1,18 +1,33 @@
 @import "var.less";
 
 .c4 {
+  @media screen and (max-width:414px) {
+    flex-wrap: wrap;
+  }
   display: flex;
 
   div {
     &.first,
     &.second {
+      @media screen and (max-width:414px) {
+        padding: 5% 5% 11%;
+      }
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 2.4% 0 3.9%;
+      // padding: 2.4% 0 3.9%;
+      padding: 2.4% 2.1% 3.9%;
 
       .the-content {
         h2 {
+          @media screen and (max-width:1679px) {
+            font-size: 1.6vw;
+            line-height: 1.6vw;
+          }
+          @media screen and (max-width:414px) {
+            font-size: 6vw;
+            margin: 12% 0 0;
+          }
           font-size: 30px;
           line-height: 28px;
           text-align: center;
@@ -23,9 +38,19 @@
         }
 
         div {
+          @media screen and (max-width:414px) {
+            margin: 12% 0 0;
+          }
           margin: 9% 0 0;
+          text-align: center;
 
-          a {}
+          a {
+            span {
+              @media screen and (max-width:414px) {
+                display: none;
+              }
+            }
+          }
         }
       }
     }
@@ -44,11 +69,13 @@
         }
 
         &.cta2 {
-          left: 3%;
+          // left: 3%;
+          left: 0;
         }
 
         &.cta3 {
-          left: 14%;
+          // left: 14%;
+          left: 13%;
         }
       }
     }
@@ -63,11 +90,11 @@
 
       a {
         &.cta1 {
-          left: 14%;
+          left: -3%;
         }
 
         &.cta2 {
-          left: 30%;
+          left: 3%;
         }
       }
     }

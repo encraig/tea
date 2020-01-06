@@ -1,18 +1,28 @@
 @import "var.less";
 
 .c3 {
+  @media screen and (max-width:414px) {
+    flex-wrap: wrap;
+  }
   display: flex;
   background: @background;
   padding: 2.4% 0 4.5%;
   text-align: center;
+  justify-content: center;
 
   div {
     &.first,
     &.second,
     &.third {
+      @media screen and (max-width:414px) {
+        padding: 0 5%;
+        margin: 0 0 12%;
+      }
       flex-basis: 33%;
       text-align: center;
-      padding: 0 0 0 2.4%;
+      // padding: 0 0 0 2.4%;
+      padding: 0 1.4%;
+      box-sizing: border-box;
 
       a {
         text-decoration: none;
@@ -20,6 +30,14 @@
 
       .the-content {
         h2 {
+          @media screen and (max-width:1679px) {
+            font-size: 1.6vw;
+            line-height: 1.6vw;
+          }
+          @media screen and (max-width:414px) {
+            font-size: 6vw;
+            margin: 8% 0 10%;
+          }
           font-family: @gilroyb;
           font-size: 30px;
           line-height: 28px;

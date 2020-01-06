@@ -3,52 +3,77 @@
 .c2 {
   @media screen and (max-width:1024px) {}
   @media screen and (max-width:768px) {}
-  @media screen and (max-width:414px) {}
+  @media screen and (max-width:414px) {
+    padding: 10% 0 8%;
+    display: block;
+    text-align: center;
+  }
   @media screen and (max-width:375px) {}
   @media screen and (max-width:320px) {}
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 2.3% 0 2.5%;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
+  align-items: baseline;
 
   h2 {
+    @media screen and (max-width:1679px) {
+      font-size: 2vw;
+      line-height: 2.5vw;
+    }
+    @media screen and (max-width: 414px) {
+      font-size: 7vw;
+      margin-bottom: 9%;
+    }
     color: @color;
     font-size: 30px;
     line-height: 45px;
     position: relative;
-    left: -4%;
+    // left: -4%;
+    margin: 0 4% 0 0;
   }
 
   a {
+    @media screen and (max-width:414px) {
+      margin: 0 8% 6% 0;
+    }
     color: @color;
-    top: 13%;
+    // top: 13%;
+    margin: 0 2% 0 0;
 
-    span {}
+    span {
+      @media screen and (max-width:414px) {
+        display: none;
+      }
+    }
 
     &.cta1 {
-      left: -2.5%;
+      // left: -2.5%;
     }
 
     &.cta2 {
-      left: -1%;
+      // left: -1%;
     }
 
     &.cta3 {
-      left: 0.3%;
+      // left: 0.3%;
     }
 
     &.cta4 {
-      left: 1.7%;
+      // left: 1.7%;
     }
 
     &.cta5 {
-      left: 3%;
+      // left: 3%;
     }
 
     &.cta6 {
-      left: 4.5%;
+      @media screen and (max-width:414px) {
+        margin: 0;
+      }
+      // left: 4.5%;
     }
   }
 }

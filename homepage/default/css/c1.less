@@ -10,6 +10,11 @@
 
     div {
       &.the-content {
+        @media screen and (max-width:414px) {
+          width: 100%;
+          left: 0;
+          top: 7%;
+        }
         position: absolute;
         top: 15%;
         width: 21.7%;
@@ -24,22 +29,34 @@
         }
 
         h3 {
+          @media screen and (max-width: 414px) {
+            color: @color;
+          }
           color: #FBF569;
         }
 
         h2 {
+          @media screen and (max-width: 414px) {
+            margin: 8% 0 0;
+          }
           margin: 6% 0 0;
           text-transform: none;
           color: @color;
         }
 
         p {
+          @media screen and (max-width: 414px) {
+            display: none;
+          }
           margin: 10% 0 0;
           text-transform: none;
           letter-spacing: 0;
         }
 
         div {
+          @media screen and (max-width: 414px) {
+            margin: 96% 0 0;
+          }
           margin: 6% 0 0;
           text-align: center;
 
