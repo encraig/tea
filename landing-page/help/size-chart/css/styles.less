@@ -1,3 +1,16 @@
+@font-color: #47363D;
+@blue-color: #436FC1;
+@pink-color: #F9EBE6;
+
+.ref {
+	position: absolute;
+	opacity: 0.5;
+	z-index: 9999;
+	top: 1%;
+	left: 53.2%;
+	width: 1680px;
+}
+
 .mobile {
 	@media screen and (max-width:768px) {
 		display: inline-block !important;
@@ -16,29 +29,23 @@
 	font-size: 1rem;
 	margin-bottom: 20px;
 }
+
+.main-content {
+	display: flex;
+}
 //---------------------------------------------------------------
 
 .size-chart-container {
-	@media screen and (max-width:737px) {
-		padding: 0;
-		width: 100%;
-	}
 	padding: 0;
-	color: #666;
-	width: 700px;
 
 	h1 {
-		@media screen and (max-width:737px) {
-			font-size: 1.9rem;
-			padding: 16px 0;
-			margin: 0;
-		}
-		text-align: center;
-		font-size: 2rem;
+		font-size: 42px;
+		line-height: 53px;
+		letter-spacing: 0.5px;
+		color: @font-color;
+		font-family: souvenirstd-light;
+		margin: 0 0 2%;
 		text-transform: capitalize;
-		font-weight: normal;
-		display: block;
-		margin-top: 19px;
 	}
 
 	.measure-take-over {
@@ -58,10 +65,6 @@
 			}
 
 			&.measure {
-				@media screen and (max-width:737px) {
-					font-size: 2rem;
-					padding: 9px 0;
-				}
 				text-align: center;
 				font-size: 2rem;
 				padding: 3px 0;
@@ -72,12 +75,6 @@
 			}
 
 			&.return {
-				@media screen and (max-width:737px) {
-					font-size: 1.1em;
-					margin: 0 auto;
-					padding: 8px 0;
-					width: 88%;
-				}
 				text-align: center;
 				font-size: 1rem;
 				text-transform: uppercase;
@@ -100,28 +97,11 @@
 		}
 
 		.measure-content {
-			@media screen and (max-width:737px) {
-				padding: 0;
-			}
 			padding: 0 55px;
 
-			img {
-				@media screen and (max-width:737px) {
-					position: relative;
-					// top: -16px;
-					top: 0;
-					// z-index: -1;
-				}
-				//width:100%;
-			}
+			img {}
 
 			.text {
-				@media screen and (max-width:737px) {
-					padding: 4% 0 0 6%;
-					position: relative;
-					// top: -36px;
-					top: 0;
-				}
 				overflow: hidden;
 				background: #E6E7E8;
 				padding-bottom: 16px;
@@ -129,22 +109,12 @@
 				.chest,
 				.hips,
 				.waist {
-					@media screen and (max-width:737px) {
-						float: none;
-						width: 100%;
-						padding: 0;
-						margin-bottom: 12px;
-					}
 					float: left;
 					width: 33%;
 					box-sizing: border-box;
 					padding-left: 26px;
 
 					h2 {
-						@media screen and (max-width:737px) {
-							font-size: 1rem;
-							padding: 0;
-						}
 						font-size: 1rem;
 						padding: 13px 0 0;
 						margin: 0;
@@ -152,11 +122,6 @@
 					}
 
 					p {
-						@media screen and (max-width:737px) {
-							font-size: 1rem;
-							padding: 0;
-							line-height: 19px;
-						}
 						font-size: 1rem;
 						padding: 0;
 						line-height: 18px;
@@ -164,9 +129,6 @@
 				}
 
 				.waist {
-					@media screen and (max-width: 737px) {
-						padding: 0;
-					}
 					padding-left: 20px;
 				}
 			}
@@ -174,13 +136,10 @@
 	}
 
 	.dropdowns {
-		@media screen and (max-width:737px) {
-			padding: 0;
-		}
 		text-align: center;
-		padding: 20px 0 0;
-		//overflow:hidden;
+		padding: 0;
 		position: relative;
+		margin: 0 0 8%;
 
 		ul {
 			overflow: hidden;
@@ -258,113 +217,49 @@
 	}
 
 	.measure-tips {
-		@media screen and (max-width:737px) {
-			//background-size: contain;
-			//background-position: center -21px;
-			//background-position: center 0;
-			background-position: center -13px;
-			//min-height: 376px;
-			min-height: 350px;
-			padding: 0;
-			margin: 0;
-		}
 		background-repeat: no-repeat;
-		//background-position: 50% 3px;
-		background-position: 54px 40px;
-		//min-height: 530px;
-		min-height: 480px;
+		background-position: -7em 0;
+		min-height: 443px;
 		background-size: auto;
-		overflow: hidden;
-		//padding: 23% 0 0 0;
-		padding: 196px 0 0;
 		box-sizing: border-box;
-		margin: 0 0 21px;
+		flex-basis: 30%;
+		position: relative;
+
+		.tips {
+			text-decoration: none;
+			position: absolute;
+			left: 10%;
+			bottom: 0;
+			background: #E8E511;
+			width: 63px;
+			height: 63px;
+			font-family: gilroy-regular;
+			font-size: 10px;
+			line-height: 12px;
+			text-align: center;
+			letter-spacing: 0.02em;
+			color: #436FC1;
+			border-radius: 50%;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
 		div {
-			@media screen and (max-width:737px) {
-				padding: 0 !important;
-				position: relative;
-			}
-			width: 50%;
-			float: left;
+			width: 26%;
 			box-sizing: border-box;
-
-			h2 {
-				font-size: 1rem;
-				font-weight: normal;
-				margin: 0;
-				letter-spacing: 0.4px;
-			}
+			position: absolute;
+			bottom: 0;
+			right: 5%;
 
 			p {
-				font-size: 1rem;
-				line-height: 17px;
-			}
-
-			.tips {
-				@media screen and (max-width:737px) {
-					font-size: 0.8rem;
-					//left:0;
-					left: 9px;
-					//top: 247px;
-					top: 249px;
-					//bottom:0;
-					position: relative;
-					//position:absolute;
-					line-height: 12px;
-					padding: 38px 0;
-					//background: url(../images/tips.png) no-repeat center 19px;
-					background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips.png") no-repeat center 19px;
-				}
-				text-decoration: none;
-				display: block;
-				position: absolute;
-				top: 185px;
-				left: 85px;
-				width: 87px;
-				height: 87px;
+				font-family: gilroy-regular;
+				font-size: 11px;
+				line-height: 15px;
 				text-align: center;
-				box-sizing: border-box;
-				padding: 26px 0;
-				font-size: 1rem;
-				color: #666;
-				background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/tips-d.png") no-repeat center center;
-				line-height: 16px;
-			}
-
-			&:first-of-type {
-				@media screen and (max-width:737px) {
-					h2,
-					p {
-						display: none;
-					}
-				}
-				padding: 0 114px 0 0;
-				text-align: right;
-				position: relative;
-			}
-
-			&:last-of-type {
-				@media screen and (max-width:737px) {
-					h2 {
-						display: none;
-					}
-
-					p {
-						text-align: center;
-						font-size: 0.9rem;
-						//position: relative;
-						position: absolute;
-						//top: 234px;
-						//top:219px;
-						//top:239px;
-						bottom: 23px;
-						//left: 12px;
-						left: 53px;
-						line-height: 15px;
-					}
-				}
-				padding: 0 0 0 116px;
+				letter-spacing: 0.03em;
+				color: @blue-color;
 			}
 
 			&.baby-boy-swim {
@@ -409,27 +304,16 @@
 	}
 
 	.size-chart-table {
-		@media screen and (max-width:737px) {
-			padding: 0;
-		}
 		box-sizing: border-box;
-		padding: 0 55px;
+		padding: 0;
+		flex-basis: 29%;
 
 		.brands,
 		.brands-dropdown,
 		.shoe-brands {
-			@media screen and (max-width:737px) {
-				//padding-bottom: 20px;
-				padding-bottom: 0;
-			}
 			text-align: center;
 
 			h2 {
-				@media screen and (max-width:737px) {
-					font-size: 1rem;
-					padding: 8px 0;
-					margin-bottom: 16px;
-				}
 				padding: 4px 0;
 				text-transform: capitalize;
 				font-size: 1rem;
@@ -442,10 +326,6 @@
 			}
 
 			p {
-				@media screen and (max-width:737px) {
-					font-size: 0.9rem;
-					line-height: 17px;
-				}
 				font-size: 1rem;
 				line-height: 21px;
 			}
@@ -453,20 +333,6 @@
 			select {
 				&.brand,
 				&.shoes {
-					@media screen and (max-width:737px) {
-						//padding: 12px 0;
-						padding: 10px;
-						margin-top: 11px;
-						margin-bottom: 20px;
-						//font-size: 1rem;
-						font-size: 1.2rem;
-						width: 88%;
-						border-radius: 0;
-						background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 94% 14px #fff;
-						text-transform: capitalize;
-						border-color: #D1D3D4;
-						color: #666;
-					}
 					-moz-appearance: window;
 					-webkit-appearance: none;
 					font-size: 1.125rem;
@@ -536,44 +402,37 @@
 		}
 
 		table {
-			&.the-table {
-				@media screen and (max-width:737px) {
-					margin: 0 0 60px;
-				}
-			}
-			@media screen and (max-width:737px) {
-				margin: 9px 0 35px;
-			}
+			&.the-table {}
 			width: 100%;
-			margin-bottom: 35px;
 
 			tr {
 				&.size-chart-header {
+					background: @pink-color;
+
 					th {
-						@media screen and (max-width:737px) {
-							font-size: 1rem;
-							padding: 11px 0;
-						}
 						padding: 9px 0;
 						text-transform: capitalize;
-						font-size: 1rem;
-						color: #fff;
-						background: #999;
+						font-family: souvenirstd-light;
+						font-size: 14px;
+						line-height: 17px;
+						text-align: center;
+						letter-spacing: 0.02em;
+						color: @blue-color;
 					}
 				}
 
 				&[data-num="3"] {
-					background: #666 !important;
-					font-weight: normal;
-					text-transform: lowercase;
-					font-size: 1rem;
+					background: @blue-color !important;
 
 					td {
-						@media screen and (max-width:737px) {
-							padding-bottom: 7px;
-						}
-						color: #fff !important;
-						line-height: 14px;
+						font-family: gilroy-bold;
+						font-size: 12px;
+						line-height: 15px;
+						text-align: center;
+						letter-spacing: 0.03em;
+						text-transform: lowercase;
+						color: @pink-color;
+						border-right: 1px solid @pink-color;
 
 						&:first-of-type {
 							text-transform: lowercase;
@@ -591,24 +450,19 @@
 						}
 
 						span {
-							@media screen and (max-width:737px) {
-								font-size: 0.8rem;
-								position: relative;
-								top: 0;
-								left: 0;
-								display: block;
-							}
-							font-size: 1rem;
-							display: block;
-							//position:absolute;
-							//top:28px;
-							//left:23px;
+							font-family: gilroy-regular;
+							font-size: 10px;
+							line-height: 12px;
+							text-align: center;
+							letter-spacing: 0.03em;
+							text-transform: lowercase;
+							color: @pink-color;
 						}
 					}
 				}
 
 				&:nth-of-type(odd) {
-					background: #E6E7E8;
+					background: @pink-color;
 				}
 
 				th {
@@ -616,20 +470,18 @@
 				}
 
 				td {
-					@media screen and (max-width:737px) {
-						font-size: 0.7rem;
-						padding: 12px 0;
-					}
-					border-right: 1px solid #999;
+					border-right: 1px solid @blue-color;
 					padding: 9px 0;
 					text-align: center;
 					box-sizing: border-box;
 					width: 10%;
 					text-transform: lowercase;
-					font-size: 1rem;
-					color: #666;
 					position: relative;
-					font-weight: normal;
+					font-family: gilroy-bold;
+					font-size: 11px;
+					line-height: 13px;
+					letter-spacing: 0.01em;
+					color: @font-color;
 
 					span,
 					sup {
@@ -650,9 +502,15 @@
 }
 
 .frac {
-	@media screen and (max-width:737px) {
-		font-size: 0.7rem;
-	}
-	font-size: 1rem;
+	font-family: gilroy-bold;
+	font-size: 11px;
+	line-height: 13px;
+	letter-spacing: 0.01em;
+	color: @font-color;
+}
+
+.denominator {
+	position: relative;
+	left: 2%;
 }
 //---------------------------------------------------------------
