@@ -81,7 +81,7 @@ module.exports = [{
     },
     cat: [{
         name: 'tees + shirts',
-        img: 'boys/boys-tops-bottoms.png',
+        img: 'boys/boys-tops.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'His chest measurement is the most important factor in finding a shirt that fits.',
         rightH2: 'Always in Season',
@@ -89,7 +89,7 @@ module.exports = [{
       },
       {
         name: 'bottoms',
-        img: 'boys/boys-tops-bottoms.png',
+        img: 'boys/boys-bottoms.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'His waist measurement is the most important factor in finding pants that fit comfortably—but his hip measurement can make the difference if you\'re stuck between sizes.',
         rightH2: 'Easy Does it',
