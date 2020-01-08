@@ -21,4 +21,13 @@ module.exports = {
     }]
   },
 
+  landing: {
+    files: [{
+      expand: true,
+      cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/babel/',
+      src: '*.js',
+      dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/browserify/'
+    }]
+  },
+
 };
