@@ -145,14 +145,14 @@ module.exports = [{
     rightP: 'Some of our dresses come with matching bloomers up to size 24m. Check her waist measurement to see how the bloomers will fit.'
   }, {
     name: 'tops',
-    img: 'baby-girl/baby-girl-tops-bottoms.png',
+    img: 'baby-girl/baby-girl-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her chest measurement is the most important factor in finding a top or bodysuit that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer bodysuits, she can wear that adorable tank or short sleeve top all year long. (Whew, right?!)'
   }, {
     name: 'bottoms',
-    img: 'baby-girl/baby-girl-tops-bottoms.png',
+    img: 'baby-girl/baby-girl-bottoms.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably— but her hip measurement can make the difference if you\'re stuck between sizes.',
     rightH2: 'Diaper Duty',
@@ -208,14 +208,14 @@ module.exports = [{
     rightP: 'We design our rompers to fit over diapers, but you don\'t have to include them when you measure. For his correct hip measurement, be sure to leave the diaper out of the equation!'
   }, {
     name: 'tees + shirts',
-    img: 'baby-boy/baby-boy-tops-bottoms.png',
+    img: 'baby-boy/baby-boy-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His chest measurement is the most important factor in finding a top or bodysuit that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer bodysuits, he can wear that favorite short sleeve shirt all year long. (Whew, right?!)'
   }, {
     name: 'bottoms',
-    img: 'baby-boy/baby-boy-tops-bottoms.png',
+    img: 'baby-boy/baby-boy-bottoms.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His waist measurement is the most important factor in finding bottoms that fit comfortably— but his hip measurement can make the difference if you\'re stuck between sizes.',
     rightH2: 'Diaper Duty',

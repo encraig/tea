@@ -56,8 +56,8 @@ module.exports = function () {
     var elem1 = '<div class="brands"></div>';
     var elem2 = '<div class="brands-dropdown"></div>';
     var h2;
-    var text = '<p>Please select a brand from the menu below to view<br> the size chart. Size chart will open in a new window.</p>';
-    var select = $('<select class="brand mobile" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
+    var text = '<p>Please select a brand from the menu below to view the size chart. Size chart will open in a new window.</p>';
+    var select = $('<select class="brand" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
     var ul = $('<ul class="brand desktop"><li>Please select a brand</li></ul>');
     var ol = $('<ol class="mobile"></ol>'); //if shoes + accessories
 
@@ -79,9 +79,9 @@ module.exports = function () {
 
                 var li2 = '<li><a href="' + brand.url + '" target="_blank">' + shoe + '</a></li>'; //<select>
 
-                var option = '<option value="' + brand.url + '">' + shoe + '</option>';
-                $(ul).append(li);
-                $(ol).append(li2);
+                var option = '<option value="' + brand.url + '">' + shoe + '</option>'; // $(ul).append(li);
+                // $(ol).append(li2);
+
                 $(select).append(option);
               }
             });
@@ -91,10 +91,10 @@ module.exports = function () {
     } //else if sweaters + outerwear
     else if (cat == 'sweater + outerwear') {
         h2 = '<h2>' + dept + ' outerwear size chart (other brands)</h2>'; //<ul>
-
-        $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>'); //<ol>
-
-        $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>'); //<select>
+        // $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>');
+        //<ol>
+        // $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>');
+        //<select>
 
         $(select).append('<option value="https://www.patagonia.com/size-boys-girls.html">patagonia</option>');
       } // console.log(h2, text, select);
@@ -103,20 +103,22 @@ module.exports = function () {
 
     var brandsContainer = $(elem1).append(h2, text); //because of safari not allowing window.open()
     //if mobile
+    // if ($(window).width() < 737) {
+    //   //if safari
+    //   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    //     var brandsDropdown = $(elem2).append(ol, ul);
+    //   }
+    //   //not safari
+    //   else {
+    //     var brandsDropdown = $(elem2).append(select, ul);
+    //   }
+    // }
+    // //not mobile
+    // else {
+    // var brandsDropdown = $(elem2).append(select, ul);
 
-    if ($(window).width() < 737) {
-      //if safari
-      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        var brandsDropdown = $(elem2).append(ol, ul);
-      } //not safari
-      else {
-          var brandsDropdown = $(elem2).append(select, ul);
-        }
-    } //not mobile
-    else {
-        var brandsDropdown = $(elem2).append(select, ul);
-      } //add to page
-
+    var brandsDropdown = $(elem2).append(select); // }
+    //add to page
 
     $('.size-chart-table').append(brandsContainer);
     $('.size-chart-table').append(brandsDropdown); //because of onload append shoe size chart to .size-chart-table
@@ -278,14 +280,14 @@ module.exports = [{
     rightP: 'Some of our dresses come with matching bloomers up to size 24m. Check her waist measurement to see how the bloomers will fit.'
   }, {
     name: 'tops',
-    img: 'baby-girl/baby-girl-tops-bottoms.png',
+    img: 'baby-girl/baby-girl-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her chest measurement is the most important factor in finding a top or bodysuit that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer bodysuits, she can wear that adorable tank or short sleeve top all year long. (Whew, right?!)'
   }, {
     name: 'bottoms',
-    img: 'baby-girl/baby-girl-tops-bottoms.png',
+    img: 'baby-girl/baby-girl-bottoms.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably— but her hip measurement can make the difference if you\'re stuck between sizes.',
     rightH2: 'Diaper Duty',
@@ -341,14 +343,14 @@ module.exports = [{
     rightP: 'We design our rompers to fit over diapers, but you don\'t have to include them when you measure. For his correct hip measurement, be sure to leave the diaper out of the equation!'
   }, {
     name: 'tees + shirts',
-    img: 'baby-boy/baby-boy-tops-bottoms.png',
+    img: 'baby-boy/baby-boy-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His chest measurement is the most important factor in finding a top or bodysuit that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer bodysuits, he can wear that favorite short sleeve shirt all year long. (Whew, right?!)'
   }, {
     name: 'bottoms',
-    img: 'baby-boy/baby-boy-tops-bottoms.png',
+    img: 'baby-boy/baby-boy-bottoms.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His waist measurement is the most important factor in finding bottoms that fit comfortably— but his hip measurement can make the difference if you\'re stuck between sizes.',
     rightH2: 'Diaper Duty',
@@ -405,15 +407,15 @@ module.exports = [{
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
   var Val; //desktop
+  // if ($(window).width() > 737) {
+  //   //get the value of the .department or .category
+  //   Val = $(elem1).text();
+  // }
+  //mobile
+  // else {
+  //get the value of the .department or .category
 
-  if ($(window).width() > 737) {
-    //get the value of the .department or .category
-    Val = $(elem1).text();
-  } //mobile
-  else {
-      //get the value of the .department or .category
-      Val = $(elem2).val();
-    }
+  Val = $(elem2).val(); // }
 
   return Val;
 };

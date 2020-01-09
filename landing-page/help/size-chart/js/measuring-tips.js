@@ -160,7 +160,7 @@ module.exports = [{
       },
       {
         name: 'tops',
-        img: 'baby-girl/baby-girl-tops-bottoms.png',
+        img: 'baby-girl/baby-girl-tops.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'Her chest measurement is the most important factor in finding a top or bodysuit that fits.',
         rightH2: 'Always in Season',
@@ -168,7 +168,7 @@ module.exports = [{
       },
       {
         name: 'bottoms',
-        img: 'baby-girl/baby-girl-tops-bottoms.png',
+        img: 'baby-girl/baby-girl-bottoms.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably— but her hip measurement can make the difference if you\'re stuck between sizes.',
         rightH2: 'Diaper Duty',
@@ -231,7 +231,7 @@ module.exports = [{
       },
       {
         name: 'tees + shirts',
-        img: 'baby-boy/baby-boy-tops-bottoms.png',
+        img: 'baby-boy/baby-boy-tops.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'His chest measurement is the most important factor in finding a top or bodysuit that fits.',
         rightH2: 'Always in Season',
@@ -239,7 +239,7 @@ module.exports = [{
       },
       {
         name: 'bottoms',
-        img: 'baby-boy/baby-boy-tops-bottoms.png',
+        img: 'baby-boy/baby-boy-bottoms.png',
         leftH2: 'Stuck Between Sizes?',
         leftP: 'His waist measurement is the most important factor in finding bottoms that fit comfortably— but his hip measurement can make the difference if you\'re stuck between sizes.',
         rightH2: 'Diaper Duty',

@@ -32,6 +32,7 @@
 
 .main-content {
 	display: flex;
+	flex-wrap: wrap;
 }
 //---------------------------------------------------------------
 
@@ -65,30 +66,31 @@
 			}
 
 			&.measure {
-				text-align: center;
-				font-size: 2rem;
-				padding: 3px 0;
+				padding: 1% 0;
 				margin: 0;
-				letter-spacing: 0;
-				//background: url(../images/close.png) no-repeat 24px center;
-				//background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 19px center;
+				font-family: souvenirstd-light;
+				font-size: 22px;
+				line-height: 33px;
+				text-align: center;
+				letter-spacing: 0.02em;
+				color: @font-color;
 			}
 
 			&.return {
-				text-align: center;
-				font-size: 1rem;
 				text-transform: uppercase;
-				margin-top: 5px;
-				padding: 5px 0;
-				letter-spacing: 2px;
-				background: #666;
-				color: #fff;
+				margin: 0 0 2%;
+				padding: 1% 0;
+				background: @blue-color;
 				box-sizing: border-box;
-				border: 1px solid #666;
-				/*&:hover {
-    				color:#666;
-    				background:#fff;
-    			}*/
+				border: 1px solid @blue-color;
+				font-family: gilroy-bold;
+				font-size: 14px;
+				line-height: 17px;
+				text-align: center;
+				letter-spacing: 0.2em;
+				color: #FFFFFF;
+				flex-basis: 100%;
+
 				svg {
 					position: relative;
 					top: 2px;
@@ -97,39 +99,54 @@
 		}
 
 		.measure-content {
-			padding: 0 55px;
+			// padding: 0 55px;
+			display: flex;
+			flex-wrap: wrap;
 
-			img {}
+			.the-img {
+				@media screen and (max-width:414px) {
+					flex-basis: 100%;
+				}
+				flex-basis: 50%;
+
+				img {}
+			}
 
 			.text {
+				@media screen and (max-width:414px) {
+					flex-basis: 100%;
+				}
 				overflow: hidden;
-				background: #E6E7E8;
-				padding-bottom: 16px;
+				background: @pink-color;
+				padding: 0;
+				flex-basis: 50%;
 
 				.chest,
 				.hips,
 				.waist {
-					float: left;
-					width: 33%;
+					float: none;
+					width: 100%;
 					box-sizing: border-box;
-					padding-left: 26px;
+					padding: 3%;
 
 					h2 {
-						font-size: 1rem;
-						padding: 13px 0 0;
 						margin: 0;
-						line-height: 1.8em;
+						font-family: souvenirstd-light;
+						font-size: 16px;
+						line-height: 18px;
+						letter-spacing: 0.03em;
+						color: @font-color;
 					}
 
 					p {
-						font-size: 1rem;
 						padding: 0;
+						font-family: souvenirstd-light;
+						font-size: 12px;
 						line-height: 18px;
+						letter-spacing: 0.03em;
+						color: @font-color;
+						margin: 0;
 					}
-				}
-
-				.waist {
-					padding-left: 20px;
 				}
 			}
 		}
@@ -139,76 +156,83 @@
 		text-align: center;
 		padding: 0;
 		position: relative;
-		margin: 0 0 8%;
-
-		ul {
-			overflow: hidden;
-			list-style-type: none;
-			position: absolute;
-			//background: url('../images/expand.png') no-repeat 30em 2em #fff;
-			//background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 21em 14px #fff;
-			background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 256px 14px #fff;
-			//width:100%;
-			float: left;
-			width: 285px;
-			height: 40px;
-			margin: 0 23px 0 0;
-			border: 1px solid #D1D3D4;
-			box-sizing: border-box;
-			z-index: 999;
-
-			&.department {
-				//margin-left:66px;
-				left: 55px;
-			}
-
-			&.category {
-				//margin-right:0;
-				right: 32px;
-			}
-
-			li {
-				float: none !important;
-				width: 100% !important;
-				padding: 11px 0;
-				margin: 0 !important;
-				font-size: 1rem;
-				text-transform: capitalize;
-
-				&:first-of-type {
-					&:hover {
-						background: none;
-						color: #666;
-					}
-				}
-
-				&:hover {
-					background: #666;
-					color: #fff;
-					cursor: pointer;
-				}
-			}
-		}
-
+		margin: 0 0 3%;
+		display: flex;
+		flex-wrap: wrap;
+		// ul {
+		// 	overflow: hidden;
+		// 	list-style-type: none;
+		// 	position: absolute;
+		// 	//background: url('../images/expand.png') no-repeat 30em 2em #fff;
+		// 	//background: url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png') no-repeat 21em 14px #fff;
+		// 	background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 256px 14px #fff;
+		// 	//width:100%;
+		// 	float: left;
+		// 	width: 285px;
+		// 	height: 40px;
+		// 	margin: 0 23px 0 0;
+		// 	border: 1px solid #D1D3D4;
+		// 	box-sizing: border-box;
+		// 	z-index: 999;
+		//
+		// 	&.department {
+		// 		//margin-left:66px;
+		// 		left: 55px;
+		// 	}
+		//
+		// 	&.category {
+		// 		//margin-right:0;
+		// 		right: 32px;
+		// 	}
+		//
+		// 	li {
+		// 		font-family: gilroy-bold;
+		// 		font-size: 14px;
+		// 		line-height: 17px;
+		// 		text-align: center;
+		// 		letter-spacing: 0.2em;
+		// 		text-transform: uppercase;
+		// 		color: @font-color;
+		// 		float: none !important;
+		// 		width: 100% !important;
+		// 		padding: 11px 0;
+		// 		margin: 0 !important;
+		//
+		// 		&:first-of-type {
+		// 			&:hover {
+		// 				background: none;
+		// 				color: #666;
+		// 			}
+		// 		}
+		//
+		// 		&:hover {
+		// 			background: #666;
+		// 			color: #fff;
+		// 			cursor: pointer;
+		// 		}
+		// 	}
+		// }
 		select {
-			@media screen and (max-width:737px) {
-				display: block !important;
+			@media screen and (max-width:414px) {
 				border-radius: 0;
-				margin: 2px 0 16px 23px;
+				flex-basis: 100%;
+				margin: 0 0 5%;
+				padding: 3%;
 			}
 			-moz-appearance: window;
 			-webkit-appearance: none;
-			width: 88%;
-			margin: 2px 0 13px 23px;
-			padding: 10px;
-			//background: #fff;
-			background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 14px #fff;
-			font-size: 1.2rem;
-			text-transform: capitalize;
-			font-weight: normal;
-			//font-size: 18px;
-			border-color: #D1D3D4;
-			color: #666;
+			margin: 0 2% 0 0;
+			padding: 1%;
+			background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 50% #fff;
+			border-color: #47363D;
+			font-family: gilroy-bold;
+			font-size: 14px;
+			line-height: 17px;
+			text-align: center;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: #47363D;
+			flex-basis: 48%;
 
 			&.category {
 				//margin:0;
@@ -217,12 +241,15 @@
 	}
 
 	.measure-tips {
+		@media screen and (max-width:414px) {
+			flex-basis: 100%;
+		}
 		background-repeat: no-repeat;
-		background-position: -7em 0;
+		background-position: center center;
 		min-height: 443px;
 		background-size: auto;
 		box-sizing: border-box;
-		flex-basis: 30%;
+		flex-basis: 50%;
 		position: relative;
 
 		.tips {
@@ -304,9 +331,12 @@
 	}
 
 	.size-chart-table {
+		@media screen and (max-width:414px) {
+			flex-basis: 100%;
+		}
 		box-sizing: border-box;
 		padding: 0;
-		flex-basis: 29%;
+		flex-basis: 50%;
 
 		.brands,
 		.brands-dropdown,
@@ -314,15 +344,16 @@
 			text-align: center;
 
 			h2 {
-				padding: 4px 0;
-				text-transform: capitalize;
-				font-size: 1rem;
-				color: #fff;
-				background: #999;
-				font-weight: normal;
 				margin-bottom: 19px;
-				line-height: 1.8em;
-				letter-spacing: 0;
+				padding: 9px 0;
+				text-transform: capitalize;
+				font-family: souvenirstd-light;
+				font-size: 14px;
+				line-height: 17px;
+				text-align: center;
+				letter-spacing: 0.02em;
+				color: @blue-color;
+				background: @pink-color;
 			}
 
 			p {
@@ -333,77 +364,85 @@
 			select {
 				&.brand,
 				&.shoes {
-					-moz-appearance: window;
-					-webkit-appearance: none;
-					font-size: 1.125rem;
+					@media screen and (max-width:414px) {
+						padding: 3%;
+					}
 					width: 100%;
-					margin-top: 15px;
-					padding: 13px 0;
-					text-transform: capitalize;
+					-webkit-appearance: none;
+					margin: 0 2% 0 0;
+					background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 50% #fff;
+					border-color: @font-color;
+					font-family: gilroy-bold;
+					font-size: 14px;
+					line-height: 17px;
+					text-align: center;
+					letter-spacing: 0.2em;
+					text-transform: uppercase;
+					color: @font-color;
+					padding: 2% 0;
 				}
 			}
-
-			ol {
-				margin-top: 10px;
-				width: 100%;
-				overflow: hidden;
-
-				li {
-					float: left;
-					width: 50% !important;
-					margin: 0 !important;
-					font-size: 1rem;
-					text-transform: capitalize;
-
-					a {
-						text-decoration: underline;
-						padding: 11px 0;
-						display: block;
-						color: #666;
-					}
-				}
-			}
-
-			ul {
-				overflow: hidden;
-				//position:absolute;
-				//background: url('../images/expand.png') no-repeat 67em 2em #fff;
-				background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 554px 13px #fff;
-				float: none;
-				width: 100%;
-				height: 40px;
-				margin: 16px 0 0;
-				border: 1px solid #D1D3D4;
-				box-sizing: border-box;
-				z-index: 9999;
-
-				li {
-					float: none !important;
-					width: 100% !important;
-					padding: 11px 0;
-					margin: 0 !important;
-					font-size: 1rem;
-					text-transform: capitalize;
-
-					&:first-of-type {
-						&:hover {
-							background: none;
-							color: #666;
-						}
-					}
-
-					&:hover {
-						background: #666;
-						color: #fff;
-						cursor: pointer;
-					}
-				}
-			}
+			// ol {
+			// 	margin-top: 10px;
+			// 	width: 100%;
+			// 	overflow: hidden;
+			//
+			// 	li {
+			// 		float: left;
+			// 		width: 50% !important;
+			// 		margin: 0 !important;
+			// 		font-size: 1rem;
+			// 		text-transform: capitalize;
+			//
+			// 		a {
+			// 			text-decoration: underline;
+			// 			padding: 11px 0;
+			// 			display: block;
+			// 			color: #666;
+			// 		}
+			// 	}
+			// }
+			// ul {
+			// 	overflow: hidden;
+			// 	//position:absolute;
+			// 	//background: url('../images/expand.png') no-repeat 67em 2em #fff;
+			// 	background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 554px 13px #fff;
+			// 	float: none;
+			// 	width: 100%;
+			// 	height: 40px;
+			// 	margin: 16px 0 0;
+			// 	border: 1px solid #D1D3D4;
+			// 	box-sizing: border-box;
+			// 	z-index: 9999;
+			//
+			// 	li {
+			// 		float: none !important;
+			// 		width: 100% !important;
+			// 		padding: 11px 0;
+			// 		margin: 0 !important;
+			// 		font-size: 1rem;
+			// 		text-transform: capitalize;
+			//
+			// 		&:first-of-type {
+			// 			&:hover {
+			// 				background: none;
+			// 				color: #666;
+			// 			}
+			// 		}
+			//
+			// 		&:hover {
+			// 			background: #666;
+			// 			color: #fff;
+			// 			cursor: pointer;
+			// 		}
+			// 	}
+			// }
 		}
 
 		table {
 			&.the-table {}
 			width: 100%;
+			margin: 0 0 5%;
 
 			tr {
 				&.size-chart-header {

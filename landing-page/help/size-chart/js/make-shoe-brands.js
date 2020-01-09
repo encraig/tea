@@ -19,8 +19,8 @@ module.exports = function() {
     var elem1 = '<div class="brands"></div>';
     var elem2 = '<div class="brands-dropdown"></div>';
     var h2;
-    var text = '<p>Please select a brand from the menu below to view<br> the size chart. Size chart will open in a new window.</p>'
-    var select = $('<select class="brand mobile" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
+    var text = '<p>Please select a brand from the menu below to view the size chart. Size chart will open in a new window.</p>'
+    var select = $('<select class="brand" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
     var ul = $('<ul class="brand desktop"><li>Please select a brand</li></ul>');
     var ol = $('<ol class="mobile"></ol>');
 
@@ -46,8 +46,8 @@ module.exports = function() {
                 //<select>
                 var option = '<option value="' + brand.url + '">' + shoe + '</option>';
 
-                $(ul).append(li);
-                $(ol).append(li2);
+                // $(ul).append(li);
+                // $(ol).append(li2);
                 $(select).append(option);
               }
             });
@@ -60,10 +60,10 @@ module.exports = function() {
     else if (cat == 'sweater + outerwear') {
       h2 = '<h2>' + dept + ' outerwear size chart (other brands)</h2>';
       //<ul>
-      $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>');
+      // $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>');
 
       //<ol>
-      $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>');
+      // $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>');
 
       //<select>
       $(select).append('<option value="https://www.patagonia.com/size-boys-girls.html">patagonia</option>');
@@ -77,20 +77,21 @@ module.exports = function() {
 
     //because of safari not allowing window.open()
     //if mobile
-    if ($(window).width() < 737) {
-      //if safari
-      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        var brandsDropdown = $(elem2).append(ol, ul);
-      }
-      //not safari
-      else {
-        var brandsDropdown = $(elem2).append(select, ul);
-      }
-    }
-    //not mobile
-    else {
-      var brandsDropdown = $(elem2).append(select, ul);
-    }
+    // if ($(window).width() < 737) {
+    //   //if safari
+    //   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    //     var brandsDropdown = $(elem2).append(ol, ul);
+    //   }
+    //   //not safari
+    //   else {
+    //     var brandsDropdown = $(elem2).append(select, ul);
+    //   }
+    // }
+    // //not mobile
+    // else {
+    // var brandsDropdown = $(elem2).append(select, ul);
+    var brandsDropdown = $(elem2).append(select);
+    // }
 
 
     //add to page

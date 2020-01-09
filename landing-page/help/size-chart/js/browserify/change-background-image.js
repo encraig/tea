@@ -15,23 +15,24 @@ module.exports = function (sizeChartArr) {
         if (catVal == arr.name) {
           //add the background img to the page
           //desktop
-          if ($(window).width() > 737) {
-            //var img = 'url(../images/'+arr.img+')';
-            var img = 'url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + arr.img + ')';
-            $('.size-chart-container .measure-tips').css('background-image', img);
-          } //mobile
-          else if ($(window).width() < 737) {
-              //add the loading
-              $('.measure-tips').prepend('<span class="loading" style="text-transform:uppercase; text-align:center; font-size:15px; font-family:brown-pro-bold !important">loading...</span>');
-              var imgSrc = arr.img;
-              imgSrc = imgSrc.split('.');
-              imgSrc = imgSrc[0] + '-m.' + imgSrc[1]; //console.log(imgSrc);
-
-              var img = 'url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc + ')';
-              $('.size-chart-container .measure-tips').css('background-image', img); //remove the loading
-
-              $('.measure-tips span.loading').remove();
-            }
+          // if ($(window).width() > 737) {
+          //var img = 'url(../images/'+arr.img+')';
+          var img = 'url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/size-chart/2020/v0/' + arr.img + ')';
+          $('.size-chart-container .measure-tips').css('background-image', img); // }
+          //mobile
+          // else if ($(window).width() < 737) {
+          //   //add the loading
+          //   $('.measure-tips').prepend('<span class="loading" style="text-transform:uppercase; text-align:center; font-size:15px; font-family:brown-pro-bold !important">loading...</span>');
+          //   var imgSrc = arr.img;
+          //   imgSrc = imgSrc.split('.');
+          //   imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
+          //   //console.log(imgSrc);
+          //
+          //   var img = 'url(https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc + ')';
+          //   $('.size-chart-container .measure-tips').css('background-image', img);
+          //   //remove the loading
+          //   $('.measure-tips span.loading').remove();
+          // }
         }
       });
     }
@@ -45,15 +46,15 @@ module.exports = function (sizeChartArr) {
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
   var Val; //desktop
+  // if ($(window).width() > 737) {
+  //   //get the value of the .department or .category
+  //   Val = $(elem1).text();
+  // }
+  //mobile
+  // else {
+  //get the value of the .department or .category
 
-  if ($(window).width() > 737) {
-    //get the value of the .department or .category
-    Val = $(elem1).text();
-  } //mobile
-  else {
-      //get the value of the .department or .category
-      Val = $(elem2).val();
-    }
+  Val = $(elem2).val(); // }
 
   return Val;
 };
