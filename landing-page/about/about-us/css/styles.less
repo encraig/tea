@@ -1,5 +1,5 @@
 .common-wrap {
-  display:none;
+  display: none;
 }
 
 .desktop {
@@ -9,14 +9,59 @@
 }
 
 .mobile {
-  @media screen and (max-width:414px){
-    display:block;
+  @media screen and (max-width:414px) {
+    display: block;
   }
-  display:none;
+  display: none;
 }
 
 .wrap-content {
-  img {
-    max-width: 100%;
+  text-align: center;
+
+  img {}
+
+  h2 {
+    @media screen and (max-width:414px) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    font-family: gilroy-bold;
+    font-size: 34px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 6px;
+    color: #436FC1;
+  }
+
+  p {
+    @media screen and (max-width:414px) {
+      font-family: souvenirstd-light;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      margin: 5% auto;
+      width: 100%;
+    }
+    font-family: souvenirstd-light;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #47363D;
+    width: 65%;
+    margin: 3% auto;
+  }
+
+  a {
+    font-family: gilroy-bold;
+    font-size: 15px;
+    line-height: 28px;
+    text-decoration: none;
+    border-bottom: 1px solid #FF4BAD;
+    padding: 0 0 1%;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #FF4BAD;
   }
 }
