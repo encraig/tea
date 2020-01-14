@@ -19,13 +19,16 @@ html {
 	margin: 0 auto;
 	padding: 1% 0;
 	position: relative;
-	background: #cb5a6a;
+	background: #d0e8df;
 	text-align: center;
 	// .see-details {
 	// 	display: block;
 	// 	text-align: center;
 	// }
 	span {
+		@media screen and (max-width: 768px) {
+			font-size: 12px;
+		}
 		@media screen and (max-width: 414px) {
 			display: block;
 		}
@@ -40,13 +43,13 @@ html {
 			@media screen and (max-width:768px) {}
 			@media screen and (max-width:414px) {}
 			left: 0;
-			color: #ffcfcc;
+			color: #0a5e6d;
 		}
 
 		&.second {
 			@media screen and (max-width:414px) {}
-			left: 0;
-			color: #580326;
+			left: .5%;
+			color: #d93652;
 		}
 
 		&.shop-now {
@@ -72,11 +75,13 @@ html {
 		&.details {
 			@media screen and (max-width:1024px) {}
 			@media screen and (max-width:768px) {
-				top: 45%;
+				top: 25%;
 				left: 88%;
 			}
-			@media screen and (max-width:414px) {}
-			// left: 21%;
+			@media screen and (max-width:414px) {
+				top: 50%;
+			}
+			
 			left: 94%;
 			position: absolute;
 
@@ -145,7 +150,7 @@ html {
 		text-transform: uppercase;
 		margin: 0 1rem 1rem 0;
 		text-align: center;
-		background: #cb5a6a;
+		background: #d0e8df;
 		color: #fff;
 		text-decoration: none;
 		font-family: gilroy-bold;
@@ -164,7 +169,7 @@ html {
 }
 
 .header-banner {
-	background: #cb5a6a;
+	background: #d0e8df;
 	max-width: 100%;
 	width: 100%;
 	padding: 0;

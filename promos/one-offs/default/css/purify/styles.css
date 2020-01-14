@@ -16,7 +16,7 @@ html {
   margin: 0 auto;
   padding: 1% 0;
   position: relative;
-  background: #cb5a6a;
+  background: #d0e8df;
   text-align: center;
 }
 
@@ -29,6 +29,12 @@ html {
   text-transform: uppercase;
 }
 
+@media screen and (max-width:768px) {
+  .the-promo span {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width:414px) {
   .the-promo span {
     display: block;
@@ -37,12 +43,12 @@ html {
 
 .the-promo span.first {
   left: 0;
-  color: #ffcfcc;
+  color: #0a5e6d;
 }
 
 .the-promo span.second {
-  left: 0;
-  color: #580326;
+  left: .5%;
+  color: #d93652;
 }
 
 .the-promo span.shop-now {
@@ -68,8 +74,14 @@ html {
 
 @media screen and (max-width:768px) {
   .the-promo span.details {
-    top: 45%;
+    top: 25%;
     left: 88%;
+  }
+}
+
+@media screen and (max-width:414px) {
+  .the-promo span.details {
+    top: 50%;
   }
 }
 
@@ -131,7 +143,7 @@ html {
   text-transform: uppercase;
   margin: 0 1rem 1rem 0;
   text-align: center;
-  background: #cb5a6a;
+  background: #d0e8df;
   color: #fff;
   text-decoration: none;
   font-family: gilroy-bold;
