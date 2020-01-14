@@ -9,9 +9,6 @@
 /**/designs
 **/images
 log/
-myRegistry/**
 node_modules/**
-api.js
-fb.html
-makeFile.js
+**/*.DS_Store
 bower_components
